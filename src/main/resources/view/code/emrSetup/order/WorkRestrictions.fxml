@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.OrderWorkRestrictionInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="578.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="532.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="WorkBendingCheck" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" text="Bending/Twisting" />
+                                    <CheckBox fx:id="WorkClimbingCheck" layoutX="36.0" layoutY="37.0" mnemonicParsing="false" text="Climbing" />
+                                    <CheckBox fx:id="WorkElbow" layoutX="36.0" layoutY="61.0" mnemonicParsing="false" text="Elbow Flexion" />
+                                    <CheckBox fx:id="WorkFootControls" layoutX="36.0" layoutY="83.0" mnemonicParsing="false" text="Foot controls" />
+                                    <CheckBox fx:id="WorkFootUsage" layoutX="36.0" layoutY="107.0" mnemonicParsing="false" text="Foot usage" />
+                                    <CheckBox disable="true" layoutX="351.0" layoutY="14.0" mnemonicParsing="false" text="----------Other----------" />
+                                    <CheckBox fx:id="WorkHandGrasp" layoutX="36.0" layoutY="132.0" mnemonicParsing="false" text="Hand grasp" />
+                                    <CheckBox fx:id="WorkHandUsage" layoutX="36.0" layoutY="155.0" mnemonicParsing="false" text="Hand usage" />
+                                    <CheckBox fx:id="WorkKneeling" layoutX="36.0" layoutY="180.0" mnemonicParsing="false" text="Kneeling" />
+                                    <CheckBox fx:id="WorkliftingNone" layoutX="36.0" layoutY="205.0" mnemonicParsing="false" text="Lifting (None)" />
+                                    <CheckBox fx:id="WorkPullingNone" layoutX="36.0" layoutY="257.0" mnemonicParsing="false" text="Pulling (None) " />
+                                    <CheckBox fx:id="WorkReaching" layoutX="36.0" layoutY="359.0" mnemonicParsing="false" text="Reaching" />
+                                    <CheckBox fx:id="WorkShoulderUsage" layoutX="36.0" layoutY="386.0" mnemonicParsing="false" text="Shoulder Usage" />
+                                    <CheckBox fx:id="WorkSitting" layoutX="36.0" layoutY="411.0" mnemonicParsing="false" text="Sitting" />
+                                    <CheckBox fx:id="WorkSquatting" layoutX="36.0" layoutY="435.0" mnemonicParsing="false" text="Squatting" />
+                                    <CheckBox fx:id="WorkWalking" layoutX="36.0" layoutY="457.0" mnemonicParsing="false" text="Walking/standing" />
+                                    <CheckBox fx:id="WorkFlyingRestriction" layoutX="351.0" layoutY="61.0" mnemonicParsing="false" text="Flying Restrictions" />
+                                    <CheckBox fx:id="WorkElevationofArm" layoutX="351.0" layoutY="83.0" mnemonicParsing="false" text="Elevation of Arm" />
+                                    <CheckBox fx:id="WorkOfLeg" layoutX="351.0" layoutY="103.0" mnemonicParsing="false" text="Elevation of Leg" />
+                                    <CheckBox fx:id="WorkSedentary" layoutX="351.0" layoutY="126.0" mnemonicParsing="false" text="Sedentary work" />
+                                    <CheckBox fx:id="WorkStrech" layoutX="351.0" layoutY="148.0" mnemonicParsing="false" text="Strech Break" />
+                                    <CheckBox fx:id="WorkOtherLimitation" layoutX="351.0" layoutY="168.0" mnemonicParsing="false" text="Other Limitations" />
+                                    <CheckBox fx:id="WorkWorkExecuse" layoutX="351.0" layoutY="188.0" mnemonicParsing="false" text="Work Excuse-UC only" />
+                                    <CheckBox fx:id="WorkSchoolExcuse" layoutX="351.0" layoutY="209.0" mnemonicParsing="false" text="School Excuse - UC only" />
+                                    <CheckBox fx:id="WorkDriving" layoutX="351.0" layoutY="37.0" mnemonicParsing="false" text="Driving or Riding - Both PC" />
+                                    <CheckBox fx:id="WorkLiftingPound" layoutX="37.0" layoutY="230.0" mnemonicParsing="false" text="Lifting (Pound specific)" />
+                                    <CheckBox fx:id="WorkPullingSpecific" layoutX="35.0" layoutY="280.0" mnemonicParsing="false" text="Pulling (pounds  specific) " />
+                                    <CheckBox fx:id="WorkPushingNone" layoutX="36.0" layoutY="306.0" mnemonicParsing="false" text="Pushing (None) " />
+                                    <CheckBox fx:id="WorkPushingPounds" layoutX="36.0" layoutY="330.0" mnemonicParsing="false" text="Pushing (pounds  specific) " />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="486.0" layoutY="588.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="406.0" layoutY="587.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

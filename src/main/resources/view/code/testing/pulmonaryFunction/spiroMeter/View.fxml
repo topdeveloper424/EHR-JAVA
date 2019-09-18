@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="600.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.pulmonaryFunction.SpiroMeterViewController">
+   <children>
+      <TableView fx:id="spirometerTable" layoutX="6.0" layoutY="84.0" prefHeight="367.0" prefWidth="569.0">
+         <columns>
+            <TableColumn fx:id="numColumn" prefWidth="82.0" text="Num" />
+            <TableColumn fx:id="locationOrDescriptionColumn" prefWidth="241.0" text="Location or Description" />
+            <TableColumn fx:id="modelColumn" prefWidth="106.0" text="Model" />
+            <TableColumn fx:id="serialNumberColumn" prefWidth="139.0" text="Serial Number" />
+
+         </columns>
+      </TableView>
+      <Button layoutX="24.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="88.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/Capturebut4.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="56.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/media-controls-rewind-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="120.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="152.0" layoutY="453.0" maxWidth="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/but3.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="184.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/Media-Controls-Fast-Forward-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="216.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/but2.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="addButton" layoutX="6.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <Button fx:id="changeButton" layoutX="96.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Change">
+
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="517.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <Button fx:id="selectButton" layoutX="274.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Select">
+
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <CheckBox fx:id="includeInacticeCheckBox" layoutX="395.0" layoutY="538.0" mnemonicParsing="false" text="Include Inactives" />
+      <Button fx:id="deleteButton" layoutX="184.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+   </children>
+</AnchorPane>

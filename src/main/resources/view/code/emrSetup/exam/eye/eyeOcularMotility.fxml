@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.eye.EyeOcularMotilityInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="4.0" prefHeight="348.0" prefWidth="582.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="130.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="273.0" prefWidth="14.0" />
+                  <Button fx:id="doneBtn" layoutX="350.0" layoutY="280.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="467.0" layoutY="281.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="3.0" layoutY="38.0" prefHeight="0.0" prefWidth="589.0" />
+                  <Separator layoutY="98.0" prefHeight="2.0" prefWidth="589.0" />
+                  <Separator layoutX="3.0" layoutY="159.0" prefHeight="0.0" prefWidth="589.0" />
+                  <Separator layoutX="-6.0" layoutY="267.0" prefHeight="7.0" prefWidth="598.0" />
+                  <Label layoutX="25.0" layoutY="115.0" text="Which Eye or Eyes" />
+                  <Label layoutX="18.0" layoutY="14.0" text="Ocular Motility" />
+                  <CheckBox fx:id="allmovementsCheck" layoutX="264.0" layoutY="44.0" mnemonicParsing="false" text="all movements" />
+                  <CheckBox fx:id="lateralGazeCheck" layoutX="417.0" layoutY="44.0" mnemonicParsing="false" text="lateral gaze" />
+                  <CheckBox fx:id="upwardGazeCheck" layoutX="264.0" layoutY="71.0" mnemonicParsing="false" text="upward gaze" />
+                  <Label layoutX="10.0" layoutY="48.0" text="Types of Movements" />
+                  <CheckBox fx:id="ocularNormalCheck" layoutX="168.0" layoutY="13.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="downwardGazeCheck" layoutX="417.0" layoutY="71.0" mnemonicParsing="false" text="downward gaze" />
+                  <Label layoutX="28.0" layoutY="174.0" text="Nystagmus" />
+                  <CheckBox fx:id="nystagmusCoarseCheck" layoutX="264.0" layoutY="217.0" mnemonicParsing="false" text="coarse" />
+                  <RadioButton fx:id="fullRadio" layoutX="264.0" layoutY="13.0" mnemonicParsing="false" text="full">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ocular" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="decreasedRadio" layoutX="417.0" layoutY="13.0" mnemonicParsing="false" text="decreased" toggleGroup="$ocular" />
+                  <RadioButton fx:id="leftEyeRadio" layoutX="264.0" layoutY="106.0" mnemonicParsing="false" text="left eye">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="eye" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rightEyeRadio" layoutX="417.0" layoutY="106.0" mnemonicParsing="false" text="right eye" toggleGroup="$eye" />
+                  <RadioButton fx:id="leftRightEyeRadio" layoutX="264.0" layoutY="132.0" mnemonicParsing="false" text="left &amp; right eyes" toggleGroup="$eye" />
+                  <CheckBox fx:id="nystagmusNotNotedCheck" layoutX="264.0" layoutY="166.0" mnemonicParsing="false" text="not noted" />
+                  <CheckBox fx:id="nystagmusVerticalCheck" layoutX="417.0" layoutY="166.0" mnemonicParsing="false" text="vertical" />
+                  <CheckBox fx:id="nystagmusHorizontalCheck" layoutX="264.0" layoutY="190.0" mnemonicParsing="false" text="horizontal" />
+                  <CheckBox fx:id="nystagmusBriefCheck" layoutX="417.0" layoutY="217.0" mnemonicParsing="false" text="brief" />
+                  <CheckBox fx:id="nystagmusSustainedCheck" layoutX="264.0" layoutY="244.0" mnemonicParsing="false" text="sustained" />
+                  <CheckBox fx:id="nystagmusGenerallyNotedCheck" layoutX="417.0" layoutY="244.0" mnemonicParsing="false" text="was generally noted" />
+                  <CheckBox fx:id="nystagmusFineCheck" layoutX="417.0" layoutY="190.0" mnemonicParsing="false" text="fine" />
+                  <CheckBox fx:id="nystagmusNormalCheck1" layoutX="168.0" layoutY="174.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

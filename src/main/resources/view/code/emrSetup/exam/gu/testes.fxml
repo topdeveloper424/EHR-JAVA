@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="569.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.gu.testes.ExamGUTestesInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="270.0" prefWidth="557.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Left Testis" />
+                  <Separator layoutX="127.0" layoutY="1.0" orientation="VERTICAL" prefHeight="191.0" prefWidth="7.0" />
+                  <Button fx:id="doneBtn" layoutX="339.0" layoutY="206.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="5.0" layoutY="106.0" prefHeight="5.0" prefWidth="583.0" />
+                  <Button fx:id="skipBtn" layoutX="437.0" layoutY="207.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="prostatenormalCkeckBox" layoutX="139.0" layoutY="7.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="LeftNormalCheck" layoutX="222.0" layoutY="5.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="LefttendernessCheck" layoutX="405.0" layoutY="6.0" mnemonicParsing="false" text="tenderness" />
+                  <CheckBox fx:id="LeftMassesCheck" layoutX="222.0" layoutY="25.0" mnemonicParsing="false" text="masses" />
+                  <CheckBox fx:id="LeftenlargedCheck" layoutX="405.0" layoutY="26.0" mnemonicParsing="false" text="enlarged" />
+                  <CheckBox fx:id="LeftAtrophicCheck" layoutX="222.0" layoutY="46.0" mnemonicParsing="false" text="atrophic" />
+                  <CheckBox fx:id="RightTestisMassesCheck" layoutX="222.0" layoutY="66.0" mnemonicParsing="false" text="right testis masses" />
+                  <CheckBox fx:id="rightTestisTenderCheck" layoutX="405.0" layoutY="46.0" mnemonicParsing="false" text="right testis tenderness" />
+                  <CheckBox fx:id="RightAbsentCheck" layoutX="405.0" layoutY="66.0" mnemonicParsing="false" text="absent" />
+                  <CheckBox fx:id="RightNormalCheck" layoutX="222.0" layoutY="111.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="RightAtrophicCheck" layoutX="222.0" layoutY="149.0" mnemonicParsing="false" text="atrophic" />
+                  <CheckBox fx:id="RightMassesCheck" layoutX="222.0" layoutY="130.0" mnemonicParsing="false" text="masses" />
+                  <Label layoutX="14.0" layoutY="110.0" text="Rght tetis" />
+                  <Separator layoutX="-1.0" layoutY="197.0" prefHeight="0.0" prefWidth="583.0" />
+                  <CheckBox fx:id="LeftHydroceleCheck" layoutX="222.0" layoutY="88.0" mnemonicParsing="false" text="hydrocele" />
+                  <CheckBox fx:id="rightEpididymisCheck" layoutX="405.0" layoutY="89.0" mnemonicParsing="false" text="epididymis" />
+                  <CheckBox fx:id="RightHydroceleCheck" layoutX="222.0" layoutY="170.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="77.0" text="hydrocele" />
+                  <CheckBox fx:id="RighttendernessCheck" layoutX="405.0" layoutY="111.0" mnemonicParsing="false" text="tenderness" />
+                  <CheckBox fx:id="RightenlargedCheck" layoutX="405.0" layoutY="131.0" mnemonicParsing="false" text="enlarged" />
+                  <CheckBox fx:id="LeftEpididymisCheck" layoutX="405.0" layoutY="174.0" mnemonicParsing="false" text="epididymis" />
+                  <CheckBox fx:id="leftAbsentCheck" layoutX="405.0" layoutY="151.0" mnemonicParsing="false" text="absent" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

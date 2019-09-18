@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="604.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.problem.OtherConditionInputController">
+   <children>
+      <Button fx:id="skipBtn" layoutX="469.0" layoutY="586.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneButton" layoutX="364.0" layoutY="586.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="29.0" layoutY="34.0" text="ICD 10 Dx (1) :" />
+      <Label layoutX="29.0" layoutY="64.0" text="ICD 10 Dx (2) :" />
+      <Label layoutX="324.0" layoutY="31.0" text="ICD 10 Dx (3) :" />
+      <Label layoutX="324.0" layoutY="64.0" text="ICD 10 Dx (4) :" />
+      <TextField fx:id="icd1Text" layoutX="109.0" layoutY="30.0" />
+      <TextField fx:id="icd2Text" layoutX="109.0" layoutY="60.0" />
+      <TextField fx:id="icd3Text" layoutX="405.0" layoutY="28.0" />
+      <TextField fx:id="icd4Text" layoutX="405.0" layoutY="58.0" />
+      <Button fx:id="icd1Btn" layoutX="266.0" layoutY="30.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="icd2Btn" layoutX="266.0" layoutY="60.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="icd3Btn" layoutX="561.0" layoutY="29.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="13.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="icd4Btn" layoutX="561.0" layoutY="59.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="asignDiagonosisBtn" layoutX="111.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Asign Diagonosis Codes" />
+      <Button fx:id="snomedCtBtn" layoutX="266.0" layoutY="125.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="snomedCtText" layoutX="111.0" layoutY="123.0" />
+      <Label layoutX="29.0" layoutY="129.0" text="SNOMED CT :" />
+      <Label layoutX="35.0" layoutY="155.0" text="Condition :" />
+      <TextField fx:id="conditionText" layoutX="111.0" layoutY="153.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="26.0" layoutY="185.0" prefHeight="96.0" prefWidth="561.0" text="Releant Timing">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="7.0" text="Onset Date :" />
+                  <Label layoutX="14.0" layoutY="38.0" text="Onet Age :" />
+                  <Label layoutX="213.0" layoutY="6.0" text="End Date :" />
+                  <Label layoutX="213.0" layoutY="35.0" text="Start Year" />
+                  <DatePicker fx:id="onsetDate" layoutX="84.0" layoutY="3.0" prefHeight="25.0" prefWidth="116.0" />
+                  <DatePicker fx:id="endDate" layoutX="276.0" layoutY="2.0" prefHeight="25.0" prefWidth="136.0" />
+                  <TextField fx:id="onsetAgeText" layoutX="84.0" layoutY="32.0" prefHeight="25.0" prefWidth="116.0" />
+                  <TextField fx:id="startYearText" layoutX="278.0" layoutY="32.0" prefHeight="25.0" prefWidth="133.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="26.0" layoutY="288.0" prefHeight="59.0" prefWidth="561.0" text="Chronicity">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="chronicityNaRadio" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" text="NA">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="chronicity" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="chronicityChronicRadio" layoutX="117.0" layoutY="6.0" mnemonicParsing="false" text="Chronic" toggleGroup="$chronicity" />
+                  <RadioButton fx:id="chronicityAcuteRadio" layoutX="219.0" layoutY="5.0" mnemonicParsing="false" text="Acute" toggleGroup="$chronicity" />
+                  <RadioButton fx:id="chronicitySelfRadio" layoutX="321.0" layoutY="5.0" mnemonicParsing="false" text="Self Limited" toggleGroup="$chronicity" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="26.0" layoutY="355.0" prefHeight="59.0" prefWidth="561.0" text="Degree Of Control">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="degreeNaRadio" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" text="NA">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="degree" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="degreeControlledRadio" layoutX="117.0" layoutY="8.0" mnemonicParsing="false" text="Controlled" toggleGroup="$degree" />
+                  <RadioButton fx:id="degreeUncontrolledRadio" layoutX="219.0" layoutY="6.0" mnemonicParsing="false" text="Uncontrolled" toggleGroup="$degree" />
+                  <RadioButton fx:id="degreeQuestionableRadio" layoutX="321.0" layoutY="6.0" mnemonicParsing="false" text="Questionable" toggleGroup="$degree" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Label layoutX="28.0" layoutY="418.0" text="Additional Notes :" />
+      <TextArea fx:id="additionalTextarea" layoutX="30.0" layoutY="437.0" prefHeight="59.0" prefWidth="561.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="28.0" layoutY="504.0" prefHeight="72.0" prefWidth="561.0" text="Security Required">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="securityNaRadio" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" text="NA">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="security" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="securityControlledRadio" layoutX="117.0" layoutY="8.0" mnemonicParsing="false" text="Controlled" toggleGroup="$security" />
+                  <RadioButton fx:id="securityUncontrolledRadio" layoutX="219.0" layoutY="6.0" mnemonicParsing="false" text="Uncontrolled" toggleGroup="$security" />
+                  <RadioButton fx:id="securityQuestionableRadio" layoutX="321.0" layoutY="6.0" mnemonicParsing="false" text="Questionable" toggleGroup="$security" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

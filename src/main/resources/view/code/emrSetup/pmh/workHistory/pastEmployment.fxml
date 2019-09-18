@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="539.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.workHistory.PastEmploymentInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="278.0" prefWidth="527.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="37.0" text="Past Employment :" />
+                  <RadioButton fx:id="electriccalWorkerRadio" layoutX="206.0" layoutY="29.0" mnemonicParsing="false" text="clarical worker">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="general" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="dataProcessingRadio" layoutX="357.0" layoutY="31.0" mnemonicParsing="false" text="data processing professional" toggleGroup="$general" />
+                  <Separator layoutX="178.0" orientation="VERTICAL" prefHeight="201.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="289.0" layoutY="212.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-14.0" layoutY="154.0" prefHeight="0.0" prefWidth="525.0" />
+                  <Button fx:id="skipBtn" layoutX="390.0" layoutY="212.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="driverRadio" layoutX="206.0" layoutY="55.0" mnemonicParsing="false" text="driver" toggleGroup="$general" />
+                  <RadioButton fx:id="managerRadio" layoutX="206.0" layoutY="79.0" mnemonicParsing="false" text="manager" toggleGroup="$general" />
+                  <RadioButton fx:id="officeWorkerRadio" layoutX="206.0" layoutY="105.0" mnemonicParsing="false" text="office worker" toggleGroup="$general" />
+                  <RadioButton fx:id="salesProfessionalRadio" layoutX="206.0" layoutY="129.0" mnemonicParsing="false" text="sales professional" toggleGroup="$general" />
+                  <RadioButton fx:id="agriculturalRadio" layoutX="206.0" layoutY="6.0" mnemonicParsing="false" text="agricultural worker" toggleGroup="$general" />
+                  <RadioButton fx:id="businessOwnerRadio" layoutX="357.0" layoutY="6.0" mnemonicParsing="false" text="business owner" toggleGroup="$general" />
+                  <RadioButton fx:id="executiveRadio" layoutX="357.0" layoutY="55.0" mnemonicParsing="false" text="executive" toggleGroup="$general" />
+                  <RadioButton fx:id="manualRadio" layoutX="357.0" layoutY="79.0" mnemonicParsing="false" text="manual labourer" toggleGroup="$general" />
+                  <RadioButton fx:id="professionalRadio" layoutX="357.0" layoutY="105.0" mnemonicParsing="false" text="professional" toggleGroup="$general" />
+                  <RadioButton fx:id="technicianRadio" layoutX="357.0" layoutY="128.0" mnemonicParsing="false" text="technician" toggleGroup="$general" />
+                  <Label layoutX="10.0" layoutY="171.0" text="How Many Years on the Job" />
+                  <TextField fx:id="jobYearRadio" layoutX="206.0" layoutY="162.0" />
+                  <Separator layoutX="-1.0" layoutY="200.0" prefHeight="0.0" prefWidth="527.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

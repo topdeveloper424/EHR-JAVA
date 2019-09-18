@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="768.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.company.CompanyInputController">
+   <children>
+      <TabPane layoutX="6.0" layoutY="5.0" prefHeight="418.0" prefWidth="753.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+               <content>
+                  <AnchorPane id="myBn" prefHeight="464.0" prefWidth="753.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="359.0" prefWidth="712.0">
+                           <children>
+                              <Label layoutY="4.0" text="Company" />
+                              <Label layoutX="-1.0" layoutY="32.0" text="Name" />
+                              <Label layoutY="59.0" text="Address" />
+                              <Label layoutX="4.0" layoutY="90.0" text="City" />
+                              <Label layoutX="7.0" layoutY="120.0" text="County" />
+                              <Label layoutY="178.0" text="Telephone" />
+                              <Label layoutY="209.0" text="Email" />
+                              <Label layoutY="236.0" text="Main Contact" />
+                              <Label layoutY="268.0" text="Alias Name" />
+                              <TextField fx:id="companyId" layoutX="56.0" prefHeight="25.0" prefWidth="106.0" />
+                              <TextField fx:id="empServsBillAC" layoutX="358.0" layoutY="2.0" />
+                              <Button fx:id="billingAccount" layoutX="507.0" layoutY="2.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="12.0">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/search-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="companyName" layoutX="56.0" layoutY="28.0" prefHeight="25.0" prefWidth="274.0" />
+                              <TextField fx:id="localAddress" layoutX="56.0" layoutY="55.0" prefHeight="25.0" prefWidth="403.0" />
+                              <TextField fx:id="city" layoutX="56.0" layoutY="86.0" />
+                              <TextField fx:id="state" layoutX="259.0" layoutY="86.0" prefHeight="25.0" prefWidth="53.0" />
+                              <TextField fx:id="zip" layoutX="356.0" layoutY="86.0" prefHeight="25.0" prefWidth="105.0" />
+                              <TextField fx:id="county" layoutX="60.0" layoutY="116.0" prefHeight="25.0" prefWidth="124.0" />
+                              <TextField fx:id="telephone" layoutX="56.0" layoutY="174.0" prefHeight="25.0" prefWidth="117.0" />
+                              <TextField fx:id="ext" layoutX="333.0" layoutY="174.0" prefHeight="25.0" prefWidth="117.0" />
+                              <TextField fx:id="fax" layoutX="494.0" layoutY="174.0" prefHeight="25.0" prefWidth="124.0" />
+                              <TextField fx:id="email" layoutX="56.0" layoutY="204.0" prefHeight="25.0" prefWidth="239.0" />
+                              <TextField fx:id="secureFax" layoutX="496.0" layoutY="205.0" prefHeight="25.0" prefWidth="122.0" />
+                              <TextField fx:id="mainContact" layoutX="77.0" layoutY="232.0" prefHeight="25.0" prefWidth="208.0" />
+                              <Button fx:id="mainContactButton" layoutX="289.0" layoutY="232.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/search-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextField fx:id="aliasName" layoutX="81.0" layoutY="264.0" prefHeight="25.0" prefWidth="194.0" />
+                              <Label layoutX="175.0" layoutY="6.0" prefHeight="17.0" prefWidth="176.0" text="Employer Services Billing Account" />
+                              <Label layoutX="223.0" layoutY="90.0" text="State" />
+                              <Label layoutX="325.0" layoutY="90.0" text="Zip" />
+                              <Label layoutX="205.0" layoutY="120.0" text="Country" />
+                              <Label layoutX="295.0" layoutY="178.0" text="Ext" />
+                              <Label layoutX="465.0" layoutY="178.0" text="Fax" />
+                              <Label layoutX="432.0" layoutY="209.0" prefHeight="17.0" prefWidth="90.0" text="Secure Fax" />
+                              <ChoiceBox fx:id="countryChoiceBox" layoutX="259.0" layoutY="116.0" prefHeight="24.0" prefWidth="104.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Worker's Comp">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutY="16.0" prefHeight="171.0" prefWidth="646.0" text="Primary Work Comp Responsibility">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="201.0" prefWidth="644.0">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="109.0" text="Effective Date" />
+                                    <Label layoutX="21.0" layoutY="12.0" text="Prim Comp Carrier" />
+                                    <Label layoutX="391.0" layoutY="51.0" text="Expire Date" />
+                                    <TextField fx:id="carrierTextField" layoutX="135.0" layoutY="8.0" />
+                                    <Button fx:id="carrierButton" layoutX="287.0" layoutY="7.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="21.0" layoutY="81.0" text="Policy Number" />
+                                    <TextField fx:id="carrierPolicyno" layoutX="135.0" layoutY="78.0" prefHeight="17.0" prefWidth="183.0" />
+                                    <DatePicker fx:id="CarrierExpireDate" layoutX="463.0" layoutY="48.0" prefHeight="25.0" prefWidth="158.0" />
+                                    <DatePicker fx:id="carrierEffectiveDate" layoutX="136.0" layoutY="107.0" />
+                                    <Label layoutX="21.0" layoutY="46.0" text="Contact Name" />
+                                    <TextField fx:id="carrierContactNameText" layoutX="135.0" layoutY="43.0" prefHeight="25.0" prefWidth="150.0" />
+                                    <Button fx:id="contactNameBtn" layoutX="287.0" layoutY="42.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="14.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="1.0" layoutY="195.0" prefHeight="172.0" prefWidth="644.0" text="Secondary:MCO,TPA or Bill Revirew Contract">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="20.0" text="Organization" />
+                                    <Label layoutX="27.0" layoutY="50.0" text="Policy Number" />
+                                    <Label layoutX="29.0" layoutY="87.0" text="Effective Date" />
+                                    <TextField fx:id="tpaTextField" layoutX="140.0" layoutY="17.0" />
+                                    <Button fx:id="tpaButton" layoutX="293.0" layoutY="17.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="17.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <DatePicker fx:id="tpaExpireDate" layoutX="472.0" layoutY="17.0" prefHeight="17.0" prefWidth="153.0" />
+                                    <TextField fx:id="tpaPolicyno" layoutX="140.0" layoutY="47.0" prefHeight="28.0" prefWidth="188.0" />
+                                    <Label layoutX="395.0" layoutY="22.0" text="Expire Date" />
+                                    <DatePicker fx:id="tpaEffectiveDate" layoutX="141.0" layoutY="81.0" prefHeight="28.0" prefWidth="169.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Clinical">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="17.0" layoutY="22.0" prefHeight="138.0" prefWidth="716.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="6.0" text="Contract Lab for Drug Screens" />
+                              <Label layoutX="14.0" layoutY="33.0" prefHeight="17.0" prefWidth="65.0" text="Laboratory" />
+                              <Label layoutX="14.0" layoutY="61.0" text="Policy/Contracts" />
+                              <Label layoutX="14.0" layoutY="88.0" text="Effective Date" />
+                              <Label layoutX="14.0" layoutY="116.0" text="Contract Level" />
+                              <Label layoutX="330.0" layoutY="61.0" text="Expire Date" />
+                              <TextField fx:id="laboratoryText" layoutX="114.0" layoutY="29.0" prefHeight="25.0" prefWidth="152.0" />
+                              <TextField fx:id="clinicalPolicyText" layoutX="113.0" layoutY="57.0" prefHeight="25.0" prefWidth="192.0" />
+                              <ChoiceBox fx:id="clinicalLaboratoryContactLevelChoiceBox" layoutX="114.0" layoutY="112.0" prefHeight="25.0" prefWidth="187.0" />
+                              <DatePicker fx:id="clinicalLaboratoryExpireDate" layoutX="400.0" layoutY="57.0" prefHeight="25.0" prefWidth="137.0" />
+                              <Button fx:id="laboratoryBtn" layoutX="270.0" layoutY="29.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/search-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <DatePicker fx:id="clinicalLaboratoryEffectiveDate" layoutX="114.0" layoutY="84.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="23.0" layoutY="193.0" prefHeight="168.0" prefWidth="721.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Contract  TPA for Drug Screen Collections" />
+                              <Label layoutX="14.0" layoutY="42.0" text="Contract TPA" />
+                              <Label layoutX="14.0" layoutY="68.0" text="Policy/Contract" />
+                              <Label layoutX="14.0" layoutY="92.0" text="Effective Date" />
+                              <Label layoutX="14.0" layoutY="120.0" text="Contract Level" />
+                              <TextField fx:id="ClinicalContactTpaText" layoutX="104.0" layoutY="38.0" prefHeight="25.0" prefWidth="113.0" />
+                              <TextField fx:id="ClinicalContactTpaPolicyNumberText" layoutX="104.0" layoutY="65.0" />
+                              <Label layoutX="275.0" layoutY="97.0" text="Expire Date" />
+                              <DatePicker fx:id="ClinicalContactTpaExpireDate" layoutX="346.0" layoutY="90.0" prefHeight="25.0" prefWidth="137.0" />
+                              <Button fx:id="clinicalTpaBtn" layoutX="221.0" layoutY="37.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/search-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <DatePicker fx:id="ClinicalContactTpaEffectiveDate" layoutX="105.0" layoutY="93.0" prefHeight="25.0" prefWidth="149.0" />
+                              <ChoiceBox fx:id="clinicalTpaContactLevelChoiceBox" layoutX="105.0" layoutY="122.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+
+      <Button fx:id="CompanyContactsBtn" layoutX="67.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Contacts" />
+      <Button fx:id="compantProtocolBtn" layoutX="165.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Protocols" />
+      <Button id="myB" layoutX="362.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Images">
+	  <graphic>
+			<ImageView id="myB">
+				<Image url="@../../image/search-icon.png" />
+			</ImageView>
+		</graphic>
+	  </Button>
+      <CheckBox layoutX="472.0" layoutY="513.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Inactive" />
+      <Button id="myBn" fx:id="okBtn" layoutX="551.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Ok">
+	  <graphic>
+			<ImageView id="myBn">
+				<Image url="@../../image/check.png" />
+			</ImageView>
+		</graphic>
+	  </Button>
+
+
+      <Button id="myBtn" fx:id="cancelBtn" layoutX="653.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Cancel">
+	  	<graphic>
+			<ImageView>
+				<Image url="@../../image/crossout.png" />
+			</ImageView>
+		</graphic>
+	  </Button>
+
+
+   </children>
+</AnchorPane>

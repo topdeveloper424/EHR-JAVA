@@ -1,0 +1,83 @@
+
+.button {
+   -fx-background-insets: 0,1,1;
+    -fx-background-radius: 0;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #e6e6e6 0%, #d6d6d6 100%),
+        #d6d6d6,
+        #e6e6e6,
+        radial-gradient(center 50% 50%, radius 100%, #e6e6e6, #d6d6d6);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+
+
+
+.button:hover {
+    -fx-background-color: #808080;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  
+}
+
+.button:focused {
+    -fx-border-color: #696969, #696969;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+ 
+ /* CheckBox Field CSS Start */
+ 
+ .check-box {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+}
+
+  /* CheckBox Field CSS End */
+ 
+ /* Text Field CSS Start */
+ 
+ .text-field {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0,1,1;
+}
+
+.text-field:focused {
+    -fx-background-color: #00CED1 , white , white;
+    -fx-background-insets: 0,1,1;
+}
+ 
+ /* Text Field CSS End */
+ 
+ 
+  /* Label CSS Start */
+ 
+ Label {
+    -fx-font-size: 12px;
+    -fx-font-weight: lighter;
+    -fx-background-radius: 0, 0, 0;
+    -fx-font: bold 11px System;
+}
+
+/* Label CSS End */
+ 
+
+ 

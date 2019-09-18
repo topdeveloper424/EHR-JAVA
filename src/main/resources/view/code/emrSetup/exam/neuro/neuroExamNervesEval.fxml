@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.neuro.cranialNervesEval.CranialNervesEvalInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="631.0" prefWidth="952.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="923.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="67.0" prefHeight="0.0" prefWidth="952.0" />
+                  <Label layoutX="11.0" layoutY="45.0" text="2nd Carnial Nerve" />
+                  <Label layoutX="10.0" layoutY="69.0" text="3rd , 4th &amp; 6th Carnial Nerve" />
+                  <Separator layoutX="187.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="556.0" prefWidth="0.0" />
+                  <Separator layoutX="-4.0" layoutY="97.0" prefHeight="6.0" prefWidth="952.0" />
+                  <CheckBox fx:id="secondNormalCkeckBox" layoutX="199.0" layoutY="43.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="secondIntactCkeckBox" layoutX="824.0" layoutY="42.0" mnemonicParsing="false" text="intact" />
+                  <CheckBox fx:id="secondBilaterallyCkeckBox" layoutX="461.0" layoutY="44.0" mnemonicParsing="false" text="decreased vision bilaterally" />
+                  <CheckBox fx:id="secondRightCkeckBox" layoutX="667.0" layoutY="42.0" mnemonicParsing="false" text="decreased vision right" />
+                  <Separator layoutX="-1.0" layoutY="134.0" prefHeight="0.0" prefWidth="952.0" />
+                  <Separator layoutX="2.0" layoutY="162.0" prefHeight="0.0" prefWidth="952.0" />
+                  <Separator layoutX="1.0" layoutY="219.0" prefHeight="4.0" prefWidth="952.0" />
+                  <Separator layoutY="248.0" prefHeight="3.0" prefWidth="952.0" />
+                  <Separator layoutX="-8.0" layoutY="330.0" prefHeight="0.0" prefWidth="961.0" />
+                  <Label layoutX="9.0" layoutY="104.0" text="5th Carnial Nerve" />
+                  <Label layoutX="9.0" layoutY="196.0" text="9th Carnial Nerve" />
+                  <Label layoutX="10.0" layoutY="228.0" prefHeight="17.0" prefWidth="125.0" text="11th Carnial Nerve" />
+                  <Label layoutX="8.0" layoutY="258.0" text="12th Carnial Nerve" />
+                  <Label layoutX="8.0" layoutY="144.0" text="7th Carnial Nerve" />
+                  <CheckBox fx:id="fifthIntactCheck" layoutX="270.0" layoutY="104.0" mnemonicParsing="false" text="intact" />
+                  <CheckBox fx:id="fifthFacialCheck" layoutX="461.0" layoutY="105.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="190.0" text="decreased facial sansation" />
+                  <CheckBox fx:id="fifthCornealCheck" layoutX="667.0" layoutY="106.0" mnemonicParsing="false" text="abnormal corneal reflexes" />
+                  <CheckBox fx:id="seenthIntactlCheck" layoutX="270.0" layoutY="144.0" mnemonicParsing="false" text="intact" />
+                  <CheckBox fx:id="seenthDecreasedCheck" layoutX="461.0" layoutY="141.0" mnemonicParsing="false" text="decreased facia strength" />
+                  <CheckBox fx:id="seenthAsymmetriclCheck" layoutX="667.0" layoutY="143.0" mnemonicParsing="false" text="asymmetric facial tone" />
+                  <Label layoutX="9.0" layoutY="169.0" text="8th Carnial Nerve" />
+                  <CheckBox fx:id="eightIntact" layoutX="270.0" layoutY="167.0" mnemonicParsing="false" text="intact" />
+                  <CheckBox fx:id="eightDecreaseHearing" layoutX="461.0" layoutY="167.0" mnemonicParsing="false" text="decreased hearing" />
+                  <CheckBox fx:id="nineUvula" layoutX="667.0" layoutY="196.0" mnemonicParsing="false" text="uvula elevation" />
+                  <CheckBox fx:id="nineGag" layoutX="461.0" layoutY="195.0" mnemonicParsing="false" text="gag reflex" />
+                  <CheckBox fx:id="thirdNormalCkeckBox" layoutX="199.0" layoutY="72.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="ninethIntact" layoutX="270.0" layoutY="195.0" mnemonicParsing="false" text="intact" />
+                  <Separator layoutX="-4.0" layoutY="190.0" prefHeight="0.0" prefWidth="961.0" />
+                  <CheckBox fx:id="evlevenWeaknessSCM" layoutX="824.0" layoutY="227.0" mnemonicParsing="false" text="weekness SCM" />
+                  <CheckBox fx:id="evlevenDecreasedShoulderShrug" layoutX="461.0" layoutY="227.0" mnemonicParsing="false" text="decreased shoulder shrug" />
+                  <CheckBox fx:id="evlevenIntact" layoutX="270.0" layoutY="227.0" mnemonicParsing="false" text="intact" />
+                  <CheckBox fx:id="twelveIntact" layoutX="270.0" layoutY="252.0" mnemonicParsing="false" text="intact" />
+                  <CheckBox fx:id="fifthNormalCheck" layoutX="199.0" layoutY="102.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="secondLeftCkeckBox" layoutX="272.0" layoutY="44.0" mnemonicParsing="false" text="decreased vision left" />
+                  <CheckBox fx:id="twelveTongueWeekness" layoutX="461.0" layoutY="252.0" mnemonicParsing="false" text="tongue weekness" />
+                  <CheckBox fx:id="elevenWeaknessTrapezius" layoutX="667.0" layoutY="227.0" mnemonicParsing="false" text="weekness , trapezius" />
+                  <Button fx:id="doneBtn" layoutX="642.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="753.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="twelveNormal" layoutX="199.0" layoutY="253.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="seenthNormalCheck" layoutX="199.0" layoutY="142.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="intactRadio" layoutX="270.0" layoutY="73.0" mnemonicParsing="false" text="intact" />
+                  <RadioButton fx:id="pupilRadio" layoutX="665.0" layoutY="75.0" mnemonicParsing="false" text="abnormal pupil responses" />
+                  <RadioButton fx:id="extracocularRadio" layoutX="461.0" layoutY="74.0" mnemonicParsing="false" text="abnormal extraocular motions" />
+                  <CheckBox fx:id="evlevenNormal" layoutX="199.0" layoutY="228.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="ninethNormal" layoutX="199.0" layoutY="196.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="eightNormal" layoutX="199.0" layoutY="169.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-2.0" layoutY="37.0" prefHeight="0.0" prefWidth="952.0" />
+                  <Label layoutX="12.0" layoutY="14.0" text="Optional Text" />
+                  <CheckBox fx:id="optionalInclude" layoutX="199.0" layoutY="14.0" mnemonicParsing="false" text="include" />
+                  <Label layoutX="275.0" layoutY="15.0" text="Carnial nerves were tested with the following result" />
+                  <Separator layoutX="2.0" layoutY="273.0" prefHeight="3.0" prefWidth="952.0" />
+                  <Label layoutX="7.0" layoutY="282.0" text="Balance &amp; Coordination" />
+                  <CheckBox fx:id="balanceNormal" layoutX="198.0" layoutY="275.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="balanceRomberg" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" text="Romberg negative" />
+                  <CheckBox fx:id="balanceFingerToNoseNormal" layoutX="270.0" layoutY="293.0" mnemonicParsing="false" text="finger to nose normal" />
+                  <CheckBox fx:id="balanceDydiadochokinenisNotNoted" layoutX="270.0" layoutY="311.0" mnemonicParsing="false" text="Dydiadochokinenis not noted" />
+                  <CheckBox fx:id="BalanceRombergPositive" layoutX="460.0" layoutY="275.0" mnemonicParsing="false" text="Romberg positive" />
+                  <CheckBox fx:id="balanceFingerToNoseAbormal" layoutX="461.0" layoutY="293.0" mnemonicParsing="false" text="finger to nose abnormal" />
+                  <CheckBox fx:id="balanceDydiadochokinenisNoted" layoutX="461.0" layoutY="311.0" mnemonicParsing="false" text="Dydiadochokinenis noted" />
+                  <CheckBox fx:id="balanceKneeHeelNormal" layoutX="666.0" layoutY="295.0" mnemonicParsing="false" text="knee/heel/shin/normal" />
+                  <CheckBox fx:id="balanceGaitAbnormal" layoutX="824.0" layoutY="276.0" mnemonicParsing="false" text="gait abnormal" />
+                  <CheckBox fx:id="balanceGaitNormal" layoutX="666.0" layoutY="276.0" mnemonicParsing="false" text="gait normal" />
+                  <CheckBox fx:id="balanceKneeHeelAbnormal" layoutX="666.0" layoutY="314.0" mnemonicParsing="false" text="knee/heel/shin/abnormal" />
+                  <CheckBox fx:id="speechProductionNormal" layoutX="270.0" layoutY="335.0" mnemonicParsing="false" text="speech production normal" />
+                  <CheckBox fx:id="speechExpressiveClarity" layoutX="270.0" layoutY="353.0" mnemonicParsing="false" text="expressive clarity" />
+                  <CheckBox fx:id="speechProductionDecrease" layoutX="460.0" layoutY="335.0" mnemonicParsing="false" text="speech production is decrease" />
+                  <CheckBox fx:id="speechReceptiveClarity" layoutX="461.0" layoutY="353.0" mnemonicParsing="false" text="receptive clarity" />
+                  <CheckBox fx:id="speechNormalClarity" layoutX="666.0" layoutY="355.0" mnemonicParsing="false" text="normal clarity" />
+                  <CheckBox fx:id="speechCompleteAbhasia" layoutX="824.0" layoutY="337.0" mnemonicParsing="false" text="complete aphasia" />
+                  <CheckBox fx:id="speechPartial" layoutX="666.0" layoutY="336.0" mnemonicParsing="false" text="partial  aphasia" />
+                  <Separator layoutX="-8.0" layoutY="371.0" prefHeight="0.0" prefWidth="961.0" />
+                  <Label layoutX="11.0" layoutY="337.0" text="speech &amp; language" />
+                  <CheckBox fx:id="speechDecreasedClarity" layoutX="824.0" layoutY="355.0" mnemonicParsing="false" text="decreased clarity" />
+                  <Label layoutX="11.0" layoutY="374.0" text="DTR s" />
+                  <CheckBox fx:id="DTRAchillesDecreased" layoutX="825.0" layoutY="414.0" mnemonicParsing="false" text="achilles decreased" />
+                  <CheckBox fx:id="DTRBicepsDecreased" layoutX="270.0" layoutY="394.0" mnemonicParsing="false" text="biceps decreased" />
+                  <CheckBox fx:id="DTRPatellarNormal" layoutX="666.0" layoutY="396.0" mnemonicParsing="false" text="patellar normal" />
+                  <CheckBox fx:id="DTRAChillesIncrreased" layoutX="460.0" layoutY="376.0" mnemonicParsing="false" text="achilles increased" />
+                  <CheckBox fx:id="DTRBicepsNormal" layoutX="461.0" layoutY="394.0" mnemonicParsing="false" text="biceps normal" />
+                  <CheckBox fx:id="DTRAbnormalityOnRight" layoutX="461.0" layoutY="412.0" mnemonicParsing="false" text="abnormality on right side only" />
+                  <CheckBox fx:id="DTRPatellarincrease" layoutX="666.0" layoutY="415.0" mnemonicParsing="false" text="patellar increased" />
+                  <CheckBox fx:id="DTRAchillesNormal" layoutX="666.0" layoutY="377.0" mnemonicParsing="false" text="achilles normal" />
+                  <CheckBox fx:id="DTRAbnormalityLeftSide" layoutX="271.0" layoutY="375.0" mnemonicParsing="false" text="abnormality on left side only" />
+                  <CheckBox fx:id="speechNormal" layoutX="198.0" layoutY="335.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="DTRNormal" layoutX="198.0" layoutY="374.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="DTRPatellarDecreased" layoutX="825.0" layoutY="396.0" mnemonicParsing="false" text="patellar decreased" />
+                  <CheckBox fx:id="DTRBicepsIncreased" layoutX="825.0" layoutY="377.0" mnemonicParsing="false" text="biceps increased" />
+                  <CheckBox fx:id="DTRAbnormalityBilaterally" layoutX="270.0" layoutY="414.0" mnemonicParsing="false" text="abnormality is bilaterally" />
+                  <Separator layoutX="2.0" layoutY="434.0" prefHeight="0.0" prefWidth="961.0" />
+                  <Label layoutX="10.0" layoutY="439.0" prefHeight="15.0" prefWidth="66.0" text="Babinski" />
+                  <CheckBox fx:id="babinskiNormal" layoutX="197.0" layoutY="438.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="equivocalLeft" layoutX="825.0" layoutY="438.0" mnemonicParsing="false" text="Equivocal left" />
+                  <CheckBox fx:id="equivocalRight" layoutX="672.0" layoutY="438.0" mnemonicParsing="false" text="Equivocal right" />
+                  <CheckBox fx:id="abnormalExtensiorF" layoutX="471.0" layoutY="458.0" mnemonicParsing="false" text="Abnormal (extensior/upgoing)F" />
+                  <CheckBox fx:id="babinskiNormalFlexorF" layoutX="271.0" layoutY="438.0" mnemonicParsing="false" text="normal(flexor or downgoing)F" />
+                  <CheckBox fx:id="babinskiNormalFlexorL" layoutX="471.0" layoutY="438.0" mnemonicParsing="false" text="normal(flexor or downgoing)L" />
+                  <CheckBox fx:id="abnormalExtensiorL" layoutX="271.0" layoutY="458.0" mnemonicParsing="false" text="Abnormal (extensior/upgoing)L" />
+                  <Label layoutX="10.0" layoutY="479.0" prefHeight="15.0" prefWidth="66.0" text="Sensation" />
+                  <Separator layoutY="475.0" prefHeight="5.0" prefWidth="981.0" />
+                  <CheckBox fx:id="discriminationIncreased" layoutX="673.0" layoutY="480.0" mnemonicParsing="false" text="2pt discrimination increased" />
+                  <CheckBox fx:id="pinpointDecreased" layoutX="472.0" layoutY="500.0" mnemonicParsing="false" text="pinpoint decreased" />
+                  <CheckBox fx:id="lightTorchIncreased" layoutX="272.0" layoutY="480.0" mnemonicParsing="false" text="light torch increased" />
+                  <CheckBox fx:id="lightTorchDecreased" layoutX="472.0" layoutY="480.0" mnemonicParsing="false" text="light torch decreased" />
+                  <CheckBox fx:id="pinpointNormal" layoutX="272.0" layoutY="500.0" mnemonicParsing="false" text="pinpoint normal" />
+                  <CheckBox fx:id="discriminationDecreased" layoutX="673.0" layoutY="499.0" mnemonicParsing="false" text="2pt discrimination decreased" />
+                  <CheckBox fx:id="vibrationIncreased" layoutX="272.0" layoutY="523.0" mnemonicParsing="false" text="vibration increased" />
+                  <CheckBox fx:id="vibrationDecreased" layoutX="473.0" layoutY="522.0" mnemonicParsing="false" text="vibration decreased" />
+                  <Separator layoutX="10.0" layoutY="549.0" prefHeight="5.0" prefWidth="981.0" />
+                  <CheckBox fx:id="sensationNormal" layoutX="197.0" layoutY="480.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

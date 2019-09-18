@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="600.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.medicalActivityCharge.MedicalActivityChargeEditController">
+   <children>
+      <TabPane layoutX="3.0" layoutY="2.0" prefHeight="479.0" prefWidth="592.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="402.0" prefWidth="592.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="46.0" text="Activity Code" />
+                        <Label layoutX="21.0" layoutY="143.0" text="Drug Qty" />
+                        <Label layoutX="21.0" layoutY="77.0" text="Activity Date" />
+                        <Label layoutX="261.0" layoutY="140.0" text="UOM" />
+                        <Label layoutX="21.0" layoutY="172.0" text="Billing Qty" />
+                        <Label layoutX="314.0" layoutY="33.0" text="Billing Status" />
+                        <Label layoutX="21.0" layoutY="102.0" text="CPT Code" />
+                        <TextField fx:id="activityCodeText" layoutX="107.0" layoutY="40.0" prefHeight="25.0" prefWidth="139.0" />
+                        <TextField fx:id="cptCodeText" editable="false" layoutX="108.0" layoutY="101.0" prefHeight="25.0" prefWidth="142.0" />
+                        <TextField fx:id="drugQtyText" layoutX="109.0" layoutY="136.0" prefHeight="25.0" prefWidth="141.0" />
+                        <TextField fx:id="billingQtyText" layoutX="109.0" layoutY="175.0" prefHeight="25.0" prefWidth="142.0" />
+                        <Label layoutX="315.0" layoutY="67.0" text="Billing Modifier" />
+                        <TitledPane animated="false" collapsible="false" layoutX="13.0" layoutY="216.0" prefHeight="73.0" prefWidth="561.0" text="Billable Status">
+                          <content>
+                            <AnchorPane layoutX="21.0" minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="554.0">
+                                 <children>
+                                    <RadioButton fx:id="billableActivityRadioButton" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" text="Billable Activity">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="billableStatus" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="noChargeActivityRadioButton" layoutX="198.0" layoutY="14.0" mnemonicParsing="false" text="No Charge Activity" toggleGroup="$billableStatus" />
+                                    <RadioButton fx:id="billingCompletedRadioButton" layoutX="383.0" layoutY="14.0" mnemonicParsing="false" text="Biling Completed" toggleGroup="$billableStatus" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextField fx:id="billingModifierText" layoutX="408.0" layoutY="65.0" />
+                        <ChoiceBox fx:id="billingStatusChoiceBox" layoutX="407.0" layoutY="32.0" prefWidth="150.0" />
+                        <TextField fx:id="uomText" layoutX="299.0" layoutY="136.0" prefHeight="25.0" prefWidth="51.0" />
+                        <Label layoutX="23.0" layoutY="369.0" text="Biling Comment" />
+                        <TextArea fx:id="billingCommentTextArea" layoutX="21.0" layoutY="393.0" prefHeight="38.0" prefWidth="518.0" />
+                        <Label layoutX="301.0" layoutY="299.0" text="Override Payer" />
+                        <Label layoutX="301.0" layoutY="330.0" text="Location Given" />
+                        <Label layoutX="301.0" layoutY="363.0" text="NDC code" />
+                        <ChoiceBox fx:id="overridePayerChoiceBox" layoutX="408.0" layoutY="294.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="locationChoiceBox" layoutX="407.0" layoutY="326.0" prefWidth="150.0" />
+                        <TextField fx:id="ndcText" layoutX="407.0" layoutY="361.0" prefHeight="25.0" prefWidth="132.0" />
+                        <DatePicker fx:id="activityDate" layoutX="108.0" layoutY="71.0" prefHeight="25.0" prefWidth="162.0" />
+                        <Button fx:id="medicalActivityButton" layoutX="249.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="31.0" layoutY="299.0" text="Override Fee" />
+                        <TextField fx:id="overrideFeeText" layoutX="114.0" layoutY="295.0" prefHeight="25.0" prefWidth="88.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Results">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="41.0" text="Result Code" />
+                        <Label layoutX="32.0" layoutY="84.0" text="Summary" />
+                        <TextField fx:id="summaryText" layoutX="116.0" layoutY="83.0" prefHeight="25.0" prefWidth="155.0" />
+                        <Label layoutX="32.0" layoutY="130.0" text="Next Due Date" />
+                        <Label layoutX="32.0" layoutY="174.0" text="Clinician" />
+                        <Label layoutX="32.0" layoutY="215.0" text="NDC Code" />
+                        <CheckBox layoutX="290.0" layoutY="130.0" mnemonicParsing="false" text="Override" />
+                        <Button layoutX="456.0" layoutY="34.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Charting" />
+                        <Button layoutX="456.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Images" />
+                        <TextField fx:id="ndcCodeText" layoutX="118.0" layoutY="213.0" prefHeight="25.0" prefWidth="155.0" />
+                        <TextField fx:id="clinicianText" layoutX="118.0" layoutY="170.0" prefHeight="25.0" prefWidth="155.0" />
+                        <Button fx:id="clinicianButton" layoutX="274.0" layoutY="170.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="272.0" layoutY="82.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <DatePicker fx:id="nextDueDate" layoutX="118.0" layoutY="126.0" prefHeight="25.0" prefWidth="160.0" />
+                        <Label fx:id="clinicianNameLabel" layoutX="325.0" layoutY="174.0" />
+                        <ComboBox fx:id="resultCodeChoiceBox" layoutX="118.0" layoutY="39.0" onAction="#resultCodeCompleteSelect" prefWidth="150.0" />
+                        <Button fx:id="testInfoBtn" layoutX="456.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Test Info" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Costs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="noCostActivityCheckBox" layoutX="109.0" layoutY="39.0" mnemonicParsing="false" text="No cost for this Activity" />
+                        <Label layoutX="113.0" layoutY="82.0" text="Activity Cost :" />
+                        <TextField fx:id="activityCostText" layoutX="193.0" layoutY="78.0" prefHeight="25.0" prefWidth="81.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab disable="true" text="Audit">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="updateBtn" layoutX="382.0" layoutY="486.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelBtn" layoutX="483.0" layoutY="486.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

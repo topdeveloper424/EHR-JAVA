@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="727.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.AspirationProcedureInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="488.0" prefWidth="714.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="805.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="46.0" prefHeight="3.0" prefWidth="714.0" />
+                  <Label layoutX="2.0" layoutY="14.0" text="Preparation Cleanser" />
+                  <Label layoutX="2.0" layoutY="79.0" text="Aspiration - Which Surface?" />
+                  <Separator layoutX="150.0" orientation="VERTICAL" prefHeight="411.0" prefWidth="1.0" />
+                  <Button fx:id="doneBtn" layoutX="425.0" layoutY="418.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="4.0" layoutY="156.0" prefHeight="0.0" prefWidth="708.0" />
+                  <Button fx:id="skipBtn" layoutX="551.0" layoutY="418.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-2.0" layoutY="241.0" prefHeight="3.0" prefWidth="714.0" />
+                  <Separator layoutX="1.0" layoutY="274.0" prefHeight="1.0" prefWidth="714.0" />
+                  <Separator layoutX="-4.0" layoutY="409.0" prefHeight="4.0" prefWidth="725.0" />
+                  <Separator layoutX="-4.0" layoutY="376.0" prefHeight="2.0" prefWidth="714.0" />
+                  <Label layoutX="2.0" layoutY="175.0" text="Which Body Part" />
+                  <Label layoutX="2.0" layoutY="131.0" text="Which Side ?" />
+                  <Label layoutX="2.0" layoutY="286.0" text="Anesthetic" />
+                  <Label layoutX="2.0" layoutY="250.0" text="Volume of Anesthetic" />
+                  <Label layoutX="2.0" layoutY="385.0" text="Patient Response" />
+                  <Separator layoutX="2.0" layoutY="128.0" prefHeight="0.0" prefWidth="714.0" />
+                  <RadioButton fx:id="alcoholRadio" layoutX="159.0" layoutY="2.0" mnemonicParsing="false" text="alcohol">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="complexity" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="peroxideRadio" layoutX="362.0" layoutY="2.0" mnemonicParsing="false" text="peroxide" toggleGroup="$complexity" />
+                  <Separator layoutX="-1.0" layoutY="347.0" prefHeight="4.0" prefWidth="714.0" />
+                  <CheckBox fx:id="marcaineEpinephrine2CheckBox" layoutX="158.0" layoutY="323.0" mnemonicParsing="false" text="2% Marcaine with epinephrine" />
+                  <CheckBox fx:id="lidocaine1CheckBox" layoutX="158.0" layoutY="279.0" mnemonicParsing="false" text="1% Lidocaine" />
+                  <CheckBox fx:id="lidocaine2CheckBox" layoutX="361.0" layoutY="283.0" mnemonicParsing="false" text="2% Lidocaine" />
+                  <CheckBox fx:id="epinephrine1CheckBox" layoutX="508.0" layoutY="284.0" mnemonicParsing="false" text="1% Lidocaine with epinephrine" />
+                  <CheckBox fx:id="epinephrine2CheckBox" layoutX="158.0" layoutY="300.0" mnemonicParsing="false" text="2% Lidocaine with epinephrine" />
+                  <Label layoutX="2.0" layoutY="356.0" text="Steriod Injection" />
+                  <CheckBox fx:id="externalCheck" layoutX="160.0" layoutY="107.0" mnemonicParsing="false" text="external" />
+                  <RadioButton fx:id="leftRadio" layoutX="159.0" layoutY="134.0" mnemonicParsing="false" text="left">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="modi" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="rightRadio" layoutX="362.0" layoutY="133.0" mnemonicParsing="false" text="right" toggleGroup="$modi" />
+                  <CheckBox fx:id="ulnarCheck" layoutX="160.0" layoutY="68.0" mnemonicParsing="false" text="ulnar" />
+                  <CheckBox fx:id="anteriorCheck" layoutX="362.0" layoutY="68.0" mnemonicParsing="false" text="anterior" />
+                  <CheckBox fx:id="posteriorCheck" layoutX="508.0" layoutY="68.0" mnemonicParsing="false" text="posterior" />
+                  <RadioButton fx:id="normalRadio" layoutX="508.0" layoutY="1.0" mnemonicParsing="false" text="normal saline" toggleGroup="$complexity" />
+                  <RadioButton fx:id="soapRadio" layoutX="159.0" layoutY="23.0" mnemonicParsing="false" text="soap and water" toggleGroup="$complexity" />
+                  <CheckBox fx:id="epiduralCheckBox" layoutX="365.0" layoutY="220.0" mnemonicParsing="false" text="epidural" />
+                  <CheckBox fx:id="cysticCheckBox" layoutX="508.0" layoutY="221.0" mnemonicParsing="false" text="cystic structure" />
+                  <CheckBox fx:id="marcaine2CheckBox" layoutX="361.0" layoutY="323.0" mnemonicParsing="false" text="2% Marcaine" />
+                  <CheckBox fx:id="marcaine1CheckBox" layoutX="361.0" layoutY="303.0" mnemonicParsing="false" text="1% Marcaine" />
+                  <CheckBox fx:id="marcaineEpinephrine1CheckBox" layoutX="508.0" layoutY="303.0" mnemonicParsing="false" text="1% Marcaine with epinephrine" />
+                  <CheckBox fx:id="extensorCheck" layoutX="160.0" layoutY="49.0" mnemonicParsing="false" text="extensor" />
+                  <CheckBox fx:id="flexorCheck" layoutX="362.0" layoutY="49.0" mnemonicParsing="false" text="flexor" />
+                  <CheckBox fx:id="radialCheck" layoutX="508.0" layoutY="49.0" mnemonicParsing="false" text="radial" />
+                  <CheckBox fx:id="lateralCheck" layoutX="160.0" layoutY="88.0" mnemonicParsing="false" text="lateral" />
+                  <CheckBox fx:id="medialCheck" layoutX="362.0" layoutY="88.0" mnemonicParsing="false" text="medial" />
+                  <CheckBox fx:id="interiorCheck" layoutX="508.0" layoutY="88.0" mnemonicParsing="false" text="internal" />
+                  <CheckBox fx:id="muscleTiggerCheck" layoutX="162.0" layoutY="219.0" mnemonicParsing="false" text="muscle tigger point" />
+                  <CheckBox fx:id="kneeCheck" layoutX="162.0" layoutY="180.0" mnemonicParsing="false" text="knee" />
+                  <CheckBox fx:id="digit1Check" layoutX="364.0" layoutY="180.0" mnemonicParsing="false" text="1st digit" />
+                  <CheckBox fx:id="digit2Check" layoutX="508.0" layoutY="180.0" mnemonicParsing="false" text="2nd digit" />
+                  <CheckBox fx:id="shoulderCheck" layoutX="162.0" layoutY="161.0" mnemonicParsing="false" text="shoulder" />
+                  <CheckBox fx:id="ankleCheck" layoutX="364.0" layoutY="161.0" mnemonicParsing="false" text="ankle" />
+                  <CheckBox fx:id="elbowCheck" layoutX="508.0" layoutY="161.0" mnemonicParsing="false" text="elbow" />
+                  <CheckBox fx:id="digit3Check" layoutX="162.0" layoutY="200.0" mnemonicParsing="false" text="3rd digit" />
+                  <CheckBox fx:id="digit4Check" layoutX="364.0" layoutY="200.0" mnemonicParsing="false" text="4th digit" />
+                  <CheckBox fx:id="digit5Check" layoutX="508.0" layoutY="200.0" mnemonicParsing="false" text="5th digit" />
+                  <TextField fx:id="volumeText" layoutX="163.0" layoutY="246.0" prefHeight="25.0" prefWidth="99.0" />
+                  <RadioButton fx:id="kenalogRadio" layoutX="163.0" layoutY="354.0" mnemonicParsing="false" text="kenalog">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="pati" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="solumedrolRadio" layoutX="366.0" layoutY="354.0" mnemonicParsing="false" text="solumedrol" toggleGroup="$pati" />
+                  <RadioButton fx:id="wellRadio" layoutX="165.0" layoutY="385.0" mnemonicParsing="false" text="well">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="wound" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="withDifficultyRadio" layoutX="363.0" layoutY="384.0" mnemonicParsing="false" text="with difficulty" toggleGroup="$wound" />
+                  <Label layoutX="266.0" layoutY="250.0" text="ml" />
+                  <RadioButton fx:id="betadineRadio" layoutX="363.0" layoutY="22.0" mnemonicParsing="false" text="betadine" toggleGroup="$complexity" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="medicalCodeNavPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.MedicalCodesGUIController">
+   <children>
+      <VBox layoutY="1.0" prefHeight="361.0" prefWidth="189.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="Medical codes">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button fx:id="medAct" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForMedicalActivity" prefHeight="25.0" prefWidth="188.0" text="Medical Activities">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+          <!--   <Button fx:id="medatm" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="MedicalActivities Templates">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button> -->
+            <Button fx:id="medco" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForMedicalConditionButton" prefHeight="25.0" prefWidth="188.0" text="Medical Conditions">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="vstcgry" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForVisitCategoryButton" prefHeight="25.0" prefWidth="188.0" text="Visit Catagory">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <!-- <Button fx:id="vstgrp" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="Visit Catagories Group">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button> -->
+            <Button fx:id="wrst" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForWorkRestrictionButton" prefHeight="25.0" prefWidth="188.0" text="Work Restriction">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="icd10CodesBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForICD10CodeButton" prefHeight="25.0" prefWidth="188.0" text="ICD-10 codes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <!-- <Button fx:id="icd9rg" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="ICD-10 Report Group">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button> -->
+            <Button fx:id="cpt4hcp" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCPT4CodeButton" prefHeight="25.0" prefWidth="188.0" text="CPT-4/HCPCS Codes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="decl" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForDeclinationCodeButton" prefHeight="25.0" prefWidth="188.0" text="Declination Codes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="assmnt" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForAssesmentQuesButton" prefHeight="25.0" prefWidth="188.0" text="Assessment Question">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="respiratorModelBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForRespiratorModelButton" prefHeight="25.0" prefWidth="188.0" text="Respirator Model">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="bill" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForBillingServiceTypeButton" prefHeight="25.0" prefWidth="188.0" text="Billing Service type">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="closeBtn" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCloseButton" prefHeight="25.0" prefWidth="65.0" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="9.0" right="2.0" top="4.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

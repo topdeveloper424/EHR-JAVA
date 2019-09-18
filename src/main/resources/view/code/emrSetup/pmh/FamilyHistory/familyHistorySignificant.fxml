@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="132.0" prefWidth="566.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.familyHistory.FamilyHistorySignificantInputController">
+   <children>
+      <Label layoutX="13.0" layoutY="14.0" text="Denies History" />
+      <Label layoutX="13.0" layoutY="53.0" text="Unknown History" />
+      <Label layoutX="252.0" layoutY="14.0" text="Patient Denies Significant Family Health Hitory " />
+      <Label layoutX="252.0" layoutY="53.0" text="Patient is Unware of Significant Family Health Hitory " />
+      <CheckBox fx:id="deniesCheck" layoutX="163.0" layoutY="14.0" mnemonicParsing="false" text="Include" />
+      <CheckBox fx:id="unknownCheck" layoutX="164.0" layoutY="53.0" mnemonicParsing="false" text="Include" />
+      <Button fx:id="doneBtn" layoutX="344.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="skipBtn" layoutX="449.0" layoutY="92.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutY="44.0" prefHeight="4.0" prefWidth="566.0" />
+      <Separator layoutY="79.0" prefHeight="4.0" prefWidth="566.0" />
+      <Separator layoutX="127.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="86.0" prefWidth="2.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="875.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.assesment.assesmentDiagonosis.AssesmentDiagonosisInputController">
+   <children>
+      <Label layoutX="14.0" layoutY="6.0" text="BodyPart :" />
+      <ChoiceBox fx:id="bodyPartChoiceBox" layoutX="75.0" layoutY="4.0" prefWidth="150.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="34.0" prefHeight="58.0" prefWidth="427.0" text="Chronicity">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="ChronicityNaRadio" layoutX="8.0" layoutY="3.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Chronicity" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="ChronicityChronicRadio" layoutX="64.0" layoutY="2.0" mnemonicParsing="false" text="Chronic" toggleGroup="$Chronicity" />
+                  <RadioButton fx:id="ChronicityAcuteRadio" layoutX="139.0" layoutY="1.0" mnemonicParsing="false" text="Acute" toggleGroup="$Chronicity" />
+                  <RadioButton fx:id="ChronicitySelfRadio" layoutX="202.0" mnemonicParsing="false" text="Self Limited" toggleGroup="$Chronicity" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="13.0" layoutY="97.0" prefHeight="58.0" prefWidth="427.0" text="Current Degree of Control">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="currentNaRadio" layoutX="8.0" layoutY="4.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="currentDegree" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="currentControledRadio" layoutX="64.0" layoutY="3.0" mnemonicParsing="false" text="Controlled" toggleGroup="$currentDegree" />
+                  <RadioButton fx:id="currentUncontrolledRadio" layoutX="153.0" layoutY="4.0" mnemonicParsing="false" text="Uncontrolled" toggleGroup="$currentDegree" />
+                  <RadioButton fx:id="currentQuestionableaRadio" layoutX="252.0" layoutY="4.0" mnemonicParsing="false" text="Questionable" toggleGroup="$currentDegree" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="160.0" prefHeight="203.0" prefWidth="427.0" text="Location Specificity">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="firstRowNaRadio" layoutX="27.0" layoutY="15.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="firstRow" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="firstRowLeftRadio" layoutX="101.0" layoutY="15.0" mnemonicParsing="false" text="Left" toggleGroup="$firstRow" />
+                  <RadioButton fx:id="firstRowRightRadio" layoutX="189.0" layoutY="15.0" mnemonicParsing="false" text="Right" toggleGroup="$firstRow" />
+                  <RadioButton fx:id="firstRowBilateralRadio" layoutX="262.0" layoutY="14.0" mnemonicParsing="false" text="Bilateral" toggleGroup="$firstRow" />
+                  <Separator layoutX="13.0" layoutY="6.0" prefHeight="4.0" prefWidth="332.0" />
+                  <Separator layoutX="12.0" layoutY="39.0" prefHeight="2.0" prefWidth="332.0" />
+                  <Separator layoutX="13.0" layoutY="69.0" prefHeight="1.0" prefWidth="331.0" />
+                  <RadioButton fx:id="secondRowNaRadio" layoutX="27.0" layoutY="46.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="secondRow" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="thirdRowNaRadio" layoutX="28.0" layoutY="78.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="thirdRow" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <Separator layoutX="12.0" layoutY="100.0" prefHeight="3.0" prefWidth="327.0" />
+                  <RadioButton layoutX="27.0" layoutY="107.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="fourthRow" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <Separator layoutX="13.0" layoutY="131.0" prefHeight="1.0" prefWidth="329.0" />
+                  <RadioButton fx:id="fifthRowNaRadio" layoutX="38.0" layoutY="139.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="fifthRow" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <Separator layoutX="13.0" layoutY="163.0" prefHeight="4.0" prefWidth="330.0" />
+                  <Separator layoutX="11.0" layoutY="7.0" orientation="VERTICAL" prefHeight="160.0" prefWidth="6.0" />
+                  <RadioButton fx:id="secondRowDorsalRadio" layoutX="103.0" layoutY="46.0" mnemonicParsing="false" text="Dorsal" toggleGroup="$secondRow" />
+                  <RadioButton fx:id="thirdRowMedicalRadio" layoutX="103.0" layoutY="74.0" mnemonicParsing="false" text="Medial" toggleGroup="$thirdRow" />
+                  <RadioButton fx:id="fourthRowAnteriorRadio" layoutX="103.0" layoutY="107.0" mnemonicParsing="false" text="Anterior" toggleGroup="$fourthRow" />
+                  <RadioButton fx:id="fifthRowProximalRadio" layoutX="103.0" layoutY="139.0" mnemonicParsing="false" text="Proximal" toggleGroup="$fifthRow" />
+                  <RadioButton fx:id="secondRowPlanterRadio" layoutX="189.0" layoutY="46.0" mnemonicParsing="false" text="Planter" toggleGroup="$secondRow" />
+                  <RadioButton fx:id="thirdRowLateralRadio" layoutX="188.0" layoutY="75.0" mnemonicParsing="false" text="Lateral" toggleGroup="$thirdRow" />
+                  <RadioButton fx:id="fourthRowPosteriorRadio" layoutX="190.0" layoutY="107.0" mnemonicParsing="false" text="Posterior" toggleGroup="$fourthRow" />
+                  <RadioButton fx:id="fifthRowDistalRadio" layoutX="190.0" layoutY="139.0" mnemonicParsing="false" text="Distal" toggleGroup="$fifthRow" />
+                  <Separator layoutX="340.0" layoutY="6.0" orientation="VERTICAL" prefHeight="161.0" prefWidth="7.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="370.0" prefHeight="58.0" prefWidth="427.0" text="Interactable">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="InteractableNaRadio" layoutX="23.0" layoutY="5.0" mnemonicParsing="false" selected="true" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Interactable" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="InteractableYesRadio" layoutX="108.0" layoutY="5.0" mnemonicParsing="false" text="Yes" toggleGroup="$Interactable" />
+                  <RadioButton fx:id="InteractableNoRadio" layoutX="195.0" layoutY="6.0" mnemonicParsing="false" text="No" toggleGroup="$Interactable" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="15.0" layoutY="432.0" prefHeight="88.0" prefWidth="427.0" text="Condition (Pick up any that apply)">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="minorCheckBox" layoutX="11.0" layoutY="7.0" mnemonicParsing="false" text="Minor" />
+                  <CheckBox fx:id="unComplecatedCheckBox" layoutX="94.0" layoutY="6.0" mnemonicParsing="false" text="Uncomplecated" />
+                  <CheckBox fx:id="complecatedCheckBox" layoutX="219.0" layoutY="7.0" mnemonicParsing="false" text="Complecated" />
+                  <CheckBox fx:id="systematicCheckBox" layoutX="326.0" layoutY="7.0" mnemonicParsing="false" text="Systematic" />
+                  <CheckBox fx:id="midExacerbationCheckBox" layoutX="10.0" layoutY="31.0" mnemonicParsing="false" text="Mid Exacerbation" />
+                  <CheckBox fx:id="severeExacerbationv" layoutX="143.0" layoutY="31.0" mnemonicParsing="false" text="Severe Exacerbation" />
+                  <CheckBox fx:id="lifeThreateringCheckBox" layoutX="287.0" layoutY="31.0" mnemonicParsing="false" text="Life threatering" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="16.0" layoutY="524.0" prefHeight="58.0" prefWidth="427.0" text="Existing Problem Status">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="resolvedCheckBox" layoutX="11.0" layoutY="4.0" mnemonicParsing="false" text="Resolved" />
+                  <CheckBox fx:id="stableCheckBox" layoutX="94.0" layoutY="4.0" mnemonicParsing="false" text="Stable" />
+                  <CheckBox fx:id="improvedCheckBox" layoutX="219.0" layoutY="4.0" mnemonicParsing="false" text="Improved" />
+                  <CheckBox fx:id="worseningCheckBox" layoutX="326.0" layoutY="4.0" mnemonicParsing="false" text="Worsening" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="15.0" layoutY="587.0" prefHeight="58.0" prefWidth="427.0" text="New Problem Status">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="additionalWorkCheckBox" layoutX="6.0" layoutY="1.0" mnemonicParsing="false" text="Additional Work-up Required" />
+                  <CheckBox fx:id="noAdditionalWorkCheckBox" layoutX="208.0" layoutY="2.0" mnemonicParsing="false" text="No Additional Work-up Required" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="649.0" prefHeight="58.0" prefWidth="427.0" text="Assesment Timing">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="assesmentNaRadio" layoutX="23.0" layoutY="5.0" mnemonicParsing="false" text="N/A">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="AssesmentTiming" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="assesmentInitialRadio" layoutX="114.0" layoutY="4.0" mnemonicParsing="false" text="Initial" toggleGroup="$AssesmentTiming" />
+                  <RadioButton fx:id="assesmentSubsequentRadio" layoutX="195.0" layoutY="6.0" mnemonicParsing="false" text="Subsequent" toggleGroup="$AssesmentTiming" />
+                  <RadioButton fx:id="assesmentSequelaRadio" layoutX="313.0" layoutY="6.0" mnemonicParsing="false" text="Sequela" toggleGroup="$AssesmentTiming" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Label layoutX="461.0" layoutY="46.0" text="Assesment :" />
+      <TextField fx:id="assesmentText" layoutX="532.0" layoutY="42.0" prefHeight="25.0" prefWidth="225.0" />
+      <Label layoutX="461.0" layoutY="104.0" text="ICD10 :" />
+      <TextField fx:id="icd10Text" layoutX="538.0" layoutY="100.0" prefHeight="25.0" prefWidth="125.0" />
+      <Button fx:id="icd10Btn" layoutX="670.0" layoutY="98.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="461.0" layoutY="152.0" text="SNOMED CT :" />
+      <TextField fx:id="snomedctText" layoutX="538.0" layoutY="148.0" prefHeight="25.0" prefWidth="125.0" />
+      <Button fx:id="snomedctBtn" layoutX="668.0" layoutY="146.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextArea fx:id="causeOfInjuryText" layoutX="462.0" layoutY="207.0" prefHeight="58.0" prefWidth="295.0" />
+      <TextArea fx:id="timeOfInjuryText" layoutX="461.0" layoutY="297.0" prefHeight="44.0" prefWidth="295.0" />
+      <TextArea fx:id="physicialLocationInjuryText" layoutX="461.0" layoutY="370.0" prefHeight="44.0" prefWidth="295.0" />
+      <Label layoutX="461.0" layoutY="186.0" text="Cause of Injury:" />
+      <Label layoutX="465.0" layoutY="271.0" text="Activity at Time of Injury:" />
+      <Label layoutX="465.0" layoutY="349.0" text="Physicial Location Where Injury Occure:" />
+      <TitledPane animated="false" collapsible="false" layoutX="461.0" layoutY="432.0" prefHeight="58.0" prefWidth="409.0" text="Security Required">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="specialSecurityRadio" layoutX="3.0" layoutY="5.0" mnemonicParsing="false" selected="true" text="No Special Security">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="AssesmentTiming1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="eapAccessRadio" layoutX="132.0" layoutY="5.0" mnemonicParsing="false" text="EAP Access" toggleGroup="$AssesmentTiming1" />
+                  <RadioButton fx:id="personalHealthRadio" layoutX="218.0" layoutY="5.0" mnemonicParsing="false" text="Personal Health and Wellness" toggleGroup="$AssesmentTiming1" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="459.0" layoutY="503.0" prefHeight="58.0" prefWidth="409.0" text="E&amp;M Risk Level &amp; Problem Count">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="minimalRadio" layoutX="23.0" layoutY="5.0" mnemonicParsing="false" text="Minimal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="AssesmentTiming11" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="lowRadio" layoutX="108.0" layoutY="5.0" mnemonicParsing="false" text="Low" toggleGroup="$AssesmentTiming11" />
+                  <RadioButton fx:id="moderateRadio" layoutX="195.0" layoutY="6.0" mnemonicParsing="false" text="Moderate" toggleGroup="$AssesmentTiming11" />
+                  <RadioButton fx:id="highRadio" layoutX="313.0" layoutY="6.0" mnemonicParsing="false" text="High" toggleGroup="$AssesmentTiming11" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button fx:id="doneBtn" layoutX="652.0" layoutY="587.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="skipBtn" layoutX="757.0" layoutY="587.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

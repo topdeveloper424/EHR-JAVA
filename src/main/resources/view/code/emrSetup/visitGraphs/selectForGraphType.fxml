@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0" prefWidth="421.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.genericVisitProtocal.GraphVitalsInputController">
+   <children>
+      <TitledPane animated="false" layoutX="8.0" layoutY="3.0" prefHeight="148.0" prefWidth="409.0" text="Vital Signs Graphs">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="129.0" prefWidth="410.0">
+               <children>
+                  <RadioButton fx:id="bloodPressureRadio" layoutX="22.0" layoutY="15.0" mnemonicParsing="false" text="Blood Pressure">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="vitalSign" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="pulseRadio" layoutX="21.0" layoutY="41.0" mnemonicParsing="false" text="Pulse" toggleGroup="$vitalSign" />
+                  <RadioButton fx:id="respirationRadio" layoutX="21.0" layoutY="65.0" mnemonicParsing="false" text="Respiration" toggleGroup="$vitalSign" />
+                  <RadioButton fx:id="tempRadio" layoutX="22.0" layoutY="90.0" mnemonicParsing="false" text="Temperature" toggleGroup="$vitalSign" />
+                  <RadioButton fx:id="weightRadio" layoutX="212.0" layoutY="65.0" mnemonicParsing="false" text="Weight" toggleGroup="$vitalSign" />
+                  <RadioButton fx:id="heightRadio" layoutX="213.0" layoutY="17.0" mnemonicParsing="false" text="Height" toggleGroup="$vitalSign" />
+                  <RadioButton fx:id="bmiRadio" layoutX="212.0" layoutY="41.0" mnemonicParsing="false" text="Body Mass Index" toggleGroup="$vitalSign" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="11.0" layoutY="162.0" prefHeight="126.0" prefWidth="402.0" text="CDC Growth Charts">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="heightWeightForAgeRadio" layoutX="26.0" layoutY="14.0" mnemonicParsing="false" text="Height/Weight for Age(2 to 20 years)" />
+                  <RadioButton fx:id="bmiForAgeRadio" layoutX="26.0" layoutY="39.0" mnemonicParsing="false" text="Body Mass Index for Age (2 to 20 years)" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="graphButton" layoutX="220.0" layoutY="296.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Graph ">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/graph.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="324.0" layoutY="296.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IllnessCodeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12915f57-7d35-4a3c-9e52-0d45208a62bc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="illness" class="javafx.collections.ObservableList"/>
+	<parameter name="Str" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.String"/>
+	<field name="descrp" class="java.lang.String"/>
+	<field name="wc10Code" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="590" height="53" uuid="c558f758-49ba-45b6-b78e-ded089fdd775"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Illness Code Details List]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="24">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="5001e51f-62fa-420d-b99e-46ecb31694bc"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="4" width="90" height="20" uuid="09bdf2ae-60c6-47a4-96da-a9082739850c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="4" width="90" height="20" uuid="86d6f7ac-8804-4dc7-8bc0-b85cdeb92aab"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WC10 Code]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="58">
+			<textField>
+				<reportElement x="0" y="3" width="100" height="17" uuid="13ec536b-54d0-4043-8327-0d339d56a7eb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="4" width="90" height="16" uuid="214c7ec8-db91-46f0-86d9-74dd550194b1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descrp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="5" width="82" height="15" uuid="372696f6-2826-4355-b2c2-af4b24c8ba38"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{wc10Code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="10" width="70" height="30" uuid="ec159089-cafe-4bab-b67c-55f4a5bba917"/>
+				<textFieldExpression><![CDATA[$P{Str}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

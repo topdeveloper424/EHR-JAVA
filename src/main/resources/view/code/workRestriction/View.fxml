@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="496.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.workRestriction.WorkRestrictionViewController">
+   <children>
+      <Label layoutX="36.0" layoutY="22.0" text="Search :" />
+      <TextField fx:id="searchTextField" layoutX="98.0" layoutY="18.0" />
+      <CheckBox fx:id="includeInactiveCheckBox" layoutX="349.0" layoutY="22.0" mnemonicParsing="false" text="Include Inactive ?" />
+      <Button fx:id="addButton" layoutX="25.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="changeButton" layoutX="113.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="deleteButton" layoutX="211.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="printButton" layoutX="314.0" layoutY="419.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Print">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="closeButton" layoutX="406.0" layoutY="421.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <GridPane layoutX="17.0" layoutY="382.0" prefHeight="25.0" prefWidth="229.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="topButton" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/media-controls-rewind-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="upButton" mnemonicParsing="false" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/Capturebut4.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="32.0" GridPane.columnIndex="3">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="downButton" mnemonicParsing="false" GridPane.columnIndex="4">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/but3.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" GridPane.columnIndex="5">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/Media-Controls-Fast-Forward-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="bottomButton" mnemonicParsing="false" GridPane.columnIndex="6">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/but2.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <TableView fx:id="workRestrictionTable" layoutX="15.0" layoutY="53.0" onMouseClicked="#doubleClicked" prefHeight="331.0" prefWidth="462.0">
+        <columns>
+          <TableColumn fx:id="descriptionCollumn" prefWidth="254.0" text="Description" />
+          <TableColumn fx:id="codeCollumn" minWidth="0.0" prefWidth="207.0" text="Code" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

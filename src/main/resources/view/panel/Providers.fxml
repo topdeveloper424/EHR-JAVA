@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.ProviderGUIController">
+   <children>
+      <VBox layoutY="3.0" prefHeight="189.0" prefWidth="189.0">
+         <children>
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Providers and Other Practiioners">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button fx:id="providerBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForProviderButton" prefHeight="25.0" prefWidth="255.0" text="Providers">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="referalProviderBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForReferalProviderButton" prefHeight="25.0" prefWidth="221.0" text="Referal Providers">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <!-- <Button fx:id="billingPhysicians" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="236.0" text="Billing Physicians">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button> -->
+            <Button fx:id="clinicansBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForClinicianButton" prefHeight="25.0" prefWidth="248.0" text="Clinicans">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <!-- <Button fx:id="medicalGroupBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="257.0" text="Medical Groups">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="providerNetworkBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="274.0" text="Provider Networks">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button> -->
+            <Button fx:id="closeBtn" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCloseButton" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="55.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="6.0" right="2.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.durableMedicalEquipment.DurableMedicalDMEDispenseUCInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="196.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="10.0" text="Ankle Foot Toes  DME" />
+                  <Separator layoutX="178.0" layoutY="2.0" orientation="VERTICAL" prefHeight="118.0" prefWidth="1.0" />
+                  <Button fx:id="doneBtn" layoutX="336.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="445.0" layoutY="133.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-3.0" layoutY="49.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="AnkleACane" layoutX="191.0" layoutY="7.0" mnemonicParsing="false" text="a cane" />
+                  <CheckBox fx:id="AnkleAluminium" layoutX="349.0" layoutY="9.0" mnemonicParsing="false" text="aluminum crutches(pair)" />
+                  <CheckBox fx:id="ankleACE" layoutX="192.0" layoutY="30.0" mnemonicParsing="false" text="ACE bandage" />
+                  <Label layoutX="2.0" layoutY="50.0" text="Forearm-Wrist-Hand DME" />
+                  <Label layoutX="-3.0" layoutY="100.0" text="Shoulder-Upper-Arm Elbow DME" />
+                  <CheckBox fx:id="AnkleASplint" layoutX="349.0" layoutY="31.0" mnemonicParsing="false" text="a splint" />
+                  <Separator layoutX="-1.0" layoutY="97.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="ForearmAluminum" layoutX="192.0" layoutY="53.0" mnemonicParsing="false" text="aluminium splint" />
+                  <CheckBox fx:id="forearmACEBandage" layoutX="192.0" layoutY="74.0" mnemonicParsing="false" text="ACE bandage" />
+                  <CheckBox fx:id="forearmArmSling" layoutX="349.0" layoutY="53.0" mnemonicParsing="false" text="arm sling" />
+                  <CheckBox fx:id="shoulderArmSling" layoutX="192.0" layoutY="100.0" mnemonicParsing="false" text="arm sling" />
+                  <CheckBox fx:id="forearmACEBandage" layoutX="349.0" layoutY="101.0" mnemonicParsing="false" text="ACE bandage/wrap" />
+                  <Separator layoutX="-2.0" layoutY="121.0" prefHeight="6.0" prefWidth="561.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

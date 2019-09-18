@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.eye.EyeOphthalmoscopicInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="392.0" prefWidth="642.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="10.0" layoutY="4.0" text="Discs" />
+                  <Label layoutX="32.0" layoutY="106.0" text="Cataracts" />
+                  <Separator layoutX="156.0" layoutY="1.0" orientation="VERTICAL" prefHeight="317.0" prefWidth="8.0" />
+                  <Button fx:id="doneBtn" layoutX="776.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-4.0" layoutY="84.0" prefHeight="6.0" prefWidth="649.0" />
+                  <Button fx:id="skipBtn" layoutX="876.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="discsaNormalCkeckBox" layoutX="171.0" layoutY="3.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="discsaCkeckBox" layoutX="265.0" layoutY="3.0" mnemonicParsing="false" text="normal discs" />
+                  <CheckBox fx:id="discsLeftNormalCkeckBox" layoutX="464.0" layoutY="4.0" mnemonicParsing="false" text="left disc normal" />
+                  <Separator layoutX="-2.0" layoutY="150.0" prefHeight="6.0" prefWidth="642.0" />
+                  <Separator layoutX="3.0" layoutY="199.0" prefHeight="0.0" prefWidth="635.0" />
+                  <Label layoutX="37.0" layoutY="158.0" text="Vasscls" />
+                  <Label layoutX="7.0" layoutY="217.0" text="Hemorrhages &amp; Exudates" />
+                  <CheckBox fx:id="cateractsNoCkeckBox" layoutX="265.0" layoutY="91.0" mnemonicParsing="false" text="no cataracts" />
+                  <CheckBox fx:id="cateractsLeftNormalCkeckBox" layoutX="464.0" layoutY="91.0" mnemonicParsing="false" text="left normal" />
+                  <CheckBox fx:id="discsaRighttPallorCkeckBox" layoutX="266.0" layoutY="62.0" mnemonicParsing="false" text="right pallor" />
+                  <CheckBox fx:id="cateractsRightNormalCkeckBox" layoutX="265.0" layoutY="111.0" mnemonicParsing="false" text="right normal" />
+                  <CheckBox fx:id="cateractsRightEyeCkeckBox" layoutX="464.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="143.0" text="right eye cateract" />
+                  <CheckBox fx:id="cateractsLeftEyeCkeckBox" layoutX="265.0" layoutY="130.0" mnemonicParsing="false" text="left eye cateract" />
+                  <CheckBox fx:id="vassclsShowAVCheck" layoutX="463.0" layoutY="158.0" mnemonicParsing="false" text="Show AV nicking" />
+                  <CheckBox fx:id="vassclsAppearNormalCheck" layoutX="265.0" layoutY="156.0" mnemonicParsing="false" text="appear normal" />
+                  <CheckBox fx:id="vassclsShowSilverCheck" layoutX="265.0" layoutY="177.0" mnemonicParsing="false" text="show silver wire change" />
+                  <CheckBox fx:id="exudatesNohemorrhageOrNoExudateCheck" layoutX="266.0" layoutY="204.0" mnemonicParsing="false" text="no hemorrhages or exudates" />
+                  <CheckBox fx:id="exudatesNohemorrhageCheck" layoutX="464.0" layoutY="204.0" mnemonicParsing="false" text="no hemorrhages" />
+                  <CheckBox fx:id="exudatesLeftHemorrhageCheck" layoutX="265.0" layoutY="246.0" mnemonicParsing="false" text="hemorrhages left" />
+                  <CheckBox fx:id="discsRightNormalCkeckBox" layoutX="265.0" layoutY="23.0" mnemonicParsing="false" text="right disc normal" />
+                  <CheckBox fx:id="discsLeftPapilledemaCkeckBox" layoutX="464.0" layoutY="24.0" mnemonicParsing="false" text="left papilledema" />
+                  <CheckBox fx:id="discsRightPapilledemaCkeckBox" layoutX="265.0" layoutY="42.0" mnemonicParsing="false" text="right papilledema" />
+                  <CheckBox fx:id="discsaLeftPallorCkeckBox" layoutX="464.0" layoutY="44.0" mnemonicParsing="false" text="left pallor" />
+                  <CheckBox fx:id="exudatesHemorrhageCheck" layoutX="466.0" layoutY="225.0" mnemonicParsing="false" text="hemorrhages" />
+                  <Separator layoutX="-2.0" layoutY="313.0" prefHeight="5.0" prefWidth="642.0" />
+                  <Button fx:id="doneBtn" layoutX="433.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="533.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="exudatesNoExudateCheck" layoutX="265.0" layoutY="225.0" mnemonicParsing="false" text="no exudates" />
+                  <CheckBox fx:id="cateractsNormalCkeckBox" layoutX="168.0" layoutY="94.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="exudatesWithExudateCheck" layoutX="265.0" layoutY="268.0" mnemonicParsing="false" text="with exudates" />
+                  <CheckBox fx:id="exudatesRightExudateCheck" layoutX="265.0" layoutY="290.0" mnemonicParsing="false" text="exudates right" />
+                  <CheckBox fx:id="exudatesRightHemorrhageCheck" layoutX="465.0" layoutY="249.0" mnemonicParsing="false" text="hemorrhages right" />
+                  <CheckBox fx:id="exudatesLeftExudateCheck" layoutX="466.0" layoutY="270.0" mnemonicParsing="false" text="exudates left" />
+                  <CheckBox fx:id="vassclsNormalCheck" layoutX="168.0" layoutY="158.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="exudatesNormalCheck" layoutX="171.0" layoutY="209.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

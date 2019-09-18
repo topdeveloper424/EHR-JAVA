@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.forearm.ForearmDigitInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="519.0" prefWidth="760.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0" stylesheets="@../../../../../../css/style.css">
+               <children>
+                  <Separator layoutX="155.0" orientation="VERTICAL" prefHeight="432.0" prefWidth="0.0" />
+                  <Label layoutX="9.0" layoutY="268.0" prefHeight="17.0" prefWidth="142.0" text="Strength" />
+                  <Button fx:id="doneBtn" layoutX="488.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="581.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="11.0" layoutY="13.0" text="Which Hand" />
+                  <Separator layoutX="-2.0" layoutY="45.0" prefHeight="3.0" prefWidth="834.0" />
+                  <Label layoutX="5.0" layoutY="185.0" text="Finger tenderness" />
+                  <Label layoutX="14.0" layoutY="61.0" text="Abnormalities" />
+                  <CheckBox fx:id="abnormalitiesAbrasions" layoutX="263.0" layoutY="53.0" mnemonicParsing="false" text="abrasions" />
+                  <CheckBox fx:id="abnormalitiesContusions" layoutX="464.0" layoutY="52.0" mnemonicParsing="false" text="contusions" />
+                  <CheckBox fx:id="abnormalitiesScarring" layoutX="264.0" layoutY="102.0" mnemonicParsing="false" text="scarring" />
+                  <CheckBox fx:id="abnormalitiesDeformity" layoutX="464.0" layoutY="75.0" mnemonicParsing="false" text="deformity" />
+                  <CheckBox fx:id="abnormalitiesEcchymosis" layoutX="263.0" layoutY="78.0" mnemonicParsing="false" text="ecchymosis" />
+                  <CheckBox fx:id="abnormalitiesLacerations" layoutX="464.0" layoutY="99.0" mnemonicParsing="false" text="lacerations" />
+                  <CheckBox fx:id="abnormalitiesSwelling" layoutX="602.0" layoutY="52.0" mnemonicParsing="false" text="swelling" />
+                  <Separator layoutX="4.0" layoutY="125.0" prefHeight="0.0" prefWidth="827.0" />
+                  <Separator layoutX="-2.0" layoutY="176.0" prefHeight="5.0" prefWidth="834.0" />
+                  <Label layoutX="6.0" layoutY="139.0" text="Location of problem" />
+                  <Separator layoutX="1.0" layoutY="251.0" prefHeight="0.0" prefWidth="834.0" />
+                  <RadioButton fx:id="whichHandLeft" layoutX="263.0" layoutY="13.0" mnemonicParsing="false" text="left ">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="hand" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="whichHandRight" layoutX="464.0" layoutY="14.0" mnemonicParsing="false" text="right" toggleGroup="$hand" />
+                  <CheckBox fx:id="abnormalitiesNormal" layoutX="161.0" layoutY="53.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="fingerNormal" layoutX="161.0" layoutY="187.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-1.0" layoutY="325.0" prefHeight="0.0" prefWidth="834.0" />
+                  <CheckBox fx:id="StrengthNormal" layoutX="161.0" layoutY="260.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="strengthNormal" layoutX="266.0" layoutY="260.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="strengthNormalExcept" layoutX="464.0" layoutY="263.0" mnemonicParsing="false" text="normal except" />
+                  <CheckBox fx:id="strength4th" layoutX="464.0" layoutY="306.0" mnemonicParsing="false" text="4th digit" />
+                  <CheckBox fx:id="strength1st" layoutX="464.0" layoutY="286.0" mnemonicParsing="false" text="1st digit" />
+                  <CheckBox fx:id="strength3rd" layoutX="265.0" layoutY="303.0" mnemonicParsing="false" text="3rd right" />
+                  <CheckBox fx:id="strengthDecreasedExtension" layoutX="265.0" layoutY="282.0" mnemonicParsing="false" text="decreased finger extension" />
+                  <Separator layoutY="430.0" prefHeight="3.0" prefWidth="843.0" />
+                  <Label layoutX="6.0" layoutY="340.0" prefHeight="17.0" prefWidth="142.0" text="Sensation" />
+                  <CheckBox fx:id="provocativeNormal" layoutX="161.0" layoutY="340.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="sensationaDecreased" layoutX="266.0" layoutY="332.0" mnemonicParsing="false" text="decreased" />
+                  <CheckBox fx:id="sensationaRadialSurface" layoutX="266.0" layoutY="357.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="99.0" text="radial surface" />
+                  <CheckBox fx:id="sensationaFlexor" layoutX="465.0" layoutY="332.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="99.0" text="flexor surface" />
+                  <CheckBox fx:id="LocationNormal" layoutX="161.0" layoutY="131.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="Location1st" layoutX="265.0" layoutY="130.0" mnemonicParsing="false" text="1st digit (thumb)" />
+                  <CheckBox fx:id="Location2nd" layoutX="466.0" layoutY="129.0" mnemonicParsing="false" text="2nd digit" />
+                  <CheckBox fx:id="Location5th" layoutX="466.0" layoutY="152.0" mnemonicParsing="false" text="5th digit" />
+                  <CheckBox fx:id="Location4th" layoutX="265.0" layoutY="155.0" mnemonicParsing="false" text="4th digit" />
+                  <CheckBox fx:id="Location3rd" layoutX="601.0" layoutY="131.0" mnemonicParsing="false" text="3rd digit" />
+                  <CheckBox fx:id="fingerNotNoted" layoutX="265.0" layoutY="183.0" mnemonicParsing="false" text="not noted" />
+                  <CheckBox fx:id="finger2nd" layoutX="466.0" layoutY="182.0" mnemonicParsing="false" text="2nd digit" />
+                  <CheckBox fx:id="finger5th" layoutX="466.0" layoutY="205.0" mnemonicParsing="false" text="5th digit" />
+                  <CheckBox fx:id="finger4th" layoutX="265.0" layoutY="226.0" mnemonicParsing="false" text="4th digit" />
+                  <CheckBox fx:id="finger3rd" layoutX="601.0" layoutY="184.0" mnemonicParsing="false" text="3rd digit" />
+                  <CheckBox fx:id="finger1stDigit" layoutX="265.0" layoutY="204.0" mnemonicParsing="false" text="1st  digit" />
+                  <CheckBox fx:id="fingerMcp" layoutX="466.0" layoutY="226.0" mnemonicParsing="false" text="MCP" />
+                  <CheckBox fx:id="fingerPIP" layoutX="601.0" layoutY="204.0" mnemonicParsing="false" text="PIP" />
+                  <CheckBox fx:id="fingerDip" layoutX="601.0" layoutY="224.0" mnemonicParsing="false" text="DIP" />
+                  <CheckBox fx:id="strengthFingerFlexion" layoutX="601.0" layoutY="263.0" mnemonicParsing="false" text="decreased finger flexion" />
+                  <CheckBox fx:id="strength5th" layoutX="601.0" layoutY="286.0" mnemonicParsing="false" text="5th digit" />
+                  <CheckBox fx:id="sensationa2nd" layoutX="266.0" layoutY="384.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="99.0" text="2nd digit" />
+                  <CheckBox fx:id="sensationa5th" layoutX="266.0" layoutY="408.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="99.0" text="5th digit" />
+                  <CheckBox fx:id="sensationaUlnar" layoutX="465.0" layoutY="357.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="99.0" text="ulnar surface" />
+                  <CheckBox fx:id="sensationa3rd" layoutX="466.0" layoutY="386.0" mnemonicParsing="false" text="3rd digit" />
+                  <CheckBox fx:id="sensationaExtensor" layoutX="601.0" layoutY="331.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="128.0" stylesheets="@../../../../../../css/style.css" text="extensor surface" />
+                  <CheckBox fx:id="sensationa1st" layoutX="601.0" layoutY="358.0" mnemonicParsing="false" text="1st  digit" />
+                  <CheckBox fx:id="sensationa4th" layoutX="602.0" layoutY="386.0" mnemonicParsing="false" text="4th digit" />
+                  <CheckBox fx:id="strength2nd" layoutX="601.0" layoutY="306.0" mnemonicParsing="false" text="2nd digit" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

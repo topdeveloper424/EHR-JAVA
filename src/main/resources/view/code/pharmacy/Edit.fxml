@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="757.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.pharmacy.PharmacyEditController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="466.0" prefWidth="757.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="757.0">
+                     <children>
+                        <TextField fx:id="idTextField" disable="true" layoutX="90.0" layoutY="12.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField fx:id="codeTextField" layoutX="90.0" layoutY="40.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField fx:id="nameTextField" layoutX="90.0" layoutY="72.0" prefHeight="25.0" prefWidth="328.0" />
+                        <TextField fx:id="localAddressTextField" layoutX="90.0" layoutY="105.0" prefHeight="25.0" prefWidth="551.0" />
+                        <TextField fx:id="cityTextField" layoutX="90.0" layoutY="151.0" prefHeight="25.0" prefWidth="251.0" />
+                        <TextField fx:id="stateTextField" layoutX="396.0" layoutY="154.0" prefHeight="25.0" prefWidth="106.0" />
+                        <TextField fx:id="zipTextField" layoutX="554.0" layoutY="154.0" prefHeight="25.0" prefWidth="88.0" />
+                        <TextField fx:id="telephoneTextField" layoutX="90.0" layoutY="191.0" prefHeight="25.0" prefWidth="167.0" />
+                        <TextField fx:id="extensionTextField" layoutX="312.0" layoutY="191.0" prefHeight="25.0" prefWidth="78.0" />
+                        <TextField fx:id="faxTextField" layoutX="431.0" layoutY="191.0" prefHeight="25.0" prefWidth="112.0" />
+                        <TextField fx:id="emailTextField" layoutX="90.0" layoutY="227.0" prefHeight="25.0" prefWidth="398.0" />
+                        <CheckBox fx:id="open24CheckBox" layoutX="518.0" layoutY="231.0" mnemonicParsing="false" text="Open 24 Hrs" />
+                        <TextField fx:id="contactTextField" layoutX="90.0" layoutY="270.0" prefHeight="25.0" prefWidth="238.0" />
+                        <TextField fx:id="streetTextField" layoutX="446.0" layoutY="270.0" prefHeight="25.0" prefWidth="255.0" />
+                        <TextArea fx:id="instructionTextArea" layoutX="91.0" layoutY="304.0" prefHeight="120.0" prefWidth="596.0" />
+                        <Label layoutX="8.0" layoutY="43.0" text="PharmCode :" />
+                        <Label layoutX="8.0" layoutY="78.0" text="Name:" />
+                        <Label layoutX="8.0" layoutY="109.0" text="Address :" />
+                        <Label layoutX="8.0" layoutY="158.0" text="City :" />
+                        <Label layoutX="8.0" layoutY="195.0" text="Telephone :" />
+                        <Label layoutX="8.0" layoutY="231.0" text="Email :'" />
+                        <Label layoutX="283.0" layoutY="195.0" text="Ext :" />
+                        <Label layoutX="8.0" layoutY="274.0" text="Contact :" />
+                        <Label layoutX="6.0" layoutY="360.0" text="Instruction :" />
+                        <Label layoutX="356.0" layoutY="155.0" text="State :" />
+                        <Label layoutX="516.0" layoutY="158.0" text="Zip :" />
+                        <Label layoutX="404.0" layoutY="195.0" text="Fax :" />
+                        <Label layoutX="373.0" layoutY="274.0" text="Cross Street :" />
+                        <Label layoutX="9.0" layoutY="16.0" text="Pharm ID :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Prescription">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="695.0" />
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <CheckBox fx:id="inactiveCheckBox" layoutX="97.0" layoutY="487.0" mnemonicParsing="false" text="Inactive" />
+      <Button fx:id="updateButton" layoutX="379.0" layoutY="483.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="531.0" layoutY="483.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

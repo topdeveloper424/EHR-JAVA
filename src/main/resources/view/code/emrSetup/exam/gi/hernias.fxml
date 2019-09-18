@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="487.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.gi.hernia.GiHerniaInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="190.0" prefWidth="476.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Hernias" />
+                  <Separator layoutX="127.0" layoutY="1.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="11.0" />
+                  <Button fx:id="doneBtn" layoutX="271.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="111.0" prefHeight="3.0" prefWidth="525.0" />
+                  <Button fx:id="skipBtn" layoutX="377.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="normalCkeckBox" layoutX="145.0" layoutY="15.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="noneCheckBox" layoutX="233.0" layoutY="15.0" mnemonicParsing="false" text="none noted" />
+                  <CheckBox fx:id="leftCheckBox" layoutX="339.0" layoutY="15.0" mnemonicParsing="false" text="left inguinal" />
+                  <CheckBox fx:id="rightCheckBox" layoutX="233.0" layoutY="43.0" mnemonicParsing="false" text="right inguinal" />
+                  <CheckBox fx:id="umbilicalCheckBox" layoutX="340.0" layoutY="42.0" mnemonicParsing="false" text="umbilical" />
+                  <CheckBox fx:id="ventralCheckBox" layoutX="233.0" layoutY="69.0" mnemonicParsing="false" text="ventral" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

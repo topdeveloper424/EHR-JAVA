@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.cv.CvArteriesExamCompInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="593.0" prefWidth="839.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="358.0" text="Edema Left" />
+                  <Separator layoutX="151.0" layoutY="1.0" orientation="VERTICAL" prefHeight="521.0" prefWidth="2.0" />
+                  <Label layoutX="36.0" layoutY="399.0" text="Edema Right" />
+                  <Button fx:id="doneBtn" layoutX="563.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="674.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="36.0" layoutY="442.0" text="Varicosities : Left" />
+                  <Label layoutX="28.0" layoutY="488.0" text="Varicosities : Right" />
+                  <CheckBox fx:id="EdemaNormal" layoutX="166.0" layoutY="351.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-5.0" layoutY="305.0" prefHeight="0.0" prefWidth="834.0" />
+                  <CheckBox fx:id="EdemaLeft3" layoutX="278.0" layoutY="375.0" mnemonicParsing="false" text="+3" />
+                  <CheckBox fx:id="EdemaLeft4" layoutX="440.0" layoutY="375.0" mnemonicParsing="false" text="+4" />
+                  <CheckBox fx:id="EdemaLeftNonPitting" layoutX="586.0" layoutY="376.0" mnemonicParsing="false" text="non pitting" />
+                  <CheckBox fx:id="EdemaLeft2" layoutX="720.0" layoutY="353.0" mnemonicParsing="false" text="+2" />
+                  <CheckBox fx:id="EdemaLeft1" layoutX="586.0" layoutY="354.0" mnemonicParsing="false" text="+1" />
+                  <CheckBox fx:id="EdemaLeftPitting" layoutX="440.0" layoutY="351.0" mnemonicParsing="false" text="pitting" />
+                  <CheckBox fx:id="EdemaLeftNone" layoutX="278.0" layoutY="350.0" mnemonicParsing="false" text="none noted" />
+                  <Separator layoutX="-2.0" layoutY="394.0" prefHeight="0.0" prefWidth="828.0" />
+                  <CheckBox fx:id="VaricositiesLeftNoneCheck" layoutX="277.0" layoutY="439.0" mnemonicParsing="false" text="none noted" />
+                  <CheckBox fx:id="VaricositiesLeftMildCheck" layoutX="441.0" layoutY="439.0" mnemonicParsing="false" text="mild" />
+                  <CheckBox fx:id="VaricositiesLeftModerateCheck" layoutX="587.0" layoutY="439.0" mnemonicParsing="false" text="moderate" />
+                  <CheckBox fx:id="VaricositiesLeftServeCheck" layoutX="719.0" layoutY="439.0" mnemonicParsing="false" text="severe" />
+                  <CheckBox fx:id="VaricositiesLeftWithStasisCheck" layoutX="277.0" layoutY="458.0" mnemonicParsing="false" text="with stasis changes" />
+                  <Separator layoutY="476.0" prefHeight="0.0" prefWidth="828.0" />
+                  <Separator layoutX="1.0" layoutY="520.0" prefHeight="0.0" prefWidth="828.0" />
+                  <CheckBox fx:id="edemaRight3Check" layoutX="278.0" layoutY="418.0" mnemonicParsing="false" text="+3" />
+                  <CheckBox fx:id="edemaRight4Check" layoutX="442.0" layoutY="418.0" mnemonicParsing="false" text="+4" />
+                  <CheckBox fx:id="edemaRightNonPittinglCheck" layoutX="587.0" layoutY="418.0" mnemonicParsing="false" text="non pitting" />
+                  <CheckBox fx:id="edemaRight2Check" layoutX="722.0" layoutY="399.0" mnemonicParsing="false" text="+2" />
+                  <CheckBox fx:id="edemaRight1Check" layoutX="586.0" layoutY="399.0" mnemonicParsing="false" text="+1" />
+                  <CheckBox fx:id="edemaRightPittinglCheck" layoutX="442.0" layoutY="399.0" mnemonicParsing="false" text="pitting" />
+                  <CheckBox fx:id="edemaRightNoneNotedlCheck" layoutX="278.0" layoutY="399.0" mnemonicParsing="false" text="none noted" />
+                  <Separator layoutY="438.0" prefHeight="0.0" prefWidth="828.0" />
+                  <CheckBox fx:id="VaricositiesRightNoneCheck" layoutX="278.0" layoutY="481.0" mnemonicParsing="false" text="none noted" />
+                  <CheckBox fx:id="VaricositiesRightMildCheck" layoutX="440.0" layoutY="481.0" mnemonicParsing="false" text="mild" />
+                  <CheckBox fx:id="VaricositiesRightModerateCheck" layoutX="587.0" layoutY="481.0" mnemonicParsing="false" text="moderate" />
+                  <CheckBox fx:id="VaricositiesRightServeCheck" layoutX="719.0" layoutY="479.0" mnemonicParsing="false" text="severe" />
+                  <CheckBox fx:id="VaricositiesRightWithStasisCheck" layoutX="278.0" layoutY="500.0" mnemonicParsing="false" text="with stasis changes" />
+                  <Label layoutX="35.0" layoutY="11.0" text="Carotids" />
+                  <Label layoutX="36.0" layoutY="59.0" text="Bruits" />
+                  <CheckBox fx:id="carotidsNormal" layoutX="176.0" layoutY="11.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="carotidsRightDecreased" layoutX="275.0" layoutY="25.0" mnemonicParsing="false" text="right decreased" />
+                  <CheckBox fx:id="carotidsRightNormal" layoutX="717.0" layoutY="6.0" mnemonicParsing="false" text="right normal" />
+                  <CheckBox fx:id="carotidsLeftDecrease" layoutX="585.0" layoutY="6.0" mnemonicParsing="false" text="left decreased" />
+                  <CheckBox fx:id="carotidsLeftNormal" layoutX="437.0" layoutY="6.0" mnemonicParsing="false" text="left normal" />
+                  <CheckBox fx:id="carotidsNormalBilaterally" layoutX="276.0" layoutY="6.0" mnemonicParsing="false" text="normal bilaterally" />
+                  <Separator layoutX="5.0" layoutY="45.0" prefHeight="0.0" prefWidth="828.0" />
+                  <RadioButton fx:id="noBruitsRadio" layoutX="275.0" layoutY="51.0" mnemonicParsing="false" text="no bruits" />
+                  <RadioButton fx:id="bilateralBruitsRadio" layoutX="436.0" layoutY="54.0" mnemonicParsing="false" text="bilateral bruits" />
+                  <RadioButton fx:id="bilateralRightRadio" layoutX="587.0" layoutY="54.0" mnemonicParsing="false" text="bilateral right" />
+                  <RadioButton fx:id="bilateralLeftRadio" layoutX="718.0" layoutY="54.0" mnemonicParsing="false" text="bilateral left" />
+                  <Label layoutX="36.0" layoutY="95.0" text="Abdominal Aorta" />
+                  <RadioButton fx:id="abdominalPulsatileRadio" layoutX="275.0" layoutY="87.0" mnemonicParsing="false" text="pulsatile" />
+                  <RadioButton fx:id="abdominalEnlargedRadio" layoutX="436.0" layoutY="90.0" mnemonicParsing="false" text="enlarged" />
+                  <RadioButton fx:id="abdominalBilateralLeftRadio" layoutX="718.0" layoutY="90.0" mnemonicParsing="false" text="bilateral left" />
+                  <Separator layoutX="6.0" layoutY="77.0" prefHeight="0.0" prefWidth="828.0" />
+                  <CheckBox fx:id="abdominalNormal" layoutX="166.0" layoutY="84.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="abdominalEnlarged5Radio" layoutX="275.0" layoutY="106.0" mnemonicParsing="false" text="enlarged to 5cm" />
+                  <RadioButton fx:id="abdominalenlarged6Radio" layoutX="436.0" layoutY="109.0" mnemonicParsing="false" text="enlarged to 6cm" />
+                  <RadioButton fx:id="abdominalEnlarged3Radio" layoutX="589.0" layoutY="87.0" mnemonicParsing="false" text="enlarged to 3cm" />
+                  <RadioButton fx:id="abdominalEnlarged7Radio" layoutX="589.0" layoutY="108.0" mnemonicParsing="false" text="enlarged to 7cm" />
+                  <Separator layoutX="2.0" layoutY="129.0" prefHeight="0.0" prefWidth="834.0" />
+                  <Label layoutX="30.0" layoutY="143.0" text="Femoral pulse:Left" />
+                  <CheckBox fx:id="FemoralLeft3" layoutX="719.0" layoutY="135.0" mnemonicParsing="false" text="+3" />
+                  <CheckBox fx:id="FemoralLeft4" layoutX="275.0" layoutY="154.0" mnemonicParsing="false" text="+4" />
+                  <CheckBox fx:id="FemoralLeftWithBruit" layoutX="591.0" layoutY="154.0" mnemonicParsing="false" text="with bruit" />
+                  <CheckBox fx:id="FemoralLeft2" layoutX="591.0" layoutY="135.0" mnemonicParsing="false" text="+2" />
+                  <CheckBox fx:id="FemoralLeft1" layoutX="437.0" layoutY="135.0" mnemonicParsing="false" text="+1" />
+                  <CheckBox fx:id="FemoralLeftWithoutBruit" layoutX="437.0" layoutY="154.0" mnemonicParsing="false" text="without bruit" />
+                  <CheckBox fx:id="FemoralLeftAbsent" layoutX="276.0" layoutY="135.0" mnemonicParsing="false" text="absent" />
+                  <CheckBox fx:id="FemoralLeftNormal" layoutX="166.0" layoutY="143.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-3.0" layoutY="175.0" prefHeight="0.0" prefWidth="834.0" />
+                  <Label layoutX="31.0" layoutY="188.0" text="Femoral pulse:Right" />
+                  <CheckBox fx:id="FemoralRight3" layoutX="719.0" layoutY="180.0" mnemonicParsing="false" text="+3" />
+                  <CheckBox fx:id="FemoralRight4" layoutX="276.0" layoutY="199.0" mnemonicParsing="false" text="+4" />
+                  <CheckBox fx:id="FemoralRightWithBruit" layoutX="592.0" layoutY="199.0" mnemonicParsing="false" text="with bruit" />
+                  <CheckBox fx:id="FemoralRight2" layoutX="592.0" layoutY="180.0" mnemonicParsing="false" text="+2" />
+                  <CheckBox fx:id="FemoralRight1" layoutX="438.0" layoutY="180.0" mnemonicParsing="false" text="+1" />
+                  <CheckBox fx:id="FemoralRightWithoutBruit" layoutX="438.0" layoutY="199.0" mnemonicParsing="false" text="without bruit" />
+                  <CheckBox fx:id="FemoralRightAbsent" layoutX="277.0" layoutY="180.0" mnemonicParsing="false" text="absent" />
+                  <Separator layoutX="5.0" layoutY="219.0" prefHeight="0.0" prefWidth="834.0" />
+                  <Label layoutX="31.0" layoutY="230.0" text="Pedal pulse:Left" />
+                  <CheckBox fx:id="pedalLeft3" layoutX="721.0" layoutY="222.0" mnemonicParsing="false" text="+3" />
+                  <CheckBox fx:id="pedalLeft4" layoutX="276.0" layoutY="241.0" mnemonicParsing="false" text="+4" />
+                  <CheckBox fx:id="pedalLeftDorsalisPedis" layoutX="592.0" layoutY="241.0" mnemonicParsing="false" text="dorsalis pedis" />
+                  <CheckBox fx:id="pedalLeft2" layoutX="592.0" layoutY="222.0" mnemonicParsing="false" text="+2" />
+                  <CheckBox fx:id="pedalLeft1" layoutX="438.0" layoutY="222.0" mnemonicParsing="false" text="+1" />
+                  <CheckBox fx:id="pedalLeft0" layoutX="438.0" layoutY="241.0" mnemonicParsing="false" text="0" />
+                  <CheckBox fx:id="pedalLeftNormal" layoutX="277.0" layoutY="222.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="pedalLeftPosterior" layoutX="721.0" layoutY="242.0" mnemonicParsing="false" text="posterior tibial" />
+                  <Separator layoutY="261.0" prefHeight="0.0" prefWidth="834.0" />
+                  <Label layoutX="34.0" layoutY="270.0" text="Pedal pulse:Right" />
+                  <CheckBox fx:id="pedalRight3" layoutX="720.0" layoutY="265.0" mnemonicParsing="false" text="+3" />
+                  <CheckBox fx:id="pedalRight4" layoutX="275.0" layoutY="284.0" mnemonicParsing="false" text="+4" />
+                  <CheckBox fx:id="pedalRightDorsalis" layoutX="591.0" layoutY="284.0" mnemonicParsing="false" text="dorsalis pedis" />
+                  <CheckBox fx:id="pedalRight2" layoutX="591.0" layoutY="265.0" mnemonicParsing="false" text="+2" />
+                  <CheckBox fx:id="pedalRight1" layoutX="437.0" layoutY="265.0" mnemonicParsing="false" text="+1" />
+                  <CheckBox fx:id="pedalRight0" layoutX="437.0" layoutY="284.0" mnemonicParsing="false" text="0" />
+                  <CheckBox fx:id="pedalRightNormal" layoutX="276.0" layoutY="265.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="pedalRightPosterior" layoutX="720.0" layoutY="285.0" mnemonicParsing="false" text="posterior tibial" />
+                  <Separator layoutX="5.0" layoutY="347.0" prefHeight="0.0" prefWidth="828.0" />
+                  <Label layoutX="38.0" layoutY="311.0" prefHeight="15.0" prefWidth="105.0" text="Capillary:Refill" />
+                  <CheckBox fx:id="capillaryNormalRight" layoutX="276.0" layoutY="325.0" mnemonicParsing="false" text="normal right" />
+                  <CheckBox fx:id="capillaryDecreasedLeft" layoutX="720.0" layoutY="310.0" mnemonicParsing="false" text="decreased left" />
+                  <CheckBox fx:id="capillaryNormalLeft" layoutX="590.0" layoutY="309.0" mnemonicParsing="false" text="normal left" />
+                  <CheckBox fx:id="capillaryDecreasedBilaterally" layoutX="437.0" layoutY="309.0" mnemonicParsing="false" text="decreased bilaterally" />
+                  <CheckBox fx:id="capillaryNormalBilaterally" layoutX="276.0" layoutY="307.0" mnemonicParsing="false" text="normal bilaterally" />
+                  <CheckBox fx:id="capillaryDecreasedRight" layoutX="438.0" layoutY="327.0" mnemonicParsing="false" text="decreased right" />
+                  <CheckBox fx:id="PedalLeftNormal" layoutX="166.0" layoutY="231.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

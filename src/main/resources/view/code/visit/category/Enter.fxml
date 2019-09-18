@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="655.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.visitCategory.VisitCategoryCodeInputController">
+   <children>
+      <TabPane layoutX="1.0" prefHeight="449.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="General">
+               <content>
+                  <AnchorPane prefHeight="406.0" prefWidth="631.0">
+                     <children>
+                        <TextField fx:id="categoryCodeTextField" layoutX="126.0" layoutY="2.0" />
+                        <TextField fx:id="descriptionTextField" layoutX="126.0" layoutY="32.0" />
+                        <ChoiceBox fx:id="entityTypeChoiceBox" layoutX="126.0" layoutY="63.0" prefWidth="150.0" />
+                        <TextField fx:id="minutesRequiredTextField" layoutX="127.0" layoutY="104.0" />
+                        <TextField fx:id="standardCostTextField" layoutX="127.0" layoutY="146.0" />
+                        <ChoiceBox fx:id="visitTypeChoiceBox" layoutX="127.0" layoutY="182.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="encounterTypeChoiceBox" layoutX="126.0" layoutY="223.0" prefWidth="150.0" />
+                        <RadioButton fx:id="noSpecialSecurityRadioButton" layoutX="126.0" layoutY="267.0" mnemonicParsing="false" text="No Special Security">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="security" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="eapSecuritynAccessRadioButton" layoutX="292.0" layoutY="267.0" mnemonicParsing="false" text="EAP Security Access" toggleGroup="$security" />
+                        <RadioButton fx:id="personalHealthWellnessSecurityRadioButton" layoutX="126.0" layoutY="298.0" mnemonicParsing="false" text="Personal Health and Wellness Security" toggleGroup="$security" />
+                        <Label id="test" layoutX="17.0" layoutY="6.0" text="CategoryCode :" />
+                        <Label layoutX="17.0" layoutY="36.0" text="Description:" />
+                        <Label layoutX="17.0" layoutY="66.0" text="Entity Type" />
+                        <Label layoutX="17.0" layoutY="108.0" text="Minutes Required :" />
+                        <Label layoutX="17.0" layoutY="150.0" text="Standard Cost :" />
+                        <Label layoutX="17.0" layoutY="186.0" text="Visit Type :" />
+                        <Label layoutX="17.0" layoutY="227.0" prefHeight="17.0" prefWidth="106.0" text="Encounter Type :" />
+                        <Label layoutX="15.0" layoutY="275.0" prefHeight="17.0" prefWidth="86.0" text="Security Level :" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Billing">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="noChargeVisitTypeCheckBox" layoutX="150.0" layoutY="55.0" mnemonicParsing="false" text="This is a No Change Visit Type" />
+                        <Label layoutX="89.0" layoutY="98.0" text="Billing Service Type :" />
+                        <Label layoutX="89.0" layoutY="135.0" text="Visit Billing Type :" />
+                        <Label layoutX="241.0" layoutY="135.0" text="Worker' Comp:" />
+                        <Label layoutX="375.0" layoutY="100.0" text="No Billing Service Type" />
+                        <TextField fx:id="billingServiceTypeTextField" layoutX="212.0" layoutY="94.0" prefHeight="25.0" prefWidth="115.0" />
+                        <Button fx:id="billingServiceTypeButton" layoutX="327.0" layoutY="94.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <CheckBox fx:id="inactiveCheckBox" layoutX="31.0" layoutY="462.0" mnemonicParsing="false" text="Inactive ?" />
+      <Button id="ghosh" fx:id="okButton" layoutX="370.0" layoutY="458.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="OK">
+         <graphic>
+            <ImageView id="ghosh">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="ray" fx:id="cancelButton" layoutX="476.0" layoutY="458.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Cancel">
+         <graphic>
+            <ImageView id="ray">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

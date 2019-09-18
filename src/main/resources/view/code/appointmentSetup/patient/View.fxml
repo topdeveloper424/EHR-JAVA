@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="735.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.patient.PatientViewController">
+   <children>
+      <GridPane layoutX="5.0" layoutY="14.0" prefHeight="30.0" prefWidth="715.0">
+        <columnConstraints>
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="42.0" minWidth="0.0" prefWidth="27.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="alllPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="33.0" text="All" />
+            <Button fx:id="aPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="19.0" text="A" GridPane.columnIndex="1" />
+            <Button fx:id="bPatients" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" text="B" GridPane.columnIndex="2" />
+            <Button fx:id="cPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="18.0" text="C" GridPane.columnIndex="4" />
+            <Button fx:id="dPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="32.0" text="D" GridPane.columnIndex="5" />
+            <Button fx:id="ePatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="32.0" text="E" GridPane.columnIndex="6" />
+            <Button fx:id="fPatients" mnemonicParsing="false" prefHeight="41.0" prefWidth="31.0" text="F" GridPane.columnIndex="7" />
+            <Button fx:id="gPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0" text="G" GridPane.columnIndex="8" />
+            <Button fx:id="hPatients" mnemonicParsing="false" prefHeight="41.0" prefWidth="31.0" text="H" GridPane.columnIndex="9" />
+            <Button fx:id="iPatients" mnemonicParsing="false" prefHeight="36.0" prefWidth="30.0" text="I" GridPane.columnIndex="10" />
+            <Button fx:id="jPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="J" GridPane.columnIndex="11" />
+            <Button fx:id="kPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="K" GridPane.columnIndex="12" />
+            <Button fx:id="lPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="L" GridPane.columnIndex="13" />
+            <Button fx:id="mPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0" text="M" GridPane.columnIndex="14" />
+            <Button fx:id="nPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0" text="N" GridPane.columnIndex="15" />
+            <Button fx:id="oPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0" text="O" GridPane.columnIndex="16" />
+            <Button fx:id="pPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" text="P" GridPane.columnIndex="17" />
+            <Button fx:id="qPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="Q" GridPane.columnIndex="18" />
+            <Button fx:id="rPatients" mnemonicParsing="false" prefHeight="41.0" prefWidth="24.0" text="R" GridPane.columnIndex="19" />
+            <Button fx:id="sPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0" text="S" GridPane.columnIndex="20" />
+            <Button fx:id="tPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" text="T" GridPane.columnIndex="21" />
+            <Button fx:id="uPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="32.0" text="U" GridPane.columnIndex="22" />
+            <Button fx:id="vPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="34.0" text="V" GridPane.columnIndex="23" />
+            <Button fx:id="wPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="37.0" text="W" GridPane.columnIndex="24" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="37.0" text="X" GridPane.columnIndex="25" fx:id="xPatients" />
+            <Button fx:id="yPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="39.0" text="Y" GridPane.columnIndex="26" />
+            <Button fx:id="zPatients" mnemonicParsing="false" prefHeight="30.0" prefWidth="36.0" text="Z" GridPane.columnIndex="27" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="14.0" layoutY="51.0" prefHeight="30.0" prefWidth="297.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="56.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="142.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Search" />
+            <TextField fx:id="searchTextField" GridPane.columnIndex="1" />
+            <Button fx:id="clearBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Clear" GridPane.columnIndex="2">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </GridPane>
+      <TableView fx:id="patientTable" layoutX="8.0" layoutY="93.0" onMouseClicked="#mouseClickEvent" prefHeight="277.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="patientNameCollumn" prefWidth="208.0" text="Patient Name" />
+          <TableColumn fx:id="patientIdNumberCollumn" prefWidth="125.0" text="ID Number" />
+            <TableColumn fx:id="patientDOBCollumn" prefWidth="97.0" text="DOB" />
+        </columns>
+      </TableView>
+      <Label layoutX="454.0" layoutY="93.0" prefHeight="17.0" prefWidth="252.0" text="Employment Companies or Work Pooulations" />
+      <TableView fx:id="currentCompany" layoutX="450.0" layoutY="118.0" prefHeight="163.0" prefWidth="268.0">
+        <columns>
+          <TableColumn fx:id="companyName" prefWidth="191.0" text="Organization Name" />
+          <TableColumn fx:id="companyStatus" prefWidth="76.0" text="Status" />
+        </columns>
+      </TableView>
+      <TitledPane animated="false" collapsible="false" layoutX="452.0" layoutY="291.0" prefHeight="82.0" prefWidth="268.0" text="Organization Actions">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="14.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="addNewOrgBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="89.0" text="Add New Org" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button layoutX="477.0" layoutY="384.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="165.0" text="Select Private Practice" />
+      <Label layoutX="456.0" layoutY="425.0" text="Instruction :" />
+      <TextArea layoutX="450.0" layoutY="442.0" prefHeight="91.0" prefWidth="268.0" text="Locate the Patient from the list on the left &#10;and then double click the organization on &#10; the list above to select a company   or &#10;population,or click select Private Practice&#10;" />
+      <Button fx:id="addButton" layoutX="38.0" layoutY="548.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="viewPatientBtn" layoutX="118.0" layoutY="548.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="View">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="selectButton" layoutX="435.0" layoutY="548.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Select">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="521.0" layoutY="548.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="PP" />
+      <Button layoutX="565.0" layoutY="548.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" text="IC" />
+      <Button fx:id="closeButton" layoutX="616.0" layoutY="548.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

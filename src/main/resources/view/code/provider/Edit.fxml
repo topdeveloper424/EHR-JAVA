@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="757.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.provider.ProviderEditController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="561.0" prefWidth="757.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="493.0" prefWidth="757.0">
+                     <children>
+                        <Label layoutX="178.0" layoutY="24.0" text="Provider Code :" />
+                        <Label layoutX="8.0" layoutY="171.0" text="Address :" />
+                        <Label layoutX="8.0" layoutY="208.0" text="City :" />
+                        <Label layoutX="8.0" layoutY="235.0" text="Telephone :" />
+                        <Label layoutX="8.0" layoutY="270.0" text="Email :'" />
+                        <Label layoutX="340.0" layoutY="235.0" text="Extension :" />
+                        <Label layoutX="538.0" layoutY="24.0" text="Provider Type :" />
+                        <Label layoutX="298.0" layoutY="204.0" text="State :" />
+                        <Label layoutX="528.0" layoutY="204.0" text="Zip :" />
+                        <Label layoutX="421.0" layoutY="268.0" text="Fax :" />
+                        <Label layoutX="8.0" layoutY="303.0" text="Federal ID # :" />
+                        <Label layoutX="8.0" layoutY="332.0" text="Lience # :" />
+                        <Label layoutX="8.0" layoutY="368.0" text="DEA # :" />
+                        <Label layoutX="13.0" layoutY="404.0" text="Credential :" />
+                        <Label layoutX="321.0" layoutY="303.0" text="Lic State :" />
+                        <Label layoutX="545.0" layoutY="303.0" text="Class :" />
+                        <Label layoutX="321.0" layoutY="334.0" text="Effective :" />
+                        <Label layoutX="540.0" layoutY="334.0" text="Expires :" />
+                        <Label layoutX="321.0" layoutY="369.0" text="Effective :" />
+                        <Label layoutX="540.0" layoutY="368.0" text="Expires :" />
+                        <Label layoutX="312.0" layoutY="403.0" text="Speciality :" />
+                        <Label layoutX="396.0" layoutY="24.0" text="NPI :" />
+                        <Label layoutX="8.0" layoutY="139.0" text="Listing Name :" />
+                        <TextField fx:id="idTextField" editable="false" layoutX="78.0" layoutY="20.0" prefHeight="25.0" prefWidth="96.0" />
+                        <TextField fx:id="codeTextField" layoutX="263.0" layoutY="20.0" prefHeight="25.0" prefWidth="129.0" />
+                        <TextField fx:id="npiTextField" layoutX="426.0" layoutY="20.0" prefHeight="25.0" prefWidth="109.0" />
+                        <ChoiceBox fx:id="typeComboBox" layoutX="620.0" layoutY="20.0" prefHeight="24.0" prefWidth="112.0" />
+                        <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="55.0" prefHeight="70.0" prefWidth="731.0" text="Name(First,Midle,Last,Suffix)">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="firstNameTextField" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="203.0" />
+                                    <TextField fx:id="middleNameTextField" layoutX="225.0" layoutY="10.0" prefHeight="25.0" prefWidth="202.0" />
+                                    <TextField fx:id="lastNameTextField" layoutX="438.0" layoutY="10.0" prefHeight="25.0" prefWidth="194.0" />
+                                    <TextField fx:id="suffixTextField" layoutX="643.0" layoutY="10.0" prefHeight="25.0" prefWidth="72.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextField fx:id="listingNameTextField" layoutX="102.0" layoutY="135.0" prefHeight="25.0" prefWidth="327.0" />
+                        <TextField fx:id="addressTextField" layoutX="102.0" layoutY="168.0" prefHeight="25.0" prefWidth="608.0" />
+                        <TextField fx:id="cityTextField" layoutX="102.0" layoutY="200.0" />
+                        <TextField fx:id="stateTextField" layoutX="340.0" layoutY="200.0" />
+                        <TextField fx:id="zipTextField" layoutX="561.0" layoutY="200.0" prefHeight="25.0" prefWidth="151.0" />
+                        <TextField fx:id="telephoneTextField" layoutX="102.0" layoutY="231.0" prefHeight="25.0" prefWidth="214.0" />
+                        <TextField fx:id="extensionTextField" layoutX="404.0" layoutY="231.0" prefHeight="25.0" prefWidth="114.0" />
+                        <ChoiceBox fx:id="countryComboBox" layoutX="591.0" layoutY="231.0" prefWidth="150.0" />
+                        <Label layoutX="536.0" layoutY="235.0" text="Country :" />
+                        <TextField fx:id="emailTextField" layoutX="102.0" layoutY="264.0" prefHeight="25.0" prefWidth="309.0" />
+                        <TextField fx:id="faxTextField" layoutX="449.0" layoutY="265.0" prefHeight="25.0" prefWidth="130.0" />
+                        <CheckBox fx:id="mroCheckBox" layoutX="597.0" layoutY="270.0" mnemonicParsing="false" text="Provider is MRO" />
+                        <TextField fx:id="federalIdTextField" layoutX="102.0" layoutY="299.0" prefHeight="25.0" prefWidth="167.0" />
+                        <TextField fx:id="licStateTextField" layoutX="377.0" layoutY="299.0" />
+                        <TextField fx:id="classTextField" layoutX="592.0" layoutY="299.0" />
+                        <TextField fx:id="licenceTextField" layoutX="102.0" layoutY="331.0" prefHeight="25.0" prefWidth="168.0" />
+                        <DatePicker fx:id="licenceEffectiveDateTextField" layoutX="378.0" layoutY="331.0" prefHeight="25.0" prefWidth="149.0" />
+                        <DatePicker fx:id="licenceExpireDateTextField" layoutX="593.0" layoutY="330.0" prefHeight="25.0" prefWidth="148.0" />
+                        <TextField fx:id="deaTextField" layoutX="102.0" layoutY="362.0" prefHeight="25.0" prefWidth="193.0" />
+                        <DatePicker fx:id="deaEffectiveDateTextField" layoutX="379.0" layoutY="364.0" prefHeight="25.0" prefWidth="149.0" />
+                        <DatePicker fx:id="deaExpireDateTextField" layoutX="594.0" layoutY="364.0" prefHeight="25.0" prefWidth="147.0" />
+                        <TextField fx:id="credentialTextField" layoutX="102.0" layoutY="398.0" />
+                        <TextField fx:id="specialityTextField" layoutX="380.0" layoutY="399.0" />
+                        <Label layoutX="9.0" layoutY="24.0" text="Provider Id :" />
+                        <RadioButton fx:id="internalRadioButton" layoutX="102.0" layoutY="447.0" mnemonicParsing="false" text="Internal">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="medicalType" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="externalRadioButton" layoutX="199.0" layoutY="447.0" mnemonicParsing="false" text="External" toggleGroup="$medicalType" />
+                        <Label layoutX="9.0" layoutY="447.0" text="Medical Type :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab disable="true" text="Billing">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="695.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="57.0" layoutY="14.0" prefHeight="165.0" prefWidth="552.0" text="Billing Identifiers">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="14.0" text="NPI :" />
+                                    <Label layoutX="13.0" layoutY="45.0" text="UPIN :" />
+                                    <Label layoutX="13.0" layoutY="75.0" text="Alternetive ID 1 :" />
+                                    <TextField layoutX="108.0" layoutY="10.0" />
+                                    <TextField layoutX="108.0" layoutY="41.0" />
+                                    <TextField layoutX="108.0" layoutY="71.0" />
+                                    <Label layoutX="13.0" layoutY="105.0" text="Taxonomy :" />
+                                    <Label layoutX="284.0" layoutY="14.0" text="Billing PIN :" />
+                                    <Label layoutX="283.0" layoutY="45.0" text="Medical ID :" />
+                                    <Label layoutX="284.0" layoutY="75.0" text="Alternetive ID 2 :" />
+                                    <Label layoutX="284.0" layoutY="105.0" text="CLA # :" />
+                                    <TextField layoutX="364.0" layoutY="10.0" />
+                                    <TextField layoutX="108.0" layoutY="103.0" />
+                                    <TextField layoutX="387.0" layoutY="103.0" />
+                                    <TextField layoutX="387.0" layoutY="71.0" />
+                                    <TextField layoutX="375.0" layoutY="41.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <CheckBox layoutX="71.0" layoutY="186.0" mnemonicParsing="false" text="This is a Group Provider" />
+                        <TitledPane animated="false" layoutX="57.0" layoutY="215.0" prefHeight="185.0" prefWidth="554.0" text="Provider Network to which this Provider Belongs">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="552.0">
+                                 <children>
+                                    <TableView prefHeight="159.0" prefWidth="552.0">
+                                      <columns>
+                                        <TableColumn prefWidth="132.0" text="Network Name" />
+                                        <TableColumn prefWidth="106.0" text="Code" />
+                                          <TableColumn prefWidth="143.0" text="Alt PIN 1" />
+                                          <TableColumn prefWidth="170.0" text="Alt PIN 2" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button fx:id="addProviderNetworkBtn" layoutX="172.0" layoutY="407.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Add">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="271.0" layoutY="407.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Change">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/blk_tri.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="388.0" layoutY="407.0" mnemonicParsing="false" text="Delete">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/del.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab disable="true" text="Rx">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="103.0" layoutY="21.0" prefHeight="155.0" prefWidth="530.0" text="Electronic Prescribing">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="22.0" text="Prescriber ID :" />
+                                    <Label layoutX="14.0" layoutY="50.0" text="Specially Code :" />
+                                    <Label layoutX="15.0" layoutY="91.0" text="Mid Level Provider ID :" />
+                                    <Label layoutX="316.0" layoutY="59.0" text="Service Levels" />
+                                    <TextField layoutX="144.0" layoutY="18.0" />
+                                    <TextField layoutX="144.0" layoutY="87.0" />
+                                    <CheckBox layoutX="405.0" layoutY="26.0" mnemonicParsing="false" text="New Prescriptions" />
+                                    <CheckBox layoutX="406.0" layoutY="59.0" mnemonicParsing="false" text="Rx Refill Request" />
+                                    <CheckBox layoutX="408.0" layoutY="93.0" mnemonicParsing="false" text="CS Prescriptions" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Label layoutX="103.0" layoutY="202.0" text="Narcotics Addiction Number :" />
+                        <CheckBox layoutX="103.0" layoutY="248.0" mnemonicParsing="false" text="Prescription Oversight Request ?" />
+                        <CheckBox layoutX="103.0" layoutY="282.0" mnemonicParsing="false" text="Charting Signature Request ?" />
+                        <TextField layoutX="269.0" layoutY="198.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab disable="true" text="Special">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="96.0" layoutY="48.0" text="Special Encounter Instruction" />
+                        <Label layoutX="99.0" layoutY="330.0" text="Override Sales Rep :" />
+                        <TextArea layoutX="99.0" layoutY="74.0" prefHeight="239.0" prefWidth="496.0" />
+                        <TextField layoutX="215.0" layoutY="326.0" />
+                        <Button fx:id="salesReportBtn" layoutX="364.0" layoutY="326.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/insert_document_icon.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ScrollBar layoutX="595.0" layoutY="74.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="14.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab disable="true" text="Payer Specific Provider Identifiers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="173.0" layoutY="40.0" text="Override Provider ID Numbers for Specific Payer Accounts " />
+                        <TableView layoutX="103.0" layoutY="76.0" prefHeight="159.0" prefWidth="552.0">
+                           <columns>
+                              <TableColumn prefWidth="156.0" text="Account" />
+                              <TableColumn prefWidth="238.0" text="Payer Name" />
+                              <TableColumn prefWidth="157.0" text="PIN" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="103.0" layoutY="235.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="135.0" layoutY="235.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/media-controls-rewind-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="167.0" layoutY="235.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/Capturebut4.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="199.0" layoutY="235.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="231.0" layoutY="235.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/but3.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="263.0" layoutY="235.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/Media-Controls-Fast-Forward-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="295.0" layoutY="235.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/but2.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="addAccountPinBtn" layoutX="224.0" layoutY="288.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Add">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="328.0" layoutY="288.0" mnemonicParsing="false" text="Change">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/blk_tri.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="469.0" layoutY="288.0" mnemonicParsing="false" text="Delete">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/del.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab disable="true" text="Identifier Authoriser">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="87.0" layoutY="7.0" prefHeight="201.0" prefWidth="541.0" text="Assigning Authorities for the following Identifiers(Immurization Registry Export)">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="14.0" text="Federal ID Number :" />
+                                    <Label layoutX="13.0" layoutY="45.0" text="State Lisence Number:" />
+                                    <Label layoutX="13.0" layoutY="75.0" text="Medicade ID  Number :" />
+                                    <TextField layoutX="133.0" layoutY="10.0" />
+                                    <TextField layoutX="133.0" layoutY="41.0" />
+                                    <TextField layoutX="133.0" layoutY="71.0" />
+                                    <Label layoutX="13.0" layoutY="105.0" text="NPI Number : :" />
+                                    <Label layoutX="17.0" layoutY="138.0" text="DEA Number :" />
+                                    <TextField layoutX="133.0" layoutY="137.0" />
+                                    <TextField layoutX="133.0" layoutY="103.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <CheckBox fx:id="inactiveCheckBox" layoutX="428.0" layoutY="578.0" mnemonicParsing="false" text="Inactive" />
+      <Button fx:id="updateButton" layoutX="523.0" layoutY="574.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForUpdateButton" prefHeight="25.0" prefWidth="87.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="644.0" layoutY="574.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedCanclerOkButton" prefHeight="25.0" prefWidth="87.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

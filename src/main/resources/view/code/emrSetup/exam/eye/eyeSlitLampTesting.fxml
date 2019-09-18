@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.eye.EyeSlitLampTestingInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="443.0" prefWidth="836.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="42.0" prefHeight="0.0" prefWidth="835.0" />
+                  <Label layoutX="6.0" layoutY="4.0" text="Finding In Cornea" />
+                  <Label layoutX="9.0" layoutY="48.0" text="Anterior Chamber Depth" />
+                  <Separator layoutX="157.0" layoutY="1.0" orientation="VERTICAL" prefHeight="410.0" prefWidth="7.0" />
+                  <Button fx:id="doneBtn" layoutX="776.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-4.0" layoutY="67.0" prefHeight="5.0" prefWidth="842.0" />
+                  <Button fx:id="skipBtn" layoutX="876.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="corneaNormalCkeckBox" layoutX="178.0" layoutY="3.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="corneaCkeckBox" layoutX="265.0" layoutY="3.0" mnemonicParsing="false" text="corneas :  normal" />
+                  <CheckBox fx:id="corneaProteinCkeckBox" layoutX="464.0" layoutY="4.0" mnemonicParsing="false" text="presence of protein" />
+                  <CheckBox fx:id="corneaWhiteBloodCkeckBox" layoutX="657.0" layoutY="3.0" mnemonicParsing="false" text="white blood cells" />
+                  <Separator layoutX="7.0" layoutY="132.0" prefHeight="6.0" prefWidth="828.0" />
+                  <Separator layoutX="3.0" layoutY="177.0" prefHeight="4.0" prefWidth="833.0" />
+                  <Separator layoutX="3.0" layoutY="245.0" prefHeight="2.0" prefWidth="831.0" />
+                  <Separator layoutX="1.0" layoutY="336.0" prefHeight="3.0" prefWidth="841.0" />
+                  <Separator layoutY="366.0" prefHeight="0.0" prefWidth="841.0" />
+                  <Label layoutX="2.0" layoutY="93.0" text="Finding In Leans" />
+                  <Label layoutX="11.0" layoutY="251.0" text="Foreign Body" />
+                  <Label layoutX="4.0" layoutY="310.0" prefHeight="17.0" prefWidth="152.0" text="Foreign Body OD Positon" />
+                  <Label layoutX="4.0" layoutY="344.0" text="FB In Field of Vision" />
+                  <Label layoutX="3.0" layoutY="137.0" text="Fluorescence Stain" />
+                  <CheckBox fx:id="lensPoseriorCheck" layoutX="265.0" layoutY="91.0" mnemonicParsing="false" text="posterior capsule : irregular" />
+                  <CheckBox fx:id="lensCortexCheck" layoutX="464.0" layoutY="91.0" mnemonicParsing="false" text="cortex : abnormal" />
+                  <CheckBox fx:id="lensNucleusCheck" layoutX="657.0" layoutY="92.0" mnemonicParsing="false" text="nucleus : abnormal" />
+                  <CheckBox fx:id="lensNormalCheck" layoutX="266.0" layoutY="69.0" mnemonicParsing="false" text="clarity : normal" />
+                  <CheckBox fx:id="lensLeftEyeCheck" layoutX="265.0" layoutY="111.0" mnemonicParsing="false" text="left eye" />
+                  <CheckBox fx:id="lensRightEyeCheck" layoutX="464.0" layoutY="111.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="202.0" text="right eye" />
+                  <CheckBox fx:id="fluorescenceOSPossitiveCheck" layoutX="265.0" layoutY="137.0" mnemonicParsing="false" text="OS Possitive uptake" />
+                  <CheckBox fx:id="fluorescenceOSNegativeCheck" layoutX="464.0" layoutY="138.0" mnemonicParsing="false" text="OS Negative uptake" />
+                  <CheckBox fx:id="fluorescenceODPossitiveCheck" layoutX="657.0" layoutY="140.0" mnemonicParsing="false" text="OD Possitive uptake" />
+                  <CheckBox fx:id="fluorescenceODNegativeCheck" layoutX="265.0" layoutY="157.0" mnemonicParsing="false" text="OD Negative uptake" />
+                  <CheckBox fx:id="locationConjunctiveOutsideCheck" layoutX="265.0" layoutY="184.0" mnemonicParsing="false" text="conjunctivae , outside VF" />
+                  <CheckBox fx:id="locationConjunctiveInsideCheck" layoutX="464.0" layoutY="184.0" mnemonicParsing="false" text="conjunctivae , inside VF" />
+                  <CheckBox fx:id="locationCorneaInsideCheck" layoutX="266.0" layoutY="203.0" mnemonicParsing="false" text="cornea , inside VF" />
+                  <CheckBox fx:id="locationCorneaOutsideCheck" layoutX="657.0" layoutY="183.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="151.0" text="cornea , outside VF" />
+                  <CheckBox fx:id="locationUpperCheck" layoutX="464.0" layoutY="203.0" mnemonicParsing="false" text="upper palpebral conj. (lid)" />
+                  <CheckBox fx:id="locationLowerCheck" layoutX="657.0" layoutY="203.0" mnemonicParsing="false" text="lower palpebral conj. (lid)" />
+                  <Label layoutX="3.0" layoutY="181.0" text="Location Flur  Uptake" />
+                  <CheckBox fx:id="foreignBodyVisibleCheck" layoutX="265.0" layoutY="250.0" mnemonicParsing="false" text="foreign body visible" />
+                  <Separator layoutX="-4.0" layoutY="272.0" prefHeight="0.0" prefWidth="841.0" />
+                  <CheckBox fx:id="corneaHyphemaCkeckBox" layoutX="265.0" layoutY="23.0" mnemonicParsing="false" text="possible hyphema" />
+                  <CheckBox fx:id="corneaHypopyonCkeckBox" layoutX="464.0" layoutY="23.0" mnemonicParsing="false" text="possible hypopyon" />
+                  <CheckBox fx:id="anteriorNormalCheck" layoutX="265.0" layoutY="47.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="anteriorShallowCheck" layoutX="464.0" layoutY="48.0" mnemonicParsing="false" text="shallow" />
+                  <CheckBox fx:id="lensDecreasedCheck" layoutX="465.0" layoutY="69.0" mnemonicParsing="false" text="clarity : decreased" />
+                  <CheckBox fx:id="noForeignBodyVisibleCheck" layoutX="464.0" layoutY="250.0" mnemonicParsing="false" text="no foreign body visible" />
+                  <Separator layoutX="-2.0" layoutY="301.0" prefHeight="5.0" prefWidth="840.0" />
+                  <Label layoutX="4.0" layoutY="277.0" text="Foreign Body OS Positon" />
+                  <Label layoutX="397.0" layoutY="273.0" text="o'clock position" />
+                  <Button fx:id="doneBtn" layoutX="614.0" layoutY="375.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="720.0" layoutY="374.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="lensAnteriorCheck" layoutX="656.0" layoutY="70.0" mnemonicParsing="false" text="anterior capsule : irregular" />
+                  <CheckBox fx:id="locationAnteriorCheck" layoutX="265.0" layoutY="223.0" mnemonicParsing="false" text="anterior chamber" />
+                  <TextField fx:id="foreignBodyOSText" layoutX="265.0" layoutY="275.0" prefHeight="25.0" prefWidth="117.0" />
+                  <TextField fx:id="foreignBodyODText" layoutX="265.0" layoutY="307.0" prefHeight="25.0" prefWidth="117.0" />
+                  <Label layoutX="399.0" layoutY="311.0" text="o'clock position" />
+                  <RadioButton fx:id="negativeRadio" layoutX="280.0" layoutY="341.0" mnemonicParsing="false" text="Negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="fb" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="possitiveRadio" layoutX="463.0" layoutY="340.0" mnemonicParsing="false" text="Possitive" toggleGroup="$fb" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

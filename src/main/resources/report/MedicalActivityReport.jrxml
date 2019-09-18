@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2017-01-06T13:39:52 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MedicalActivityReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec0f695a-6813-4b7b-bb2d-8fb57b2520cf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.String"/>
+	<field name="descrip" class="java.lang.String"/>
+	<field name="cptCode4Hcpcs.code" class="java.lang.Object"/>
+	<field name="activityType" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="530" height="50" forecolor="#0080C0" uuid="5181cc49-0ad3-4502-96f5-7f1781075daa"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[                Master List Of Medical Activities]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="70" height="20" uuid="41510ea7-ce48-44a9-ba56-0e0319a640db"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="80" width="70" height="20" uuid="41a575b7-3a61-4b24-aa20-48e848c8a6f3"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Decription]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="80" width="70" height="20" uuid="a521624d-1983-496c-a265-3d1dffe19ed3"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CPT Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="80" width="70" height="20" uuid="e2e6b2b7-dd65-4286-a5b9-62ca8ed57905"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Activity  Type]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="40" width="70" height="30" uuid="5b0baf1d-17fb-49b8-ab9a-675d07498e76"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="0" width="70" height="20" uuid="6d1d8498-bae6-4a32-8d53-98818198f004"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="7" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="242" y="9" width="70" height="30" uuid="e836748e-c166-4b38-885c-66f0ba853ee5"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cptCode4Hcpcs.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="9" width="70" height="30" uuid="b1cb882b-a27c-4cec-9f27-a9058915a395"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="9" width="70" height="23" uuid="16f6a780-642e-45c2-b99c-3c6741aac251"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="9" width="70" height="30" uuid="455da5ee-3e20-4543-9de0-46a45c544df1"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{activityType}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="33" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

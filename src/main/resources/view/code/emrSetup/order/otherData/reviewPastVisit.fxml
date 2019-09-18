@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.otherDataSource.OtherDataReviewPastVisitInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="180.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="5.0" text="Length of Time" />
+                  <Separator layoutX="148.0" layoutY="1.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="321.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="422.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="54.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="min15Check" layoutX="170.0" layoutY="7.0" mnemonicParsing="false" text="15 min" />
+                  <CheckBox fx:id="min30Check" layoutX="345.0" layoutY="7.0" mnemonicParsing="false" text="30 min" />
+                  <CheckBox fx:id="min45Check" layoutX="170.0" layoutY="27.0" mnemonicParsing="false" text="45 min" />
+                  <CheckBox fx:id="min60Check" layoutX="344.0" layoutY="28.0" mnemonicParsing="false" text="60 min" />
+                  <Separator layoutX="-2.0" layoutY="103.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="3.0" layoutY="69.0" text="Type of Records Review" />
+                  <CheckBox fx:id="chartingNotesCheck" layoutX="171.0" layoutY="60.0" mnemonicParsing="false" text="charting notes" />
+                  <CheckBox fx:id="labResult" layoutX="346.0" layoutY="60.0" mnemonicParsing="false" text="lab results" />
+                  <CheckBox fx:id="imageCheck" layoutX="171.0" layoutY="80.0" mnemonicParsing="false" text="imageing report" />
+                  <CheckBox fx:id="otherCheck" layoutX="345.0" layoutY="81.0" mnemonicParsing="false" text="Other" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

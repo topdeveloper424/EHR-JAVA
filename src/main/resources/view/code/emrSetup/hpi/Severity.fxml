@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.hpi.severity.HPISeverityInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="532.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="488.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox disable="true" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" text="----PAIN SCALE----" />
+                                    <CheckBox fx:id="pain1CheckBox" layoutX="62.0" layoutY="44.0" mnemonicParsing="false" text="pain 1/10" />
+                                    <CheckBox fx:id="pain2CheckBox" layoutX="62.0" layoutY="78.0" mnemonicParsing="false" text="pain 2/10" />
+                                    <CheckBox fx:id="pain3CheckBox" layoutX="62.0" layoutY="112.0" mnemonicParsing="false" text="pain 3/10" />
+                                    <CheckBox fx:id="pain4CheckBox" layoutX="62.0" layoutY="146.0" mnemonicParsing="false" text="pain 4/10" />
+                                    <CheckBox fx:id="pain5CheckBox" layoutX="62.0" layoutY="177.0" mnemonicParsing="false" text="pain 5/10" />
+                                    <CheckBox fx:id="pain6CheckBox" layoutX="62.0" layoutY="212.0" mnemonicParsing="false" text="pain 6/10" />
+                                    <CheckBox fx:id="pain7CheckBox" layoutX="62.0" layoutY="242.0" mnemonicParsing="false" text="pain 7/10" />
+                                    <CheckBox fx:id="degree1CheckBox" layoutX="62.0" layoutY="392.0" mnemonicParsing="false" text="1st Degree" />
+                                    <CheckBox fx:id="pain9CheckBox" layoutX="62.0" layoutY="303.0" mnemonicParsing="false" text="pain 9/10" />
+                                    <CheckBox disable="true" layoutX="225.0" layoutY="14.0" mnemonicParsing="false" text="---OTHER SUBJECTIVE---" />
+                                    <CheckBox fx:id="pain8CheckBox" layoutX="62.0" layoutY="272.0" mnemonicParsing="false" text="pain 8/10" />
+                                    <CheckBox fx:id="pain10CheckBox" layoutX="62.0" layoutY="334.0" mnemonicParsing="false" text="pain 10/10" />
+                                    <CheckBox disable="true" layoutX="62.0" layoutY="363.0" mnemonicParsing="false" text="---BURN LEVEL---" />
+                                    <CheckBox fx:id="majorCheckBox" layoutX="225.0" layoutY="104.0" mnemonicParsing="false" text="Major 7 to 8" />
+                                    <CheckBox fx:id="moderateCheckBox" layoutX="225.0" layoutY="76.0" mnemonicParsing="false" text="Moderate(2 to 4)" />
+                                    <CheckBox fx:id="minorCheckBox" layoutX="225.0" layoutY="44.0" mnemonicParsing="false" text="Minor(1 to 2)" />
+                                    <CheckBox fx:id="degree2CheckBox" layoutX="61.0" layoutY="415.0" mnemonicParsing="false" text="2nd Degree" />
+                                    <CheckBox fx:id="degree3CheckBox" layoutX="60.0" layoutY="438.0" mnemonicParsing="false" text="3rdDegree" />
+                                    <CheckBox fx:id="significantCheckBox" layoutX="225.0" layoutY="135.0" mnemonicParsing="false" text="Significant (5 to 6)" />
+                                    <CheckBox fx:id="severeCheckBox" layoutX="225.0" layoutY="168.0" mnemonicParsing="false" text="Severe(9 to 10)" />
+                                    <CheckBox fx:id="nuisanceCheckBox" layoutX="225.0" layoutY="201.0" mnemonicParsing="false" text="Nuisance" />
+                                    <CheckBox fx:id="tolarableCheckBox" layoutX="225.0" layoutY="235.0" mnemonicParsing="false" text="Tolerable" />
+                                    <CheckBox fx:id="intolarableCheckBox" layoutX="225.0" layoutY="267.0" mnemonicParsing="false" text="Intolerable" />
+                                    <CheckBox fx:id="excruciatingCheckBox" layoutX="225.0" layoutY="300.0" mnemonicParsing="false" text="Excruciating" />
+                                    <CheckBox fx:id="simpleCheckBox" layoutX="225.0" layoutY="332.0" mnemonicParsing="false" text="Simple" />
+                                    <CheckBox fx:id="compoundCheckBox" layoutX="225.0" layoutY="362.0" mnemonicParsing="false" text="Compound" />
+                                    <CheckBox fx:id="painOnsetCheckBox" layoutX="225.0" layoutY="392.0" mnemonicParsing="false" text="Pain.Onset/Current" />
+                                    <CheckBox fx:id="otherSeverityCheckBox" layoutX="225.0" layoutY="423.0" mnemonicParsing="false" text="*Other Severity" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="486.0" layoutY="541.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="392.0" layoutY="542.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

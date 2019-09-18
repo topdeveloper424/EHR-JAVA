@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MedicalActivityReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec0f695a-6813-4b7b-bb2d-8fb57b2520cf">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.String"/>
+	<field name="descrip" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="vaccine.security" class="java.lang.Object"/>
+	<field name="secondVaccine.security" class="java.lang.Object"/>
+	<field name="immuneTest.security" class="java.lang.Object"/>
+	<field name="diagTest.security" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="-511" width="70" height="20" uuid="dd7d4ec6-0cc0-4d05-aaf8-7bdb3ced9bad"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</background>
+	<title>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="530" height="50" forecolor="#0080C0" uuid="5181cc49-0ad3-4502-96f5-7f1781075daa"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[            Master List Of Medical Condition Codes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="50" height="20" uuid="41510ea7-ce48-44a9-ba56-0e0319a640db"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="80" width="70" height="20" uuid="41a575b7-3a61-4b24-aa20-48e848c8a6f3"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Decription]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="80" width="70" height="20" uuid="e2e6b2b7-dd65-4286-a5b9-62ca8ed57905"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="80" width="50" height="20" uuid="cb97b9bc-1386-4326-ba7e-82bb02ed037a"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Vaccine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="80" width="60" height="40" uuid="d365606e-769f-4072-b6af-803d97a3cb01"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Second Vaccine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="80" width="60" height="50" uuid="904e4b84-a5f1-4e13-a610-54b93e82337a"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Immune Test ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="80" width="70" height="20" uuid="cfdf97a0-8f06-4860-b949-cceccfed2efe"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Diag Test]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="30" width="70" height="30" uuid="7d3168d5-06b3-4c22-9029-f148ea924f9f"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="30" uuid="16f6a780-642e-45c2-b99c-3c6741aac251"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="-1" width="70" height="30" uuid="b1cb882b-a27c-4cec-9f27-a9058915a395"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="-1" width="70" height="30" uuid="bd2fca56-836a-4381-b95e-6f192482ba64"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="-1" width="50" height="30" uuid="a8ce7b30-e93c-4eba-aef5-a1374584debc"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vaccine.security}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="-1" width="60" height="40" uuid="9b78cdc0-d8f9-490d-a8bb-1574f8bfdef5"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{secondVaccine.security}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="65" height="39" uuid="ed6b3075-8c10-44b5-bde9-545e45446e20"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{immuneTest.security}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="-1" width="60" height="30" uuid="1d627465-2b95-4f2d-90dc-fa587fc052df"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{diagTest.security}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

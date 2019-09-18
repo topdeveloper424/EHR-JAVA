@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrugScreenReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0825d5bc-ea15-4540-8365-c2899953f1fe">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="drug" class="java.lang.Object"/>
+	<parameter name="drugTestProfile" class="java.lang.String"/>
+	<parameter name="Parameter2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="patient.patientName.firstName" class="java.lang.String"/>
+	<field name="finalResult" class="java.lang.String"/>
+	<field name="patient.socialSecurityNo" class="java.lang.Object"/>
+	<field name="patientVisit.patient.company.mainContact" class="java.lang.Object"/>
+	<field name="drugTestName" class="java.lang.String"/>
+	<field name="patientVisit.patient.company.name" class="java.lang.Object"/>
+	<field name="patientVisit.patient.company.address.localAddress" class="java.lang.Object"/>
+	<field name="patientVisit.patient.company.address.city" class="java.lang.Object"/>
+	<field name="patientVisit.patient.company.address.state" class="java.lang.Object"/>
+	<field name="patientVisit.patient.company.address.zip" class="java.lang.Object"/>
+	<field name="patientVisit.patient.patientName.lastName" class="java.lang.String"/>
+	<field name="patientVisit.patient.address.localAddress" class="java.lang.Object"/>
+	<field name="patientVisit.patient.address.city" class="java.lang.Object"/>
+	<field name="patientVisit.patient.address.state" class="java.lang.Object"/>
+	<field name="patientVisit.patient.address.zip" class="java.lang.Object"/>
+	<field name="patientVisit.provider.firstName" class="java.lang.Object"/>
+	<field name="patientVisit.provider.middleName" class="java.lang.Object"/>
+	<field name="patientVisit.provider.lastName" class="java.lang.Object"/>
+	<field name="patientVisit.clinician.firstName" class="java.lang.Object"/>
+	<field name="patientVisit.clinician.lastName" class="java.lang.Object"/>
+	<field name="patientVisit.clinician.middleName" class="java.lang.Object"/>
+	<field name="patientVisit.patient.clinic.name" class="java.lang.Object"/>
+	<field name="patientVisit.patient.clinic.address.state" class="java.lang.Object"/>
+	<field name="patientVisit.patient.clinic.address.zip" class="java.lang.Object"/>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="20" width="554" height="36" forecolor="#8080C0" uuid="92fc3897-ad4f-4d0b-aae3-13c9a4d80b1d"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[MEDICAL REVIEW OFFICER REQUEST FORM]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="-3" width="264" height="23" uuid="9c1bdfc8-55b2-4b23-9f56-b8eaec004821"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.clinic.name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="249" splitType="Stretch">
+			<staticText>
+				<reportElement x="359" y="33" width="100" height="20" uuid="fbdc56e3-7d20-4674-bb7c-b5844f5321ef"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reported As of:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="466" y="33" width="75" height="20" uuid="108cdb1e-7a40-4319-92ab-fa6115004cf3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="360" y="-236" width="70" height="20" uuid="0808ae70-f554-4e46-8918-16020364e095"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Identity :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="439" y="-233" width="114" height="21" uuid="7282147f-d10c-4dd6-8576-2b1808a4c14e"/>
+				<textElement>
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.socialSecurityNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-10" y="-256" width="90" height="20" uuid="d803f7c0-ca24-423a-936c-e6a9a8688634"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Employee :]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="50" y="-174" width="470" height="160" uuid="ff1cbb4f-6b87-4afd-8383-38233e26a3a2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="65" y="-168" width="108" height="25" uuid="78d315b9-8a20-485f-936f-f1ad5090a7c5"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Collection Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="-143" width="119" height="20" uuid="cd2378ed-3264-49bc-90e1-77e3d0732306"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Collection Protocol:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="-124" width="70" height="20" uuid="78416090-9dac-49cc-a2e4-c9f8dc9d5124"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Collector:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="-103" width="82" height="20" uuid="6b1d510c-c8b5-486d-80c8-2abe8f9ef5d4"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Notified Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="-83" width="120" height="20" uuid="5bc42be8-6333-4d7a-9b9d-978ab9b9bf64"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Drug Test Profile:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="-60" width="70" height="16" uuid="3ae83460-30f5-44c4-b39c-8be9b28b50fe"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Laboratory:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="81" y="-256" width="78" height="17" uuid="81f82656-4021-4fd1-864e-66184e31eb08"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.patientName.firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="-256" width="123" height="17" uuid="b853fe34-b907-4781-ae1c-876583c0a9c6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.patientName.lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="-166" width="130" height="22" uuid="2a059808-75e1-4c0f-80c0-c60344fb121e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drug}.getCcfNo()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="-232" width="70" height="20" uuid="d867a0e0-225d-4d16-9afc-647275a60278"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="-234" width="240" height="14" uuid="1f04a061-481c-44a6-96d0-47ed86dc86cf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.localAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="-220" width="240" height="20" uuid="a4f7d49a-15bb-4427-bd68-863c476c90d4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="-200" width="146" height="20" uuid="3c35cf4e-2d95-459e-b4fb-621cdef675f1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="-200" width="100" height="20" uuid="7f3c5630-314e-4bc1-a089-ad5f285ce28c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.zip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="-168" width="160" height="20" uuid="df9ac5e1-fb9e-48a4-b345-239cdbad75ed"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drug}.getCollectionDate()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="-143" width="260" height="20" uuid="2feb2421-bee0-43e2-b092-a0fc29537998"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drug}.getCollectionProtocol()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="-166" width="40" height="20" uuid="2905ff55-6637-4b31-85d7-73a3789702b1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[#CCF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="-42" width="124" height="20" uuid="06213314-ea26-4fec-a02c-3cb5f52b7e60"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ Drug Test Reason:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="-103" width="260" height="20" uuid="3cafb0f2-57da-4fb7-a943-3586bd8d5610"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drug}.getEmployeeNotifiedDate()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="-42" width="260" height="20" uuid="846e275c-268d-4c52-840d-835bd58abe57"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drug}.getTestReason()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="-83" width="200" height="20" uuid="e36b1eae-0af9-4da2-937f-3062df30cf74"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drugTestProfile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="-122" width="80" height="19" uuid="e347103d-6562-4242-9d9f-444b32333c62"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.clinician.firstName}+ " "+$F{patientVisit.clinician.middleName}+ " " +$F{patientVisit.clinician.lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="-60" width="260" height="20" uuid="220fe393-47f4-4b6d-9ab6-5ab5d9da58d4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{drug}.getLaboratory().getCode()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="6" width="139" height="17" uuid="b6ac9afb-a079-42f5-89d1-8c97e580edfa"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Drug/Substance Tested]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="6" width="80" height="20" uuid="f83e9485-db45-4ba6-bb81-397b469ad3cf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lab Result]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="16" y="2" width="153" height="18" uuid="747f0267-d8b1-4d78-8609-f8bf9b1e8a69"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{drugTestName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="4" width="100" height="16" uuid="9c614afc-0119-46d7-9f17-1ab82ec6afbd"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{finalResult}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="205" splitType="Stretch">
+			<rectangle>
+				<reportElement x="43" y="7" width="470" height="30" uuid="55fe8ae6-ef67-4cfb-b951-395fbfefd234"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="136" y="11" width="264" height="20" uuid="447f2248-27f7-4fd2-8a9d-85a12334ffff"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medical Review Officer Check List]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="41" width="145" height="16" uuid="f13ffb44-b537-44a2-af35-b34f6fa5ff8a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Notified on Date :-]]></text>
+			</staticText>
+			<line>
+				<reportElement x="280" y="52" width="160" height="1" uuid="42b6c649-9e63-4072-ae3c-3aa8ad05a139"/>
+			</line>
+			<line>
+				<reportElement x="280" y="85" width="200" height="1" uuid="9c52c2e0-6dab-4529-9bdf-1420d8927f77"/>
+			</line>
+			<staticText>
+				<reportElement x="120" y="56" width="145" height="16" uuid="48f8aa47-f93e-4717-8d23-462e608bc016"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unable to Notify Employee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="71" width="144" height="20" uuid="95e35191-cc61-4491-b77b-f4676b4834a2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Coordinator Notified on Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="285" y="70" width="155" height="1" uuid="02b57596-8067-4377-b541-d7babbd74e0f"/>
+			</line>
+			<staticText>
+				<reportElement x="121" y="98" width="145" height="16" uuid="d47be0eb-4472-4d49-b897-4a0c975fa382"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Final MRO Detarmination]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="101" width="50" height="20" uuid="d54f81df-23f2-404f-bb30-e67ecbc0c731"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Possitive]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="99" width="54" height="20" uuid="c2ccd5c7-7324-474d-b415-adeaf9f864d9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Negative]]></text>
+			</staticText>
+			<line>
+				<reportElement x="283" y="108" width="31" height="1" uuid="78516699-a4b4-4f5e-9c02-cd74ec025c87"/>
+			</line>
+			<line>
+				<reportElement x="374" y="110" width="31" height="1" uuid="fc96d39a-cc33-4921-b8cc-93c6903fd2af"/>
+			</line>
+			<textField>
+				<reportElement x="200" y="121" width="90" height="20" uuid="dc8fc40c-c569-463b-bff0-5f091d04d5d2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.provider.firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="118" width="59" height="20" uuid="e96f4406-8ba3-45cf-9eb3-6c592c5dcce5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.provider.middleName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="118" width="120" height="20" uuid="4ed5228b-099b-4a87-8e7e-f857e083814f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.provider.lastName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="128" y="120" width="62" height="16" uuid="7c603990-c168-49a9-bbe7-18b192f47948"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MRO :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="197" y="146" width="240" height="14" uuid="6a5a5288-584b-43db-9870-6e2520bdb9a5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.localAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="160" width="240" height="20" uuid="e12e38d1-4b62-49d4-9078-b23a57e3ce2e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="180" width="146" height="20" uuid="15cd223d-f9bb-425c-98f6-6823d62e4895"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="180" width="100" height="20" uuid="3d387912-72c2-4c80-b56c-7f49a6c2254f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.address.zip}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch"/>
+	</summary>
+</jasperReport>

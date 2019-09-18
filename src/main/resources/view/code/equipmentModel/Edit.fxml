@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="574.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.equipmentModel.EquipmentModelEditController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="4.0" prefHeight="341.0" prefWidth="559.0" text="Model Specification">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="modelText" layoutX="73.0" layoutY="14.0" />
+                  <TextField fx:id="descText" layoutX="317.0" layoutY="15.0" />
+                  <Label layoutX="20.0" layoutY="17.0" text="Model :" />
+                  <Label layoutX="272.0" layoutY="18.0" text="Desc :" />
+                  <CheckBox fx:id="dataTransferCheckBox" layoutX="75.0" layoutY="54.0" mnemonicParsing="false" text="Data Transfer" />
+                  <CheckBox fx:id="dataImportCheckBox" layoutX="213.0" layoutY="55.0" mnemonicParsing="false" text="Data Import" />
+                  <CheckBox fx:id="supportsUSBCheckBox" layoutX="324.0" layoutY="55.0" mnemonicParsing="false" text="Supports USB Connection?" />
+                  <TitledPane animated="false" collapsible="false" layoutX="12.0" layoutY="88.0" prefHeight="104.0" prefWidth="526.0" text="Baud Rate">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="RadioBtn300" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="300">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="baudRate" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="RadioBtn600" layoutX="117.0" layoutY="14.0" mnemonicParsing="false" text="600" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn1200" layoutX="219.0" layoutY="14.0" mnemonicParsing="false" text="1200" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn2400" layoutX="320.0" layoutY="14.0" mnemonicParsing="false" text="2400" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn4800" layoutX="415.0" layoutY="14.0" mnemonicParsing="false" text="4800" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn9600" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" text="9600" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn19200" layoutX="117.0" layoutY="42.0" mnemonicParsing="false" text="19200" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn38400" layoutX="219.0" layoutY="42.0" mnemonicParsing="false" text="38400" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn57600" layoutX="320.0" layoutY="42.0" mnemonicParsing="false" text="57600" toggleGroup="$baudRate" />
+                              <RadioButton fx:id="RadioBtn115200" layoutX="415.0" layoutY="42.0" mnemonicParsing="false" text="115200" toggleGroup="$baudRate" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="200.0" prefHeight="105.0" prefWidth="117.0" text="Parity">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="noneRadioBtn" layoutX="27.0" layoutY="6.0" mnemonicParsing="false" text="NONE">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="parity" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="oddRadioBtn" layoutX="27.0" layoutY="28.0" mnemonicParsing="false" text="ODD" toggleGroup="$parity" />
+                              <RadioButton fx:id="evenRadioBtn" layoutX="27.0" layoutY="51.0" mnemonicParsing="false" text="EVEN" toggleGroup="$parity" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="235.0" layoutY="204.0" prefHeight="86.0" prefWidth="99.0" text="Data Bits">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="RadioBtn7" layoutX="32.0" layoutY="6.0" mnemonicParsing="false" text="7">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="dataBits" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="RadioBtn8" layoutX="32.0" layoutY="32.0" mnemonicParsing="false" text="8" toggleGroup="$dataBits" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="453.0" layoutY="203.0" prefHeight="86.0" prefWidth="85.0" text="Stop Bits">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="RadioBtn1" layoutX="30.0" layoutY="6.0" mnemonicParsing="false" text="1">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="stopBits" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="RadioBtn2" layoutX="30.0" layoutY="34.0" mnemonicParsing="false" text="2" toggleGroup="$stopBits" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TextField fx:id="idText" editable="false" layoutX="473.0" layoutY="14.0" prefHeight="25.0" prefWidth="74.0" visible="false" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="updateBtn" layoutX="358.0" layoutY="357.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelbtn" layoutX="468.0" layoutY="357.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

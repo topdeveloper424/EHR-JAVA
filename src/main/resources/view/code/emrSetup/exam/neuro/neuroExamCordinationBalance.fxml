@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="344.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.neuro.cordinationBalance.NeuroCordinationBalanceInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="2.0" layoutY="6.0" prefHeight="332.0" prefWidth="742.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1081.0">
+               <children>
+                  <Separator layoutX="149.0" layoutY="1.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="532.0" layoutY="261.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="637.0" layoutY="261.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="3.0" layoutY="30.0" prefHeight="16.0" prefWidth="122.0" text="Romberg Test" />
+                  <Separator layoutX="4.0" layoutY="55.0" prefHeight="0.0" prefWidth="1075.0" />
+                  <Label layoutX="9.0" layoutY="65.0" prefHeight="0.0" prefWidth="101.0" text="Tandem Gait" />
+                  <Separator layoutX="-10.0" layoutY="85.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <Label layoutX="9.0" layoutY="100.0" prefHeight="16.0" prefWidth="119.0" text="Finger to nose- Left" />
+                  <Label layoutX="4.0" layoutY="130.0" prefHeight="12.0" prefWidth="128.0" text="Finger to nose-Right" />
+                  <Separator layoutX="-2.0" layoutY="120.0" prefHeight="2.0" prefWidth="1083.0" />
+                  <Separator layoutX="2.0" layoutY="150.0" prefHeight="3.0" prefWidth="1076.0" />
+                  <Separator layoutX="2.0" layoutY="250.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <CheckBox fx:id="rombergNormal" layoutX="155.0" layoutY="30.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <CheckBox fx:id="tandemNormal" layoutX="155.0" layoutY="65.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <RadioButton fx:id="rombergNegativeRadio" layoutX="230.0" layoutY="30.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="romberg" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="rombergPositiveRadio" layoutX="391.0" layoutY="30.0" mnemonicParsing="false" text="positive" toggleGroup="$romberg" />
+                  <RadioButton fx:id="rombergGrosslyPositiveRadio" layoutX="575.0" layoutY="30.0" mnemonicParsing="false" text="grossly positive" toggleGroup="$romberg" />
+                  <RadioButton fx:id="tandemNormalRadio" layoutX="230.0" layoutY="65.0" mnemonicParsing="false" text="normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tandem" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="tandemDecreasedRadio" layoutX="391.0" layoutY="65.0" mnemonicParsing="false" text="decreased" toggleGroup="$tandem" />
+                  <RadioButton fx:id="tandemGrosslyDecreasedRadio" layoutX="575.0" layoutY="65.0" mnemonicParsing="false" text="grossly decreased" toggleGroup="$tandem" />
+                  <CheckBox fx:id="fingerRightNormal" layoutX="155.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <RadioButton fx:id="fingerLefttNormalRadio" layoutX="230.0" layoutY="100.0" mnemonicParsing="false" text="normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="left" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="fingerLeftDecreasedRadio" layoutX="391.0" layoutY="100.0" mnemonicParsing="false" text="decreased" toggleGroup="$left" />
+                  <RadioButton fx:id="fingerLeftpasRadio" layoutX="575.0" layoutY="100.0" mnemonicParsing="false" text="past pointing" toggleGroup="$left" />
+                  <RadioButton fx:id="FingerRightNormal" layoutX="230.0" layoutY="130.0" mnemonicParsing="false" text="normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="right" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="FingerRightDecreasedRadio" layoutX="391.0" layoutY="130.0" mnemonicParsing="false" text="decreased" toggleGroup="$right" />
+                  <RadioButton fx:id="FingerRightPastRadio" layoutX="575.0" layoutY="130.0" mnemonicParsing="false" text="past pointing" toggleGroup="$right" />
+                  <Label layoutX="5.0" layoutY="160.0" prefHeight="12.0" prefWidth="128.0" text="Heel/Knee/Shin" />
+                  <CheckBox fx:id="heelNormal" layoutX="155.0" layoutY="160.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <RadioButton fx:id="heelBilateralNormalRadio" layoutX="230.0" layoutY="160.0" mnemonicParsing="false" text="bilaterally normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="heel" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="heelDecreasedLeftRadio" layoutX="230.0" layoutY="190.0" mnemonicParsing="false" text="decreased left" toggleGroup="$heel" />
+                  <RadioButton fx:id="heelDecreasedBilaterallyRadio" layoutX="391.0" layoutY="160.0" mnemonicParsing="false" text="decreased bilaterally" toggleGroup="$heel" />
+                  <RadioButton fx:id="heelDecreasedRightRadio" layoutX="575.0" layoutY="184.0" mnemonicParsing="false" text="decreased right" toggleGroup="$heel" />
+                  <RadioButton fx:id="heelNormalLeftRadio" layoutX="575.0" layoutY="160.0" mnemonicParsing="false" text="normal left" toggleGroup="$heel" />
+                  <RadioButton fx:id="heelNormalRightRadio" layoutX="391.0" layoutY="190.0" mnemonicParsing="false" text="normal right" toggleGroup="$heel" />
+                  <CheckBox fx:id="dysdiadoNormal" layoutX="155.0" layoutY="230.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <RadioButton fx:id="dysdiadoNotNoted" layoutX="230.0" layoutY="230.0" mnemonicParsing="false" text="not noted">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dydo" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="dysdiadoNoted" layoutX="391.0" layoutY="230.0" mnemonicParsing="false" text=" noted" toggleGroup="$dydo" />
+                  <Separator layoutY="210.0" prefHeight="0.0" prefWidth="1095.0" />
+                  <Label layoutX="4.0" layoutY="230.0" prefHeight="12.0" prefWidth="128.0" text="Dysdiadochokinnesis" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

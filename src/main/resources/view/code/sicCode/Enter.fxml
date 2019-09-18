@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="428.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.sicCode.SicCodeInputController">
+   <children>
+      <TextField fx:id="sicCode" layoutX="106.0" layoutY="24.0" prefHeight="25.0" prefWidth="102.0" />
+      <TextField fx:id="descrp" layoutX="107.0" layoutY="59.0" prefHeight="25.0" prefWidth="243.0" />
+      <TitledPane animated="false" layoutX="20.0" layoutY="94.0" prefHeight="264.0" prefWidth="396.0" text="National Safety Council Statistics">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="27.0" text="Work Injury rate:" />
+                  <Label layoutX="28.0" layoutY="61.0" text="Lost Time Injury Rate:" />
+                  <Label layoutX="28.0" layoutY="93.0" text="Lost Work Days:" />
+                  <Label layoutX="28.0" layoutY="129.0" text="Avg Wage Repl Cost:" />
+                  <Label layoutX="28.0" layoutY="160.0" text="Avg Comp Premium per Emp:" />
+                  <Label layoutX="28.0" layoutY="193.0" text="Variable % of Premium:" />
+                  <TextField fx:id="workinjrate" layoutX="197.0" layoutY="23.0" />
+                  <TextField fx:id="ltimeinjrate" layoutX="197.0" layoutY="57.0" />
+                  <TextField fx:id="lworkday" layoutX="197.0" layoutY="89.0" />
+                  <TextField fx:id="avgwagecost" layoutX="197.0" layoutY="125.0" />
+                  <TextField fx:id="avgcomppremium" layoutX="197.0" layoutY="159.0" />
+                  <TextField fx:id="variablepremium" layoutX="197.0" layoutY="192.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <CheckBox fx:id="inactive" layoutX="57.0" layoutY="373.0" mnemonicParsing="false" text="Inactive ?" />
+      <Button id="ghosh" fx:id="okBtn" layoutX="191.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="ray" fx:id="cancelBtn" layoutX="310.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="25.0" layoutY="28.0" text="SICCode :" />
+      <Label layoutX="25.0" layoutY="63.0" text="Description :" />
+   </children>
+</AnchorPane>

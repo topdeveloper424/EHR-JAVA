@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="594.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.EffusionTapDrainageInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="5.0" prefHeight="316.0" prefWidth="578.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="14.0" text="Brief Fill-In- blank" />
+                  <Label layoutX="2.0" layoutY="63.0" text="Anesthesia:" />
+                  <TextArea fx:id="briefTextarea" layoutX="168.0" layoutY="4.0" prefHeight="28.0" prefWidth="360.0" />
+                  <Separator layoutY="47.0" prefHeight="3.0" prefWidth="578.0" />
+                  <Separator layoutX="127.0" orientation="VERTICAL" prefHeight="236.0" prefWidth="5.0" />
+                  <CheckBox fx:id="salineCheckBox" layoutX="375.0" layoutY="130.0" mnemonicParsing="false" text="Saline" />
+                  <Separator layoutY="97.0" prefHeight="3.0" prefWidth="578.0" />
+                  <Button fx:id="doneBtn" layoutX="304.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="403.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="lidocaine1Check" layoutX="168.0" layoutY="53.0" mnemonicParsing="false" text="lidocaine 1%" />
+                  <CheckBox fx:id="lidocaine2Check" layoutX="375.0" layoutY="52.0" mnemonicParsing="false" text="lidocaine 2%" />
+                  <CheckBox fx:id="lidocaineJellyCheck" layoutX="168.0" layoutY="76.0" mnemonicParsing="false" text="lidocaine jelly" />
+                  <CheckBox fx:id="bandageCheckBox" layoutX="375.0" layoutY="152.0" mnemonicParsing="false" text="Bandage" />
+                  <CheckBox fx:id="syringeCheck" layoutX="168.0" layoutY="144.0" mnemonicParsing="false" text="Syringe" />
+                  <RadioButton fx:id="wellRadio" layoutX="168.0" layoutY="185.0" mnemonicParsing="false" text="Well and without complecation" />
+                  <RadioButton fx:id="withComplecationRadio" layoutX="168.0" layoutY="206.0" mnemonicParsing="false" text="With complecation as specified" />
+                  <RadioButton fx:id="minimulBloodRadio" layoutX="375.0" layoutY="187.0" mnemonicParsing="false" text="With minimul blood loss" />
+                  <Separator layoutX="-1.0" layoutY="177.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="betadineCheck" layoutX="168.0" layoutY="102.0" mnemonicParsing="false" text="Betadine" />
+                  <CheckBox fx:id="alcoholCheck" layoutX="375.0" layoutY="106.0" mnemonicParsing="false" text="Alcohol OR Peroxide" />
+                  <CheckBox fx:id="gauzeCheck" layoutX="168.0" layoutY="122.0" mnemonicParsing="false" text="4*4 Gauze" />
+                  <Separator layoutX="-1.0" layoutY="234.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="2.0" layoutY="135.0" text="Supplies Used :" />
+                  <Label layoutX="2.0" layoutY="186.0" text="Patient Response :" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

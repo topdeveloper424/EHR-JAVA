@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.companyProtocol.CompanyProtocolViewController">
+   <children>
+      <TableView fx:id="companyProtocolTable" layoutX="7.0" layoutY="43.0" prefHeight="228.0" prefWidth="586.0">
+        <columns>
+          <TableColumn fx:id="descriptionCollumn" prefWidth="182.0" text="Protocol Description" />
+          <TableColumn fx:id="visitCategoryCollumn" prefWidth="115.0" text="Visit Category" />
+            <TableColumn fx:id="jobClassCollumn" prefWidth="88.0" text="Job Class" />
+            <TableColumn fx:id="deptCollumn" prefWidth="106.0" text="Dept" />
+            <TableColumn fx:id="typeCollumn" prefWidth="91.0" text="Type" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="15.0" text="Search :" />
+      <TextField fx:id="searchText" layoutX="72.0" layoutY="11.0" prefHeight="25.0" prefWidth="162.0" />
+      <Button fx:id="addBtn" layoutX="20.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="changeBtn" layoutX="106.0" layoutY="278.0" mnemonicParsing="false" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteBtn" layoutX="193.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="498.0" layoutY="279.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="selectBtn" layoutX="392.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Select">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

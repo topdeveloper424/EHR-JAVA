@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="344.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.clinicSchedule.ClinicScheduleViewController">
+   <children>
+      <Button fx:id="changeButton" layoutX="30.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="exceptionbutton" layoutX="146.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Exceptions" />
+      <Button fx:id="okButton" layoutX="28.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Ok">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="143.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="11.0" prefHeight="224.0" prefWidth="325.0" text="Standard Weekly Schedule">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="clinicScheduleTable" layoutY="-1.0" onMouseClicked="#doubleClick" prefHeight="194.0" prefWidth="322.0">
+                     <columns>
+                        <TableColumn fx:id="dayCollumn" prefWidth="114.0" text="Day of Week" />
+                        <TableColumn fx:id="startTimeCollumn" prefWidth="100.0" text="Start Time" />
+                        <TableColumn fx:id="finishTimeCollumn" prefWidth="105.0" text="Finish Time" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="272.0" prefHeight="76.0" prefWidth="325.0" text="Select Calander Time Slot Size(In minutes)">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="21.0" prefWidth="277.0">
+               <children>
+                  <RadioButton fx:id="timeFiveRadio" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="5">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="timeSlot" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="timeTenRadio" layoutX="75.0" layoutY="14.0" mnemonicParsing="false" text="10" toggleGroup="$timeSlot" />
+                  <RadioButton fx:id="timeFifteenRadio" layoutX="146.0" layoutY="14.0" mnemonicParsing="false" text="15" toggleGroup="$timeSlot" />
+                  <RadioButton fx:id="timeTwentyRadio" layoutX="205.0" layoutY="14.0" mnemonicParsing="false" text="20" toggleGroup="$timeSlot" />
+                  <RadioButton fx:id="TimeThirtyRadio" layoutX="266.0" layoutY="13.0" mnemonicParsing="false" text="30" toggleGroup="$timeSlot" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

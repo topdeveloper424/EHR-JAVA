@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="740.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.mskel.leMotorStrength.SkelLeMotorStrengthInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="532.0" prefWidth="728.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="506.0" prefWidth="809.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" text="Left LE  Muscle strenght" />
+                  <Separator layoutX="162.0" layoutY="1.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="501.0" layoutY="465.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="603.0" layoutY="465.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="LEMuscleNormal" layoutX="170.0" layoutY="3.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="3.0" layoutY="137.0" prefHeight="0.0" prefWidth="974.0" />
+                  <Separator layoutX="3.0" layoutY="225.0" prefHeight="0.0" prefWidth="981.0" />
+                  <Separator layoutY="359.0" prefHeight="0.0" prefWidth="981.0" />
+                  <Label layoutX="11.0" layoutY="98.0" text="Left lower extrimity actions" />
+                  <Label layoutX="12.0" layoutY="235.0" text="Right LE Muscle Strength" />
+                  <Separator layoutY="85.0" prefHeight="0.0" prefWidth="981.0" />
+                  <CheckBox fx:id="leftLowerActions" layoutX="266.0" layoutY="90.0" mnemonicParsing="false" text="All actions" />
+                  <CheckBox fx:id="leftLowerActionsFlexion" layoutX="266.0" layoutY="113.0" mnemonicParsing="false" text="flexions" />
+                  <CheckBox fx:id="leftLowerKneeChck" layoutX="266.0" layoutY="166.0" mnemonicParsing="false" text="knee" />
+                  <CheckBox fx:id="leftLowerExtremityChck" layoutX="266.0" layoutY="141.0" mnemonicParsing="false" text="extremity" />
+                  <CheckBox fx:id="leftLowerFootChck" layoutX="266.0" layoutY="192.0" mnemonicParsing="false" text="foot" />
+                  <Label layoutX="11.0" layoutY="144.0" text="Left lower Extrimity part" />
+                  <CheckBox fx:id="rightLeMuscleCheck" layoutX="170.0" layoutY="230.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-4.0" layoutY="270.0" prefHeight="0.0" prefWidth="987.0" />
+                  <CheckBox fx:id="leftLowerActionsAdductions" layoutX="464.0" layoutY="93.0" mnemonicParsing="false" text="adductions" />
+                  <RadioButton fx:id="RightLEMuscleNormalRadio" layoutX="264.0" layoutY="230.0" mnemonicParsing="false" text="normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="rightLe" />
+                     </toggleGroup></RadioButton>
+                  <Label layoutX="18.0" layoutY="368.0" text="Right Lower Extremity part" />
+                  <Separator layoutX="-12.0" layoutY="450.0" prefHeight="0.0" prefWidth="974.0" />
+                  <RadioButton fx:id="LEMuscleNormalRadio" layoutX="266.0" layoutY="7.0" mnemonicParsing="false" text="normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="leftLe" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="LEMuscleModerateRadio" layoutX="266.0" layoutY="32.0" mnemonicParsing="false" text="moderately decreased" toggleGroup="$leftLe" />
+                  <RadioButton fx:id="LEMuscleAbsentRadio" layoutX="267.0" layoutY="56.0" mnemonicParsing="false" text="absent" toggleGroup="$leftLe" />
+                  <RadioButton fx:id="LEMuscleSlightlyRadio" layoutX="464.0" layoutY="16.0" mnemonicParsing="false" text="slightly decreased" toggleGroup="$leftLe" />
+                  <RadioButton fx:id="LEMuscleMarkedlyRadio" layoutX="464.0" layoutY="42.0" mnemonicParsing="false" text="markedly decreased" toggleGroup="$leftLe" />
+                  <CheckBox fx:id="leftLowerActionsSupination" layoutX="464.0" layoutY="113.0" mnemonicParsing="false" text="supination" />
+                  <CheckBox fx:id="leftLowerActionsExtension" layoutX="590.0" layoutY="94.0" mnemonicParsing="false" text="extension" />
+                  <CheckBox fx:id="leftLowerActionsPronation" layoutX="590.0" layoutY="113.0" mnemonicParsing="false" text="pronation" />
+                  <CheckBox fx:id="leftLowerHipChck" layoutX="464.0" layoutY="142.0" mnemonicParsing="false" text="hip" />
+                  <CheckBox fx:id="leftLowerAnkleChck" layoutX="464.0" layoutY="166.0" mnemonicParsing="false" text="ankle" />
+                  <CheckBox fx:id="leftLowerToesChck" layoutX="464.0" layoutY="192.0" mnemonicParsing="false" text="toes" />
+                  <RadioButton fx:id="RightLEMuscleModerateRadio" layoutX="264.0" layoutY="250.0" mnemonicParsing="false" text="moderately decreased" toggleGroup="$rightLe" />
+                  <RadioButton fx:id="RightLEMuscleAbsentRadio" layoutX="464.0" layoutY="230.0" mnemonicParsing="false" text="absent" toggleGroup="$rightLe" />
+                  <RadioButton fx:id="RightLEMuscleSlightlyRadio" layoutX="464.0" layoutY="250.0" mnemonicParsing="false" text="slightly decreased" toggleGroup="$rightLe" />
+                  <RadioButton fx:id="RightLEMuscleMarkedlyRadio" layoutX="590.0" layoutY="230.0" mnemonicParsing="false" text="markedly decreased" toggleGroup="$rightLe" />
+                  <Label layoutX="9.0" layoutY="281.0" text="Right lower extrimity actions" />
+                  <CheckBox fx:id="rightLowerActions" layoutX="265.0" layoutY="281.0" mnemonicParsing="false" text="All actions" />
+                  <CheckBox fx:id="rightLowerActionsFlexion" layoutX="265.0" layoutY="305.0" mnemonicParsing="false" text="flexions" />
+                  <CheckBox fx:id="rightLowerActionsAdductions" layoutX="264.0" layoutY="331.0" mnemonicParsing="false" text="adductions" />
+                  <CheckBox fx:id="rightLowerActionsSupination" layoutX="464.0" layoutY="281.0" mnemonicParsing="false" text="supination" />
+                  <CheckBox fx:id="rightLowerActionsExtension" layoutX="464.0" layoutY="305.0" mnemonicParsing="false" text="extension" />
+                  <CheckBox fx:id="rightLowerActionsPronation" layoutX="464.0" layoutY="330.0" mnemonicParsing="false" text="pronation" />
+                  <CheckBox fx:id="rightLowerExtremity" layoutX="266.0" layoutY="368.0" mnemonicParsing="false" text="extremity" />
+                  <CheckBox fx:id="rightLowerKneeChck" layoutX="266.0" layoutY="391.0" mnemonicParsing="false" text="knee" />
+                  <CheckBox fx:id="rightLowerFootChck" layoutX="266.0" layoutY="418.0" mnemonicParsing="false" text="foot" />
+                  <CheckBox fx:id="rightLowerHipChck" layoutX="464.0" layoutY="370.0" mnemonicParsing="false" text="hip" />
+                  <CheckBox fx:id="rightLowerAnkleChck" layoutX="464.0" layoutY="397.0" mnemonicParsing="false" text="ankle" />
+                  <CheckBox fx:id="rightLowerToesChck" layoutX="464.0" layoutY="420.0" mnemonicParsing="false" text="toes" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

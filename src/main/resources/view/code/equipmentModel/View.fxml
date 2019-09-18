@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="519.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.equipmentModel.EquipmentModelViewController">
+   <children>
+      <TableView fx:id="equipmentModelTable" layoutX="6.0" layoutY="7.0" prefHeight="236.0" prefWidth="513.0">
+         <columns>
+            <TableColumn fx:id="modelCollumn" prefWidth="199.0" text="Model" />
+            <TableColumn fx:id="descriptionCollumn" prefWidth="113.0" text="Description" />
+            <TableColumn fx:id="testCollumn" prefWidth="113.0" text="Test" />
+         </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="8.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="changeBtn" layoutX="111.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="416.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteBtn" layoutX="214.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="selectBtn" layoutX="314.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Select">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
+

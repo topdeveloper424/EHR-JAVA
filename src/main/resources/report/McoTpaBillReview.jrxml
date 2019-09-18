@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="McoTpaBillReview" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30f9eefd-bb6a-441c-8ed3-b0a4ba68a57e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="address.phone" class="java.lang.Object"/>
+	<field name="address.fax" class="java.lang.Object"/>
+	<field name="billingAccount.code" class="java.lang.Object"/>
+	<field name="planType" class="java.lang.String"/>
+	<field name="address.city" class="java.lang.String"/>
+	<field name="address.state" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="560" height="40" forecolor="#0080C0" uuid="36e1b299-ab90-495e-9497-3a4d77365a18"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[   Master List Of MCO ,TPA or Billl Review Organization]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="50" width="100" height="30" uuid="29977c9d-605e-4adb-a8a7-b4d80d58ce29"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="112" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" uuid="3fc18b6b-6f4c-4888-a1c6-16092c714880"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[code]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="30" width="70" height="30" uuid="1b1f44a6-e531-4ff3-9446-fa07f6ea6b27"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="0" width="100" height="20" uuid="2b4e6473-3f03-43ef-8259-3449126dfb5a"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Name & Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="90" height="20" uuid="6182af15-d839-44de-894c-7bf1ff95463a"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Phone & Fax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="70" height="20" uuid="b8e112d9-dcc7-4048-933b-e0a7f98abf0b"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Account]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="20" width="70" height="40" uuid="211cb24a-4ce6-46f3-bfbf-cc8174a464b7"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billingAccount.code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="490" y="0" width="70" height="20" uuid="36016424-2b2b-4660-a969-de47bd9c1f30"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Plan Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="30" width="60" height="20" uuid="63ca4ee4-d2cb-4289-bee9-d08bb5ee74f2"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="30" width="70" height="30" uuid="d802037a-bce2-435e-9439-ec2af6ef4563"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="30" width="70" height="30" uuid="f560e865-610f-47b4-9a62-7bed39858ee8"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.fax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="25" width="70" height="30" uuid="06c49935-cb26-498f-ab89-f9845aca6fdb"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{planType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="50" width="70" height="30" uuid="ac41128c-c831-49ad-8285-5b30ae8e66a4"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="80" width="70" height="30" uuid="ed76b735-995c-40d0-bbb5-d6fe2eaca6c6"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="631" y="34" width="70" height="30" uuid="ccb61e15-67a4-4a64-8177-08b6f9308179"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="701" y="34" width="70" height="30" uuid="55bc0d43-8dfe-45c0-bdc5-3fed94699578"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.diagonostic.DiagonosticCtScanGeneralInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="319.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="5.0" text="Select View" />
+                  <Separator layoutX="125.0" layoutY="1.0" orientation="VERTICAL" prefHeight="237.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="332.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="432.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="170.0" prefHeight="0.0" prefWidth="578.0" />
+                  <RadioButton fx:id="withcontrastRadio" layoutX="154.0" layoutY="1.0" mnemonicParsing="false" text="with contrast">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sel" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="withoutContrast" layoutX="361.0" mnemonicParsing="false" text="without contrast" toggleGroup="$sel" />
+                  <Separator layoutX="-1.0" layoutY="44.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Separator layoutX="-2.0" layoutY="237.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="8.0" layoutY="58.0" text="Body Part" />
+                  <Label layoutX="4.0" layoutY="177.0" text="Notes" />
+                  <RadioButton fx:id="withRadiology" layoutX="154.0" layoutY="22.0" mnemonicParsing="false" text="with radiology selecting contrast" toggleGroup="$sel" />
+                  <RadioButton fx:id="skull" layoutX="154.0" layoutY="49.0" mnemonicParsing="false" text="skull">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="body" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="face" layoutX="361.0" layoutY="48.0" mnemonicParsing="false" text="face" toggleGroup="$body" />
+                  <TextArea fx:id="notesTextArea" layoutX="154.0" layoutY="177.0" prefHeight="48.0" prefWidth="273.0" />
+                  <RadioButton fx:id="sinuses" layoutX="154.0" layoutY="70.0" mnemonicParsing="false" text="sinuses" toggleGroup="$body" />
+                  <RadioButton fx:id="upperAbdomen" layoutX="154.0" layoutY="92.0" mnemonicParsing="false" text="upper abdomen" toggleGroup="$body" />
+                  <RadioButton fx:id="pelvis" layoutX="154.0" layoutY="116.0" mnemonicParsing="false" text="pelvis" toggleGroup="$body" />
+                  <RadioButton fx:id="thoracicSpine" layoutX="154.0" layoutY="138.0" mnemonicParsing="false" text="thoracic spine" toggleGroup="$body" />
+                  <RadioButton fx:id="chest" layoutX="361.0" layoutY="69.0" mnemonicParsing="false" text="chest" toggleGroup="$body" />
+                  <RadioButton fx:id="abdomen" layoutX="361.0" layoutY="91.0" mnemonicParsing="false" text="abdomen" toggleGroup="$body" />
+                  <RadioButton fx:id="cervical" layoutX="361.0" layoutY="115.0" mnemonicParsing="false" text="cervical spine" toggleGroup="$body" />
+                  <RadioButton fx:id="lumberSpine" layoutX="361.0" layoutY="137.0" mnemonicParsing="false" text="lumber spine" toggleGroup="$body" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

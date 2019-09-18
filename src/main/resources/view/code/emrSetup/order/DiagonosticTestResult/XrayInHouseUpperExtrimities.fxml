@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.diagonostic.DiagonosticXrayInHouseUpperExtrimitiesInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="319.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="5.0" text="Select View" />
+                  <Separator layoutX="156.0" layoutY="1.0" orientation="VERTICAL" prefHeight="237.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="332.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="432.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="175.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="cervicalCheck" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" text="Cervical - Complete" />
+                  <CheckBox fx:id="scapulaCheck" layoutX="345.0" layoutY="57.0" mnemonicParsing="false" text="Scapula - Complete" />
+                  <CheckBox fx:id="shoulderCheck" layoutX="170.0" layoutY="76.0" mnemonicParsing="false" text="Shoulder- 2 views complete" />
+                  <CheckBox fx:id="elbowCheck" layoutX="170.0" layoutY="96.0" mnemonicParsing="false" text="Elbow - 2 Views " />
+                  <CheckBox fx:id="humerusCheck" layoutX="344.0" layoutY="77.0" mnemonicParsing="false" text="Humerus -2 views" />
+                  <RadioButton fx:id="selectAnterior" layoutX="172.0" layoutY="1.0" mnemonicParsing="false" text="anterior">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sel" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="selectPosterior" layoutX="344.0" mnemonicParsing="false" text="posterior" toggleGroup="$sel" />
+                  <Separator layoutX="-1.0" layoutY="55.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Separator layoutX="-2.0" layoutY="237.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="8.0" layoutY="58.0" text="Body Part" />
+                  <Label layoutX="4.0" layoutY="182.0" text="Additional Xray Instructions" />
+                  <CheckBox fx:id="elbow3ViewsCheck" layoutX="345.0" layoutY="96.0" mnemonicParsing="false" text="Elbow - 3 views" />
+                  <RadioButton fx:id="selectLateral" layoutX="172.0" layoutY="19.0" mnemonicParsing="false" text="lateral" toggleGroup="$sel" />
+                  <RadioButton fx:id="selectLeft" layoutX="172.0" layoutY="36.0" mnemonicParsing="false" text="left" toggleGroup="$sel" />
+                  <RadioButton fx:id="selectAP" layoutX="344.0" layoutY="19.0" mnemonicParsing="false" text="AP and lateral " toggleGroup="$sel" />
+                  <RadioButton fx:id="selectRight" layoutX="344.0" layoutY="37.0" mnemonicParsing="false" text="right" toggleGroup="$sel" />
+                  <CheckBox fx:id="forearmCheck" layoutX="170.0" layoutY="117.0" mnemonicParsing="false" text="Forearm- 4 views" />
+                  <CheckBox fx:id="wrist3ViewCheck" layoutX="171.0" layoutY="136.0" mnemonicParsing="false" text="Wrist-3 views complete" />
+                  <CheckBox fx:id="hand3ViewsCheck" layoutX="171.0" layoutY="153.0" mnemonicParsing="false" text="Hand - 3 Views" />
+                  <CheckBox fx:id="wrist2ViewsCheck" layoutX="346.0" layoutY="115.0" mnemonicParsing="false" text="Wrist - 2 views" />
+                  <CheckBox fx:id="hand2Check" layoutX="346.0" layoutY="135.0" mnemonicParsing="false" text="Hand - 2 views" />
+                  <CheckBox fx:id="finger2Check" layoutX="346.0" layoutY="153.0" mnemonicParsing="false" text="Finger - 2 Views" />
+                  <TextArea fx:id="additionalTextArea" layoutX="171.0" layoutY="182.0" prefHeight="48.0" prefWidth="273.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

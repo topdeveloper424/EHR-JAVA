@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.MedicalProcedureInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="548.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="499.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox disable="true" layoutX="62.0" layoutY="7.0" mnemonicParsing="false" text="---------- Surgical ----------" />
+                                    <CheckBox fx:id="armCheckBox" layoutX="62.0" layoutY="32.0" mnemonicParsing="false" text="Laceration UC- Arm" />
+                                    <CheckBox fx:id="earCheckBox" layoutX="62.0" layoutY="56.0" mnemonicParsing="false" text="Laceration UC- Ear" />
+                                    <CheckBox fx:id="elbowCheckBox" layoutX="62.0" layoutY="78.0" mnemonicParsing="false" text="Laceration UC- Elbow" />
+                                    <CheckBox fx:id="feetCheckBox" layoutX="62.0" layoutY="143.0" mnemonicParsing="false" text="Laceration UC- Feet" />
+                                    <CheckBox fx:id="forearmCheckBox" layoutX="62.0" layoutY="185.0" mnemonicParsing="false" text="Laceration UC- Forearm" />
+                                    <CheckBox fx:id="handCheckBox" layoutX="62.0" layoutY="207.0" mnemonicParsing="false" text="Laceration UC- Hand" />
+                                    <CheckBox fx:id="legCheckBox" layoutX="62.0" layoutY="229.0" mnemonicParsing="false" text="Laceration UC- Leg" />
+                                    <CheckBox fx:id="trunkCheckBox" layoutX="62.0" layoutY="344.0" mnemonicParsing="false" text="Laceration UC- Trunk" />
+                                    <CheckBox fx:id="noseCheckBox" layoutX="62.0" layoutY="277.0" mnemonicParsing="false" text="Laceration UC- Nose" />
+                                    <CheckBox fx:id="bodyEyeCheckBox" layoutX="62.0" layoutY="368.0" mnemonicParsing="false" text="Removal of Foreign  Body- Eye" />
+                                    <CheckBox fx:id="neckCheckBox" layoutX="62.0" layoutY="253.0" mnemonicParsing="false" text="Laceration UC- Neck" />
+                                    <CheckBox fx:id="sclapCheckBox" layoutX="62.0" layoutY="298.0" mnemonicParsing="false" text="Laceration UC- Sclap" />
+                                    <CheckBox fx:id="toeCheckBox" layoutX="62.0" layoutY="320.0" mnemonicParsing="false" text="Laceration UC- Toe" />
+                                    <CheckBox fx:id="eyelidCheckBox" layoutX="62.0" layoutY="102.0" mnemonicParsing="false" text="Laceration UC- Eyelid" />
+                                    <CheckBox fx:id="faceCheckBox" layoutX="62.0" layoutY="123.0" mnemonicParsing="false" text="Laceration UC- face" />
+                                    <CheckBox fx:id="fingerCheckBox" layoutX="62.0" layoutY="165.0" mnemonicParsing="false" text="Laceration UC- Finger" />
+                                    <CheckBox fx:id="bodyUCCheckBox" layoutX="62.0" layoutY="392.0" mnemonicParsing="false" text="Removal of Foreign  Body- UC" />
+                                    <CheckBox fx:id="sutureCheckBox" layoutX="62.0" layoutY="417.0" mnemonicParsing="false" text="Suture Removal UC" />
+                                    <CheckBox disable="true" layoutX="279.0" layoutY="7.0" mnemonicParsing="false" text="---------- Therapeutic----------" />
+                                    <CheckBox fx:id="dislocationCheckBox" layoutX="278.0" layoutY="354.0" mnemonicParsing="false" text="Reduction of Dislocation" />
+                                    <CheckBox fx:id="additionalCheckBox" layoutX="278.0" layoutY="331.0" mnemonicParsing="false" text="Prolonged Services - Additional (Each 30)" />
+                                    <CheckBox fx:id="patientObservationCheckBox" layoutX="278.0" layoutY="307.0" mnemonicParsing="false" text="Prolonged Services / Patient Observation" />
+                                    <CheckBox fx:id="respiratoryProcedureCheckBox" layoutX="278.0" layoutY="285.0" mnemonicParsing="false" text="Respiratory Procedure Supplies" />
+                                    <CheckBox fx:id="oxygenCheckBox" layoutX="278.0" layoutY="262.0" mnemonicParsing="false" text="Oxygen" />
+                                    <CheckBox fx:id="nasalCheckBox" layoutX="278.0" layoutY="239.0" mnemonicParsing="false" text="Nasal Tamponade" />
+                                    <CheckBox fx:id="drainageCheckBox" layoutX="278.0" layoutY="194.0" mnemonicParsing="false" text="Effusion Tap/Drainage" />
+                                    <CheckBox fx:id="injectionNoteCheckBox" layoutX="278.0" layoutY="216.0" mnemonicParsing="false" text="Injection Note M.A/R.N" />
+                                    <CheckBox fx:id="wickPlacementCheckBox" layoutX="278.0" layoutY="174.0" mnemonicParsing="false" text="Ear Wick Placement" />
+                                    <CheckBox fx:id="waxRemovalCheckBox" layoutX="278.0" layoutY="152.0" mnemonicParsing="false" text="Ear Irrigation Wax Removal" />
+                                    <CheckBox fx:id="anoscopyCheckBox" layoutX="278.0" layoutY="124.0" mnemonicParsing="false" text="Diagonostic Anoscopy" />
+                                    <CheckBox fx:id="aspirationCheckBox" layoutX="278.0" layoutY="102.0" mnemonicParsing="false" text="Aspiration Procedure" />
+                                    <CheckBox fx:id="woundCleaningCheckBox" layoutX="278.0" layoutY="78.0" mnemonicParsing="false" text="Wound Cleaning UC" />
+                                    <CheckBox fx:id="iducCheckBox" layoutX="278.0" layoutY="32.0" mnemonicParsing="false" text="I_D-UC" />
+                                    <CheckBox fx:id="nonsurgicalCheckBox" layoutX="278.0" layoutY="56.0" mnemonicParsing="false" text="Wound Dedridement -Nonsurgical" />
+                                    <CheckBox fx:id="generalCheckBox" layoutX="278.0" layoutY="375.0" mnemonicParsing="false" text="Supplies General" />
+                                    <CheckBox fx:id="generalConditionalCheckBox" layoutX="278.0" layoutY="395.0" mnemonicParsing="false" text="Supplies General (Conditional)" />
+                                    <CheckBox fx:id="urgentCareCheckBox" layoutX="278.0" layoutY="417.0" mnemonicParsing="false" text="Urgent Care Cource /Observation" />
+                                    <CheckBox fx:id="coordinationCheckBox" layoutX="278.0" layoutY="437.0" mnemonicParsing="false" text="Coordination of Care" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="21.0" layoutY="554.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Any Wizard" />
+      <Button layoutX="115.0" layoutY="554.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Free Text" />
+      <Button layoutX="217.0" layoutY="554.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" text="Run And Repeat" />
+      <Button fx:id="skipBtn" layoutX="491.0" layoutY="554.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="400.0" layoutY="554.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="630.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.clinicSystemParameter.AdministerClinicSystemSettingInputController">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="571.0" prefWidth="630.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="14.0" layoutY="14.0" prefHeight="76.0" prefWidth="607.0" text="Default Login Organization">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="49.0" layoutY="6.0" text="Main Company Identification :" />
+                                    <Label layoutX="49.0" layoutY="30.0" text="Main Clinic Identification :" />
+                                    <Text fill="#122dff" layoutX="280.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Under Company Added by User setup Login" />
+                                    <Text fill="#122dff" layoutX="280.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Windsor workcare-Elkhart" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="14.0" layoutY="90.0" prefHeight="364.0" prefWidth="608.0" text="Demographics Identification">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="49.0" layoutY="14.0" text="Primary Demographic Identifier :" />
+                                    <Label layoutX="49.0" layoutY="44.0" text="Medical Record Number :" />
+                                    <Label layoutX="49.0" layoutY="70.0" text="Patient ID used for Lockups :" />
+                                    <Label layoutX="49.0" layoutY="103.0" text="Patient ID used for Reports :" />
+                                    <Label layoutX="49.0" layoutY="129.0" text="Encounter Summary SS# Options :" />
+                                    <Label layoutX="403.0" layoutY="14.0" text="System ID " />
+                                    <Label layoutX="403.0" layoutY="44.0" text="Uniquie to Employee" />
+                                    <SplitMenuButton layoutX="352.0" layoutY="66.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </SplitMenuButton>
+                                    <SplitMenuButton layoutX="352.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </SplitMenuButton>
+                                    <SplitMenuButton layoutX="352.0" layoutY="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </SplitMenuButton>
+                                    <CheckBox layoutX="49.0" layoutY="208.0" mnemonicParsing="false" text="Default Patient  Lockups to view All Organizations" />
+                                    <Spinner layoutX="49.0" layoutY="247.0" prefHeight="25.0" prefWidth="53.0" />
+                                    <CheckBox layoutX="49.0" layoutY="298.0" mnemonicParsing="false" text="Enable Meaningful Use Demographics Data Requirements?" />
+                                    <Text layoutX="123.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The minimum number of Character s of the Patient's Last Name.,that a user is required to enter  in order to search the Patient List.(0 Disable this Requirement)" wrappingWidth="458.216796875" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="13.0" layoutY="466.0" prefHeight="65.0" prefWidth="605.0" text="Authorizations">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="11.0" text="Authorization Number Seed:" />
+                                    <Label layoutX="363.0" layoutY="11.0" prefHeight="17.0" prefWidth="108.0" text="Last Number Used:" />
+                                    <TextField layoutX="198.0" layoutY="7.0" prefHeight="25.0" prefWidth="159.0" />
+                                    <TextField layoutX="479.0" layoutY="7.0" prefHeight="25.0" prefWidth="116.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Visits/Encounter">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="14.0" prefHeight="537.0" prefWidth="608.0" text="Visit Encounter Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="28.0" layoutY="6.0" mnemonicParsing="false" text="Visit Logging is Required for All Medical Activities" />
+                                    <SplitMenuButton layoutX="247.0" layoutY="21.0" mnemonicParsing="false" text="SplitMenuButton">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </SplitMenuButton>
+                                    <CheckBox layoutX="28.0" layoutY="47.0" mnemonicParsing="false" text="Allow PDF Forms to be used with Encounter forms" />
+                                    <CheckBox layoutX="28.0" layoutY="70.0" mnemonicParsing="false" text="Print Patient ID Bar Code on Encounter Forms" />
+                                    <CheckBox layoutX="28.0" layoutY="92.0" mnemonicParsing="false" text="Print work Restriction Details on Encounter Summary Forms " />
+                                    <CheckBox layoutX="28.0" layoutY="114.0" mnemonicParsing="false" text="Print visit order &amp; Instruction on Encounter Summary Forms " />
+                                    <CheckBox layoutX="101.0" layoutY="140.0" mnemonicParsing="false" text="Include Detailed Note for Instruction(Otherwise only summary will print)" />
+                                    <CheckBox layoutX="101.0" layoutY="166.0" mnemonicParsing="false" text="Include Prescription &amp; Medication(Otherwise Meds are omitted)" />
+                                    <TabPane layoutX="27.0" layoutY="191.0" prefHeight="139.0" prefWidth="570.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab text="Work Comp Visit Status Form">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <CheckBox layoutX="10.0" layoutY="3.0" mnemonicParsing="false" text="Include Activities" />
+                                                      <CheckBox layoutX="43.0" layoutY="25.0" mnemonicParsing="false" text="Print CPT Code" />
+                                                      <CheckBox layoutX="45.0" layoutY="55.0" mnemonicParsing="false" text="Including Fees" />
+                                                      <CheckBox layoutX="8.0" layoutY="85.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="171.0" text="Excluding Printing the SSN" />
+                                                      <CheckBox layoutX="341.0" layoutY="2.0" mnemonicParsing="false" text="Print Diagonases" />
+                                                      <CheckBox layoutX="340.0" layoutY="27.0" mnemonicParsing="false" text="Print Charting Notes" />
+                                                      <CheckBox layoutX="337.0" layoutY="60.0" mnemonicParsing="false" text="Include Patient Signature Line" />
+                                                      <CheckBox layoutX="335.0" layoutY="87.0" mnemonicParsing="false" text="Always Print The Problem Description" />
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab text="Private Visit Encounter Summary Forms">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                    <RadioButton layoutX="28.0" layoutY="354.0" mnemonicParsing="false" text="No Time Printings" />
+                                    <RadioButton layoutX="216.0" layoutY="354.0" mnemonicParsing="false" text="Summary Visit Times" />
+                                    <RadioButton layoutX="404.0" layoutY="354.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="171.0" text="Summary and Whiteboard Details" />
+                                    <CheckBox layoutX="14.0" layoutY="385.0" mnemonicParsing="false" text="Supprress Date of Birth  from printing on Encounter &amp; work Status Forms" />
+                                    <CheckBox layoutX="14.0" layoutY="411.0" mnemonicParsing="false" text="Required Billible activities to be completed before completing a visit" />
+                                    <CheckBox layoutX="14.0" layoutY="436.0" mnemonicParsing="false" text="Required ICD9 &amp; Provider to complete ALL Private practice Visits " />
+                                    <CheckBox layoutX="14.0" layoutY="466.0" mnemonicParsing="false" text="Require work status field Entry on work comp initial &amp; Revisit " />
+                                    <Label layoutX="94.0" layoutY="25.0" text="Style to use for Visit Entry" />
+                                    <Label layoutX="37.0" layoutY="330.0" text="Print Work Times or Employer encounter Summary and work status form" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Charting/Scheduling">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="20.0" layoutY="42.0" prefHeight="251.0" prefWidth="593.0" text="Charting Note/Electronic Signature Business Rules">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Style to use for Charting Notes" />
+                                    <CheckBox layoutX="14.0" layoutY="38.0" mnemonicParsing="false" text="Automatically Lockout Chartuing Note Changes" />
+                                    <SplitMenuButton layoutX="302.0" layoutY="34.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </SplitMenuButton>
+                                    <CheckBox layoutX="14.0" layoutY="64.0" mnemonicParsing="false" text="Capture Electronic Signature for Chart &amp; Forms" />
+                                    <TextField layoutX="382.0" layoutY="60.0" prefHeight="25.0" prefWidth="33.0" />
+                                    <CheckBox layoutX="14.0" layoutY="96.0" mnemonicParsing="false" text="Capture Co-Signature on Charting Notes" />
+                                    <CheckBox layoutX="14.0" layoutY="123.0" mnemonicParsing="false" text="Test for Citix Connections when Capturing Signatures" />
+                                    <CheckBox layoutX="14.0" layoutY="156.0" mnemonicParsing="false" text="Automatically Lockout Chartuing Note Changes after Electronic Signature" />
+                                    <CheckBox layoutX="14.0" layoutY="185.0" mnemonicParsing="false" text="Require E&amp;M Approval before allowing Signature &amp;Locking" />
+                                    <Label layoutX="345.0" layoutY="64.0" text="After" />
+                                    <Label layoutX="423.0" layoutY="64.0" text="Days" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="22.0" layoutY="309.0" prefHeight="147.0" prefWidth="527.0" text="Block Appoinments Scheduling">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitMenuButton layoutX="331.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </SplitMenuButton>
+                                    <Label layoutX="43.0" layoutY="18.0" text="Default Block Scheduler View :" />
+                                    <CheckBox layoutX="43.0" layoutY="75.0" mnemonicParsing="false" text="Show Scheduling for EAP Visits to all Scheduler &amp; Check-in-personnel" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Coding">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="21.0" layoutY="33.0" prefHeight="206.0" prefWidth="589.0" text="Charge Entry Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="107.0" layoutY="14.0" mnemonicParsing="false" text="Use Superbills/Fee Tickets to Drive Charge Entry Process" />
+                                    <CheckBox layoutX="107.0" layoutY="39.0" mnemonicParsing="false" text="Print Individual Superbill/Fee Ticket with Each encounter Form" />
+                                    <Button layoutX="154.0" layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="253.0" text="Define Work Comp Master Fee Ticket" />
+                                    <Button layoutX="154.0" layoutY="117.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="252.0" text="Define Private Practice Master Fee Ticket" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="24.0" layoutY="250.0" prefHeight="171.0" prefWidth="587.0" text="Visit Diagonses Entry Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="106.0" layoutY="24.0" mnemonicParsing="false" text="CheckBox" />
+                                    <Button layoutX="162.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="242.0" text="Define Master ICD-9 Diagonses Ticket" />
+                                    <Button layoutX="162.0" layoutY="98.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="244.0" text="Define Master ICD-10 Diagonses Ticket" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Drug Testing">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitMenuButton layoutX="239.0" layoutY="17.0" mnemonicParsing="false" text="SplitMenuButton">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </SplitMenuButton>
+                        <TitledPane animated="false" layoutX="63.0" layoutY="82.0" prefHeight="113.0" prefWidth="525.0" text="Employer Drug Test Reporting">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Suppress Detailed Result on this Report" />
+                                    <CheckBox layoutX="14.0" layoutY="49.0" mnemonicParsing="false" text="Allow Report dfor a Positive Test to be Delivered via Email or Fax" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="78.0" layoutY="306.0" prefHeight="206.0" prefWidth="492.0" text="Lab Interface Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Create Record for Reflex Test Results on Drug Screens" />
+                                    <CheckBox layoutX="14.0" layoutY="40.0" mnemonicParsing="false" text="Create Record for Reflex Test Results on Clinical Lab Tests" />
+                                    <CheckBox layoutX="14.0" layoutY="64.0" mnemonicParsing="false" text="Use Result Status for Drug Screen Status Result" />
+                                    <CheckBox layoutX="14.0" layoutY="90.0" mnemonicParsing="false" text="Use MRO Review Mode when posting Drug Screen Results" />
+                                    <CheckBox layoutX="14.0" layoutY="118.0" mnemonicParsing="false" text="Notify Ordering Provider that Results have been recived" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Label layoutX="64.0" layoutY="21.0" text="Default Drug Testing Reason :" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Incidents/Safety">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="55.0" layoutY="14.0" text="Field Labels For Incident Classification :" />
+                        <Label layoutX="8.0" layoutY="42.0" prefHeight="17.0" prefWidth="95.0" text="Nature or Type : " />
+                        <Label layoutX="8.0" layoutY="72.0" prefHeight="17.0" prefWidth="140.0" text="Incident or Event Type :" />
+                        <Label layoutX="8.0" layoutY="97.0" prefHeight="17.0" prefWidth="118.0" text="Reason or Cause :" />
+                        <Label layoutX="10.0" layoutY="129.0" text="Work Activity :" />
+                        <Label layoutX="10.0" layoutY="157.0" prefHeight="17.0" prefWidth="158.0" text="Object or Substance :" />
+                        <Label layoutX="9.0" layoutY="190.0" prefHeight="17.0" prefWidth="113.0" text="First Response :" />
+                        <Label layoutX="459.0" layoutY="14.0" text="Other Incident Parameters" />
+                        <Label layoutX="336.0" layoutY="190.0" text="EH Avg Daily Pay Rate :" />
+                        <TextField layoutX="138.0" layoutY="38.0" />
+                        <TextField layoutX="138.0" layoutY="68.0" />
+                        <TextField layoutX="138.0" layoutY="93.0" />
+                        <TextField layoutX="138.0" layoutY="125.0" />
+                        <TextField layoutX="138.0" layoutY="153.0" />
+                        <TextField layoutX="138.0" layoutY="186.0" />
+                        <CheckBox layoutX="437.0" layoutY="42.0" mnemonicParsing="false" text="Lookup body Zone " />
+                        <TextField layoutX="473.0" layoutY="186.0" />
+                        <Label layoutX="83.0" layoutY="346.0" text="OSHA Log Calculation" />
+                        <Label layoutX="85.0" layoutY="415.0" text="Sharps Device Exposures" />
+                        <Text layoutX="126.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note that the meaning of this field are specifically tied to the OSHA Log and First Reporting  " wrappingWidth="342.4296875" />
+                        <CheckBox layoutX="83.0" layoutY="371.0" mnemonicParsing="false" text="Consider Restricted Time First" />
+                        <CheckBox layoutX="63.0" layoutY="441.0" mnemonicParsing="false" text="Force Device Manufacture and Brand to be selected  instead of Free Form Entry?" />
+                        <CheckBox layoutX="61.0" layoutY="473.0" mnemonicParsing="false" text="Enable sharps injury-specific safety Codes Filtering?" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Misc">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="103.0" layoutY="6.0" text="Miscellaneous clinic system options" />
+                        <TitledPane animated="false" layoutX="20.0" layoutY="23.0" prefHeight="122.0" prefWidth="546.0" text="Clinic Whiteboard Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="23.0" layoutY="14.0" mnemonicParsing="false" text="Use clinic Location or status Whiteboard" />
+                                    <Label layoutX="46.0" layoutY="40.0" text="Whiteboad automatic screen Refresh interval :" />
+                                    <Label layoutX="46.0" layoutY="65.0" text="Default Whiteboad View :" />
+                                    <Spinner layoutX="304.0" layoutY="36.0" prefHeight="25.0" prefWidth="82.0" />
+                                    <SplitMenuButton layoutX="304.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                                        <MenuItem mnemonicParsing="false" text="Action 2" />
+                                      </items>
+                                    </SplitMenuButton>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <CheckBox layoutX="44.0" layoutY="173.0" mnemonicParsing="false" text="Store History Reminder letters" />
+                        <TitledPane animated="false" layoutX="32.0" layoutY="198.0" prefHeight="127.0" prefWidth="522.0" text="Internal Messaging System">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="90.0" layoutY="70.0" text="Interval to check for pending messages/Task :" />
+                                    <CheckBox layoutX="31.0" layoutY="14.0" mnemonicParsing="false" text="Use Internal user Messaging and Task Subsystem" />
+                                    <CheckBox layoutX="31.0" layoutY="42.0" mnemonicParsing="false" text="Enable Message/Task Notification" />
+                                    <Spinner layoutX="353.0" layoutY="66.0" prefHeight="25.0" prefWidth="54.0" />
+                                    <Label layoutX="414.0" layoutY="70.0" text="Minutes" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <CheckBox layoutX="32.0" layoutY="332.0" mnemonicParsing="false" text="Disable Logging of messages to interface log" />
+                        <TitledPane animated="false" layoutX="32.0" layoutY="356.0" prefHeight="91.0" prefWidth="517.0" text="Respirator Fit Testing">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox layoutX="31.0" layoutY="24.0" mnemonicParsing="false" text="Force Respirator Model and class to be selected instead of free form entry?" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <CheckBox layoutX="44.0" layoutY="454.0" mnemonicParsing="false" text="Enable Patient and company address Label Printing with DYMO Label Printers" />
+                        <Label layoutX="18.0" layoutY="482.0" text="For Reporting ICD Versions that take precedence :" />
+                        <RadioButton layoutX="358.0" layoutY="482.0" mnemonicParsing="false" text="ICD-9" />
+                        <RadioButton layoutX="479.0" layoutY="482.0" mnemonicParsing="false" text="ICD-10" />
+                        <Label layoutX="30.0" layoutY="510.0" text="ICD-10 Effective Date :" />
+                        <TextField layoutX="181.0" layoutY="506.0" prefHeight="25.0" prefWidth="115.0" />
+                        <Button layoutX="316.0" layoutY="506.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/insert_document_icon.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="364.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Ok">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="close" layoutX="483.0" layoutY="574.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

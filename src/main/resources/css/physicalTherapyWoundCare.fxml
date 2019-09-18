@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="238.0" prefWidth="570.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutY="53.0" prefHeight="0.0" prefWidth="570.0" />
+                  <Label layoutX="2.0" layoutY="14.0" text="Frequency" />
+                  <Label layoutX="2.0" layoutY="90.0" text="Duration" />
+                  <Separator layoutX="111.0" layoutY="1.0" orientation="VERTICAL" prefHeight="160.0" prefWidth="1.0" />
+                  <Button fx:id="doneBtn" layoutX="341.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../view/image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="442.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../view/image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="twiceWeekly" layoutX="206.0" layoutY="8.0" mnemonicParsing="false" text="twice weekly">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="level" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="fiveTimesWeeklyRadio" layoutX="206.0" layoutY="30.0" mnemonicParsing="false" text="five times weekly" toggleGroup="$level" />
+                  <RadioButton fx:id="thriceWeeklyRadio" layoutX="375.0" layoutY="8.0" mnemonicParsing="false" text="three times weekly" toggleGroup="$level" />
+                  <Separator layoutX="-3.0" layoutY="142.0" prefHeight="0.0" prefWidth="578.0" />
+                  <RadioButton fx:id="forTwoRadio" layoutX="207.0" layoutY="56.0" mnemonicParsing="false" text="for two weeks">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="duration" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="forThreeRadio" layoutX="377.0" layoutY="56.0" mnemonicParsing="false" text="for three weeks" toggleGroup="$duration" />
+                  <RadioButton fx:id="forFourRadio" layoutX="207.0" layoutY="80.0" mnemonicParsing="false" text="for four weeks" toggleGroup="$duration" />
+                  <RadioButton fx:id="forFieRadio" layoutX="377.0" layoutY="80.0" mnemonicParsing="false" text="for five weeks" toggleGroup="$duration" />
+                  <RadioButton fx:id="forSixRadio" layoutX="207.0" layoutY="100.0" mnemonicParsing="false" text="for six weeks" toggleGroup="$duration" />
+                  <RadioButton fx:id="forEightRadio" layoutX="377.0" layoutY="101.0" mnemonicParsing="false" text="for eight weeks" toggleGroup="$duration" />
+                  <RadioButton fx:id="forTenRadio" layoutX="207.0" layoutY="121.0" mnemonicParsing="false" text="for ten weeks" toggleGroup="$duration" />
+                  <RadioButton fx:id="untillNextradio" layoutX="377.0" layoutY="122.0" mnemonicParsing="false" text="untill next visit" toggleGroup="$duration" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../view/css/style.css" />
+      <URL value="@style.css" />
+   </stylesheets>
+</AnchorPane>

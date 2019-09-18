@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.rollEffectiveDatePricing.RollEffectiveDatePricingInputController">
+   <children>
+      <TitledPane animated="false" layoutX="39.0" layoutY="12.0" prefHeight="83.0" prefWidth="512.0" text="Enter Effective Date">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="36.0" layoutY="17.0" text="Roll Prices Effective a of :" />
+                  <TextField layoutX="175.0" layoutY="15.0" />
+                  <Button layoutX="324.0" layoutY="14.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/insert_document_icon.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="39.0" layoutY="106.0" prefHeight="170.0" prefWidth="512.0" text="Select Schedule">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton layoutX="23.0" layoutY="13.0" mnemonicParsing="false" text="Standard Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="37.0" mnemonicParsing="false" text="State Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="62.0" mnemonicParsing="false" text="Uniform Clinic Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="89.0" mnemonicParsing="false" text="Account Override Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="117.0" mnemonicParsing="false" text="Assignable Override Fee Schedule" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="38.0" layoutY="286.0" prefHeight="91.0" prefWidth="512.0" text="Standard Fee Schedules">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="439.0">
+               <children>
+                  <RadioButton layoutX="28.0" layoutY="14.0" mnemonicParsing="false" text="Employer Fees" />
+                  <RadioButton layoutX="157.0" layoutY="14.0" mnemonicParsing="false" text="Worker's Comp" />
+                  <RadioButton layoutX="319.0" layoutY="14.0" mnemonicParsing="false" text="Private Practice" />
+                  <RadioButton layoutX="27.0" layoutY="38.0" mnemonicParsing="false" text="Medicare" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button layoutX="351.0" layoutY="393.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Roll">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="close" layoutX="476.0" layoutY="393.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

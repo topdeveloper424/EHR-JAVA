@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.familyHistory.FamilyHistorySurveyInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="546.0" prefWidth="755.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="151.0" layoutY="1.0" orientation="VERTICAL" prefHeight="476.0" prefWidth="7.0" />
+                  <Separator layoutX="1.0" layoutY="43.0" prefHeight="5.0" prefWidth="755.0" />
+                  <Button fx:id="doneBtn" layoutX="509.0" layoutY="480.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="605.0" layoutY="480.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="7.0" layoutY="11.0" prefHeight="16.0" prefWidth="125.0" text="Mother's Health Status" />
+                  <CheckBox fx:id="motherStroke" layoutX="569.0" layoutY="97.0" mnemonicParsing="false" text="stroke(CVA)" />
+                  <CheckBox fx:id="MotherBreastCancer" layoutX="201.0" layoutY="92.0" mnemonicParsing="false" text="breast cancer" />
+                  <CheckBox fx:id="MotherHypertension" layoutX="419.0" layoutY="95.0" mnemonicParsing="false" text="hypertension" />
+                  <CheckBox fx:id="MotherDepression" layoutX="201.0" layoutY="113.0" mnemonicParsing="false" text="depression/anxiety" />
+                  <Separator layoutX="-2.0" layoutY="423.0" prefHeight="0.0" prefWidth="755.0" />
+                  <Label layoutX="5.0" layoutY="427.0" text="Other Family Members" />
+                  <CheckBox fx:id="motherCancer" layoutX="419.0" layoutY="118.0" mnemonicParsing="false" text="cancer(specify)" />
+                  <Separator layoutX="-1.0" layoutY="88.0" prefHeight="0.0" prefWidth="755.0" />
+                  <Separator layoutX="-4.0" layoutY="186.0" prefHeight="0.0" prefWidth="767.0" />
+                  <Separator layoutX="6.0" layoutY="232.0" prefHeight="0.0" prefWidth="767.0" />
+                  <Separator layoutX="-1.0" layoutY="260.0" prefHeight="0.0" prefWidth="767.0" />
+                  <Separator layoutX="-2.0" layoutY="291.0" prefHeight="0.0" prefWidth="767.0" />
+                  <Separator layoutX="-2.0" layoutY="377.0" prefHeight="0.0" prefWidth="767.0" />
+                  <Separator layoutX="-4.0" layoutY="472.0" prefHeight="5.0" prefWidth="767.0" />
+                  <Label layoutX="8.0" layoutY="381.0" text="Father-Other (Describe)" />
+                  <Label layoutX="6.0" layoutY="59.0" text="Age Now or Decreased" />
+                  <Label layoutX="6.0" layoutY="98.0" text="Mother History of" />
+                  <Label layoutX="2.0" layoutY="201.0" text="Mother-Other (Describe)" />
+                  <Label layoutX="7.0" layoutY="239.0" text="Father's health status" />
+                  <Label layoutX="1.0" layoutY="266.0" text="Age( Now or Decreased)" />
+                  <Label layoutX="5.0" layoutY="301.0" text="Father History of" />
+                  <RadioButton fx:id="MotherAliveRadio" layoutX="201.0" layoutY="11.0" mnemonicParsing="false" text="Alive">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tatus" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="MotherDecreasedRadio" layoutX="419.0" layoutY="12.0" mnemonicParsing="false" text="Decreased" toggleGroup="$tatus" />
+                  <RadioButton fx:id="MotherUnknownRadio" layoutX="569.0" layoutY="13.0" mnemonicParsing="false" text="Unknown" toggleGroup="$tatus" />
+                  <TextField fx:id="AgeMotherText" layoutX="201.0" layoutY="52.0" />
+                  <CheckBox fx:id="motherDiabetes" layoutX="569.0" layoutY="117.0" mnemonicParsing="false" text="diabetes" />
+                  <CheckBox fx:id="motherLung" layoutX="201.0" layoutY="137.0" mnemonicParsing="false" text="lung cancer" />
+                  <CheckBox fx:id="motherSaubstances" layoutX="201.0" layoutY="157.0" mnemonicParsing="false" text="substances abuse" />
+                  <CheckBox fx:id="motherColon" layoutX="419.0" layoutY="138.0" mnemonicParsing="false" text="colon cancer" />
+                  <CheckBox fx:id="motherHeart" layoutX="419.0" layoutY="158.0" mnemonicParsing="false" text="heart disease(CAD)" />
+                  <CheckBox fx:id="motherOverain" layoutX="569.0" layoutY="137.0" mnemonicParsing="false" text="overain cancer" />
+                  <CheckBox fx:id="motherOther" layoutX="570.0" layoutY="159.0" mnemonicParsing="false" text="other" />
+                  <RadioButton fx:id="fatherAliveRadio" layoutX="201.0" layoutY="237.0" mnemonicParsing="false" text="Alive">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="fat" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="fatherDecreasedRadio" layoutX="419.0" layoutY="236.0" mnemonicParsing="false" text="Decreased" toggleGroup="$fat" />
+                  <RadioButton fx:id="fatherUnknownRadio" layoutX="578.0" layoutY="238.0" mnemonicParsing="false" text="Unknown" toggleGroup="$fat" />
+                  <TextArea fx:id="motherOtherTextArea" layoutX="201.0" layoutY="191.0" prefHeight="29.0" prefWidth="222.0" />
+                  <TextField fx:id="fatherAgeText" layoutX="201.0" layoutY="263.0" />
+                  <CheckBox fx:id="fatherStroke" layoutX="569.0" layoutY="300.0" mnemonicParsing="false" text="stroke(CVA)" />
+                  <CheckBox fx:id="fatherHypertension" layoutX="201.0" layoutY="294.0" mnemonicParsing="false" text="hypertension" />
+                  <CheckBox fx:id="Fatherdepression" layoutX="201.0" layoutY="314.0" mnemonicParsing="false" text="depression/anxiety" />
+                  <CheckBox fx:id="fatherCancer" layoutX="419.0" layoutY="295.0" mnemonicParsing="false" text="cancer(specify)" />
+                  <CheckBox fx:id="FatherDiabetes" layoutX="569.0" layoutY="320.0" mnemonicParsing="false" text="diabetes" />
+                  <CheckBox fx:id="FatherLung" layoutX="201.0" layoutY="337.0" mnemonicParsing="false" text="lung cancer" />
+                  <CheckBox fx:id="FatherSubstances" layoutX="201.0" layoutY="358.0" mnemonicParsing="false" text="substances abuse" />
+                  <CheckBox fx:id="fatherColon" layoutX="419.0" layoutY="315.0" mnemonicParsing="false" text="colon cancer" />
+                  <CheckBox fx:id="FatherHeart" layoutX="419.0" layoutY="336.0" mnemonicParsing="false" text="heart disease(CAD)" />
+                  <CheckBox fx:id="FatherPostrate" layoutX="569.0" layoutY="339.0" mnemonicParsing="false" text="postrate cancer" />
+                  <CheckBox fx:id="FatherOther" layoutX="419.0" layoutY="357.0" mnemonicParsing="false" text="other(specify)" />
+                  <TextArea fx:id="fatherOtherTextArea" layoutX="201.0" layoutY="381.0" prefHeight="38.0" prefWidth="441.0" />
+                  <TextArea fx:id="otherFamiliyTextArea" layoutX="201.0" layoutY="429.0" prefHeight="38.0" prefWidth="442.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

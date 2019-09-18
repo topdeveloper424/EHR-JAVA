@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.eye.EyeViualFieldInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="219.0" prefWidth="510.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="102.0" orientation="VERTICAL" prefHeight="138.0" prefWidth="9.0" />
+                  <Button fx:id="doneBtn" layoutX="776.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="876.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutY="135.0" prefHeight="0.0" prefWidth="510.0" />
+                  <Label layoutX="9.0" layoutY="13.0" text="Visual Fields" />
+                  <CheckBox fx:id="viuaNotTeastedCheck" layoutX="200.0" layoutY="14.0" mnemonicParsing="false" text="not tested" />
+                  <CheckBox fx:id="viualNormalBilaterallyCheck" layoutX="372.0" layoutY="14.0" mnemonicParsing="false" text="normal bilaterally" />
+                  <CheckBox fx:id="viualDecreaedBilaterallyCheck" layoutX="200.0" layoutY="39.0" mnemonicParsing="false" text="decreased bilaterally" />
+                  <CheckBox fx:id="viualLeftNormalCheck" layoutX="372.0" layoutY="40.0" mnemonicParsing="false" text="left normal" />
+                  <CheckBox fx:id="viualRightNormalCheck" layoutX="373.0" layoutY="62.0" mnemonicParsing="false" text="right normal" />
+                  <CheckBox fx:id="viualNormalCheck" layoutX="121.0" layoutY="14.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="viualLeftDecreasedCheck" layoutX="201.0" layoutY="61.0" mnemonicParsing="false" text="left decreased" />
+                  <Button fx:id="doneBtn" layoutX="291.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="392.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="viualRightDecreasedCheck" layoutX="201.0" layoutY="84.0" mnemonicParsing="false" text="right decreased" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

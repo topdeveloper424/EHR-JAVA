@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="602.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.mskel.DigitalAndNail.SkelDigitalNailInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="270.0" prefWidth="588.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Finger nails" />
+                  <Separator layoutX="127.0" layoutY="1.0" orientation="VERTICAL" prefHeight="191.0" prefWidth="7.0" />
+                  <Button fx:id="doneBtn" layoutX="340.0" layoutY="202.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="5.0" layoutY="96.0" prefHeight="5.0" prefWidth="583.0" />
+                  <Button fx:id="skipBtn" layoutX="441.0" layoutY="202.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="prostatenormalCkeckBox" layoutX="139.0" layoutY="7.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="fingerNormalnails" layoutX="222.0" layoutY="5.0" mnemonicParsing="false" text="normal nails" />
+                  <CheckBox fx:id="fingerOnchomycosis" layoutX="405.0" layoutY="6.0" mnemonicParsing="false" text="onychomycosis" />
+                  <CheckBox fx:id="fingernailsSubungual" layoutX="222.0" layoutY="25.0" mnemonicParsing="false" text="subungual hematoma" />
+                  <CheckBox fx:id="fingerPitting" layoutX="405.0" layoutY="26.0" mnemonicParsing="false" text="pitting" />
+                  <CheckBox fx:id="fingerHemorrahages" layoutX="222.0" layoutY="46.0" mnemonicParsing="false" text="hemorrhages" />
+                  <CheckBox fx:id="fingerAvulsion" layoutX="222.0" layoutY="66.0" mnemonicParsing="false" text="avulsion" />
+                  <CheckBox fx:id="fingerTraumatic" layoutX="405.0" layoutY="46.0" mnemonicParsing="false" text="traumatic deformity" />
+                  <CheckBox fx:id="fingerParonychiaRednes" layoutX="405.0" layoutY="66.0" mnemonicParsing="false" text="paronychia redness swelling" />
+                  <CheckBox fx:id="toenailNormal" layoutX="222.0" layoutY="102.0" mnemonicParsing="false" text="normal" />
+                  <Label layoutX="14.0" layoutY="110.0" text="Toenails" />
+                  <Separator layoutX="-1.0" layoutY="191.0" prefHeight="0.0" prefWidth="583.0" />
+                  <CheckBox fx:id="toenailOnchyomysois" layoutX="222.0" layoutY="122.0" mnemonicParsing="false" text="onchyomycosis" />
+                  <CheckBox fx:id="toenailAvulsion" layoutX="222.0" layoutY="142.0" mnemonicParsing="false" text="avulsion" />
+                  <CheckBox fx:id="toenailSubungual" layoutX="401.0" layoutY="106.0" mnemonicParsing="false" text="subungual hematoma" />
+                  <CheckBox fx:id="toenailPitting" layoutX="402.0" layoutY="127.0" mnemonicParsing="false" text="pitting" />
+                  <CheckBox fx:id="toenailTraumatic" layoutX="402.0" layoutY="146.0" mnemonicParsing="false" text="traumatic deformity" />
+                  <CheckBox fx:id="toenailHemorrahages" layoutX="221.0" layoutY="163.0" mnemonicParsing="false" text="hemorrhages" />
+                  <CheckBox fx:id="toenailgrown" layoutX="402.0" layoutY="167.0" mnemonicParsing="false" text="igrown with infection" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

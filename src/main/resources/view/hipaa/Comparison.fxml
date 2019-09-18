@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="609.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="6.0" layoutY="5.0" prefHeight="317.0" prefWidth="456.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Report">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="6.0" layoutY="95.0" text="Previous Period From :" />
+                        <Label layoutX="264.0" layoutY="95.0" text="Thru Date" />
+                        <DatePicker layoutX="129.0" layoutY="91.0" prefHeight="25.0" prefWidth="129.0" />
+                        <DatePicker layoutX="130.0" layoutY="121.0" prefHeight="25.0" prefWidth="129.0" />
+                        <Label layoutX="6.0" layoutY="122.0" text="Current Period From :" />
+                        <Label layoutX="7.0" layoutY="159.0" text="Report Title :" />
+                        <Label layoutX="10.0" layoutY="253.0" text="Select :" />
+                        <TextField layoutX="130.0" layoutY="155.0" prefHeight="25.0" prefWidth="304.0" />
+                        <TextField layoutX="130.0" layoutY="185.0" prefHeight="25.0" prefWidth="305.0" />
+                        <RadioButton layoutX="130.0" layoutY="253.0" mnemonicParsing="false" text="TPO" />
+                        <RadioButton layoutX="196.0" layoutY="253.0" mnemonicParsing="false" text="Non-TPO" />
+                        <RadioButton layoutX="300.0" layoutY="253.0" mnemonicParsing="false" text="All" />
+                        <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="8.0" prefHeight="73.0" prefWidth="445.0" text="Select Type of Comparison">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton layoutX="4.0" layoutY="14.0" mnemonicParsing="false" text="Monthly" />
+                                    <RadioButton layoutX="87.0" layoutY="14.0" mnemonicParsing="false" text="Quartly" />
+                                    <RadioButton layoutX="162.0" layoutY="14.0" mnemonicParsing="false" text="Five Year" />
+                                    <RadioButton layoutX="253.0" layoutY="14.0" mnemonicParsing="false" text="Period- Current to Previous" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Label layoutX="266.0" layoutY="124.0" text="Thru Date" />
+                        <DatePicker layoutX="321.0" layoutY="91.0" prefHeight="25.0" prefWidth="129.0" />
+                        <DatePicker layoutX="321.0" layoutY="121.0" prefHeight="25.0" prefWidth="129.0" />
+                        <Label layoutX="8.0" layoutY="189.0" text="Sub Title :" />
+                        <ComboBox layoutX="130.0" layoutY="217.0" prefHeight="25.0" prefWidth="202.0" />
+                        <Label layoutX="9.0" layoutY="221.0" text="Report By :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TitledPane animated="false" collapsible="false" layoutX="471.0" layoutY="47.0" prefHeight="269.0" prefWidth="123.0" text="More  Option">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <CheckBox layoutX="14.0" layoutY="101.0" mnemonicParsing="false" text="ASCII File" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <CheckBox layoutX="23.0" layoutY="337.0" mnemonicParsing="false" text="Preview this Report" />
+      <Button layoutX="317.0" layoutY="332.0" mnemonicParsing="false" text="Printer">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="453.0" layoutY="333.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

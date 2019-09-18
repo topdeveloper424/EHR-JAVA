@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReferalProviderReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e3276fc-9d40-4cbe-aad6-425af641ca93">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="apptTime" class="java.lang.String"/>
+	<field name="visitCatId.code" class="java.lang.Object"/>
+	<field name="purpose" class="java.lang.String"/>
+	<field name="patient.patientName.firstName" class="java.lang.Object"/>
+	<field name="patient.patientName.lastName" class="java.lang.Object"/>
+	<field name="patient.company.name" class="java.lang.Object"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="provider.firstName" class="java.lang.Object"/>
+	<field name="provider.lastName" class="java.lang.Object"/>
+	<field name="provider.clinic.name" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="10" width="561" height="30" forecolor="#0080C0" uuid="3456404e-d42c-4e88-8d58-abfc048902c0"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="50" width="170" height="26" forecolor="#0000A0" uuid="69389e03-5be5-4f52-81eb-e2d5efec3515"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Practioniner Schedule]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="10" width="180" height="30" forecolor="#004080" uuid="68f157fd-4fad-42f3-827c-72ce0def3a1c"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{provider.clinic.name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<frame>
+				<reportElement x="60" y="0" width="460" height="30" uuid="137f8e70-9d81-42d8-87de-07b29bd4f59a"/>
+				<staticText>
+					<reportElement x="10" y="0" width="450" height="30" uuid="a2f8ac1e-a5f2-4122-8ef0-5343ee0e9837"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Scheduled Appointments for                                    on   ]]></text>
+				</staticText>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement x="370" y="0" width="80" height="20" uuid="e84d3058-7713-4d9a-829a-fa923786bb3d"/>
+					<textElement>
+						<font size="14" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="210" y="0" width="60" height="25" uuid="01710f4a-7c3a-4255-bc7a-da6a35bc3aaa"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{provider.firstName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="270" y="1" width="60" height="24" uuid="75dfb889-c2ba-4994-8939-1416e9a5fdea"/>
+					<textElement>
+						<font size="14" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{provider.lastName}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="100" height="32" uuid="802159c8-37a1-4616-b443-f2b14be699c2"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Visit Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="5" width="110" height="25" uuid="f515cfcf-d114-4bdb-a77a-595b8c30f15c"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Patient/Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="2" width="70" height="30" uuid="6e677771-050a-4cf1-83b0-b2edfe076730"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="20" uuid="24cb11c9-7c1b-42ca-b9e1-ce53601a2dd8"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="0" width="70" height="48" uuid="8c06ffd2-014d-43bb-b47d-c95dbd540249"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Purpose or description]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="70" height="30" uuid="52349349-6dd9-415e-88bf-b178027b611c"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apptTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="2" width="60" height="20" uuid="3f0a1922-e79c-4b34-9173-48e0fa5be1bb"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitCatId.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="2" width="70" height="30" uuid="267a5cd3-c825-4bcf-9e91-7d04b8eb6521"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purpose}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="2" width="50" height="15" uuid="2bb23fb3-4475-4faf-b058-a0f95b3c991e"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.patientName.firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="315" y="1" width="80" height="23" uuid="7f2227a6-b1ce-46ea-abcf-949a16745632"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="-3" width="70" height="30" uuid="5164cead-968e-4892-9416-1b7537ab03e6"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="285" y="17" width="15" height="17" uuid="2e6383e6-cf0e-4237-b2e2-c5a9c83ce27b"/>
+				<textElement>
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[    /]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="18" width="70" height="15" uuid="a9130d35-a64d-491a-ab02-7e1c84402fd2"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.patientName.lastName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="62" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

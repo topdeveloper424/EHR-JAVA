@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="594.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.EarIrrigationInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="5.0" prefHeight="202.0" prefWidth="578.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="14.0" text="Pick All that Apply :" />
+                  <Separator layoutY="123.0" prefHeight="3.0" prefWidth="578.0" />
+                  <Separator layoutX="124.0" orientation="VERTICAL" prefHeight="126.0" prefWidth="6.0" />
+                  <Button fx:id="doneBtn" layoutX="397.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="488.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="waxRemovedCheck" layoutX="145.0" layoutY="6.0" mnemonicParsing="false" text="wax removed easily" />
+                  <CheckBox fx:id="driedBloodCheck" layoutX="374.0" layoutY="6.0" mnemonicParsing="false" text="dried blood removed" />
+                  <CheckBox fx:id="waxNotRemoved" layoutX="145.0" layoutY="30.0" mnemonicParsing="false" text="wax could not be removed" />
+                  <CheckBox fx:id="cerumenexCheck" layoutX="368.0" layoutY="30.0" mnemonicParsing="false" text="cerumenex/debrox applied" />
+                  <CheckBox fx:id="reirrigationCheck" layoutX="145.0" layoutY="52.0" mnemonicParsing="false" text="re irrigation will be needed" />
+                  <CheckBox fx:id="tooTenderCheck" layoutX="368.0" layoutY="55.0" mnemonicParsing="false" text="too tender - to tolerate" />
+                  <CheckBox fx:id="earLoopCheck" layoutX="145.0" layoutY="78.0" mnemonicParsing="false" text="ear loop needed" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

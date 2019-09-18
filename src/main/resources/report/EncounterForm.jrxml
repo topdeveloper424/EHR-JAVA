@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ClinicReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0d58ddc4-f6b4-4db5-b1f6-dc04012a33e2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="mainContact" class="com.ets.model.Contact"/>
+	<parameter name="companyProtocol" class="com.ets.model.CompanyProtocol">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="connectionSubreport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="StandardProtocol" class="javafx.collections.ObservableList"/>
+	<parameter name="specialOrder" class="javafx.collections.ObservableList"/>
+	<parameter name="contact" class="javafx.collections.ObservableList"/>
+	<parameter name="protocolName" class="java.lang.String"/>
+	<parameter name="optionalProtocol" class="javafx.collections.ObservableList"/>
+	<parameter name="sbReprtStandardProtocolActivity" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subReportSpecialOrderFlow" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subReportContactFlow" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="subReportOptionalProtocol" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="visitDate" class="java.lang.Object"/>
+	<field name="patient.address.localAddress" class="java.lang.Object"/>
+	<field name="patient.address.city" class="java.lang.Object"/>
+	<field name="patient.address.state" class="java.lang.Object"/>
+	<field name="patient.address.zip" class="java.lang.Object"/>
+	<field name="patient.company.name" class="java.lang.Object"/>
+	<field name="patient.company.address.localAddress" class="java.lang.Object"/>
+	<field name="patient.company.address.city" class="java.lang.Object"/>
+	<field name="patient.company.address.state" class="java.lang.Object"/>
+	<field name="patient.company.address.zip" class="java.lang.Object"/>
+	<field name="provider.firstName" class="java.lang.Object"/>
+	<field name="provider.lastName" class="java.lang.Object"/>
+	<field name="provider.middleName" class="java.lang.Object"/>
+	<field name="patient.patientName.firstName" class="java.lang.Object"/>
+	<field name="patient.patientName.middleName" class="java.lang.Object"/>
+	<field name="patient.patientName.lastName" class="java.lang.Object"/>
+	<field name="purpose" class="java.lang.String"/>
+	<field name="patient.socialSecurityNo" class="java.lang.Object"/>
+	<field name="patient.patientStatistic.dob" class="java.lang.Object"/>
+	<field name="patient.address.phone" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="168" y="0" width="220" height="30" backcolor="#FFFF80" uuid="f64bf2fc-e703-4297-bf60-365e94893dd9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="203" y="2" width="150" height="26" uuid="2d8cee50-1751-4704-8f43-2e1d40772c20"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Encounter Form]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="269" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="0" width="70" height="20" uuid="84c9b83b-58db-4225-a5d9-bd20d8aebf1d"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="20" uuid="e49c8a33-cf03-4661-b2a3-cdf68ac4438c"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="50" height="20" uuid="101427b0-d94c-4650-9667-6ab302dfa664"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time In:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="40" width="51" height="20" uuid="1d8ca231-1476-4c6d-9e3a-a204ef0cbafe"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time Out:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="50" height="20" uuid="13409d5a-bd93-42ac-8d9a-d229ea92b2d8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="80" width="141" height="20" uuid="d2c4465c-62a7-4da9-81e3-7c634730e1e1"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.address.localAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="100" width="120" height="20" uuid="b6afcdf5-edcf-4412-988b-e379421c8f75"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.address.city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="120" width="100" height="20" uuid="bdfab18c-7e2e-4a1e-aa7b-d08380141816"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.address.state}+" "+$F{patient.address.zip}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="352" y="0" width="68" height="20" uuid="e85585e1-9a57-4bfb-a847-7de60a0a7ed7"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Company:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="0" width="146" height="20" uuid="51d06dc6-84b5-4a5b-8ea7-0dfa9cca1753"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="20" width="146" height="20" uuid="bbc568a6-491a-49e9-b1fb-0503ee1ce304"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.address.localAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="40" width="146" height="20" uuid="7d1330d5-4e6a-4ca7-be0c-9e424f4886e2"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.address.city}+" "+$F{patient.company.address.zip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="60" width="146" height="20" uuid="17a3c348-7444-4d0e-95d6-5fc8c4b5e4c9"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.address.state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="110" width="150" height="20" uuid="86e68eec-6333-41f1-9ba8-e10aa4b6d66c"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mainContact}.getPhone()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="353" y="110" width="70" height="20" uuid="16153c1d-b37b-46ac-88af-88f83332df46"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="130" width="150" height="20" uuid="eeee91c9-24c0-4447-a0f2-63f0d5fe20da"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mainContact}.getMobile()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="354" y="150" width="48" height="20" uuid="8195d3b5-695c-49c4-8323-1cb3fc4f0a3b"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fax:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="150" width="135" height="20" uuid="ab1ef146-e500-4838-bd88-635533e55af8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mainContact}.getFax()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="170" width="140" height="20" uuid="789e8586-072c-424c-a4d9-f639cd48f8e3"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mainContact}.getEmail()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="351" y="193" width="60" height="20" uuid="7708937f-34a7-472f-ab86-5c8a6ca30bfc"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provider :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="417" y="190" width="146" height="17" uuid="2b492f34-a4f1-42c8-a955-d3651801ff83"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{provider.firstName}+" "+$F{provider.middleName}+" "+$F{provider.lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="60" width="140" height="20" uuid="e328f9f9-76c5-4fe3-9c36-27b316d8e8b2"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.patientName.firstName}+" "+$F{patient.patientName.middleName}+" "+$F{patient.patientName.lastName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="351" y="213" width="60" height="20" uuid="0d2e0572-562f-472a-b813-d7e38c5ec036"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protocol : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="137" width="70" height="16" uuid="b440063d-46d4-4459-972f-06a029dfda63"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Identity : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="157" width="70" height="13" uuid="07b9c092-ec66-4985-ac70-89deb820368c"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Home Phone:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="173" width="70" height="17" uuid="f0831ab8-aeb2-427f-a79a-cfd0858f8bcd"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Birth Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="190" width="70" height="20" uuid="33c1c227-0288-4f00-8573-7c18e8884edc"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Job Title:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="70" height="20" uuid="f19ff717-3d63-48fb-b556-4f2c40da3401"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="230" width="70" height="20" uuid="8f84083d-b71a-4ccc-bcee-2ed2077b45e8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Purpose:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="230" width="70" height="17" uuid="b60ee931-b3db-42ef-a14e-1abf31950474"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purpose}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="140" width="121" height="13" uuid="7a0bb24f-4a54-4006-9020-c6f8bef0d8a3"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.socialSecurityNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="173" width="121" height="20" uuid="61106a61-0901-46d8-a872-841d3183bab8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.patientStatistic.dob}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="247" width="51" height="22" uuid="69a51908-505b-4cd2-acf1-66807e371cf8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Work:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="190" width="31" height="20" uuid="7aa0b508-46c1-4f8a-90b3-69f57b2111c0"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Age:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="74" y="157" width="146" height="13" uuid="e5b59e48-cf53-4ee3-a333-34cecd844dbe"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.address.phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="210" width="135" height="20" uuid="1cc321f9-b910-4284-8e1a-1bdff8869949"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{protocolName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band splitType="Stretch"/>
+		<band height="24">
+			<subreport>
+				<reportElement x="2" y="0" width="551" height="20" uuid="cbf2e8ed-60db-44ed-94f4-bcfdf3bcd496">
+					<printWhenExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="companyProtocol">
+					<subreportParameterExpression><![CDATA[$P{companyProtocol}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{StandardProtocol})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["src/main/resources/report/standardProtocolActivity.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="24">
+			<subreport>
+				<reportElement x="2" y="4" width="551" height="17" uuid="ff7d886e-fb9b-484b-a8a3-31626a1ef008">
+					<printWhenExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="specialOrder">
+					<subreportParameterExpression><![CDATA[$P{specialOrder}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{specialOrder})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["src/main/resources/report/SpecialOrderFlow.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="34">
+			<subreport>
+				<reportElement x="2" y="3" width="551" height="16" uuid="3cd7e24c-be5d-45b7-a416-952523b98f38">
+					<printWhenExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="contact">
+					<subreportParameterExpression><![CDATA[$P{contact}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{contact})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["src/main/resources/report/ContactFlow.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="25">
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="20" uuid="72a14e1b-0516-476b-9e07-36d92ba4c741"/>
+				<subreportParameter name="optionalProtocol">
+					<subreportParameterExpression><![CDATA[$P{optionalProtocol}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{optionalProtocol})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["src/main/resources/report/optionalProtocol.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="94">
+			<rectangle>
+				<reportElement x="40" y="0" width="514" height="30" backcolor="#FFFF80" uuid="7fc2f82d-7bb2-45e5-85df-4334fe9e6713"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="231" y="0" width="133" height="25" uuid="ceac9184-b094-4525-97b4-b9f53f106a4d"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Instructions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="30" width="70" height="20" uuid="b0ec84b7-6f8f-4e9e-9951-4beb694388b9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Use Form : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="50" width="80" height="20" uuid="65be0e86-16c7-489d-bf21-1cebf7780645"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Special Instructions ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="30" width="100" height="20" uuid="64e2b373-b44c-428f-a8ae-cbd585398934"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Results To : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="54" width="70" height="20" uuid="02c0d68a-668e-4586-8b86-ca7c10197abc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="70" width="70" height="18" uuid="6cbefe36-ce80-43ae-b8d9-84c406174ae1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fax : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="70" width="106" height="18" uuid="e9190a05-0189-413d-809f-e6858f778796"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Special instructions : ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="585.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.assignableFeeSchedule.AsignableFeeScheduleInputController">
+   <children>
+      <TabPane layoutX="1.0" prefHeight="453.0" prefWidth="583.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField layoutX="145.0" layoutY="46.0" prefHeight="25.0" prefWidth="199.0" />
+                        <TitledPane animated="false" layoutX="123.0" layoutY="88.0" prefHeight="127.0" prefWidth="397.0" text="Schedule Type">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton layoutX="43.0" layoutY="12.0" mnemonicParsing="false" text="Employer Contract Services" />
+                                    <RadioButton layoutX="43.0" layoutY="39.0" mnemonicParsing="false" text="Worker' Comp" />
+                                    <RadioButton layoutX="43.0" layoutY="67.0" mnemonicParsing="false" text="Private Practice/Group Health" />
+                                    <RadioButton layoutX="254.0" layoutY="39.0" mnemonicParsing="false" text="Medicare" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Label layoutX="203.0" layoutY="14.0" text="Fee Schedule ID :" />
+                        <Label layoutX="35.0" layoutY="50.0" text="Fee Schedule Title :" />
+                        <Label layoutX="35.0" layoutY="247.0" text="Source Reference :" />
+                        <TextArea layoutX="161.0" layoutY="230.0" prefHeight="115.0" prefWidth="359.0" />
+                        <Button layoutX="268.0" layoutY="354.0" mnemonicParsing="false" text="Set Up Schedule Fees" />
+                        <CheckBox layoutX="35.0" layoutY="394.0" mnemonicParsing="false" text="Inactive" />
+                        <TextField layoutX="224.0" layoutY="390.0" prefHeight="25.0" prefWidth="89.0" />
+                        <Label layoutX="179.0" layoutY="394.0" text="as of :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Assigned Accounts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="201.0" layoutY="14.0" text="Fee Schedule ID :" />
+                        <TableView layoutY="45.0" prefHeight="279.0" prefWidth="583.0">
+                           <columns>
+                              <TableColumn prefWidth="322.0" text="Assigned Account Name" />
+                              <TableColumn prefWidth="137.0" text="Code" />
+                              <TableColumn prefWidth="123.0" text="Type" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="-1.0" layoutY="323.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="31.0" layoutY="324.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/media-controls-rewind-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="63.0" layoutY="324.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/Capturebut4.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="95.0" layoutY="324.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="32.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="127.0" layoutY="324.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/but3.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="159.0" layoutY="324.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/Media-Controls-Fast-Forward-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="191.0" layoutY="324.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/but2.PNG" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="236.0" layoutY="365.0" mnemonicParsing="false" text="Clear Account">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../image/crossout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Audit">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="200.0" layoutY="34.0" text="Fee Schedule ID :" />
+                        <Label layoutX="115.0" layoutY="74.0" text="Added by User :" />
+                        <Label layoutX="115.0" layoutY="170.0" text="Changed by User :" />
+                        <Label layoutX="175.0" layoutY="104.0" text="On Date :" />
+                        <Label layoutX="175.0" layoutY="204.0" text="On Date :" />
+                        <Label layoutX="177.0" layoutY="132.0" text="At Time :" />
+                        <Label layoutX="177.0" layoutY="238.0" text="At Time :" />
+                        <CheckBox layoutX="129.0" layoutY="285.0" mnemonicParsing="false" text="Accounts are associated with this Fee Schedule" />
+                        <CheckBox layoutX="129.0" layoutY="315.0" mnemonicParsing="false" text="Fees have been added to this Fee Schedule" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="34.0" layoutY="464.0" mnemonicParsing="false" text="Copy  Another Schedule" />
+      <Button layoutX="232.0" layoutY="464.0" mnemonicParsing="false" text="Print">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="361.0" layoutY="464.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="close" layoutX="444.0" layoutY="464.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

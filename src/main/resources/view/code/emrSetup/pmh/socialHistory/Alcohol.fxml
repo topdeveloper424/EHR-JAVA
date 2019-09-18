@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="604.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.socialHistory.PMHAlcoholInputController">
+   <children>
+      <Button fx:id="SkipButton" layoutX="491.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="DoneButton" layoutX="402.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="70.0" prefHeight="419.0" prefWidth="240.0" text="Alcohol Use">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="224.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="16.0" prefWidth="108.0" text="Alcohol Use Status" />
+                  <RadioButton fx:id="UnknownStatusRadio" layoutX="35.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#unknownStatusMouseClicked" text="Unknowkn status">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="alcohol" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="everyDayRadio" layoutX="35.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#EveryDayMouseClicked" text="Current,Every Day" toggleGroup="$alcohol" />
+                  <RadioButton fx:id="NeverDrankRadio" layoutX="35.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#neverDrunkMouseClicked" text="Never Drank" toggleGroup="$alcohol" />
+                  <RadioButton fx:id="someDaysRadio" layoutX="35.0" layoutY="114.0" mnemonicParsing="false" onMouseClicked="#someDaysMouseClicked" text="Current, Some Days" toggleGroup="$alcohol" />
+                  <RadioButton fx:id="DrinkerStatusRadio" layoutX="35.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#drinkerMouseClicked" text="Drinker,Status Unknown" toggleGroup="$alcohol" />
+                  <RadioButton fx:id="formerDrinkerRadio" layoutX="35.0" layoutY="162.0" mnemonicParsing="false" onMouseClicked="#formerMouseClicked" text="Former,Drinker" toggleGroup="$alcohol" />
+                  <Label layoutX="14.0" layoutY="194.0" prefHeight="16.0" prefWidth="108.0" text="Drinks Per Week" />
+                  <TextField fx:id="drinkText" layoutX="109.0" layoutY="190.0" prefHeight="25.0" prefWidth="56.0" />
+                  <Label layoutX="14.0" layoutY="228.0" prefHeight="16.0" prefWidth="85.0" text="Started at Age" />
+                  <TextField fx:id="ageText" layoutX="108.0" layoutY="224.0" prefHeight="25.0" prefWidth="56.0" />
+                  <Label layoutX="5.0" layoutY="259.0" prefHeight="16.0" prefWidth="98.0" text="Stopped on Date" />
+                  <DatePicker fx:id="stopdate" layoutX="101.0" layoutY="252.0" prefHeight="25.0" prefWidth="131.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="261.0" layoutY="70.0" prefHeight="419.0" prefWidth="330.0" text="Additional Info,if Applicable">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="304.0" stylesheets="@../../../../../css/style.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="16.0" prefWidth="185.0" text="Attempts to Quit- Patient Claims" />
+                  <RadioButton fx:id="neverToAttemptedRadio" layoutX="32.0" layoutY="40.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="205.0" text="Never to have attempted to quit">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="additionalInfo" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="pastToQuitRadio" layoutX="32.0" layoutY="63.0" mnemonicParsing="false" text="To have tried in the past to quit" toggleGroup="$additionalInfo" />
+                  <RadioButton fx:id="timesToQuitRadio" layoutX="32.0" layoutY="87.0" mnemonicParsing="false" text="To have tried many times to quit" toggleGroup="$additionalInfo" />
+                  <RadioButton fx:id="successfulQuitRadio" layoutX="32.0" layoutY="112.0" mnemonicParsing="false" text="To have successfully quit" toggleGroup="$additionalInfo" />
+                  <RadioButton fx:id="naRadio" layoutX="32.0" layoutY="137.0" mnemonicParsing="false" text="N/A" toggleGroup="$additionalInfo" />
+                  <Label layoutX="16.0" layoutY="171.0" prefHeight="16.0" prefWidth="185.0" text="Perception of Problem-Patient" />
+                  <RadioButton fx:id="claimRadio" layoutX="32.0" layoutY="194.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="205.0" text="Claims to have a problem">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="perception" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="deniesRadio" layoutX="32.0" layoutY="218.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="205.0" text="Denies having a problem" toggleGroup="$perception" />
+                  <RadioButton fx:id="considerRadio" layoutX="32.0" layoutY="242.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="232.0" text="Considers there possibly is a problem" toggleGroup="$perception" />
+                  <RadioButton fx:id="addictionRadio" layoutX="32.0" layoutY="267.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="232.0" text="has been diagnosed with an addiction" toggleGroup="$perception" />
+                  <RadioButton fx:id="na2Radio" layoutX="33.0" layoutY="288.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="107.0" text="N/A" toggleGroup="$perception" />
+                  <Label layoutX="14.0" layoutY="317.0" prefHeight="16.0" prefWidth="108.0" text="Cessation Program" />
+                  <CheckBox fx:id="offeredCheck" layoutX="237.0" layoutY="317.0" mnemonicParsing="false" text="Offered" />
+                  <CheckBox fx:id="acceptedCheck" layoutX="237.0" layoutY="341.0" mnemonicParsing="false" text="Accepted" />
+                  <DatePicker fx:id="cessationProgDateRadio" layoutX="48.0" layoutY="337.0" />
+                  <Label layoutX="14.0" layoutY="341.0" prefHeight="16.0" prefWidth="70.0" text="Date" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TextArea fx:id="additionaLtEXTaREA" layoutX="134.0" layoutY="504.0" prefHeight="59.0" prefWidth="427.0" />
+      <Label layoutX="23.0" layoutY="518.0" prefHeight="16.0" prefWidth="98.0" text="Additional Notes" />
+      <Label layoutX="26.0" layoutY="14.0" prefHeight="16.0" prefWidth="91.0" text="EMR Wizard" />
+      <Label layoutX="26.0" layoutY="41.0" prefHeight="16.0" prefWidth="91.0" text="Summary" />
+      <TextField layoutX="86.0" layoutY="37.0" prefHeight="25.0" prefWidth="189.0" />
+   </children>
+</AnchorPane>

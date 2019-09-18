@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="570.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.PTParametersInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="6.0" prefHeight="536.0" prefWidth="555.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="7.0" text="Traction - Area" />
+                  <Label layoutX="2.0" layoutY="37.0" text="Traction - Poundage" />
+                  <Label layoutX="2.0" layoutY="93.0" text="Mobs - Grade" />
+                  <Label layoutX="2.0" layoutY="140.0" text="Mobs - Area" />
+                  <Label layoutX="2.0" layoutY="186.0" text="Ultrasound - Wateage" />
+                  <Label layoutX="2.0" layoutY="245.0" text="Ultrasound - Percent" />
+                  <Label layoutX="2.0" layoutY="277.0" text="Ultrasound - MHz" />
+                  <Label layoutX="2.0" layoutY="356.0" text="Electric Stim" />
+                  <Label layoutX="2.0" layoutY="393.0" text="Lases - Joules" />
+                  <Label layoutX="2.0" layoutY="437.0" text="Lases - Mode" />
+                  <Separator layoutX="134.0" layoutY="1.0" orientation="VERTICAL" prefHeight="459.0" prefWidth="0.0" />
+                  <RadioButton fx:id="pelvicRadio" layoutX="230.0" layoutY="6.0" mnemonicParsing="false" text="pelvic traction">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Leukocytes" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="cervicRadio" layoutX="404.0" layoutY="6.0" mnemonicParsing="false" text="cervic traction" toggleGroup="$Leukocytes" />
+                  <Separator layoutX="-1.0" layoutY="30.0" prefHeight="0.0" prefWidth="548.0" />
+                  <Separator layoutY="67.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="grade1Radio" layoutX="230.0" layoutY="73.0" mnemonicParsing="false" text="I">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Urobilinogen" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="grade2Radio" layoutX="404.0" layoutY="73.0" mnemonicParsing="false" text="II" toggleGroup="$Urobilinogen" />
+                  <RadioButton fx:id="grade3Radio" layoutX="230.0" layoutY="97.0" mnemonicParsing="false" text="III" toggleGroup="$Urobilinogen" />
+                  <RadioButton fx:id="grade4Radio" layoutX="404.0" layoutY="98.0" mnemonicParsing="false" text="IV" toggleGroup="$Urobilinogen" />
+                  <Separator layoutY="121.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="spinalRadio" layoutX="230.0" layoutY="128.0" mnemonicParsing="false" text="Spinal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Protein" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="kneeRadio" layoutX="404.0" layoutY="128.0" mnemonicParsing="false" text="Knee" toggleGroup="$Protein" />
+                  <RadioButton fx:id="wristRadio" layoutX="230.0" layoutY="152.0" mnemonicParsing="false" text="Wrist" toggleGroup="$Protein" />
+                  <RadioButton fx:id="shoulderRadio" layoutX="404.0" layoutY="153.0" mnemonicParsing="false" text="Shoulder" toggleGroup="$Protein" />
+                  <Separator layoutX="1.0" layoutY="174.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="wateage00Radio" layoutX="230.0" layoutY="187.0" mnemonicParsing="false" text="0.0">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ph" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="wateage08Radio" layoutX="404.0" layoutY="187.0" mnemonicParsing="false" text="0.8" toggleGroup="$ph" />
+                  <RadioButton fx:id="wateage1Radio" layoutX="499.0" layoutY="186.0" mnemonicParsing="false" text="1.0" toggleGroup="$ph" />
+                  <RadioButton fx:id="wateage12Radio" layoutX="230.0" layoutY="211.0" mnemonicParsing="false" text="1.2" toggleGroup="$ph" />
+                  <RadioButton fx:id="wateage14Radio" layoutX="404.0" layoutY="212.0" mnemonicParsing="false" text="1.4" toggleGroup="$ph" />
+                  <Separator layoutX="3.0" layoutY="232.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="percent50Radio" layoutX="230.0" layoutY="240.0" mnemonicParsing="false" text="50%">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Blood" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="percent100Radio" layoutX="404.0" layoutY="240.0" mnemonicParsing="false" text="100%" toggleGroup="$Blood" />
+                  <Separator layoutX="-2.0" layoutY="263.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="mhz1Radio" layoutX="230.0" layoutY="270.0" mnemonicParsing="false" text="1 MHz">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Gravity" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="mhz2Radio" layoutX="404.0" layoutY="270.0" mnemonicParsing="false" text="2 MHZ" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="mhz3Radio" layoutX="230.0" layoutY="294.0" mnemonicParsing="false" text="3 MHz" toggleGroup="$Gravity" />
+                  <Separator layoutY="315.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Separator layoutX="1.0" layoutY="348.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Separator layoutX="3.0" layoutY="665.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Separator layoutX="-2.0" layoutY="377.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Separator layoutY="428.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Separator layoutX="10.0" layoutY="458.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Button fx:id="okBtn" layoutX="335.0" layoutY="467.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="OK">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="437.0" layoutY="467.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="2.0" layoutY="325.0" text="Iontophoresis - MA" />
+                  <TextField fx:id="poundageText" layoutX="230.0" layoutY="36.0" />
+                  <TextField fx:id="maText" layoutX="230.0" layoutY="319.0" />
+                  <CheckBox fx:id="includeCheck" layoutX="146.0" layoutY="355.0" mnemonicParsing="false" text="Include" />
+                  <Label layoutX="215.0" layoutY="356.0" text="ELECTRIC SIMULATION : Patient Received interferential ES * 15" />
+                  <CheckBox fx:id="joules04Check" layoutX="230.0" layoutY="383.0" mnemonicParsing="false" text="0.4 - 0.6 Joules" />
+                  <CheckBox fx:id="joules10Check" layoutX="230.0" layoutY="406.0" mnemonicParsing="false" text="0.8 - 1.0 Joules" />
+                  <CheckBox fx:id="joules06Check" layoutX="404.0" layoutY="384.0" mnemonicParsing="false" text="0.6 - 0.8 Joules" />
+                  <CheckBox fx:id="joules20Check" layoutX="404.0" layoutY="407.0" mnemonicParsing="false" text="1.0 - 2.0 Joules" />
+                  <CheckBox fx:id="continuousCheck" layoutX="230.0" layoutY="435.0" mnemonicParsing="false" text="Continuous Mode" />
+                  <CheckBox fx:id="pulsedCheck" layoutX="404.0" layoutY="436.0" mnemonicParsing="false" text="Pulsed Mode" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

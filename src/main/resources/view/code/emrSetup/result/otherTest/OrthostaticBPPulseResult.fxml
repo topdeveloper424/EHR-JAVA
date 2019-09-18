@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="511.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.OrthostaticBPPulseResultInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="283.0" prefWidth="499.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="525.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="66.0" prefHeight="3.0" prefWidth="525.0" />
+                  <Label layoutX="4.0" layoutY="8.0" text="Supine Blood Pressure :" />
+                  <Separator layoutX="149.0" layoutY="1.0" orientation="VERTICAL" prefHeight="203.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="203.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="100.0" prefHeight="3.0" prefWidth="525.0" />
+                  <Button fx:id="skipBtn" layoutX="303.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="4.0" layoutY="76.0" text="Sitting  Blood Pressure :" />
+                  <TextField fx:id="supineBloodText" layoutX="163.0" layoutY="3.0" prefHeight="25.0" prefWidth="151.0" />
+                  <Separator layoutX="-3.0" layoutY="32.0" prefHeight="3.0" prefWidth="525.0" />
+                  <TextField fx:id="supinePulseText" layoutX="163.0" layoutY="37.0" />
+                  <TextField fx:id="sittingBloodText" layoutX="163.0" layoutY="71.0" />
+                  <Label layoutX="4.0" layoutY="42.0" text="Supine Pulse :" />
+                  <Separator layoutX="5.0" layoutY="170.0" prefHeight="3.0" prefWidth="525.0" />
+                  <Label layoutX="8.0" layoutY="112.0" text="Sitting Pulse :" />
+                  <Separator layoutX="5.0" layoutY="204.0" prefHeight="3.0" prefWidth="525.0" />
+                  <Label layoutX="8.0" layoutY="180.0" text="Standing  Pulse :" />
+                  <TextField fx:id="sittingPulseText" layoutX="164.0" layoutY="107.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Separator layoutX="1.0" layoutY="136.0" prefHeight="3.0" prefWidth="525.0" />
+                  <TextField fx:id="standingBpText" layoutX="166.0" layoutY="141.0" />
+                  <TextField fx:id="standingPulseText" layoutX="166.0" layoutY="175.0" />
+                  <Label layoutX="8.0" layoutY="146.0" text="Standing BP :" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

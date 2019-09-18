@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="744.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.parentEmployerGroup.ParentEmployerGroupInputController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="382.0" prefWidth="743.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="394.0" prefWidth="742.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="24.0" text="Code :" />
+                        <Label layoutX="25.0" layoutY="70.0" text="Name :" />
+                        <Label layoutX="25.0" layoutY="109.0" text="Address :" />
+                        <Label layoutX="25.0" layoutY="158.0" text="City :" />
+                        <Label layoutX="25.0" layoutY="195.0" text="Telephone :" />
+                        <Label layoutX="25.0" layoutY="231.0" text="Email :'" />
+                        <TextField fx:id="codeTextField" layoutX="90.0" layoutY="20.0" />
+                        <TextField fx:id="feinTextField" layoutX="366.0" layoutY="20.0" />
+                        <TextField fx:id="nameTextField" layoutX="90.0" layoutY="66.0" prefHeight="25.0" prefWidth="328.0" />
+                        <TextField fx:id="localAddressTextField" layoutX="90.0" layoutY="105.0" prefHeight="25.0" prefWidth="332.0" />
+                        <TextField fx:id="cityTextField" layoutX="90.0" layoutY="151.0" prefHeight="25.0" prefWidth="251.0" />
+                        <TextField fx:id="stateTextField" layoutX="404.0" layoutY="154.0" prefHeight="25.0" prefWidth="106.0" />
+                        <TextField fx:id="zipTextField" layoutX="554.0" layoutY="154.0" prefHeight="25.0" prefWidth="88.0" />
+                        <TextField fx:id="telephoneTextField" layoutX="90.0" layoutY="191.0" prefHeight="25.0" prefWidth="167.0" />
+                        <TextField fx:id="extensionTextField" layoutX="312.0" layoutY="191.0" prefHeight="25.0" prefWidth="78.0" />
+                        <TextField fx:id="faxTextField" layoutX="431.0" layoutY="191.0" prefHeight="25.0" prefWidth="112.0" />
+                        <ChoiceBox fx:id="countryComboBox" layoutX="600.0" layoutY="191.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="emailTextField" layoutX="90.0" layoutY="227.0" prefHeight="25.0" prefWidth="398.0" />
+                        <TextField fx:id="sourceFaxTextField" layoutX="577.0" layoutY="227.0" />
+                        <TextField fx:id="contactTextField" layoutX="90.0" layoutY="270.0" prefHeight="25.0" prefWidth="275.0" />
+                        <TextField fx:id="sicCodeTextField" layoutX="90.0" layoutY="314.0" prefHeight="25.0" prefWidth="135.0" />
+                        <Button fx:id="sicCodeButton" layoutX="225.0" layoutY="313.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="naicsCodeTextField" layoutX="366.0" layoutY="314.0" />
+                        <Button fx:id="naicsCodeButton" layoutX="515.0" layoutY="312.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="283.0" layoutY="195.0" text="Ext :" />
+                        <Label layoutX="25.0" layoutY="274.0" text="Contact :" />
+                        <Label layoutX="25.0" layoutY="317.0" text="SIC Code :" />
+                        <Label layoutX="326.0" layoutY="24.0" text="FEIN :" />
+                        <Label layoutX="356.0" layoutY="155.0" text="State :" />
+                        <Label layoutX="516.0" layoutY="158.0" text="Zip :" />
+                        <Label layoutX="404.0" layoutY="195.0" text="Fax :" />
+                        <Label layoutX="549.0" layoutY="195.0" text="Country :" />
+                        <Label layoutX="507.0" layoutY="231.0" text="Source Fax :" />
+                        <Label layoutX="298.0" layoutY="317.0" text="NCIS Code :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Organization">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="695.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="149.0" layoutY="48.0" prefHeight="206.0" prefWidth="453.0" text="Organizational Groups">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="148.0" prefWidth="451.0">
+                                 <children>
+                                    <Label layoutX="15.0" layoutY="23.0" text="Region :" />
+                                    <Label layoutX="15.0" layoutY="63.0" text="District :" />
+                                    <Label layoutX="15.0" layoutY="107.0" text="Complex :" />
+                                    <TextField fx:id="regionTextField" layoutX="74.0" layoutY="19.0" />
+                                    <Button fx:id="regionButton" layoutX="223.0" layoutY="17.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="36.0">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="districtTextField" layoutX="74.0" layoutY="58.0" />
+                                    <Button fx:id="districtButton" layoutX="223.0" layoutY="56.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="complexTextField" layoutX="74.0" layoutY="103.0" />
+                                    <Button fx:id="complexButton" layoutX="223.0" layoutY="101.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button layoutX="36.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Add">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="126.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Change">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/blk_tri.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="222.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Delete">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/del.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ToolBar layoutX="26.0" layoutY="358.0" prefHeight="17.0" prefWidth="261.0">
+                           <items>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/media-controls-rewind-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/Capturebut4.PNG" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="32.0">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/but3.PNG" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/Media-Controls-Fast-Forward-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/but2.PNG" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <CheckBox fx:id="inactiveCheckBox" layoutX="260.0" layoutY="402.0" mnemonicParsing="false" text="InactiveCheckBox" />
+      <Button fx:id="okButton" layoutX="389.0" layoutY="398.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="504.0" layoutY="398.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

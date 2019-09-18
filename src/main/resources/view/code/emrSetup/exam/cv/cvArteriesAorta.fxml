@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="187.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.cv.CvArteriesAortaInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="174.0" prefWidth="580.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="144.0" layoutY="1.0" orientation="VERTICAL" prefHeight="94.0" prefWidth="13.0" />
+                  <Separator layoutX="-2.0" layoutY="89.0" prefHeight="10.0" prefWidth="585.0" />
+                  <Button fx:id="doneBtn" layoutX="288.0" layoutY="105.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="402.0" layoutY="105.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="28.0" layoutY="3.0" text="Abdominal Aorta" />
+                  <CheckBox fx:id="aortaAllNormalCheckBox" layoutX="166.0" layoutY="9.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="aortaPulsatileCheckBox" layoutX="288.0" layoutY="6.0" mnemonicParsing="false" text="pulsatile">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="aorta" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="aortaEnlargedCheckBox" layoutX="429.0" layoutY="6.0" mnemonicParsing="false" text="enlarged" toggleGroup="$aorta" />
+                  <RadioButton fx:id="aortaEnlarged3CheckBox" layoutX="288.0" layoutY="27.0" mnemonicParsing="false" text="enlarged to 3 cm" toggleGroup="$aorta" />
+                  <RadioButton fx:id="aortaEnlarged5CheckBox" layoutX="288.0" layoutY="50.0" mnemonicParsing="false" text="enlarged to 5 cm" toggleGroup="$aorta" />
+                  <RadioButton fx:id="aortaEnlarged7CheckBox" layoutX="291.0" layoutY="72.0" mnemonicParsing="false" text="enlarged to 7 cm" toggleGroup="$aorta" />
+                  <RadioButton fx:id="aortaEnlarged4CheckBox" layoutX="429.0" layoutY="27.0" mnemonicParsing="false" text="enlarged to 4 cm" toggleGroup="$aorta" />
+                  <RadioButton fx:id="aortaEnlarged6CheckBox" layoutX="429.0" layoutY="50.0" mnemonicParsing="false" text="enlarged to 6 cm" toggleGroup="$aorta" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

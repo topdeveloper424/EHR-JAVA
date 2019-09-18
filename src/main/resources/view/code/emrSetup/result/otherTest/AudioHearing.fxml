@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="251.0" prefWidth="592.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.AudioHearingInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="5.0" prefHeight="236.0" prefWidth="579.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="22.0" text="Interpretation AS (Left Ear)" />
+                  <Label layoutX="6.0" layoutY="90.0" text="Interpretation AD (Right Ear)" />
+                  <CheckBox fx:id="asNormalChexk" layoutX="197.0" layoutY="6.0" mnemonicParsing="false" text="Normal Hearing (0-25 db)" />
+                  <CheckBox fx:id="asMildCheck" layoutX="379.0" layoutY="8.0" mnemonicParsing="false" text="Mild Loss 26 - 40 db)" />
+                  <Separator layoutX="172.0" orientation="VERTICAL" prefHeight="163.0" prefWidth="9.0" />
+                  <CheckBox fx:id="asModerateCheck" layoutX="197.0" layoutY="32.0" mnemonicParsing="false" text="Moderate Loss (41 - 55 db)" />
+                  <CheckBox fx:id="asModCheck" layoutX="379.0" layoutY="34.0" mnemonicParsing="false" text="Mod. Severe loss (56-70 db)" />
+                  <CheckBox fx:id="asSevereCheck" layoutX="197.0" layoutY="54.0" mnemonicParsing="false" text="Severe loss (71  90 db)" />
+                  <CheckBox fx:id="asProfoundCheck" layoutX="379.0" layoutY="56.0" mnemonicParsing="false" text="Profound Loss (90 + db)" />
+                  <Separator layoutX="-2.0" layoutY="80.0" prefHeight="0.0" prefWidth="579.0" />
+                  <CheckBox fx:id="adNormalChexk" layoutX="197.0" layoutY="87.0" mnemonicParsing="false" text="Normal Hearing (0-25 db)" />
+                  <CheckBox fx:id="adMildCheck" layoutX="379.0" layoutY="89.0" mnemonicParsing="false" text="Mild Loss 26 - 40 db)" />
+                  <CheckBox fx:id="adModerateCheck" layoutX="197.0" layoutY="113.0" mnemonicParsing="false" text="Moderate Loss (41 - 55 db)" />
+                  <CheckBox fx:id="adModCheck" layoutX="379.0" layoutY="115.0" mnemonicParsing="false" text="Mod. Severe loss (56-70 db)" />
+                  <CheckBox fx:id="adSevereCheck" layoutX="197.0" layoutY="135.0" mnemonicParsing="false" text="Severe loss (71  90 db)" />
+                  <CheckBox fx:id="adProfoundCheck" layoutX="379.0" layoutY="137.0" mnemonicParsing="false" text="Profound Loss (90 + db)" />
+                  <Separator layoutX="1.0" layoutY="161.0" prefHeight="0.0" prefWidth="579.0" />
+                  <Button fx:id="doneBtn" layoutX="355.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="OK">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="456.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

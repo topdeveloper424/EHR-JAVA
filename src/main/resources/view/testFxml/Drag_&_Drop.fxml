@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.test.controller.DragAndDropController">
+   <children>
+      <TextField fx:id="sourcesTextField" layoutX="58.0" layoutY="248.0" onDragDetected="#dragDetected" onDragDone="#dragDone" />
+      <TextField fx:id="dragAndDropTextfield" layoutX="245.0" layoutY="248.0" onDragDropped="#dragDroped" onDragOver="#dragOver" />
+      <Label layoutX="73.0" layoutY="219.0" text="This is Source Text" />
+      <Label layoutX="378.0" layoutY="211.0" text="Drop Text Here" />
+      <Button fx:id="chooseFileButton" layoutX="133.0" layoutY="172.0" mnemonicParsing="false" text="Choose File" />
+      <StackPane layoutX="7.0" layoutY="6.0" prefHeight="150.0" prefWidth="185.0" styleClass="image">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </StackPane>
+      <TextField fx:id="nameTextField" accessibleText="This is Name Text Field" layoutX="408.0" layoutY="14.0" onMouseClicked="#nameClick" />
+      <TextField fx:id="cityTextField" accessibleText="This is City Text Field" layoutX="415.0" layoutY="49.0" onMouseClicked="#cityClick" />
+      <TextField fx:id="stateTextField" accessibleText="This is State" layoutX="419.0" layoutY="88.0" onMouseClicked="#stateClick" />
+      <TextField fx:id="countryTextField" accessibleText="This is country" layoutX="419.0" layoutY="124.0" onMouseClicked="#countryClick" />
+      <Label layoutX="364.0" layoutY="18.0" text="Name :" />
+      <Label layoutX="364.0" layoutY="53.0" text="City :" />
+      <Label layoutX="371.0" layoutY="92.0" text="State :" />
+      <Label layoutX="366.0" layoutY="128.0" text="Country :" />
+      <Button fx:id="secondPageButton" layoutX="393.0" layoutY="172.0" mnemonicParsing="false" text="Second Page" />
+      <Spinner fx:id="spinerValue" layoutX="180.0" layoutY="341.0" />
+      <Spinner fx:id="spinerInt" layoutX="14.0" layoutY="341.0" />
+      <Spinner fx:id="spinerDouble" layoutX="59.0" layoutY="377.0" />
+      <Spinner fx:id="stringSpiner2" layoutX="89.0" layoutY="292.0" />
+      <TextField fx:id="time1TextField" layoutX="65.0" layoutY="439.0" prefHeight="25.0" prefWidth="124.0" />
+      <TextField fx:id="time2TextField" layoutX="270.0" layoutY="439.0" onKeyPressed="#tabKeyPressed" prefHeight="25.0" prefWidth="98.0" />
+      <Label layoutX="20.0" layoutY="443.0" text="Time1" />
+      <Label layoutX="222.0" layoutY="443.0" text="Time2" />
+      <TextField fx:id="timeResultTextField" layoutX="98.0" layoutY="496.0" prefHeight="25.0" prefWidth="124.0" />
+      <Label layoutX="57.0" layoutY="500.0" text="Result" />
+      <Button fx:id="calculate" layoutX="270.0" layoutY="496.0" mnemonicParsing="false" text="Calculate" />
+      <TableView fx:id="testTable" layoutX="402.0" layoutY="257.0" prefHeight="168.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="col1Collumn" prefWidth="60.0" text="Col1" />
+        </columns>
+      </TableView>
+      <Button fx:id="addCollumn" layoutX="416.0" layoutY="439.0" mnemonicParsing="false" text="Add Collumn" />
+      <Button layoutX="557.0" layoutY="439.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>
+

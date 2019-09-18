@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="737.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.visitLog.VisitLogInputController">
+   <children>
+      <TabPane layoutX="4.0" layoutY="4.0" prefHeight="535.0" prefWidth="609.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="18.0" layoutY="49.0" text="Visit Date :" />
+                        <Label layoutX="18.0" layoutY="80.0" text="Category : " />
+                        <Label layoutX="18.0" layoutY="150.0" text="Type : " />
+                        <Label layoutX="18.0" layoutY="185.0" text="Provider :" />
+                        <Label layoutX="18.0" layoutY="220.0" text="Clinician :" />
+                        <Label layoutX="18.0" layoutY="255.0" prefHeight="39.0" prefWidth="57.0" text="Summary Text :" wrapText="true" />
+                        <Label layoutX="18.0" layoutY="360.0" text="Visit Status :" />
+                        <Label layoutX="18.0" layoutY="393.0" text="Alert Notes for this Patient" />
+                        <Label layoutX="18.0" layoutY="114.0" text="Purpose :" />
+                        <Label layoutX="219.0" layoutY="14.0" text="Arrival Time :" />
+                        <Label layoutX="400.0" layoutY="14.0" text="Start Time :" />
+                        <Label layoutX="400.0" layoutY="50.0" text="Completion Time :" />
+                        <Label layoutX="18.0" layoutY="13.0" text="Visit Type :" />
+                        <Label layoutX="382.0" layoutY="83.0" text="Time in to Provider :" />
+                        <Label layoutX="387.0" layoutY="117.0" text="Provider out Time :" />
+                        <Label layoutX="215.0" layoutY="150.0" text="Means of Arrival :" />
+                        <Label layoutX="360.0" layoutY="187.0" text="Bill Physician :" />
+                        <Label layoutX="373.0" layoutY="222.0" text="Reffered By :" />
+                        <ChoiceBox fx:id="visitTypeChoiceBox" layoutX="90.0" layoutY="9.0" prefHeight="25.0" prefWidth="119.0" />
+                        <DatePicker fx:id="visitDate" layoutX="90.0" layoutY="45.0" prefHeight="25.0" prefWidth="126.0" />
+                        <TextField fx:id="categoryText" layoutX="90.0" layoutY="78.0" prefHeight="25.0" prefWidth="119.0" />
+                        <TextField fx:id="purposeText" layoutX="90.0" layoutY="112.0" prefHeight="25.0" prefWidth="189.0" />
+                        <ChoiceBox fx:id="typeChoiceBox" layoutX="90.0" layoutY="146.0" prefHeight="25.0" prefWidth="114.0" />
+                        <ChoiceBox fx:id="meansOfArrivalChoiceBox" layoutX="311.0" layoutY="146.0" prefHeight="25.0" prefWidth="81.0" />
+                        <TextField fx:id="providerText" layoutX="90.0" layoutY="182.0" prefHeight="25.0" prefWidth="100.0" />
+                        <TextField fx:id="clinicianText" layoutX="90.0" layoutY="217.0" prefHeight="25.0" prefWidth="102.0" />
+                        <TextArea fx:id="summaryText" layoutX="90.0" layoutY="252.0" prefHeight="79.0" prefWidth="480.0" />
+                        <RadioButton fx:id="pendingResultRadioBtn" layoutX="110.0" layoutY="360.0" mnemonicParsing="false" text="Pending Results">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="visitStatus" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="completedRadioBtn" layoutX="219.0" layoutY="360.0" mnemonicParsing="false" text="Completed" toggleGroup="$visitStatus" />
+                        <RadioButton fx:id="walkOutRadioBtn" layoutX="315.0" layoutY="360.0" mnemonicParsing="false" text="Walk-out" toggleGroup="$visitStatus" />
+                        <TextField fx:id="arrivalTimeText" layoutX="293.0" layoutY="10.0" prefHeight="25.0" prefWidth="68.0" />
+                        <TextField fx:id="startTimeText" layoutX="465.0" layoutY="10.0" prefHeight="25.0" prefWidth="69.0" />
+                        <TextField fx:id="complectionTimeText" layoutX="501.0" layoutY="46.0" prefHeight="25.0" prefWidth="59.0" />
+                        <TextField fx:id="providerInTimeText" layoutX="501.0" layoutY="79.0" prefHeight="25.0" prefWidth="59.0" />
+                        <TextField fx:id="providerOutTime" layoutX="501.0" layoutY="113.0" prefHeight="25.0" prefWidth="59.0" />
+                        <TextField fx:id="billingPhysiciansText" layoutX="442.0" layoutY="183.0" prefHeight="25.0" prefWidth="86.0" />
+                        <TextField fx:id="referredByText" layoutX="445.0" layoutY="218.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Button fx:id="visitCategoryBtn" layoutX="213.0" layoutY="79.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="providerBtn" layoutX="194.0" layoutY="183.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="clinicianBtn" layoutX="195.0" layoutY="217.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextArea fx:id="alertNoteText" layoutX="18.0" layoutY="416.0" prefHeight="39.0" prefWidth="558.0" />
+                        <Label fx:id="clinicianLabelText" layoutX="229.0" layoutY="222.0" prefHeight="16.0" prefWidth="137.0" />
+                        <Label fx:id="providerNameLabel" layoutX="230.0" layoutY="186.0" prefHeight="16.0" prefWidth="123.0" />
+                        <Button fx:id="billingPhysiciansBtn" layoutX="533.0" layoutY="183.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="referredByBtn" layoutX="533.0" layoutY="216.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="arrivalTimeBtn" layoutX="364.0" layoutY="10.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="4.0">
+                           <graphic>
+                              <ImageView fitHeight="14.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="completionTimeBtn" layoutX="563.0" layoutY="46.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="providerInTimeBtn" layoutX="564.0" layoutY="80.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="providerOutTimeBtn" layoutX="564.0" layoutY="112.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="startTimeBtn" layoutX="539.0" layoutY="11.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab disable="true" text="Insurance">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab fx:id="billingTabId" disable="true" text="Billing">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="23.0" text="Billing Status :" />
+                        <Label layoutX="133.0" layoutY="23.0" text="Label" />
+                        <Label layoutX="290.0" layoutY="23.0" text="Billing Type :" />
+                        <Label layoutX="381.0" layoutY="23.0" text="Label" />
+                        <Button layoutX="48.0" layoutY="59.0" mnemonicParsing="false" text="Calc Charges" />
+                        <Label layoutX="172.0" layoutY="63.0" text="Visit Charges :" />
+                        <Label layoutX="262.0" layoutY="63.0" text="Label" />
+                        <Label layoutX="367.0" layoutY="63.0" text="Net Reimb" />
+                        <Label layoutX="451.0" layoutY="63.0" text="Label" />
+                        <CheckBox layoutX="48.0" layoutY="98.0" mnemonicParsing="false" text="No Charge Visit" />
+                        <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="122.0" prefHeight="120.0" prefWidth="582.0" text="Page Information">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="15.0" text="Override Payer :" />
+                                    <Label layoutX="10.0" layoutY="49.0" text="Purches Order :" />
+                                    <Label layoutX="285.0" layoutY="14.0" text="Payer Account :" />
+                                    <TextField fx:id="purchaseOrderText" layoutX="108.0" layoutY="45.0" prefHeight="25.0" prefWidth="146.0" />
+                                    <TextField fx:id="payerAccountText" layoutX="379.0" layoutY="12.0" />
+                                    <ChoiceBox fx:id="overridePayerCombo" layoutX="107.0" layoutY="12.0" prefWidth="150.0" />
+                                    <Button fx:id="payerAccountBtn" layoutX="530.0" layoutY="12.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="254.0" prefHeight="157.0" prefWidth="582.0" text="Page Information">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="15.0" text="Authentication #" />
+                                    <Label layoutX="10.0" layoutY="49.0" text="Authenticate By :" />
+                                    <Label layoutX="9.0" layoutY="81.0" text="Authenticate Date : " />
+                                    <TextField fx:id="authenticationByText" layoutX="124.0" layoutY="45.0" prefHeight="25.0" prefWidth="260.0" />
+                                    <TextField fx:id="authenticationPhoneText" layoutX="386.0" layoutY="79.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Label layoutX="274.0" layoutY="82.0" text="Authenticate Phone :" />
+                                    <TextField fx:id="authenticationText" layoutX="125.0" layoutY="12.0" prefHeight="25.0" prefWidth="198.0" />
+                                    <DatePicker fx:id="authenticationDate" layoutX="125.0" layoutY="78.0" prefHeight="25.0" prefWidth="134.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="medicalTabId" closable="false" text="Medical">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="599.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="14.0" prefHeight="361.0" prefWidth="577.0" text="ICD-10 Diagonisis">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="575.0">
+                                 <children>
+                                    <TableView fx:id="icd10Table" layoutX="8.0" layoutY="14.0" prefHeight="248.0" prefWidth="559.0">
+                                      <columns>
+                                        <TableColumn fx:id="MedicalICDColCode" prefWidth="113.0" />
+                                        <TableColumn fx:id="MedicalICDColDescrip" prefWidth="445.0" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="assignedDiagonosisBtn" layoutX="14.0" layoutY="285.0" mnemonicParsing="false" text="Assigned Diagonosis Codes" />
+                                    <Button fx:id="noAssignedBtn" layoutX="189.0" layoutY="285.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="274.0" text="No Assigned ICD-10 codes  (clear all ICD Codes)" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab disable="true" text="Result">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="3.0" layoutY="6.0" prefHeight="469.0" prefWidth="591.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Vitals">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Vitals Date :" />
+                                          <Label layoutX="101.0" layoutY="14.0" text="Label" />
+                                          <Label layoutX="168.0" layoutY="14.0" text="Time :" />
+                                          <Label layoutX="10.0" layoutY="58.0" text="Examiner :" />
+                                          <Label layoutX="318.0" layoutY="12.0" text="Birth Date :" />
+                                          <Label layoutX="493.0" layoutY="15.0" text="Age :" />
+                                          <Label layoutX="362.0" layoutY="59.0" text="Race :" />
+                                          <Label layoutX="356.0" layoutY="97.0" text="Gender :" />
+                                          <TextField layoutX="206.0" layoutY="10.0" prefHeight="25.0" prefWidth="78.0" />
+                                          <TextField layoutX="395.0" layoutY="10.0" prefHeight="25.0" prefWidth="88.0" />
+                                          <Label layoutX="9.0" layoutY="89.0" text="Vital Sign Device :" />
+                                          <TextField layoutX="76.0" layoutY="54.0" />
+                                          <TextField layoutX="120.0" layoutY="85.0" prefHeight="25.0" prefWidth="103.0" />
+                                          <ChoiceBox layoutX="426.0" layoutY="54.0" prefHeight="24.0" prefWidth="129.0" />
+                                          <ChoiceBox layoutX="428.0" layoutY="93.0" prefHeight="24.0" prefWidth="130.0" />
+                                          <TitledPane animated="false" layoutX="11.0" layoutY="156.0" prefHeight="247.0" prefWidth="550.0" text="untitled">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="20.0" layoutY="14.0" text="Height (In) :" />
+                                                      <Label layoutX="20.0" layoutY="54.0" text="Weight ( lb ) :" />
+                                                      <Label layoutX="20.0" layoutY="91.0" text="Temparature (F) :" />
+                                                      <Label layoutX="20.0" layoutY="139.0" text="Blood Pressure :" />
+                                                      <Label layoutX="20.0" layoutY="172.0" text="Patient Position while taking reading :" />
+                                                      <Label layoutX="195.0" layoutY="14.0" text="(Cm :)" />
+                                                      <Label layoutX="195.0" layoutY="54.0" text="Pulse :" />
+                                                      <Label layoutX="195.0" layoutY="91.0" text="Respiration :" />
+                                                      <Label layoutX="195.0" layoutY="131.0" text="Arm Taken From" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Charge Summary">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab disable="true" text="Audit">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane layoutX="624.0" layoutY="4.0" prefHeight="535.0" prefWidth="110.0">
+         <children>
+            <Button fx:id="companyBtn" layoutX="7.0" layoutY="172.0" mnemonicParsing="false" text="Company" />
+            <Button fx:id="demographicsBtn" layoutX="4.0" layoutY="73.0" mnemonicParsing="false" text="Demographics" />
+            <Button layoutX="6.0" layoutY="139.0" mnemonicParsing="false" text="Restrictions" />
+            <Button fx:id="chargesBtn" layoutX="7.0" layoutY="205.0" mnemonicParsing="false" text="Charges" />
+            <Button fx:id="emrChartingBtn" layoutX="4.0" layoutY="40.0" mnemonicParsing="false" text="EMR Charting">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="encounterBtn" layoutX="5.0" layoutY="106.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="93.0" text="Encounter">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/p.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="okButton" layoutX="476.0" layoutY="556.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="567.0" layoutY="556.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

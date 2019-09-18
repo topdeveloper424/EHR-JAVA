@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="607.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.medication.OralInputController">
+   <children>
+      <TextField fx:id="medicationNameTextField" layoutX="123.0" layoutY="11.0" prefHeight="25.0" prefWidth="204.0" />
+      <TextField fx:id="medicationClassTextField" editable="false" layoutX="124.0" layoutY="45.0" prefHeight="25.0" prefWidth="163.0" />
+      <Label layoutX="19.0" layoutY="14.0" text="Medication Name :" />
+      <Label layoutX="19.0" layoutY="51.0" text="Medication Class:" />
+      <Label layoutX="337.0" layoutY="49.0" text="Med Strength :" />
+      <ComboBox fx:id="medStrengthComboBox" layoutX="423.0" layoutY="44.0" prefHeight="25.0" prefWidth="99.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="82.0" prefHeight="375.0" prefWidth="585.0" text="Default Dispensing information and Sig">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="323.0" prefWidth="583.0" stylesheets="@../../../../../css/style.css">
+               <children>
+                  <TextField fx:id="dispenseTextField" layoutX="125.0" layoutY="13.0" prefHeight="25.0" prefWidth="119.0" />
+                  <ComboBox fx:id="fromComboBox" layoutX="307.0" layoutY="11.0" prefHeight="25.0" prefWidth="146.0" />
+                  <TextField fx:id="howMuchTextField" layoutX="125.0" layoutY="47.0" prefHeight="25.0" prefWidth="57.0" />
+                  <TextField fx:id="toTextField" layoutX="236.0" layoutY="47.0" prefHeight="25.0" prefWidth="57.0" />
+                  <ComboBox fx:id="toComboBox" layoutX="306.0" layoutY="47.0" prefHeight="25.0" prefWidth="149.0" />
+                  <ComboBox fx:id="routeComboBox" layoutX="125.0" layoutY="81.0" prefWidth="150.0" />
+                  <ComboBox fx:id="frequencyComboBox" layoutX="125.0" layoutY="116.0" prefWidth="150.0" />
+                  <TextField fx:id="howLongTextField" layoutX="125.0" layoutY="151.0" prefHeight="25.0" prefWidth="57.0" />
+                  <ComboBox fx:id="howLongComboBox" layoutX="201.0" layoutY="150.0" prefWidth="150.0" />
+                  <ComboBox fx:id="specialComboBox" layoutX="125.0" layoutY="185.0" prefWidth="150.0" />
+                  <TextArea fx:id="instructionTextArea" layoutX="125.0" layoutY="221.0" prefHeight="43.0" prefWidth="347.0" />
+                  <Label layoutX="18.0" layoutY="18.0" text="Dispense Qty :" />
+                  <Label layoutX="254.0" layoutY="16.0" text="From:" />
+                  <Label layoutX="18.0" layoutY="51.0" text="Take How Much:" />
+                  <Label layoutX="197.0" layoutY="51.0" text="To:" />
+                  <Label layoutX="18.0" layoutY="84.0" text="Route :" />
+                  <Label layoutX="18.0" layoutY="121.0" text="Frequency :" />
+                  <Label layoutX="18.0" layoutY="156.0" text="For How Long:" />
+                  <Label layoutX="18.0" layoutY="190.0" text="Special :" />
+                  <Label layoutX="18.0" layoutY="223.0" prefHeight="38.0" prefWidth="88.0" text="Additional Sig Instructions:" wrapText="true" />
+                  <TextArea fx:id="allergyTextArea" layoutX="126.0" layoutY="277.0" prefHeight="43.0" prefWidth="347.0" wrapText="true" />
+                  <Label layoutX="19.0" layoutY="281.0" prefHeight="25.0" prefWidth="66.0" text="Allergies :" wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="okButton" layoutX="384.0" layoutY="465.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancleButton" layoutX="476.0" layoutY="465.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

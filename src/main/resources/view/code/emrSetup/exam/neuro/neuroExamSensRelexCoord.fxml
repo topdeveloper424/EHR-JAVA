@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.neuro.sensReflexCoord.ReflexesSensCoordInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="2.0" layoutY="6.0" prefHeight="659.0" prefWidth="1086.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="640.0" prefWidth="1081.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="40.0" prefHeight="0.0" prefWidth="1127.0" />
+                  <Label layoutX="9.0" layoutY="4.0" text="Deep Tendon Reflexes" />
+                  <Label layoutX="8.0" layoutY="52.0" prefHeight="14.0" prefWidth="104.0" text="Reflex Locations" />
+                  <Separator layoutX="149.0" layoutY="1.0" orientation="VERTICAL" prefHeight="570.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="850.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="951.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="7.0" layoutY="75.0" prefHeight="0.0" prefWidth="1074.0" />
+                  <Separator layoutX="-1.0" layoutY="195.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <Separator layoutX="4.0" layoutY="230.0" prefHeight="0.0" prefWidth="1076.0" />
+                  <Label layoutX="4.0" layoutY="239.0" text="Type of simulation" />
+                  <Label layoutX="2.0" layoutY="89.0" prefHeight="20.0" prefWidth="147.0" text="Abnormalities" />
+                  <CheckBox fx:id="reflexBiceps" layoutX="230.0" layoutY="45.0" mnemonicParsing="false" text="biceps" />
+                  <CheckBox fx:id="reflexAnkle" layoutX="945.0" layoutY="49.0" mnemonicParsing="false" text="ankle" />
+                  <CheckBox fx:id="reflexTriceps" layoutX="391.0" layoutY="47.0" mnemonicParsing="false" text="triceps" />
+                  <CheckBox fx:id="reflexBrachioradialis" layoutX="575.0" layoutY="48.0" mnemonicParsing="false" text="brachioradialis" />
+                  <Separator layoutX="-2.0" layoutY="156.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <Separator layoutX="-1.0" layoutY="270.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <Label layoutX="2.0" layoutY="166.0" prefHeight="14.0" prefWidth="101.0" text="Babinski Responses" />
+                  <CheckBox fx:id="babinskiFlexor" layoutX="230.0" layoutY="163.0" mnemonicParsing="false" text="flexor" />
+                  <CheckBox fx:id="babinskiExtensor" layoutX="391.0" layoutY="163.0" mnemonicParsing="false" text="extensor" />
+                  <CheckBox fx:id="babinskiEquivocal" layoutX="575.0" layoutY="164.0" mnemonicParsing="false" text="equivocal" />
+                  <CheckBox fx:id="sensationintact" layoutX="230.0" layoutY="200.0" mnemonicParsing="false" text="intact" />
+                  <CheckBox fx:id="pinprick" layoutX="391.0" layoutY="235.0" mnemonicParsing="false" text="pinprick" />
+                  <CheckBox fx:id="vibration" layoutX="575.0" layoutY="234.0" mnemonicParsing="false" text="vibration" />
+                  <Label layoutX="3.0" layoutY="280.0" prefHeight="16.0" prefWidth="107.0" text="Body Areas" />
+                  <CheckBox fx:id="face" layoutX="230.0" layoutY="271.0" mnemonicParsing="false" text="face" />
+                  <CheckBox fx:id="bodyLeftHand" layoutX="759.0" layoutY="278.0" mnemonicParsing="false" text="left hand" />
+                  <CheckBox fx:id="deep0" layoutX="230.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="41.0" text="0" />
+                  <Separator layoutY="328.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <Label layoutX="3.0" layoutY="337.0" prefHeight="16.0" prefWidth="122.0" text="Romberg Test" />
+                  <Separator layoutX="4.0" layoutY="365.0" prefHeight="0.0" prefWidth="1075.0" />
+                  <Label layoutX="9.0" layoutY="373.0" prefHeight="0.0" prefWidth="101.0" text="Tandem Gait" />
+                  <Separator layoutX="-10.0" layoutY="403.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <Label layoutX="9.0" layoutY="411.0" prefHeight="16.0" prefWidth="119.0" text="Finger to nose- Left" />
+                  <Label layoutX="4.0" layoutY="447.0" prefHeight="12.0" prefWidth="128.0" text="Finger to nose-Right" />
+                  <Separator layoutX="-2.0" layoutY="436.0" prefHeight="2.0" prefWidth="1083.0" />
+                  <Separator layoutX="2.0" layoutY="473.0" prefHeight="3.0" prefWidth="1076.0" />
+                  <Label layoutX="5.0" layoutY="208.0" prefHeight="16.0" prefWidth="138.0" text="sensation" />
+                  <Separator layoutX="2.0" layoutY="570.0" prefHeight="0.0" prefWidth="1083.0" />
+                  <CheckBox fx:id="LightTorch" layoutX="230.0" layoutY="233.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="light torch" />
+                  <CheckBox fx:id="abnormalLeft" layoutX="230.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="left" />
+                  <CheckBox fx:id="sensationNormal" layoutX="152.0" layoutY="199.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <CheckBox fx:id="BodyleftUpperArm" layoutX="230.0" layoutY="292.0" mnemonicParsing="false" text="left upper arm" />
+                  <CheckBox fx:id="rombergNormal" layoutX="155.0" layoutY="335.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <CheckBox fx:id="tandemNormal" layoutX="155.0" layoutY="376.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <CheckBox fx:id="deepNormal" layoutX="152.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <CheckBox fx:id="deep1" layoutX="391.0" layoutY="6.0" mnemonicParsing="false" text="1+" />
+                  <CheckBox fx:id="deep2" layoutX="575.0" layoutY="9.0" mnemonicParsing="false" text="2+" />
+                  <CheckBox fx:id="deep3" layoutX="759.0" layoutY="9.0" mnemonicParsing="false" text="3+" />
+                  <CheckBox fx:id="deep4" layoutX="945.0" layoutY="10.0" mnemonicParsing="false" text="4+" />
+                  <CheckBox fx:id="reflexKnee" layoutX="759.0" layoutY="48.0" mnemonicParsing="false" text="knee" />
+                  <CheckBox fx:id="abnormalRight" layoutX="391.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="right" />
+                  <CheckBox fx:id="abnormal0" layoutX="575.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="0+" />
+                  <CheckBox fx:id="abnormal1" layoutX="759.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="1+" />
+                  <CheckBox fx:id="abnormal2" layoutX="945.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="2+" />
+                  <CheckBox fx:id="abnormal3" layoutX="230.0" layoutY="102.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="3+" />
+                  <CheckBox fx:id="abnormal4" layoutX="391.0" layoutY="102.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="4+" />
+                  <CheckBox fx:id="abnormalBiceps" layoutX="575.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="biceps" />
+                  <CheckBox fx:id="abnormalTriceps" layoutX="759.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="triceps" />
+                  <CheckBox fx:id="abnormalBrachioradialis" layoutX="945.0" layoutY="101.0" mnemonicParsing="false" text="brachioradialis" />
+                  <CheckBox fx:id="abnormalKnee" layoutX="230.0" layoutY="126.0" mnemonicParsing="false" text="knee" />
+                  <CheckBox fx:id="abnormalAnkle" layoutX="391.0" layoutY="124.0" mnemonicParsing="false" text="ankle" />
+                  <CheckBox fx:id="babinskiRight" layoutX="759.0" layoutY="163.0" mnemonicParsing="false" text="right" />
+                  <CheckBox fx:id="babinskiLeft" layoutX="945.0" layoutY="164.0" mnemonicParsing="false" text="left" />
+                  <CheckBox fx:id="sensationIntactExceptDecreased" layoutX="391.0" layoutY="200.0" mnemonicParsing="false" text="intact except for decreased" />
+                  <CheckBox fx:id="sensationIntactExceptAbsent" layoutX="575.0" layoutY="201.0" mnemonicParsing="false" text="intact except for absent" />
+                  <CheckBox fx:id="bodyRightForearm" layoutX="391.0" layoutY="272.0" mnemonicParsing="false" text="right forearm" />
+                  <CheckBox fx:id="bodyForehead" layoutX="391.0" layoutY="292.0" mnemonicParsing="false" text="forehead" />
+                  <CheckBox fx:id="bodyLeftleg" layoutX="575.0" layoutY="272.0" mnemonicParsing="false" text="left leg" />
+                  <CheckBox fx:id="bodyRightUpperArm" layoutX="575.0" layoutY="296.0" mnemonicParsing="false" text="rigth upper arm" />
+                  <CheckBox fx:id="bodyLeftFoot" layoutX="759.0" layoutY="301.0" mnemonicParsing="false" text="left foot" />
+                  <CheckBox fx:id="bodyRightLeg" layoutX="945.0" layoutY="278.0" mnemonicParsing="false" text="right leg" />
+                  <CheckBox fx:id="bodyLeftForearm" layoutX="945.0" layoutY="299.0" mnemonicParsing="false" text="left forearm" />
+                  <CheckBox fx:id="bodyRightHand" layoutX="230.0" layoutY="311.0" mnemonicParsing="false" text="right hand" />
+                  <CheckBox fx:id="bodyrightFoot" layoutX="391.0" layoutY="311.0" mnemonicParsing="false" text="right foot" />
+                  <RadioButton fx:id="rombergNegativeRadio" layoutX="230.0" layoutY="337.0" mnemonicParsing="false" text="negative" />
+                  <RadioButton fx:id="rombergPositiveRadio" layoutX="391.0" layoutY="336.0" mnemonicParsing="false" text="positive" />
+                  <RadioButton fx:id="rombergGrosslyPositiveRadio" layoutX="575.0" layoutY="336.0" mnemonicParsing="false" text="grossly positive" />
+                  <RadioButton fx:id="tandemNormalRadio" layoutX="230.0" layoutY="377.0" mnemonicParsing="false" text="normal" />
+                  <RadioButton fx:id="tandemDecreasedRadio" layoutX="391.0" layoutY="377.0" mnemonicParsing="false" text="decreased" />
+                  <RadioButton fx:id="tandemGrosslyDecreasedRadio" layoutX="575.0" layoutY="379.0" mnemonicParsing="false" text="grossly decreased" />
+                  <CheckBox fx:id="fingerRightNormal" layoutX="155.0" layoutY="410.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <RadioButton fx:id="fingerLefttNormalRadio" layoutX="230.0" layoutY="411.0" mnemonicParsing="false" text="normal" />
+                  <RadioButton fx:id="fingerLeftDecreasedRadio" layoutX="391.0" layoutY="411.0" mnemonicParsing="false" text="decreased" />
+                  <RadioButton fx:id="fingerLeftpasRadio" layoutX="575.0" layoutY="411.0" mnemonicParsing="false" text="past pointing" />
+                  <RadioButton fx:id="FingerRightNormal" layoutX="230.0" layoutY="447.0" mnemonicParsing="false" text="normal" />
+                  <RadioButton fx:id="FingerRightDecreasedRadio" layoutX="391.0" layoutY="447.0" mnemonicParsing="false" text="decreased" />
+                  <RadioButton fx:id="FingerRightPastRadio" layoutX="575.0" layoutY="447.0" mnemonicParsing="false" text="past pointing" />
+                  <Label layoutX="5.0" layoutY="485.0" prefHeight="12.0" prefWidth="128.0" text="Heel/Knee/Shin" />
+                  <CheckBox fx:id="heelNormal" layoutX="155.0" layoutY="484.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <RadioButton fx:id="heelBilateralNormalRadio" layoutX="230.0" layoutY="485.0" mnemonicParsing="false" text="bilaterally normal" />
+                  <RadioButton fx:id="heelDecreasedLeftRadio" layoutX="230.0" layoutY="505.0" mnemonicParsing="false" text="decreased left" />
+                  <RadioButton fx:id="heelDecreasedBilaterallyRadio" layoutX="391.0" layoutY="485.0" mnemonicParsing="false" text="decreased bilaterally" />
+                  <RadioButton fx:id="heelDecreasedRightRadio" layoutX="945.0" layoutY="485.0" mnemonicParsing="false" text="decreased right" />
+                  <RadioButton fx:id="heelNormalLeftRadio" layoutX="575.0" layoutY="485.0" mnemonicParsing="false" text="normal left" />
+                  <RadioButton fx:id="heelNormalRightRadio" layoutX="759.0" layoutY="485.0" mnemonicParsing="false" text="normal right" />
+                  <CheckBox fx:id="dysdiadoNormal" layoutX="155.0" layoutY="538.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="67.0" text="Normal" />
+                  <RadioButton fx:id="dysdiadoNotNoted" layoutX="230.0" layoutY="541.0" mnemonicParsing="false" text="not noted" />
+                  <RadioButton fx:id="dysdiadoNoted" layoutX="391.0" layoutY="538.0" mnemonicParsing="false" text=" noted" />
+                  <Separator layoutX="-2.0" layoutY="529.0" prefHeight="0.0" prefWidth="1095.0" />
+                  <Label layoutX="4.0" layoutY="539.0" prefHeight="12.0" prefWidth="128.0" text="Dysdiadochokinnesis" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

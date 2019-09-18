@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="423.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.staffSchedule.StaffScheduleViewController">
+   <children>
+      <TextField fx:id="nameTextField" editable="false" layoutX="119.0" layoutY="14.0" />
+      <TextField fx:id="typeTextield" editable="false" layoutX="119.0" layoutY="52.0" />
+      <TextField fx:id="idTextField" layoutX="289.0" layoutY="17.0" prefHeight="25.0" prefWidth="84.0" visible="false" />
+      <Button fx:id="scheduleButton" layoutX="119.0" layoutY="104.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Schedule" />
+      <Button fx:id="providerButton" layoutX="226.0" layoutY="104.0" mnemonicParsing="false" text="Provider" />
+      <Button fx:id="closeButton" layoutX="313.0" layoutY="104.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="22.0" layoutY="18.0" text="Provider Name :" />
+      <Label layoutX="64.0" layoutY="57.0" text="Type :" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="690.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.pulmonaryFunction.EnterNewPulomanoryfunctionParametersController">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="510.0" prefWidth="690.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="452.0" prefWidth="680.0">
+                     <children>
+                        <Label layoutX="62.0" layoutY="57.0" text="Method For calculating Predicted Values:" />
+                        <Label layoutX="62.0" layoutY="123.0" text="Race Correction Percentage" />
+                        <Label layoutX="309.0" layoutY="123.0" text="Asian" />
+                        <Label layoutX="309.0" layoutY="162.0" text="Black" />
+                        <Label layoutX="309.0" layoutY="201.0" text="Hispanic" />
+                        <TextField fx:id="asiantext" layoutX="498.0" layoutY="119.0" prefHeight="25.0" prefWidth="107.0" />
+                        <TextField fx:id="blackText" layoutX="496.0" layoutY="158.0" prefHeight="25.0" prefWidth="109.0" />
+                        <TextField fx:id="hispanicText" layoutX="500.0" layoutY="197.0" prefHeight="25.0" prefWidth="105.0" />
+                        <ComboBox fx:id="methodForCalculatingPredictedValuesChoicebox" layoutX="425.0" layoutY="53.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Classifications">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="680.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="18.0" prefHeight="17.0" prefWidth="90.0" text="FVC Class" />
+                        <Label layoutX="143.0" layoutY="18.0" text="Best" />
+                        <Label layoutX="212.0" layoutY="116.0" text="Worst" />
+                        <Label layoutX="29.0" layoutY="222.0" prefHeight="17.0" prefWidth="55.0" text="FEVI Class" />
+                        <Label layoutX="463.0" layoutY="26.0" text="Thru" />
+                        <Label layoutX="566.0" layoutY="26.0" text="From" />
+                        <TextField fx:id="FVCnoObstrictiveDiseaseFirstText" layoutX="271.0" layoutY="49.0" />
+                        <TextField fx:id="FVCthruFirstText" layoutX="449.0" layoutY="49.0" prefHeight="25.0" prefWidth="55.0" />
+                        <TextField fx:id="FVCfromFirstText" layoutX="547.0" layoutY="48.0" prefHeight="25.0" prefWidth="56.0" />
+                        <TextField fx:id="FVCnoObstrictiveDiseaseSecondText" layoutX="271.0" layoutY="81.0" />
+                        <TextField fx:id="FVCthruSecondText" layoutX="449.0" layoutY="81.0" prefHeight="25.0" prefWidth="55.0" />
+                        <TextField fx:id="FVCfromSecondText" layoutX="547.0" layoutY="81.0" prefHeight="25.0" prefWidth="57.0" />
+                        <TextField fx:id="FVCnoObstrictiveDiseaseThirdText" layoutX="271.0" layoutY="112.0" />
+                        <TextField fx:id="FVCthruThirdText" layoutX="449.0" layoutY="112.0" prefHeight="25.0" prefWidth="55.0" />
+                        <TextField fx:id="FVCfromThirdText" layoutX="549.0" layoutY="112.0" prefHeight="25.0" prefWidth="55.0" />
+                        <TextField fx:id="FEVInoObstrictiveDiseaseFirstText" layoutX="279.0" layoutY="255.0" />
+                        <TextField fx:id="FEVIthruFirstText" layoutX="455.0" layoutY="255.0" prefHeight="25.0" prefWidth="55.0" />
+                        <TextField fx:id="FEVIfromFirstText" layoutX="549.0" layoutY="255.0" prefHeight="25.0" prefWidth="55.0" />
+                        <TextField fx:id="FEVInoObstrictiveDiseaseSecondText" layoutX="279.0" layoutY="289.0" />
+                        <TextField fx:id="FEVIthruSecondText" layoutX="455.0" layoutY="289.0" prefHeight="25.0" prefWidth="54.0" />
+                        <TextField fx:id="FEVIfromSecondText" layoutX="549.0" layoutY="289.0" prefHeight="25.0" prefWidth="55.0" />
+                        <Label layoutX="209.0" layoutY="329.0" text="Worst" />
+                        <TextField fx:id="FEVInoObstrictiveDiseaseThirdText" layoutX="279.0" layoutY="325.0" />
+                        <TextField fx:id="FEVIthruThirdText" layoutX="455.0" layoutY="325.0" prefHeight="25.0" prefWidth="53.0" />
+                        <TextField fx:id="FEVIfromThirdText" layoutX="549.0" layoutY="325.0" prefHeight="25.0" prefWidth="55.0" />
+                        <Label layoutX="215.0" layoutY="18.0" text="No Obstrictive Disease" />
+                        <Label layoutX="141.0" layoutY="223.0" text="Best" />
+                        <Label layoutX="214.0" layoutY="222.0" prefHeight="17.0" prefWidth="131.0" text="No Obstrictive Disease" />
+                        <Label layoutX="51.0" layoutY="396.0" text="Result Code For Normal" />
+                        <TextField fx:id="resultCodeForNormalText" layoutX="186.0" layoutY="391.0" prefHeight="25.0" prefWidth="42.0" />
+                        <TextField fx:id="midText" layoutX="279.0" layoutY="391.0" prefHeight="25.0" prefWidth="42.0" />
+                        <TextField fx:id="modText" layoutX="375.0" layoutY="391.0" prefHeight="25.0" prefWidth="38.0" />
+                        <TextField fx:id="worstText" layoutX="482.0" layoutY="391.0" prefHeight="25.0" prefWidth="35.0" />
+                        <Label layoutX="253.0" layoutY="396.0" text="Mid" />
+                        <Label layoutX="341.0" layoutY="396.0" text="Mod" />
+                        <Label layoutX="439.0" layoutY="395.0" text="Worst" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Respirator Clearance">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="109.0" layoutY="30.0" text="NIOSH &amp; ANSI  Respirator Classification" />
+                        <Label layoutX="52.0" layoutY="78.0" text="Level I" />
+                        <Label layoutX="52.0" layoutY="122.0" text="Level II" />
+                        <Label layoutX="52.0" layoutY="169.0" text="Level III" />
+                        <Label layoutX="52.0" layoutY="216.0" text="Level IV" />
+                        <TextField fx:id="firstLevelText" layoutX="143.0" layoutY="74.0" />
+                        <TextField fx:id="FEVIpercentageFirstText" layoutX="522.0" layoutY="74.0" prefHeight="25.0" prefWidth="34.0" />
+                        <TextField fx:id="FVCpercentageFirstText" layoutX="582.0" layoutY="74.0" prefHeight="25.0" prefWidth="38.0" />
+                        <TextField fx:id="secondLevelText" layoutX="143.0" layoutY="118.0" />
+                        <TextField fx:id="FEVIpercentageSecondText" layoutX="519.0" layoutY="118.0" prefHeight="25.0" prefWidth="37.0" />
+                        <TextField fx:id="FVCpercentageSecondText" layoutX="580.0" layoutY="118.0" prefHeight="25.0" prefWidth="42.0" />
+                        <TextField fx:id="thirdLevelText" layoutX="143.0" layoutY="165.0" />
+                        <TextField fx:id="FEVIpercentageThirdText" layoutX="520.0" layoutY="165.0" prefHeight="25.0" prefWidth="36.0" />
+                        <TextField fx:id="FVCpercentageThirdText" layoutX="581.0" layoutY="165.0" prefHeight="25.0" prefWidth="40.0" />
+                        <TextField fx:id="fourthLevelText" layoutX="143.0" layoutY="212.0" />
+                        <TextField fx:id="FEVIpercentageFourthText" layoutX="522.0" layoutY="212.0" prefHeight="25.0" prefWidth="34.0" />
+                        <TextField fx:id="FVCpercentageFourthText" layoutX="581.0" layoutY="212.0" prefHeight="25.0" prefWidth="40.0" />
+                        <Label layoutX="521.0" layoutY="30.0" text="Minimum" />
+                        <Label layoutX="521.0" layoutY="57.0" text="FEVI%   &amp;" />
+                        <Label layoutX="585.0" layoutY="57.0" text="FVC%" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab disable="true" text="Surveillance">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="317.0" layoutY="14.0" text="Default Survallance Code" />
+                        <Label layoutX="50.0" layoutY="61.0" prefHeight="17.0" prefWidth="252.0" text="Default Medical Activity Code for Function Test:" />
+                        <Label layoutX="69.0" layoutY="78.0" prefHeight="17.0" prefWidth="242.0" text="(Required for automatic survallance tracking" />
+                        <Label layoutX="46.0" layoutY="126.0" prefHeight="17.0" prefWidth="301.0" text="Default visit catagory code for Automating Visit logging" />
+                        <Label layoutX="91.0" layoutY="143.0" text="(Leave blank for Automating Visit logging)" />
+                        <TextField layoutX="367.0" layoutY="57.0" prefHeight="25.0" prefWidth="99.0" />
+                        <Button fx:id="medicalActivityBtn" layoutX="471.0" layoutY="57.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/insert_document_icon.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField layoutX="369.0" layoutY="122.0" prefHeight="25.0" prefWidth="97.0" />
+                        <Button fx:id="visitCategoryBtn" layoutX="469.0" layoutY="121.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="39.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/insert_document_icon.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="spirometerEquipmentBtn" layoutX="14.0" layoutY="527.0" mnemonicParsing="false" text="Spriometer equipment" />
+      <Button fx:id="okBtn" layoutX="440.0" layoutY="527.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Ok">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="close" layoutX="554.0" layoutY="527.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

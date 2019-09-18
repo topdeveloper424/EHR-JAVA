@@ -1,0 +1,32 @@
+/* HBox CSS Start */
+ 
+.hbox {
+    -fx-background-color: #d6d6d6;
+    -fx-padding: 0;
+    -fx-spacing: 0;
+    -fx-border-style: solid;
+                -fx-border-width: 1;
+                -fx-border-color: black;
+}
+ 
+ /* HBox CSS End */
+ 
+   /* VBox CSS Start */
+ 
+.vbox {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-padding: 10;
+    -fx-spacing: 8;
+}
+
+ 
+ /* VBox CSS End */
+ 
+ 
+  Label {
+    -fx-font-size: 12px;
+    -fx-font-weight: lighter;
+    -fx-background-radius: 0, 0, 0;
+    -fx-font: bold 11px System;
+}

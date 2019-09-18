@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="454.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.StressTestResultInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="5.0" prefHeight="145.0" prefWidth="443.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="17.0" text="Cardiac Stress Test Result" />
+                  <Separator layoutX="146.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="73.0" prefWidth="11.0" />
+                  <Separator layoutX="-2.0" layoutY="67.0" prefHeight="0.0" prefWidth="443.0" />
+                  <Button fx:id="okbtn" layoutX="214.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="OK">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="315.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="normalRadio" layoutX="196.0" layoutY="17.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="car" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="abnormalRadio" layoutX="331.0" layoutY="17.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$car" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

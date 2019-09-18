@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.chest.ChestExamComprehensiveInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="335.0" prefWidth="707.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="151.0" layoutY="1.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="439.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="557.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-5.0" layoutY="237.0" prefHeight="0.0" prefWidth="834.0" />
+                  <Separator layoutX="5.0" layoutY="80.0" prefHeight="0.0" prefWidth="828.0" />
+                  <Separator layoutX="6.0" layoutY="136.0" prefHeight="0.0" prefWidth="828.0" />
+                  <Label layoutX="10.0" layoutY="14.0" text="Rib Movement" />
+                  <CheckBox fx:id="ribSplintingRight" layoutX="276.0" layoutY="28.0" mnemonicParsing="false" text="splinting right" />
+                  <CheckBox fx:id="ribParadoxicalRight" layoutX="276.0" layoutY="50.0" mnemonicParsing="false" text="paradoxical movement right" />
+                  <CheckBox fx:id="ribSplintingLeft" layoutX="493.0" layoutY="6.0" mnemonicParsing="false" text="splinting left" />
+                  <CheckBox fx:id="ribParadoxicalLeft" layoutX="493.0" layoutY="28.0" mnemonicParsing="false" text="paradoxical movement left" />
+                  <CheckBox fx:id="ribSymmetrical" layoutX="276.0" layoutY="6.0" mnemonicParsing="false" text="symmetrical movement" />
+                  <Label layoutX="6.0" layoutY="85.0" text="Other Chest Abnormalities" />
+                  <CheckBox fx:id="OtherEcchymosis" layoutX="276.0" layoutY="114.0" mnemonicParsing="false" text="ecchymosis" />
+                  <CheckBox fx:id="OtherAbrasions" layoutX="493.0" layoutY="85.0" mnemonicParsing="false" text="abrasions" />
+                  <CheckBox fx:id="OtherLacerations" layoutX="493.0" layoutY="114.0" mnemonicParsing="false" text="lacerations" />
+                  <CheckBox fx:id="otherNo" layoutX="276.0" layoutY="89.0" mnemonicParsing="false" text="no other abnormalities" />
+                  <Label layoutX="10.0" layoutY="152.0" prefHeight="15.0" prefWidth="139.0" text="Location of Abnormalities" />
+                  <CheckBox fx:id="LocationAnterior" layoutX="276.0" layoutY="169.0" mnemonicParsing="false" text="anterior" />
+                  <CheckBox fx:id="LocationPosterior" layoutX="493.0" layoutY="168.0" mnemonicParsing="false" text="posterior" />
+                  <CheckBox fx:id="locationLeft" layoutX="276.0" layoutY="147.0" mnemonicParsing="false" text="left" />
+                  <CheckBox fx:id="LocationRight" layoutX="493.0" layoutY="146.0" mnemonicParsing="false" text="right" />
+                  <CheckBox fx:id="ribNormal" layoutX="168.0" layoutY="13.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="otherNormal" layoutX="168.0" layoutY="85.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-2.0" layoutY="187.0" prefHeight="4.0" prefWidth="707.0" />
+                  <Label layoutX="11.0" layoutY="196.0" prefHeight="15.0" prefWidth="139.0" text="Location of Abnormalities" />
+                  <CheckBox fx:id="LocationParaspinous" layoutX="277.0" layoutY="213.0" mnemonicParsing="false" text="paraspinous area" />
+                  <CheckBox fx:id="LocationAxillary" layoutX="277.0" layoutY="191.0" mnemonicParsing="false" text="axillary line" />
+                  <CheckBox fx:id="LocationCostochondral" layoutX="494.0" layoutY="190.0" mnemonicParsing="false" text="costochondral junction" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../css/style.css" />
+      <URL value="@../../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

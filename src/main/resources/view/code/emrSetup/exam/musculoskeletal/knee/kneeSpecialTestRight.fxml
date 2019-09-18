@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="448.0" stylesheets="@../../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.knee.KneeSpecialTestRightInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="383.0" prefWidth="436.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="134.0" orientation="VERTICAL" prefHeight="307.0" prefWidth="11.0" />
+                  <Button fx:id="doneBtn" layoutX="203.0" layoutY="317.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="303.0" layoutY="319.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="22.0" layoutY="4.0" text="Apley's Compression" />
+                  <Separator layoutX="-2.0" layoutY="29.0" prefHeight="0.0" prefWidth="442.0" />
+                  <RadioButton fx:id="AnteriornegativeRadio" layoutX="158.0" layoutY="4.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Anterior" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="AnteriorpossitiveRadio" layoutX="280.0" layoutY="5.0" mnemonicParsing="false" text="possitive" toggleGroup="$Anterior" />
+                  <Label layoutX="24.0" layoutY="36.0" text="Apley's Distruction" />
+                  <RadioButton fx:id="ApleyNegativeRadio" layoutX="158.0" layoutY="34.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Apley" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="ApleypossitiveRadio" layoutX="280.0" layoutY="36.0" mnemonicParsing="false" text="possitive" toggleGroup="$Apley" />
+                  <Separator layoutX="1.0" layoutY="56.0" prefHeight="0.0" prefWidth="442.0" />
+                  <Label layoutX="24.0" layoutY="63.0" text="Apprehension" />
+                  <RadioButton fx:id="ApprehensionnegativeRadio" layoutX="158.0" layoutY="62.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Apprehensio" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="ApprehensionpossitiveRadio" layoutX="280.0" layoutY="61.0" mnemonicParsing="false" text="possitive" toggleGroup="$Apprehensio" />
+                  <Label layoutX="12.0" layoutY="87.0" text="Drawer (Anterior) Sign" />
+                  <Separator layoutX="1.0" layoutY="112.0" prefHeight="0.0" prefWidth="442.0" />
+                  <RadioButton fx:id="CrossnegativeRadio" layoutX="158.0" layoutY="87.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Cross" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="CrosspossitiveRadio" layoutX="280.0" layoutY="88.0" mnemonicParsing="false" text="possitive" toggleGroup="$Cross" />
+                  <Label layoutX="11.0" layoutY="119.0" text="Drawer (Posterior) Sign" />
+                  <RadioButton fx:id="DropnegativeRadio" layoutX="158.0" layoutY="117.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Drop" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="DroppossitiveRadio" layoutX="280.0" layoutY="119.0" mnemonicParsing="false" text="possitive" toggleGroup="$Drop" />
+                  <Separator layoutX="4.0" layoutY="139.0" prefHeight="0.0" prefWidth="442.0" />
+                  <Label layoutX="27.0" layoutY="146.0" text="Duck Walk" />
+                  <RadioButton fx:id="EmptynegativeRadio" layoutX="158.0" layoutY="145.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Empty" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="EmptypossitiveRadio" layoutX="280.0" layoutY="144.0" mnemonicParsing="false" text="possitive" toggleGroup="$Empty" />
+                  <Separator layoutX="-1.0" layoutY="83.0" prefHeight="0.0" prefWidth="442.0" />
+                  <Separator layoutY="165.0" prefHeight="0.0" prefWidth="442.0" />
+                  <Label layoutX="20.0" layoutY="171.0" text="Flick Test" />
+                  <Separator layoutX="-4.0" layoutY="196.0" prefHeight="0.0" prefWidth="442.0" />
+                  <RadioButton fx:id="HawkinsnegativeRadio" layoutX="158.0" layoutY="171.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Hawkins" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="HawkinspossitiveRadio" layoutX="280.0" layoutY="172.0" mnemonicParsing="false" text="possitive" toggleGroup="$Hawkins" />
+                  <Label layoutX="22.0" layoutY="203.0" text="Lachman's Test" />
+                  <RadioButton fx:id="NeernegativeRadio" layoutX="158.0" layoutY="201.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Neers" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="NeerpossitiveRadio" layoutX="280.0" layoutY="203.0" mnemonicParsing="false" text="possitive" toggleGroup="$Neers" />
+                  <Separator layoutX="-1.0" layoutY="223.0" prefHeight="0.0" prefWidth="442.0" />
+                  <Label layoutX="22.0" layoutY="230.0" text="McMurry Test" />
+                  <RadioButton fx:id="BriennegativeRadio" layoutX="158.0" layoutY="229.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="brien" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="BrienpossitiveRadio" layoutX="280.0" layoutY="228.0" mnemonicParsing="false" text="possitive" toggleGroup="$brien" />
+                  <Label layoutX="23.0" layoutY="254.0" text="Valgus Stress" />
+                  <Separator layoutX="-1.0" layoutY="279.0" prefHeight="0.0" prefWidth="442.0" />
+                  <RadioButton fx:id="RelocationnegativeRadio" layoutX="158.0" layoutY="254.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Relocation" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="RelocationpossitiveRadio" layoutX="280.0" layoutY="255.0" mnemonicParsing="false" text="possitive" toggleGroup="$Relocation" />
+                  <Label layoutX="25.0" layoutY="286.0" text="Varus Stress" />
+                  <RadioButton fx:id="SpeedsnegativeRadio" layoutX="158.0" layoutY="284.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Speeds" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="SpeedspossitiveRadio" layoutX="280.0" layoutY="286.0" mnemonicParsing="false" text="possitive" toggleGroup="$Speeds" />
+                  <Separator layoutX="2.0" layoutY="306.0" prefHeight="0.0" prefWidth="442.0" />
+                  <Separator layoutX="-3.0" layoutY="250.0" prefHeight="0.0" prefWidth="442.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

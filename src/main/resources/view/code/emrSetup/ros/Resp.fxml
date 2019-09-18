@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.ros.resp.RosRespInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="435.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="384.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <RadioButton fx:id="deniesRadio" layoutX="205.0" layoutY="14.0" mnemonicParsing="false" text="Denies All Respiratory" />
+                                    <RadioButton fx:id="chronicRadio" layoutX="205.0" layoutY="41.0" mnemonicParsing="false" text="Chronic cough">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="blurred" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="bloodRadio" layoutX="205.0" layoutY="69.0" mnemonicParsing="false" text="coughing up blood">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="cataracts" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="coughingUpPhlegmRadio" layoutX="205.0" layoutY="96.0" mnemonicParsing="false" text="coughing up phlegm" />
+                                    <RadioButton fx:id="historyOfAsthmaRadio" layoutX="205.0" layoutY="124.0" mnemonicParsing="false" text="history of asthma">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="excessive" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="historyOfpneumoniaRadio" layoutX="205.0" layoutY="152.0" mnemonicParsing="false" text="history of pneumonia">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="eye" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="historyOfTuberculosisRadio" layoutX="205.0" layoutY="181.0" mnemonicParsing="false" text="history of tuberculosis">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="flashing" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="nightSweatsRadio" layoutX="205.0" layoutY="207.0" mnemonicParsing="false" text="night sweats">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="glaucoma" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="painUponInhalationRadio" layoutX="205.0" layoutY="232.0" mnemonicParsing="false" text="pain upon inhalation">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="itching" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="shortnessOfBreathRadio" layoutX="205.0" layoutY="259.0" mnemonicParsing="false" text="shortness of  breath">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="redness" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="wheezingRadio" layoutX="205.0" layoutY="287.0" mnemonicParsing="false" text="wheezing">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="wear" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="chronicPlusRadio" layoutX="161.0" layoutY="41.0" mnemonicParsing="false" text="+" toggleGroup="$blurred" />
+                                    <RadioButton fx:id="chronicMinusRadio" layoutX="117.0" layoutY="41.0" mnemonicParsing="false" text="-" toggleGroup="$blurred" />
+                                    <RadioButton fx:id="chronicQuesRadio" layoutX="68.0" layoutY="41.0" mnemonicParsing="false" text="?" toggleGroup="$blurred" />
+                                    <RadioButton fx:id="historyOfpneumoniaQuesRadio" layoutX="68.0" layoutY="152.0" mnemonicParsing="false" text="?" toggleGroup="$eye" />
+                                    <RadioButton fx:id="historyOfpneumoniaMinusRadio" layoutX="117.0" layoutY="152.0" mnemonicParsing="false" text="-" toggleGroup="$eye" />
+                                    <RadioButton fx:id="historyOfpneumoniaPlusRadio" layoutX="161.0" layoutY="152.0" mnemonicParsing="false" text="+" toggleGroup="$eye" />
+                                    <RadioButton fx:id="nightSweatsPlusRadio" layoutX="161.0" layoutY="207.0" mnemonicParsing="false" text="+" toggleGroup="$glaucoma" />
+                                    <RadioButton fx:id="nightSweatsMinusRadio" layoutX="117.0" layoutY="207.0" mnemonicParsing="false" text="-" toggleGroup="$glaucoma" />
+                                    <RadioButton fx:id="nightSweatsQuesRadio" layoutX="68.0" layoutY="207.0" mnemonicParsing="false" text="?" toggleGroup="$glaucoma" />
+                                    <RadioButton fx:id="shortnessOfBreathPlusRadio" layoutX="161.0" layoutY="259.0" mnemonicParsing="false" text="+" toggleGroup="$redness" />
+                                    <RadioButton fx:id="shortnessOfBreathMinusRadio" layoutX="117.0" layoutY="259.0" mnemonicParsing="false" text="-" toggleGroup="$redness" />
+                                    <RadioButton fx:id="shortnessOfBreathQuesRadio" layoutX="68.0" layoutY="259.0" mnemonicParsing="false" text="?" toggleGroup="$redness" />
+                                    <RadioButton fx:id="wheezingPlusRadio" layoutX="161.0" layoutY="287.0" mnemonicParsing="false" text="+" toggleGroup="$wear" />
+                                    <RadioButton fx:id="wheezingMinusRadio" layoutX="117.0" layoutY="287.0" mnemonicParsing="false" text="-" toggleGroup="$wear" />
+                                    <RadioButton fx:id="wheezingQuesRadio" layoutX="68.0" layoutY="287.0" mnemonicParsing="false" text="?" toggleGroup="$wear" />
+                                    <RadioButton fx:id="bloodPlusRadio" layoutX="161.0" layoutY="69.0" mnemonicParsing="false" text="+" toggleGroup="$cataracts" />
+                                    <RadioButton fx:id="coughingupbloodMinusRadio" layoutX="117.0" layoutY="69.0" mnemonicParsing="false" text="-" toggleGroup="$cataracts" />
+                                    <RadioButton fx:id="coughingupbloodQuesRadio" layoutX="68.0" layoutY="69.0" mnemonicParsing="false" text="?" toggleGroup="$cataracts" />
+                                    <RadioButton fx:id="coughingUpPhlegmQuesRadio" layoutX="68.0" layoutY="96.0" mnemonicParsing="false" text="?">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="dimness" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="coughingUpPhlegmMinusRadio" layoutX="117.0" layoutY="96.0" mnemonicParsing="false" text="-" toggleGroup="$dimness" />
+                                    <RadioButton fx:id="coughingUpPhlegmPlusRadio" layoutX="161.0" layoutY="96.0" mnemonicParsing="false" text="+" toggleGroup="$dimness" />
+                                    <RadioButton fx:id="historyOfAsthmaPlusRadio" layoutX="161.0" layoutY="124.0" mnemonicParsing="false" text="+" toggleGroup="$excessive" />
+                                    <RadioButton fx:id="historyOfAsthmaMinusRadio" layoutX="117.0" layoutY="124.0" mnemonicParsing="false" text="-" toggleGroup="$excessive" />
+                                    <RadioButton fx:id="historyOfAsthmaQuesRadio" layoutX="68.0" layoutY="124.0" mnemonicParsing="false" text="?" toggleGroup="$excessive" />
+                                    <RadioButton fx:id="historyOfTuberculosisPlusRadio" layoutX="161.0" layoutY="181.0" mnemonicParsing="false" text="+" toggleGroup="$flashing" />
+                                    <RadioButton fx:id="historyOfTuberculosisMinusRadio" layoutX="117.0" layoutY="181.0" mnemonicParsing="false" text="-" toggleGroup="$flashing" />
+                                    <RadioButton fx:id="historyOfTuberculosisQuesRadio" layoutX="68.0" layoutY="181.0" mnemonicParsing="false" text="?" toggleGroup="$flashing" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="493.0" layoutY="448.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="399.0" layoutY="448.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

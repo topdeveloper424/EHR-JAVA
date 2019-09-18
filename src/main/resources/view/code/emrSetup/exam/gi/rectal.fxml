@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="597.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.gi.rectal.RectalInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="325.0" prefWidth="583.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Rectal Exam Result" />
+                  <Separator layoutX="127.0" layoutY="1.0" orientation="VERTICAL" prefHeight="249.0" prefWidth="11.0" />
+                  <Button fx:id="doneBtn" layoutX="378.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="14.0" layoutY="131.0" prefHeight="4.0" prefWidth="574.0" />
+                  <Button fx:id="skipBtn" layoutX="474.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="normalCkeckBox" layoutX="139.0" layoutY="7.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="normalToneCheckBox" layoutX="222.0" layoutY="5.0" mnemonicParsing="false" text="normal tone" />
+                  <CheckBox fx:id="decreasedCheckBox" layoutX="405.0" layoutY="6.0" mnemonicParsing="false" text="decreased tone" />
+                  <CheckBox fx:id="noMassesCheckBox" layoutX="222.0" layoutY="25.0" mnemonicParsing="false" text="no masses" />
+                  <CheckBox fx:id="massCheckBox" layoutX="405.0" layoutY="26.0" mnemonicParsing="false" text="mass palpable" />
+                  <CheckBox fx:id="noHemorroidsCheckBox" layoutX="222.0" layoutY="46.0" mnemonicParsing="false" text="no hemorroids noted" />
+                  <CheckBox fx:id="nonTenderCheckBox" layoutX="222.0" layoutY="66.0" mnemonicParsing="false" text="non tender near appeddix" />
+                  <CheckBox fx:id="hemeNegativeStoolCheckBox" layoutX="222.0" layoutY="86.0" mnemonicParsing="false" text="heme negative stool" />
+                  <CheckBox fx:id="exhibitedCheckBox" layoutX="222.0" layoutY="107.0" mnemonicParsing="false" text="exhibited frank blood" />
+                  <CheckBox fx:id="noHemorroidsPresentCheckBox" layoutX="405.0" layoutY="46.0" mnemonicParsing="false" text="no hemorroids present" />
+                  <CheckBox fx:id="tendernessCheckBox" layoutX="405.0" layoutY="66.0" mnemonicParsing="false" text="tenderness near appeddix" />
+                  <CheckBox fx:id="hemePossitiveStoolCheckBox" layoutX="405.0" layoutY="86.0" mnemonicParsing="false" text="heme positive stool" />
+                  <CheckBox fx:id="impactedCheckBox" layoutX="405.0" layoutY="109.0" mnemonicParsing="false" text="impacted stool" />
+                  <CheckBox fx:id="negativeOccultCheckBox" layoutX="222.0" layoutY="138.0" mnemonicParsing="false" text="Negative for occult blood" />
+                  <CheckBox fx:id="frankBloodCheckBox" layoutX="222.0" layoutY="160.0" mnemonicParsing="false" text="Frank Blood Present" />
+                  <CheckBox fx:id="melanoticCheckBox" layoutX="222.0" layoutY="182.0" mnemonicParsing="false" text="Melanotic Stool" />
+                  <CheckBox fx:id="possitiveOccultCheckBox" layoutX="405.0" layoutY="138.0" mnemonicParsing="false" text="Possitive for occult blood" />
+                  <CheckBox fx:id="grossBloodCheckBox" layoutX="404.0" layoutY="161.0" mnemonicParsing="false" text="Gross Blood Present" />
+                  <CheckBox fx:id="includeCheckBox" layoutX="139.0" layoutY="221.0" mnemonicParsing="false" text="Include" />
+                  <Separator layoutY="207.0" prefHeight="2.0" prefWidth="583.0" />
+                  <Label layoutX="40.0" layoutY="169.0" text="Blood" />
+                  <Label layoutX="8.0" layoutY="222.0" text="Rectal Exam Declined" />
+                  <Label layoutX="221.0" layoutY="222.0" text="Patient declined rectal examination" />
+                  <Separator layoutX="1.0" layoutY="249.0" prefHeight="0.0" prefWidth="583.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

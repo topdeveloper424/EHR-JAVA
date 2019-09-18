@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="789.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.icd10ReportGroup.ICD10ReportGroupInputController">
+   <children>
+      <Label layoutX="35.0" layoutY="27.0" text="DX Group Code :" />
+      <Label layoutX="300.0" layoutY="27.0" text="Description :" />
+      <TextField fx:id="dxGroupCodeTextField" layoutX="133.0" layoutY="23.0" />
+      <TextField fx:id="descriptionTextField" layoutX="390.0" layoutY="23.0" />
+      <TitledPane animated="false" layoutX="12.0" layoutY="84.0" prefHeight="132.0" prefWidth="603.0" text="Search Criteria">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="601.0">
+               <children>
+                  <Label layoutX="31.0" layoutY="22.0" text="Description Contains :" />
+                  <Label layoutX="31.0" layoutY="62.0" text="Code Contains :" />
+                  <TextField fx:id="descriptionContainsTextField" layoutX="162.0" layoutY="20.0" />
+                  <TextField fx:id="codeContainsTextField" layoutX="162.0" layoutY="57.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <CheckBox fx:id="includeInactivesCheckBox" layoutX="216.0" layoutY="223.0" mnemonicParsing="false" text="Include Inactives ?" />
+      <TabPane layoutX="12.0" layoutY="246.0" prefHeight="301.0" prefWidth="348.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="ICD-10 Code">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="393.0">
+                     <children>
+                        <TitledPane animated="false" prefHeight="273.0" prefWidth="348.0" text="ICD-10 Diagonosis Code(s)">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="viewIcd10Codes" layoutX="-2.0" prefHeight="250.0" prefWidth="348.0">
+                                      <columns>
+                                        <TableColumn fx:id="codeColumn" prefWidth="99.0" text="Code" />
+                                        <TableColumn fx:id="descriptionColumn" prefWidth="248.0" text="Decription" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ScrollBar layoutX="362.0" layoutY="278.0" orientation="VERTICAL" prefHeight="269.0" prefWidth="14.0" />
+      <Button fx:id="icd10TopButton" layoutX="14.0" layoutY="544.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="46.0" layoutY="544.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/media-controls-rewind-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="icd10UpButton" layoutX="78.0" layoutY="544.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/Capturebut4.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="109.0" layoutY="544.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="icd10DownButton" layoutX="141.0" layoutY="544.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/but3.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="173.0" layoutY="544.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/Media-Controls-Fast-Forward-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="icd10BottomButton" layoutX="205.0" layoutY="544.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/but2.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="rightButton" layoutX="384.0" layoutY="372.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/but3.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="leftButton" layoutX="384.0" layoutY="430.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/Capturebut4.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TitledPane animated="false" layoutX="434.0" layoutY="246.0" prefHeight="301.0" prefWidth="323.0" text="Selected Diagonosis Code(s)">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="251.0" prefWidth="315.0">
+               <children>
+                  <TableView layoutX="-1.0" layoutY="1.0" prefHeight="278.0" prefWidth="323.0">
+                    <columns>
+                      <TableColumn prefWidth="119.0" text="Code" />
+                      <TableColumn prefWidth="203.0" text="Description" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="diagonosisTopButton" layoutX="434.0" layoutY="547.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="465.0" layoutY="547.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/media-controls-rewind-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="diagonosisUpButton" layoutX="496.0" layoutY="547.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/Capturebut4.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="528.0" layoutY="547.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="diagonosisDownButton" layoutX="560.0" layoutY="547.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/but3.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="592.0" layoutY="547.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/Media-Controls-Fast-Forward-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="diagonosisBottomButton" layoutX="624.0" layoutY="547.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/but2.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <CheckBox fx:id="inactiveCheckBox" layoutX="11.0" layoutY="586.0" mnemonicParsing="false" text="Inactive ?" />
+      <Button fx:id="okButton" layoutX="589.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Ok">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="685.0" layoutY="582.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="571.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.labTest.UrinalysisInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="6.0" prefHeight="591.0" prefWidth="555.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="14.0" text="Leukocytes In Urine" />
+                  <Label layoutX="2.0" layoutY="62.0" text="Nitrite In Urine" />
+                  <Label layoutX="2.0" layoutY="93.0" text="Urobilinogen In Urine" />
+                  <Label layoutX="2.0" layoutY="140.0" text="Protein In Urine" />
+                  <Label layoutX="2.0" layoutY="186.0" text="Urine Ph" />
+                  <Label layoutX="2.0" layoutY="245.0" text="Blood In Urine" />
+                  <Label layoutX="2.0" layoutY="299.0" text="Urine Specific Gravity" />
+                  <Label layoutX="14.0" layoutY="391.0" text="Bilirubin In Urine" />
+                  <Label layoutX="2.0" layoutY="420.0" text="Glucose In Urine" />
+                  <Label layoutX="2.0" layoutY="478.0" text="Free Form Text" />
+                  <Separator layoutX="134.0" layoutY="1.0" orientation="VERTICAL" prefHeight="509.0" prefWidth="4.0" />
+                  <RadioButton fx:id="LeukocytesNegativeRadio" layoutX="148.0" layoutY="6.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Leukocytes" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Leukocytes15Radio" layoutX="257.0" layoutY="6.0" mnemonicParsing="false" text="15+" toggleGroup="$Leukocytes" />
+                  <RadioButton fx:id="Leukocytes70Radio" layoutX="369.0" layoutY="6.0" mnemonicParsing="false" text="70+" toggleGroup="$Leukocytes" />
+                  <RadioButton fx:id="Leukocytes125Radio" layoutX="477.0" layoutY="6.0" mnemonicParsing="false" text="125+" toggleGroup="$Leukocytes" />
+                  <RadioButton fx:id="Leukocytes500Radio" layoutX="148.0" layoutY="30.0" mnemonicParsing="false" text="500+++" toggleGroup="$Leukocytes" />
+                  <Separator layoutX="4.0" layoutY="52.0" prefHeight="0.0" prefWidth="548.0" />
+                  <RadioButton fx:id="NitriteNegativeRadio" layoutX="148.0" layoutY="59.0" mnemonicParsing="false" text="Negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Nitrite" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="NitritePossitiveRadio" layoutX="257.0" layoutY="59.0" mnemonicParsing="false" text="Possitive" toggleGroup="$Nitrite" />
+                  <Separator layoutY="81.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="Urobilinogen02Radio" layoutX="148.0" layoutY="87.0" mnemonicParsing="false" text="0.2">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Urobilinogen" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Urobilinogen1Radio" layoutX="257.0" layoutY="87.0" mnemonicParsing="false" text="1" toggleGroup="$Urobilinogen" />
+                  <RadioButton fx:id="Urobilinogen2radio" layoutX="369.0" layoutY="87.0" mnemonicParsing="false" text="2" toggleGroup="$Urobilinogen" />
+                  <RadioButton fx:id="Urobilinogen4radio" layoutX="477.0" layoutY="87.0" mnemonicParsing="false" text="4" toggleGroup="$Urobilinogen" />
+                  <RadioButton fx:id="Urobilinogen8Radio" layoutX="148.0" layoutY="111.0" mnemonicParsing="false" text="8" toggleGroup="$Urobilinogen" />
+                  <RadioButton fx:id="Urobilinogen12Radio" layoutX="257.0" layoutY="112.0" mnemonicParsing="false" text="12" toggleGroup="$Urobilinogen" />
+                  <Separator layoutY="132.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="ProteinNegativeRadio" layoutX="148.0" layoutY="136.0" mnemonicParsing="false" text="Negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Protein" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Protein15Radio" layoutX="257.0" layoutY="136.0" mnemonicParsing="false" text="15" toggleGroup="$Protein" />
+                  <RadioButton fx:id="Protein30radio" layoutX="369.0" layoutY="136.0" mnemonicParsing="false" text="30+" toggleGroup="$Protein" />
+                  <RadioButton fx:id="Protein100Radio" layoutX="477.0" layoutY="136.0" mnemonicParsing="false" text="100+++" toggleGroup="$Protein" />
+                  <RadioButton fx:id="Protein300Radio" layoutX="148.0" layoutY="160.0" mnemonicParsing="false" text="300+++" toggleGroup="$Protein" />
+                  <RadioButton fx:id="Protein2000Radio" layoutX="257.0" layoutY="161.0" mnemonicParsing="false" text="2000+++" toggleGroup="$Protein" />
+                  <Separator layoutX="2.0" layoutY="181.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="ph5Radio" layoutX="148.0" layoutY="187.0" mnemonicParsing="false" text="5">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ph" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="ph6Radio" layoutX="257.0" layoutY="187.0" mnemonicParsing="false" text="6" toggleGroup="$ph" />
+                  <RadioButton fx:id="ph65Radio" layoutX="369.0" layoutY="187.0" mnemonicParsing="false" text="6.5" toggleGroup="$ph" />
+                  <RadioButton fx:id="ph7Radio" layoutX="477.0" layoutY="187.0" mnemonicParsing="false" text="7" toggleGroup="$ph" />
+                  <RadioButton fx:id="ph75Radio" layoutX="148.0" layoutY="211.0" mnemonicParsing="false" text="7.5" toggleGroup="$ph" />
+                  <RadioButton fx:id="ph8Radio" layoutX="257.0" layoutY="212.0" mnemonicParsing="false" text="8" toggleGroup="$ph" />
+                  <Separator layoutX="3.0" layoutY="232.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="ph9Radio" layoutX="369.0" layoutY="212.0" mnemonicParsing="false" text="9" toggleGroup="$ph" />
+                  <RadioButton fx:id="BloodNegativeRadio" layoutX="148.0" layoutY="240.0" mnemonicParsing="false" text="Negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Blood" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="BloodPlusRadio" layoutX="257.0" layoutY="240.0" mnemonicParsing="false" text="+" toggleGroup="$Blood" />
+                  <RadioButton fx:id="BloodPlusPlusRadio" layoutX="369.0" layoutY="240.0" mnemonicParsing="false" text="+" toggleGroup="$Blood" />
+                  <RadioButton fx:id="BloodPlus2Radio" layoutX="477.0" layoutY="240.0" mnemonicParsing="false" text="++" toggleGroup="$Blood" />
+                  <RadioButton fx:id="BloodPlus3Radio" layoutX="148.0" layoutY="264.0" mnemonicParsing="false" text="+++" toggleGroup="$Blood" />
+                  <RadioButton fx:id="Blood5radio" layoutX="257.0" layoutY="265.0" mnemonicParsing="false" text="5-10" toggleGroup="$Blood" />
+                  <Separator layoutX="8.0" layoutY="285.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="Blood50Radio" layoutX="369.0" layoutY="265.0" mnemonicParsing="false" text="50 Ery" toggleGroup="$Blood" />
+                  <RadioButton fx:id="Gravity1000Radio" layoutX="148.0" layoutY="289.0" mnemonicParsing="false" text="1.000">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Gravity" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Gravity1005Radio" layoutX="257.0" layoutY="289.0" mnemonicParsing="false" text="1.005" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="Gravity1010Radio" layoutX="369.0" layoutY="289.0" mnemonicParsing="false" text="1.010" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="Gravity1015Radio" layoutX="477.0" layoutY="289.0" mnemonicParsing="false" text="1.015" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="Gravity1020Radio" layoutX="148.0" layoutY="313.0" mnemonicParsing="false" text="1.020" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="Gravity1025Radio" layoutX="257.0" layoutY="314.0" mnemonicParsing="false" text="1.025" toggleGroup="$Gravity" />
+                  <Separator layoutY="334.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="Gravity1030Radio" layoutX="369.0" layoutY="314.0" mnemonicParsing="false" text="1.030" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="KetonesnegativeRadio" layoutX="148.0" layoutY="339.0" mnemonicParsing="false" text="Negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Ketones" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Ketones5Radio" layoutX="257.0" layoutY="339.0" mnemonicParsing="false" text="5" toggleGroup="$Ketones" />
+                  <RadioButton fx:id="Ketones15Radio" layoutX="369.0" layoutY="339.0" mnemonicParsing="false" text="15" toggleGroup="$Ketones" />
+                  <RadioButton fx:id="Ketones40Radio" layoutX="477.0" layoutY="339.0" mnemonicParsing="false" text="40" toggleGroup="$Ketones" />
+                  <RadioButton fx:id="Ketones80Radio" layoutX="148.0" layoutY="363.0" mnemonicParsing="false" text="80" toggleGroup="$Ketones" />
+                  <RadioButton fx:id="Ketones160Radio" layoutX="257.0" layoutY="364.0" mnemonicParsing="false" text="160" toggleGroup="$Ketones" />
+                  <Separator layoutX="1.0" layoutY="384.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="BilirubinNegativeRadio" layoutX="148.0" layoutY="390.0" mnemonicParsing="false" text="Negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Bilirubin" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Bilirubin1Radio" layoutX="257.0" layoutY="390.0" mnemonicParsing="false" text="1+" toggleGroup="$Bilirubin" />
+                  <Separator layoutX="3.0" layoutY="665.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Separator layoutX="-2.0" layoutY="410.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="GlucoseNegativeRadio" layoutX="148.0" layoutY="415.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Glucose" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Glucose100Radio" layoutX="257.0" layoutY="415.0" mnemonicParsing="false" text="100" toggleGroup="$Glucose" />
+                  <RadioButton fx:id="Glucose250Radio" layoutX="369.0" layoutY="415.0" mnemonicParsing="false" text="250" toggleGroup="$Glucose" />
+                  <RadioButton fx:id="Glucose500Radio" layoutX="477.0" layoutY="415.0" mnemonicParsing="false" text="500" toggleGroup="$Glucose" />
+                  <RadioButton fx:id="Glucose1000Radio" layoutX="148.0" layoutY="439.0" mnemonicParsing="false" text="1000" toggleGroup="$Glucose" />
+                  <RadioButton fx:id="Glucose2000Radio" layoutX="257.0" layoutY="440.0" mnemonicParsing="false" text="&gt;2000" toggleGroup="$Glucose" />
+                  <Separator layoutY="461.0" prefHeight="3.0" prefWidth="555.0" />
+                  <TextArea fx:id="freeTextRadio" layoutX="148.0" layoutY="467.0" prefHeight="37.0" prefWidth="381.0" />
+                  <Separator layoutX="10.0" layoutY="509.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Button fx:id="doneBtn" layoutX="345.0" layoutY="524.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="OK">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="447.0" layoutY="524.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="Bilirubin2Radio" layoutX="369.0" layoutY="389.0" mnemonicParsing="false" text="2++" toggleGroup="$Bilirubin" />
+                  <RadioButton fx:id="Bilirubin4Radio" layoutX="477.0" layoutY="389.0" mnemonicParsing="false" text="4+++" toggleGroup="$Bilirubin" />
+                  <Label layoutX="9.0" layoutY="348.0" text="Ketones In Urine" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="307.0" prefWidth="635.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.cptOrHcpcs.CPT4orHCPCSCodeEditController">
+   <children>
+      <TabPane layoutX="6.0" layoutY="7.0" prefHeight="242.0" prefWidth="623.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="General">
+               <content>
+                  <AnchorPane prefHeight="195.0" prefWidth="613.0">
+                     <children>
+                        <Label id="test" layoutX="32.0" layoutY="49.0" text="Code :" />
+                        <Label layoutX="17.0" layoutY="80.0" text="Description:" />
+                        <Label layoutX="18.0" layoutY="112.0" text="Code Type :" />
+                        <TextField fx:id="idTextField" editable="false" layoutX="87.0" layoutY="13.0" />
+                        <TextField fx:id="codeTextField" layoutX="87.0" layoutY="44.0" />
+                        <TextField fx:id="descriptionTextField" layoutX="86.0" layoutY="75.0" prefHeight="25.0" prefWidth="401.0" />
+                        <ChoiceBox fx:id="copyTypeChoiceBox" layoutX="86.0" layoutY="108.0" prefWidth="150.0" />
+                        <CheckBox fx:id="inactiveCheckBox" layoutX="86.0" layoutY="143.0" mnemonicParsing="false" text="Inactive ?" />
+                        <Label layoutX="39.0" layoutY="17.0" text="Id :" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Billing">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="10.0" prefHeight="168.0" prefWidth="276.0" text="Std Work Comp Charge">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="287.0">
+                                 <children>
+                                    <Label layoutX="107.0" layoutY="14.0" text="Charge :" />
+                                    <Label layoutX="207.0" layoutY="14.0" text="Effictive :" />
+                                    <Label layoutX="26.0" layoutY="37.0" text="Past :" />
+                                    <Label layoutX="18.0" layoutY="61.0" text="Current :" />
+                                    <Label layoutX="19.0" layoutY="99.0" text="Future :" />
+                                    <TextField fx:id="workCompCurrentChargeTextField" layoutX="75.0" layoutY="56.0" prefHeight="25.0" prefWidth="85.0" />
+                                    <DatePicker fx:id="workCompCurrentDateField" layoutX="169.0" layoutY="56.0" prefHeight="25.0" prefWidth="102.0" />
+                                    <TextField fx:id="workCompFutureChargeTextField" layoutX="73.0" layoutY="94.0" prefHeight="25.0" prefWidth="86.0" />
+                                    <DatePicker fx:id="workCompFutureDateField" layoutX="169.0" layoutY="95.0" prefHeight="25.0" prefWidth="104.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="320.0" layoutY="11.0" prefHeight="167.0" prefWidth="269.0" text="Usual/Cutomany Charge">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="77.0" layoutY="14.0" text="Charge :" />
+                                    <Label layoutX="177.0" layoutY="14.0" text="Effictive :" />
+                                    <Label layoutX="14.0" layoutY="39.0" text="Past :" />
+                                    <Label layoutX="13.0" layoutY="65.0" text="Current :" />
+                                    <Label layoutX="16.0" layoutY="105.0" text="Future :" />
+                                    <TextField fx:id="usualCurrentChargeTextField" layoutX="68.0" layoutY="63.0" prefHeight="25.0" prefWidth="79.0" />
+                                    <DatePicker fx:id="usualCurrentDateField" layoutX="157.0" layoutY="63.0" prefHeight="25.0" prefWidth="102.0" />
+                                    <TextField fx:id="usualFutureChargeTextField" layoutX="70.0" layoutY="100.0" prefHeight="25.0" prefWidth="79.0" />
+                                    <DatePicker fx:id="usualFutureDateField" layoutX="157.0" layoutY="100.0" prefHeight="25.0" prefWidth="105.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button id="ghosh" fx:id="updateButton" layoutX="403.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Update">
+         <graphic>
+            <ImageView id="ghosh">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="ray" fx:id="cancelButton" layoutX="512.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Cancel">
+         <graphic>
+            <ImageView id="ray">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

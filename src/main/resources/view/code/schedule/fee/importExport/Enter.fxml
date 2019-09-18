@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="622.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" layoutX="27.0" layoutY="22.0" prefHeight="170.0" prefWidth="267.0" text="Select Schedule">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton layoutX="23.0" layoutY="13.0" mnemonicParsing="false" text="Transfer Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="37.0" mnemonicParsing="false" text="Export Fee Schedule to Spreadsheet" />
+                  <RadioButton layoutX="23.0" layoutY="62.0" mnemonicParsing="false" text="Import Fee Schedule from Spreadsheet" />
+                  <RadioButton layoutX="23.0" layoutY="89.0" mnemonicParsing="false" text="Import Medicare Fee Schedule from State" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="327.0" layoutY="22.0" prefHeight="170.0" prefWidth="267.0" text="Select Schedule">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton layoutX="23.0" layoutY="13.0" mnemonicParsing="false" text="Standard Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="37.0" mnemonicParsing="false" text="State Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="62.0" mnemonicParsing="false" text="Clinic Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="89.0" mnemonicParsing="false" text="Account Override Fee Schedule" />
+                  <RadioButton layoutX="23.0" layoutY="117.0" mnemonicParsing="false" text="Assignable Override Fee Schedule" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="27.0" layoutY="201.0" prefHeight="196.0" prefWidth="567.0" text="Standard Fee Schedules">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="439.0">
+               <children>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="13.0" prefHeight="139.0" prefWidth="259.0" text="Select Source State Schedule">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField layoutX="62.0" layoutY="10.0" prefHeight="25.0" prefWidth="110.0" />
+                              <RadioButton layoutX="19.0" layoutY="49.0" mnemonicParsing="false" text="Worker's Comp" />
+                              <RadioButton layoutX="149.0" layoutY="49.0" mnemonicParsing="false" text="Private Practice" />
+                              <RadioButton layoutX="19.0" layoutY="77.0" mnemonicParsing="false" text="Medicare" />
+                              <Label layoutX="19.0" layoutY="14.0" text="State :" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="293.0" layoutY="13.0" prefHeight="140.0" prefWidth="259.0" text="Select Source State Schedule">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField layoutX="62.0" layoutY="10.0" prefHeight="25.0" prefWidth="110.0" />
+                              <RadioButton layoutX="19.0" layoutY="49.0" mnemonicParsing="false" text="Worker's Comp" />
+                              <RadioButton layoutX="149.0" layoutY="49.0" mnemonicParsing="false" text="Private Practice" />
+                              <RadioButton layoutX="19.0" layoutY="77.0" mnemonicParsing="false" text="Medicare" />
+                              <Label layoutX="19.0" layoutY="14.0" text="State :" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button layoutX="351.0" layoutY="413.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Roll">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="close" layoutX="475.0" layoutY="413.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="37.0" layoutY="412.0" text="Status :" />
+   </children>
+</AnchorPane>

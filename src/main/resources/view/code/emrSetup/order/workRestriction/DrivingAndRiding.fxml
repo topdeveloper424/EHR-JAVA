@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.workRestriction.DrivingAndRidingInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="233.0" prefWidth="568.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="193.0" prefWidth="566.0">
+               <children>
+                  <Separator layoutY="29.0" prefHeight="0.0" prefWidth="570.0" />
+                  <Label layoutX="2.0" layoutY="9.0" text="Pick All that Apply" />
+                  <Label layoutX="2.0" layoutY="89.0" text="Pick All that apply" />
+                  <Separator layoutX="172.0" layoutY="1.0" orientation="VERTICAL" prefHeight="165.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="349.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="444.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-3.0" layoutY="111.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Separator layoutY="83.0" prefHeight="0.0" prefWidth="570.0" />
+                  <Separator layoutY="54.0" prefHeight="0.0" prefWidth="570.0" />
+                  <Label layoutX="2.0" layoutY="35.0" text="Personal driving Limited to" />
+                  <Label layoutX="3.0" layoutY="62.0" text="Commercial Driving" />
+                  <Separator layoutX="-5.0" layoutY="137.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="3.0" layoutY="117.0" text="Pick All that apply" />
+                  <CheckBox fx:id="noPersonalDriving" layoutX="198.0" layoutY="7.0" mnemonicParsing="false" text="No Personal Driving" />
+                  <CheckBox fx:id="PersonalDriving" layoutX="377.0" layoutY="9.0" mnemonicParsing="false" text="Personal Driving Limited to" />
+                  <CheckBox fx:id="PersonalDriving1to3" layoutX="198.0" layoutY="35.0" mnemonicParsing="false" text="1 to 3 hours per day" />
+                  <CheckBox fx:id="PersonalDriving3to5" layoutX="376.0" layoutY="35.0" mnemonicParsing="false" text="3 to 5 hours per day" />
+                  <CheckBox fx:id="noCommercialDriving" layoutX="198.0" layoutY="59.0" mnemonicParsing="false" text="No commercial driving" />
+                  <CheckBox fx:id="CommercialDriving" layoutX="376.0" layoutY="62.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="195.0" text="Commercial driving limited to" />
+                  <CheckBox fx:id="pickAll1to3" layoutX="198.0" layoutY="89.0" mnemonicParsing="false" text="1 to 3 hours per shift" />
+                  <CheckBox fx:id="pickAll3to5" layoutX="377.0" layoutY="89.0" mnemonicParsing="false" text="3 to 5 hours per shift" />
+                  <CheckBox fx:id="pickAllNoRiding" layoutX="198.0" layoutY="117.0" mnemonicParsing="false" text="No riding in vehicle" />
+                  <CheckBox fx:id="pickAllRiding" layoutX="378.0" layoutY="117.0" mnemonicParsing="false" text="Riding in vehicle limited to" />
+                  <Separator layoutX="-2.0" layoutY="164.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="5.0" layoutY="141.0" text="Pick All that apply" />
+                  <CheckBox fx:id="pickAll1to3Riding" layoutX="198.0" layoutY="141.0" mnemonicParsing="false" text="1 to 3 hours per shift" />
+                  <CheckBox fx:id="pickAll3to5Riding" layoutX="377.0" layoutY="141.0" mnemonicParsing="false" text="3 to 5 hours per shift" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DrugScreenTestMro" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8af3d3fb-79d3-4394-b10d-240a3347ec33">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.callouts" value="callouts.1.fg=0,0,0\n callouts.1.bg=255,255,0\n "/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="drugTestName" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="finalResult" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="121" height="20" uuid="193319fa-70e8-4304-a2a2-8e7eb14b32ff"/>
+				<text><![CDATA[Drug Screen Test Result]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="5" width="120" height="15" uuid="9f6be991-467e-4cfb-aa0c-c0f8fb0abc9c"/>
+				<text><![CDATA[Drug Substances Tested]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="5" width="60" height="15" uuid="6df27308-f623-4e31-91cb-c8a918527537"/>
+				<text><![CDATA[Lab Result]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="200" height="19" uuid="38fdece7-b8ff-4206-85de-475b5234f884"/>
+			</textField>
+			<textField>
+				<reportElement x="340" y="6" width="190" height="30" uuid="3b71ad54-115f-4f74-8546-91c7a83eb472"/>
+			</textField>
+			<textField>
+				<reportElement x="0" y="13" width="190" height="16" uuid="2b3d6d4a-9690-4d18-9ed5-325cf18b7278"/>
+				<textFieldExpression><![CDATA[$F{drugTestName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="10" width="170" height="19" uuid="3721556f-4989-4d03-8b5d-477a9d65ec12"/>
+				<textFieldExpression><![CDATA[$F{finalResult}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

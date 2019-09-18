@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.diagonostic.DiagonosticXrayInHouseInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="265.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="5.0" text="Select View" />
+                  <Separator layoutX="156.0" layoutY="1.0" orientation="VERTICAL" prefHeight="185.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="319.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="420.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="92.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="chest1ViewCheck" layoutX="170.0" layoutY="29.0" mnemonicParsing="false" text="Chest - 1 View" />
+                  <CheckBox fx:id="chest2ViewCheck" layoutX="345.0" layoutY="29.0" mnemonicParsing="false" text="Chest - 2 View" />
+                  <CheckBox fx:id="ribs2ViewUniLateralCheck" layoutX="170.0" layoutY="49.0" mnemonicParsing="false" text="Ribs 2 Views Unilatera" />
+                  <CheckBox fx:id="sternamCheck" layoutX="170.0" layoutY="71.0" mnemonicParsing="false" text="Sternam - 2 Views" />
+                  <CheckBox fx:id="ribs2ViewBiLateralCheck" layoutX="344.0" layoutY="50.0" mnemonicParsing="false" text="Ribs 2 Views Bilateral" />
+                  <RadioButton fx:id="paRadio" layoutX="172.0" layoutY="2.0" mnemonicParsing="false" text="PA">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sel" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="paLateralRadio" layoutX="338.0" layoutY="3.0" mnemonicParsing="false" text="PA and Lateral" toggleGroup="$sel" />
+                  <Separator layoutX="-1.0" layoutY="23.0" prefHeight="0.0" prefWidth="578.0" />
+                  <TextArea layoutX="168.0" layoutY="97.0" prefHeight="79.0" prefWidth="381.0" fx:id="xrayText" />
+                  <Separator layoutX="-2.0" layoutY="182.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="14.0" layoutY="42.0" text="Body Part" />
+                  <Label layoutX="4.0" layoutY="117.0" text="Additional Xray Instructions" />
+                  <CheckBox fx:id="SternoclaciculaCheck" layoutX="345.0" layoutY="71.0" mnemonicParsing="false" text="Sternoclacicular Joint - 3 Views" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

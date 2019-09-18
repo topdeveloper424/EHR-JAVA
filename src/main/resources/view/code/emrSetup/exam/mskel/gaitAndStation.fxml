@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="616.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.mskel.gaintAndStation.SkelGaitAndNailInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="6.0" prefHeight="334.0" prefWidth="616.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Gait" />
+                  <Button fx:id="doneBtn" layoutX="381.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutY="248.0" prefHeight="6.0" prefWidth="623.0" />
+                  <Button fx:id="skipBtn" layoutX="475.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="gaitNormal" layoutX="124.0" layoutY="14.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="gaitLimping" layoutX="215.0" layoutY="6.0" mnemonicParsing="false" text="limping" />
+                  <CheckBox fx:id="gaitSpastic" layoutX="443.0" layoutY="6.0" mnemonicParsing="false" text="spastic" />
+                  <CheckBox fx:id="gaitStaggering" layoutX="215.0" layoutY="25.0" mnemonicParsing="false" text="staggering and lurching" />
+                  <CheckBox fx:id="gaitsteppage" layoutX="443.0" layoutY="25.0" mnemonicParsing="false" text="steppage" />
+                  <CheckBox fx:id="gaitWithPoorHeel" layoutX="215.0" layoutY="46.0" mnemonicParsing="false" text="with poor heel strike" />
+                  <CheckBox fx:id="gaitUnableWalk" layoutX="215.0" layoutY="66.0" mnemonicParsing="false" text="unable to walk w/o assistance" />
+                  <CheckBox fx:id="gaitWithPoorWeight" layoutX="443.0" layoutY="46.0" mnemonicParsing="false" text="with poor weight bearing" />
+                  <CheckBox fx:id="stationNormal" layoutX="124.0" layoutY="110.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="stationboardBased" layoutX="215.0" layoutY="110.0" mnemonicParsing="false" text="board based" />
+                  <CheckBox fx:id="coordinationNormal" layoutX="124.0" layoutY="155.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="4.0" layoutY="146.0" prefHeight="3.0" prefWidth="615.0" />
+                  <Label layoutX="10.0" layoutY="110.0" text="station" />
+                  <Label layoutX="8.0" layoutY="163.0" text="coordination" />
+                  <Separator layoutX="-1.0" layoutY="189.0" prefHeight="5.0" prefWidth="623.0" />
+                  <CheckBox fx:id="stationUndetermined" layoutX="443.0" layoutY="105.0" mnemonicParsing="false" text="undetermined" />
+                  <CheckBox fx:id="coordinationDecreasedOnFinger" layoutX="216.0" layoutY="155.0" mnemonicParsing="false" text="decreased on finger to nose" />
+                  <CheckBox fx:id="coordinationDecreasedHeel" layoutX="445.0" layoutY="155.0" mnemonicParsing="false" text="decreased heel,knee,shin" />
+                  <Label layoutX="12.0" layoutY="205.0" text="Romberg" />
+                  <Separator layoutX="3.0" layoutY="96.0" prefHeight="3.0" prefWidth="615.0" />
+                  <CheckBox fx:id="rombergNormal" layoutX="124.0" layoutY="196.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="rombergNotTestedRadio" layoutX="241.0" layoutY="196.0" mnemonicParsing="false" text="not tested" />
+                  <RadioButton fx:id="rombergNegativeRadio" layoutX="367.0" layoutY="198.0" mnemonicParsing="false" text="negative" />
+                  <RadioButton fx:id="RombergPositiveRadio" layoutX="242.0" layoutY="220.0" mnemonicParsing="false" text="positive" />
+                  <Separator layoutX="112.0" layoutY="-9.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="0.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

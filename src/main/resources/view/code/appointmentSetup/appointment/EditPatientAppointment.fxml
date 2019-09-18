@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="589.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.appointment.PatientAppointmentEditController">
+   <children>
+      <Button fx:id="OkButton" layoutX="371.0" layoutY="468.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Update">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="CancleButton" layoutX="471.0" layoutY="468.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Cancle">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TabPane layoutX="5.0" layoutY="6.0" prefHeight="436.0" prefWidth="581.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="12.0" layoutY="9.0" text="Type :" />
+                        <Label layoutX="13.0" layoutY="42.0" text="Date :" />
+                        <Label layoutX="5.0" layoutY="77.0" text="Category :" />
+                        <Label layoutX="15.0" layoutY="110.0" text="Purpose :" />
+                        <Label layoutX="15.0" layoutY="148.0" text="Provider :" />
+                        <Label fx:id="yyyyyyyyyyyyy" layoutX="11.0" layoutY="228.0" text="Scheduling Minutes Requered :" />
+                        <Label layoutX="288.0" layoutY="91.0" text="referred By :" />
+                        <Label layoutX="14.0" layoutY="282.0" text="Cancel Reason :" />
+                        <Label layoutX="16.0" layoutY="339.0" text="Appointment Notes :" />
+                        <Label layoutX="376.0" layoutY="44.0" text="Status :" />
+                        <Label layoutX="18.0" layoutY="182.0" text="Clinician" />
+                        <Label layoutX="236.0" layoutY="43.0" text="Time :" />
+                        <ChoiceBox fx:id="appointmentTypeChoiceBox" layoutX="71.0" layoutY="5.0" prefWidth="150.0" />
+                        <DatePicker fx:id="dateField" layoutX="71.0" layoutY="39.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="visitCategoryText" layoutX="71.0" layoutY="73.0" />
+                        <TextField fx:id="clinicianText" layoutX="71.0" layoutY="178.0" />
+                        <TextField fx:id="referredByText" layoutX="362.0" layoutY="86.0" prefHeight="25.0" prefWidth="143.0" />
+                        <TextField fx:id="purposetext" layoutX="71.0" layoutY="106.0" />
+                        <Spinner fx:id="minutesReqdSpinner" layoutX="194.0" layoutY="224.0" prefHeight="25.0" prefWidth="83.0" />
+                        <TextField fx:id="providerText" layoutX="71.0" layoutY="141.0" />
+                        <TextField fx:id="timeText" layoutX="279.0" layoutY="40.0" onMouseExited="#onMouseDragExitedOverTime" prefHeight="25.0" prefWidth="83.0" />
+                        <TextField fx:id="cancelReasonText" layoutX="105.0" layoutY="278.0" prefHeight="25.0" prefWidth="422.0" />
+                        <TextArea fx:id="appointment5ReasonTextArea" layoutX="133.0" layoutY="315.0" prefHeight="65.0" prefWidth="367.0" />
+                        <ChoiceBox fx:id="statusChoiceBox" layoutX="420.0" layoutY="40.0" prefHeight="25.0" prefWidth="98.0" />
+                        <Button fx:id="clinicianButton" layoutX="226.0" layoutY="179.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="27.0">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="visitCategoryButton" layoutX="226.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fitHeight="17.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="providerButton" layoutX="226.0" layoutY="140.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="refferedByButton" layoutX="511.0" layoutY="87.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="21.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="referredByIdText" layoutX="483.0" layoutY="153.0" prefHeight="25.0" prefWidth="32.0" visible="false" />
+                        <TextField fx:id="idTextField" editable="false" layoutX="277.0" layoutY="5.0" visible="false" />
+                        <Label fx:id="clinicianName" layoutX="275.0" layoutY="181.0" prefHeight="25.0" prefWidth="83.0" />
+                        <Label fx:id="nameProviderLabel" layoutX="272.0" layoutY="146.0" prefHeight="13.0" prefWidth="104.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

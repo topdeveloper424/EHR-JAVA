@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.cv.CvArteriesCarotidsInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="212.0" prefWidth="514.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="75.0" prefHeight="0.0" prefWidth="514.0" />
+                  <Separator layoutX="100.0" layoutY="1.0" orientation="VERTICAL" prefHeight="132.0" prefWidth="13.0" />
+                  <Button fx:id="doneBtn" layoutX="265.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="379.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="17.0" layoutY="11.0" text="Carotids " />
+                  <Label layoutX="25.0" layoutY="79.0" text="Bruits" />
+                  <CheckBox fx:id="carotidsAllNormalCheckBox" layoutX="129.0" layoutY="6.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="carotidsNormalBilaterallyCheckBox" layoutX="249.0" layoutY="1.0" mnemonicParsing="false" text="normal bilaterally" />
+                  <CheckBox fx:id="carotidsLeftNormalCheckBox" layoutX="383.0" layoutY="2.0" mnemonicParsing="false" text="left normal" />
+                  <CheckBox fx:id="carotidsLeftDecreasedCheckBox" layoutX="385.0" layoutY="24.0" mnemonicParsing="false" text="left decreased" />
+                  <CheckBox fx:id="carotidsRightNormalCheckBox" layoutX="249.0" layoutY="46.0" mnemonicParsing="false" text="right normal" />
+                  <CheckBox fx:id="carotidsRightDecreasedCheckBox" layoutX="249.0" layoutY="24.0" mnemonicParsing="false" text="right decreased" />
+                  <Separator layoutY="130.0" prefHeight="0.0" prefWidth="514.0" />
+                  <RadioButton fx:id="noBruitsRadio" layoutX="244.0" layoutY="79.0" mnemonicParsing="false" text="no bruits">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="bruits" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="bilateralBruitsRadio" layoutX="378.0" layoutY="79.0" mnemonicParsing="false" text="bilateral bruits" toggleGroup="$bruits" />
+                  <RadioButton fx:id="leftBruitsRadio" layoutX="243.0" layoutY="103.0" mnemonicParsing="false" text="bruits left" toggleGroup="$bruits" />
+                  <RadioButton fx:id="rightBruitsRadio" layoutX="385.0" layoutY="103.0" mnemonicParsing="false" text="bruits right" toggleGroup="$bruits" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

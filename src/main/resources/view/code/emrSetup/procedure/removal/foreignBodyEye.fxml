@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="547.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.removal.ForeignBodyEyeInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="318.0" prefWidth="534.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="293.0" prefWidth="532.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="3.0" text="Body Part" />
+                  <Separator layoutX="148.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="241.0" prefWidth="2.0" />
+                  <Button fx:id="doneBtn" layoutX="305.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-1.0" layoutY="173.0" prefHeight="0.0" prefWidth="534.0" />
+                  <Button fx:id="skipBtn" layoutX="403.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-2.0" layoutY="235.0" prefHeight="0.0" prefWidth="541.0" />
+                  <Label fx:id="AnesthasiaModalitytText" layoutX="6.0" layoutY="104.0" text="FP Identification" />
+                  <Separator layoutX="2.0" layoutY="89.0" prefHeight="0.0" prefWidth="534.0" />
+                  <CheckBox fx:id="identificationMagneticMetal" layoutX="163.0" layoutY="143.0" mnemonicParsing="false" text="magnetic metal" />
+                  <CheckBox fx:id="identificationMental" layoutX="163.0" layoutY="96.0" mnemonicParsing="false" text="mental" />
+                  <CheckBox fx:id="identificationRust" layoutX="163.0" layoutY="119.0" mnemonicParsing="false" text="rust ring" />
+                  <CheckBox fx:id="wellCheckBox" layoutX="165.0" layoutY="182.0" mnemonicParsing="false" text="Well " />
+                  <CheckBox fx:id="WiyhoutCompletionCheckBox" layoutX="319.0" layoutY="179.0" mnemonicParsing="false" text="Without Complication" />
+                  <CheckBox fx:id="minaralCheckBox" layoutX="320.0" layoutY="202.0" mnemonicParsing="false" text="minaral blood loss" />
+                  <CheckBox fx:id="withCompletionCheckBox" layoutX="165.0" layoutY="206.0" mnemonicParsing="false" text="With Complication" />
+                  <Label layoutX="3.0" layoutY="195.0" text="Patient Response" />
+                  <CheckBox fx:id="tetracaineCheck" layoutX="162.0" layoutY="3.0" mnemonicParsing="false" text="tetracaine 0.5%" />
+                  <CheckBox fx:id="proparacaineCheck" layoutX="315.0" layoutY="4.0" mnemonicParsing="false" text="proparacaine" />
+                  <CheckBox fx:id="osCheck" layoutX="162.0" layoutY="27.0" mnemonicParsing="false" text="OS" />
+                  <CheckBox fx:id="odCheck" layoutX="315.0" layoutY="28.0" mnemonicParsing="false" text="OD" />
+                  <CheckBox fx:id="burrCheck" layoutX="162.0" layoutY="50.0" mnemonicParsing="false" text="burr" />
+                  <CheckBox fx:id="gauzeNeedleCheck" layoutX="315.0" layoutY="51.0" mnemonicParsing="false" text="25 gauze needle" />
+                  <CheckBox fx:id="cottonCheck" layoutX="162.0" layoutY="68.0" mnemonicParsing="false" text="cotton tip aplicator" />
+                  <CheckBox fx:id="irrigationCheck" layoutX="315.0" layoutY="69.0" mnemonicParsing="false" text="irrigation w/ophthalmic saline" />
+                  <Separator layoutY="24.0" prefHeight="0.0" prefWidth="534.0" />
+                  <Separator layoutX="-1.0" layoutY="48.0" prefHeight="0.0" prefWidth="534.0" />
+                  <Label layoutX="4.0" layoutY="29.0" text="Instilled OS/OD" />
+                  <Label layoutX="2.0" layoutY="59.0" text="Removal" />
+                  <CheckBox fx:id="identificationWood" layoutX="317.0" layoutY="96.0" mnemonicParsing="false" text="wood" />
+                  <CheckBox fx:id="identificationUnknownEtiology" layoutX="317.0" layoutY="119.0" mnemonicParsing="false" text="unknown etiology" />
+                  <CheckBox fx:id="identificationNonmagneticMaterial" layoutX="317.0" layoutY="143.0" mnemonicParsing="false" text="non-magnetic material" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

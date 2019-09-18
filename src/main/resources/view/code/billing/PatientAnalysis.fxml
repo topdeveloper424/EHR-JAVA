@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.billingPanel.PatientAnalysisController">
+   <children>
+      <TitledPane animated="false" layoutX="7.0" layoutY="-37.0" prefHeight="51.0" prefWidth="654.0" stylesheets="@../../../css/style.css" text="Patient Visit Analysis Report" />
+      <TabPane layoutX="-1.0" layoutY="30.0" prefHeight="458.0" prefWidth="654.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Report Options">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="623.0">
+                     <children>
+                        <Label layoutX="266.0" layoutY="27.0" prefHeight="25.0" prefWidth="74.0" text="Thru Date" />
+                        <DatePicker fx:id="thuDatetext" layoutX="332.0" layoutY="27.0" />
+                        <Label layoutX="20.0" layoutY="70.0" prefHeight="26.0" prefWidth="99.0" text="Style of Report" />
+                        <RadioButton fx:id="summaryRadio" layoutX="55.0" layoutY="103.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="77.0" text="Summary" />
+                        <RadioButton fx:id="detailRadio" layoutX="55.0" layoutY="137.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="75.0" text="Detail" />
+                        <Label layoutX="13.0" layoutY="24.0" prefHeight="23.0" prefWidth="78.0" text="Report From" />
+                        <Label layoutX="173.0" layoutY="75.0" prefHeight="17.0" prefWidth="100.0" text=" Report By" />
+                        <Label layoutX="173.0" layoutY="103.0" text="1)" />
+                        <ChoiceBox fx:id="reportBy1text" layoutX="198.0" layoutY="99.0" prefHeight="25.0" prefWidth="208.0" stylesheets="@../../../css/style.css" />
+                        <ChoiceBox fx:id="reportBy2text" layoutX="198.0" layoutY="190.0" prefHeight="29.0" prefWidth="208.0" stylesheets="@../../../css/style.css" />
+                        <Label layoutX="175.0" layoutY="196.0" prefHeight="17.0" prefWidth="12.0" text="2)" />
+                        <Button fx:id="select1button" layoutX="380.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" stylesheets="@../../../css/style.css" />
+                        <Button fx:id="search2button" layoutX="380.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" stylesheets="@../../../css/style.css" />
+                        <Label layoutX="151.0" layoutY="146.0" text="Selecting :" />
+                        <Label layoutX="145.0" layoutY="252.0" text="Selecting :" />
+                        <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="389.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/search-icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="389.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/search-icon.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="printbutton" layoutX="361.0" layoutY="374.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Print" />
+                        <ImageView fitHeight="17.0" fitWidth="14.0" layoutX="366.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/p.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="cancelbtn" layoutX="464.0" layoutY="373.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Cancel" />
+                        <ImageView fitHeight="16.0" fitWidth="14.0" layoutX="471.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/Adment.png" />
+                           </image>
+                        </ImageView>
+                        <CheckBox fx:id="companyChkBox" layoutX="458.0" layoutY="205.0" mnemonicParsing="false" text="All Companies" />
+                        <CheckBox fx:id="clinicChkBox" layoutX="458.0" layoutY="103.0" mnemonicParsing="false" text="All Clinics" />
+                        <Button fx:id="clinicBtn" layoutX="459.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Clinic" />
+                        <Button fx:id="cmpnyBtn" layoutX="459.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Company" />
+                        <TextField fx:id="textarea1" layoutX="212.0" layoutY="142.0" stylesheets="@../../../css/style.css" />
+                        <TextField fx:id="textarea2" layoutX="212.0" layoutY="248.0" stylesheets="@../../../css/style.css" />
+                        <Button fx:id="memorizeBtn" layoutX="104.0" layoutY="373.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Memorize" />
+                        <Label fx:id="lone" layoutX="457.0" layoutY="182.0" prefHeight="17.0" prefWidth="89.0" />
+                        <Label fx:id="ltwo" layoutX="457.0" layoutY="286.0" prefHeight="17.0" prefWidth="88.0" />
+                        <DatePicker fx:id="fromDatetext" layoutX="86.0" layoutY="27.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

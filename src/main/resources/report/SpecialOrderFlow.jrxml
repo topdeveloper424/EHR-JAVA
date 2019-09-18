@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SpecialOrderFlow" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4d719b90-6548-476d-87a2-e4a518fd24e8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="specialOrder" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="medicalActivity.cptCode4Hcpcs.code" class="java.lang.Object"/>
+	<field name="medicalActivity.code" class="java.lang.Object"/>
+	<field name="medicalActivity.descrip" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="12">
+			<rectangle>
+				<reportElement x="20" y="-20" width="510" height="30" backcolor="#FFFF80" uuid="8efb4758-485f-4ed2-8b3b-5b62a010ff09"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="150" y="-19" width="270" height="28" uuid="4eb0e0f6-5cba-46d4-9ad8-13d2470d307c"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Special Ordered Services]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="0" width="100" height="20" uuid="fbe6c67e-47c9-44a9-bbdc-4911ed1e2552"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.cptCode4Hcpcs.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="130" height="20" uuid="10cc5f3d-3473-459d-b53b-232ad8569a68"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="90" height="20" uuid="f0909f9a-4221-4ecf-b992-e1629ad87ae7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.descrip}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

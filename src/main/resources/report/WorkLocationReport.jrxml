@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2016-08-02T12:14:18 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WorkLocationReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c31c72f-a02d-49f4-81a2-b7fc784a76fd">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.String"/>
+	<field name="address.city" class="java.lang.Object"/>
+	<field name="address.state" class="java.lang.Object"/>
+	<field name="address.zip" class="java.lang.Object"/>
+	<field name="naicsCode.code" class="java.lang.Object"/>
+	<field name="sicCode.code" class="java.lang.Object"/>
+	<field name="inactive" class="java.lang.Boolean"/>
+	<field name="descrp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="842" height="40" uuid="a9883401-905b-4fba-8f0b-57f40a223b7e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[WorkLocation Details Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="597" y="2" width="31" height="28" uuid="bc176a1e-469d-4f7e-8cb3-f94c2f95dc72"/>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="716" y="3" width="28" height="20" uuid="14ac0ba9-dd2f-4a3c-925c-26617676c34c"/>
+				<textElement textAlignment="Left">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Time :]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="634" y="2" width="79" height="24" uuid="66afe292-e751-4d80-8ef6-8dcd6be69014"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="744" y="4" width="57" height="30" uuid="f5cca151-689a-4922-9198-901d2a800197"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="100" height="30" uuid="e0141dd2-f16d-4b0c-bcc6-d41ce0f56333"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[WorkLocation Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="0" width="97" height="30" uuid="7cd0024c-ad2e-4e30-82bc-181c1f20588c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="91fc3d8b-970e-4b32-a230-d2cda200b798"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="0" width="100" height="30" uuid="872d5d5c-ef6a-436f-86a1-dd64e6fbf2ba"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[State]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="0" width="100" height="30" uuid="a208c118-e8a1-4a58-8c81-7ddff6939e51"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Zip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="481" y="0" width="100" height="30" uuid="256a0578-ca36-4f93-bfaa-93b7058d7b0e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NAICS Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="581" y="0" width="100" height="30" uuid="c12c46e0-1a7d-476a-8336-63911bc4a870"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SIC Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="681" y="0" width="100" height="30" uuid="a5f4bd95-ccb8-401a-8120-477da9fc7dd5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Inactive]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="0" width="100" height="30" uuid="7fc7fb8b-db67-4a1c-9119-56e071386df7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="30" uuid="1a0db838-4f43-4b66-9612-1b18fa0eeade"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="30" uuid="00473923-e015-4af5-94e4-df2aa4a0057e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="1aba5d51-8432-4588-aba6-eec83a22900f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.zip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="2" width="97" height="30" uuid="dc06be5e-06c9-4dc4-80a3-79385240450c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{naicsCode.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="2" width="100" height="30" uuid="72012562-d86b-444d-aee4-0b07179a5239"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sicCode.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="681" y="0" width="100" height="30" uuid="f2cce15f-8479-4b4c-a7cf-a6143d36b27f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inactive}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="6ca7892e-d24e-423e-ba5a-275ca7bb04be"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="11" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="969.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.PTParametersExercisesInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="9.0" prefHeight="586.0" prefWidth="956.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="64.0" prefHeight="4.0" prefWidth="1001.0" />
+                  <Label layoutX="6.0" layoutY="4.0" text="Exercises General" />
+                  <Label layoutX="6.0" layoutY="72.0" text="Exercises General" />
+                  <Separator layoutX="170.0" layoutY="1.0" orientation="VERTICAL" prefHeight="497.0" prefWidth="6.0" />
+                  <CheckBox fx:id="generalPRECkeckBox" layoutX="581.0" layoutY="23.0" mnemonicParsing="false" text="PRE's" />
+                  <CheckBox fx:id="generalARomCheck" layoutX="217.0" layoutY="3.0" mnemonicParsing="false" text="aROM" />
+                  <CheckBox fx:id="generalStretchCheck" layoutX="771.0" layoutY="4.0" mnemonicParsing="false" text="Stretches" />
+                  <CheckBox fx:id="generalAARomsCheck" layoutX="406.0" layoutY="6.0" mnemonicParsing="false" text="aaROM" />
+                  <CheckBox fx:id="generalPRomCheck" layoutX="581.0" layoutY="3.0" mnemonicParsing="false" text="pROM" />
+                  <Separator layoutX="7.0" layoutY="89.0" prefHeight="8.0" prefWidth="1001.0" />
+                  <Separator layoutX="3.0" layoutY="155.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Separator layoutX="-4.0" layoutY="286.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Label layoutX="6.0" layoutY="243.0" text="Exercises Knee " />
+                  <Label layoutX="6.0" layoutY="180.0" text="Exercises Shoulder " />
+                  <Label layoutX="6.0" layoutY="108.0" text="Exercises  Spine" />
+                  <CheckBox fx:id="spineSwissballCheck" layoutX="217.0" layoutY="97.0" mnemonicParsing="false" text="Swissball" />
+                  <CheckBox fx:id="spinePelvicCheck" layoutX="406.0" layoutY="97.0" mnemonicParsing="false" text="Pelvic tilt" />
+                  <CheckBox fx:id="spineSingleCheck" layoutX="581.0" layoutY="96.0" mnemonicParsing="false" text="Single-knee-chest" />
+                  <CheckBox fx:id="general2FoarRollerCheck" layoutX="771.0" layoutY="71.0" mnemonicParsing="false" text="Foam Roller" />
+                  <CheckBox fx:id="spineHamstringCheck" layoutX="217.0" layoutY="116.0" mnemonicParsing="false" text="Hamstring stretch" />
+                  <CheckBox fx:id="spineLateralCheck" layoutX="406.0" layoutY="116.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="153.0" text="Lateral trunk rotation" />
+                  <CheckBox fx:id="spineAngryCheck" layoutX="217.0" layoutY="136.0" mnemonicParsing="false" text="Angry cat stretch" />
+                  <CheckBox fx:id="spineCobraCheck" layoutX="406.0" layoutY="135.0" mnemonicParsing="false" text="Cobra stretch" />
+                  <CheckBox fx:id="spineSupermanCheck" layoutX="581.0" layoutY="134.0" mnemonicParsing="false" text="Superman" />
+                  <CheckBox fx:id="spineFoamRollerCheck" layoutX="771.0" layoutY="136.0" mnemonicParsing="false" text="Foam Roller exercises" />
+                  <CheckBox fx:id="shoulderExternalCheck" layoutX="217.0" layoutY="157.0" mnemonicParsing="false" text="External/Internal rotation" />
+                  <CheckBox fx:id="shoulderWallCheck" layoutX="406.0" layoutY="158.0" mnemonicParsing="false" text="Wall push-up" />
+                  <CheckBox fx:id="shoulderWandCheck" layoutX="406.0" layoutY="177.0" mnemonicParsing="false" text="wand" />
+                  <CheckBox fx:id="shoulderCodmanCheck" layoutX="581.0" layoutY="179.0" mnemonicParsing="false" text="Codman" />
+                  <CheckBox fx:id="shoulderSwissballCheck" layoutX="771.0" layoutY="178.0" mnemonicParsing="false" text="Swissball" />
+                  <Label layoutX="6.0" layoutY="370.0" text="Exercises Foot/Ankle" />
+                  <CheckBox fx:id="shoulderClimbingCheck" layoutX="217.0" layoutY="197.0" mnemonicParsing="false" text="Climbing wall" />
+                  <CheckBox fx:id="shoulderRowingCheck" layoutX="406.0" layoutY="197.0" mnemonicParsing="false" text="rowing" />
+                  <CheckBox fx:id="shoulderLateralCheck" layoutX="581.0" layoutY="198.0" mnemonicParsing="false" text="Lateral pull down" />
+                  <CheckBox fx:id="shoulderPNFCheck" layoutX="771.0" layoutY="198.0" mnemonicParsing="false" text="PNF" />
+                  <Separator layoutX="-4.0" layoutY="218.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="elbowHandBallCheck" layoutX="406.0" layoutY="291.0" mnemonicParsing="false" text="Hand ball" />
+                  <CheckBox fx:id="elbowDigiFlexCheckBox" layoutX="406.0" layoutY="310.0" mnemonicParsing="false" text="Digiflex" />
+                  <CheckBox fx:id="elbowMarbleCheck" layoutX="217.0" layoutY="310.0" mnemonicParsing="false" text="Marble Exercises" />
+                  <CheckBox fx:id="elbowDesensitizationCheck" layoutX="771.0" layoutY="292.0" mnemonicParsing="false" text="Desensitization" />
+                  <CheckBox fx:id="elbowNutralCheck" layoutX="581.0" layoutY="292.0" mnemonicParsing="false" text="Nutral Tendron Glides" />
+                  <CheckBox fx:id="elbowPowerCheck" layoutX="581.0" layoutY="311.0" mnemonicParsing="false" text="Power web" />
+                  <CheckBox fx:id="elbowFineMotorCheck" layoutX="771.0" layoutY="312.0" mnemonicParsing="false" text="Fine motor drils" />
+                  <CheckBox fx:id="elbowExeboardCheck" layoutX="217.0" layoutY="329.0" mnemonicParsing="false" text="Exerboard" />
+                  <CheckBox fx:id="elbowFlexBarCheck" layoutX="217.0" layoutY="292.0" mnemonicParsing="false" text="Flex Bar" />
+                  <CheckBox fx:id="generalIsometricsCheck" layoutX="217.0" layoutY="24.0" mnemonicParsing="false" text="Isometrics" />
+                  <CheckBox fx:id="generalTBandCheck" layoutX="406.0" layoutY="26.0" mnemonicParsing="false" text="T- Band Exercises" />
+                  <CheckBox fx:id="generalStabilizationCheck" layoutX="217.0" layoutY="44.0" mnemonicParsing="false" text="Stabilization" />
+                  <CheckBox fx:id="general2SwissballCheck" layoutX="217.0" layoutY="70.0" mnemonicParsing="false" text="Swissball" />
+                  <CheckBox fx:id="generalTreadmillCheck" layoutX="406.0" layoutY="45.0" mnemonicParsing="false" text="Treadmill" />
+                  <CheckBox fx:id="general2PNFCheck" layoutX="406.0" layoutY="71.0" mnemonicParsing="false" text="PNF" />
+                  <CheckBox fx:id="generalRelaxationCheck" layoutX="581.0" layoutY="43.0" mnemonicParsing="false" text="Relaxation Techniques" />
+                  <CheckBox fx:id="general2PilatesCheck" layoutX="581.0" layoutY="70.0" mnemonicParsing="false" text="Pilates" />
+                  <CheckBox fx:id="shoulderSideCheck" layoutX="581.0" layoutY="159.0" mnemonicParsing="false" text="Side raise" />
+                  <CheckBox fx:id="shoulderPullyCheck" layoutX="771.0" layoutY="158.0" mnemonicParsing="false" text="Shoulder Pully" />
+                  <Separator layoutX="3.0" layoutY="355.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="elbowTheraputtyCheck" layoutX="406.0" layoutY="330.0" mnemonicParsing="false" text="Theraputty" />
+                  <Button fx:id="doneBtn" layoutX="705.0" layoutY="508.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="810.0" layoutY="508.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="shoulderTowelCheck" layoutX="217.0" layoutY="177.0" mnemonicParsing="false" text="Towel Exercises" />
+                  <CheckBox fx:id="generalUBECheck" layoutX="771.0" layoutY="24.0" mnemonicParsing="false" text="UBE" />
+                  <CheckBox fx:id="generalBicycleCheck" layoutX="771.0" layoutY="43.0" mnemonicParsing="false" text="Bicycle" />
+                  <CheckBox fx:id="spineDoubleCheck" layoutX="771.0" layoutY="96.0" mnemonicParsing="false" text="Double-Knee-Chest" />
+                  <CheckBox fx:id="spineMidBackCheck" layoutX="771.0" layoutY="116.0" mnemonicParsing="false" text="Mid-back Stretch" />
+                  <CheckBox fx:id="spineBidgesCheck" layoutX="581.0" layoutY="115.0" mnemonicParsing="false" text="Bidges" />
+                  <Label layoutX="6.0" layoutY="439.0" text="Exercises Proprioception" />
+                  <Label layoutX="6.0" layoutY="311.0" text="Exercises Elbow/Wrist/hand" />
+                  <CheckBox fx:id="kneeQuadricepsCheck" layoutX="217.0" layoutY="222.0" mnemonicParsing="false" text="Quadriceps sets" />
+                  <CheckBox fx:id="kneeGlutealCheck" layoutX="406.0" layoutY="223.0" mnemonicParsing="false" text="gluteal sets" />
+                  <CheckBox fx:id="kneeLAQCheck" layoutX="406.0" layoutY="242.0" mnemonicParsing="false" text="LAQ's" />
+                  <CheckBox fx:id="kneeLegPressCheck" layoutX="581.0" layoutY="244.0" mnemonicParsing="false" text="Leg Press" />
+                  <CheckBox fx:id="kneeExtensionCheck" layoutX="771.0" layoutY="243.0" mnemonicParsing="false" text="Knee extension/flexion" />
+                  <CheckBox fx:id="kneeLegCurlCheck" layoutX="217.0" layoutY="262.0" mnemonicParsing="false" text="Leg Curl" />
+                  <CheckBox fx:id="kneeRestoratorCheck" layoutX="406.0" layoutY="262.0" mnemonicParsing="false" text="restorator" />
+                  <CheckBox fx:id="kneeStepperCheck" layoutX="581.0" layoutY="263.0" mnemonicParsing="false" text="Stepper" />
+                  <CheckBox fx:id="kneeDynaCheck" layoutX="771.0" layoutY="263.0" mnemonicParsing="false" text="Dyna-disc Ball" />
+                  <CheckBox fx:id="kneeHamstringCheck" layoutX="581.0" layoutY="224.0" mnemonicParsing="false" text="Hamstring sets" />
+                  <CheckBox fx:id="kneeSLRCheck" layoutX="771.0" layoutY="223.0" mnemonicParsing="false" text="SLR's" />
+                  <CheckBox fx:id="kneeSAQCheck" layoutX="217.0" layoutY="242.0" mnemonicParsing="false" text="SAQ's" />
+                  <CheckBox fx:id="footAnklePumpsCheck" layoutX="406.0" layoutY="361.0" mnemonicParsing="false" text="foot/ankle pumps" />
+                  <CheckBox fx:id="footInversionCheckBox" layoutX="406.0" layoutY="380.0" mnemonicParsing="false" text="Inversion stretch" />
+                  <CheckBox fx:id="footCalfCheck" layoutX="219.0" layoutY="380.0" mnemonicParsing="false" text="calf-stretch" />
+                  <CheckBox fx:id="footAnkleLungeCheck" layoutX="771.0" layoutY="362.0" mnemonicParsing="false" text="Ankle/Lunge Stretch" />
+                  <CheckBox fx:id="footBapBoardCheck" layoutX="581.0" layoutY="362.0" mnemonicParsing="false" text="Bap's Board" />
+                  <CheckBox fx:id="footKneelingCheck" layoutX="581.0" layoutY="381.0" mnemonicParsing="false" text="Kneeling stretch" />
+                  <CheckBox fx:id="footAnkleCircleCheck" layoutX="771.0" layoutY="382.0" mnemonicParsing="false" text="Foot/Ankle Circles" />
+                  <CheckBox fx:id="footTowelCheck" layoutX="219.0" layoutY="399.0" mnemonicParsing="false" text="Towel Exercises" />
+                  <CheckBox fx:id="footABCCheck" layoutX="219.0" layoutY="362.0" mnemonicParsing="false" text="ABC's" />
+                  <Separator layoutX="5.0" layoutY="425.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="Proprioception2FeetCheck" layoutX="406.0" layoutY="430.0" mnemonicParsing="false" text="2 feet" />
+                  <CheckBox fx:id="ProprioceptionDiscCheck" layoutX="221.0" layoutY="449.0" mnemonicParsing="false" text="Disc" />
+                  <CheckBox fx:id="ProprioceptionTherabandCheck" layoutX="771.0" layoutY="431.0" mnemonicParsing="false" text="Theraband" />
+                  <CheckBox fx:id="ProprioceptionSingleLegCheck" layoutX="581.0" layoutY="431.0" mnemonicParsing="false" text="Single Leg" />
+                  <CheckBox fx:id="ProprioceptionSingleLegStandCheck" layoutX="221.0" layoutY="468.0" mnemonicParsing="false" text="Single leg stand" />
+                  <CheckBox fx:id="ProprioceptionWobbleCheck" layoutX="221.0" layoutY="431.0" mnemonicParsing="false" text="wobble board" />
+                  <Separator layoutX="7.0" layoutY="494.0" prefHeight="0.0" prefWidth="1001.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

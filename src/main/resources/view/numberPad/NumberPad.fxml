@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="192.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.numberPad.NumberPadGUIController">
+   <children>
+      <Button fx:id="Btn1" layoutX="28.0" layoutY="6.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="1" />
+      <Button fx:id="Btn2" layoutX="76.0" layoutY="6.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="2" />
+      <Button fx:id="Btn3" layoutX="122.0" layoutY="6.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="3" />
+      <Button fx:id="Btn4" layoutX="28.0" layoutY="45.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="4" />
+      <Button fx:id="Btn5" layoutX="76.0" layoutY="45.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="5" />
+      <Button fx:id="Btn6" layoutX="122.0" layoutY="45.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="6" />
+      <Button fx:id="Btn7" layoutX="28.0" layoutY="84.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="7" />
+      <Button fx:id="Btn8" layoutX="76.0" layoutY="84.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="8" />
+      <Button fx:id="Btn9" layoutX="122.0" layoutY="84.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="9" />
+      <Button fx:id="BtnDot" layoutX="28.0" layoutY="122.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="." />
+      <Button fx:id="Btn0" layoutX="76.0" layoutY="122.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="0" />
+      <Button fx:id="BtnPlusOrMinus" layoutX="122.0" layoutY="122.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="34.0" text="-/+" />
+      <TextField fx:id="displayText" layoutX="30.0" layoutY="163.0" prefHeight="32.0" prefWidth="119.0" />
+      <Button fx:id="clearBtn" layoutX="19.0" layoutY="207.0" mnemonicParsing="false" text="Clear All" />
+      <Button fx:id="backSpaceBtn" layoutX="95.0" layoutY="207.0" mnemonicParsing="false" text="Backspace" />
+      <Button fx:id="okBtn" layoutX="19.0" layoutY="243.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelBtn" layoutX="95.0" layoutY="242.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

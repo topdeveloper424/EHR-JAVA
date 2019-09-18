@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProviderReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba773f20-b6c3-4be4-b7a2-85033e1dc548">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.String"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="address.city" class="java.lang.Object"/>
+	<field name="providerType" class="java.lang.String"/>
+	<field name="address.phone" class="java.lang.Object"/>
+	<field name="address.fax" class="java.lang.Object"/>
+	<background>
+		<band height="30" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="20" width="590" height="59" forecolor="#0080C0" uuid="1728c2c9-d8c8-426b-9523-689b952236b6">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[                             Provider Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="70" height="20" uuid="79272d73-a41a-442c-b3b5-5c7662fe7d0a"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="80" height="40" uuid="bde71218-334f-423f-a17e-64eaeffda2ca"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Name & Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="70" height="20" uuid="e880b0c7-7274-4b68-bf83-749b29e57e5c"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="89" height="20" uuid="af51dca6-be62-4811-ad3f-6a1c99dac263"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Phone & Fax]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="90" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="70" height="30" uuid="504e8f95-4260-45de-ac61-a2d28fdcdfc8"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="70" height="30" uuid="4250f41c-8942-451c-8354-a6541e6be569"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="30" width="80" height="23" uuid="9b6b842d-04f8-4763-9139-7ac20296656a"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="70" height="30" uuid="aba44679-0702-4268-8384-ce64c6e96286"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{providerType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="-4" width="70" height="30" uuid="239bd72e-af1c-4893-b84d-429d102b9add"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="26" width="70" height="30" uuid="6cf9f6c1-8763-43c6-8945-572593fa2b50"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address.fax}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="53" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

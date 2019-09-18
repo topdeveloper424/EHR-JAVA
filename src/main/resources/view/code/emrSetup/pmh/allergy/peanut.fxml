@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.allergy.PeanutInputController">
+   <children>
+      <Button fx:id="SkipButton" layoutX="651.0" layoutY="607.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="DoneButton" layoutX="557.0" layoutY="607.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextArea fx:id="additionalNoteTextArea" layoutX="119.0" layoutY="571.0" prefHeight="44.0" prefWidth="427.0" />
+      <Label layoutX="17.0" layoutY="581.0" prefHeight="16.0" prefWidth="98.0" text="Additional Notes" />
+      <Label layoutX="16.0" layoutY="14.0" prefHeight="16.0" prefWidth="91.0" text="EMR Wizard" />
+      <Label layoutX="170.0" layoutY="21.0" prefHeight="17.0" prefWidth="73.0" text="Medication" />
+      <Button fx:id="medicationSearchBtn" layoutX="246.0" layoutY="19.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="24.0">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="15.0" layoutY="59.0" prefHeight="17.0" prefWidth="144.0" text="Allergy/Adverse reaction" />
+      <TextField fx:id="allergyReactionText" layoutX="172.0" layoutY="55.0" prefHeight="25.0" prefWidth="254.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="88.0" prefHeight="100.0" prefWidth="795.0" text="Relevant Timing">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="570.0">
+               <children>
+                  <Label layoutX="11.0" layoutY="8.0" prefHeight="17.0" prefWidth="73.0" text="Onset Date:" />
+                  <Label layoutX="11.0" layoutY="41.0" prefHeight="17.0" prefWidth="73.0" text="Onset Age:" />
+                  <Label layoutX="369.0" layoutY="7.0" prefHeight="17.0" prefWidth="73.0" text="End Date:" />
+                  <Label layoutX="369.0" layoutY="40.0" prefHeight="17.0" prefWidth="73.0" text="Onset Year:" />
+                  <DatePicker fx:id="onsetDate" layoutX="99.0" layoutY="6.0" prefHeight="25.0" prefWidth="138.0" />
+                  <DatePicker fx:id="endDate" layoutX="475.0" layoutY="4.0" prefHeight="25.0" prefWidth="138.0" />
+                  <TextField fx:id="onsetAge" layoutX="99.0" layoutY="38.0" prefHeight="25.0" prefWidth="62.0" />
+                  <TextField fx:id="onsetYear" layoutX="475.0" layoutY="36.0" prefHeight="25.0" prefWidth="62.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="201.0" prefHeight="141.0" prefWidth="795.0" text="Allergy/Adverse Reaction Event Time">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="666.0">
+               <children>
+                  <RadioButton fx:id="propensityToAdverseDrugRadio" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="234.0" text="Propensity to adverse reaction to Drug">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="allergy" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="propensityToAdverseFoodRadio" layoutX="14.0" layoutY="37.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="234.0" text="Propensity to adverse reaction to Food" toggleGroup="$allergy" />
+                  <RadioButton fx:id="propensityToAdverseSubstancesRadio" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="261.0" text="Propensity to adverse reaction to Substances" toggleGroup="$allergy" />
+                  <RadioButton fx:id="propensityToAdverseRadio" layoutX="14.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Propensity to adverse Reactions" toggleGroup="$allergy" />
+                  <RadioButton fx:id="drugAllergyRadio" layoutX="377.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="Drug Alergy" toggleGroup="$allergy" />
+                  <RadioButton fx:id="foodAllergyRadio" layoutX="377.0" layoutY="37.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="Food Alergy" toggleGroup="$allergy" />
+                  <RadioButton fx:id="allergyToSubstancesRadio" layoutX="377.0" layoutY="60.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="144.0" text="Allergy to substances" toggleGroup="$allergy" />
+                  <RadioButton fx:id="drugIntoleranceRadio" layoutX="590.0" layoutY="11.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Drug Intolerance" toggleGroup="$allergy" />
+                  <RadioButton fx:id="foodIntoleranceRadio" layoutX="590.0" layoutY="37.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Food Intolerance" toggleGroup="$allergy" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="349.0" prefHeight="215.0" prefWidth="795.0" text="Pick any Reaction that Patient Reported">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="675.0">
+               <children>
+                  <CheckBox fx:id="anaphylaxisCheck" layoutX="1.0" layoutY="4.0" mnemonicParsing="false" text="anaphylaxis" />
+                  <CheckBox fx:id="congestionCheck" layoutX="-2.0" layoutY="156.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="172.0" text="Congestion of nasal sinus" />
+                  <CheckBox fx:id="diarrheaCheck" layoutY="26.0" mnemonicParsing="false" text="diarrhea" />
+                  <CheckBox fx:id="urticariaCheck" layoutY="47.0" mnemonicParsing="false" text="urticaria(hives)" />
+                  <CheckBox fx:id="flushingCheck" layoutY="70.0" mnemonicParsing="false" text="flushing" />
+                  <CheckBox fx:id="nauseaCheck" layoutX="-1.0" layoutY="92.0" mnemonicParsing="false" text="nausea" />
+                  <CheckBox fx:id="SwelllingCheck" layoutY="115.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="131.0" text="Swellling of skin" />
+                  <CheckBox fx:id="tinglingCheck" layoutY="137.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="133.0" text="Tingling of skin" />
+                  <RadioButton fx:id="anaphylaxisMildRadio" layoutX="162.0" layoutY="6.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="anaphylaxisGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="diarrheaMild" layoutX="162.0" layoutY="28.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="diarrheagrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="dizzinessMild" layoutX="162.0" layoutY="51.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dizzinessgrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="feverMild" layoutX="162.0" layoutY="72.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="feverGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="flushingMild" layoutX="162.0" layoutY="93.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="flushingGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="headacheMild" layoutX="162.0" layoutY="114.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="headacheGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="itchingMild" layoutX="162.0" layoutY="135.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="skinGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="nauseaMild" layoutX="162.0" layoutY="156.0" mnemonicParsing="false" text="Mild">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="nauseaGrp" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="anaphylaxisMildModerateRadio" layoutX="226.0" layoutY="6.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$anaphylaxisGrp" />
+                  <RadioButton fx:id="diarrheaMildModerate" layoutX="226.0" layoutY="28.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$diarrheagrp" />
+                  <RadioButton fx:id="dizzinessMildModerate" layoutX="226.0" layoutY="50.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$dizzinessgrp" />
+                  <RadioButton fx:id="feverMildModerate" layoutX="226.0" layoutY="73.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$feverGrp" />
+                  <RadioButton fx:id="flushingMildModerate" layoutX="226.0" layoutY="95.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$flushingGrp" />
+                  <RadioButton fx:id="itchingMildModerate" layoutX="226.0" layoutY="136.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$skinGrp" />
+                  <RadioButton fx:id="nauseaMildModerate" layoutX="226.0" layoutY="156.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$nauseaGrp" />
+                  <RadioButton fx:id="headacheMildModerate" layoutX="226.0" layoutY="116.0" mnemonicParsing="false" text="Mild to Moderate" toggleGroup="$headacheGrp" />
+                  <RadioButton fx:id="anaphylaxisModerateRadio" layoutX="354.0" layoutY="6.0" mnemonicParsing="false" text="Moderate" toggleGroup="$anaphylaxisGrp" />
+                  <RadioButton fx:id="diarrheaModerate" layoutX="354.0" layoutY="28.0" mnemonicParsing="false" text="Moderate" toggleGroup="$diarrheagrp" />
+                  <RadioButton fx:id="dizzinessModerate" layoutX="354.0" layoutY="51.0" mnemonicParsing="false" text="Moderate" toggleGroup="$dizzinessgrp" />
+                  <RadioButton fx:id="feverModerate" layoutX="355.0" layoutY="72.0" mnemonicParsing="false" text="Moderate" toggleGroup="$feverGrp" />
+                  <RadioButton fx:id="flushingModerate" layoutX="354.0" layoutY="92.0" mnemonicParsing="false" text="Moderate" toggleGroup="$flushingGrp" />
+                  <RadioButton fx:id="headacheModerate" layoutX="354.0" layoutY="114.0" mnemonicParsing="false" text="Moderate" toggleGroup="$headacheGrp" />
+                  <RadioButton fx:id="itchingModerate" layoutX="354.0" layoutY="136.0" mnemonicParsing="false" text="Moderate" toggleGroup="$skinGrp" />
+                  <RadioButton fx:id="nauseaModerate" layoutX="354.0" layoutY="156.0" mnemonicParsing="false" text="Moderate" toggleGroup="$nauseaGrp" />
+                  <RadioButton fx:id="anaphylaxisModerateSeverRadio" layoutX="442.0" layoutY="6.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$anaphylaxisGrp" />
+                  <RadioButton fx:id="diarrheaModerateSever" layoutX="442.0" layoutY="28.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$diarrheagrp" />
+                  <RadioButton fx:id="dizzinessModerateSever" layoutX="442.0" layoutY="49.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$dizzinessgrp" />
+                  <RadioButton fx:id="feverModerateSevere" layoutX="442.0" layoutY="70.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$feverGrp" />
+                  <RadioButton fx:id="flushingModerateSevere" layoutX="442.0" layoutY="93.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$flushingGrp" />
+                  <RadioButton fx:id="headacheModerateSevere" layoutX="442.0" layoutY="116.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$headacheGrp" />
+                  <RadioButton fx:id="itchingModerateSevere" layoutX="442.0" layoutY="136.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$skinGrp" />
+                  <RadioButton fx:id="nauseaModerateSevere" layoutX="442.0" layoutY="156.0" mnemonicParsing="false" text="Moderate to Severe" toggleGroup="$nauseaGrp" />
+                  <RadioButton fx:id="anaphylaxisSeverRadio" layoutX="576.0" layoutY="5.0" mnemonicParsing="false" text="Severe" toggleGroup="$anaphylaxisGrp" />
+                  <RadioButton fx:id="diarrheaSever" layoutX="576.0" layoutY="27.0" mnemonicParsing="false" text="Severe" toggleGroup="$diarrheagrp" />
+                  <RadioButton fx:id="dizzinessSevere" layoutX="576.0" layoutY="49.0" mnemonicParsing="false" text="Severe" toggleGroup="$dizzinessgrp" />
+                  <RadioButton fx:id="feverSevere" layoutX="576.0" layoutY="71.0" mnemonicParsing="false" text="Severe" toggleGroup="$feverGrp" />
+                  <RadioButton fx:id="flushingSevere" layoutX="576.0" layoutY="93.0" mnemonicParsing="false" text="Severe" toggleGroup="$flushingGrp" />
+                  <RadioButton fx:id="headacheSevere" layoutX="576.0" layoutY="116.0" mnemonicParsing="false" text="Severe" toggleGroup="$headacheGrp" />
+                  <RadioButton fx:id="itchingMildSevere" layoutX="576.0" layoutY="136.0" mnemonicParsing="false" text="Severe" toggleGroup="$skinGrp" />
+                  <RadioButton fx:id="nauseaSevere" layoutX="576.0" layoutY="156.0" mnemonicParsing="false" text="Severe" toggleGroup="$nauseaGrp" />
+                  <RadioButton fx:id="anaphylaxisFatal" layoutX="640.0" layoutY="6.0" mnemonicParsing="false" text="Fatal" toggleGroup="$anaphylaxisGrp" />
+                  <RadioButton fx:id="diarrheaFatal" layoutX="640.0" layoutY="27.0" mnemonicParsing="false" text="Fatal" toggleGroup="$diarrheagrp" />
+                  <RadioButton fx:id="dizzinessFatal" layoutX="640.0" layoutY="49.0" mnemonicParsing="false" text="Fatal" toggleGroup="$dizzinessgrp" />
+                  <RadioButton fx:id="feverFatal" layoutX="640.0" layoutY="72.0" mnemonicParsing="false" text="Fatal" toggleGroup="$feverGrp" />
+                  <RadioButton fx:id="flushingFatal" layoutX="640.0" layoutY="94.0" mnemonicParsing="false" text="Fatal" toggleGroup="$flushingGrp" />
+                  <RadioButton fx:id="headacheFatal" layoutX="640.0" layoutY="116.0" mnemonicParsing="false" text="Fatal" toggleGroup="$headacheGrp" />
+                  <RadioButton fx:id="itchingFatal" layoutX="640.0" layoutY="137.0" mnemonicParsing="false" text="Fatal" toggleGroup="$skinGrp" />
+                  <RadioButton fx:id="nauseafatal" layoutX="640.0" layoutY="156.0" mnemonicParsing="false" text="Fatal" toggleGroup="$nauseaGrp" />
+                  <RadioButton fx:id="anaphylaxisUnspecified" layoutX="703.0" layoutY="8.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$anaphylaxisGrp" />
+                  <RadioButton fx:id="diarrheaUnspecified" layoutX="703.0" layoutY="29.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$diarrheagrp" />
+                  <RadioButton fx:id="dizzinessUnspecified" layoutX="703.0" layoutY="49.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$dizzinessgrp" />
+                  <RadioButton fx:id="feverUnspecified" layoutX="703.0" layoutY="71.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$feverGrp" />
+                  <RadioButton fx:id="flushingUnspecified" layoutX="703.0" layoutY="94.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$flushingGrp" />
+                  <RadioButton fx:id="headacheUnspecified" layoutX="703.0" layoutY="115.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$headacheGrp" />
+                  <RadioButton fx:id="itchingUnspecified" layoutX="703.0" layoutY="137.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$skinGrp" />
+                  <RadioButton fx:id="nauseaUnspecified" layoutX="703.0" layoutY="156.0" mnemonicParsing="false" text="Unspecified" toggleGroup="$nauseaGrp" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Label fx:id="medicationNameLabel" layoutX="287.0" layoutY="23.0" prefHeight="17.0" prefWidth="144.0" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.ent.EntOtoscopicInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="452.0" prefWidth="630.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="-16.0" layoutY="80.0" prefHeight="4.0" prefWidth="1001.0" />
+                  <Label layoutX="6.0" layoutY="4.0" text="Left Ear Canal" />
+                  <Label layoutX="14.0" layoutY="104.0" text="Right Ear Canal" />
+                  <Separator layoutX="130.0" layoutY="1.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="8.0" />
+                  <Button fx:id="doneBtn" layoutX="776.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutY="165.0" prefHeight="1.0" prefWidth="985.0" />
+                  <Button fx:id="skipBtn" layoutX="876.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="canalLeftAllNormalCkeckBox" layoutX="149.0" layoutY="2.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="canalLeftNormalCkeckBox" layoutX="254.0" layoutY="2.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="canalLeftCerumenouslCkeckBox" layoutX="464.0" layoutY="21.0" mnemonicParsing="false" text="cerumenous" />
+                  <CheckBox fx:id="canalLeftErythematousCkeckBox" layoutX="464.0" layoutY="2.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="canalLeftExudatesCkeckBox" layoutX="254.0" layoutY="21.0" mnemonicParsing="false" text="with exudates" />
+                  <Separator layoutX="-4.0" layoutY="267.0" prefHeight="8.0" prefWidth="1001.0" />
+                  <Separator layoutY="379.0" prefHeight="1.0" prefWidth="1007.0" />
+                  <Label layoutX="24.0" layoutY="177.0" text="Left Tympanic" />
+                  <Label layoutX="13.0" layoutY="285.0" text="Right Tympanic" />
+                  <CheckBox fx:id="tympanicNormalCheck" layoutX="254.0" layoutY="168.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="tympanicErythematousCheck" layoutX="464.0" layoutY="168.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="tympanicBulgingCheck" layoutX="254.0" layoutY="187.0" mnemonicParsing="false" text="bulging" />
+                  <CheckBox fx:id="tympanicRetractedCheck" layoutX="464.0" layoutY="187.0" mnemonicParsing="false" text="retracted" />
+                  <CheckBox fx:id="tympanicFluidCheck" layoutX="254.0" layoutY="206.0" mnemonicParsing="false" text="fluid noted" />
+                  <CheckBox fx:id="tympanicPerforationCheck" layoutX="464.0" layoutY="206.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="134.0" text="perforation noted" />
+                  <CheckBox fx:id="tympanicForeignBodyCheck" layoutX="254.0" layoutY="246.0" mnemonicParsing="false" text="obsecured by foreign body" />
+                  <CheckBox fx:id="tympanicPETubeCheck" layoutX="464.0" layoutY="246.0" mnemonicParsing="false" text="PE tube noted" />
+                  <CheckBox fx:id="tympanicBloodCheck" layoutX="254.0" layoutY="226.0" mnemonicParsing="false" text="obsecured by blood" />
+                  <CheckBox fx:id="tympanicMucusCheck" layoutX="464.0" layoutY="226.0" mnemonicParsing="false" text="obsecured by mucus" />
+                  <CheckBox fx:id="tympanicRightNormalCheck" layoutX="254.0" layoutY="273.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="tympanicRightErythematousCheck" layoutX="464.0" layoutY="273.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="tympanicRightFluidCheck" layoutX="254.0" layoutY="313.0" mnemonicParsing="false" text="fluid noted" />
+                  <CheckBox fx:id="tympanicRightPerforationCheck" layoutX="464.0" layoutY="313.0" mnemonicParsing="false" text="perforation noted" />
+                  <CheckBox fx:id="tympanicRightBloodCheck" layoutX="254.0" layoutY="332.0" mnemonicParsing="false" text="obsecured by blood" />
+                  <CheckBox fx:id="tympanicRightMucusCheck" layoutX="464.0" layoutY="332.0" mnemonicParsing="false" text="obsecured by mucus" />
+                  <CheckBox fx:id="tympanicRightForeignBodyCheck" layoutX="254.0" layoutY="352.0" mnemonicParsing="false" text="obsecured by foreign body" />
+                  <CheckBox fx:id="tympanicRightPETubeCheck" layoutX="464.0" layoutY="352.0" mnemonicParsing="false" text="PE tube noted" />
+                  <CheckBox fx:id="canalLeftPETubeCkeckBox" layoutX="464.0" layoutY="59.0" mnemonicParsing="false" text="PE tube noted" />
+                  <CheckBox fx:id="canalLeftForeignBodyCkeckBox" layoutX="254.0" layoutY="59.0" mnemonicParsing="false" text="foreign body noted" />
+                  <CheckBox fx:id="canalLeftTenderTractionCkeckBox" layoutX="254.0" layoutY="40.0" mnemonicParsing="false" text="tender on traction on tragus" />
+                  <CheckBox fx:id="canalLeftBloodCkeckBox" layoutX="464.0" layoutY="40.0" mnemonicParsing="false" text="blood noted" />
+                  <CheckBox fx:id="canalRightNormalCkeckBox" layoutX="254.0" layoutY="84.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="canalRightTenderTractionCkeckBox" layoutX="254.0" layoutY="122.0" mnemonicParsing="false" text="tender on traction on tragus" />
+                  <CheckBox fx:id="canalRightErythematousCkeckBox" layoutX="464.0" layoutY="84.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="canalRightBloodCkeckBox" layoutX="464.0" layoutY="122.0" mnemonicParsing="false" text="blood noted" />
+                  <CheckBox fx:id="canalRightExudatesCkeckBox" layoutX="254.0" layoutY="103.0" mnemonicParsing="false" text="with exudates" />
+                  <CheckBox fx:id="canalRightForeignBodyCkeckBox" layoutX="254.0" layoutY="142.0" mnemonicParsing="false" text="foreign body noted" />
+                  <CheckBox fx:id="tympanicRightBulgingCheck" layoutX="254.0" layoutY="293.0" mnemonicParsing="false" text="bulging" />
+                  <CheckBox fx:id="tympanicRightRetractedCheck" layoutX="464.0" layoutY="293.0" mnemonicParsing="false" text="retracted" />
+                  <Button fx:id="doneBtn" layoutX="429.0" layoutY="385.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="537.0" layoutY="386.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="canalRightPETubeCkeckBox" layoutX="464.0" layoutY="142.0" mnemonicParsing="false" text="PE tube noted" />
+                  <CheckBox fx:id="canalRightCerumenouslCkeckBox" layoutX="464.0" layoutY="103.0" mnemonicParsing="false" text="cerumenous" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

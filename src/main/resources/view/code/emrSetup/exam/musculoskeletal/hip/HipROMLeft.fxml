@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="540.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.hip.HipRomLeftInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="331.0" prefWidth="539.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="214.0" prefWidth="525.0" stylesheets="@../../../../../../css/style.css">
+               <children>
+                  <Label layoutX="7.0" layoutY="12.0" text="Left Hip : Flexion w/knee flexe" />
+                  <Separator layoutX="173.0" layoutY="1.0" orientation="VERTICAL" prefHeight="262.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="314.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="409.0" layoutY="271.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="flexionFlexeText" layoutX="188.0" layoutY="3.0" />
+                  <Separator layoutY="35.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Label layoutX="7.0" layoutY="91.0" text="Left Hip:Extension" />
+                  <TextField fx:id="FlexionKneeText" layoutX="188.0" layoutY="42.0" />
+                  <TextField fx:id="LeftExtensionText" layoutX="190.0" layoutY="88.0" />
+                  <Separator layoutX="-3.0" layoutY="76.0" prefHeight="3.0" prefWidth="539.0" />
+                  <Separator layoutX="-2.0" layoutY="121.0" prefHeight="3.0" prefWidth="539.0" />
+                  <Label layoutX="6.0" layoutY="44.0" text="Left Hip : Flexion w/knee extern" />
+                  <Label layoutX="7.0" layoutY="132.0" text="Left Hip:Abduction" />
+                  <Separator layoutY="159.0" prefHeight="3.0" prefWidth="539.0" />
+                  <Label layoutX="7.0" layoutY="171.0" text="Left Hip:Adduction" />
+                  <Label layoutX="8.0" layoutY="205.0" text="Left Hip:Internal Rotation" />
+                  <Label layoutX="8.0" layoutY="240.0" text="Left Hip:External Rotation" />
+                  <Separator layoutX="-2.0" layoutY="196.0" prefHeight="3.0" prefWidth="539.0" />
+                  <Separator layoutX="-1.0" layoutY="233.0" prefHeight="3.0" prefWidth="539.0" />
+                  <Separator layoutX="-4.0" layoutY="263.0" prefHeight="4.0" prefWidth="552.0" />
+                  <TextField fx:id="abductionText" layoutX="188.0" layoutY="127.0" />
+                  <TextField fx:id="adductionText" layoutX="188.0" layoutY="165.0" />
+                  <TextField fx:id="internalText" layoutX="188.0" layoutY="200.0" />
+                  <TextField fx:id="externalText" layoutX="187.0" layoutY="237.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

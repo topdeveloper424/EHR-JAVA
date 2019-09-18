@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="418.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.denialReasonCode.DenialorShortPayReasonInputController">
+   <children>
+      <TextField fx:id="codeTextField" layoutX="112.0" layoutY="29.0" />
+      <TextField fx:id="descriptionTextField" layoutX="112.0" layoutY="67.0" prefHeight="25.0" prefWidth="291.0" />
+      <TextField fx:id="chargeCodeTextField" layoutX="112.0" layoutY="102.0" />
+      <TextField fx:id="electronicRemaintainDeniedCodeTextField" layoutX="254.0" layoutY="138.0" />
+      <CheckBox fx:id="inactiveCheckBox" layoutX="26.0" layoutY="192.0" mnemonicParsing="false" text="Inactive ?" />
+      <Label layoutX="26.0" layoutY="33.0" text="Code :" />
+      <Label layoutX="26.0" layoutY="72.0" text="Description :" />
+      <Label layoutX="26.0" layoutY="105.0" text="Charge Code :" />
+      <Label layoutX="26.0" layoutY="142.0" text="Electronic Remitance Denied Code :" />
+      <Button fx:id="okButton" layoutX="226.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="322.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

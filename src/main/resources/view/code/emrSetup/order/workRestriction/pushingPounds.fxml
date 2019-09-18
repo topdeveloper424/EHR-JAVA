@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.workRestriction.PushingPoundsInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="170.0" prefWidth="568.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="10.0" text="No Pulshing More Than" />
+                  <Separator layoutX="176.0" layoutY="-13.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="2.0" />
+                  <Button fx:id="doneBtn" layoutX="349.0" layoutY="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="450.0" layoutY="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="leftRadio" layoutX="206.0" layoutY="42.0" mnemonicParsing="false" text="With Left Arm">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="bend" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="rightRadio" layoutX="375.0" layoutY="42.0" mnemonicParsing="false" text="With Right Arm" toggleGroup="$bend" />
+                  <Separator layoutX="-3.0" layoutY="89.0" prefHeight="0.0" prefWidth="578.0" />
+                  <RadioButton fx:id="eitherRadio" layoutX="209.0" layoutY="66.0" mnemonicParsing="false" text="With Either Arm" toggleGroup="$bend" />
+                  <TextField fx:id="liftingText" layoutX="199.0" layoutY="5.0" prefHeight="25.0" prefWidth="331.0" />
+                  <Separator layoutY="36.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="14.0" layoutY="43.0" text="Arm" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

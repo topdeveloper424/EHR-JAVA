@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emhCharting.hpi.symptom.HPISymptomInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="532.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="488.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="AnxietyCheck" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" text="Anxiety" />
+                                    <CheckBox fx:id="BleedingCheck" layoutX="62.0" layoutY="35.0" mnemonicParsing="false" text="Bleeding" />
+                                    <CheckBox fx:id="BloodInStoolCheck" layoutX="62.0" layoutY="57.0" mnemonicParsing="false" text="Blood in Stool" />
+                                    <CheckBox fx:id="BloodInUrineCheck" layoutX="62.0" layoutY="78.0" mnemonicParsing="false" text="Blood in Urine" />
+                                    <CheckBox fx:id="BlurredVisionCheck" layoutX="62.0" layoutY="99.0" mnemonicParsing="false" text="Blurred Vision" />
+                                    <CheckBox fx:id="CongestionCheck" layoutX="62.0" layoutY="120.0" mnemonicParsing="false" text="Congestion" />
+                                    <CheckBox fx:id="ChillsCheck" layoutX="62.0" layoutY="143.0" mnemonicParsing="false" text="Chills" />
+                                    <CheckBox fx:id="ConstipationCheck" layoutX="62.0" layoutY="165.0" mnemonicParsing="false" text="Constipation" />
+                                    <CheckBox fx:id="DifficultySleepingCheck" layoutX="62.0" layoutY="252.0" mnemonicParsing="false" text="Difficulty Sleeping" />
+                                    <CheckBox fx:id="CoughCheck" layoutX="62.0" layoutY="187.0" mnemonicParsing="false" text="Cough" />
+                                    <CheckBox fx:id="DifficultySwalloingCheck" layoutX="62.0" layoutY="273.0" mnemonicParsing="false" text="Difficulty Swalloing" />
+                                    <CheckBox fx:id="DepressionCheck" layoutX="62.0" layoutY="209.0" mnemonicParsing="false" text="Depression" />
+                                    <CheckBox fx:id="DiarrheaCheck" layoutX="62.0" layoutY="229.0" mnemonicParsing="false" text="Diarrhea" />
+                                    <CheckBox fx:id="FeverCheck" layoutX="320.0" layoutY="14.0" mnemonicParsing="false" text="Fever" />
+                                    <CheckBox fx:id="ItchingCheck" layoutX="320.0" layoutY="120.0" mnemonicParsing="false" text="Itching" />
+                                    <CheckBox fx:id="HeadacheCheck" layoutX="320.0" layoutY="35.0" mnemonicParsing="false" text="Headache" />
+                                    <CheckBox fx:id="IrritationCheck" layoutX="320.0" layoutY="99.0" mnemonicParsing="false" text="Irritation" />
+                                    <CheckBox fx:id="IndigestionCheck" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" text="Indigestion" />
+                                    <CheckBox fx:id="HeartBurnCheck" layoutX="320.0" layoutY="57.0" mnemonicParsing="false" text="HeartBurn" />
+                                    <CheckBox fx:id="FrequentUrinationCheck" layoutX="62.0" layoutY="427.0" mnemonicParsing="false" text="Frequent Urination" />
+                                    <CheckBox fx:id="FaintingCheck" layoutX="62.0" layoutY="403.0" mnemonicParsing="false" text="Fainting" />
+                                    <CheckBox fx:id="EaracheCheck" layoutX="62.0" layoutY="381.0" mnemonicParsing="false" text="Earache" />
+                                    <CheckBox fx:id="DrainageCheck" layoutX="62.0" layoutY="358.0" mnemonicParsing="false" text="Drainage" />
+                                    <CheckBox fx:id="DizzinessCheck" layoutX="62.0" layoutY="336.0" mnemonicParsing="false" text="Dizziness" />
+                                    <CheckBox fx:id="DisorientationCheck" layoutX="62.0" layoutY="315.0" mnemonicParsing="false" text="Disorientation" />
+                                    <CheckBox fx:id="DischargeCheck" layoutX="62.0" layoutY="294.0" mnemonicParsing="false" text="Discharge" />
+                                    <CheckBox fx:id="NumbnessCheck" layoutX="320.0" layoutY="165.0" mnemonicParsing="false" text="Numbness" />
+                                    <CheckBox fx:id="ProblemsUrinatingCheck" layoutX="320.0" layoutY="209.0" mnemonicParsing="false" text="Problems Urinating" />
+                                    <CheckBox fx:id="NauseaCheck" layoutX="320.0" layoutY="143.0" mnemonicParsing="false" text="Nausea" />
+                                    <CheckBox fx:id="PainCheck" layoutX="320.0" layoutY="187.0" mnemonicParsing="false" text="Pain" />
+                                    <CheckBox fx:id="ShortnessofBreathCheck" layoutX="320.0" layoutY="231.0" mnemonicParsing="false" text="Shortness of Breath" />
+                                    <CheckBox fx:id="SorethroatCheck" layoutX="320.0" layoutY="253.0" mnemonicParsing="false" text="Sore throat" />
+                                    <CheckBox fx:id="SpasmCheck" layoutX="320.0" layoutY="275.0" mnemonicParsing="false" text="Spasm" />
+                                    <CheckBox fx:id="StiffnessCheck" layoutX="320.0" layoutY="296.0" mnemonicParsing="false" text="Stiffness" />
+                                    <CheckBox fx:id="SwellingCheck" layoutX="320.0" layoutY="319.0" mnemonicParsing="false" text="Swelling" />
+                                    <CheckBox fx:id="TightnessCheck" layoutX="320.0" layoutY="340.0" mnemonicParsing="false" text="Tightness" />
+                                    <CheckBox fx:id="TightnessinChestCheck" layoutX="320.0" layoutY="362.0" mnemonicParsing="false" text="Tightness in Chest" />
+                                    <CheckBox fx:id="TinglingCheck" layoutX="320.0" layoutY="387.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="Tingling" />
+                                    <CheckBox fx:id="VomitingCheck" layoutX="320.0" layoutY="412.0" mnemonicParsing="false" text="Vomiting" />
+                                    <CheckBox fx:id="OtherSymptomCheck" layoutX="319.0" layoutY="436.0" mnemonicParsing="false" text="*Other Symptom" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="486.0" layoutY="544.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="DoneButton" layoutX="396.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="539.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="385.0" prefWidth="527.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="97.0" prefHeight="3.0" prefWidth="525.0" />
+                  <Label layoutX="14.0" layoutY="12.0" text="Last Menstrual Period" />
+                  <Label fx:id="ulnarText" layoutX="11.0" layoutY="104.0" text="Cycle Frequency Days" />
+                  <Separator layoutX="137.0" layoutY="1.0" orientation="VERTICAL" prefHeight="305.0" prefWidth="16.0" />
+                  <Button fx:id="doneBtn" layoutX="306.0" layoutY="314.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="407.0" layoutY="314.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="lastPeriodText" layoutX="188.0" layoutY="3.0" />
+                  <TextField fx:id="ageText" layoutX="188.0" layoutY="38.0" />
+                  <TextField fx:id="dayText" layoutX="188.0" layoutY="139.0" />
+                  <TextField fx:id="frequencyText" layoutX="188.0" layoutY="103.0" />
+                  <Separator layoutY="32.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Separator layoutX="-2.0" layoutY="66.0" prefHeight="6.0" prefWidth="527.0" />
+                  <Separator layoutX="-1.0" layoutY="134.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Label layoutX="15.0" layoutY="40.0" text="Enter Age of Onset" />
+                  <Label fx:id="redialText" layoutX="12.0" layoutY="75.0" text="Select Regularity" />
+                  <Label fx:id="ulnarText1" layoutX="11.0" layoutY="143.0" text="Day of Duration" />
+                  <Label fx:id="ulnarText11" layoutX="15.0" layoutY="176.0" text="Menopause" />
+                  <Label fx:id="ulnarText111" layoutX="15.0" layoutY="203.0" text="Enter G" />
+                  <Label fx:id="ulnarText1111" layoutX="15.0" layoutY="238.0" text="Enter A" />
+                  <Label fx:id="ulnarText11111" layoutX="15.0" layoutY="273.0" text="Enter AB" />
+                  <TextField fx:id="gText" layoutX="188.0" layoutY="201.0" />
+                  <TextField fx:id="aText" layoutX="188.0" layoutY="235.0" />
+                  <TextField fx:id="abText" layoutX="188.0" layoutY="271.0" />
+                  <RadioButton fx:id="regularRadio" layoutX="188.0" layoutY="75.0" mnemonicParsing="false" text="regular">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="regular" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="irregularRadio" layoutX="307.0" layoutY="75.0" mnemonicParsing="false" text="irrugular" toggleGroup="$regular" />
+                  <Separator layoutX="-3.0" layoutY="169.0" prefHeight="5.0" prefWidth="527.0" />
+                  <Separator layoutX="-2.0" layoutY="196.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Separator layoutX="-1.0" layoutY="230.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Separator layoutX="-2.0" layoutY="265.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Separator layoutX="1.0" layoutY="300.0" prefHeight="8.0" prefWidth="527.0" />
+                  <Label layoutX="360.0" layoutY="12.0" text="days ago" />
+                  <Label layoutX="351.0" layoutY="107.0" text="day cycles" />
+                  <Label layoutX="351.0" layoutY="143.0" text="days" />
+                  <RadioButton fx:id="presentRadio" layoutX="188.0" layoutY="176.0" mnemonicParsing="false" text="Present">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="present" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="notPresentRadio" layoutX="332.0" layoutY="176.0" mnemonicParsing="false" text="Not Present" toggleGroup="$present" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

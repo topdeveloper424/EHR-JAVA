@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="536.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.instruction.patientInst.ExitCareMusculoSkeletalInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="381.0" prefWidth="527.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="536.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="14.0" text="General" />
+                  <RadioButton fx:id="GeneralColdUse" layoutX="324.0" layoutY="8.0" mnemonicParsing="false" text="Cold Use">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="level" />
+                     </toggleGroup></RadioButton>
+                  <Separator layoutX="140.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="263.0" prefWidth="4.0" />
+                  <Button fx:id="doneBtn" layoutX="299.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="393.0" layoutY="311.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="9.0" layoutY="90.0" text="Exitcare Back,Head,Neck" />
+                  <RadioButton fx:id="GeneralCastCare" layoutX="185.0" layoutY="8.0" mnemonicParsing="false" text="Cast care" toggleGroup="$level" />
+                  <RadioButton fx:id="GeneralHeatUseMoist" layoutX="325.0" layoutY="28.0" mnemonicParsing="false" text="Heat Use(Moist)" toggleGroup="$level" />
+                  <Separator layoutY="75.0" prefHeight="2.0" prefWidth="527.0" />
+                  <Separator layoutY="147.0" prefHeight="2.0" prefWidth="527.0" />
+                  <RadioButton fx:id="GeneralRICE" layoutX="186.0" layoutY="55.0" mnemonicParsing="false" text="R.I.C.E" toggleGroup="$level" />
+                  <RadioButton fx:id="GeneralWoundCare" layoutX="326.0" layoutY="50.0" mnemonicParsing="false" text="Wound Care" toggleGroup="$level" />
+                  <RadioButton fx:id="GeneralHeat" layoutX="185.0" layoutY="32.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Heat use(Dry)" toggleGroup="$level" />
+                  <CheckBox fx:id="exitcareHead" layoutX="185.0" layoutY="82.0" mnemonicParsing="false" text="Head Injury" />
+                  <CheckBox fx:id="exitcareNeckInjury" layoutX="185.0" layoutY="102.0" mnemonicParsing="false" text="Neck Injury-Home Care" />
+                  <CheckBox fx:id="exitcareBackpain" layoutX="185.0" layoutY="122.0" mnemonicParsing="false" text="Backpain" />
+                  <CheckBox fx:id="exitcareFacial" layoutX="351.0" layoutY="81.0" mnemonicParsing="false" text="Facial Lacerations" />
+                  <CheckBox fx:id="exitcarePinched" layoutX="351.0" layoutY="101.0" mnemonicParsing="false" text="Pinched Nerve in Neck" />
+                  <CheckBox fx:id="exitcareBackExercise" layoutX="351.0" layoutY="122.0" mnemonicParsing="false" text="Back Exercises" />
+                  <Separator layoutX="-1.0" layoutY="213.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Label layoutX="9.0" layoutY="167.0" text="Exitcare Upper Extrimity" />
+                  <CheckBox fx:id="upperArm" layoutX="185.0" layoutY="151.0" mnemonicParsing="false" text="Arm Fracture" />
+                  <CheckBox fx:id="upperCrutch" layoutX="185.0" layoutY="171.0" mnemonicParsing="false" text="Crutch Use" />
+                  <CheckBox fx:id="upperShoulder" layoutX="185.0" layoutY="194.0" mnemonicParsing="false" text="Shoulder Pain" />
+                  <CheckBox fx:id="upperCarpal" layoutX="351.0" layoutY="151.0" mnemonicParsing="false" text="Carpal Tunnel Syndrome " />
+                  <CheckBox fx:id="upperElbow" layoutX="352.0" layoutY="173.0" mnemonicParsing="false" text="Elbow Injury" />
+                  <CheckBox fx:id="upperWrist" layoutX="352.0" layoutY="194.0" mnemonicParsing="false" text="Wrist Pain(Strain-Sprain)" />
+                  <Separator layoutY="260.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Label layoutX="10.0" layoutY="225.0" text="Exitcare Local Extrimity" />
+                  <CheckBox fx:id="localAnkle" layoutX="185.0" layoutY="218.0" mnemonicParsing="false" text="Ankle Strain" />
+                  <CheckBox fx:id="localKnee" layoutX="186.0" layoutY="239.0" mnemonicParsing="false" text="Knee Strain" />
+                  <CheckBox fx:id="localCrutch" layoutX="352.0" layoutY="218.0" mnemonicParsing="false" text="Crutch Use" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.durableMedicalEquipment.DurableMedicalDMEDispenceWCInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="519.0" prefWidth="808.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="77.0" prefHeight="0.0" prefWidth="808.0" />
+                  <Label layoutX="14.0" layoutY="27.0" text="Ankle-Foot-Toes-DME" />
+                  <Label layoutX="14.0" layoutY="98.0" text="Ankle-Leg-Knee-Calf-DME" />
+                  <Separator layoutX="178.0" layoutY="1.0" orientation="VERTICAL" prefHeight="441.0" prefWidth="5.0" />
+                  <Button fx:id="doneBtn" layoutX="568.0" layoutY="450.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutY="192.0" prefHeight="0.0" prefWidth="808.0" />
+                  <Button fx:id="skipBtn" layoutX="661.0" layoutY="449.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="ankleAirgelCkeckBox" layoutX="185.0" layoutY="3.0" mnemonicParsing="false" text="Airgel" />
+                  <CheckBox fx:id="ankleElasticCkeckBox" layoutX="394.0" layoutY="27.0" mnemonicParsing="false" text="Elastic ankle support" />
+                  <CheckBox fx:id="ankleSprintCkeckBox" layoutX="672.0" layoutY="27.0" mnemonicParsing="false" text="sprint" />
+                  <CheckBox fx:id="ankleAlluminiumCkeckBox" layoutX="394.0" layoutY="3.0" mnemonicParsing="false" text="alluminium crutches(pair)" />
+                  <CheckBox fx:id="anklefigureCkeckBox" layoutX="185.0" layoutY="25.0" mnemonicParsing="false" text="figure 8 stablizing ankle support" />
+                  <CheckBox fx:id="ankleTuliCkeckBox" layoutX="185.0" layoutY="49.0" mnemonicParsing="false" text="Tuli's heel cup" />
+                  <CheckBox fx:id="ankleArchCkeckBox" layoutX="560.0" layoutY="6.0" mnemonicParsing="false" text="arch support" />
+                  <CheckBox fx:id="anklePneumaticCkeckBox" layoutX="560.0" layoutY="49.0" mnemonicParsing="false" text="pneumatic walking boot" />
+                  <CheckBox fx:id="ankleLegStripBraceCkeckBox" layoutX="185.0" layoutY="80.0" mnemonicParsing="false" text="ankle stirup brace" />
+                  <CheckBox fx:id="ankleLegTibCkeckBox" layoutX="185.0" layoutY="98.0" mnemonicParsing="false" text="tib/fib padded splint" />
+                  <CheckBox fx:id="ankleLegPanel3CkeckBox" layoutX="394.0" layoutY="82.0" mnemonicParsing="false" text="3 panel knee immobilizar" />
+                  <CheckBox fx:id="ankleLegSpacerCkeckBox" layoutX="560.0" layoutY="98.0" mnemonicParsing="false" text="leg spacer" />
+                  <CheckBox fx:id="ankleLegACECkeckBox" layoutX="561.0" layoutY="80.0" mnemonicParsing="false" text="ACE bandage" />
+                  <CheckBox fx:id="ankleLegSportKneeCkeckBox" layoutX="394.0" layoutY="105.0" mnemonicParsing="false" text="sport knee sleeve(open)" />
+                  <CheckBox fx:id="ankleLegSplintCkeckBox" layoutX="672.0" layoutY="82.0" mnemonicParsing="false" text="splint" />
+                  <CheckBox fx:id="ankleLegElasticCkeckBox" layoutX="185.0" layoutY="115.0" mnemonicParsing="false" text="elastic knee sleeve(closed)" />
+                  <CheckBox fx:id="shoulderCSpineCheckBox" layoutX="397.0" layoutY="327.0" mnemonicParsing="false" text="C-spine/T-spine pillow" />
+                  <Separator layoutX="1.0" layoutY="222.0" prefHeight="4.0" prefWidth="808.0" />
+                  <Separator layoutX="1.0" layoutY="299.0" prefHeight="0.0" prefWidth="808.0" />
+                  <Separator layoutX="2.0" layoutY="360.0" prefHeight="0.0" prefWidth="808.0" />
+                  <CheckBox fx:id="miscTheraPutty" layoutX="672.0" layoutY="390.0" mnemonicParsing="false" text="thera putty" />
+                  <CheckBox fx:id="miscSwissBall" layoutX="672.0" layoutY="413.0" mnemonicParsing="false" text="Swissball" />
+                  <CheckBox fx:id="miscTheraBand" layoutX="397.0" layoutY="390.0" mnemonicParsing="false" text="thera band" />
+                  <CheckBox fx:id="miscFlexBar" layoutX="185.0" layoutY="413.0" mnemonicParsing="false" text="flex bar" />
+                  <CheckBox fx:id="miscTheraCane" layoutX="558.0" layoutY="390.0" mnemonicParsing="false" text="thera cane" />
+                  <CheckBox fx:id="miscDuraband" layoutX="397.0" layoutY="413.0" mnemonicParsing="false" text="Duraband" />
+                  <Separator layoutX="-4.0" layoutY="441.0" prefHeight="0.0" prefWidth="808.0" />
+                  <Label layoutX="14.0" layoutY="145.0" text="Back Torso-Spine-DME" />
+                  <Label layoutX="14.0" layoutY="227.0" text="Forearm-Wrist-Hand DME" />
+                  <Label layoutX="3.0" layoutY="308.0" prefHeight="16.0" prefWidth="175.0" text="Shoulder-Upper-Arm-Elbow DME" />
+                  <Label layoutX="14.0" layoutY="374.0" text="Miscellanceous DME" />
+                  <Separator layoutX="7.0" layoutY="133.0" prefHeight="0.0" prefWidth="799.0" />
+                  <Label layoutX="14.0" layoutY="200.0" text="Neck-Clavicle-Thorax DME" />
+                  <CheckBox fx:id="ankleCaneCheck" layoutX="672.0" layoutY="6.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="58.0" text="cane" />
+                  <CheckBox fx:id="ankleAceCheck" layoutX="396.0" layoutY="50.0" mnemonicParsing="false" text="ACE bandage" />
+                  <CheckBox fx:id="ankleMedShoeCheck" layoutX="560.0" layoutY="25.0" mnemonicParsing="false" text="med/surg shoe" />
+                  <CheckBox fx:id="backTorsoDoublePull" layoutX="185.0" layoutY="174.0" mnemonicParsing="false" text="double pull sacrolumber support" />
+                  <CheckBox fx:id="backTorsoDeluxRib" layoutX="185.0" layoutY="156.0" mnemonicParsing="false" text="delux rib belt (female)" />
+                  <CheckBox fx:id="backTorsoHalfMoon" layoutX="394.0" layoutY="140.0" mnemonicParsing="false" text="half moon lamber pillow" />
+                  <CheckBox fx:id="backTorsoBackTrack" layoutX="394.0" layoutY="161.0" mnemonicParsing="false" text="back track LSO post rigid pan" />
+                  <CheckBox fx:id="backTorsoRingCushion" layoutX="185.0" layoutY="137.0" mnemonicParsing="false" text="ring cushion (doughnut)" />
+                  <CheckBox fx:id="neckCervicalCollarFoam" layoutX="185.0" layoutY="198.0" mnemonicParsing="false" text="cervical collar foam (2 piece)" />
+                  <CheckBox fx:id="neckCervicalCollar" layoutX="394.0" layoutY="200.0" mnemonicParsing="false" text="cervical collar" />
+                  <CheckBox fx:id="neckCSpine" layoutX="560.0" layoutY="198.0" mnemonicParsing="false" text="C- spine / T-spine pillow" />
+                  <CheckBox fx:id="forearmAducted" layoutX="393.0" layoutY="227.0" mnemonicParsing="false" text="aducted thumb spica" />
+                  <CheckBox fx:id="forearmAlluminium" layoutX="394.0" layoutY="251.0" mnemonicParsing="false" text="alluminium splint" />
+                  <CheckBox fx:id="forearmGutterSplint" layoutX="560.0" layoutY="227.0" mnemonicParsing="false" text="gutter splint" />
+                  <CheckBox fx:id="forearmIMaxPil" layoutX="672.0" layoutY="227.0" mnemonicParsing="false" text="IMAX Pil-O Splint" />
+                  <CheckBox fx:id="forearmImaxSmart" layoutX="185.0" layoutY="250.0" mnemonicParsing="false" text="IMAK Smart glove w/thumb" />
+                  <CheckBox fx:id="forearmProflex" layoutX="395.0" layoutY="270.0" mnemonicParsing="false" text="Proflex 4020 wrist Brace" />
+                  <CheckBox fx:id="forearmPowerWeb" layoutX="184.0" layoutY="227.0" mnemonicParsing="false" text="Power web hand exercriser" />
+                  <CheckBox fx:id="forearmSoftWrist" layoutX="560.0" layoutY="274.0" mnemonicParsing="false" text="soft wrist sleeve" />
+                  <CheckBox fx:id="forearmThumbOPrene" layoutX="672.0" layoutY="250.0" mnemonicParsing="false" text="Thumb-o-Prene" />
+                  <CheckBox fx:id="forearmACEBandage" layoutX="560.0" layoutY="252.0" mnemonicParsing="false" text="ACE bandage" />
+                  <CheckBox fx:id="forearmWristOprene" layoutX="672.0" layoutY="274.0" mnemonicParsing="false" text="Wrist-o-Prene" />
+                  <CheckBox fx:id="forearmUpperExt" layoutX="186.0" layoutY="273.0" mnemonicParsing="false" text="Upper ext fx orthosis wrist" />
+                  <CheckBox fx:id="shoulderElastic" layoutX="396.0" layoutY="307.0" mnemonicParsing="false" text="elastic elbow sleeve" />
+                  <CheckBox fx:id="shoulderIMAX" layoutX="185.0" layoutY="304.0" mnemonicParsing="false" text="IMAX Adjustable elbow brace" />
+                  <CheckBox fx:id="shoulderImmobilizer" layoutX="185.0" layoutY="324.0" mnemonicParsing="false" text="Shoulder immobilizer(universal)" />
+                  <CheckBox fx:id="shoulderTenisElbow" layoutX="186.0" layoutY="343.0" mnemonicParsing="false" text="tenis elbow brace" />
+                  <CheckBox fx:id="shoulderSling" layoutX="558.0" layoutY="326.0" mnemonicParsing="false" text="shoulder sling (universal)" />
+                  <CheckBox fx:id="shoulderPully" layoutX="558.0" layoutY="304.0" mnemonicParsing="false" text="Shoulder pulley ESP" />
+                  <CheckBox fx:id="miscFoamRoller" layoutX="185.0" layoutY="366.0" mnemonicParsing="false" text="foam roller" />
+                  <CheckBox fx:id="miscHot" layoutX="397.0" layoutY="367.0" mnemonicParsing="false" text="hot/cold pack" />
+                  <CheckBox fx:id="miscPowerWeb" layoutX="558.0" layoutY="368.0" mnemonicParsing="false" text="power web" />
+                  <CheckBox fx:id="miscDigiflex" layoutX="672.0" layoutY="366.0" mnemonicParsing="false" text="digiflex" />
+                  <CheckBox fx:id="miscThgeraBall" layoutX="185.0" layoutY="390.0" mnemonicParsing="false" text="thera ball" />
+                  <CheckBox fx:id="miscStretchRope" layoutX="558.0" layoutY="413.0" mnemonicParsing="false" text="Stretch rope" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

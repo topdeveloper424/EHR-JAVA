@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.inventory.inventory.InventoryInputController">
+   <children>
+      <TextField fx:id="typeText" layoutX="124.0" layoutY="24.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="nameText" layoutX="123.0" layoutY="59.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="descripTionText" layoutX="124.0" layoutY="100.0" prefHeight="25.0" prefWidth="266.0" />
+      <TextField fx:id="epcCodeText" layoutX="123.0" layoutY="139.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="unitDescriptionText" layoutX="123.0" layoutY="177.0" />
+      <Button id="ghosh" fx:id="okButton" layoutX="203.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="ray" fx:id="cancelButton" layoutX="309.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="25.0" layoutY="28.0" text="Type :" />
+      <Label layoutX="25.0" layoutY="63.0" text="Name :" />
+      <Label layoutX="25.0" layoutY="103.0" text="Description :" />
+      <Label layoutX="25.0" layoutY="144.0" text="EPC Code :" />
+      <Label layoutX="25.0" layoutY="180.0" text="Unit Description :" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/style.css" />
+      <URL value="@../../css/style.css" />
+   </stylesheets>
+</AnchorPane>
+

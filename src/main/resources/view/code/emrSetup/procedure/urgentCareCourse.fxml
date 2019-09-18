@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="759.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.UrgentCareCourseInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="599.0" prefWidth="745.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="805.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="82.0" prefHeight="0.0" prefWidth="745.0" />
+                  <Label layoutX="2.0" layoutY="14.0" text="Total Time of Observation" />
+                  <Label layoutX="2.0" layoutY="95.0" text="Reason for Observation" />
+                  <Separator layoutX="149.0" orientation="VERTICAL" prefHeight="510.0" prefWidth="5.0" />
+                  <Button fx:id="doneBtn" layoutX="425.0" layoutY="522.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="190.0" prefHeight="0.0" prefWidth="745.0" />
+                  <Button fx:id="skipBtn" layoutX="551.0" layoutY="522.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="274.0" prefHeight="0.0" prefWidth="745.0" />
+                  <Separator layoutX="-4.0" layoutY="450.0" prefHeight="1.0" prefWidth="752.0" />
+                  <Separator layoutX="-4.0" layoutY="389.0" prefHeight="1.0" prefWidth="759.0" />
+                  <Label layoutX="2.0" layoutY="206.0" text="Treatment" />
+                  <Label layoutX="2.0" layoutY="143.0" text="Detail Reason" />
+                  <Label layoutX="2.0" layoutY="473.0" text="Significant Event/Findings" />
+                  <Label layoutX="2.0" layoutY="292.0" text="Treatment Con't" />
+                  <Label layoutX="2.0" layoutY="412.0" text="Response to Treatment" />
+                  <Separator layoutX="2.0" layoutY="128.0" prefHeight="0.0" prefWidth="745.0" />
+                  <RadioButton fx:id="time30Radio" layoutX="162.0" layoutY="2.0" mnemonicParsing="false" text="30 min">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="time" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="time45Radio" layoutX="339.0" layoutY="2.0" mnemonicParsing="false" text="45min" toggleGroup="$time" />
+                  <Separator layoutX="-1.0" layoutY="326.0" prefHeight="3.0" prefWidth="745.0" />
+                  <CheckBox fx:id="tubingCheckBox" layoutX="162.0" layoutY="279.0" mnemonicParsing="false" text="IV Tubing" />
+                  <CheckBox fx:id="ns500CheckBox" layoutX="339.0" layoutY="283.0" mnemonicParsing="false" text="IV Fluids - NS 500 ml" />
+                  <CheckBox fx:id="fluids1LCheckBox" layoutX="539.0" layoutY="284.0" mnemonicParsing="false" text="IV Fluids - 1L" />
+                  <CheckBox fx:id="insulinCheckBox" layoutX="162.0" layoutY="300.0" mnemonicParsing="false" text="Insulin" />
+                  <Label layoutX="2.0" layoutY="356.0" text="Detail Treatment" />
+                  <CheckBox fx:id="insulinTherapyCheck" layoutX="162.0" layoutY="107.0" mnemonicParsing="false" text="Insulin Therapy" />
+                  <CheckBox fx:id="NibulizerCheck" layoutX="339.0" layoutY="87.0" mnemonicParsing="false" text="Nibulizer Treatment" />
+                  <CheckBox fx:id="NibulizerHighCheck" layoutX="539.0" layoutY="87.0" mnemonicParsing="false" text="Nibulizer Treatment with High" />
+                  <RadioButton fx:id="time1Radio" layoutX="539.0" layoutY="1.0" mnemonicParsing="false" text="1 hour" toggleGroup="$time" />
+                  <RadioButton fx:id="time115Radio" layoutX="162.0" layoutY="21.0" mnemonicParsing="false" text="1 hour 15 min" toggleGroup="$time" />
+                  <CheckBox fx:id="peakFlowCheckBox" layoutX="339.0" layoutY="253.0" mnemonicParsing="false" text="Peak Flow" />
+                  <CheckBox fx:id="ivFluidCheck" layoutX="162.0" layoutY="88.0" mnemonicParsing="false" text="IV Fluids" />
+                  <CheckBox fx:id="numberCheck" layoutX="339.0" layoutY="107.0" mnemonicParsing="false" text="5150" />
+                  <CheckBox fx:id="pftCheck" layoutX="162.0" layoutY="252.0" mnemonicParsing="false" text="PFT" />
+                  <CheckBox fx:id="NibulizerSalineCheck" layoutX="162.0" layoutY="213.0" mnemonicParsing="false" text="Nibulizer Saline Cartridge" />
+                  <CheckBox fx:id="AlbuterolAndIpratropiumCheck" layoutX="339.0" layoutY="213.0" mnemonicParsing="false" text="Albuterol + Ipratropium" />
+                  <CheckBox fx:id="AlbuterolOnlyCheck" layoutX="539.0" layoutY="213.0" mnemonicParsing="false" text="Albuterol Only" />
+                  <CheckBox fx:id="SuplimentalCheck" layoutX="162.0" layoutY="194.0" mnemonicParsing="false" text="Suplimental Oxygen" />
+                  <CheckBox fx:id="pulseCheck" layoutX="339.0" layoutY="194.0" mnemonicParsing="false" text="Pulse Oximeter" />
+                  <CheckBox fx:id="NibulizerTxCheck" layoutX="539.0" layoutY="194.0" mnemonicParsing="false" text="Nibulizer Tx" />
+                  <CheckBox fx:id="IpratropiumOnlyCheck" layoutX="162.0" layoutY="233.0" mnemonicParsing="false" text="Ipratropium Only" />
+                  <CheckBox fx:id="DexamethasoneInhaledCheck" layoutX="339.0" layoutY="233.0" mnemonicParsing="false" text="Dexamethasone Inhaled , 2mg" />
+                  <CheckBox fx:id="DexamethasoneInjectionCheck" layoutX="539.0" layoutY="233.0" mnemonicParsing="false" text="Dexamethasone Injection 1mg" />
+                  <RadioButton fx:id="time130Radio" layoutX="339.0" layoutY="21.0" mnemonicParsing="false" text="1 hour 30 min" toggleGroup="$time" />
+                  <RadioButton fx:id="time145Radio" layoutX="539.0" layoutY="22.0" mnemonicParsing="false" text="1 hour 45 min" toggleGroup="$time" />
+                  <RadioButton fx:id="time2Radio" layoutX="162.0" layoutY="41.0" mnemonicParsing="false" text="2 hour" toggleGroup="$time" />
+                  <RadioButton fx:id="time215Radio" layoutX="339.0" layoutY="41.0" mnemonicParsing="false" text="2 hour 15 min" toggleGroup="$time" />
+                  <RadioButton fx:id="time230Radio" layoutX="539.0" layoutY="40.0" mnemonicParsing="false" text="2 hour 30 min" toggleGroup="$time" />
+                  <RadioButton fx:id="time245Radio" layoutX="162.0" layoutY="62.0" mnemonicParsing="false" text="2 hour 45min" toggleGroup="$time" />
+                  <RadioButton fx:id="time3Radio" layoutX="339.0" layoutY="60.0" mnemonicParsing="false" text="3 hour" toggleGroup="$time" />
+                  <RadioButton fx:id="timegreater3Radio" layoutX="539.0" layoutY="61.0" mnemonicParsing="false" text="&gt; 3 hour" toggleGroup="$time" />
+                  <TextArea fx:id="detailReasonTextArea" layoutX="162.0" layoutY="134.0" prefHeight="51.0" prefWidth="411.0" />
+                  <TextArea fx:id="detailTreatementTextarea" layoutX="162.0" layoutY="333.0" prefHeight="51.0" prefWidth="411.0" />
+                  <TextArea fx:id="responseToTreatementTextarea" layoutX="162.0" layoutY="394.0" prefHeight="51.0" prefWidth="411.0" />
+                  <TextArea fx:id="significantTextarea" layoutX="162.0" layoutY="455.0" prefHeight="51.0" prefWidth="411.0" />
+                  <Separator layoutX="-4.0" layoutY="508.0" prefHeight="0.0" prefWidth="752.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

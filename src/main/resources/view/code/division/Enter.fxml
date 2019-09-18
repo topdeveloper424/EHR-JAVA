@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="308.0" prefWidth="428.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.division.DivisionInputController">
+   <children>
+      <TextField fx:id="codeTextField" layoutX="110.0" layoutY="24.0" prefHeight="25.0" prefWidth="100.0" />
+      <TextField fx:id="descriptionTextField" layoutX="110.0" layoutY="59.0" prefHeight="25.0" prefWidth="229.0" />
+      <TextField fx:id="managerTextField" layoutX="110.0" layoutY="100.0" />
+      <TextField fx:id="telephoneTextField" layoutX="110.0" layoutY="139.0" />
+      <TextField fx:id="extensionTextField" layoutX="353.0" layoutY="137.0" prefHeight="25.0" prefWidth="57.0" />
+      <TextField fx:id="faxTextField" layoutX="110.0" layoutY="175.0" />
+      <TextField fx:id="emailTextField" layoutX="110.0" layoutY="209.0" prefHeight="25.0" prefWidth="265.0" />
+      <CheckBox fx:id="inactiveCheckBox" layoutX="25.0" layoutY="264.0" mnemonicParsing="false" text="Inactive ?" />
+      <Button id="ghosh" fx:id="okButton" layoutX="208.0" layoutY="260.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForOkButton" prefHeight="25.0" prefWidth="70.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="ray" fx:id="cancelButton" layoutX="300.0" layoutY="260.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancleButton" prefHeight="25.0" prefWidth="81.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="25.0" layoutY="28.0" text="Division :" />
+      <Label layoutX="25.0" layoutY="63.0" text="Description :" />
+      <Label layoutX="25.0" layoutY="103.0" text="Manager :" />
+      <Label layoutX="25.0" layoutY="144.0" text="Telephone :" />
+      <Label layoutX="25.0" layoutY="180.0" text="Fax :" />
+      <Label layoutX="25.0" layoutY="214.0" text="Email :" />
+      <Label layoutX="284.0" layoutY="141.0" text="Extension :" />
+   </children>
+</AnchorPane>

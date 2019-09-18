@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.neck.NeckExamCompInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="492.0" prefWidth="755.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="151.0" layoutY="1.0" orientation="VERTICAL" prefHeight="413.0" prefWidth="0.0" />
+                  <Separator layoutX="1.0" layoutY="43.0" prefHeight="5.0" prefWidth="755.0" />
+                  <CheckBox fx:id="NormalLesionCheck" layoutX="259.0" layoutY="347.0" mnemonicParsing="false" text="lesions" />
+                  <CheckBox fx:id="NormalEcchyosisCheck" layoutX="484.0" layoutY="346.0" mnemonicParsing="false" text="ecchyosis" />
+                  <CheckBox fx:id="NormalErythemaCheck" layoutX="621.0" layoutY="346.0" mnemonicParsing="false" text="erythema" />
+                  <Button fx:id="doneBtn" layoutX="470.0" layoutY="422.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="584.0" layoutY="422.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="7.0" layoutY="11.0" text="Visual Examination" />
+                  <CheckBox fx:id="VisuaAllNormalCheckBox" layoutX="167.0" layoutY="6.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="VisuaLesionsCheckBox" layoutX="257.0" layoutY="1.0" mnemonicParsing="false" text="lesions" />
+                  <CheckBox fx:id="VisuaDiscolorationCheckBox" layoutX="481.0" layoutY="6.0" mnemonicParsing="false" text="dicoloration" />
+                  <CheckBox fx:id="PalpationWarmthCheckBox" layoutX="601.0" layoutY="97.0" mnemonicParsing="false" text="Warmth" />
+                  <CheckBox fx:id="VisuaErythemaCheckBox" layoutX="257.0" layoutY="20.0" mnemonicParsing="false" text="erythema" />
+                  <CheckBox fx:id="VisuaSwellingCheckBox" layoutX="481.0" layoutY="25.0" mnemonicParsing="false" text="swellings" />
+                  <CheckBox fx:id="ThyroidDiffuselyCheckBox" layoutX="255.0" layoutY="242.0" mnemonicParsing="false" text="diffusely enlarged" />
+                  <CheckBox fx:id="PalpationLADCheck" layoutX="255.0" layoutY="92.0" mnemonicParsing="false" text="LAD" />
+                  <CheckBox fx:id="PalpationTTPCheck" layoutX="474.0" layoutY="97.0" mnemonicParsing="false" text="TTP" />
+                  <CheckBox fx:id="PalpationSpasmsCheck" layoutX="254.0" layoutY="113.0" mnemonicParsing="false" text="spasms" />
+                  <Separator layoutX="-2.0" layoutY="343.0" prefHeight="0.0" prefWidth="755.0" />
+                  <Label layoutX="5.0" layoutY="362.0" text="Normal Findings" />
+                  <CheckBox fx:id="PalpationEdemaCheck" layoutX="474.0" layoutY="116.0" mnemonicParsing="false" text="edema" />
+                  <CheckBox fx:id="VisuaEcchyosisCheckBox" layoutX="647.0" layoutY="5.0" mnemonicParsing="false" text="ecchyosis" />
+                  <CheckBox fx:id="VisuaAbnormalCheck" layoutX="647.0" layoutY="24.0" mnemonicParsing="false" text="abnormal alignment" />
+                  <TextArea fx:id="AbnormalText" layoutX="257.0" layoutY="48.0" prefHeight="0.0" prefWidth="200.0" />
+                  <Separator layoutX="-1.0" layoutY="88.0" prefHeight="0.0" prefWidth="755.0" />
+                  <Separator layoutX="-4.0" layoutY="135.0" prefHeight="0.0" prefWidth="767.0" />
+                  <TextArea fx:id="AbnormalPalpationText" layoutX="257.0" layoutY="139.0" prefHeight="0.0" prefWidth="200.0" />
+                  <Separator layoutX="6.0" layoutY="181.0" prefHeight="0.0" prefWidth="767.0" />
+                  <RadioButton fx:id="negativeRadio" layoutX="254.0" layoutY="186.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Ascultation" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="possitiveRadio" layoutX="467.0" layoutY="186.0" mnemonicParsing="false" text="possitive" toggleGroup="$Ascultation" />
+                  <Separator layoutX="-1.0" layoutY="209.0" prefHeight="0.0" prefWidth="767.0" />
+                  <CheckBox fx:id="JugularNotNotedCheck" layoutX="257.0" layoutY="213.0" mnemonicParsing="false" text="not noted" />
+                  <CheckBox fx:id="JugularNotedCheck" layoutX="488.0" layoutY="213.0" mnemonicParsing="false" text="noted" />
+                  <Separator layoutX="-2.0" layoutY="237.0" prefHeight="0.0" prefWidth="767.0" />
+                  <CheckBox fx:id="ThyroidMultipleCheckBox" layoutX="481.0" layoutY="242.0" mnemonicParsing="false" text="multiple nodules" />
+                  <CheckBox fx:id="ThyroidMassRightCheckBox" layoutX="651.0" layoutY="241.0" mnemonicParsing="false" text="mass right" />
+                  <CheckBox fx:id="ThyroidmassLeftCheckBox" layoutX="255.0" layoutY="260.0" mnemonicParsing="false" text="mass left" />
+                  <CheckBox fx:id="ThyroidTenderCheckBox" layoutX="482.0" layoutY="262.0" mnemonicParsing="false" text="tender" />
+                  <Separator layoutX="-2.0" layoutY="286.0" prefHeight="0.0" prefWidth="767.0" />
+                  <TextArea fx:id="abnormalThyroidText" layoutX="258.0" layoutY="292.0" prefHeight="0.0" prefWidth="200.0" />
+                  <CheckBox fx:id="NormalSwellingCheck" layoutX="259.0" layoutY="366.0" mnemonicParsing="false" text="swellings" />
+                  <CheckBox fx:id="NormalAtrophyCheck" layoutX="485.0" layoutY="366.0" mnemonicParsing="false" text="atrophy" />
+                  <CheckBox fx:id="NormalMassesCheck" layoutX="622.0" layoutY="365.0" mnemonicParsing="false" text="masses" />
+                  <CheckBox fx:id="NormalIrregularities" layoutX="259.0" layoutY="386.0" mnemonicParsing="false" text="irregularities" />
+                  <CheckBox fx:id="PalpationNormalCheck" layoutX="169.0" layoutY="92.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-4.0" layoutY="412.0" prefHeight="5.0" prefWidth="767.0" />
+                  <Label layoutX="8.0" layoutY="303.0" text="Abnormal Thyroid Details" />
+                  <Label layoutX="6.0" layoutY="59.0" text="Abnormal Visual Details" />
+                  <Label layoutX="6.0" layoutY="98.0" text="Palpation" />
+                  <Label layoutX="2.0" layoutY="150.0" text="Abnormal Palpation Details" />
+                  <Label layoutX="7.0" layoutY="187.0" text="Ascultation For Bruits" />
+                  <Label layoutX="1.0" layoutY="214.0" text="Jugular Venous Distension" />
+                  <Label layoutX="8.0" layoutY="251.0" text="Thyroid" />
+                  <CheckBox fx:id="ThyroidNonTenderCheckBox1" layoutX="651.0" layoutY="260.0" mnemonicParsing="false" text="non tender" />
+                  <CheckBox fx:id="thyroidNormalCheck1" layoutX="157.0" layoutY="243.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

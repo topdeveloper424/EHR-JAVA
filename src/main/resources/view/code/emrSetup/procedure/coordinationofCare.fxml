@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="664.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.CoordinationofCareInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="479.0" prefWidth="650.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="805.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="46.0" prefHeight="0.0" prefWidth="650.0" />
+                  <Label layoutX="2.0" layoutY="14.0" text="Patient Care Transfer" />
+                  <Label layoutX="2.0" layoutY="58.0" text="Method of Transport" />
+                  <Separator layoutX="202.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="386.0" layoutY="411.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="161.0" prefHeight="0.0" prefWidth="650.0" />
+                  <Button fx:id="skipBtn" layoutX="512.0" layoutY="411.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="211.0" prefHeight="0.0" prefWidth="650.0" />
+                  <Separator layoutX="-4.0" layoutY="270.0" prefHeight="6.0" prefWidth="658.0" />
+                  <Label layoutX="2.0" layoutY="173.0" text="Type of Specialty" />
+                  <Label layoutX="2.0" layoutY="113.0" text="Name of Physician Who Coordination" />
+                  <Label layoutX="4.0" layoutY="239.0" text="Other Specialty" />
+                  <Label layoutX="2.0" layoutY="298.0" text="Physician Phone Number" />
+                  <Separator layoutX="2.0" layoutY="95.0" prefHeight="3.0" prefWidth="650.0" />
+                  <Label layoutX="2.0" layoutY="356.0" text="Instruction from Physician" />
+                  <CheckBox fx:id="RoutineReferralCheck" layoutX="216.0" layoutY="24.0" mnemonicParsing="false" text="Specialist - Routine  Referral" />
+                  <CheckBox fx:id="MedicallyNecessaryCheck" layoutX="391.0" layoutY="4.0" mnemonicParsing="false" text="Specialist - Medically Necessary" />
+                  <CheckBox fx:id="erCheck" layoutX="216.0" layoutY="5.0" mnemonicParsing="false" text="ER" />
+                  <CheckBox fx:id="dotCheck" layoutX="220.0" layoutY="187.0" mnemonicParsing="false" text="-" />
+                  <CheckBox fx:id="EmployerCheck" layoutX="216.0" layoutY="71.0" mnemonicParsing="false" text="Driven by Employer" />
+                  <CheckBox fx:id="dotCheck" layoutX="391.0" layoutY="71.0" mnemonicParsing="false" text="-" />
+                  <CheckBox fx:id="AmbulanceCheck" layoutX="216.0" layoutY="52.0" mnemonicParsing="false" text="Ambulance" />
+                  <CheckBox fx:id="familyFriendCheck" layoutX="391.0" layoutY="52.0" mnemonicParsing="false" text="Driven by family/friend" />
+                  <CheckBox fx:id="erPhysicianCheck" layoutX="220.0" layoutY="168.0" mnemonicParsing="false" text="ER Physician" />
+                  <CheckBox fx:id="OrthopedistCheck" layoutX="391.0" layoutY="168.0" mnemonicParsing="false" text="Orthopedist" />
+                  <TextArea fx:id="physicianNameTextArea" layoutX="217.0" layoutY="103.0" prefHeight="51.0" prefWidth="411.0" />
+                  <TextArea fx:id="specialityTextarea" layoutX="219.0" layoutY="217.0" prefHeight="51.0" prefWidth="411.0" />
+                  <TextArea fx:id="physicianPhoneTextarea" layoutX="219.0" layoutY="280.0" prefHeight="51.0" prefWidth="411.0" />
+                  <Separator layoutX="-4.0" layoutY="337.0" prefHeight="0.0" prefWidth="659.0" />
+                  <TextArea fx:id="instructionTextarea" layoutX="217.0" layoutY="344.0" prefHeight="51.0" prefWidth="411.0" />
+                  <Separator layoutX="-6.0" layoutY="400.0" prefHeight="0.0" prefWidth="657.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

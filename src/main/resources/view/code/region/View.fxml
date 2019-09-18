@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="462.0" prefWidth="590.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.region.RegionViewController">
+   <children>
+      <Label layoutX="41.0" layoutY="27.0" text="Search :" />
+      <TextField fx:id="searchTextField" layoutX="88.0" layoutY="24.0" prefHeight="25.0" prefWidth="197.0" />
+      <CheckBox fx:id="inactiveCheckBox" layoutX="407.0" layoutY="28.0" mnemonicParsing="false" text="Include Inactive ?" />
+      <Button fx:id="addButton" layoutX="16.0" layoutY="420.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForAddButton" prefHeight="25.0" prefWidth="73.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="changeButton" layoutX="121.0" layoutY="420.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForChangeButton" prefHeight="25.0" prefWidth="83.0" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="232.0" layoutY="420.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForDeleteButton" prefHeight="25.0" prefWidth="73.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="selectButton" layoutX="386.0" layoutY="420.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForSelectButton" prefHeight="25.0" prefWidth="73.0" text="Select">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="491.0" layoutY="420.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCloseButton" prefHeight="25.0" prefWidth="73.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="regionTable" layoutX="7.0" layoutY="58.0" onMouseClicked="#doubleClick" prefHeight="326.0" prefWidth="572.0">
+         <columns>
+            <TableColumn fx:id="codeCollumn" prefWidth="204.0" text="Code" />
+            <TableColumn fx:id="nameCollumn" minWidth="0.0" prefWidth="366.0" text="Name" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

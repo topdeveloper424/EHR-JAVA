@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.diagonostic.DiagonosticEMGorNCVInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="251.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="5.0" text="EMG / NCV" />
+                  <Separator layoutX="156.0" layoutY="1.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="338.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="438.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="170.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="upperExtrimities" layoutX="170.0" layoutY="76.0" mnemonicParsing="false" text="Upper Extrimities" />
+                  <CheckBox fx:id="lowerExtrimities" layoutX="344.0" layoutY="77.0" mnemonicParsing="false" text="Lower Extrimities" />
+                  <Separator layoutX="-1.0" layoutY="69.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="8.0" layoutY="46.0" text="Select Choice" />
+                  <Label layoutX="12.0" layoutY="136.0" text="Rule Out" />
+                  <RadioButton fx:id="left" layoutX="172.0" layoutY="30.0" mnemonicParsing="false" text="left">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="set" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="bilateral" layoutX="172.0" layoutY="50.0" mnemonicParsing="false" text="Bilateral" toggleGroup="$set" />
+                  <RadioButton fx:id="right" layoutX="344.0" layoutY="31.0" mnemonicParsing="false" text="right" toggleGroup="$set" />
+                  <CheckBox fx:id="cts" layoutX="170.0" layoutY="108.0" mnemonicParsing="false" text="R / O CTS" />
+                  <CheckBox fx:id="nerve" layoutX="171.0" layoutY="127.0" mnemonicParsing="false" text="R / O Nerve Impingement" />
+                  <CheckBox fx:id="Paresthesias" layoutX="171.0" layoutY="144.0" mnemonicParsing="false" text="R / O Paresthesias" />
+                  <CheckBox fx:id="Radiculopathy" layoutX="346.0" layoutY="106.0" mnemonicParsing="false" text="R / O Radiculopathy" />
+                  <CheckBox fx:id="sciatica" layoutX="346.0" layoutY="126.0" mnemonicParsing="false" text="R / O Sciatica" />
+                  <CheckBox fx:id="Include" layoutX="178.0" layoutY="2.0" mnemonicParsing="false" text="Include" />
+                  <Separator layoutX="-1.0" layoutY="25.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="278.0" layoutY="5.0" text="Ordered" />
+                  <Label layoutX="10.0" layoutY="77.0" text="Choose Extrimities" />
+                  <Separator layoutX="-4.0" layoutY="100.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="other" layoutX="347.0" layoutY="146.0" mnemonicParsing="false" text="R / O Other" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

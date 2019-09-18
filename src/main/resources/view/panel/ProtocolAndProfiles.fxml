@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.ProtocolAndProfilesGUIController">
+   <children>
+      <VBox layoutY="2.0" prefHeight="417.0" prefWidth="189.0">
+         <children>
+            <Button mnemonicParsing="false" prefWidth="200.0" text="Profiles and protocols">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button fx:id="usp" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Universal Surveilllance Profile">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="csp" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Company Surveillance  Profile">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="jlsp" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Job/location surveil profiles">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="gvp" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Generic  visit protocols">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="futp" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Follow-up Treatment protocols">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="lmtp" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Lab matrix tracking profile">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="mt" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Macro Text">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="udpf" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="User Defined PDF Forms">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="wsd" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Wellness Summary Definations">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="itp" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Immunization Tracking Profile">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefWidth="200.0" text="Authorization">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="at" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Authorization Template">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="aes" alignment="TOP_LEFT" mnemonicParsing="false" prefWidth="200.0" text="Authorization External Sources">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" text="Company">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="closeBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="8.0" right="1.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

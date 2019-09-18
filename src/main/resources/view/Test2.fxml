@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="Profile" styleClass="profile" xmlns:fx="http://javafx.com/fxml" fx:controller="demo.ProfileController">
+    <Button fx:id="update" maxHeight="2.0" onAction="#processUpdate" text="Update" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="168.0" />
+    <Label fx:id="message" layoutX="56.0" layoutY="77.0" text="Please review your profile data." />
+    <Label layoutX="56.0" layoutY="123.0" text="User:" />
+    <Label layoutX="56.0" layoutY="224.0" text="Phone:" />
+    <Label layoutX="56.0" layoutY="173.0" text="Email:" />
+    <TextField fx:id="user" editable="false" layoutX="149.0" layoutY="120.0" maxWidth="2.0" minHeight="30.0" minWidth="215.0" prefHeight="30.0" prefWidth="215.0" />
+    <TextField fx:id="email" layoutX="149.0" layoutY="171.0" maxWidth="2.0" minHeight="30.0" minWidth="215.0" prefHeight="30.0" prefWidth="215.0" />
+    <TextField fx:id="phone" layoutX="149.0" layoutY="224.0" maxWidth="2.0" minHeight="30.0" minWidth="215.0" prefHeight="30.0" prefWidth="215.0" />
+    <CheckBox fx:id="subscribed" layoutX="402.0" layoutY="120.0" text="Subscribed to NewsLetter" />
+    <Separator layoutX="380.0" layoutY="110.0" orientation="VERTICAL" prefHeight="155.0" />
+    <Hyperlink fx:id="logout" layoutY="24.0" onAction="#processLogout" text="logout" AnchorPane.rightAnchor="52.0" />
+    <Button fx:id="Button" defaultButton="true" disable="true" maxHeight="2.0" maxWidth="100.0" minWidth="100.0" onAction="#processLogout" prefWidth="100.0" text="Continue" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="52.0" />
+    <Label fx:id="success" layoutX="150.0" layoutY="450.0" opacity="0.0" text="Profile successfully updated!" />
+    <Label layoutX="56.0" layoutY="284.0" text="Address:" />
+    <TextArea fx:id="address" maxHeight="50.0" maxWidth="448.0" minHeight="50.0" minWidth="100.0" prefHeight="50.0" prefWidth="448.0" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="289.0" />
+    <stylesheets>
+        <URL value="@demo.css" />
+    </stylesheets>
+</AnchorPane>
+

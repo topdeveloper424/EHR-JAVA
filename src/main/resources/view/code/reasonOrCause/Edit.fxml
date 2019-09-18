@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="367.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.reasonOrCause.ReasonOrCauseEditController">
+   <children>
+      <TextField fx:id="idTextField" disable="true" editable="false" layoutX="109.0" layoutY="17.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField fx:id="reasonCauseTextField" layoutX="112.0" layoutY="51.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField fx:id="descriptionTextField" layoutX="111.0" layoutY="85.0" prefHeight="25.0" prefWidth="229.0" />
+      <TextField fx:id="wcioTextField" layoutX="111.0" layoutY="118.0" prefHeight="25.0" prefWidth="100.0" />
+      <CheckBox fx:id="inactiveCheckBox" layoutX="30.0" layoutY="163.0" mnemonicParsing="false" text="Inactive ?" />
+      <Button id="ghosh" fx:id="updateButton" layoutX="139.0" layoutY="158.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForUpdateButton" prefHeight="25.0" prefWidth="81.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="ray" fx:id="cancelButton" layoutX="259.0" layoutY="158.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancelButton" prefHeight="25.0" prefWidth="81.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="25.0" layoutY="55.0" text="Reason/Cause :" />
+      <Label layoutX="26.0" layoutY="89.0" text="Description :" />
+      <Label layoutX="25.0" layoutY="122.0" text="WC10 Code :" />
+      <Label layoutX="30.0" layoutY="21.0" text="ID:" />
+   </children>
+</AnchorPane>

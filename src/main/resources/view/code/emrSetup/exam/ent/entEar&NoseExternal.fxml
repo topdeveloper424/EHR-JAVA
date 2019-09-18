@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="321.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.ent.EntEarNoseExternalInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="307.0" prefWidth="675.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="121.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="226.0" prefWidth="5.0" />
+                  <Label layoutX="15.0" layoutY="6.0" prefHeight="17.0" prefWidth="125.0" text="Left Ear" />
+                  <Label layoutX="11.0" layoutY="96.0" text=" Right Ear" />
+                  <Label layoutX="15.0" layoutY="148.0" text="External Nose" />
+                  <CheckBox fx:id="externalLeftNormalCkeckBox" layoutX="244.0" layoutY="6.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="externalLeftTenderTractionCkeckBox" layoutX="434.0" layoutY="26.0" mnemonicParsing="false" text="tender on traction on tragus" />
+                  <CheckBox fx:id="externalLeftCerumenousCkeckBox" layoutX="244.0" layoutY="26.0" mnemonicParsing="false" text="cerumenous" />
+                  <CheckBox fx:id="externalLeftErythematouCkeckBox" layoutX="434.0" layoutY="6.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="externalRightNormalCkeckBox" layoutX="244.0" layoutY="74.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="externalLeftAtrophicCkeckBox" layoutX="434.0" layoutY="47.0" mnemonicParsing="false" text="atrophic cartilage" />
+                  <CheckBox fx:id="externalRightErythematouCkeckBox" layoutX="434.0" layoutY="74.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="externalRightCerumenousCkeckBox" layoutX="244.0" layoutY="95.0" mnemonicParsing="false" text="cerumenous" />
+                  <Button fx:id="doneBtn" layoutX="474.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="575.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="externalLeftAllNormalCkeckBox" layoutX="147.0" layoutY="6.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="externalLeftPiercedCkeckBox" layoutX="244.0" layoutY="47.0" mnemonicParsing="false" text="pierced lobes" />
+                  <CheckBox fx:id="externalRightPiercedCkeckBox" layoutX="244.0" layoutY="115.0" mnemonicParsing="false" text="pierced lobes" />
+                  <CheckBox fx:id="noseNormalCkeckBox" layoutX="244.0" layoutY="148.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="noseMarkedCkeckBox" layoutX="244.0" layoutY="197.0" mnemonicParsing="false" text="marked septal deviation" />
+                  <CheckBox fx:id="externalRightAtrophicCkeckBox" layoutX="434.0" layoutY="115.0" mnemonicParsing="false" text="atrophic cartilage" />
+                  <CheckBox fx:id="externalRightTenderTractionCkeckBox" layoutX="434.0" layoutY="95.0" mnemonicParsing="false" text="tender on traction on tragus" />
+                  <CheckBox fx:id="noseRhonphymaCkeckBox" layoutX="434.0" layoutY="148.0" mnemonicParsing="false" text="rhonphyma noted" />
+                  <CheckBox fx:id="noseErythematouslCkeckBox" layoutX="244.0" layoutY="173.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="noseDepressedCkeckBox" layoutX="434.0" layoutY="173.0" mnemonicParsing="false" text="depressed bridge of nose" />
+                  <Separator layoutX="-1.0" layoutY="222.0" prefHeight="0.0" prefWidth="675.0" />
+                  <Separator layoutX="-1.0" layoutY="70.0" prefHeight="0.0" prefWidth="675.0" />
+                  <Separator layoutX="2.0" layoutY="141.0" prefHeight="0.0" prefWidth="675.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

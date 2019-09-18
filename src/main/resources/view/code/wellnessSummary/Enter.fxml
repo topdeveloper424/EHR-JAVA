@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="600.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.wellnessSummary.WellnessSummaryReportDefinationsInputController">
+   <children>
+      <Label layoutX="192.0" layoutY="14.0" text="Description :" />
+      <TextField layoutX="268.0" layoutY="10.0" prefHeight="25.0" prefWidth="326.0" />
+      <TabPane layoutX="4.0" layoutY="37.0" prefHeight="505.0" prefWidth="589.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="14.0" layoutY="14.0" text="Paper Size">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="24.0" layoutY="21.0" text="Label" />
+                                    <Label layoutX="24.0" layoutY="66.0" text="Label" />
+                                    <Spinner layoutX="61.0" layoutY="17.0" prefHeight="25.0" prefWidth="131.0" />
+                                    <Spinner layoutX="61.0" layoutY="62.0" prefHeight="25.0" prefWidth="130.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="248.0" prefHeight="136.0" prefWidth="341.0" text="Margins">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="5.0" layoutY="23.0" text="Top :" />
+                                    <Label layoutX="5.0" layoutY="63.0" prefHeight="17.0" prefWidth="50.0" text="Bottom :" />
+                                    <Label layoutX="174.0" layoutY="23.0" text="Left :" />
+                                    <Label layoutX="174.0" layoutY="63.0" text="Right :" />
+                                    <Spinner layoutX="55.0" layoutY="19.0" prefHeight="25.0" prefWidth="98.0" />
+                                    <Spinner layoutX="55.0" layoutY="59.0" prefHeight="25.0" prefWidth="97.0" />
+                                    <Spinner layoutX="216.0" layoutY="19.0" prefHeight="25.0" prefWidth="109.0" />
+                                    <Spinner layoutX="217.0" layoutY="59.0" prefHeight="25.0" prefWidth="107.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="319.0" layoutY="141.0" prefHeight="163.0" prefWidth="239.0" text="Graphic Position and Size">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="5.0" layoutY="14.0" text="Vert Position :" />
+                                    <Label layoutX="5.0" layoutY="48.0" text="Horiz Position :" />
+                                    <Label layoutX="5.0" layoutY="82.0" text="Height :" />
+                                    <Label layoutX="7.0" layoutY="110.0" text="Width :" />
+                                    <Spinner layoutX="89.0" layoutY="10.0" prefHeight="25.0" prefWidth="139.0" />
+                                    <Spinner layoutX="90.0" layoutY="44.0" prefHeight="25.0" prefWidth="139.0" />
+                                    <Spinner layoutX="90.0" layoutY="78.0" prefHeight="25.0" prefWidth="140.0" />
+                                    <Spinner layoutX="90.0" layoutY="106.0" prefHeight="25.0" prefWidth="138.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button layoutX="42.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="155.0" text="Insert Letterhead Graphic" />
+                        <Label layoutX="87.0" layoutY="316.0" text="Format to use when Printing Date :" />
+                        <Label layoutX="87.0" layoutY="344.0" text="Report Defination for Visit Category :" />
+                        <Label layoutX="87.0" layoutY="368.0" text="Document Type for saving in chat :" />
+                        <SplitMenuButton layoutX="295.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </SplitMenuButton>
+                        <TextField layoutX="295.0" layoutY="340.0" prefHeight="25.0" prefWidth="79.0" />
+                        <Button layoutX="374.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/insert_document_icon.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField layoutX="295.0" layoutY="364.0" />
+                        <Button layoutX="444.0" layoutY="363.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="36.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/insert_document_icon.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="102.0" layoutY="419.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" text="Store a Signature">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/signature_pen_document_text-512.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Report Text">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="322.0" layoutY="552.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Ok">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="close" layoutX="418.0" layoutY="552.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

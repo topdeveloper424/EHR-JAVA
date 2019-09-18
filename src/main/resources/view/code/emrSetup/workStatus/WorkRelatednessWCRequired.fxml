@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.workStatus.WorkstatucWorkRelatednessInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="132.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="5.0" text="Work Relatedness" />
+                  <Separator layoutX="134.0" orientation="VERTICAL" prefHeight="66.0" prefWidth="4.0" />
+                  <Button fx:id="doneBtn" layoutX="321.0" layoutY="71.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="422.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-2.0" layoutY="66.0" prefHeight="0.0" prefWidth="578.0" />
+                  <RadioButton fx:id="notWorkRelatedRadio" layoutX="170.0" layoutY="6.0" mnemonicParsing="false" text="Not Work Related(Non-AOE)">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="work" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="undeterminedRadio" layoutX="386.0" layoutY="6.0" mnemonicParsing="false" text="Undetermined at this time" toggleGroup="$work" />
+                  <RadioButton fx:id="ashaRecordableRadio" layoutX="171.0" layoutY="27.0" mnemonicParsing="false" text="OSHA Recordable /Work Related" toggleGroup="$work" />
+                  <RadioButton fx:id="firstAidRadio" layoutX="386.0" layoutY="27.0" mnemonicParsing="false" text="First-Aid Only" toggleGroup="$work" />
+                  <RadioButton fx:id="workRelatedRadio" layoutX="171.0" layoutY="47.0" mnemonicParsing="false" text="Work Related" toggleGroup="$work" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/style.css" />
+      <URL value="@../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

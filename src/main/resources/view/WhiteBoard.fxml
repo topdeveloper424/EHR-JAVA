@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="799.0" styleClass="grid2" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.whiteBoardController.PatientWhiteBoardController">
+   <children>
+      <Button layoutX="166.0" layoutY="9.0" mnemonicParsing="false" text="Change to another Clinic" />
+      <DatePicker fx:id="inputDateField" layoutX="320.0" layoutY="10.0" onAction="#showAppointmentBydate" prefHeight="25.0" prefWidth="124.0" />
+      <Label layoutX="452.0" layoutY="12.0" text="Current Time" />
+      <TextField layoutX="529.0" layoutY="9.0" prefHeight="25.0" prefWidth="100.0" />
+      <ListView fx:id="waitingRoomList" layoutX="10.0" layoutY="81.0" onDragDetected="#waitingRoomDargDetected" onDragEntered="#DragEnter" onDragExited="#DragExited" onMousePressed="#waitingRoomListMousePressed" prefHeight="507.0" prefWidth="163.0" />
+      <ListView fx:id="labListView" layoutX="186.0" layoutY="81.0" onDragDetected="#labDragDetected" onDragDropped="#labDragDroped" onDragExited="#DragExited" onDragOver="#labDragOver" onMousePressed="#labMousePressed" prefHeight="256.0" prefWidth="163.0" />
+      <ListView layoutX="364.0" layoutY="80.0" onDragDetected="#xRayDragDetected" onDragDropped="#xRayDragDroped" onDragExited="#DragExited" onDragOver="#xRayDragOver" onMousePressed="#xRayMousePressed" prefHeight="256.0" prefWidth="163.0" fx:id="xRayListView" />
+      <ListView fx:id="checkOutListView" layoutX="548.0" layoutY="80.0" onDragDetected="#checkOutDragDetected" onDragDropped="#checkOutDragDropped" onDragExited="#DragExited" onDragOver="#checkOutDragOver" onMousePressed="#checkOutMousePressed" prefHeight="256.0" prefWidth="163.0" />
+      <GridPane layoutX="184.0" layoutY="355.0" prefHeight="63.0" prefWidth="524.0">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="103.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="103.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="103.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="95.0" styleClass="grid" text="Exam Room 1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="14.0" prefWidth="95.0" styleClass="grid" text="Exam Room 2" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="95.0" styleClass="grid" text="Exam Room  7" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="95.0" styleClass="grid" text="Eye Room" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="95.0" styleClass="grid" text="HCG" GridPane.columnIndex="4" />
+            <ListView fx:id="examRoom1ListView" onDragDetected="#examRoom1DragDetected" onDragDropped="#examRoom1DragDropped" onDragExited="#DragExited" onDragOver="#examRoom1DragOver" onMouseReleased="#examRoom1MousePressed" prefHeight="46.0" prefWidth="95.0" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ListView>
+            <ListView fx:id="examRoom2ListView" onDragDetected="#examRoom2DragDetected" onDragDropped="#examRoom2DragDropped" onDragExited="#DragExited" onDragOver="#examRoom2DragOver" onMousePressed="#examRoom2MousePressed" prefHeight="46.0" prefWidth="95.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ListView>
+            <ListView fx:id="examRoom7ListView" onDragDetected="#examRoom7DragDetected" onDragDropped="#examRoom7DragDropped" onDragOver="#examRoom7DragOver" onMousePressed="#examRoom7MousePressed" prefHeight="46.0" prefWidth="95.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ListView fx:id="eyeRoomListView" onDragDetected="#eyeRoomDragDetected" onDragDropped="#eyeRoomDragDropped" onDragExited="#DragExited" onDragOver="#eyeRoomDragOver" onMousePressed="#eyeRoomMousePressed" prefHeight="46.0" prefWidth="95.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ListView fx:id="hcgListView" onDragDetected="#hcgDragDetected" onDragDropped="#hcgDragDropped" onDragExited="#DragExited" onDragOver="#hcgRoomDragOver" onMousePressed="#hcgMousePressed" prefHeight="46.0" prefWidth="95.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="170.0" layoutY="437.0" prefHeight="63.0" prefWidth="246.0">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="103.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="95.0" styleClass="grid" text="Physical Room">
+               <GridPane.margin>
+                  <Insets right="-3.0" />
+               </GridPane.margin></Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="95.0" styleClass="grid" text="Laceration Room" GridPane.columnIndex="1" />
+            <ListView fx:id="physicalListView" onDragDetected="#physicalRoomDragDetected" onDragDropped="#physicalRoomDragDropped" onDragExited="#DragExited" onDragOver="#physicalRoomDragOver" onMousePressed="#physicalRoomMousePressed" prefHeight="46.0" prefWidth="95.0" GridPane.rowIndex="1" />
+            <ListView fx:id="lacerationListView" editable="true" onDragDetected="#lacerationRoomDragDetected" onDragDropped="#lacerationRoomDragDropped" onDragExited="#DragExited" onDragOver="#lacerationRoomDragOver" onMousePressed="#lacerationRoomMousePressed" prefHeight="46.0" prefWidth="95.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button layoutX="183.0" layoutY="563.0" mnemonicParsing="false" text="Patient Billing Note" />
+      <Button layoutX="344.0" layoutY="563.0" mnemonicParsing="false" text="Discharged Patients" />
+      <Button layoutX="502.0" layoutY="564.0" mnemonicParsing="false" text="Patient List View" />
+      <Button fx:id="cancelButton" layoutX="643.0" layoutY="565.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedFoCloseButton" text="Close" />
+      <HBox layoutX="7.0" layoutY="602.0" prefHeight="25.0" prefWidth="790.0">
+         <children>
+            <Label text="* Color Key:" />
+            <Label text="Blue in Waiting room = Walk -In" textFill="#1010eb" />
+            <Label text="Green in Waiting Room = Schedule" textFill="#17b212" />
+            <Label text="Orange = here more than one hour" textFill="#e49641" />
+            <Label text="Red = Here more than 1 1/2 hour" textFill="#f52239" />
+         </children>
+      </HBox>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="63.0" prefHeight="20.0" prefWidth="163.0" styleClass="grid" text="WatingRoomList" />
+      <Label layoutX="186.0" layoutY="62.0" prefHeight="20.0" prefWidth="163.0" styleClass="grid" text="                      Lab" />
+      <Label layoutX="363.0" layoutY="62.0" prefHeight="20.0" prefWidth="163.0" styleClass="grid" text="                      X-Ray" />
+      <Label layoutX="544.0" layoutY="62.0" prefHeight="20.0" prefWidth="163.0" styleClass="grid" text="                Check-Out" />
+   </children>
+</AnchorPane>

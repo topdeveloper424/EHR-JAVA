@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="208.0" prefWidth="594.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.procedure.EarWrickPlacementInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="5.0" prefHeight="195.0" prefWidth="578.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="14.0" text="Ear Wick Placement:" />
+                  <Label layoutX="9.0" layoutY="63.0" text="Complecations:" />
+                  <TextArea fx:id="complecationTextarea" layoutX="209.0" layoutY="62.0" prefHeight="48.0" prefWidth="360.0" />
+                  <Separator layoutY="55.0" prefHeight="3.0" prefWidth="578.0" />
+                  <Separator layoutX="127.0" orientation="VERTICAL" prefHeight="116.0" prefWidth="3.0" />
+                  <CheckBox fx:id="normalCheckBox" layoutX="138.0" layoutY="65.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutY="115.0" prefHeight="3.0" prefWidth="578.0" />
+                  <Button fx:id="doneBtn" layoutX="399.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="490.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="rightCheck" layoutX="205.0" layoutY="8.0" mnemonicParsing="false" text="right canel" />
+                  <CheckBox fx:id="leftCheck" layoutX="346.0" layoutY="7.0" mnemonicParsing="false" text="left canel" />
+                  <CheckBox fx:id="bothCheck" layoutX="206.0" layoutY="31.0" mnemonicParsing="false" text="both canel" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

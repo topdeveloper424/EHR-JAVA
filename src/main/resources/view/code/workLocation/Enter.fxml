@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="602.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.workLocation.WorkLocationInputController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="5.0" minHeight="0.0" minWidth="0.0" prefHeight="272.0" prefWidth="570.0">
+         <children>
+            <TextField fx:id="codeTextField" layoutX="106.0" layoutY="20.0" />
+            <TextField fx:id="descriptionTextField" layoutX="101.0" layoutY="66.0" prefHeight="25.0" prefWidth="268.0" />
+            <Label layoutX="25.0" layoutY="24.0" text="Work Location :" />
+            <Label layoutX="25.0" layoutY="70.0" text="Decription :" />
+            <Label layoutX="25.0" layoutY="109.0" text="Address :" />
+            <Label layoutX="25.0" layoutY="158.0" text="City :" />
+            <Label layoutX="25.0" layoutY="195.0" text="SIC Code :" />
+            <Label layoutX="25.0" layoutY="231.0" text="NAICS Code :" />
+            <TextField fx:id="localAddressTextField" layoutX="101.0" layoutY="105.0" prefHeight="25.0" prefWidth="455.0" />
+            <TextField fx:id="cityTextField" layoutX="101.0" layoutY="151.0" prefHeight="25.0" prefWidth="155.0" />
+            <TextField fx:id="stateTextField" layoutX="296.0" layoutY="152.0" prefHeight="25.0" prefWidth="87.0" />
+            <TextField fx:id="zipTextField" layoutX="434.0" layoutY="153.0" prefHeight="25.0" prefWidth="122.0" />
+            <TextField fx:id="sicCodeIdTextField" layoutX="101.0" layoutY="191.0" prefHeight="25.0" prefWidth="122.0" />
+            <Button fx:id="sicCodeButton" layoutX="223.0" layoutY="189.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/search-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="naicsCodeIdTextField" layoutX="101.0" layoutY="227.0" prefHeight="25.0" prefWidth="120.0" />
+            <Button fx:id="naicsButton" layoutX="221.0" layoutY="225.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/search-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="260.0" layoutY="155.0" text="State :" />
+            <Label layoutX="405.0" layoutY="156.0" text="Zip :" />
+         </children>
+      </AnchorPane>
+      <CheckBox fx:id="inactiveCheckBox" layoutX="34.0" layoutY="286.0" mnemonicParsing="false" text="Inactive" />
+      <Button fx:id="okButton" layoutX="415.0" layoutY="282.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForOkButton" prefHeight="25.0" prefWidth="72.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="511.0" layoutY="282.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancleButton" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

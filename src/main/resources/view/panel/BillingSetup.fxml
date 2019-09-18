@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="myanchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.BillingSetupGUIController">
+   <children>
+      <VBox layoutY="5.0" prefHeight="503.0" prefWidth="189.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Billing Setup">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="billing" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Billing Accounts">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="aradju" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="A/R Adjustment Codes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="denial" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="181.0" text="Denial Reason Codes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Billing Management">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button fx:id="blsystem" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Billing System Parameter">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="clinics" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Clinics">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="revenue" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Revenue Classes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Fee Schedules">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="standard" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Standard Fee Schedules">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="stfee" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="State Fee Schedules">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="clfee" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="Clinic Fee Schedules">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="assfee" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Assignable Fee Schedules">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="confee" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="181.0" text="Contract Fee Schedules">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="cash" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" text="Cash Discount Fee Schedules">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="roll" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="184.0" text="Roll Effective Date Pricing">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="imp" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="181.0" text="Import/Export Fee Schedules">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="close" mnemonicParsing="false" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="8.0" right="1.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets left="60.0" top="10.0" />
+   </padding>
+</AnchorPane>

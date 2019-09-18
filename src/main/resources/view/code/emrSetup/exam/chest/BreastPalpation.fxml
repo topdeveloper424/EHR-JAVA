@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="655.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.chest.ChestBreastPalpationInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="368.0" prefWidth="655.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="646.0">
+               <children>
+                  <Separator layoutX="147.0" layoutY="1.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="385.0" layoutY="292.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="492.0" layoutY="291.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="226.0" prefHeight="0.0" prefWidth="655.0" />
+                  <Separator layoutY="270.0" prefHeight="0.0" prefWidth="655.0" />
+                  <Label layoutX="9.0" layoutY="26.0" text="Left Breast Exam" />
+                  <Label layoutX="12.0" layoutY="127.0" text="Right Breast Exam" />
+                  <Label layoutX="41.0" layoutY="340.0" />
+                  <Label layoutX="11.0" layoutY="240.0" text="Axillary Adenopathy" />
+                  <Separator layoutX="2.0" layoutY="110.0" prefHeight="0.0" prefWidth="655.0" />
+                  <CheckBox fx:id="leftWithoutMasses" layoutX="252.0" layoutY="17.0" mnemonicParsing="false" text="without masses" />
+                  <CheckBox fx:id="leftFixed" layoutX="252.0" layoutY="40.0" mnemonicParsing="false" text="fixed" />
+                  <CheckBox fx:id="leftSolitary" layoutX="491.0" layoutY="40.0" mnemonicParsing="false" text="solitary masses noted" />
+                  <CheckBox fx:id="leftMobile" layoutX="405.0" layoutY="38.0" mnemonicParsing="false" text="mobile" />
+                  <CheckBox fx:id="leftMultipleMasses" layoutX="491.0" layoutY="17.0" mnemonicParsing="false" text="multiple masses noted" />
+                  <CheckBox fx:id="leftHard" layoutX="491.0" layoutY="64.0" mnemonicParsing="false" text="hard " />
+                  <CheckBox fx:id="leftCystic" layoutX="252.0" layoutY="62.0" mnemonicParsing="false" text="cystic" />
+                  <CheckBox fx:id="leftMedially" layoutX="405.0" layoutY="60.0" mnemonicParsing="false" text="medially" />
+                  <CheckBox fx:id="skinLesionsCheck2" layoutX="157.0" layoutY="17.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="leftSuperior" layoutX="252.0" layoutY="82.0" mnemonicParsing="false" text="superior" />
+                  <CheckBox fx:id="leftInferior" layoutX="405.0" layoutY="81.0" mnemonicParsing="false" text="inferior" />
+                  <CheckBox fx:id="leftLaterally" layoutX="405.0" layoutY="17.0" mnemonicParsing="false" text="laterally" />
+                  <RadioButton fx:id="axillaryNotNoted" layoutX="252.0" layoutY="240.0" mnemonicParsing="false" text="not noted" />
+                  <RadioButton fx:id="axillaryNotedLeft" layoutX="404.0" layoutY="242.0" mnemonicParsing="false" text="noted left" />
+                  <RadioButton fx:id="axillaryNotedRight" layoutX="493.0" layoutY="241.0" mnemonicParsing="false" text="noted right" />
+                  <CheckBox fx:id="rightWithoutMasses1" layoutX="253.0" layoutY="125.0" mnemonicParsing="false" text="without masses" />
+                  <CheckBox fx:id="rightFixed1" layoutX="253.0" layoutY="148.0" mnemonicParsing="false" text="fixed" />
+                  <CheckBox fx:id="rightCystic1" layoutX="253.0" layoutY="170.0" mnemonicParsing="false" text="cystic" />
+                  <CheckBox fx:id="rightSuperior1" layoutX="253.0" layoutY="190.0" mnemonicParsing="false" text="superior" />
+                  <CheckBox fx:id="rightMobile1" layoutX="406.0" layoutY="148.0" mnemonicParsing="false" text="mobile" />
+                  <CheckBox fx:id="rightMedially1" layoutX="406.0" layoutY="170.0" mnemonicParsing="false" text="medially" />
+                  <CheckBox fx:id="rightInferior1" layoutX="406.0" layoutY="191.0" mnemonicParsing="false" text="inferior" />
+                  <CheckBox fx:id="rightLaterally1" layoutX="406.0" layoutY="127.0" mnemonicParsing="false" text="laterally" />
+                  <CheckBox fx:id="rightSolitary1" layoutX="495.0" layoutY="154.0" mnemonicParsing="false" text="solitary masses noted" />
+                  <CheckBox fx:id="rightMultipleMasses1" layoutX="495.0" layoutY="131.0" mnemonicParsing="false" text="multiple masses noted" />
+                  <CheckBox fx:id="rightHard1" layoutX="495.0" layoutY="178.0" mnemonicParsing="false" text="hard " />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

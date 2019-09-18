@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="755.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.clinicLocation.ClinicLocationPatientsStatusMapController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="14.0" prefHeight="518.0" prefWidth="692.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Location Map">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="5.0" layoutY="4.0" prefHeight="188.0" prefWidth="598.0" text="Map of Waiting.Lab,X-ray or other  Multiple Patient Stations">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="106.0" prefWidth="244.0">
+                                 <children>
+                                    <Label layoutX="81.0" layoutY="14.0" prefHeight="17.0" prefWidth="107.0" text="Main Wating Area :" />
+                                    <TextField layoutX="191.0" layoutY="10.0" prefHeight="25.0" prefWidth="217.0" />
+                                    <Label layoutX="40.0" layoutY="53.0" text="Names of  the other multiple Patients handling Stations" />
+                                    <Label layoutX="14.0" layoutY="81.0" text="Area 2:" />
+                                    <Label layoutX="119.0" layoutY="81.0" text="Area 3:" />
+                                    <Label layoutX="239.0" layoutY="81.0" text="Area 4:" />
+                                    <Label layoutX="366.0" layoutY="81.0" text="Area 5:" />
+                                    <Label layoutX="508.0" layoutY="81.0" text="Area 6:" />
+                                    <TextField layoutX="11.0" layoutY="113.0" prefHeight="25.0" prefWidth="87.0" />
+                                    <TextField layoutX="102.0" layoutY="113.0" prefHeight="25.0" prefWidth="105.0" />
+                                    <TextField layoutX="212.0" layoutY="113.0" prefHeight="25.0" prefWidth="112.0" />
+                                    <TextField layoutX="326.0" layoutY="113.0" prefHeight="25.0" prefWidth="116.0" />
+                                    <TextField layoutX="448.0" layoutY="113.0" prefHeight="25.0" prefWidth="138.0" />
+                                    <Label layoutX="428.0" layoutY="14.0" text="(required)" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="5.0" layoutY="194.0" prefHeight="288.0" prefWidth="598.0" text="Map of Invidual Exam and Treatment Rooms">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="28.0" layoutY="14.0" text="Names of  individual patien exams or treatment rooms :" />
+                                    <Label layoutX="28.0" layoutY="38.0" text="Room1" />
+                                    <Label layoutX="162.0" layoutY="38.0" text="Room2" />
+                                    <Label layoutX="284.0" layoutY="38.0" text="Room3" />
+                                    <Label layoutX="400.0" layoutY="38.0" text="Room4" />
+                                    <Label layoutX="508.0" layoutY="38.0" text="Room5" />
+                                    <TextField layoutX="11.0" layoutY="64.0" prefHeight="25.0" prefWidth="106.0" />
+                                    <TextField layoutX="120.0" layoutY="64.0" prefHeight="25.0" prefWidth="117.0" />
+                                    <TextField layoutX="241.0" layoutY="64.0" prefHeight="25.0" prefWidth="109.0" />
+                                    <TextField layoutX="361.0" layoutY="64.0" prefHeight="25.0" prefWidth="104.0" />
+                                    <TextField layoutX="472.0" layoutY="64.0" prefHeight="25.0" prefWidth="110.0" />
+                                    <Label layoutX="28.0" layoutY="95.0" text="Room6" />
+                                    <Label layoutX="162.0" layoutY="95.0" text="Room7" />
+                                    <Label layoutX="284.0" layoutY="95.0" text="Room8" />
+                                    <Label layoutX="400.0" layoutY="95.0" text="Room9" />
+                                    <Label layoutX="505.0" layoutY="95.0" text="Room10" />
+                                    <TextField layoutX="10.0" layoutY="119.0" prefHeight="25.0" prefWidth="109.0" />
+                                    <TextField layoutX="120.0" layoutY="119.0" prefHeight="25.0" prefWidth="112.0" />
+                                    <TextField layoutX="238.0" layoutY="119.0" prefHeight="25.0" prefWidth="116.0" />
+                                    <TextField layoutX="360.0" layoutY="119.0" prefHeight="25.0" prefWidth="110.0" />
+                                    <TextField layoutX="474.0" layoutY="119.0" prefHeight="25.0" prefWidth="107.0" />
+                                    <Label layoutX="28.0" layoutY="165.0" text="Room11" />
+                                    <Label layoutX="159.0" layoutY="165.0" text="Room12" />
+                                    <Label layoutX="284.0" layoutY="165.0" text="Room13" />
+                                    <Label layoutX="397.0" layoutY="165.0" text="Room14" />
+                                    <Label layoutX="501.0" layoutY="165.0" text="Room15" />
+                                    <TextField layoutX="13.0" layoutY="201.0" prefHeight="25.0" prefWidth="110.0" />
+                                    <TextField layoutX="130.0" layoutY="201.0" prefHeight="25.0" prefWidth="103.0" />
+                                    <TextField layoutX="239.0" layoutY="201.0" prefHeight="25.0" prefWidth="113.0" />
+                                    <TextField layoutX="356.0" layoutY="201.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField layoutX="475.0" layoutY="201.0" prefHeight="25.0" prefWidth="107.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Status Values">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="489.0" prefWidth="698.0">
+                     <children>
+                        <TitledPane animated="false" layoutX="3.0" layoutY="37.0" prefHeight="320.0" prefWidth="321.0" text="Status Values for Multiple Patient Stations">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="16.0" layoutY="14.0" text="Waiting :" />
+                                    <Label layoutX="15.0" layoutY="42.0" text="Status 2 :" />
+                                    <Label layoutX="15.0" layoutY="70.0" text="Status 3 :" />
+                                    <Label layoutX="15.0" layoutY="100.0" text="Status 4 :" />
+                                    <Label layoutX="15.0" layoutY="132.0" text="Status 5 :" />
+                                    <Label layoutX="15.0" layoutY="164.0" text="Status 6 :" />
+                                    <TextField layoutX="73.0" layoutY="10.0" />
+                                    <TextField layoutX="73.0" layoutY="38.0" />
+                                    <TextField layoutX="73.0" layoutY="66.0" />
+                                    <TextField layoutX="73.0" layoutY="96.0" />
+                                    <TextField layoutX="73.0" layoutY="128.0" />
+                                    <TextField layoutX="73.0" layoutY="160.0" />
+                                    <Text layoutX="12.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note : Atleast one Patient Status Value is Required for the Waiting Room Area" wrappingWidth="294.732421875" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="327.0" layoutY="37.0" prefHeight="320.0" prefWidth="363.0" text="Status Values for Individual Exams &amp; Treatment Rooms">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="22.0" layoutY="14.0" text="Status 1 :" />
+                                    <Label layoutX="22.0" layoutY="48.0" text="Status 2 :" />
+                                    <Label layoutX="22.0" layoutY="77.0" text="Status 3 :" />
+                                    <Label layoutX="22.0" layoutY="107.0" text="Status 4 :" />
+                                    <Label layoutX="22.0" layoutY="136.0" text="Status 5 :" />
+                                    <Label layoutX="22.0" layoutY="164.0" text="Status 6 :" />
+                                    <TextField layoutX="77.0" layoutY="10.0" />
+                                    <TextField layoutX="77.0" layoutY="44.0" />
+                                    <TextField layoutX="77.0" layoutY="73.0" />
+                                    <TextField layoutX="77.0" layoutY="103.0" />
+                                    <TextField layoutX="77.0" layoutY="132.0" />
+                                    <TextField layoutX="77.0" layoutY="160.0" />
+                                    <Text layoutX="12.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note :The Patient Status Values 'Ready for Provider and With Provider ' are both Required.They may be in any Position." wrappingWidth="336.13671045564115" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Text layoutX="22.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note : The Patient status values 'Discharged' and 'Walked out' are automatically assigned from Standard processing and are not needed above." wrappingWidth="634.619140625" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="371.0" layoutY="570.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Ok">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="close" layoutX="475.0" layoutY="570.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text layoutX="9.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instructions : Fill in the Names,Labels or Description of each Location and Patient Status for this clinic " wrappingWidth="349.13671875" />
+   </children>
+</AnchorPane>

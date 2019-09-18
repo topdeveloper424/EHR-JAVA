@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="569.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.radiology.XRayResultPreliminaryInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="290.0" prefWidth="556.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="525.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="8.0" text="Preliminary Reading" />
+                  <Separator layoutX="123.0" orientation="VERTICAL" prefHeight="213.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="300.0" layoutY="221.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="400.0" layoutY="221.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="4.0" layoutY="170.0" text="Free Form Text" />
+                  <TextArea fx:id="freeFormTextarea" layoutX="139.0" layoutY="151.0" prefHeight="50.0" prefWidth="323.0" wrapText="true" />
+                  <Separator layoutX="-3.0" layoutY="53.0" prefHeight="0.0" prefWidth="563.0" />
+                  <Label layoutX="4.0" layoutY="64.0" text="Abnormalities Noted" />
+                  <RadioButton fx:id="noacuteradio" layoutX="139.0" layoutY="8.0" mnemonicParsing="false" text="no acute , detectable  abnormality">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="preli" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="abnormalRadio" layoutX="359.0" layoutY="8.0" mnemonicParsing="false" text="abnormal" toggleGroup="$preli" />
+                  <RadioButton fx:id="questationableRadio" layoutX="139.0" layoutY="30.0" mnemonicParsing="false" text="questationable abnormality" toggleGroup="$preli" />
+                  <RadioButton fx:id="otherradio" layoutX="359.0" layoutY="30.0" mnemonicParsing="false" text="Other" toggleGroup="$preli" />
+                  <Separator layoutX="1.0" layoutY="144.0" prefHeight="2.0" prefWidth="556.0" />
+                  <Separator layoutX="1.0" layoutY="211.0" prefHeight="2.0" prefWidth="556.0" />
+                  <CheckBox fx:id="fractureCheck" layoutX="140.0" layoutY="57.0" mnemonicParsing="false" text="fracture" />
+                  <CheckBox fx:id="fractureTibialCheck" layoutX="359.0" layoutY="57.0" mnemonicParsing="false" text="fracture of the tibial plateau" />
+                  <CheckBox fx:id="fracturePatellaCheck" layoutX="140.0" layoutY="78.0" mnemonicParsing="false" text="fracture of the patella" />
+                  <CheckBox fx:id="effusionCheck" layoutX="359.0" layoutY="78.0" mnemonicParsing="false" text="effusion" />
+                  <CheckBox fx:id="effusionKneeJointCheck" layoutX="141.0" layoutY="98.0" mnemonicParsing="false" text="effusion of the knee joint" />
+                  <CheckBox fx:id="degenerativeCheck" layoutX="359.0" layoutY="98.0" mnemonicParsing="false" text="degenerative charges" />
+                  <CheckBox fx:id="dislocationCheck" layoutX="141.0" layoutY="119.0" mnemonicParsing="false" text="dislocation" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="547.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.socialHistory.LivingSituationInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="272.0" prefWidth="536.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="268.0" prefWidth="534.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="14.0" text="Patient Currently lives" />
+                  <Label layoutX="6.0" layoutY="128.0" text="Current Residence" />
+                  <RadioButton fx:id="patientAlone" layoutX="186.0" layoutY="11.0" mnemonicParsing="false" text="Alone">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="level" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="PatientWithParent" layoutX="368.0" layoutY="10.0" mnemonicParsing="false" text="with parents" toggleGroup="$level" />
+                  <Separator layoutX="152.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="195.0" prefWidth="5.0" />
+                  <Button fx:id="doneBtn" layoutX="342.0" layoutY="205.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutY="104.0" prefHeight="0.0" prefWidth="536.0" />
+                  <Button fx:id="skipBtn" layoutX="430.0" layoutY="205.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="patientwithPartner" layoutX="186.0" layoutY="33.0" mnemonicParsing="false" text="With partner" toggleGroup="$level" />
+                  <RadioButton fx:id="patientWithspoueChildren" layoutX="368.0" layoutY="57.0" mnemonicParsing="false" text="With spouse and children" toggleGroup="$level" />
+                  <Separator layoutX="-1.0" layoutY="191.0" prefHeight="0.0" prefWidth="536.0" />
+                  <RadioButton fx:id="patientWithSpouse" layoutX="187.0" layoutY="56.0" mnemonicParsing="false" text="With spouse" toggleGroup="$level" />
+                  <RadioButton fx:id="patientAsSingleParent" layoutX="186.0" layoutY="81.0" mnemonicParsing="false" text="As a single parent" toggleGroup="$level" />
+                  <RadioButton fx:id="patientWithRoomate" layoutX="368.0" layoutY="33.0" mnemonicParsing="false" text="with roommates" toggleGroup="$level" />
+                  <RadioButton fx:id="CurrentApartment" layoutX="186.0" layoutY="114.0" mnemonicParsing="false" text="an apartment">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="current" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="currentPurchased" layoutX="186.0" layoutY="136.0" mnemonicParsing="false" text="a purchased house" toggleGroup="$current" />
+                  <RadioButton fx:id="currentShelter" layoutX="186.0" layoutY="159.0" mnemonicParsing="false" text="a shelter" toggleGroup="$current" />
+                  <RadioButton fx:id="currentCondominium" layoutX="368.0" layoutY="114.0" mnemonicParsing="false" text="a condominium" toggleGroup="$current" />
+                  <RadioButton fx:id="currentRentedHouse" layoutX="368.0" layoutY="139.0" mnemonicParsing="false" text="a rented house" toggleGroup="$current" />
+                  <RadioButton fx:id="currentHomelessEniironment" layoutX="368.0" layoutY="163.0" mnemonicParsing="false" text="a homless enironment " toggleGroup="$current" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

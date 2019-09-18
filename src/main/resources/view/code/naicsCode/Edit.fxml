@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="428.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.naicsCode.NaicsCodeEditController">
+   <children>
+      <TextField fx:id="id" disable="true" editable="false" layoutX="108.0" layoutY="17.0" />
+      <TextField fx:id="naicsCode" layoutX="108.0" layoutY="51.0" prefHeight="25.0" prefWidth="102.0" />
+      <TextField fx:id="descrp" layoutX="108.0" layoutY="86.0" prefHeight="25.0" prefWidth="243.0" />
+      <TitledPane animated="false" layoutX="16.0" layoutY="120.0" prefHeight="264.0" prefWidth="396.0" text="National Safety Council Statistics">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="27.0" text="Work Injury rate:" />
+                  <Label layoutX="28.0" layoutY="61.0" text="Lost Time Injury Rate:" />
+                  <Label layoutX="28.0" layoutY="93.0" text="Lost Work Days:" />
+                  <Label layoutX="28.0" layoutY="129.0" text="Avg Wage Repl Cost:" />
+                  <Label layoutX="28.0" layoutY="160.0" text="Avg Comp Premium per Emp:" />
+                  <Label layoutX="28.0" layoutY="193.0" text="Variable % of Premium:" />
+                  <TextField layoutX="197.0" layoutY="23.0" />
+                  <TextField layoutX="197.0" layoutY="57.0" />
+                  <TextField layoutX="197.0" layoutY="89.0" />
+                  <TextField layoutX="197.0" layoutY="125.0" />
+                  <TextField layoutX="197.0" layoutY="159.0" />
+                  <TextField layoutX="197.0" layoutY="192.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <CheckBox fx:id="inactive" layoutX="61.0" layoutY="394.0" mnemonicParsing="false" text="Inactive ?" />
+      <Button id="ghosh" fx:id="updateBtn" layoutX="194.0" layoutY="390.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="ray" fx:id="cancelBtn" layoutX="310.0" layoutY="390.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="25.0" layoutY="55.0" text="NAICS Code :" />
+      <Label layoutX="27.0" layoutY="90.0" text="Description :" />
+      <Label layoutX="47.0" layoutY="21.0" text="ID:" />
+   </children>
+</AnchorPane>

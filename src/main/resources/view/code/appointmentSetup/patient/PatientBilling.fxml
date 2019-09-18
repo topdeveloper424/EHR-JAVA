@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.patientInsuranceCarrier.PatientInsuranceCarrierInputController">
+   <children>
+      <Label layoutX="28.0" layoutY="31.0" text="Insurance Carrier" />
+      <Label layoutX="28.0" layoutY="59.0" text="Plan Type" />
+      <Label layoutX="26.0" layoutY="93.0" text="Plan Name" />
+      <Label layoutX="30.0" layoutY="128.0" text="Policy/Group" />
+      <Label layoutX="28.0" layoutY="160.0" text="Effective Date" />
+      <Label layoutX="28.0" layoutY="225.0" text="Employer Name" />
+      <Label layoutX="320.0" layoutY="129.0" text="Deductible Amt" />
+      <Label layoutX="320.0" layoutY="259.0" text="Verified With" />
+      <Label layoutX="320.0" layoutY="159.0" text="Deduct Met" />
+      <Label layoutX="320.0" layoutY="94.0" text="\%Coverage" />
+      <Label layoutX="28.0" layoutY="193.0" text="Expire Date" />
+      <TextField fx:id="InsuranceCarrierText" editable="false" layoutX="132.0" layoutY="27.0" prefHeight="25.0" prefWidth="147.0" />
+      <Button fx:id="InsurenceCarrierButton" layoutX="290.0" layoutY="27.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="31.0">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ChoiceBox fx:id="PlanTypeDrop" layoutX="132.0" layoutY="59.0" prefWidth="150.0" />
+      <TextField fx:id="CoPaymentText" layoutX="425.0" layoutY="58.0" prefHeight="25.0" prefWidth="147.0" />
+      <TextField fx:id="PlanNameText" layoutX="132.0" layoutY="92.0" />
+      <TextField fx:id="CoverageText" layoutX="425.0" layoutY="90.0" prefHeight="24.0" prefWidth="149.0" />
+      <TextField fx:id="PolicyText" layoutX="132.0" layoutY="124.0" />
+      <TextField fx:id="DeductibleAmntText" layoutX="425.0" layoutY="122.0" />
+      <DatePicker fx:id="EffectiveDate" editable="false" layoutX="132.0" layoutY="156.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="DeductMetText" layoutX="425.0" layoutY="154.0" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="ExpireDate" editable="false" layoutX="132.0" layoutY="188.0" prefHeight="25.0" prefWidth="150.0" />
+      <TextField fx:id="EmployeeNameText" editable="false" layoutX="132.0" layoutY="221.0" />
+      <CheckBox fx:id="InsurenceVerifiedCheck" layoutX="132.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Insurance Verified" />
+      <TextField fx:id="VarifiedText" layoutX="425.0" layoutY="255.0" prefHeight="25.0" prefWidth="157.0" />
+      <Button fx:id="OkButton" layoutX="377.0" layoutY="314.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="OK">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="CancleButton" layoutX="468.0" layoutY="314.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="320.0" layoutY="61.0" text="Co-Payment Amt" />
+   </children>
+</AnchorPane>

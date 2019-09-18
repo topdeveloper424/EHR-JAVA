@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="368.0" prefWidth="753.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.supervisor.SupervisorInputController">
+   <children>
+      <TextField fx:id="codeTextField" layoutX="113.0" layoutY="25.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="17.0" layoutY="61.0" prefHeight="81.0" prefWidth="719.0" text="Name(First,Middle,Last,uffix)">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="firstNameTextField" layoutX="7.0" layoutY="15.0" prefHeight="25.0" prefWidth="228.0" />
+                  <TextField fx:id="middleNameTextField" layoutX="245.0" layoutY="15.0" prefHeight="25.0" prefWidth="194.0" />
+                  <TextField fx:id="lastNameTextField" layoutX="442.0" layoutY="15.0" prefHeight="25.0" prefWidth="183.0" />
+                  <TextField fx:id="suffixtextField" layoutX="632.0" layoutY="15.0" prefHeight="25.0" prefWidth="71.0" />
+                  <Label layoutX="237.0" layoutY="19.0" text="*" textFill="#d70606" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TextField fx:id="listingNameTextField" layoutX="100.0" layoutY="151.0" prefHeight="25.0" prefWidth="244.0" />
+      <TextField fx:id="telephoneTextField" layoutX="100.0" layoutY="184.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="extensionTextField" layoutX="377.0" layoutY="186.0" prefHeight="25.0" prefWidth="62.0" />
+      <TextField fx:id="faxTextField" layoutX="100.0" layoutY="217.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="emailTextField" layoutX="101.0" layoutY="250.0" />
+      <RadioButton fx:id="supervoisorRadioButton" layoutX="100.0" layoutY="288.0" mnemonicParsing="false" text="Supervisor">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="managerRadioButton" layoutX="213.0" layoutY="290.0" mnemonicParsing="false" text="Manager/Administator" toggleGroup="$type" />
+      <CheckBox fx:id="inactiveCheckBox" layoutX="160.0" layoutY="329.0" mnemonicParsing="false" text="Inactive" />
+      <Button fx:id="okButton" layoutX="535.0" layoutY="325.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForOkButton" prefHeight="25.0" prefWidth="72.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="632.0" layoutY="324.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancleButton" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="24.0" layoutY="29.0" text="ID or Code :" />
+      <Label layoutX="21.0" layoutY="153.0" text="Liting Name :" />
+      <Label layoutX="21.0" layoutY="186.0" text="Telephone :" />
+      <Label layoutX="21.0" layoutY="222.0" text="Fax :" />
+      <Label layoutX="22.0" layoutY="256.0" text="Email :" />
+      <Label layoutX="20.0" layoutY="290.0" text="Type" />
+      <Label layoutX="271.0" layoutY="29.0" text="*" textFill="#da0808" />
+      <Label layoutX="305.0" layoutY="188.0" text="Extension :" />
+      <Label layoutX="66.0" layoutY="328.0" text="* = Required" textFill="#e10b0b" />
+   </children>
+</AnchorPane>

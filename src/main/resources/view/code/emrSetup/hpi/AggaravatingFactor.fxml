@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.hpi.aggaravatingFactor.HPIAggaravatingFactorInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="532.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="488.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="bendingCheckBox" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" text="Bending" />
+                                    <CheckBox fx:id="drinkingCheckBox" layoutX="62.0" layoutY="44.0" mnemonicParsing="false" text="Drinking something" />
+                                    <CheckBox fx:id="eatingCheckBox" layoutX="62.0" layoutY="78.0" mnemonicParsing="false" text="Eating" />
+                                    <CheckBox fx:id="swallowingCheckBox" layoutX="62.0" layoutY="112.0" mnemonicParsing="false" text="Swallowing" />
+                                    <CheckBox fx:id="gettingupCheckBox" layoutX="60.0" layoutY="146.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="173.0" text="Getting up in the Morning" />
+                                    <CheckBox fx:id="liftingCheckBox" layoutX="62.0" layoutY="179.0" mnemonicParsing="false" text="Lifting" />
+                                    <CheckBox fx:id="lyingDownCheckBox" layoutX="62.0" layoutY="212.0" mnemonicParsing="false" text="Lying Down" />
+                                    <CheckBox fx:id="movingAroundCheckBox" layoutX="62.0" layoutY="242.0" mnemonicParsing="false" text="Moving Around" />
+                                    <CheckBox fx:id="sleepingCheckBox" layoutX="62.0" layoutY="392.0" mnemonicParsing="false" text="Sleeping" />
+                                    <CheckBox fx:id="pushingCheckBox" layoutX="62.0" layoutY="303.0" mnemonicParsing="false" text="Pushing" />
+                                    <CheckBox fx:id="stoppingCheckBox" layoutX="322.0" layoutY="87.0" mnemonicParsing="false" text="Stooping" />
+                                    <CheckBox fx:id="pullingCheckBox" layoutX="62.0" layoutY="272.0" mnemonicParsing="false" text="Pulling" />
+                                    <CheckBox fx:id="reachingOutCheckBox" layoutX="62.0" layoutY="334.0" mnemonicParsing="false" text="Reaching Out" />
+                                    <CheckBox fx:id="rearchingUpCheckBox" layoutX="62.0" layoutY="363.0" mnemonicParsing="false" text="Rearching Up" />
+                                    <CheckBox fx:id="otherCheckBox" layoutX="322.0" layoutY="155.0" mnemonicParsing="false" text="Other Aggaravating Factor" />
+                                    <CheckBox fx:id="walkingCheckBox" layoutX="322.0" layoutY="121.0" mnemonicParsing="false" text="Walking" />
+                                    <CheckBox fx:id="sittingDownCheckBox" layoutX="323.0" layoutY="18.0" mnemonicParsing="false" text="Sitting Down" />
+                                    <CheckBox fx:id="sittingForCheckBox" layoutX="322.0" layoutY="53.0" mnemonicParsing="false" text="Sitting For Long Periods" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="497.0" layoutY="542.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="DoneBtn" layoutX="393.0" layoutY="542.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="billingPanelAnchorPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="216.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.BillingChargeManagementGUIController">
+   <children>
+      <VBox layoutX="5.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="210.0" stylesheets="@../../../css/style.css">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="204.0" text="Billing Charge Management">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="reviewChargesByDateButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" text="Review Charges By Date">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/but3.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reviewChargesByCompanyButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" text="Review Carges By Company">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/but3.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reviewChargesByAccountButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" text="Review Charges By Account">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/but3.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reviewChargesByPatientButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" text="Review Charges By Patient">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/but3.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="closeButton" alignment="BOTTOM_CENTER" layoutX="65.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Close" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="clinicButton" layoutX="66.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Clinic">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/but3.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

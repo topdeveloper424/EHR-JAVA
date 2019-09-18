@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="651.0" stylesheets="@../../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.head.HeadFaceFacialStrengthInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="271.0" prefWidth="636.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="178.0" orientation="VERTICAL" prefHeight="246.0" prefWidth="0.0" />
+                  <Label layoutX="15.0" layoutY="138.0" prefHeight="17.0" prefWidth="142.0" text="Location of Abnormalities" />
+                  <Separator layoutX="5.0" layoutY="135.0" prefHeight="7.0" prefWidth="636.0" />
+                  <CheckBox fx:id="abnormalities2Check" layoutX="466.0" layoutY="138.0" mnemonicParsing="false" text="cheek" />
+                  <CheckBox fx:id="abnormalities2FrontalCheck" layoutX="268.0" layoutY="138.0" mnemonicParsing="false" text="frontal area" />
+                  <CheckBox fx:id="abnormalities2SIawCheck" layoutX="466.0" layoutY="157.0" mnemonicParsing="false" text="jaw" />
+                  <Button fx:id="doneBtn" layoutX="318.0" layoutY="193.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="418.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="abnormalities2MaxilaryCheck" layoutX="268.0" layoutY="157.0" mnemonicParsing="false" text="maxilary area" />
+                  <Label layoutX="11.0" layoutY="13.0" text="Head Face Facial Strength" />
+                  <CheckBox fx:id="HeadFaceNormalStrengthCheck" layoutX="270.0" layoutY="6.0" mnemonicParsing="false" text="normal strength and tone" />
+                  <CheckBox fx:id="HeadFaceWeeknessCheck" layoutX="468.0" layoutY="6.0" mnemonicParsing="false" text="weekness" />
+                  <CheckBox fx:id="HeadFaceSaggingCheck" layoutX="269.0" layoutY="45.0" mnemonicParsing="false" text="sagging" />
+                  <CheckBox fx:id="HeadFaceExtensivelCheck" layoutX="270.0" layoutY="26.0" mnemonicParsing="false" text="extensive wrinkling" />
+                  <CheckBox fx:id="HeadFaceParalysisCheck" layoutX="468.0" layoutY="26.0" mnemonicParsing="false" text="paralysis" />
+                  <CheckBox fx:id="HeadFaceSansationlCheck" layoutX="466.0" layoutY="47.0" mnemonicParsing="false" text="loss of sansation" />
+                  <CheckBox fx:id="HeadFaceLossToneCheck" layoutX="268.0" layoutY="64.0" mnemonicParsing="false" text="loss of tone" />
+                  <CheckBox fx:id="HeadFaceNormalCheck" layoutX="185.0" layoutY="10.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutY="183.0" prefHeight="3.0" prefWidth="636.0" />
+                  <Separator layoutX="-2.0" layoutY="87.0" prefHeight="8.0" prefWidth="643.0" />
+                  <Label layoutX="5.0" layoutY="98.0" text="Location of Facial Abnormalities" />
+                  <CheckBox fx:id="abnormalities1LeftCheck" layoutX="268.0" layoutY="95.0" mnemonicParsing="false" text="left" />
+                  <CheckBox fx:id="abnormalities1RightCheck" layoutX="466.0" layoutY="95.0" mnemonicParsing="false" text="right" />
+                  <CheckBox fx:id="abnormalities1BilateralCheck" layoutX="268.0" layoutY="115.0" mnemonicParsing="false" text="bilateral" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="454.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.PulseOximetryResultInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="5.0" prefHeight="192.0" prefWidth="443.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="11.0" text="Pulse" />
+                  <Separator layoutX="146.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="11.0" />
+                  <Separator layoutX="-2.0" layoutY="117.0" prefHeight="0.0" prefWidth="443.0" />
+                  <Button fx:id="okbtn" layoutX="214.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" text="OK">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="315.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="roomRadio" layoutX="178.0" layoutY="88.0" mnemonicParsing="false" text="Room Air">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="car" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="suppleRadio" layoutX="313.0" layoutY="88.0" mnemonicParsing="false" text="Supplemental02" toggleGroup="$car" />
+                  <TextField fx:id="pulseText" layoutX="180.0" layoutY="5.0" />
+                  <Separator layoutY="35.0" prefHeight="0.0" prefWidth="443.0" />
+                  <TextField fx:id="oxygenText" layoutX="181.0" layoutY="40.0" />
+                  <Separator layoutX="1.0" layoutY="70.0" prefHeight="0.0" prefWidth="443.0" />
+                  <Label layoutX="8.0" layoutY="41.0" text="Oxygen Saturation" />
+                  <Label layoutX="7.0" layoutY="80.0" text="Room Air/Oxygen" />
+                  <Label layoutX="338.0" layoutY="45.0" text="\%" />
+                  <Label layoutX="338.0" layoutY="11.0" text="bpm" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.MedicationInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="578.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="532.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="UrgentCareOralCheck" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" text="Urgent Care Oral / Topical Rx" />
+                                    <CheckBox fx:id="UrgentCareInjectablesCheckBox" layoutX="36.0" layoutY="37.0" mnemonicParsing="false" text="Urgent Care Injectables" />
+                                    <CheckBox fx:id="InHouseDispenseCheckBox" layoutX="36.0" layoutY="61.0" mnemonicParsing="false" text="In-House Dispense" />
+                                    <CheckBox fx:id="InOfficeAdministeredCheckBox" layoutX="36.0" layoutY="83.0" mnemonicParsing="false" text="InOffice Administered" />
+                                    <CheckBox fx:id="AntibioticsAdultRxCheckBox" layoutX="36.0" layoutY="107.0" mnemonicParsing="false" text="Antibiotics Adult Rx" />
+                                    <CheckBox disable="true" layoutX="351.0" layoutY="14.0" mnemonicParsing="false" text="----------Med Classes----------" />
+                                    <CheckBox fx:id="OralTopicalRxCheckBox" layoutX="36.0" layoutY="132.0" mnemonicParsing="false" text="Oral / Topical Rx frequent List" />
+                                    <CheckBox fx:id="PainWithInflamationCheckBox" layoutX="36.0" layoutY="155.0" mnemonicParsing="false" text="Pain With Inflamation" />
+                                    <CheckBox fx:id="PainWithSpasmCheckBox" layoutX="36.0" layoutY="180.0" mnemonicParsing="false" text="Pain With Spasm" />
+                                    <CheckBox fx:id="PainNeuropathicCheckBox" layoutX="36.0" layoutY="205.0" mnemonicParsing="false" text="Pain-Neuropathic W /  Inflamation" />
+                                    <CheckBox fx:id="DrJonesCheckBox" layoutX="36.0" layoutY="257.0" mnemonicParsing="false" text="Dr. Jones's Favorites" />
+                                    <CheckBox fx:id="DrSmithCheckBox" layoutX="36.0" layoutY="281.0" mnemonicParsing="false" text="Dr. Smith's Favorites" />
+                                    <CheckBox disable="true" layoutX="36.0" layoutY="306.0" mnemonicParsing="false" text="----------Specific Meds ----------" />
+                                    <CheckBox fx:id="Acetaminophen500CheckBox" layoutX="36.0" layoutY="332.0" mnemonicParsing="false" text="Acetaminophen 500 mg OTC" />
+                                    <CheckBox fx:id="AspirinOTCCheckBox" layoutX="36.0" layoutY="359.0" mnemonicParsing="false" text="Aspirin OTC, 81 mg" />
+                                    <CheckBox fx:id="IbuprofenOTCCheck" layoutX="36.0" layoutY="386.0" mnemonicParsing="false" text="Ibuprofen OTC" />
+                                    <CheckBox fx:id="IbuprofenCheckBox" layoutX="36.0" layoutY="411.0" mnemonicParsing="false" text="Ibuprofen" />
+                                    <CheckBox fx:id="MagicMouthwashCheckBox" layoutX="36.0" layoutY="435.0" mnemonicParsing="false" text="Magic Mouthwash - Compound at Pharmacy" />
+                                    <CheckBox fx:id="Prelone15CheckBox" layoutX="36.0" layoutY="457.0" mnemonicParsing="false" text="Prelone 15 mg/5 ml Oral Syrup" />
+                                    <CheckBox fx:id="AllergyURICoughCheckBox" layoutX="351.0" layoutY="61.0" mnemonicParsing="false" text="Allergy / URI-Cough Decongestant" />
+                                    <CheckBox fx:id="AnalgesicsMuscleCheckBox" layoutX="351.0" layoutY="83.0" mnemonicParsing="false" text="Analgesics - Muscle Relaxants" />
+                                    <CheckBox fx:id="AnalgesicsNSAIDSCheckBox" layoutX="351.0" layoutY="103.0" mnemonicParsing="false" text="Analgesics - NSAIDS" />
+                                    <CheckBox fx:id="DiabetesCheckBox" layoutX="351.0" layoutY="147.0" mnemonicParsing="false" text="Diabetes" />
+                                    <CheckBox fx:id="ENDOOCPCheckBox" layoutX="351.0" layoutY="169.0" mnemonicParsing="false" text="ENDO - OCP / Yeast / Gyn" />
+                                    <CheckBox fx:id="GIAntidiarrheCheckBox" layoutX="351.0" layoutY="189.0" mnemonicParsing="false" text="GI - Antidiarrhea / Constipation" />
+                                    <CheckBox fx:id="GIAntinausesCheckBox" layoutX="351.0" layoutY="209.0" mnemonicParsing="false" text="GI - Antinauses / Amtispasmodic" />
+                                    <CheckBox fx:id="htnAceArbCheckBox" layoutX="351.0" layoutY="230.0" mnemonicParsing="false" text="HTN - ACE, ARB, BB, CCB" />
+                                    <CheckBox fx:id="lipidsCheckBox" layoutX="351.0" layoutY="250.0" mnemonicParsing="false" text="Lipids" />
+                                    <CheckBox fx:id="SleepAnxietyCheckBox" layoutX="351.0" layoutY="271.0" mnemonicParsing="false" text="Sleep / Anxiety" />
+                                    <CheckBox fx:id="AspirinAdultOTCCheckBox" layoutX="351.0" layoutY="292.0" mnemonicParsing="false" text="Aspirin Adult OTC" />
+                                    <CheckBox fx:id="AsthmaCheck" layoutX="351.0" layoutY="37.0" mnemonicParsing="false" text="Asthma" />
+                                    <CheckBox fx:id="AnalgesicsOpioidsCheck" layoutX="351.0" layoutY="124.0" mnemonicParsing="false" text="Analgesics - Opioids" />
+                                    <CheckBox disable="true" layoutX="36.0" layoutY="230.0" mnemonicParsing="false" text="----------Favorites----------" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="486.0" layoutY="588.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="406.0" layoutY="587.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

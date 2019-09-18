@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="847.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.GenericEMRChartingController">
+   <children>
+      <TabPane layoutY="14.0" prefHeight="618.0" prefWidth="662.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Visit">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="186.0" prefWidth="551.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="6.0" text="Visit Date" />
+                        <TextField fx:id="clinicianInText" layoutX="80.0" layoutY="30.0" prefHeight="25.0" prefWidth="63.0" />
+                        <TextField fx:id="providerInText" layoutX="80.0" layoutY="64.0" prefHeight="25.0" prefWidth="63.0" />
+                        <Label layoutX="14.0" layoutY="33.0" text="Clinician In" />
+                        <Label layoutX="14.0" layoutY="67.0" text="Provider In" />
+                        <TextField fx:id="clinicianOutText" layoutX="472.0" layoutY="36.0" prefHeight="25.0" prefWidth="80.0" />
+                        <TextField fx:id="providerOutText" layoutX="472.0" layoutY="65.0" prefHeight="25.0" prefWidth="81.0" />
+                        <Label layoutX="388.0" layoutY="7.0" text="Dtae Of Injury" />
+                        <Label layoutX="397.0" layoutY="40.0" text="Clinician out" />
+                        <Label layoutX="398.0" layoutY="69.0" text="Provider Out" />
+                        <TitledPane animated="false" collapsible="false" layoutX="-3.0" layoutY="93.0" prefHeight="204.0" prefWidth="600.0" text="Current E&amp;M Evaluation Status">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Patient Type" />
+                                    <Label layoutX="14.0" layoutY="40.0" text="Label of Visit" />
+                                    <RadioButton fx:id="tbdNAradioBtn1" layoutX="100.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionPatientTBD" selected="true" text="TBD/NA">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="patientType" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="newText" layoutX="175.0" layoutY="14.0" mnemonicParsing="false" onAction="#newClickedFunction" text="New" toggleGroup="$patientType" />
+                                    <RadioButton fx:id="estabText" layoutX="242.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionEstab" text="Estab" toggleGroup="$patientType" />
+                                    <RadioButton fx:id="consultText" layoutX="311.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionConsult" text="Consult" toggleGroup="$patientType" />
+                                    <RadioButton fx:id="preventtext" layoutX="381.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionPrevent" text="Prevent" toggleGroup="$patientType" />
+                                    <RadioButton fx:id="telePhoneText" layoutX="457.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionTelephone" text="Telephone" toggleGroup="$patientType" />
+                                    <RadioButton fx:id="tbdNAradiobtn2" layoutX="100.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionTBD" selected="true" text="TBD/NA">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="level" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="level1Text" layoutX="182.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionLevel1" text="Level 1" toggleGroup="$level" />
+                                    <RadioButton fx:id="level2Text" layoutX="242.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionLevel2" text="Level 2" toggleGroup="$level" />
+                                    <RadioButton fx:id="level3Text" layoutX="313.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionLevel3" text="Level 3" toggleGroup="$level" />
+                                    <RadioButton fx:id="level4Text" layoutX="383.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionLevel4" prefHeight="17.0" prefWidth="58.0" text="Level 4" toggleGroup="$level" />
+                                    <RadioButton fx:id="level5Text" layoutX="457.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionLevel5" text="Level 5" toggleGroup="$level" />
+                                    <Label layoutX="19.0" layoutY="98.0" text="Extent Of History Obtained" />
+                                    <Label layoutX="17.0" layoutY="123.0" text="Extent Of Examination Performed" />
+                                    <Label layoutX="18.0" layoutY="147.0" text="Complexity Of Decision Making" />
+                                    <Label layoutX="235.0" layoutY="68.0" text="Documentation Required" />
+                                    <Label layoutX="383.0" layoutY="68.0" text="Currently Documented level" />
+                                    <Label fx:id="ExtentHistoryDocumentReqLabel" layoutX="269.0" layoutY="97.0" text="Label" />
+                                    <Label fx:id="ExtentHistoryCurrentDocumentLabel" layoutX="442.0" layoutY="95.0" text="Label" />
+                                    <Label fx:id="ExtentExamDocumentReqLabel" layoutX="269.0" layoutY="120.0" text="Label" />
+
+                                    <Label fx:id="ExtentExamCurrentDocumentReqLabel" layoutX="443.0" layoutY="118.0" text="Label" />
+
+                                    <Label fx:id="ComplexityDocReqLabel" layoutX="268.0" layoutY="145.0" text="Label" />
+                                    <Label fx:id="ComplexityCurrentDocLabel" layoutX="443.0" layoutY="144.0" text="Label" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <CheckBox fx:id="twoPatientIdentificationVerifiedText" layoutX="14.0" layoutY="304.0" mnemonicParsing="false" text="Two patient identification verified?" />
+                        <TitledPane animated="false" collapsible="false" layoutX="-2.0" layoutY="330.0" prefHeight="111.0" prefWidth="600.0" text="Vital Signs">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="563.0">
+                                 <children>
+                                    <Button fx:id="recordVitalsBtn" layoutX="4.0" layoutY="8.0" mnemonicParsing="false" text="Record Vitals" />
+                                    <Button fx:id="graphVitalsText" layoutX="4.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Graph Vitals" />
+                                    <Label layoutX="98.0" layoutY="14.0" text="Hight(In)" />
+                                    <Label layoutX="99.0" layoutY="43.0" text="Weight(Lb)" />
+                                    <Label layoutX="288.0" layoutY="16.0" text="BMI" />
+                                    <Label layoutX="357.0" layoutY="16.0" text="BP" />
+                                    <Label layoutX="323.0" layoutY="48.0" prefHeight="16.0" prefWidth="56.0" text="Pulse Oxi" />
+                                    <Label layoutX="430.0" layoutY="13.0" text="Resp" />
+                                    <Label layoutX="428.0" layoutY="51.0" text="Pulse" />
+                                    <Label layoutX="515.0" layoutY="12.0" text="Age" />
+                                    <Label layoutX="511.0" layoutY="48.0" text="Temp" />
+                                    <Label layoutX="206.0" layoutY="15.0" text="(Cm) :" />
+                                    <Label layoutX="207.0" layoutY="43.0" text="(Kg) :" />
+                                    <Label fx:id="heightInches" layoutX="165.0" layoutY="14.0" text="Label" />
+                                    <Label fx:id="weightLb" layoutX="165.0" layoutY="43.0" text="Label" />
+                                    <Label fx:id="heightCm" layoutX="246.0" layoutY="16.0" text="Label" />
+                                    <Label fx:id="weightKg" layoutX="246.0" layoutY="43.0" text="Label" />
+                                    <Label fx:id="bmiLabel" layoutX="314.0" layoutY="16.0" prefHeight="16.0" prefWidth="43.0" text="Label" />
+                                    <Label fx:id="bpLabel" layoutX="385.0" layoutY="15.0" text="Label" />
+                                    <Label fx:id="pulseOxiLabel" layoutX="385.0" layoutY="48.0" text="Label" />
+                                    <Label fx:id="respLabel" layoutX="467.0" layoutY="12.0" text="Label" />
+                                    <Label fx:id="pulseLabel" layoutX="467.0" layoutY="48.0" text="Label" />
+                                    <Label fx:id="ageLabel" layoutX="548.0" layoutY="13.0" text="Label" />
+                                    <Label fx:id="tempLabel" layoutX="548.0" layoutY="47.0" text="Label" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextArea fx:id="patientVisitComplaintTextArea" layoutX="10.0" layoutY="483.0" prefHeight="85.0" prefWidth="588.0" />
+                        <Label layoutX="10.0" layoutY="454.0" text="Patient chief Complaint" />
+                        <Label fx:id="visitDateLabel" layoutX="96.0" layoutY="7.0" text="Label" />
+                        <Label layoutX="232.0" layoutY="7.0" />
+                        <Label fx:id="clinicianLabel" layoutX="236.0" layoutY="35.0" prefHeight="17.0" prefWidth="135.0" text="Label" />
+                        <Label fx:id="providerLabel" layoutX="236.0" layoutY="61.0" prefHeight="17.0" prefWidth="138.0" text="Label" />
+                        <DatePicker fx:id="dateOfInjury" layoutX="474.0" layoutY="3.0" prefHeight="25.0" prefWidth="116.0" />
+                        <Button fx:id="clinicianOutbtn" layoutX="557.0" layoutY="36.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="11.0">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/clockIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="providerOutbtn" layoutX="557.0" layoutY="65.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/clockIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="clinicianInBtn" layoutX="148.0" layoutY="31.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="11.0">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/clockIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="providerInBtn" layoutX="148.0" layoutY="65.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/clockIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="HPI">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="hpiTextArea" layoutX="27.0" layoutY="343.0" prefHeight="218.0" prefWidth="595.0" wrapText="true" />
+                        <TitledPane animated="false" collapsible="false" layoutX="29.0" layoutY="31.0" prefHeight="269.0" prefWidth="592.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox fx:id="hpiProblemCheckBox" layoutX="78.0" layoutY="21.0" mnemonicParsing="false" selected="true" />
+                                    <Button fx:id="hpiProblemBtn" alignment="TOP_LEFT" layoutX="122.0" layoutY="19.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="91.0" text="Problem">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="hpiDurationCheckBox" layoutX="335.0" layoutY="26.0" mnemonicParsing="false" selected="true" />
+                                    <Button fx:id="hpiDurationBtn" alignment="TOP_LEFT" layoutX="381.0" layoutY="21.0" mnemonicParsing="false" text="Duration">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="hpiSnBtn" alignment="TOP_LEFT" layoutX="122.0" layoutY="63.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Sn/Sx">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="hpiSnCheckBox" layoutX="78.0" layoutY="67.0" mnemonicParsing="false" selected="true" />
+                                    <Button fx:id="hpiTimingBtn" alignment="TOP_LEFT" layoutX="381.0" layoutY="63.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Timing">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="hpiTimingCheckBox" layoutX="335.0" layoutY="67.0" mnemonicParsing="false" selected="true" />
+                                    <Button fx:id="hpiLocationBtn" alignment="TOP_LEFT" layoutX="122.0" layoutY="107.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Location">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="hpiContextBtn" alignment="TOP_LEFT" layoutX="381.0" layoutY="105.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Context">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="hpiLocationCheckBox" layoutX="78.0" layoutY="108.0" mnemonicParsing="false" selected="true" />
+                                    <CheckBox fx:id="hpiContextCheckBox" layoutX="335.0" layoutY="107.0" mnemonicParsing="false" selected="true" />
+                                    <Button fx:id="hpiWorseBtn" alignment="TOP_LEFT" layoutX="381.0" layoutY="149.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Worse">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="hpiWorseCheckBox" layoutX="335.0" layoutY="149.0" mnemonicParsing="false" selected="true" />
+                                    <Button fx:id="hpiQualityBtn" alignment="TOP_LEFT" layoutX="122.0" layoutY="151.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Quality">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="hpiQualityCheckBox" layoutX="78.0" layoutY="155.0" mnemonicParsing="false" selected="true" />
+                                    <Button fx:id="hpiBetterBtn" alignment="TOP_LEFT" layoutX="381.0" layoutY="193.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Better">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="hpiSeverityBtn" alignment="TOP_LEFT" layoutX="122.0" layoutY="193.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Severity">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="hpiSeverityCkeckBox" layoutX="78.0" layoutY="194.0" mnemonicParsing="false" selected="true" />
+                                    <CheckBox fx:id="hpiBetterCheckBox" layoutX="335.0" layoutY="199.0" mnemonicParsing="false" selected="true" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Label layoutX="29.0" layoutY="315.0" text="HPI Details  Description :" underline="true" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="PMH">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="38.0" prefHeight="195.0" prefWidth="279.0" text="Pesonal Medical History">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="pmhAllergyBtn" layoutX="29.0" layoutY="9.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="113.0" text="Allergies">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                                    <Button fx:id="pmhMedicationBtn" layoutX="29.0" layoutY="48.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="114.0" text="Medications">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="pmhProblemBtn" layoutX="29.0" layoutY="88.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="112.0" text="Problems">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="pmhOtherHistoryBtn" layoutX="29.0" layoutY="128.0" mnemonicParsing="false" text="Other History">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="pmhAllergyCheckBox" layoutX="5.0" layoutY="12.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="0.0" />
+                                    <CheckBox fx:id="pmhMedicationCheckBox" layoutX="5.0" layoutY="52.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="0.0" />
+                                    <CheckBox fx:id="pmhProblemCheckBox" layoutX="5.0" layoutY="92.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="0.0" />
+                                    <CheckBox fx:id="pmhOtherHistoryCheckBox" layoutX="5.0" layoutY="132.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="0.0" />
+                                    <CheckBox fx:id="pmhNoAllergyCheckBox" layoutX="151.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="No Allergy" />
+                                    <CheckBox fx:id="pmhNoMedicationCheckBox" layoutX="151.0" layoutY="53.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="No Medication" />
+                                    <CheckBox fx:id="pmhNoProblemCheckBox" layoutX="151.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="No Problem" />
+                                    <CheckBox fx:id="pmhNoHistoryCheckBox" layoutX="152.0" layoutY="133.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="No History" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="331.0" layoutY="41.0" prefHeight="191.0" prefWidth="297.0" text="Other Histories">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="pmhFamilyHistoryBtn" layoutX="29.0" layoutY="11.0" mnemonicParsing="false" text="Family History">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="pmhSocialHistoryBtn" layoutX="29.0" layoutY="63.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="118.0" text="Social History">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="pmhWorkHistoryBtn" layoutX="30.0" layoutY="112.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="118.0" text="Work History">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="pmhFamilyHistoryCheckBox" layoutX="5.0" layoutY="15.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="0.0" />
+                                    <CheckBox fx:id="pmhSocialHistoryCheckBox" layoutX="5.0" layoutY="68.0" mnemonicParsing="false" prefHeight="2.0" prefWidth="0.0" />
+                                    <CheckBox fx:id="pmhWorkHistoryCheckBox" layoutX="5.0" layoutY="117.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="21.0" />
+                                    <CheckBox fx:id="pmhNoFamilyHistoryCheckBox" layoutX="156.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="128.0" text="No Fam History" />
+                                    <CheckBox fx:id="pmhNoSocialHistoryCheckBox" layoutX="156.0" layoutY="68.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="No Soc History" />
+                                    <CheckBox fx:id="pmhNoWorkHistoryCheckBox" layoutX="156.0" layoutY="118.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="130.0" text="No Work History" />
+                                 </children></AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextArea fx:id="pmhTextArea" layoutX="15.0" layoutY="242.0" prefHeight="325.0" prefWidth="613.0" wrapText="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="ROS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="rosTextArea" layoutX="13.0" layoutY="344.0" prefHeight="196.0" prefWidth="627.0" wrapText="true" />
+                        <TitledPane animated="false" layoutX="4.0" prefHeight="334.0" prefWidth="646.0" text="untitled">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <CheckBox fx:id="rosConstCheckBox" layoutX="12.0" layoutY="13.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosConstBtn" layoutX="41.0" layoutY="8.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Const">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosConstDeniesCheckBox" layoutX="141.0" layoutY="13.0" mnemonicParsing="false" text="Denies All Constitutional" />
+                                    <CheckBox fx:id="rosSkelCheckBox" layoutX="330.0" layoutY="23.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosSkelBtn" layoutX="354.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="M/Skel">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosSkelDeniesCheckBox" layoutX="463.0" layoutY="17.0" mnemonicParsing="false" text="Denies All Musculoskeletal" />
+                                    <CheckBox fx:id="rosEyeCheckBox" layoutX="12.0" layoutY="53.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosEyeBtn" layoutX="41.0" layoutY="45.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Eyes">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosEyeDeniesCheckBox" layoutX="141.0" layoutY="57.0" mnemonicParsing="false" text="Denies All Eyes" />
+                                    <CheckBox fx:id="rosSkinCheckBox" layoutX="329.0" layoutY="58.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosSkinBtn" layoutX="356.0" layoutY="47.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Skin">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosSkinDeniesCheckBox" layoutX="463.0" layoutY="57.0" mnemonicParsing="false" text="Denies All Integumentary" />
+                                    <Button fx:id="rosEntBtn" layoutX="41.0" layoutY="82.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="ENT">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosEntDeniesCheckBox" layoutX="141.0" layoutY="96.0" mnemonicParsing="false" text="Denies All ENT" />
+                                    <CheckBox fx:id="rosEntCheckBox" layoutX="12.0" layoutY="93.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosNeuroBtn" layoutX="355.0" layoutY="82.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Neuro">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosNeuroDeniesCheckBox" layoutX="463.0" layoutY="90.0" mnemonicParsing="false" text="Denies All Neurological" />
+                                    <CheckBox fx:id="rosNeuroCheckBox" layoutX="329.0" layoutY="92.0" mnemonicParsing="false" prefWidth="21.0" />
+                                    <Button fx:id="rosCvBtn" layoutX="41.0" layoutY="118.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="CV">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosCvDeniesCheckBox" layoutX="141.0" layoutY="126.0" mnemonicParsing="false" text="Denies All Cardiovascular" />
+                                    <CheckBox fx:id="rosCvCheckBox" layoutX="12.0" layoutY="124.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosPsychBtn" layoutX="356.0" layoutY="118.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Psych">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosPsychCheckBox" layoutX="329.0" layoutY="125.0" mnemonicParsing="false" prefWidth="21.0" />
+                                    <CheckBox fx:id="rosPsychDeniesCheckBox" layoutX="463.0" layoutY="129.0" mnemonicParsing="false" text="Denies All Psychiatric" />
+                                    <Button fx:id="rosRespBtn" layoutX="41.0" layoutY="154.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="RESP">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosRespDeniesCheckBox" layoutX="141.0" layoutY="160.0" mnemonicParsing="false" text="Denies All Respiratory" />
+                                    <CheckBox fx:id="rosEndoCheckBox" layoutX="329.0" layoutY="163.0" mnemonicParsing="false" prefWidth="21.0" />
+                                    <Button fx:id="rosEndoBtn" layoutX="356.0" layoutY="154.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Endo">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosEndoDeniesCheckBox" layoutX="463.0" layoutY="164.0" mnemonicParsing="false" text="Denies All Endocrine" />
+                                    <CheckBox fx:id="rosRespCheckBox" layoutX="12.0" layoutY="161.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosGiBtn" layoutX="41.0" layoutY="190.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="GI">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosGiDeniesCheckBox" layoutX="141.0" layoutY="194.0" mnemonicParsing="false" text="Denies All Gastrointestinal" />
+                                    <CheckBox fx:id="rosGiCheckBox" layoutX="12.0" layoutY="200.0" mnemonicParsing="false" />
+                                    <CheckBox fx:id="rosHeCheckBox" layoutX="328.0" layoutY="202.0" mnemonicParsing="false" prefWidth="21.0" />
+                                    <Button fx:id="rosHeBtn" layoutX="354.0" layoutY="190.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="He/Ly">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosHeDeniesCheckBox" layoutX="462.0" layoutY="198.0" mnemonicParsing="false" text="Denies All Hema/Lymphatic" />
+                                    <CheckBox fx:id="rosGuCheckBox" layoutX="12.0" layoutY="231.0" mnemonicParsing="false" />
+                                    <Button fx:id="rosGuBtn" layoutX="41.0" layoutY="226.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="GU">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosGuDeniesCheckBox" layoutX="141.0" layoutY="235.0" mnemonicParsing="false" text="Denies All genitourinary" />
+                                    <CheckBox fx:id="rosAllCheckBox" layoutX="329.0" layoutY="234.0" mnemonicParsing="false" prefWidth="21.0" />
+                                    <Button fx:id="rosAllBtn" layoutX="353.0" layoutY="226.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="All/Im">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="rosAllDeniesCheckBox" layoutX="462.0" layoutY="232.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Denies All Allergy/Immunologic" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Exams">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="5.0" layoutY="14.0" prefHeight="317.0" prefWidth="646.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Organ System Examination">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="examOrganConstBtn" layoutX="37.0" layoutY="5.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Const">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganEyeBtn" layoutX="37.0" layoutY="45.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Eyes">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganEntBtn" layoutX="37.0" layoutY="83.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="ENT">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganCvBtn" layoutX="37.0" layoutY="200.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="CV">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganRespBtn" layoutX="37.0" layoutY="162.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="RESP">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganGiBtn" layoutX="337.0" layoutY="5.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="GI">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganGuBtn" layoutX="337.0" layoutY="45.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="GU">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganSkelBtn" layoutX="337.0" layoutY="83.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="M/Skel">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganSkinBtn" layoutX="340.0" layoutY="119.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Skin">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganNeuroBtn" layoutX="337.0" layoutY="158.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Neuro">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganPsychBtn" layoutX="340.0" layoutY="197.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Psych">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examOrganHeBtn" layoutX="340.0" layoutY="235.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="He/Ly">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examChestBtn" layoutX="37.0" layoutY="238.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Chest">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <CheckBox fx:id="examOrganConstCheckBox" layoutX="5.0" layoutY="10.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganEyeCheckBox" layoutX="5.0" layoutY="50.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganEntCheckBox" layoutX="5.0" layoutY="88.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganRespCheckBox" layoutX="5.0" layoutY="167.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganCvCheckBox" layoutX="5.0" layoutY="206.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganGiCheckBox" layoutX="314.0" layoutY="10.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganGuCheckBox" layoutX="310.0" layoutY="51.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganSkelCheckBox" layoutX="310.0" layoutY="88.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganSkinCheckBox" layoutX="310.0" layoutY="124.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examOrganNeuroCheckBox" layoutX="316.0" layoutY="164.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examOrganPsychCheckBox" layoutX="316.0" layoutY="203.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examOrganEndoCheckBox" layoutX="5.0" layoutY="244.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examOrganHeCheckBox" layoutX="316.0" layoutY="236.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examOrganCheckBox" layoutX="136.0" layoutY="10.0" mnemonicParsing="false" text="Constitutional All Normal" />
+                        <CheckBox fx:id="examOrganEyeNormalCheckBox" layoutX="136.0" layoutY="50.0" mnemonicParsing="false" text="Eyes All Normal" />
+                        <CheckBox fx:id="examOrganEntNormalCheckBox" layoutX="136.0" layoutY="88.0" mnemonicParsing="false" text="ENT All Normal" />
+                        <CheckBox fx:id="examOrganCvNormalCheckBox" layoutX="135.0" layoutY="206.0" mnemonicParsing="false" text="Cardiovascular All Normal" />
+                        <CheckBox fx:id="examOrganRespNormalCheckBox" layoutX="136.0" layoutY="167.0" mnemonicParsing="false" text="Respiratory All Normal" />
+                        <CheckBox fx:id="examOrganGiNormalCheckBox" layoutX="439.0" layoutY="10.0" mnemonicParsing="false" text="Gastrointestinal All Normal" />
+                        <CheckBox fx:id="examOrganGuNormalCheckBox" layoutX="437.0" layoutY="50.0" mnemonicParsing="false" text="Genitourinary All Normal" />
+                        <CheckBox fx:id="examOrganNeckCheckBox" layoutX="5.0" layoutY="130.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examOrganSkelNormalCheckBox" layoutX="437.0" layoutY="88.0" mnemonicParsing="false" text="Musculoskeletal All Normal" />
+                        <CheckBox fx:id="examOrganSkinNormalCheckBox" layoutX="435.0" layoutY="124.0" mnemonicParsing="false" text="Integumentary All Normal" />
+                        <CheckBox fx:id="examOrganNeuroNormalCheckBox" layoutX="434.0" layoutY="165.0" mnemonicParsing="false" text="Neurological All Normal" />
+                        <CheckBox fx:id="examOrganPsychNormalCheckBox" layoutX="437.0" layoutY="201.0" mnemonicParsing="false" text="Psychiatric All Normal" />
+                        <CheckBox fx:id="examOrganNormalHeCheckBox" layoutX="440.0" layoutY="237.0" mnemonicParsing="false" text="Hema/Lymphatic All Normal" />
+                        <CheckBox fx:id="examChestCheck" layoutX="140.0" layoutY="243.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="162.0" text="Chest/Breast All Normal" />
+                                          <Button fx:id="examOrganNeckBtn" layoutX="37.0" layoutY="124.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Neck">
+                                             <graphic>
+                                                <ImageView pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/arrow-right.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <CheckBox fx:id="examOrganNormalNeckCheckBox1" layoutX="136.0" layoutY="130.0" mnemonicParsing="false" text="Neck aAll Normal" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Musculoskeletal Body Area Exam">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="examMusculoskeletalNeckBtn" alignment="TOP_LEFT" layoutX="37.0" layoutY="58.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Neck">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalChestBtn" alignment="TOP_LEFT" layoutX="37.0" layoutY="98.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Chest/Ribs">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalBackBtn" alignment="TOP_LEFT" layoutX="37.0" layoutY="136.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Back">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalHipBtn" alignment="TOP_LEFT" layoutX="37.0" layoutY="177.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Hip/Pelvis/Groin">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalHeadBtn" alignment="TOP_LEFT" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Head/Face">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalElbowBtn" alignment="TOP_LEFT" layoutX="340.0" layoutY="58.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Elbow">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalForearmBtn" alignment="TOP_LEFT" layoutX="340.0" layoutY="98.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Forearm/Wrist/Hand">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalKneeBtn" alignment="TOP_LEFT" layoutX="340.0" layoutY="136.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Knee">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalAnkleBtn" alignment="TOP_LEFT" layoutX="340.0" layoutY="177.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Ankle/Foot">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="examMusculoskeletalShoulderBtn" alignment="TOP_LEFT" layoutX="340.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" text="Shoulder">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <CheckBox fx:id="examMusculoskeletalNeckCheckBox" layoutX="5.0" layoutY="63.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examMusculoskeletalChestCheckBox" layoutX="5.0" layoutY="103.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examMusculoskeletalBackCheckBox" layoutX="5.0" layoutY="141.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examMusculoskeletalHipCheckBox" layoutX="5.0" layoutY="183.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examMusculoskeletalHeadCheckBox" layoutX="5.0" layoutY="20.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examMusculoskeletalElbowCheckBox" layoutX="316.0" layoutY="63.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examMusculoskeletalForearmCheckBox" layoutX="316.0" layoutY="103.0" mnemonicParsing="false" />
+                        <CheckBox fx:id="examMusculoskeletalKneeCheckBox" layoutX="316.0" layoutY="141.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examMusculoskeletalAnkleCheckBox" layoutX="316.0" layoutY="183.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examMusculoskeletalNeckNormalCheckBox" layoutX="197.0" layoutY="63.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalChestNormalCheckBox" layoutX="197.0" layoutY="103.0" mnemonicParsing="false" text="Normal" />
+                        <CheckBox fx:id="examMusculoskeletalBackNormalCheckBox" layoutX="197.0" layoutY="141.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalHipNormalCheckBox" layoutX="197.0" layoutY="183.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalHeadNormalCheckBox" layoutX="197.0" layoutY="20.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalShoulderCheckBox" layoutX="316.0" layoutY="20.0" mnemonicParsing="false" prefWidth="21.0" />
+                        <CheckBox fx:id="examMusculoskeletalElbowNormalCheckBox" layoutX="503.0" layoutY="63.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalForearmNormalCheckBox" layoutX="503.0" layoutY="103.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalKneeNormalCheckBox" layoutX="503.0" layoutY="141.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalAnkleNormalCheckBox" layoutX="503.0" layoutY="183.0" mnemonicParsing="false" text="All Normal" />
+                        <CheckBox fx:id="examMusculoskeletalShoulderNormalCheckBox" layoutX="503.0" layoutY="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="95.0" text="All Normal" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                        <TextArea fx:id="examOrganTextArea" layoutX="6.0" layoutY="340.0" prefHeight="231.0" prefWidth="642.0" wrapText="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Results">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="ResultDiagonosisTestBtn" layoutX="194.0" layoutY="8.0" mnemonicParsing="false" text="Diagonostic Test Result">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="45.0" prefHeight="253.0" prefWidth="615.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="ResultMedicalActivityChargeTable" layoutX="12.0" layoutY="7.0" prefHeight="200.0" prefWidth="397.0">
+                                      <columns>
+                                        <TableColumn fx:id="ResultactivityColumn" prefWidth="75.0" text="Activity" />
+                                        <TableColumn fx:id="ResultcptCodeColumn" prefWidth="75.0" text="CPT Code" />
+                                          <TableColumn fx:id="ResultDescriptionColumn" prefWidth="201.0" text="Visit Activity Charge Description" />
+                                      </columns>
+                                    </TableView>
+                                    <Button alignment="TOP_LEFT" layoutX="425.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Add">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/add.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" layoutX="427.0" layoutY="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Delete">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/del.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" layoutX="427.0" layoutY="114.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Edit">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/blk_tri.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextArea fx:id="resultTextArea" layoutX="14.0" layoutY="311.0" prefHeight="257.0" prefWidth="622.0" wrapText="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Assesment">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="14.0" layoutY="39.0" prefHeight="533.0" prefWidth="620.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="ICD10">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                        <TableView fx:id="assesmentTable" prefHeight="258.0" prefWidth="484.0">
+                          <columns>
+                            <TableColumn fx:id="rankCollumn" prefWidth="63.0" text="Rank" />
+                            <TableColumn fx:id="codeCollumn" prefWidth="113.0" text="Code" />
+                              <TableColumn fx:id="descriptionCollumn" prefWidth="305.0" text="Description" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="assesmentAddBtn" alignment="TOP_LEFT" layoutX="496.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Add">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="assesmenDeleteBtn" alignment="TOP_LEFT" layoutX="496.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Delete">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/del.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="assesmenEditBtn" alignment="TOP_LEFT" layoutX="496.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Edit">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/blk_tri.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextArea fx:id="assesmentTextArea" layoutX="6.0" layoutY="285.0" prefHeight="195.0" prefWidth="597.0" wrapText="true" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Orders">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="12.0" layoutY="24.0" prefHeight="225.0" prefWidth="272.0" text="Therapeutic  Management Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="205.0" prefWidth="270.0">
+                                 <children>
+                                    <Button fx:id="OrderMedicationBtn" alignment="TOP_LEFT" layoutX="32.0" layoutY="6.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="205.0" text="Medications(New)">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="OrderConsultButton" alignment="TOP_LEFT" layoutX="32.0" layoutY="42.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="208.0" text="Consult / Referal Orders">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="OrderPatientLocalMeasureButton" alignment="TOP_LEFT" layoutX="32.0" layoutY="79.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="204.0" text="Patient Local Measures">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="OrderWorkRestrictionButton" alignment="TOP_LEFT" layoutX="34.0" layoutY="116.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="203.0" text="Work Restrictions">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="durableMedicalEquipButton" alignment="TOP_LEFT" layoutX="34.0" layoutY="152.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="207.0" text="Durable Medical Equipment">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="352.0" layoutY="24.0" prefHeight="125.0" prefWidth="247.0" text="Diagonostic Options">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="OrderDiagonosticTestBtn" alignment="TOP_LEFT" layoutX="12.0" layoutY="5.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="205.0" text="Diagonostic Test Orders">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="OrderotherDataSourceButton" alignment="TOP_LEFT" layoutX="12.0" layoutY="52.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="205.0" text="Other Data Sources">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/arrow-right.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextArea fx:id="orderTextAres" layoutX="14.0" layoutY="331.0" prefHeight="209.0" prefWidth="617.0" wrapText="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Procedures">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="medicalProcedureButton" layoutX="194.0" layoutY="8.0" mnemonicParsing="false" text="Medical Procedure">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="45.0" prefHeight="253.0" prefWidth="615.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView layoutX="12.0" layoutY="7.0" prefHeight="200.0" prefWidth="397.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="Activity" />
+                                        <TableColumn prefWidth="75.0" text="CPT Code" />
+                                          <TableColumn prefWidth="201.0" text="Visit Activity Charge Description" />
+                                      </columns>
+                                    </TableView>
+                                    <Button alignment="TOP_LEFT" layoutX="425.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Add">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/add.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" layoutX="427.0" layoutY="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Delete">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/del.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button alignment="TOP_LEFT" layoutX="427.0" layoutY="114.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Edit">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/blk_tri.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextArea fx:id="procedureTextArea" layoutX="14.0" layoutY="312.0" prefHeight="256.0" prefWidth="614.0" wrapText="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Instructions">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="patientInstructionBtn" alignment="TOP_LEFT" layoutX="49.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="142.0" text="Patient Instructions">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="InstructionReturnFollowUpBtn" alignment="TOP_LEFT" layoutX="49.0" layoutY="51.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="142.0" text="Return Follow-Up">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="235.0" layoutY="34.0" text="Next Visit :" />
+                        <DatePicker fx:id="instNextVisitDate" layoutX="308.0" layoutY="30.0" prefHeight="25.0" prefWidth="144.0" />
+                        <TitledPane animated="false" collapsible="false" layoutX="21.0" layoutY="121.0" prefHeight="142.0" prefWidth="501.0" text="Discharge Information">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="4.0" prefHeight="97.0" prefWidth="128.0" text="Patient Condition">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <RadioButton fx:id="InstPatConditionStable" layoutX="11.0" layoutY="5.0" mnemonicParsing="false" text="Stable">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="patientCondition" />
+                                                   </toggleGroup></RadioButton>
+                                                <RadioButton fx:id="InstPatConditionUnsatable" layoutX="9.0" layoutY="35.0" mnemonicParsing="false" text="Unstable" toggleGroup="$patientCondition" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <Label layoutX="158.0" layoutY="36.0" text="Ambulatory Status :" />
+                                    <Label layoutX="153.0" layoutY="73.0" text="Discharge Destination :" />
+                                    <ChoiceBox fx:id="InstAmbulatoryChoice" layoutX="282.0" layoutY="32.0" prefHeight="24.0" prefWidth="174.0" />
+                                    <ChoiceBox fx:id="InstDischrgDestination" layoutX="282.0" layoutY="69.0" prefHeight="24.0" prefWidth="178.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TextArea fx:id="instructionTextArea" layoutX="16.0" layoutY="313.0" prefHeight="253.0" prefWidth="611.0" wrapText="true" />
+                        <TextField fx:id="timeText" layoutX="507.0" layoutY="29.0" prefHeight="25.0" prefWidth="55.0" />
+                        <Label layoutX="462.0" layoutY="34.0" text="Time : " />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Work Status">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="56.0" text="Work Status :" />
+                        <ChoiceBox fx:id="workStatusChoiceBox" layoutX="95.0" layoutY="52.0" onMouseClicked="#onMouseClickOnWorkStatusChoice" prefHeight="24.0" prefWidth="123.0" />
+                        <Label layoutX="326.0" layoutY="56.0" text="As Of :" />
+                        <DatePicker fx:id="workstatusAsOfDate" layoutX="371.0" layoutY="52.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Button fx:id="workStatusAssessmentButton" alignment="TOP_LEFT" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" text="Assesment of Work Status">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/arrow-right.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextArea fx:id="workStatusTextArea" layoutX="14.0" layoutY="268.0" onMouseClicked="#onMouseClickOnWorkStatusChoice" prefHeight="253.0" prefWidth="632.0" wrapText="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TitledPane animated="false" layoutX="674.0" layoutY="11.0" prefHeight="618.0" prefWidth="150.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="623.0" prefWidth="163.0">
+               <children>
+                  <Button fx:id="demographicsBtn" layoutX="11.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" text="Demographics" />
+                  <Button fx:id="viewChartBtn" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="View Chart" />
+                  <Button fx:id="pastNotesbtn" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="PastNotes" />
+                  <Button fx:id="appoinmentBtn" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Appoinment" />
+                  <Button fx:id="ordersBtn" layoutX="14.0" layoutY="166.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Orders" />
+                  <Button fx:id="prescriptionsBtn" layoutX="14.0" layoutY="194.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Prescriptions" />
+                  <Button fx:id="referralsBtn" layoutX="14.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Referrals" />
+                  <Button fx:id="chargesBtn" layoutX="14.0" layoutY="253.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Charges" />
+                  <Button fx:id="codeTBDbtn" layoutX="14.0" layoutY="282.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Code TBD" />
+                  <Button fx:id="codeEMbtn" layoutX="14.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Code E &amp; M" />
+                  <Button fx:id="buildNoteBtn" layoutX="14.0" layoutY="344.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Build note" />
+                  <Button fx:id="auditBtn" layoutX="14.0" layoutY="373.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Audit" />
+                  <Button fx:id="imagesBtn" layoutX="14.0" layoutY="403.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Images" />
+                  <Button fx:id="formsBtn" layoutX="14.0" layoutY="433.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Forms">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/p.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="reportBtn" layoutX="14.0" layoutY="466.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Report">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/p.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="reviewBtn" layoutX="14.0" layoutY="502.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Review" />
+                  <Button fx:id="doneBtn" layoutX="14.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

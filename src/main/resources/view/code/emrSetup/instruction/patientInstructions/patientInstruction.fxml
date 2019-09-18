@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.instruction.patientInst.InstructionPatientInstInputCotroller">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="532.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="488.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="GeneralPatientInstruction" layoutX="62.0" layoutY="33.0" mnemonicParsing="false" text="General Patient Instruction" />
+                                    <CheckBox fx:id="MedicationInstructionCheck" layoutX="62.0" layoutY="54.0" mnemonicParsing="false" text="Medication Instruction" />
+                                    <CheckBox fx:id="ProtectiveMeasuresCheck" layoutX="62.0" layoutY="75.0" mnemonicParsing="false" text="Protective Measures" />
+                                    <CheckBox fx:id="RICEInstructionCheck" layoutX="62.0" layoutY="98.0" mnemonicParsing="false" text="R.I.C.E Instructions" />
+                                    <CheckBox fx:id="RehabHomeExaeciseCheck" layoutX="62.0" layoutY="119.0" mnemonicParsing="false" text="Rehab-Home Exaecise Program" />
+                                    <CheckBox fx:id="RehabPlanCheck" layoutX="61.0" layoutY="143.0" mnemonicParsing="false" text="Rehab-Plan" />
+                                    <CheckBox fx:id="WeightLossInstructionsCheck" layoutX="62.0" layoutY="163.0" mnemonicParsing="false" text="Weight Loss Instructions" />
+                                    <CheckBox fx:id="WoundInstructionsCheck" layoutX="62.0" layoutY="188.0" mnemonicParsing="false" text="Wound Instructions" />
+                                    <CheckBox fx:id="CoughCheck" disable="true" layoutX="64.0" layoutY="12.0" mnemonicParsing="false" text="----General Instructions-----" />
+                                    <CheckBox fx:id="NonMusculoskeletalCheck" layoutX="62.0" layoutY="255.0" mnemonicParsing="false" text="Exitcare -Non Musculoskeletal" />
+                                    <CheckBox fx:id="DepressionCheck" disable="true" layoutX="63.0" layoutY="209.0" mnemonicParsing="false" text="----Exit Care General Instruction----" />
+                                    <CheckBox fx:id="MusculoskeletalCheck" layoutX="63.0" layoutY="231.0" mnemonicParsing="false" text="Exitcare -Musculoskeletal" />
+                                    <CheckBox fx:id="CervicalSprainAndStrainCheck" layoutX="320.0" layoutY="14.0" mnemonicParsing="false" text="Exit Care-Cervical Sprain And  Strain" />
+                                    <CheckBox fx:id="HipSynovitisCheck" layoutX="320.0" layoutY="120.0" mnemonicParsing="false" text="Exit Care-Hip Synovitis" />
+                                    <CheckBox fx:id="CompressionFractureBackCheck" layoutX="320.0" layoutY="35.0" mnemonicParsing="false" text="Exit Care- Compression Fracture,Back" />
+                                    <CheckBox fx:id="HipReplacementCheck" layoutX="320.0" layoutY="99.0" mnemonicParsing="false" text="Exit Care-Hip Replacement,Total" />
+                                    <CheckBox fx:id="HipHimiarthroplastyCheck" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" text="Exit Care-Hip Himiarthroplasty" />
+                                    <CheckBox fx:id="HipBrusitisCheck" layoutX="320.0" layoutY="57.0" mnemonicParsing="false" text="Exit Care-Hip Brusitis" />
+                                    <CheckBox fx:id="CervicaFusionPreOPCheck" layoutX="62.0" layoutY="420.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="256.0" text="Exit Care-Cervical  Fusion Pre-OP And P" />
+                                    <CheckBox fx:id="CalcificTendonitisCheck" layoutX="62.0" layoutY="399.0" mnemonicParsing="false" text="Exit Care-Calcific  Tendonitis" />
+                                    <CheckBox fx:id="CalcaneousFractureCheck" layoutX="62.0" layoutY="376.0" mnemonicParsing="false" text="Exit Care-Calcaneous Fracture" />
+                                    <CheckBox fx:id="ArthritisOsteroarthritisCheck" layoutX="62.0" layoutY="351.0" mnemonicParsing="false" text="Exit Care-Arthritis, Osteroarthritis" />
+                                    <CheckBox fx:id="DizzinessCheck" disable="true" layoutX="62.0" layoutY="326.0" mnemonicParsing="false" text="---ExitCare Ortho Instruct---" />
+                                    <CheckBox fx:id="WeightCheck" layoutX="61.0" layoutY="303.0" mnemonicParsing="false" text="Exitcare-Weight" />
+                                    <CheckBox fx:id="PediaticCheck" layoutX="62.0" layoutY="280.0" mnemonicParsing="false" text="Exitcare-Pediatric" />
+                                    <CheckBox fx:id="LumbarRadiculopathyCheck" layoutX="320.0" layoutY="165.0" mnemonicParsing="false" text="Exit Care-Lumbar Radiculopathy,Sciati" />
+                                    <CheckBox fx:id="MetatarsusAdducutsCheck" layoutX="320.0" layoutY="209.0" mnemonicParsing="false" text="Exit Care-Metatarsus Adducuts" />
+                                    <CheckBox fx:id="LumbarFractureCheck" layoutX="320.0" layoutY="143.0" mnemonicParsing="false" text="Exit Care-Lumbar Fracture" />
+                                    <CheckBox fx:id="LumbarStrainCheck" layoutX="320.0" layoutY="187.0" mnemonicParsing="false" text="Exit Care-Lumbar Strain" />
+                                    <CheckBox fx:id="MetatarsalFractureCheck" layoutX="320.0" layoutY="231.0" mnemonicParsing="false" text="Exit Care-Metatarsal Fracture" />
+                                    <CheckBox fx:id="MetatarsalStressCheck" layoutX="320.0" layoutY="253.0" mnemonicParsing="false" text="Exit Care-Metatarsal Stress Fracture" />
+                                    <CheckBox fx:id="ShoulderAcCheck" layoutX="320.0" layoutY="275.0" mnemonicParsing="false" text="Exit Care-Shoulder Ac Separation" />
+                                    <CheckBox fx:id="ShoulderArthroscopyCheck" layoutX="320.0" layoutY="296.0" mnemonicParsing="false" text="Exit Care-Shoulder Arthroscopy" />
+                                    <CheckBox fx:id="ShoulderImmobilizerCheck" layoutX="320.0" layoutY="319.0" mnemonicParsing="false" text="Exit Care-Shoulder Immobilizer" />
+                                    <CheckBox fx:id="ShoulderRangeCheck" layoutX="320.0" layoutY="340.0" mnemonicParsing="false" text="Exit Care-Shoulder Range of Motion Exe" />
+                                    <CheckBox fx:id="ShoulderSlingCheck" layoutX="320.0" layoutY="362.0" mnemonicParsing="false" text="Exit Care-Shoulder  Sling" />
+                                    <CheckBox fx:id="ThoracicOutletCheck" layoutX="320.0" layoutY="387.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="227.0" text="Exit Care-Thoracic Outlet Syndrome" />
+                                    <CheckBox fx:id="ThoracicStrainCheck" layoutX="320.0" layoutY="412.0" mnemonicParsing="false" text="Exit Care-Thoracic Strain" />
+                                    <CheckBox fx:id="CervicalSpineFractureCheck" layoutX="62.0" layoutY="439.0" mnemonicParsing="false" text="Exit Care-Cervical  Spine  Fracture" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="FreeTextButton" layoutX="69.0" layoutY="537.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Free Text" />
+      <Button fx:id="skipButton" layoutX="478.0" layoutY="538.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="DoneButton" layoutX="390.0" layoutY="539.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

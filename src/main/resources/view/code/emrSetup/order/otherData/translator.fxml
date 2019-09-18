@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.otherDataSource.OtherDataTranslatorInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="180.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="5.0" text="Language Interpreted to English" />
+                  <Separator layoutX="215.0" layoutY="1.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="321.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="422.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="29.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="spanishCheck" layoutX="232.0" layoutY="7.0" mnemonicParsing="false" text="Spanish" />
+                  <CheckBox fx:id="otherCheck" layoutX="345.0" layoutY="7.0" mnemonicParsing="false" text="Other" />
+                  <Separator layoutX="-2.0" layoutY="103.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="3.0" layoutY="69.0" text="First Name and Last Name of Interpretor" />
+                  <TextArea fx:id="firstNameText" layoutX="230.0" layoutY="35.0" prefHeight="63.0" prefWidth="322.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

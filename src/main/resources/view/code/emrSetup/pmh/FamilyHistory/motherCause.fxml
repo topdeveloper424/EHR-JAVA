@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="511.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.familyHistory.MotherCauseInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="247.0" prefWidth="504.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="491.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="14.0" text="Select Cause" />
+                  <RadioButton fx:id="BreastCancerRadio" layoutX="185.0" layoutY="5.0" mnemonicParsing="false" text="Breast Cancer">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="level" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="cadRadio" layoutX="373.0" layoutY="7.0" mnemonicParsing="false" text="CAD" toggleGroup="$level" />
+                  <Separator layoutX="140.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="171.0" prefWidth="3.0" />
+                  <Button fx:id="doneBtn" layoutX="283.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="378.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="9.0" layoutY="134.0" text="Enter Age" />
+                  <RadioButton fx:id="cvaRadio" layoutX="185.0" layoutY="29.0" mnemonicParsing="false" text="CVA" toggleGroup="$level" />
+                  <RadioButton fx:id="SubstanceRadio" layoutX="371.0" layoutY="73.0" mnemonicParsing="false" text="Substance Abuse" toggleGroup="$level" />
+                  <RadioButton fx:id="ColonCancerRadio" layoutX="373.0" layoutY="30.0" mnemonicParsing="false" text="Colon Cancer" toggleGroup="$level" />
+                  <Separator layoutY="122.0" prefHeight="0.0" prefWidth="504.0" />
+                  <Separator layoutY="169.0" prefHeight="2.0" prefWidth="504.0" />
+                  <RadioButton fx:id="OvarianCancerRadio" layoutX="186.0" layoutY="76.0" mnemonicParsing="false" text="Ovarian Cancer" toggleGroup="$level" />
+                  <RadioButton fx:id="sucideRadio" layoutX="186.0" layoutY="97.0" mnemonicParsing="false" text="Sucide" toggleGroup="$level" />
+                  <RadioButton fx:id="LungCancerRadio" layoutX="373.0" layoutY="51.0" mnemonicParsing="false" text="Lung Cancer" toggleGroup="$level" />
+                  <RadioButton fx:id="diabetesRadio" layoutX="185.0" layoutY="53.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="87.0" text="Diabetes" toggleGroup="$level" />
+                  <RadioButton fx:id="traumaRadio" layoutX="370.0" layoutY="96.0" mnemonicParsing="false" text="Trauma / Accident" toggleGroup="$level" />
+                  <TextField fx:id="ageText" layoutX="185.0" layoutY="134.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

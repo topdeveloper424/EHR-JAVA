@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.diagonostic.DiagonosticLabPanalGIInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="8.0" prefHeight="128.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="113.0" prefWidth="559.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="10.0" text="Order Lab  GI Panels" />
+                  <Separator layoutX="138.0" layoutY="1.0" orientation="VERTICAL" prefHeight="48.0" prefWidth="8.0" />
+                  <Button fx:id="doneBtn" layoutX="326.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="427.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="47.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="CBCCheck" layoutX="150.0" layoutY="3.0" mnemonicParsing="false" text="CBC" />
+                  <CheckBox fx:id="amylaseCheck" layoutX="336.0" layoutY="5.0" mnemonicParsing="false" text="Amylase" />
+                  <CheckBox fx:id="hepaticCheck" layoutX="150.0" layoutY="24.0" mnemonicParsing="false" text="Hepatic Panel" />
+                  <CheckBox fx:id="lipaseCheck" layoutX="336.0" layoutY="25.0" mnemonicParsing="false" text="Lipase" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.ent.EntLipGumInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="293.0" prefWidth="678.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="155.0" layoutY="1.0" orientation="VERTICAL" prefHeight="208.0" prefWidth="10.0" />
+                  <Separator layoutX="8.0" layoutY="209.0" prefHeight="5.0" prefWidth="678.0" />
+                  <Button fx:id="doneBtn" layoutX="391.0" layoutY="220.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="502.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-2.0" layoutY="124.0" prefHeight="0.0" prefWidth="678.0" />
+                  <Label layoutX="11.0" layoutY="153.0" text="Dentition" />
+                  <Label layoutX="12.0" layoutY="76.0" text="Gums" />
+                  <Label layoutX="14.0" layoutY="11.0" text="Lips" />
+                  <Separator layoutX="-4.0" layoutY="64.0" prefHeight="6.0" prefWidth="686.0" />
+                  <CheckBox fx:id="lipNormalCheck" layoutX="170.0" layoutY="9.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="lipNormalRadio" layoutX="275.0" layoutY="13.0" mnemonicParsing="false" text="are normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="lip" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="gumAppearRadio" layoutX="275.0" layoutY="76.0" mnemonicParsing="false" text=" appear normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gum" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="detitionGoodRadio" layoutX="275.0" layoutY="130.0" mnemonicParsing="false" text="is in good repair">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dentition" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="detitionFairRadio" layoutX="454.0" layoutY="130.0" mnemonicParsing="false" text="is in fair repair" toggleGroup="$dentition" />
+                  <RadioButton fx:id="gumMildRadio" layoutX="457.0" layoutY="76.0" mnemonicParsing="false" text="show mild gingvitis" toggleGroup="$gum" />
+                  <RadioButton fx:id="lipChelitisRadio" layoutX="457.0" layoutY="13.0" mnemonicParsing="false" text="show cheilitis" toggleGroup="$lip" />
+                  <RadioButton fx:id="lipHerpiticRadio" layoutX="274.0" layoutY="38.0" mnemonicParsing="false" text="Show Herpitic stomatitis" toggleGroup="$lip" />
+                  <RadioButton fx:id="gumSevereRadio" layoutX="274.0" layoutY="100.0" mnemonicParsing="false" text="show severe gingvitis" toggleGroup="$gum" />
+                  <RadioButton fx:id="detitionPoorRadio" layoutX="277.0" layoutY="156.0" mnemonicParsing="false" text="is in poor repair" toggleGroup="$dentition" />
+                  <RadioButton fx:id="detitionEvalWORadio" layoutX="452.0" layoutY="155.0" mnemonicParsing="false" text="evaluation shows carrie(s) w/o" toggleGroup="$dentition" />
+                  <RadioButton fx:id="gumMassrRadio" layoutX="455.0" layoutY="100.0" mnemonicParsing="false" text="mass noted" toggleGroup="$gum" />
+                  <RadioButton fx:id="lipAngularRadio" layoutX="457.0" layoutY="38.0" mnemonicParsing="false" text="Show angular stomatitis/cheilitieis" toggleGroup="$lip" />
+                  <RadioButton fx:id="detitionEvalWCRadio" layoutX="282.0" layoutY="180.0" mnemonicParsing="false" text="evaluation shows carrie(s) w/c" toggleGroup="$dentition" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

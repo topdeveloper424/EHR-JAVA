@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="176.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.neck.NeckThyroidInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="163.0" prefWidth="610.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="37.0" layoutY="21.0" text="Thyroid" />
+                  <Separator layoutX="151.0" layoutY="1.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="13.0" />
+                  <CheckBox fx:id="ThyroidDiffuselyCheck" layoutX="272.0" layoutY="14.0" mnemonicParsing="false" text="diffusely enlarged" />
+                  <CheckBox fx:id="ThyroidMasRightCheck" layoutX="273.0" layoutY="58.0" mnemonicParsing="false" text="mass right" />
+                  <CheckBox fx:id="ThyroidMultipleCheck" layoutX="467.0" layoutY="14.0" mnemonicParsing="false" text="multiple nodules" />
+                  <CheckBox fx:id="ThyroidMassLeftCheck" layoutX="273.0" layoutY="33.0" mnemonicParsing="false" text="mass left" />
+                  <CheckBox fx:id="ThyroidNonTenderCheck" layoutX="467.0" layoutY="58.0" mnemonicParsing="false" text="non tender" />
+                  <CheckBox fx:id="ThyroidTenderCheck" layoutX="466.0" layoutY="33.0" mnemonicParsing="false" text="tender" />
+                  <Button fx:id="doneBtn" layoutX="326.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="440.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutY="85.0" prefHeight="0.0" prefWidth="610.0" />
+                  <CheckBox fx:id="thyroidNormalCheck1" layoutX="174.0" layoutY="14.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

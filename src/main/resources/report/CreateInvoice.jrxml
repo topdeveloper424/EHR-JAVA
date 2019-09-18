@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProcessCharges" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="64471024-00fb-43e7-825d-a246f2e155a1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="billingQty" class="java.lang.String"/>
+	<field name="activityDate" class="java.lang.String"/>
+	<field name="medicalActivity.cptCode4Hcpcs.code" class="java.lang.Object"/>
+	<field name="medicalActivity.activityType" class="java.lang.Object"/>
+	<field name="clinician.homeClinic.name" class="java.lang.String"/>
+	<field name="clinician.homeClinic.address.city" class="java.lang.String"/>
+	<field name="clinician.homeClinic.address.state" class="java.lang.String"/>
+	<field name="clinician.homeClinic.address.zip" class="java.lang.String"/>
+	<field name="clinician.homeClinic.address.phone" class="java.lang.String"/>
+	<field name="patientVisit.patient.patientName.firstName" class="java.lang.Object"/>
+	<field name="patientVisit.patient.patientName.lastName" class="java.lang.Object"/>
+	<field name="overrideFee" class="java.lang.String"/>
+	<variable name="amount" class="java.lang.Integer">
+		<variableExpression><![CDATA[(Integer.parseInt($F{billingQty}))*(Integer.parseInt($F{overrideFee}))]]></variableExpression>
+	</variable>
+	<variable name="total" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$V{amount}]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer(0)]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="555" height="60" forecolor="#8080C0" uuid="d63f47df-8c8e-4ace-a973-f860700365cd"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[                                   Invoice]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="-10" y="30" width="70" height="30" uuid="6a8c401b-75b8-492e-9eb7-93ddfb3c00e6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="99" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="55" width="553" height="31" forecolor="#400040" backcolor="#80FFFF" uuid="b1d76211-cf22-4fa0-ab5e-2a46764f7932"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="77" y="56" width="100" height="23" uuid="8fddebef-57e8-4ead-90b7-6ace5a439fba"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Medical Activity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="55" width="80" height="25" uuid="67cd3068-7ce1-4e4e-9251-117b21b877c8"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="56" width="80" height="23" uuid="2ed04b8d-6ff9-43ca-b8a5-d4a19518d41d"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Unit price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="57" width="70" height="20" uuid="43877214-84d5-4d7e-addf-1821d936c99d"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Service Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="57" width="70" height="20" uuid="1eb66aa3-a23b-4330-af6e-5e94a96e9f4f"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="76" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="17" width="70" height="-57" uuid="749654e2-5516-424e-abaf-613ec575fdbd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{activityDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="17" width="80" height="-57" uuid="25d6a7e0-5cb0-480f-8a47-f36e3cfbb3cd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.cptCode4Hcpcs.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="175" y="19" width="90" height="-77" uuid="41de8da9-5686-4b63-912a-43a91773160e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.activityType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="70" height="30" uuid="43215378-f5aa-47a4-aa77-31269600e189"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billingQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="0" width="98" height="30" uuid="503c0b80-75a7-4223-b3b3-f38dbe73ade4"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.activityType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="0" width="59" height="30" uuid="a2b73beb-ee93-463c-ab8d-a3190af01a88"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{activityDate}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="5" y="40" width="549" height="18" backcolor="#C0C0C0" uuid="a15bf59a-3457-41a9-adc7-3064e04cdeef"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="80" y="40" width="111" height="21" uuid="bbeb4f52-ad3f-4934-a95a-e01b3fda7505"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total for : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="0" width="70" height="30" uuid="723393bd-8f71-4a4f-b6bd-15c01b4e8ff3"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="70" height="30" uuid="b55422f8-37fc-4016-a3ab-b34ea7c2c736"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{overrideFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="41" width="100" height="17" uuid="9c214ccf-d450-46d1-9474-43ea071e9bf2"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.patientName.lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="40" width="85" height="18" uuid="fb7255a8-cd57-4f76-8ea0-f9e2c72d4040"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patientVisit.patient.patientName.firstName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="184" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="0" width="551" height="160" uuid="cf559caa-4d27-4366-a0bd-549024e9c3a7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="73" width="240" height="83" uuid="ae0b2a17-cb3e-4899-ac4b-56696a525284"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-1" y="56" width="120" height="17" uuid="2e6e9c0a-bb89-4141-bb15-b1dabe1c7968"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Remit To:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="340" y="83" width="200" height="40" forecolor="#000000" backcolor="#CCFFFF" uuid="6ffc2ce3-02f5-48fd-80a3-00983af61717"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="350" y="82" width="157" height="30" uuid="baa6a6c1-a6e0-44ee-83d5-dc517518e6a9"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL DUE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="77" width="145" height="17" uuid="fe37bb5c-744c-4eda-8278-a93b9aebbbff"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clinician.homeClinic.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="90" width="157" height="19" uuid="55fa57da-e7ef-4c7a-b170-e4d08bd53652"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clinician.homeClinic.address.state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="109" width="175" height="20" uuid="e52caece-5778-4071-8412-e08f6451b7ec"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clinician.homeClinic.address.zip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="130" width="175" height="26" uuid="ed095ce7-d548-4874-be23-19f268660243"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clinician.homeClinic.address.phone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="370" y="160" width="140" height="24" uuid="436a606b-ad6a-4b77-a400-bd7c508e2880"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Thank You]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="128" width="100" height="30" uuid="c24854c3-57d2-43d3-9b95-de9ec54cd71a"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="86" width="84" height="30" uuid="a2fb1db8-f048-43aa-aa0f-8564e7fbd506"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="52" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="767.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.appointment.AppointmentController">
+   <children>
+      <AnchorPane layoutX="565.0" layoutY="14.0" prefHeight="498.0" prefWidth="192.0" styleClass="appointmentAnchorPane">
+         <children>
+            <TitledPane animated="false" collapsible="false" layoutY="31.0" prefHeight="180.0" prefWidth="191.0" text="Appointment Details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="appointmentTextArea" editable="false" layoutY="-1.0" prefHeight="157.0" prefWidth="191.0" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Button fx:id="ChangeToOtherClinicButton" layoutY="415.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="193.0" text="Change to another Clinic" />
+            <Button fx:id="saveButton" layoutY="458.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Save">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="closeButton" layoutX="102.0" layoutY="457.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <DatePicker fx:id="inputDateField" layoutY="2.0" onAction="#onActionSelectingDate" prefHeight="25.0" prefWidth="191.0" />
+            <Button fx:id="printTodaySchedulingButton" layoutY="370.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="193.0" text="Print Today 's Scheduling" />
+            <Button fx:id="appointmentScheduleBtn" alignment="TOP_CENTER" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="193.0" text="Schedule an Appointment" />
+            <Button fx:id="todaysSchedulingButton" alignment="TOP_CENTER" layoutY="279.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="193.0" text="Today 's Scheduling" />
+            <Button fx:id="checkInPatientButton" alignment="TOP_CENTER" layoutY="232.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="193.0" text="Check-In a Patient" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="81.0" layoutY="4.0" prefHeight="590.0" prefWidth="355.0" styleClass="appointmentAnchorPane">
+         <children>
+            <ComboBox fx:id="Column1Choicebox" layoutX="1.0" layoutY="1.0" onAction="#viewAppointmentByProvider" prefHeight="25.0" prefWidth="170.0" />
+            <ComboBox fx:id="Column2Choicebox" layoutX="185.0" layoutY="1.0" onAction="#viewAppointmentByProviderCol2" prefHeight="25.0" prefWidth="170.0" />
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="gridTest" layoutX="21.0" layoutY="39.0" prefHeight="548.0" prefWidth="412.0" stylesheets="@../../../../css/style.css">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="39.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="459.0" minWidth="0.0" prefWidth="143.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="506.0" minWidth="10.0" prefWidth="150.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="7:00 am" />
+            <Label prefHeight="16.0" prefWidth="45.0" text="8:00 " GridPane.rowIndex="2" />
+            <Label text="9:00" GridPane.rowIndex="4" />
+            <Label text="9:30" GridPane.rowIndex="5" />
+            <Label prefHeight="6.0" prefWidth="48.0" text="7:30 " GridPane.rowIndex="1" />
+            <Label text="8:30" GridPane.rowIndex="3" />
+            <Label text="10:00" GridPane.rowIndex="6" />
+            <Label text="10:30" GridPane.rowIndex="7" />
+            <Label text="11:00" GridPane.rowIndex="8" />
+            <Label text="11:30" GridPane.rowIndex="9" />
+            <Label text="12:00 pm" GridPane.rowIndex="10" />
+            <Label text="12:30" GridPane.rowIndex="11" />
+            <Label text="1.00" GridPane.rowIndex="12" />
+            <Label text="1:30" GridPane.rowIndex="13" />
+            <Label text="2:00" GridPane.rowIndex="14" />
+            <Label text="2:30" GridPane.rowIndex="15" />
+            <Label text="3:00" GridPane.rowIndex="16" />
+            <Label text="3:30" GridPane.rowIndex="17" />
+            <Label text="4:00" GridPane.rowIndex="18" />
+            <Label text="4:30" GridPane.rowIndex="19" />
+            <Label text="5:30" GridPane.rowIndex="21" />
+            <TextField fx:id="Column1text7" editable="false" onDragDetected="#onDragDetectedForColumn1text7" onDragDropped="#onDragDropedForColumn1text7" onDragOver="#onDragOverForColumn1text7" onMousePressed="#onMouseClickCol1Text7" GridPane.columnIndex="1" />
+            <TextField fx:id="Column1text730" editable="false" onDragDetected="#onDragDetectedForColumn1text730" onDragDropped="#onDragDropedForColumn1text730" onDragOver="#onDragOverForColumn1text730" onMousePressed="#onMouseClickCol1Text730" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Column1text8" editable="false" onDragDetected="#onDragDetectedForColumn1text8" onDragDropped="#onDragDropedForColumn1text8" onDragOver="#onDragOverForColumn1text8" onMousePressed="#onMouseClickCol1Text8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Column1text830" editable="false" onDragDetected="#onDragDetectedForColumn1text830" onDragDropped="#onDragDropedForColumn1text830" onDragOver="#onDragOverForColumn1text830" onMousePressed="#onMouseClickCol1Text830" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="Column1text9" editable="false" onDragDetected="#onDragDetectedForColumn1text9" onDragDropped="#onDragDropedForColumn1text9" onDragOver="#onDragOverForColumn1text9" onMousePressed="#onMouseClickCol1Text9" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="Column1text930" editable="false" onDragDetected="#onDragDetectedForColumn1text930" onDragDropped="#onDragDropedForColumn1text930" onDragOver="#onDragOverForColumn1text930" onMousePressed="#onMouseClickCol1Text930" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="Column1text10" editable="false" onDragDetected="#onDragDetectedForColumn1text10" onDragDropped="#onDragDropedForColumn1text10" onDragOver="#onDragOverForColumn1text10" onMousePressed="#onMouseClickCol1Text10" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="Column1text1030" editable="false" onDragDetected="#onDragDetectedForColumn1text1030" onDragDropped="#onDragDropedForColumn1text1030" onDragOver="#onDragOverForColumn1text1030" onMousePressed="#onMouseClickCol1Text1030" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="Column1text11" editable="false" onDragDetected="#onDragDetectedForColumn1text11" onDragDropped="#onDragDropedForColumn1text11" onDragOver="#onDragOverForColumn1text11" onMousePressed="#onMouseClickCol1Text11" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></TextField>
+            <TextField fx:id="Column1text1130" editable="false" onDragDetected="#onDragDetectedForColumn1text1130" onDragDropped="#onDragDropedForColumn1text1130" onDragOver="#onDragOverForColumn1text1130" onMousePressed="#onMouseClickCol1Text1130" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></TextField>
+            <TextField fx:id="Column1text12" editable="false" onDragDetected="#onDragDetectedForColumn1text12" onDragDropped="#onDragDropedForColumn1text12" onDragOver="#onDragOverForColumn1text12" onMousePressed="#onMouseClickCol1Text12" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField fx:id="Column1text1230" editable="false" onDragDetected="#onDragDetectedForColumn1text1230" onDragDropped="#onDragDropedForColumn1text1230" onDragOver="#onDragOverForColumn1text1230" onMousePressed="#onMouseClickCol1Text1230" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <TextField fx:id="Column1text1" editable="false" onDragDetected="#onDragDetectedForColumn1text1" onDragDropped="#onDragDropedForColumn1text1" onDragOver="#onDragOverForColumn1text1" onMousePressed="#onMouseClickCol1Text1" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField fx:id="Column1text130" editable="false" onDragDetected="#onDragDetectedForColumn1text130" onDragDropped="#onDragDropedForColumn1text130" onDragOver="#onDragOverForColumn1text130" onMousePressed="#onMouseClickCol1Text130" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <TextField fx:id="Column1text2" editable="false" onDragDetected="#onDragDetectedForColumn1text2" onDragDropped="#onDragDropedForColumn1text2" onDragOver="#onDragOverForColumn1text2" onMousePressed="#onMouseClickCol1Text2" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <TextField fx:id="Column1text230" editable="false" onDragDetected="#onDragDetectedForColumn1text230" onDragDropped="#onDragDropedForColumn1text230" onDragOver="#onDragOverForColumn1text230" onMousePressed="#onMouseClickCol1Text230" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <TextField fx:id="Column1text3" editable="false" onDragDetected="#onDragDetectedForColumn1text3" onDragDropped="#onDragDropedForColumn1text3" onDragOver="#onDragOverForColumn1text3" onMousePressed="#onMouseClickCol1Text3" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <TextField fx:id="Column1text330" editable="false" onDragDetected="#onDragDetectedForColumn1text330" onDragDropped="#onDragDropedForColumn1text330" onDragOver="#onDragOverForColumn1text330" onMousePressed="#onMouseClickCol1Text330" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <TextField fx:id="Column1text4" editable="false" onDragDetected="#onDragDetectedForColumn1text4" onDragDropped="#onDragDroppedForColumn1text4" onDragOver="#onDragOverForColumn1text4" onMousePressed="#onMouseClickCol1Text4" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+            <TextField fx:id="Column1text430" editable="false" onDragDetected="#onDragDetectedForColumn1text5" onDragDropped="#onDragDropedForColumn1text430" onDragOver="#onDragOverForColumn1text430" onMousePressed="#onMouseClickCol1Text430" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+            <TextField fx:id="Column1text530" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+            <TextField fx:id="Column2text430" editable="false" onDragDetected="#onDragDetectedForColumn2text430" onDragDropped="#onDragDropedForColumn2text430" onDragOver="#onDragOverForColumn2text430" onMousePressed="#onMouseClickCol2Text430" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+            <TextField fx:id="Column2text4" editable="false" onDragDetected="#onDragDetectedForColumn2text4" onDragDropped="#onDragDropedForColumn2text4" onDragOver="#onDragOverForColumn2text4" onMousePressed="#onMouseClickCol2Text4" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+            <TextField fx:id="Column2text330" editable="false" onDragDetected="#onDragDetectedForColumn2text330" onDragDropped="#onDragDropedForColumn2text330" onDragOver="#onDragOverForColumn2text330" onMousePressed="#onMouseClickCol2Text330" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+            <TextField fx:id="Column2text3" editable="false" onDragDetected="#onDragDetectedForColumn2text3" onDragDropped="#onDragDropedForColumn2text3" onDragOver="#onDragOverForColumn2text3" onMousePressed="#onMouseClickCol2Text3" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+            <TextField fx:id="Column2text230" editable="false" onDragDetected="#onDragDetectedForColumn2text230" onDragDropped="#onDragDropedForColumn2text230" onDragOver="#onDragOverForColumn2text230" onMousePressed="#onMouseClickCol2Text230" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+            <TextField fx:id="Column2text2" editable="false" onDragDetected="#onDragDetectedForColumn2text2" onDragDropped="#onDragDropedForColumn2text2" onDragOver="#onDragOverForColumn2text2" onMousePressed="#onMouseClickCol2Text2" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+            <TextField fx:id="Column2text130" editable="false" onDragDetected="#onDragDetectedForColumn2text130" onDragDropped="#onDragDropedForColumn2text130" onDragOver="#onDragOverForColumn2text130" onMousePressed="#onMouseClickCol2Text130" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+            <TextField fx:id="Column2text1" editable="false" onDragDetected="#onDragDetectedForColumn2text1" onDragDropped="#onDragDropedForColumn2text1" onDragOver="#onDragOverForColumn2text1" onMousePressed="#onMouseClickCol2Text1" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+            <TextField fx:id="Column2text1230" editable="false" onDragDetected="#onDragDetectedForColumn2text1230" onDragDropped="#onDragDropedForColumn2text1230" onDragOver="#onDragOverForColumn2text1230" onMousePressed="#onMouseClickCol2Text1230" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <TextField fx:id="Column2text12" editable="false" onDragDetected="#onDragDetectedForColumn2text12" onDragDropped="#onDragDropedForColumn2text12" onDragOver="#onDragOverForColumn2text12" onMousePressed="#onMouseClickCol2Text12" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <TextField fx:id="Column2text1130" editable="false" onDragDetected="#onDragDetectedForColumn2text1130" onDragDropped="#onDragDropedForColumn2text1130" onDragOver="#onDragOverForColumn2text1130" onMousePressed="#onMouseClickCol2Text1130" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <TextField fx:id="Column2text11" editable="false" onDragDetected="#onDragDetectedForColumn2text11" onDragDropped="#onDragDropedForColumn2text11" onDragOver="#onDragOverForColumn2text11" onMousePressed="#onMouseClickCol2Text11" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField fx:id="Column2text1030" editable="false" onDragDetected="#onDragDetectedForColumn2text1030" onDragDropped="#onDragDropedForColumn2text1030" onDragOver="#onDragOverForColumn2text1030" onMousePressed="#onMouseClickCol2Text1030" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="Column2text10" editable="false" onDragDetected="#onDragDetectedForColumn2text10" onDragDropped="#onDragDropedForColumn2text10" onDragOver="#onDragOverForColumn2text10" onMousePressed="#onMouseClickCol2Text10" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="Column2text930" editable="false" onDragDetected="#onDragDetectedForColumn2text930" onDragDropped="#onDragDropedForColumn2tex930" onDragOver="#onDragOverForColumn2text930" onMousePressed="#onMouseClickCol2Text930" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="Column2text9" editable="false" onDragDetected="#onDragDetectedForColumn2text9" onDragDropped="#onDragDropedForColumn2text9" onDragOver="#onDragOverForColumn2text9" onMousePressed="#onMouseClickCol2Text9" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="Column2text830" editable="false" onDragDetected="#onDragDetectedForColumn2text830" onDragDropped="#onDragDropedForColumn2text830" onDragOver="#onDragOverForColumn2text830" onMousePressed="#onMouseClickCol2Text830" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="Column2text8" editable="false" onDragDetected="#onDragDetectedForColumn2text8" onDragDropped="#onDragDropedForColumn2text8" onDragOver="#onDragOverForColumn2text8" onMousePressed="#onMouseClickCol2Text8" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="Column2text730" editable="false" onDragDetected="#onDragDetectedForColumn2text730" onDragDropped="#onDragDropedForColumn2text730" onDragOver="#onDragOverForColumn2text730" onMousePressed="#onMouseClickCol2Text730" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="Column2text7" editable="false" onDragDetected="#onDragDetectedForColumn2text7" onDragDropped="#onDragDropedForColumn2text7" onDragOver="#onDragOverForColumn2text7" onMousePressed="#onMouseClickCol2Text7" prefHeight="25.0" prefWidth="404.0" GridPane.columnIndex="2" />
+            <TextField fx:id="Column1text5" editable="false" onDragDetected="#onDragDetectedForColumn1text5" onDragDropped="#onDragDropedForColumn1text5" onDragOver="#onDragOverForColumn1text5" onMousePressed="#onMouseClickCol1Text5" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+            <TextField fx:id="Column2text5" editable="false" onDragDetected="#onDragDetectedForColumn2text5" onDragDropped="#onDragDropedForColumn2text5" onDragOver="#onDragOverForColumn2text5" onMousePressed="#onMouseClickCol2Text5" GridPane.columnIndex="2" GridPane.rowIndex="20" />
+            <Label text="5:00" GridPane.rowIndex="20" />
+            <TextField fx:id="Column2text530" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="21" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.ent.EntComprehensiveNMTInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="596.0" prefWidth="1001.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="150.0" layoutY="1.0" orientation="VERTICAL" prefHeight="551.0" prefWidth="7.0" />
+                  <Separator layoutX="8.0" layoutY="264.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Separator layoutY="307.0" prefHeight="1.0" prefWidth="1007.0" />
+                  <Separator layoutY="352.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Label layoutX="4.0" layoutY="218.0" prefHeight="17.0" prefWidth="142.0" text="Pharynx , Palate , Tongue" />
+                  <Label layoutX="26.0" layoutY="245.0" text="Palate" />
+                  <Label layoutX="30.0" layoutY="283.0" text="Uvula" />
+                  <CheckBox fx:id="pharynxMoistlCheck" layoutX="260.0" layoutY="218.0" mnemonicParsing="false" text="moist" />
+                  <CheckBox fx:id="pharynxDryCheck" layoutX="468.0" layoutY="218.0" mnemonicParsing="false" text="dry" />
+                  <CheckBox fx:id="pharynxShowAreaCheck" layoutX="639.0" layoutY="218.0" mnemonicParsing="false" text="show area of aphthous stomatitis" />
+                  <CheckBox fx:id="pharynxShowLesionCheck" layoutX="860.0" layoutY="218.0" mnemonicParsing="false" text="show lesion" />
+                  <CheckBox fx:id="palateNormalCkeckBox" layoutX="260.0" layoutY="244.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="palateSwollenLeftCkeckBox" layoutX="468.0" layoutY="244.0" mnemonicParsing="false" text="swollen left" />
+                  <CheckBox fx:id="palateSwollenRightCkeckBox" layoutX="639.0" layoutY="244.0" mnemonicParsing="false" text="swollen right" />
+                  <CheckBox fx:id="uvulaErythematousCkeckBox" layoutX="260.0" layoutY="287.0" mnemonicParsing="false" text="erythematous" />
+                  <Separator layoutX="8.0" layoutY="240.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="tongueGeographicCkeckBox" layoutX="260.0" layoutY="330.0" mnemonicParsing="false" text="show s geographic tongue" />
+                  <CheckBox fx:id="uvulaRightCkeckBox" layoutX="804.0" layoutY="268.0" mnemonicParsing="false" text="deviated to right" />
+                  <CheckBox fx:id="uvulaLeftCkeckBox" layoutX="639.0" layoutY="268.0" mnemonicParsing="false" text="deviated to left" />
+                  <CheckBox fx:id="tongueLeukoplakiaCkeckBox" layoutX="804.0" layoutY="313.0" mnemonicParsing="false" text="shows leukoplakia" />
+                  <CheckBox fx:id="tongueNormalCkeckBox" layoutX="260.0" layoutY="311.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="pharynxNormalCheck" layoutX="168.0" layoutY="218.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="palateSwollenBilaterallyCkeckBox" layoutX="804.0" layoutY="244.0" mnemonicParsing="false" text="swollen bilaterally" />
+                  <CheckBox fx:id="uvulaSwollenCkeckBox" layoutX="468.0" layoutY="268.0" mnemonicParsing="false" text="swollen" />
+                  <Separator layoutX="3.0" layoutY="412.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="tongueSmoothCkeckBox" layoutX="468.0" layoutY="313.0" mnemonicParsing="false" text="smooth" />
+                  <CheckBox fx:id="tongueGlossitiesCkeckBox" layoutX="639.0" layoutY="313.0" mnemonicParsing="false" text="shows glossities " />
+                  <Button fx:id="doneBtn" layoutX="772.0" layoutY="528.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="872.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="uvulaNormalCkeckBox" layoutX="260.0" layoutY="268.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="tonsilsErythematousCkeckBox" layoutX="260.0" layoutY="372.0" mnemonicParsing="false" text="erythematous" />
+                  <CheckBox fx:id="tonsilsForeignBodyRightCkeckBox" layoutX="260.0" layoutY="392.0" mnemonicParsing="false" text="with foreign body on the right" />
+                  <CheckBox fx:id="tonsilsNormalCkeckBox" layoutX="260.0" layoutY="353.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="tongueAphthousCkeckBox" layoutX="468.0" layoutY="332.0" mnemonicParsing="false" text="show aphthous ulcers" />
+                  <CheckBox fx:id="tongueGlossitiesLesionCkeckBox" layoutX="639.0" layoutY="332.0" mnemonicParsing="false" text="shows glossities  lesion" />
+                  <CheckBox fx:id="tonsilsEnlargedBilaterallyCkeckBox" layoutX="468.0" layoutY="353.0" mnemonicParsing="false" text="bilaterally enlarged" />
+                  <CheckBox fx:id="tonsilsEnlargedLeftCkeckBox" layoutX="639.0" layoutY="353.0" mnemonicParsing="false" text="enlarged left" />
+                  <CheckBox fx:id="tonsilsEnlargedRightCkeckBox" layoutX="804.0" layoutY="353.0" mnemonicParsing="false" text="enlarged right" />
+                  <Label layoutX="25.0" layoutY="324.0" text="Tongue" />
+                  <Label layoutX="27.0" layoutY="364.0" text="Tonsils" />
+                  <Label layoutX="21.0" layoutY="420.0" text="Posterior  Pharynx" />
+                  <Label layoutX="19.0" layoutY="463.0" text="Salivary Glands" />
+                  <CheckBox fx:id="tonsilsWithExudatesCkeckBox" layoutX="468.0" layoutY="372.0" mnemonicParsing="false" text="with exudates" />
+                  <CheckBox fx:id="tonsilsWithoutExudatesCkeckBox" layoutX="639.0" layoutY="372.0" mnemonicParsing="false" text="without exudates" />
+                  <CheckBox fx:id="tonsilsForeignBodyLeftCkeckBox" layoutX="804.0" layoutY="372.0" mnemonicParsing="false" text="with foreign body on the left" />
+                  <CheckBox fx:id="posteriorNormalCheckBox" layoutX="260.0" layoutY="415.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="posteriorPebblingCheckBox" layoutX="468.0" layoutY="415.0" mnemonicParsing="false" text="pebbling" />
+                  <CheckBox fx:id="posteriorNasalDripCheckBox" layoutX="639.0" layoutY="415.0" mnemonicParsing="false" text="post nasal drip" />
+                  <CheckBox fx:id="posteriorForeignBodyCheckBox" layoutX="261.0" layoutY="434.0" mnemonicParsing="false" text="foreign body" />
+                  <CheckBox fx:id="salivaryNormalCheck" layoutX="260.0" layoutY="459.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="salivaryLeftParotidCheck" layoutX="468.0" layoutY="459.0" mnemonicParsing="false" text="left parotid swollen" />
+                  <CheckBox fx:id="posteriorMassCheckBox" layoutX="804.0" layoutY="415.0" mnemonicParsing="false" text="mass" />
+                  <CheckBox fx:id="salivaryRightParotidCheck" layoutX="639.0" layoutY="459.0" mnemonicParsing="false" text="right parotid swollen" />
+                  <CheckBox fx:id="salivaryRightSubmandibulaCheck" layoutX="260.0" layoutY="479.0" mnemonicParsing="false" text="right submandibular swollen" />
+                  <CheckBox fx:id="salivaryPainfulCheck" layoutX="468.0" layoutY="479.0" mnemonicParsing="false" text="painful" />
+                  <CheckBox fx:id="salivaryPainlessCheck" layoutX="639.0" layoutY="479.0" mnemonicParsing="false" text="painless" />
+                  <CheckBox fx:id="salivaryHardCheck" layoutX="260.0" layoutY="498.0" mnemonicParsing="false" text="hard" />
+                  <CheckBox fx:id="salivaryLeftSubmandibulaCheck" layoutX="804.0" layoutY="459.0" mnemonicParsing="false" text="left submandibular swollen" />
+                  <CheckBox fx:id="salivaryTenderCheck" layoutX="804.0" layoutY="479.0" mnemonicParsing="false" text="tender" />
+                  <Separator layoutX="-4.0" layoutY="455.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Separator layoutX="-2.0" layoutY="520.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <Separator layoutX="-2.0" layoutY="214.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <Label layoutX="16.0" layoutY="196.0" text="Dentition" />
+                  <Label layoutX="16.0" layoutY="168.0" text="Gums" />
+                  <Label layoutX="16.0" layoutY="145.0" text="Lips &amp; Gums" />
+                  <Label layoutX="11.0" layoutY="111.0" text="Terbinates" />
+                  <Label layoutX="19.0" layoutY="69.0" text="Septum" />
+                  <Label layoutX="31.0" layoutY="6.0" text="Nasal Mucosa" />
+                  <Separator layoutX="-4.0" layoutY="189.0" prefHeight="3.0" prefWidth="1001.0" />
+                  <Separator layoutX="-2.0" layoutY="159.0" prefHeight="17.0" prefWidth="1001.0" />
+                  <Separator layoutX="-3.0" layoutY="141.0" prefHeight="5.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="lipNormalCheck" layoutX="168.0" layoutY="147.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="dentitionNormalCheck" layoutX="168.0" layoutY="194.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="lipNormalRadio" layoutX="260.0" layoutY="147.0" mnemonicParsing="false" text="are normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="lip" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="gumAppearRadio" layoutX="260.0" layoutY="169.0" mnemonicParsing="false" text="are appear">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gum" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="detitionGoodRadio" layoutX="260.0" layoutY="194.0" mnemonicParsing="false" text="is in good repair">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="dentition" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="detitionFairRadio" layoutX="468.0" layoutY="194.0" mnemonicParsing="false" text="is in fair repair" toggleGroup="$dentition" />
+                  <RadioButton fx:id="gumMildRadio" layoutX="468.0" layoutY="169.0" mnemonicParsing="false" text="show mild gingvitis" toggleGroup="$gum" />
+                  <RadioButton fx:id="lipChelitisRadio" layoutX="468.0" layoutY="147.0" mnemonicParsing="false" text="show cheilitis" toggleGroup="$lip" />
+                  <RadioButton fx:id="lipHerpiticRadio" layoutX="639.0" layoutY="147.0" mnemonicParsing="false" text="Show Herpitic stomatitis" toggleGroup="$lip" />
+                  <RadioButton fx:id="gumSevereRadio" layoutX="639.0" layoutY="167.0" mnemonicParsing="false" text="show severe gingvitis" toggleGroup="$gum" />
+                  <RadioButton fx:id="detitionPoorRadio" layoutX="639.0" layoutY="194.0" mnemonicParsing="false" text="is in poor repair" toggleGroup="$dentition" />
+                  <RadioButton fx:id="detitionEvalRadio" layoutX="798.0" layoutY="192.0" mnemonicParsing="false" text="eval.shows carrie_abscess" toggleGroup="$dentition" />
+                  <RadioButton fx:id="gumMassrRadio" layoutX="843.0" layoutY="169.0" mnemonicParsing="false" text="mass noted" toggleGroup="$gum" />
+                  <CheckBox fx:id="turbinatesBoggyCheck" layoutX="260.0" layoutY="121.0" mnemonicParsing="false" text="boggy" />
+                  <CheckBox fx:id="turbinatesNormalCheck" layoutX="260.0" layoutY="102.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="turbinatesSwollenlCheck" layoutX="468.0" layoutY="102.0" mnemonicParsing="false" text="swollen" />
+                  <CheckBox fx:id="turbinatesInflamedCheck" layoutX="639.0" layoutY="102.0" mnemonicParsing="false" text="inflamed" />
+                  <CheckBox fx:id="turbinatesEnlargedCheck" layoutX="798.0" layoutY="111.0" mnemonicParsing="false" text="enlarged" />
+                  <Separator layoutX="-3.0" layoutY="96.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="sptumNormalCkeckBox" layoutX="260.0" layoutY="72.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="sptumPerforatedCkeckBox" layoutX="468.0" layoutY="68.0" mnemonicParsing="false" text="perforated" />
+                  <CheckBox fx:id="sptumMarkedDeviationCkeckBox" layoutX="639.0" layoutY="68.0" mnemonicParsing="false" text="marked deviation noted" />
+                  <CheckBox fx:id="sptumhematomaCkeckBox" layoutX="804.0" layoutY="68.0" mnemonicParsing="false" text="hematoma noted" />
+                  <CheckBox fx:id="nasalNormalCkeckBox" layoutX="260.0" layoutY="13.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="nasalLeftCkeckBox" layoutX="468.0" layoutY="13.0" mnemonicParsing="false" text="left" />
+                  <CheckBox fx:id="nasalRightCkeckBox" layoutX="639.0" layoutY="13.0" mnemonicParsing="false" text="right" />
+                  <CheckBox fx:id="nasalHyperemicCkeckBox" layoutX="803.0" layoutY="13.0" mnemonicParsing="false" text="hyperemic" />
+                  <CheckBox fx:id="nasalEpistaxisCkeckBox" layoutX="260.0" layoutY="36.0" mnemonicParsing="false" text="focus of epistaxis" />
+                  <CheckBox fx:id="nasalPolypCkeckBox" layoutX="468.0" layoutY="36.0" mnemonicParsing="false" text="polyp noted" />
+                  <CheckBox fx:id="nasalRhinorrheaCkeckBox" layoutX="639.0" layoutY="36.0" mnemonicParsing="false" text="rhinorrhea noted" />
+                  <Separator layoutX="-1.0" layoutY="59.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="nasalAllNormalCkeckBox" layoutX="168.0" layoutY="12.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="620.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.workHistory.TimeAtWorkInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="4.0" prefHeight="511.0" prefWidth="610.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="476.0" prefWidth="615.0">
+               <children>
+                  <Label layoutX="6.0" layoutY="8.0" text="How Long With This Employer" />
+                  <Label layoutX="6.0" layoutY="42.0" text="Time Period " />
+                  <Label layoutX="6.0" layoutY="119.0" text="Time Period" />
+                  <Label layoutX="6.0" layoutY="193.0" text="Was This Normal Work Shift ?" />
+                  <Label layoutX="6.0" layoutY="242.0" text="Time At Work Before Injury" />
+                  <Label layoutX="6.0" layoutY="301.0" text="Recent Work Week Pattern" />
+                  <Label layoutX="6.0" layoutY="330.0" text="Number Of Works Per Week" />
+                  <Label layoutX="6.0" layoutY="363.0" text="How Long Working These Hours" />
+                  <Label layoutX="6.0" layoutY="218.0" text="Normally Works What Shift" />
+                  <Label layoutX="6.0" layoutY="274.0" text="Time Period" />
+                  <Label layoutX="6.0" layoutY="82.0" text="How Many Years In Current Job" />
+                  <Label layoutX="6.0" layoutY="164.0" text="Shift On Date of Injury" />
+                  <Label layoutX="6.0" layoutY="396.0" text="Time Period" />
+                  <TextField fx:id="howLongText" layoutX="215.0" layoutY="3.0" prefHeight="25.0" prefWidth="80.0" />
+                  <Separator layoutX="-2.0" layoutY="31.0" prefHeight="0.0" prefWidth="617.0" />
+                  <RadioButton fx:id="time1DayRadio" layoutX="215.0" layoutY="36.0" mnemonicParsing="false" text="Days">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="time1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="time1YearRadio" layoutX="215.0" layoutY="57.0" mnemonicParsing="false" text="Years" toggleGroup="$time1" />
+                  <RadioButton fx:id="time1MonthRadio" layoutX="480.0" layoutY="37.0" mnemonicParsing="false" text="Months" toggleGroup="$time1" />
+                  <RadioButton fx:id="time1Weekradio" layoutX="355.0" layoutY="36.0" mnemonicParsing="false" text="Weeks" toggleGroup="$time1" />
+                  <Separator layoutX="-1.0" layoutY="78.0" prefHeight="0.0" prefWidth="617.0" />
+                  <TextField fx:id="howManyText" layoutX="215.0" layoutY="83.0" prefHeight="25.0" prefWidth="79.0" />
+                  <Separator layoutY="113.0" prefHeight="0.0" prefWidth="617.0" />
+                  <RadioButton fx:id="time2DayRadio" layoutX="215.0" layoutY="117.0" mnemonicParsing="false" text="Days">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="time2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="time2YearRadio" layoutX="215.0" layoutY="138.0" mnemonicParsing="false" text="Years" toggleGroup="$time2" />
+                  <RadioButton fx:id="time2MonthRadio" layoutX="480.0" layoutY="118.0" mnemonicParsing="false" text="Months" toggleGroup="$time2" />
+                  <RadioButton fx:id="time2WeekRadio" layoutX="355.0" layoutY="117.0" mnemonicParsing="false" text="Weeks" toggleGroup="$time2" />
+                  <Separator layoutY="159.0" prefHeight="0.0" prefWidth="617.0" />
+                  <RadioButton fx:id="shiftNormalRadio" layoutX="215.0" layoutY="163.0" mnemonicParsing="false" text="First">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="hift" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="shiftSecondRadio" layoutX="355.0" layoutY="162.0" mnemonicParsing="false" text="Second" toggleGroup="$hift" />
+                  <RadioButton fx:id="shiftThirdRadio" layoutX="480.0" layoutY="163.0" mnemonicParsing="false" text="Third" toggleGroup="$hift" />
+                  <Separator layoutY="183.0" prefHeight="0.0" prefWidth="617.0" />
+                  <RadioButton fx:id="isRadio" layoutX="215.0" layoutY="192.0" mnemonicParsing="false" text="Is">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="was" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="isNotRadio" layoutX="355.0" layoutY="191.0" mnemonicParsing="false" text="Is Not" toggleGroup="$was" />
+                  <Separator layoutX="-1.0" layoutY="212.0" prefHeight="0.0" prefWidth="617.0" />
+                  <RadioButton fx:id="normalFirstRadio" layoutX="215.0" layoutY="217.0" mnemonicParsing="false" text="First">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="normal" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="normalSecondRadio" layoutX="355.0" layoutY="216.0" mnemonicParsing="false" text="Second" toggleGroup="$normal" />
+                  <RadioButton fx:id="normalThirdRadio" layoutX="480.0" layoutY="217.0" mnemonicParsing="false" text="Third" toggleGroup="$normal" />
+                  <Separator layoutX="1.0" layoutY="237.0" prefHeight="0.0" prefWidth="617.0" />
+                  <TextField fx:id="timeWorkText" layoutX="215.0" layoutY="241.0" prefHeight="25.0" prefWidth="74.0" />
+                  <RadioButton fx:id="hourRadio" layoutX="215.0" layoutY="274.0" mnemonicParsing="false" text="Hours">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="t4" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="minutesRadio" layoutX="355.0" layoutY="273.0" mnemonicParsing="false" text="Minutes" toggleGroup="$t4" />
+                  <Separator layoutY="294.0" prefHeight="0.0" prefWidth="617.0" />
+                  <Separator layoutX="-1.0" layoutY="269.0" prefHeight="0.0" prefWidth="617.0" />
+                  <RadioButton fx:id="recentNormalRadio" layoutX="215.0" layoutY="301.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="t6" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="recentExtendedRadio" layoutX="355.0" layoutY="300.0" mnemonicParsing="false" text="Extended" toggleGroup="$t6" />
+                  <Separator layoutY="321.0" prefHeight="0.0" prefWidth="617.0" />
+                  <TextField fx:id="numberText" layoutX="215.0" layoutY="325.0" prefHeight="25.0" prefWidth="72.0" />
+                  <TextField fx:id="longWorkingText" layoutX="215.0" layoutY="358.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Separator layoutX="-2.0" layoutY="353.0" prefHeight="0.0" prefWidth="617.0" />
+                  <Separator layoutX="-1.0" layoutY="388.0" prefHeight="0.0" prefWidth="617.0" />
+                  <RadioButton fx:id="timeLastDaysRadio" layoutX="215.0" layoutY="393.0" mnemonicParsing="false" text="Days">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="perio" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="timeLastYearRadio" layoutX="215.0" layoutY="414.0" mnemonicParsing="false" text="Years" toggleGroup="$perio" />
+                  <RadioButton fx:id="timeLastMonthRadio" layoutX="480.0" layoutY="394.0" mnemonicParsing="false" text="Months" toggleGroup="$perio" />
+                  <RadioButton fx:id="timeLastWeekRadio" layoutX="355.0" layoutY="393.0" mnemonicParsing="false" text="Weeks" toggleGroup="$perio" />
+                  <Separator layoutX="9.0" layoutY="435.0" prefHeight="0.0" prefWidth="617.0" />
+                  <Button fx:id="doneBtn" layoutX="401.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="511.0" layoutY="445.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="188.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="437.0" prefWidth="13.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

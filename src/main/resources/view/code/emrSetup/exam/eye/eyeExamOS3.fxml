@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.eye.EyeOsInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="381.0" prefWidth="595.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="16.0" layoutY="4.0" text="EOMI" />
+                  <Label layoutX="16.0" layoutY="88.0" text="Palpebral Conjunctivae" />
+                  <Separator layoutX="156.0" layoutY="1.0" orientation="VERTICAL" prefHeight="303.0" prefWidth="2.0" />
+                  <Button fx:id="doneBtn" layoutX="776.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-7.0" layoutY="27.0" prefHeight="1.0" prefWidth="605.0" />
+                  <Button fx:id="skipBtn" layoutX="876.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-4.0" layoutY="156.0" prefHeight="6.0" prefWidth="602.0" />
+                  <Separator layoutX="-2.0" layoutY="213.0" prefHeight="0.0" prefWidth="595.0" />
+                  <Label layoutX="16.0" layoutY="137.0" text="Lacrimal Glands &amp; Ducts" />
+                  <Label layoutX="16.0" layoutY="238.0" text="Abnormals" />
+                  <CheckBox fx:id="pterygiumCheck" layoutX="216.0" layoutY="249.0" mnemonicParsing="false" text="pterygium" />
+                  <CheckBox fx:id="foreignCheck" layoutX="427.0" layoutY="225.0" mnemonicParsing="false" text="foreign body" />
+                  <Separator layoutX="-2.0" layoutY="301.0" prefHeight="2.0" prefWidth="595.0" />
+                  <Button fx:id="doneBtn" layoutX="381.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="483.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="dischargeCheck" layoutX="216.0" layoutY="225.0" mnemonicParsing="false" text="discharge" />
+                  <CheckBox fx:id="subconjunctivalCheck" layoutX="216.0" layoutY="274.0" mnemonicParsing="false" text="subconjunctival hemorrhage" />
+                  <CheckBox fx:id="inflammationCheck" layoutX="427.0" layoutY="249.0" mnemonicParsing="false" text="inflammation" />
+                  <CheckBox fx:id="pinguiculaCheck" layoutX="427.0" layoutY="275.0" mnemonicParsing="false" text="pinguicula" />
+                  <RadioButton fx:id="intactRadio" layoutX="216.0" layoutY="6.0" mnemonicParsing="false" text="Intact">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="eomi" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="notIntactRadio" layoutX="427.0" layoutY="6.0" mnemonicParsing="false" text="Not Intact" toggleGroup="$eomi" />
+                  <RadioButton fx:id="perrlaNormalRadio" layoutX="216.0" layoutY="33.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="perrla" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="perrlaAbnormalRadio" layoutX="427.0" layoutY="33.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$perrla" />
+                  <RadioButton fx:id="bulbarNormalRadio" layoutX="216.0" layoutY="59.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="bulbar" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="palpebralNormalRadio" layoutX="217.0" layoutY="85.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="palpebral" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="lidsNormalRadio" layoutX="216.0" layoutY="111.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="lids" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="glandsNormalRadio" layoutX="216.0" layoutY="138.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="glands" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="lymphNormalRadio" layoutX="216.0" layoutY="164.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="lymph" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="examNormalRadio" layoutX="216.0" layoutY="192.0" mnemonicParsing="false" text="Normal">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="exam" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="bulbarAbnormalRadio" layoutX="427.0" layoutY="59.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$bulbar" />
+                  <RadioButton fx:id="palpebralAbnormalRadio" layoutX="427.0" layoutY="85.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$palpebral" />
+                  <RadioButton fx:id="lidsAbnormalRadio" layoutX="427.0" layoutY="112.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$lids" />
+                  <RadioButton fx:id="glandsAbnormalRadio" layoutX="427.0" layoutY="136.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$glands" />
+                  <RadioButton fx:id="lymphAbnormalRadio" layoutX="427.0" layoutY="161.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$lymph" />
+                  <RadioButton fx:id="examAbnormalRadio" layoutX="427.0" layoutY="191.0" mnemonicParsing="false" text="Abnormal" toggleGroup="$exam" />
+                  <Separator layoutX="-2.0" layoutY="54.0" prefHeight="3.0" prefWidth="595.0" />
+                  <Label layoutX="16.0" layoutY="35.0" text="PERRLA" />
+                  <Label layoutX="16.0" layoutY="59.0" text="Bulbar Conjunctivae" />
+                  <Label layoutX="16.0" layoutY="112.0" text="Lids" />
+                  <Label layoutX="16.0" layoutY="165.0" text="Periocular Lymph Nodes" />
+                  <Label layoutX="16.0" layoutY="192.0" text="Funduscopic Exam" />
+                  <Separator layoutX="-1.0" layoutY="81.0" prefHeight="3.0" prefWidth="595.0" />
+                  <Separator layoutX="-2.0" layoutY="107.0" prefHeight="2.0" prefWidth="595.0" />
+                  <Separator layoutX="-3.0" layoutY="132.0" prefHeight="0.0" prefWidth="595.0" />
+                  <Separator layoutX="-1.0" layoutY="187.0" prefHeight="3.0" prefWidth="595.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="143.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.psych.insight.InsightInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="6.0" prefHeight="130.0" prefWidth="499.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="27.0" prefHeight="7.0" prefWidth="499.0" />
+                  <Label layoutX="6.0" layoutY="4.0" text="Insight" />
+                  <Label layoutX="3.0" layoutY="37.0" text="Judgment" />
+                  <Separator layoutX="84.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="18.0" />
+                  <Separator layoutX="-4.0" layoutY="56.0" prefHeight="3.0" prefWidth="506.0" />
+                  <CheckBox fx:id="insightNormalCkeckBox" layoutX="110.0" layoutY="3.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="judgmentNormalCheck" layoutX="110.0" layoutY="34.0" mnemonicParsing="false" text="Normal" />
+                  <Button fx:id="doneBtn" layoutX="253.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="365.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="insightGoodRadio" layoutX="193.0" layoutY="5.0" mnemonicParsing="false" text="good">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Insight" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="insightFairRadio" layoutX="317.0" layoutY="5.0" mnemonicParsing="false" text="fair" toggleGroup="$Insight" />
+                  <RadioButton fx:id="insightPoorRadio" layoutX="418.0" layoutY="5.0" mnemonicParsing="false" text="poor" toggleGroup="$Insight" />
+                  <RadioButton fx:id="judgmentFairRadio" layoutX="318.0" layoutY="34.0" mnemonicParsing="false" text="fair">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Judgment" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="judgmentGoodRadio" layoutX="193.0" layoutY="34.0" mnemonicParsing="false" text="good" toggleGroup="$Judgment" />
+                  <RadioButton fx:id="judgmentPoorRadio" layoutX="419.0" layoutY="34.0" mnemonicParsing="false" text="poor" toggleGroup="$Judgment" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

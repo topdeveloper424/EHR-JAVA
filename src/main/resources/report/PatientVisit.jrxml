@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PatientVisit" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7003594c-49c4-428f-9e43-e8e1dfb41357">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="visitType" class="java.lang.String"/>
+	<field name="visitDate" class="java.lang.Object"/>
+	<field name="arrivalTime" class="java.lang.String"/>
+	<field name="visitCategory.code" class="java.lang.String"/>
+	<field name="purpose" class="java.lang.String"/>
+	<field name="clinician.firstName" class="java.lang.Object"/>
+	<field name="patient.company.name" class="java.lang.Object"/>
+	<field name="visitStatus" class="java.lang.String"/>
+	<field name="clinician.middleName" class="java.lang.Object"/>
+	<field name="clinician.lastName" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="30" width="300" height="51" forecolor="#8080C0" uuid="0f3441ce-9679-49cb-acc5-fb34a73a086e"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Patient Visit Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="40" width="70" height="20" uuid="a141c7c9-ae8b-40be-847e-16193af2cecf"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="40" width="50" height="20" uuid="06dd75ca-98f2-453d-87b9-6d77d3177737"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="40" width="90" height="20" uuid="02f44023-53a3-4e77-a999-a6adb43deaa2"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Visit Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="40" width="55" height="20" uuid="16242f36-0336-45bb-9807-193f9db6ae37"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Purpose]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="40" width="70" height="20" uuid="fca30353-bfcb-471c-acb5-3896f20508a0"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="40" width="70" height="20" uuid="eb1de16c-0850-46f5-9e26-b65218a67df3"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Clinician]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="40" width="60" height="20" uuid="cfc543a2-3d5f-4e58-b893-9241e432fa0c"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="9" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="70" height="30" uuid="009b367c-c1fa-476b-8b25-0ac39d90981d"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="70" height="30" uuid="ac590ee4-c9b5-4758-89aa-0ddae51d4de1"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arrivalTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="70" height="40" uuid="a4f17cde-cd60-4753-b607-c473281dd234"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitCategory.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="60" height="56" uuid="a95a43d2-1902-4fd5-9c8f-f9a1ec48fe9e"/>
+				<textElement>
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purpose}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="70" height="54" uuid="063a6756-4ada-47f0-8ce7-57e82f91ec54"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="70" height="30" uuid="5f573d0b-6d44-40c1-a1e4-5c919d856404"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clinician.firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="65" height="30" uuid="1c544a45-d1b6-460c-a329-363e4b52bffd"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{visitStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

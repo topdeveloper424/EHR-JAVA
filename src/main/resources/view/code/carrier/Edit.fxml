@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="740.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.carriers.CarrierEditController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="517.0" prefWidth="739.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="728.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="44.0" text="Carrier Code :" />
+                        <Label layoutX="8.0" layoutY="78.0" text="Carrier Name :" />
+                        <Label layoutX="8.0" layoutY="109.0" text="Address :" />
+                        <Label layoutX="8.0" layoutY="158.0" text="City :" />
+                        <Label layoutX="8.0" layoutY="195.0" text="Telephone :" />
+                        <Label layoutX="8.0" layoutY="231.0" text="Email :'" />
+                        <Label layoutX="8.0" layoutY="274.0" text="Contact :" />
+                        <Label layoutX="8.0" layoutY="317.0" text="Plan Name :" />
+                        <Label layoutX="281.0" layoutY="44.0" text="Player Billing Account :" />
+                        <Label layoutX="283.0" layoutY="195.0" text="Ext :" />
+                        <Label layoutX="356.0" layoutY="155.0" text="State :" />
+                        <Label layoutX="404.0" layoutY="195.0" text="Fax :" />
+                        <Label layoutX="516.0" layoutY="158.0" text="Zip :" />
+                        <Label layoutX="507.0" layoutY="231.0" text="Source Fax :" />
+                        <Label layoutX="410.0" layoutY="317.0" text="Plan Type :" />
+                        <TextField fx:id="carriedIdTextField" editable="false" layoutX="90.0" layoutY="7.0" prefHeight="25.0" prefWidth="171.0" />
+                        <TextField fx:id="carrierCodeTextField" layoutX="90.0" layoutY="39.0" prefHeight="25.0" prefWidth="172.0" />
+                        <TextField fx:id="playerBillingAccnoutTextField" layoutX="405.0" layoutY="39.0" prefHeight="25.0" prefWidth="219.0" />
+                        <Button fx:id="playerBillingAccnoutButton" layoutX="624.0" layoutY="39.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForPlayerBillingAccnoutButton" prefHeight="17.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="carrierNameTextField" layoutX="90.0" layoutY="73.0" prefHeight="25.0" prefWidth="316.0" />
+                        <TextField fx:id="addressTextField" layoutX="90.0" layoutY="105.0" prefHeight="25.0" prefWidth="318.0" />
+                        <TextField fx:id="cityTextField" layoutX="90.0" layoutY="151.0" prefHeight="25.0" prefWidth="251.0" />
+                        <TextField fx:id="stateTextField" layoutX="396.0" layoutY="154.0" prefHeight="25.0" prefWidth="106.0" />
+                        <TextField fx:id="zipTextField" layoutX="554.0" layoutY="154.0" prefHeight="25.0" prefWidth="88.0" />
+                        <TextField fx:id="telephoneTextField" layoutX="90.0" layoutY="191.0" prefHeight="25.0" prefWidth="167.0" />
+                        <TextField fx:id="extTextField" layoutX="312.0" layoutY="191.0" prefHeight="25.0" prefWidth="78.0" />
+                        <TextField fx:id="faxTextField" layoutX="431.0" layoutY="191.0" prefHeight="25.0" prefWidth="112.0" />
+                        <TextField fx:id="emailTextField" layoutX="90.0" layoutY="227.0" prefHeight="25.0" prefWidth="398.0" />
+                        <TextField fx:id="sourceFaxTextField" layoutX="577.0" layoutY="227.0" />
+                        <TextField fx:id="contactTextField" layoutX="90.0" layoutY="270.0" prefHeight="25.0" prefWidth="297.0" />
+                        <Button fx:id="contactButton" layoutX="387.0" layoutY="269.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForcontactSearchButton">
+                           <graphic>
+                              <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="planNameTextField" layoutX="90.0" layoutY="314.0" prefHeight="25.0" prefWidth="302.0" />
+                        <ChoiceBox fx:id="playTypeChoiceBox" layoutX="473.0" layoutY="314.0" prefHeight="24.0" prefWidth="128.0" />
+                        <Label layoutX="11.0" layoutY="12.0" text="Carrier Id:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Organization">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="695.0">
+                     <children>
+                        <Label layoutX="55.0" layoutY="33.0" text="FEIN :" />
+                        <Label layoutX="332.0" layoutY="33.0" text="WCB Code :" />
+                        <TextField fx:id="feinTextField" layoutX="93.0" layoutY="29.0" />
+                        <TextField fx:id="wcbCodeTextField" layoutX="401.0" layoutY="30.0" prefHeight="25.0" prefWidth="143.0" />
+                        <TitledPane animated="false" disable="true" layoutX="55.0" layoutY="63.0" prefHeight="167.0" prefWidth="495.0" text="Organizational Groups">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="493.0">
+                                 <children>
+                                    <Label layoutX="15.0" layoutY="23.0" text="Region :" />
+                                    <Label layoutX="15.0" layoutY="63.0" text="District :" />
+                                    <Label layoutX="15.0" layoutY="107.0" text="Complex :" />
+                                    <TextField fx:id="regionTextField" layoutX="74.0" layoutY="19.0" />
+                                    <Button fx:id="regionButton" layoutX="223.0" layoutY="19.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="districtTextField" layoutX="74.0" layoutY="58.0" />
+                                    <Button fx:id="districtButton" layoutX="223.0" layoutY="59.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="complexTextField" layoutX="74.0" layoutY="103.0" />
+                                    <Button fx:id="complexButton" layoutX="223.0" layoutY="103.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/search-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Rules">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox layoutX="110.0" layoutY="150.0" mnemonicParsing="false" text="XRays Not Covered" fx:id="xRayNotCoveredCheckBox" />
+                        <CheckBox fx:id="suppliesNotCoveredCheckBox" layoutX="110.0" layoutY="182.0" mnemonicParsing="false" text="Supplies Not Covered" />
+                        <CheckBox fx:id="medsNotCovered" layoutX="111.0" layoutY="213.0" mnemonicParsing="false" text="Meds Not Covered" />
+                        <Label layoutX="78.0" layoutY="124.0" text="Coverage Exclusions :" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Authorization">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="authorizationRequired" layoutX="86.0" layoutY="37.0" mnemonicParsing="false" text="Authorization Required" />
+                        <Label layoutX="115.0" layoutY="67.0" text="Authorization Phone :" />
+                        <Label layoutX="115.0" layoutY="109.0" text="Authorization Contact :" />
+                        <TextField fx:id="authorizationPhoneTextField" layoutX="250.0" layoutY="63.0" />
+                        <TextField fx:id="authorizationContactTextField" layoutX="250.0" layoutY="104.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="contactsButton" layoutX="54.0" layoutY="540.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForContactsButton" text="Contacts" />
+      <CheckBox fx:id="inactiveCheckBox" layoutX="239.0" layoutY="544.0" mnemonicParsing="false" text="Inactive" />
+      <Button fx:id="updateButton" layoutX="379.0" layoutY="541.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForUpdateButton" prefHeight="25.0" prefWidth="93.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="506.0" layoutY="541.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancleButton" prefHeight="25.0" prefWidth="93.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

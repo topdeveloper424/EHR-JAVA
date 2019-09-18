@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="569.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.gu.prostate.ExamProstateInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="270.0" prefWidth="557.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Prostate Examined" />
+                  <Separator layoutX="127.0" layoutY="1.0" orientation="VERTICAL" prefHeight="191.0" prefWidth="7.0" />
+                  <Button fx:id="doneBtn" layoutX="340.0" layoutY="202.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="5.0" layoutY="96.0" prefHeight="5.0" prefWidth="583.0" />
+                  <Button fx:id="skipBtn" layoutX="441.0" layoutY="202.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="prostatenormalCkeckBox" layoutX="139.0" layoutY="7.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="smoothCheck" layoutX="222.0" layoutY="5.0" mnemonicParsing="false" text="smooth" />
+                  <CheckBox fx:id="nodularCheck" layoutX="405.0" layoutY="6.0" mnemonicParsing="false" text="nodular" />
+                  <CheckBox fx:id="hardCheck" layoutX="222.0" layoutY="25.0" mnemonicParsing="false" text="hard" />
+                  <CheckBox fx:id="boggyCheck" layoutX="405.0" layoutY="26.0" mnemonicParsing="false" text="boggy" />
+                  <CheckBox fx:id="asymmetricCheck" layoutX="222.0" layoutY="46.0" mnemonicParsing="false" text="asymmetric" />
+                  <CheckBox fx:id="nonTenderCheck" layoutX="222.0" layoutY="66.0" mnemonicParsing="false" text="non tender" />
+                  <CheckBox fx:id="enlargedCheck" layoutX="405.0" layoutY="46.0" mnemonicParsing="false" text="enlarged" />
+                  <CheckBox fx:id="tenderCheck" layoutX="405.0" layoutY="66.0" mnemonicParsing="false" text="tender" />
+                  <CheckBox fx:id="massessWithoutMassCheck" layoutX="138.0" layoutY="117.0" mnemonicParsing="false" text="without masses" />
+                  <CheckBox fx:id="massesWithmassCheck" layoutX="275.0" layoutY="117.0" mnemonicParsing="false" text="with mass palpable" />
+                  <CheckBox fx:id="prostateincludeCheck" layoutX="140.0" layoutY="163.0" mnemonicParsing="false" text="Include" />
+                  <Separator layoutX="4.0" layoutY="146.0" prefHeight="2.0" prefWidth="583.0" />
+                  <Label layoutX="14.0" layoutY="110.0" text="Prostate masses" />
+                  <Label layoutX="8.0" layoutY="163.0" text="Prostate exam declined" />
+                  <Label layoutX="222.0" layoutY="164.0" text="Patient declined prostate examination" />
+                  <Separator layoutX="-1.0" layoutY="191.0" prefHeight="0.0" prefWidth="583.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

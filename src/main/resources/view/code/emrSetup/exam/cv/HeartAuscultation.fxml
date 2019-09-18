@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="773.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.cv.CvHeartAuscultationInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="359.0" prefWidth="764.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="381.0" prefWidth="762.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="51.0" prefHeight="3.0" prefWidth="757.0" />
+                  <Separator layoutX="153.0" layoutY="1.0" orientation="VERTICAL" prefHeight="257.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="481.0" layoutY="278.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="582.0" layoutY="279.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="146.0" prefHeight="0.0" prefWidth="764.0" />
+                  <Separator layoutX="2.0" layoutY="206.0" prefHeight="0.0" prefWidth="764.0" />
+                  <Separator layoutY="258.0" prefHeight="0.0" prefWidth="764.0" />
+                  <Label layoutX="9.0" layoutY="19.0" text="Heart Rhythm" />
+                  <Label layoutX="12.0" layoutY="60.0" text="Heart murmur" />
+                  <Label layoutX="41.0" layoutY="340.0" />
+                  <Label layoutX="13.0" layoutY="161.0" text="Murmur Location" />
+                  <Label layoutX="9.0" layoutY="227.0" text="S3 and Rub" />
+                  <CheckBox fx:id="AuscultationNormal" layoutX="157.0" layoutY="17.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="SRubNO" layoutX="252.0" layoutY="211.0" mnemonicParsing="false" text="no S3 and Rub" />
+                  <CheckBox fx:id="SRubS3" layoutX="404.0" layoutY="215.0" mnemonicParsing="false" text="S3" />
+                  <CheckBox fx:id="heartNo" layoutX="253.0" layoutY="55.0" mnemonicParsing="false" text="no" />
+                  <CheckBox fx:id="heartgrade26" layoutX="253.0" layoutY="77.0" mnemonicParsing="false" text="grade 2/6" />
+                  <CheckBox fx:id="heartgrade45" layoutX="253.0" layoutY="101.0" mnemonicParsing="false" text="grade 4/5" />
+                  <CheckBox fx:id="heartSoft" layoutX="253.0" layoutY="123.0" mnemonicParsing="false" text="soft" />
+                  <CheckBox fx:id="heartDiastolic" layoutX="406.0" layoutY="78.0" mnemonicParsing="false" text="diastolic" />
+                  <CheckBox fx:id="heartGrade16" layoutX="406.0" layoutY="101.0" mnemonicParsing="false" text="grade 1/6" />
+                  <CheckBox fx:id="heartGrade36" layoutX="406.0" layoutY="124.0" mnemonicParsing="false" text="grade 3/6" />
+                  <CheckBox fx:id="heartHarsh" layoutX="406.0" layoutY="54.0" mnemonicParsing="false" text="harsh" />
+                  <CheckBox fx:id="heartBlowing" layoutX="555.0" layoutY="80.0" mnemonicParsing="false" text="blowing" />
+                  <CheckBox fx:id="heartGrade56" layoutX="555.0" layoutY="57.0" mnemonicParsing="false" text="grade 5/6" />
+                  <CheckBox fx:id="heartSystolic" layoutX="555.0" layoutY="104.0" mnemonicParsing="false" text="systolic" />
+                  <RadioButton fx:id="AuscultationRegularRadio" layoutX="253.0" layoutY="17.0" mnemonicParsing="false" text="regular" />
+                  <RadioButton fx:id="AuscultationIrregularRadio" layoutX="406.0" layoutY="21.0" mnemonicParsing="false" text="irregular" />
+                  <CheckBox fx:id="heartFunctional" layoutX="554.0" layoutY="127.0" mnemonicParsing="false" text="functional" />
+                  <CheckBox fx:id="murmurAortic" layoutX="253.0" layoutY="153.0" mnemonicParsing="false" text="the aortic area" />
+                  <CheckBox fx:id="murmurBase" layoutX="553.0" layoutY="177.0" mnemonicParsing="false" text="the base" />
+                  <CheckBox fx:id="murmurCarotids" layoutX="253.0" layoutY="177.0" mnemonicParsing="false" text="radiating to carotids" />
+                  <CheckBox fx:id="murmurPulmonic" layoutX="404.0" layoutY="152.0" mnemonicParsing="false" text="the pulmonic area" />
+                  <CheckBox fx:id="murmurApex" layoutX="553.0" layoutY="152.0" mnemonicParsing="false" text="the apex" />
+                  <CheckBox fx:id="murmurRadiating" layoutX="404.0" layoutY="178.0" mnemonicParsing="false" text="radiating to base" />
+                  <CheckBox fx:id="SRubRub" layoutX="252.0" layoutY="232.0" mnemonicParsing="false" text="rub" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.otherDataSource.OrderOtherDataSourceInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="578.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="532.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="ReviewPastvisit" layoutX="38.0" layoutY="37.0" mnemonicParsing="false" text="Review Past visit /Medical Record" />
+                                    <CheckBox fx:id="Translator" layoutX="38.0" layoutY="61.0" mnemonicParsing="false" text="Translator/Interpeter Used" />
+                                    <CheckBox fx:id="Dataobtainedfromfamily" layoutX="38.0" layoutY="83.0" mnemonicParsing="false" text="Data obtained from family/carier giver" />
+                                    <CheckBox fx:id="ObtainoldMedical" layoutX="38.0" layoutY="107.0" mnemonicParsing="false" text="Obtain old Medical Records" />
+                                    <CheckBox fx:id="ObtainedIndepedent" layoutX="38.0" layoutY="132.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="201.0" text="Obtained Indepedent Review" />
+                                    <CheckBox fx:id="DiscussedTest" layoutX="38.0" layoutY="155.0" mnemonicParsing="false" text="Discussed Test w/Interpreting physician" />
+                                    <CheckBox fx:id="ReviewedwithSupervisor" layoutX="38.0" layoutY="176.0" mnemonicParsing="false" text="Reviewed with Supervisor MD" />
+                                    <CheckBox fx:id="ConsultClinicalRefrence" layoutX="38.0" layoutY="198.0" mnemonicParsing="false" text="Consult Clinical Refrence/ Manual" />
+                                    <CheckBox fx:id="ReviewedwrtACOEM" layoutX="38.0" layoutY="217.0" mnemonicParsing="false" text="Reviewed wrt ACOEM Guidelines" />
+                                    <CheckBox fx:id="ReviewedwrtODG" layoutX="39.0" layoutY="236.0" mnemonicParsing="false" text="Reviewed wrt ODG Guidelines" />
+                                    <CheckBox fx:id="GenderAdvocate" layoutX="40.0" layoutY="257.0" mnemonicParsing="false" text="Gender Advocate/Chaperone" />
+                                    <CheckBox fx:id="LeftMessage" layoutX="40.0" layoutY="277.0" mnemonicParsing="false" text="Left Message for Employer representative" />
+                                    <CheckBox fx:id="SpokewithEmployer" layoutX="40.0" layoutY="297.0" mnemonicParsing="false" text="Spoke with Employer contact/representative" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="486.0" layoutY="584.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="406.0" layoutY="587.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

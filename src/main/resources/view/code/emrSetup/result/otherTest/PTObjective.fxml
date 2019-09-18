@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="883.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.PTObjectiveInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="6.0" prefHeight="450.0" prefWidth="872.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="5.0" text="Evaluation" />
+                  <Label layoutX="2.0" layoutY="62.0" text="Therapeutic Procedures #1" />
+                  <Label layoutX="2.0" layoutY="121.0" text="Therapeutic Procedures #2" />
+                  <Label layoutX="2.0" layoutY="192.0" text="Select Choice" />
+                  <Label layoutX="2.0" layoutY="225.0" text="Supervised Modalities #2" />
+                  <Label layoutX="2.0" layoutY="285.0" text="Pick All That Apply" />
+                  <Separator layoutX="149.0" orientation="VERTICAL" prefHeight="377.0" prefWidth="6.0" />
+                  <RadioButton fx:id="EvaluationRadio" layoutX="170.0" layoutY="6.0" mnemonicParsing="false" text="Evaluation">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Leukocytes" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="ReEvaluationRadio" layoutX="369.0" layoutY="6.0" mnemonicParsing="false" text="Re-Evaluation" toggleGroup="$Leukocytes" />
+                  <Separator layoutX="-1.0" layoutY="26.0" prefHeight="0.0" prefWidth="872.0" />
+                  <RadioButton fx:id="TherapeuticExercisesRadio" layoutX="170.0" layoutY="31.0" mnemonicParsing="false" text="Therapeutic Exercises">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Therapeutic" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="GaitTrainingRadio" layoutX="559.0" layoutY="29.0" mnemonicParsing="false" text="Gait Training" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="ManualTherapyRadio" layoutX="170.0" layoutY="49.0" mnemonicParsing="false" text="Manual Therapy" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="TherapeuticActivitiesradio" layoutX="559.0" layoutY="49.0" mnemonicParsing="false" text="Therapeutic Activities" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="TherapeuticExercises2Radio" layoutX="170.0" layoutY="95.0" mnemonicParsing="false" text="Therapeutic Exercises">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Procedures" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="ManualTherapy2Radio" layoutX="170.0" layoutY="115.0" mnemonicParsing="false" text="Manual Therapy" toggleGroup="$Procedures" />
+                  <RadioButton fx:id="GroupTherapy2radio" layoutX="369.0" layoutY="119.0" mnemonicParsing="false" text="Group Therapy Procedures" toggleGroup="$Procedures" />
+                  <RadioButton fx:id="Neuromuscular2Radio" layoutX="369.0" layoutY="99.0" mnemonicParsing="false" text="Neuromuscular Re-education" toggleGroup="$Procedures" />
+                  <RadioButton fx:id="WoundDebridement2Radio" layoutX="170.0" layoutY="135.0" mnemonicParsing="false" text="Wound Debridement/Dressing" toggleGroup="$Procedures" />
+                  <Separator layoutX="3.0" layoutY="665.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Button fx:id="okBtn" layoutX="573.0" layoutY="384.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="OK">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="675.0" layoutY="384.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="2.0" layoutY="309.0" text="Pick All That Apply" />
+                  <Label layoutX="2.0" layoutY="339.0" text="Additional Notes" />
+                  <RadioButton fx:id="NeuromuscularRadio" layoutX="369.0" layoutY="29.0" mnemonicParsing="false" text="Neuromuscular Re-education" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="TherapeuticMassageRadio" layoutX="715.0" layoutY="30.0" mnemonicParsing="false" text="Therapeutic Massage" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="GroupTherapyRadio" layoutX="368.0" layoutY="49.0" mnemonicParsing="false" text="Group Therapy Procedures" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="SoftTissueradio" layoutX="715.0" layoutY="49.0" mnemonicParsing="false" text="Soft Tissue Mobilization" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="WoundDebridementradio" layoutX="170.0" layoutY="69.0" mnemonicParsing="false" text="Wound Debridement/Dressing" toggleGroup="$Therapeutic" />
+                  <RadioButton fx:id="GaitTraining2Radio" layoutX="559.0" layoutY="99.0" mnemonicParsing="false" text="Gait Training" toggleGroup="$Procedures" />
+                  <RadioButton fx:id="TherapeuticActivities2Radio" layoutX="561.0" layoutY="117.0" mnemonicParsing="false" text="Therapeutic Activities" toggleGroup="$Procedures" />
+                  <RadioButton fx:id="SoftTissue2radio" layoutX="715.0" layoutY="119.0" mnemonicParsing="false" text="Soft Tissue Mobilization" toggleGroup="$Procedures" />
+                  <RadioButton fx:id="TherapeuticMassage2Radio" layoutX="715.0" layoutY="98.0" mnemonicParsing="false" text="Therapeutic Massage" toggleGroup="$Procedures" />
+                  <RadioButton fx:id="SelectMechanialTractionRadio" layoutX="170.0" layoutY="160.0" mnemonicParsing="false" text="Mechanial Traction">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Select" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="SelecteStimManualRadio" layoutX="170.0" layoutY="179.0" mnemonicParsing="false" text="e-Stim Manual" toggleGroup="$Select" />
+                  <RadioButton fx:id="SelectIontophoresisradio" layoutX="369.0" layoutY="179.0" mnemonicParsing="false" text="Iontophoresis" toggleGroup="$Select" />
+                  <RadioButton fx:id="SelectElectricalSimulationRadio" layoutX="369.0" layoutY="160.0" mnemonicParsing="false" text="Electrical Simulation" toggleGroup="$Select" />
+                  <RadioButton fx:id="SelectPhonophoresisRadio" layoutX="170.0" layoutY="198.0" mnemonicParsing="false" text="Phonophoresis" toggleGroup="$Select" />
+                  <RadioButton fx:id="SelectParaffinbathRadio" layoutX="559.0" layoutY="160.0" mnemonicParsing="false" text="Paraffin bath" toggleGroup="$Select" />
+                  <RadioButton fx:id="SelectContrastBathRadio" layoutX="559.0" layoutY="179.0" mnemonicParsing="false" text="Contrast Bath" toggleGroup="$Select" />
+                  <RadioButton fx:id="SelectUltrasoundradio" layoutX="715.0" layoutY="179.0" mnemonicParsing="false" text="Ultrasound" toggleGroup="$Select" />
+                  <RadioButton fx:id="SelectWhirlpoolRadio" layoutX="715.0" layoutY="159.0" mnemonicParsing="false" text="Whirlpool" toggleGroup="$Select" />
+                  <RadioButton fx:id="SupervisedMechanialTractionRadio" layoutX="170.0" layoutY="221.0" mnemonicParsing="false" text="Mechanial Traction">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Supervised" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="SupervisedeStimManualRadio" layoutX="170.0" layoutY="240.0" mnemonicParsing="false" text="e-Stim Manual" toggleGroup="$Supervised" />
+                  <RadioButton fx:id="SupervisedIontophoresisradio" layoutX="369.0" layoutY="240.0" mnemonicParsing="false" text="Iontophoresis" toggleGroup="$Supervised" />
+                  <RadioButton fx:id="SupervisedElectricalSimulationRadio" layoutX="369.0" layoutY="221.0" mnemonicParsing="false" text="Electrical Simulation" toggleGroup="$Supervised" />
+                  <RadioButton fx:id="SupervisedPhonophoresisRadio" layoutX="170.0" layoutY="259.0" mnemonicParsing="false" text="Phonophoresis" toggleGroup="$Supervised" />
+                  <RadioButton fx:id="SupervisedParaffinbathRadio" layoutX="559.0" layoutY="221.0" mnemonicParsing="false" text="Paraffin bath" toggleGroup="$Supervised" />
+                  <RadioButton fx:id="SupervisedContrastBathRadio" layoutX="559.0" layoutY="240.0" mnemonicParsing="false" text="Contrast Bath" toggleGroup="$Supervised" />
+                  <RadioButton fx:id="SupervisedUltrasoundradio" layoutX="715.0" layoutY="240.0" mnemonicParsing="false" text="Ultrasound" toggleGroup="$Supervised" />
+                  <RadioButton fx:id="SupervisedWhirlpoolRadio" layoutX="715.0" layoutY="221.0" mnemonicParsing="false" text="Whirlpool" toggleGroup="$Supervised" />
+                  <CheckBox fx:id="ElectrodesCheck" layoutX="170.0" layoutY="284.0" mnemonicParsing="false" text="Electrodes" />
+                  <CheckBox fx:id="EducationalCheck" layoutX="369.0" layoutY="284.0" mnemonicParsing="false" text="Educational Materials" />
+                  <CheckBox fx:id="coldCheck" layoutX="559.0" layoutY="309.0" mnemonicParsing="false" text="Cold Pack" />
+                  <CheckBox fx:id="hotAndColdCheck" layoutX="170.0" layoutY="309.0" mnemonicParsing="false" text="Hot pack and Cold Pack" />
+                  <CheckBox fx:id="hotCheck" layoutX="369.0" layoutY="309.0" mnemonicParsing="false" text="Hot Pack" />
+                  <Separator layoutX="9.0" layoutY="90.0" prefHeight="0.0" prefWidth="872.0" />
+                  <Separator layoutX="-3.0" layoutY="155.0" prefHeight="0.0" prefWidth="872.0" />
+                  <Separator layoutX="-1.0" layoutY="217.0" prefHeight="0.0" prefWidth="872.0" />
+                  <Separator layoutX="1.0" layoutY="279.0" prefHeight="0.0" prefWidth="872.0" />
+                  <Separator layoutX="-1.0" layoutY="305.0" prefHeight="0.0" prefWidth="872.0" />
+                  <Separator layoutY="329.0" prefHeight="0.0" prefWidth="872.0" />
+                  <TextArea fx:id="notesTextarea" layoutX="169.0" layoutY="334.0" prefHeight="38.0" prefWidth="388.0" />
+                  <Separator layoutY="377.0" prefHeight="0.0" prefWidth="872.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

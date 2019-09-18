@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PatientAnalysis" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3fbf4f7b-e8a5-4903-ad89-02c983f7e65e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<parameter name="Analysis" class="com.ets.model.PatientAnalysis"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="PatientAnalysis.From_date" class="java.lang.Object"/>
+	<field name="PatientAnalysis.Thru_date" class="java.lang.Object"/>
+	<field name="PatientAnalysis.details_first" class="java.lang.Object"/>
+	<field name="PatientAnalysis.details_second" class="java.lang.Object"/>
+	<field name="test" class="java.lang.Object"/>
+	<field name="PatientAnalysis.count" class="java.lang.Object"/>
+	<field name="PatientAnalysis.average" class="java.lang.Object"/>
+	<field name="PatientAnalysis.total1" class="java.lang.Object"/>
+	<field name="PatientAnalysis.total2" class="java.lang.Object"/>
+	<field name="PatientAnalysis.billing" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="0" width="200" height="23" uuid="80a33c12-0d74-4c15-a7d8-e651253aa3a4"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Patient Analysis Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="21" uuid="92f32c26-195f-4372-a5c9-a32aa44a798a"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="0" width="120" height="20" uuid="d8a7d8bf-e6a0-45e4-99b2-fe6c37fc5336"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Reported for the period:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="0" width="90" height="20" uuid="d8abd90d-40ce-428b-8dda-65b70ff64b7f"/>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.From_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="90" height="20" uuid="c31bfdbe-d9f8-4055-bea5-65abaf718b04"/>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.Thru_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="78" height="21" uuid="888159d7-07a9-477b-8860-00c9f4fb4ac8"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Reporting By:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="2" width="40" height="21" uuid="7b3e204f-d5a5-4f92-b587-7ec37bb0b45c"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Count]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="60" height="21" uuid="6c465586-6be9-4226-a71e-8dfef1360b45"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[% of Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="40" height="21" uuid="4f06d273-7beb-498f-a02f-66294fe371c1"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Billings]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="0" width="60" height="21" uuid="af06e8c7-6036-487b-a90a-69d20665cdd4"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[% of Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="0" width="60" height="20" uuid="f86794f4-b391-44c8-b756-277ffa041436"/>
+				<text><![CDATA[Average]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="1" width="20" height="22" uuid="bb047dcf-a364-49cd-86f8-3967dce79ff0"/>
+				<text><![CDATA[  &]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="2" width="70" height="21" uuid="2f39728e-344d-4b52-875e-0d7256bd98e4"/>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.details_first}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="2" width="70" height="21" uuid="6cb600cd-e965-4cab-a377-33e59a9ffea5"/>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.details_second}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-20" y="60" width="595" height="1" uuid="a1c2cbf3-1de0-4890-8942-b20485b7ff84"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="31" width="78" height="20" uuid="52592bb1-ad7c-4e91-99b8-3c16ae0fde92">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99cf3b7b-6665-4dab-be8f-b8e4694ec5c6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.details_first}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="135" splitType="Stretch">
+			<line>
+				<reportElement x="-20" y="134" width="595" height="1" uuid="75733eb4-36ab-463b-8bf2-6d3d63991697"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="10" width="78" height="20" uuid="fa951cd1-c4e2-4980-a856-e3c92442eca8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="259cfa25-a20a-45f8-8a51-8a97c5932a93"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{test}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="40" height="20" uuid="aaca97f9-7a59-4437-8199-7a31e1279e0d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c970d27-fee8-40da-b7f5-8660652bd941"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="10" width="60" height="20" uuid="ce14668e-632b-4e62-9664-635a9e5d4ccc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0ba2a39-8dbb-4ba2-b23e-5619e2fca551"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.total1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="10" width="40" height="20" uuid="241ba03c-1b6f-44f7-9ad4-63b9f80ef09f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c7f58f3e-8a11-43aa-b3dd-227019d76ccd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.billing}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="10" width="60" height="20" uuid="d8486ad6-be63-4c95-9ff1-8719d16cca04">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9083ce14-546e-49fc-87cc-27f518b55cff"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.total2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="10" width="60" height="21" uuid="e5898f04-769d-42b3-9332-bddd0e0763db">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="627fe394-4564-44c8-81cf-06e9695c6a16"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PatientAnalysis.average}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="-6" y="16" width="46" height="24" uuid="22cfdf85-d446-4d0f-9b5e-bee4521d8530"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[** Total:]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

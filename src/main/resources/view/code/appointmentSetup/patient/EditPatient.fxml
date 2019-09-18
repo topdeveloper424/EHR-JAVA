@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="782.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.patient.PatientEditController">
+   <children>
+      <TabPane layoutX="6.0" layoutY="5.0" prefHeight="666.0" prefWidth="772.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Demographics">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="234.0" layoutY="14.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="67.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="133.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Patient ID :" />
+                              <TextField fx:id="PatientIDText" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="459.0" layoutY="14.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="77.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="123.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Med Rec No :" />
+                              <TextField fx:id="MedRecNoText" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="75.0" prefHeight="83.0" prefWidth="759.0" text="Name">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="757.0">
+                                 <children>
+                                    <Label layoutX="5.0" layoutY="13.0" text="First" />
+                                    <TextField fx:id="FirstNameText" layoutX="35.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="125.0" />
+                                    <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="165.0" layoutY="13.0" prefHeight="16.0" prefWidth="1.0" text="*" textAlignment="JUSTIFY" textFill="#ff0606" />
+                                    <Label layoutX="177.0" layoutY="-1.0" prefHeight="40.0" prefWidth="37.0" text="Middle" />
+                                    <TextField fx:id="MiddNameText" layoutX="219.0" layoutY="7.0" prefHeight="25.0" prefWidth="126.0" />
+                                    <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="532.0" layoutY="13.0" prefHeight="16.0" prefWidth="0.0" text="*" textAlignment="JUSTIFY" textFill="#ff0606" />
+                                    <TextField fx:id="LastNameText" layoutX="379.0" layoutY="9.0" />
+                                    <Label layoutX="353.0" layoutY="12.0" text="Last" />
+                                    <Label layoutX="551.0" layoutY="10.0" text="Suffix" />
+                                    <TextField fx:id="SuffixText" layoutX="592.0" layoutY="6.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="170.0" prefHeight="157.0" prefWidth="613.0" text="Address">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="6.0" layoutY="-3.0" prefHeight="119.0" prefWidth="41.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Street :" />
+                                          <Label text="City :" GridPane.rowIndex="1" />
+                                          <Label text="Phone :" GridPane.rowIndex="2" />
+                                          <Label prefHeight="26.0" prefWidth="50.0" text="Email :" GridPane.rowIndex="3" />
+                                       </children>
+                                    </GridPane>
+                                    <TextField fx:id="CityText" layoutX="47.0" layoutY="34.0" prefHeight="25.0" prefWidth="129.0" />
+                                    <TextField fx:id="StateText" layoutX="233.0" layoutY="35.0" prefHeight="25.0" prefWidth="99.0" />
+                                    <TextField fx:id="ZipText" layoutX="364.0" layoutY="36.0" prefHeight="25.0" prefWidth="72.0" />
+                                    <ChoiceBox fx:id="countryDrop" layoutX="500.0" layoutY="36.0" prefHeight="24.0" prefWidth="104.0" />
+                                    <TextField fx:id="phoneText" layoutX="48.0" layoutY="65.0" prefHeight="25.0" prefWidth="128.0" />
+                                    <TextField fx:id="cellText" layoutX="233.0" layoutY="64.0" prefHeight="25.0" prefWidth="99.0" />
+                                    <TextField fx:id="FaxText" layoutX="363.0" layoutY="66.0" prefHeight="25.0" prefWidth="99.0" />
+                                    <TextField fx:id="emailText" layoutX="49.0" layoutY="94.0" prefHeight="25.0" prefWidth="322.0" />
+                                    <Label layoutX="195.0" layoutY="39.0" text="State :" />
+                                    <Label layoutX="339.0" layoutY="39.0" text="Zip :" />
+                                    <Label layoutX="443.0" layoutY="39.0" text="Country :" />
+                                    <Label layoutX="193.0" layoutY="67.0" text="Cell # :" />
+                                    <Label layoutX="336.0" layoutY="69.0" text="Fax :" />
+                                    <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="336.0" layoutY="8.0" prefHeight="16.0" prefWidth="0.0" text="*" textAlignment="JUSTIFY" textFill="#ff0606" />
+                                    <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="180.0" layoutY="39.0" prefHeight="16.0" prefWidth="0.0" text="*" textAlignment="JUSTIFY" textFill="#ff0606" />
+                                    <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="180.0" layoutY="71.0" prefHeight="16.0" prefWidth="0.0" text="*" textAlignment="JUSTIFY" textFill="#ff0606" />
+                                    <TextField fx:id="localStreetText" layoutX="49.0" layoutY="4.0" prefHeight="25.0" prefWidth="278.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="327.0" prefHeight="123.0" prefWidth="614.0" text="Statistics">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="121.0" prefWidth="633.0">
+                                 <children>
+                                    <RadioButton fx:id="maleRadiobutton" layoutX="233.0" layoutY="8.0" mnemonicParsing="false" selected="true" text="Male">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="gender" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="femaleRadioButton" layoutX="288.0" layoutY="8.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+                                    <ChoiceBox fx:id="RaceDrop" layoutX="450.0" layoutY="4.0" prefHeight="24.0" prefWidth="120.0" />
+                                    <CheckBox fx:id="deceasedCheckBox" layoutX="25.0" layoutY="37.0" mnemonicParsing="false" text="Deceased" />
+                                    <GridPane layoutX="191.0" layoutY="32.0" prefHeight="25.0" prefWidth="135.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="53.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="82.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Marital :" />
+                                          <ChoiceBox fx:id="MaritialDrop" prefWidth="150.0" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <Label layoutX="363.0" layoutY="6.0" text="Race/Ethnicity :" />
+                                    <Label layoutX="390.0" layoutY="37.0" text="Education :" />
+                                    <TextField fx:id="EducationText" layoutX="451.0" layoutY="32.0" prefHeight="25.0" prefWidth="123.0" />
+                                    <CheckBox fx:id="EnglishSpeakinCheck" layoutX="25.0" layoutY="66.0" mnemonicParsing="false" text="English Specking" />
+                                    <Label layoutX="168.0" layoutY="67.0" text="Prefer Lang :" />
+                                    <Label layoutX="390.0" layoutY="65.0" text="2nd Lang :" />
+                                    <Label layoutX="187.0" layoutY="8.0" text="Gender :" />
+                                    <ChoiceBox fx:id="PreferLangDrop" layoutX="240.0" layoutY="63.0" prefHeight="24.0" prefWidth="98.0" />
+                                    <ChoiceBox fx:id="secondLangDrop" layoutX="450.0" layoutY="62.0" prefHeight="24.0" prefWidth="123.0" />
+                                    <Label layoutX="2.0" layoutY="4.0" text="DOB:" />
+                                    <DatePicker fx:id="DOBDate" layoutX="34.0" layoutY="2.0" prefHeight="25.0" prefWidth="132.0" />
+                                    <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="172.0" layoutY="5.0" prefHeight="16.0" prefWidth="1.0" text="*" textAlignment="JUSTIFY" textFill="#ff0606" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="628.0" layoutY="194.0" prefHeight="160.0" prefWidth="140.0" text="Patient Photo">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fx:id="patientPhoto" fitHeight="127.0" fitWidth="132.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children></AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button fx:id="GetPhotoButton" layoutX="659.0" layoutY="362.0" mnemonicParsing="false" text="Get Photo" />
+                        <GridPane layoutX="14.0" layoutY="447.0" prefHeight="125.0" prefWidth="134.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Primary Care Physicians :" />
+                              <Label text="Preferred Provider :" GridPane.rowIndex="1" />
+                              <Label text="Driver License :" GridPane.rowIndex="2" />
+                              <Label text="CDL/CLP :" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <TextField fx:id="PrimaryCarePhysicianButton" layoutX="149.0" layoutY="457.0" />
+                        <Button fx:id="PrimaryCareButton" layoutX="300.0" layoutY="454.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="36.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="NameText" layoutX="431.0" layoutY="459.0" prefHeight="25.0" prefWidth="190.0" />
+                        <TextField fx:id="prefferedProviderText" layoutX="149.0" layoutY="488.0" />
+                        <Button fx:id="PrefferedProiderButton" layoutX="300.0" layoutY="487.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="36.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ChoiceBox fx:id="classDrop" layoutX="427.0" layoutY="488.0" prefHeight="24.0" prefWidth="86.0" />
+                        <TextField fx:id="LicenseStateText" layoutX="553.0" layoutY="489.0" prefHeight="25.0" prefWidth="67.0" />
+                        <TextField fx:id="DriverLicenseText" layoutX="149.0" layoutY="516.0" prefHeight="25.0" prefWidth="149.0" />
+                        <DatePicker fx:id="CertificationExpirationDate" layoutX="507.0" layoutY="517.0" prefHeight="25.0" prefWidth="112.0" />
+                        <ChoiceBox fx:id="CDLDrop" layoutX="149.0" layoutY="543.0" prefWidth="150.0" />
+                        <Label layoutX="387.0" layoutY="463.0" text="Name :" />
+                        <Label layoutX="390.0" layoutY="492.0" text="Class :" />
+                        <Label layoutX="515.0" layoutY="492.0" text="State :" />
+                        <Label layoutX="382.0" layoutY="520.0" text="Certification Expiration :" />
+                        <TextField fx:id="patientInsuranceText" layoutX="446.0" layoutY="544.0" prefHeight="25.0" prefWidth="106.0" />
+                        <TextField fx:id="patientInsuranceId" layoutX="591.0" layoutY="543.0" prefHeight="25.0" prefWidth="30.0" visible="false" />
+                        <Label layoutX="345.0" layoutY="547.0" text="Patient Insurance :" />
+                        <Button fx:id="patientInsuranceButton" layoutX="555.0" layoutY="543.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="primaryCareProIdText" layoutX="342.0" layoutY="456.0" prefHeight="25.0" prefWidth="20.0" visible="false" />
+                        <TextField fx:id="preferedProIdText" layoutX="342.0" layoutY="488.0" prefHeight="25.0" prefWidth="20.0" visible="false" />
+                        <TextField fx:id="patientAuthRepId" layoutX="334.0" layoutY="582.0" prefHeight="25.0" prefWidth="22.0" visible="false" />
+                        <Label layoutX="13.0" layoutY="586.0" text="Company" />
+                        <Button fx:id="companyBtn" layoutX="292.0" layoutY="579.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="companyNameText" layoutX="140.0" layoutY="580.0" />
+                        <TextField fx:id="SocText" layoutX="75.0" layoutY="17.0" prefHeight="25.0" prefWidth="139.0" />
+                        <Label layoutX="7.0" layoutY="21.0" text="Soc Sec No :" />
+                        <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" layoutX="218.0" layoutY="20.0" prefHeight="16.0" prefWidth="1.0" text="*" textAlignment="JUSTIFY" textFill="#ff0606" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="More Demographics">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="patientAuthRepButton" layoutX="234.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="294.0" text="View Authorized Representatives for this Patient" />
+                        <TitledPane animated="false" collapsible="false" layoutX="85.0" layoutY="43.0" prefHeight="276.0" prefWidth="628.0" text="Additional Contact Information">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane layoutX="25.0" layoutY="14.0" prefHeight="195.0" prefWidth="316.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="122.0" />
+                                          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="246.0" minWidth="0.0" prefWidth="191.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Father's Name :">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Mother's Name :" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Maiden Name :" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Emergency Contact :" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Next of Kin Contact :" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Address :" GridPane.rowIndex="5">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="City :" GridPane.rowIndex="6">
+                                             <GridPane.margin>
+                                                <Insets right="5.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField fx:id="FathersNameText" prefHeight="25.0" prefWidth="217.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="MothersNameText" prefHeight="25.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="MaidenNameText" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="EmergencyContactText" prefHeight="25.0" prefWidth="234.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField fx:id="NextOfKinContactText" prefHeight="25.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="aditionalAddressText" prefHeight="25.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="aditionalCityText" prefHeight="25.0" prefWidth="248.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="376.0" layoutY="14.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="77.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="123.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Patient Type :" />
+                                          <Label text="Relationship :" GridPane.rowIndex="1" />
+                                          <ChoiceBox fx:id="PatientTypeDrop" prefWidth="150.0" GridPane.columnIndex="1" />
+                                          <ChoiceBox fx:id="RelationShipDrop" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <Label layoutX="353.0" layoutY="189.0" text="State :" />
+                                    <Label layoutX="511.0" layoutY="187.0" text="Zip :" />
+                                    <TextField fx:id="aditionalStateText" layoutX="390.0" layoutY="185.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="aditionalZipText" layoutX="537.0" layoutY="184.0" prefHeight="25.0" prefWidth="76.0" />
+                                    <GridPane layoutX="78.0" layoutY="210.0" prefHeight="30.0" prefWidth="208.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="71.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="137.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="66.0" text="Telephone :" />
+                                          <TextField fx:id="aditionalTelephoneText" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <Label layoutX="303.0" layoutY="217.0" text="Cell # :" />
+                                    <Label layoutX="476.0" layoutY="217.0" text="Work :" />
+                                    <TextField fx:id="aditionalCellText" layoutX="345.0" layoutY="214.0" prefHeight="25.0" prefWidth="123.0" />
+                                    <TextField fx:id="aditionalWorkText" layoutX="516.0" layoutY="214.0" prefHeight="25.0" prefWidth="99.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Insureance">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="181.0" layoutY="19.0" text="Private or Group Health Insurence Information">
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="InsurenceTable" layoutX="39.0" layoutY="47.0" prefHeight="200.0" prefWidth="683.0">
+                          <columns>
+                            <TableColumn fx:id="levelCollumn" prefWidth="94.0" text="Level" />
+                            <TableColumn fx:id="payorCollumn" prefWidth="199.0" text="Payor" />
+                              <TableColumn fx:id="typeCollumn" prefWidth="100.0" text="Type" />
+                              <TableColumn fx:id="coPayCollumn" prefWidth="97.0" text="CO Pay" />
+                              <TableColumn fx:id="deductableCollumn" prefWidth="100.0" text="Deductable" />
+                              <TableColumn fx:id="percentCollumn" prefWidth="92.0" text="Percent" />
+                          </columns>
+                        </TableView>
+                        <GridPane layoutX="195.0" layoutY="254.0" prefHeight="30.0" prefWidth="336.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="AddButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Add">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../image/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="ChangeButton" mnemonicParsing="false" text="Change" GridPane.columnIndex="1">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../image/blk_tri.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="DeleteButton" mnemonicParsing="false" text="Delete" GridPane.columnIndex="2">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../image/del.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Risk Factor">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="53.0" layoutY="11.0" prefHeight="150.0" prefWidth="662.0" text="General Health Risk Factor">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="38.0" layoutY="14.0" text="Country of Origin :" />
+                                    <TextField fx:id="CountryOriginText" layoutX="148.0" layoutY="10.0" prefHeight="25.0" prefWidth="106.0" />
+                                    <Label layoutX="300.0" layoutY="14.0" text="USA Entry Date :" />
+                                    <DatePicker fx:id="USAEntryDateDate" layoutX="393.0" layoutY="10.0" prefHeight="25.0" prefWidth="149.0" />
+                                    <GridPane layoutX="22.0" layoutY="45.0" prefHeight="68.0" prefWidth="510.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="187.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="252.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <CheckBox fx:id="BCGVaxHistoryCheck" mnemonicParsing="false" text="Patient has BCG Vax History" />
+                                          <CheckBox fx:id="DrugAllergyCheck" mnemonicParsing="false" text="Patient has No known Drug Alergies" GridPane.rowIndex="1" />
+                                          <CheckBox fx:id="CurrentProblemCheck" mnemonicParsing="false" text="Patient has No known Current Problem" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="MedicationsTakingText" mnemonicParsing="false" text="Patient is taking No Known Medications" GridPane.columnIndex="1" />
+                                          <CheckBox fx:id="AlergiesCheck" mnemonicParsing="false" text="Patient has No known Alergies" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <CheckBox fx:id="CradicEvents" mnemonicParsing="false" text="Patient is &quot; At Risk &quot; for Cardic Events" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TabPane layoutX="55.0" layoutY="193.0" prefHeight="375.0" prefWidth="652.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Smoking/Tobacco Use">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="37.0" layoutY="17.0" text="Status as of:" />
+                                          <TextField fx:id="StatusText" layoutX="111.0" layoutY="13.0" prefHeight="25.0" prefWidth="106.0" />
+                                          <TitledPane animated="false" collapsible="false" layoutX="27.0" layoutY="43.0" prefHeight="298.0" prefWidth="269.0" text="Smoking Status">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="255.0" prefWidth="200.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <RadioButton fx:id="UnkownSmokingStatusRadio" mnemonicParsing="false" text="Unknown Status" />
+                                                            <RadioButton fx:id="NeverSmokedRadio" mnemonicParsing="false" text="Never Smoked" GridPane.rowIndex="1" />
+                                                            <RadioButton fx:id="CurrentEveryDaySomkingRadio" mnemonicParsing="false" text="Current , Every Day" GridPane.rowIndex="2" />
+                                                            <RadioButton fx:id="CurrentSomeDayRadio" mnemonicParsing="false" text="Current , Some Days" GridPane.rowIndex="3" />
+                                                            <RadioButton fx:id="SmokerRadio" mnemonicParsing="false" text="Smoker , Status Unknown" GridPane.rowIndex="4" />
+                                                            <RadioButton fx:id="FormerSmokerRadio" mnemonicParsing="false" text="Former Smoker" GridPane.rowIndex="5" />
+                                                            <RadioButton fx:id="HeavyTobaccoSmokerRadio" mnemonicParsing="false" text="Heavy Tobacco Smoker" GridPane.rowIndex="6" />
+                                                            <RadioButton fx:id="LightTabaccoSmokerRadio" mnemonicParsing="false" text="Light Tobacco Smoker" GridPane.rowIndex="7" />
+                                                            <RadioButton fx:id="OtherTobaccoRadio" mnemonicParsing="false" text="Other ( Tobacco Use ) :" GridPane.rowIndex="8" />
+                                                            <RadioButton fx:id="OtherNonTobaccoRadio" mnemonicParsing="false" text="Other ( Non Tobacco Use ) :" GridPane.rowIndex="9" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                          <TitledPane animated="false" collapsible="false" layoutX="328.0" layoutY="46.0" prefHeight="297.0" prefWidth="241.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="24.0" layoutY="12.0" text="Pack per Day" />
+                                                      <Label layoutX="24.0" layoutY="42.0" text="Number of Years" />
+                                                      <Label layoutX="24.0" layoutY="74.0" text="Last Smoke Date" />
+                                                      <Label layoutX="15.0" layoutY="112.0" text="Cessation Program" />
+                                                      <TextField fx:id="PerDayPackText" layoutX="126.0" layoutY="6.0" prefHeight="25.0" prefWidth="76.0" />
+                                                      <TextField fx:id="NumberOfYearText" layoutX="126.0" layoutY="38.0" prefHeight="25.0" prefWidth="76.0" />
+                                                      <DatePicker fx:id="LastSmokeDayText" layoutX="126.0" layoutY="70.0" prefHeight="25.0" prefWidth="106.0" />
+                                                      <CheckBox fx:id="OfferedCheck" layoutX="128.0" layoutY="112.0" mnemonicParsing="false" text="Offered" />
+                                                      <DatePicker fx:id="DateDate" layoutX="126.0" layoutY="137.0" prefHeight="25.0" prefWidth="106.0" />
+                                                      <CheckBox fx:id="AcceptedChecks" layoutX="128.0" layoutY="171.0" mnemonicParsing="false" text="Acepted" />
+                                                      <Label layoutX="81.0" layoutY="141.0" text="Date" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Untitled Tab 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <GridPane layoutX="447.0" layoutY="688.0" prefHeight="27.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="okButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="OK">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cancleButton" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <ImageView pickOnBounds="true" preserveRatio="true" />
+      <TitledPane animated="false" layoutX="-113.0" layoutY="135.0" text="untitled" />
+   </children>
+</AnchorPane>

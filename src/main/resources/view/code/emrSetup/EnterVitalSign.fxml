@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="815.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.genericVisitProtocal.EnterVitalSignGUIController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="12.0" layoutY="92.0" prefHeight="196.0" prefWidth="790.0" text="Weight / Hight /BMI">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Height(Inchies) :" />
+                  <Label layoutX="19.0" layoutY="49.0" text="Weight(Lb)" />
+                  <TextField fx:id="heightText" layoutX="105.0" layoutY="10.0" prefHeight="25.0" prefWidth="65.0" />
+                  <Label layoutX="242.0" layoutY="15.0" text="(Cm) :" />
+                  <TextField fx:id="cmText" layoutX="306.0" layoutY="10.0" prefHeight="25.0" prefWidth="57.0" />
+                  <Label layoutX="401.0" layoutY="14.0" text="BMI :" />
+                  <TextField fx:id="bmiText" layoutX="437.0" layoutY="10.0" prefHeight="25.0" prefWidth="51.0" />
+                  <Label layoutX="16.0" layoutY="89.0" text="Body Fat % :" />
+                  <TextField fx:id="weightText" layoutX="105.0" layoutY="45.0" prefHeight="25.0" prefWidth="63.0" />
+                  <Label layoutX="230.0" layoutY="50.0" text="(Oz) :" />
+                  <TextField fx:id="ozText" layoutX="269.0" layoutY="47.0" prefHeight="25.0" prefWidth="66.0" />
+                  <Button fx:id="heightBtn" layoutX="174.0" layoutY="11.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/NumberPadIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="ozBtn" layoutX="339.0" layoutY="45.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/NumberPadIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="weightBtn" layoutX="174.0" layoutY="46.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/NumberPadIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="401.0" layoutY="51.0" text="(Kg) :" />
+                  <TextField fx:id="kgText" layoutX="437.0" layoutY="47.0" prefHeight="25.0" prefWidth="51.0" />
+                  <TextField fx:id="bodyFatText" layoutX="105.0" layoutY="85.0" prefHeight="25.0" prefWidth="63.0" />
+                  <Button fx:id="bodyFatBtn" layoutX="174.0" layoutY="84.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/NumberPadIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="13.0" layoutY="128.0" text="Abdominal Circumference(Inchies) :" />
+                  <TextField fx:id="abdominalText" layoutX="213.0" layoutY="124.0" prefHeight="25.0" prefWidth="63.0" />
+                  <Button fx:id="abdominalBtn" layoutX="282.0" layoutY="123.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/NumberPadIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="343.0" layoutY="128.0" text="(Cm) :" />
+                  <TextField fx:id="abdominalCmText" layoutX="376.0" layoutY="124.0" prefHeight="25.0" prefWidth="51.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button fx:id="okButton" layoutX="598.0" layoutY="681.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Ok">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="700.0" layoutY="680.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="14.0" layoutY="14.0" text="Visit Date :" />
+      <Label fx:id="visitDateLabel" layoutX="87.0" layoutY="14.0" text="Label" />
+      <Label layoutX="153.0" layoutY="14.0" text="Time of Reading :" />
+      <Label fx:id="genderLabel" layoutX="525.0" layoutY="16.0" text="Label" />
+      <Label layoutX="375.0" layoutY="15.0" text="Age :" />
+      <Label layoutX="471.0" layoutY="16.0" text="Gender :" />
+      <Label layoutX="11.0" layoutY="54.0" text="Clinician :" />
+      <Label layoutX="357.0" layoutY="52.0" text="Provider :" />
+      <Label layoutX="566.0" layoutY="15.0" text="DOB :" />
+      <TextField fx:id="timeReadingText" layoutX="249.0" layoutY="11.0" prefHeight="25.0" prefWidth="80.0" />
+      <Button fx:id="timeButton" layoutX="333.0" layoutY="11.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+         <graphic>
+            <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/clockIcon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="ageText" layoutX="405.0" layoutY="11.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label fx:id="Doblabel" layoutX="610.0" layoutY="16.0" text="Label" />
+      <TextField fx:id="clinicianText" layoutX="65.0" layoutY="50.0" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="providerText" layoutX="412.0" layoutY="49.0" prefHeight="25.0" prefWidth="92.0" />
+      <Label fx:id="clinicianLabel" layoutX="230.0" layoutY="55.0" prefHeight="16.0" prefWidth="117.0" text="Label" />
+      <Label fx:id="providerLabel" layoutX="554.0" layoutY="51.0" prefHeight="16.0" prefWidth="117.0" text="Label" />
+      <Button fx:id="ClinicianButton" layoutX="181.0" layoutY="51.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="3.0">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="providerButton" layoutX="509.0" layoutY="50.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="0.0">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/search-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TabPane layoutX="20.0" layoutY="302.0" prefHeight="373.0" prefWidth="783.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Summary">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="4.0" prefHeight="79.0" prefWidth="392.0" text="Temperature">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="21.0" layoutY="13.0" text="Fahrenheit(F) :" />
+                                    <Label layoutX="239.0" layoutY="14.0" text="Celsius(C) :" />
+                                    <TextField fx:id="fareheniteText" layoutX="102.0" layoutY="9.0" prefHeight="25.0" prefWidth="63.0" />
+                                    <Button fx:id="fahrenheitBtn" layoutX="170.0" layoutY="9.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/NumberPadIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="celciusText" layoutX="306.0" layoutY="10.0" prefHeight="25.0" prefWidth="63.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="92.0" prefHeight="145.0" prefWidth="669.0" text="Blood Pressure / Pulse">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="19.0" layoutY="7.0" text="Systolic :" />
+                                    <TextField fx:id="systolicText" layoutX="75.0" layoutY="5.0" prefHeight="25.0" prefWidth="73.0" />
+                                    <Label layoutX="243.0" layoutY="8.0" text="/ Diastolic :" />
+                                    <TextField fx:id="distolicText" layoutX="309.0" layoutY="3.0" prefHeight="25.0" prefWidth="64.0" />
+                                    <Button fx:id="systolicBtn" layoutX="153.0" layoutY="4.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/NumberPadIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="diastolicBtn" layoutX="379.0" layoutY="3.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/NumberPadIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="14.0" layoutY="43.0" text="Pulse Rate :" />
+                                    <TextField fx:id="pulseRateText" layoutX="75.0" layoutY="39.0" prefHeight="25.0" prefWidth="73.0" />
+                                    <Button fx:id="pulseRatebloodPressureBtn" layoutX="153.0" layoutY="38.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/NumberPadIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="12.0" layoutY="80.0" text="Which Arm were Used :" />
+                                    <Label layoutX="263.0" layoutY="81.0" text="Patient Position at the Time of Reading : " />
+                                    <ChoiceBox fx:id="whichArmDropDown" layoutX="140.0" layoutY="77.0" prefHeight="24.0" prefWidth="92.0" />
+                                    <ChoiceBox fx:id="patientPositionAtTimeChoice" layoutX="486.0" layoutY="77.0" prefHeight="24.0" prefWidth="139.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="411.0" layoutY="4.0" prefHeight="77.0" prefWidth="255.0" text="Respiration">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="12.0" layoutY="11.0" text="Breaths per minute" />
+                                    <TextField fx:id="breathPerMinuteText" layoutX="123.0" layoutY="8.0" prefHeight="25.0" prefWidth="73.0" />
+                                    <Button fx:id="pulserateRespirationBtn" layoutX="198.0" layoutY="6.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/NumberPadIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="679.0" layoutY="5.0" prefHeight="325.0" prefWidth="89.0" text="Pain Lavel">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="87.0">
+                                 <children>
+                                    <RadioButton fx:id="Radio_0" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" text="0">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="vitalType" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Radio_1" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" text="1" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_2" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" text="2" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_3" layoutX="14.0" layoutY="74.0" mnemonicParsing="false" text="3" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_4" layoutX="14.0" layoutY="97.0" mnemonicParsing="false" text="4" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_5" layoutX="14.0" layoutY="124.0" mnemonicParsing="false" text="5" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_6" layoutX="14.0" layoutY="151.0" mnemonicParsing="false" text="6" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_7" layoutX="14.0" layoutY="176.0" mnemonicParsing="false" text="7" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_8" layoutX="14.0" layoutY="202.0" mnemonicParsing="false" text="8" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_9" layoutX="14.0" layoutY="228.0" mnemonicParsing="false" text="9" toggleGroup="$vitalType" />
+                                    <RadioButton fx:id="Radio_10" layoutX="14.0" layoutY="252.0" mnemonicParsing="false" text="10" toggleGroup="$vitalType" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="245.0" prefHeight="86.0" prefWidth="666.0" text="Pulse Oximetry">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="18.0" text="Pulse Oximetry% :" />
+                                    <TextField fx:id="pulseOximetryText" layoutX="114.0" layoutY="15.0" prefHeight="25.0" prefWidth="73.0" />
+                                    <Button fx:id="pulseOximetryBtn" layoutX="192.0" layoutY="13.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/NumberPadIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <CheckBox fx:id="roomAirCheck" layoutX="245.0" layoutY="19.0" mnemonicParsing="false" text="Room Air" />
+                                    <TextField fx:id="orText" layoutX="382.0" layoutY="15.0" prefHeight="25.0" prefWidth="73.0" />
+                                    <Button fx:id="orbtn" layoutX="460.0" layoutY="13.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="11.0">
+                                       <graphic>
+                                          <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/NumberPadIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="349.0" layoutY="19.0" text="-or-" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Referance">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Audit">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

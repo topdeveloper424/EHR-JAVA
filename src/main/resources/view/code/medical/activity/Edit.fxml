@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="607.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.medicalActivity.MedicalActivityCodeEditController">
+   <children>
+      <TabPane layoutX="5.0" layoutY="3.0" prefHeight="472.0" prefWidth="595.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="28.0" layoutY="42.0" text="Activity Code :" />
+                        <Label layoutX="33.0" layoutY="72.0" text="Description :" />
+                        <Label layoutX="29.0" layoutY="104.0" text="Activity Type :" />
+                        <Label layoutX="26.0" layoutY="136.0" text="Step Required :" />
+                        <Label layoutX="24.0" layoutY="168.0" text="CPT Code :" />
+                        <Label layoutX="28.0" layoutY="208.0" text="Security :" />
+                        <TextField fx:id="idTextField" editable="false" layoutX="113.0" layoutY="8.0" />
+                        <TextField fx:id="activityCodeTextField" layoutX="113.0" layoutY="37.0" prefHeight="25.0" prefWidth="166.0" />
+                        <TextField fx:id="descrptionTextField" layoutX="113.0" layoutY="67.0" prefHeight="25.0" prefWidth="167.0" />
+                        <ChoiceBox fx:id="activityTypeChoiceBox" layoutX="113.0" layoutY="99.0" prefHeight="25.0" prefWidth="172.0">
+      					   <items>
+    					   </items>
+    					</ChoiceBox>
+                        <Spinner fx:id="stepRequiredSpinnerField" layoutX="113.0" layoutY="131.0" />
+                        <TextField fx:id="cptCodeTextField" layoutX="112.0" layoutY="162.0" prefHeight="25.0" prefWidth="175.0" />
+                        <Button fx:id="cptCodeButton" layoutX="289.0" layoutY="152.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="14.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <RadioButton fx:id="noSpecialSecurityRadioButton" layoutX="113.0" layoutY="208.0" mnemonicParsing="false" text="No Special Security">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="secutity" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="hivAccessRadioButton" layoutX="253.0" layoutY="208.0" mnemonicParsing="false" text="HIV Acess" toggleGroup="$secutity" />
+                        <RadioButton fx:id="drugTestAccesRadioButton" layoutX="350.0" layoutY="208.0" mnemonicParsing="false" text="Drug Test Acess" toggleGroup="$secutity" />
+                        <RadioButton fx:id="eapAccessRadioButton" layoutX="470.0" layoutY="208.0" mnemonicParsing="false" text="EAP Acess" toggleGroup="$secutity" />
+                        <CheckBox fx:id="activityCodeInactiveCheckBox" layoutX="29.0" layoutY="249.0" mnemonicParsing="false" text="This Activity Code is inactive" />
+                        <Label layoutX="52.0" layoutY="12.0" text="Id :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Surveillance Rules">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="109.0" prefHeight="25.0" prefWidth="363.0" text="Rules for Determining Requirements and Calculating Repeats" />
+                        <TitledPane animated="false" collapsible="false" layoutX="23.0" layoutY="33.0" prefHeight="97.0" prefWidth="437.0" text="Repeat Basis">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton fx:id="noReapetRadionButton" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="No Repeat">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="repeatBasis" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="regularIntervalRadioButton" layoutX="137.0" layoutY="23.0" mnemonicParsing="false" text="Regular Interval" toggleGroup="$repeatBasis" />
+                                    <RadioButton fx:id="birthDayRadioButton" layoutX="298.0" layoutY="23.0" mnemonicParsing="false" text="Birthday" toggleGroup="$repeatBasis" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Label layoutX="25.0" layoutY="160.0" prefHeight="17.0" prefWidth="95.0" text="Regular Interval :" />
+                        <TextField fx:id="regularInterval" layoutX="122.0" layoutY="157.0" prefHeight="25.0" prefWidth="36.0" />
+                        <Label layoutX="164.0" layoutY="161.0" text="(Years)" />
+                        <Label layoutX="288.0" layoutY="161.0" prefHeight="17.0" prefWidth="64.0" text="Frequency :" />
+                        <TextField fx:id="frequency" layoutX="351.0" layoutY="158.0" prefHeight="25.0" prefWidth="91.0" />
+                        <TitledPane animated="false" collapsible="false" layoutX="20.0" layoutY="196.0" prefHeight="114.0" prefWidth="443.0" text="Usage Restriction">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Only upon Age :" />
+                                    <Label layoutX="21.0" layoutY="47.0" text="Only for Sex :" />
+                                    <Label layoutX="256.0" layoutY="14.0" prefHeight="17.0" prefWidth="72.0" text="Stop at Age :" />
+                                    <Label layoutX="247.0" layoutY="44.0" prefHeight="17.0" prefWidth="84.0" text="Only for Ethnic :" />
+                                    <TextField fx:id="onlyUponAge" layoutX="108.0" layoutY="9.0" prefHeight="25.0" prefWidth="98.0" />
+                                    <TextField fx:id="stopAtAge" layoutX="333.0" layoutY="9.0" prefHeight="25.0" prefWidth="95.0" />
+                                    <ChoiceBox fx:id="onlyUpOnSexChoiceBox" layoutX="108.0" layoutY="43.0" prefHeight="24.0" prefWidth="101.0" />
+                                    <ChoiceBox fx:id="onlyForEthinicsChoiceBox" layoutX="333.0" layoutY="40.0" prefHeight="24.0" prefWidth="96.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Result">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="191.0" layoutY="6.0" prefHeight="17.0" prefWidth="223.0" text="Valid Result Code For This Activity" />
+                        <Label layoutX="22.0" layoutY="71.0" text="Client Def Code" underline="true" />
+                        <Label layoutX="158.0" layoutY="30.0" text="Code" />
+                        <Label layoutX="256.0" layoutY="30.0" prefHeight="17.0" prefWidth="65.0" text="Meaning" />
+                        <TextField fx:id="resultCode1" layoutX="138.0" layoutY="54.0" prefHeight="25.0" prefWidth="72.0" />
+                        <TextField fx:id="resultMeaning1" layoutX="240.0" layoutY="54.0" prefHeight="25.0" prefWidth="98.0" />
+                        <TextField fx:id="resultCode2" layoutX="138.0" layoutY="84.0" prefHeight="25.0" prefWidth="72.0" />
+                        <TextField fx:id="resultMeaning2" layoutX="240.0" layoutY="84.0" prefHeight="25.0" prefWidth="98.0" />
+                        <TextField fx:id="resultCode3" layoutX="138.0" layoutY="115.0" prefHeight="25.0" prefWidth="72.0" />
+                        <TextField fx:id="resultMeaning3" layoutX="240.0" layoutY="115.0" prefHeight="25.0" prefWidth="98.0" />
+                        <TextField fx:id="resultCode4" layoutX="138.0" layoutY="145.0" prefHeight="25.0" prefWidth="72.0" />
+                        <TextField fx:id="resultMeaning4" layoutX="240.0" layoutY="145.0" prefHeight="25.0" prefWidth="98.0" />
+                        <TextField fx:id="resultCode5" layoutX="138.0" layoutY="175.0" prefHeight="25.0" prefWidth="72.0" />
+                        <TextField fx:id="resultMeaning5" layoutX="240.0" layoutY="175.0" prefHeight="25.0" prefWidth="98.0" />
+                        <TextField fx:id="resultCode6" layoutX="138.0" layoutY="205.0" prefHeight="25.0" prefWidth="72.0" />
+                        <TextField fx:id="resultMeaning6" layoutX="240.0" layoutY="205.0" prefHeight="25.0" prefWidth="98.0" />
+                        <Label layoutX="167.0" layoutY="242.0" text="C" />
+                        <Label layoutX="167.0" layoutY="267.0" text="#(1-5)" />
+                        <Label layoutX="167.0" layoutY="291.0" text="R" />
+                        <Label layoutX="167.0" layoutY="312.0" text="W" />
+                        <Label layoutX="167.0" layoutY="335.0" text="9" />
+                        <Label layoutX="167.0" layoutY="359.0" text="X" />
+                        <Label layoutX="167.0" layoutY="376.0" text="?" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Label layoutX="22.0" layoutY="268.0" text="Standard codes" underline="true" />
+                        <Label layoutX="246.0" layoutY="242.0" text="Completed" />
+                        <Label layoutX="246.0" layoutY="267.0" text="Step or Dose #" />
+                        <Label layoutX="246.0" layoutY="291.0" text="Refused" />
+                        <Label layoutX="246.0" layoutY="308.0" prefHeight="25.0" prefWidth="64.0" text="Waived" />
+                        <Label layoutX="246.0" layoutY="335.0" text="Administered Elsewhere" />
+                        <Label layoutX="246.0" layoutY="359.0" text="Cancled" />
+                        <Label layoutX="246.0" layoutY="376.0" text="Requested/Pending" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Billing">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="noChargeItemCheckBox" layoutX="217.0" layoutY="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="217.0" text="This is Always a No Charge Item" />
+                        <Label layoutX="74.0" layoutY="59.0" prefHeight="17.0" prefWidth="110.0" text="Biling Service Type :" />
+                        <TextField fx:id="billingServicetypeTextBox" layoutX="180.0" layoutY="58.0" prefHeight="25.0" prefWidth="63.0" />
+                        <Button fx:id="billingServiceTypeButton" layoutX="243.0" layoutY="59.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                           <graphic>
+                              <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TitledPane animated="false" collapsible="false" layoutX="28.0" layoutY="104.0" prefHeight="160.0" prefWidth="444.0" text="Standard Employer Charge">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="533.0">
+                                 <children>
+                                    <Label layoutX="64.0" layoutY="34.0" text="Past" />
+                                    <Label layoutX="182.0" layoutY="14.0" text="Charge " />
+                                    <Label layoutX="310.0" layoutY="14.0" text="Effective" />
+                                    <Label layoutX="192.0" layoutY="34.0" prefHeight="17.0" prefWidth="53.0" text="0.00" />
+                                    <Label layoutX="61.0" layoutY="67.0" text="Current " />
+                                    <Label layoutX="61.0" layoutY="93.0" text="Future" />
+                                    <TextField fx:id="currentCharge" layoutX="147.0" layoutY="55.0" />
+                                    <DatePicker fx:id="currentEffectiveDate" layoutX="303.0" layoutY="52.0" prefHeight="25.0" prefWidth="119.0" />
+                                    <TextField fx:id="futureCharge" layoutX="147.0" layoutY="89.0" />
+                                    <DatePicker fx:id="futureEffectiveDate" layoutX="304.0" layoutY="88.0" prefHeight="25.0" prefWidth="120.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="updateButton" layoutX="377.0" layoutY="483.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="494.0" layoutY="483.0" mnemonicParsing="false" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

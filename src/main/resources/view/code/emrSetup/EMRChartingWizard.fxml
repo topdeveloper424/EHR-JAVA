@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="740.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.carriers.CarrierInputController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="517.0" prefWidth="739.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Histories">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="488.0" prefWidth="728.0">
+                     <children>
+                        <TabPane prefHeight="477.0" prefWidth="729.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="HPI">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="94.0" layoutY="91.0" prefHeight="20.0" prefWidth="140.0" text="Nature of Problem" />
+                                          <Label layoutX="92.0" layoutY="224.0" text="Severity" />
+                                          <Label layoutX="443.0" layoutY="93.0" prefHeight="20.0" prefWidth="81.0" text="Duration" />
+                                          <Label layoutX="94.0" layoutY="127.0" text="Associated Signs and Symptoms" />
+                                          <Label layoutX="94.0" layoutY="159.0" prefHeight="20.0" prefWidth="85.0" text="Location" />
+                                          <Label layoutX="94.0" layoutY="191.0" text="Quality" />
+                                          <Label layoutX="243.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0" text="Wizards For History Of Present Illness" />
+                                          <Label layoutX="443.0" layoutY="127.0" prefHeight="20.0" prefWidth="72.0" text="Timing" />
+                                          <Label layoutX="443.0" layoutY="163.0" prefHeight="20.0" prefWidth="85.0" text="Context" />
+                                          <Label layoutX="443.0" layoutY="196.0" prefHeight="20.0" prefWidth="140.0" text="Aggavating Factors" />
+                                          <Label layoutX="443.0" layoutY="232.0" prefHeight="20.0" prefWidth="133.0" text="Alleviating Factors" />
+                                          <Label layoutX="237.0" layoutY="291.0" prefHeight="25.0" prefWidth="188.0" text="Other Miscellaneous Interim History" />
+                                          <Button fx:id="NatureOfProblemButton" layoutX="66.0" layoutY="91.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="AssociatedSignsAndSymptomButton" layoutX="66.0" layoutY="125.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="LocationButton" layoutX="66.0" layoutY="157.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="QuaityButton" layoutX="66.0" layoutY="189.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="severityButton" layoutX="66.0" layoutY="222.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="AggavativeButton" layoutX="412.0" layoutY="196.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="DurationButton" layoutX="412.0" layoutY="93.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="contextButton" layoutX="412.0" layoutY="163.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="TimingButton" layoutX="412.0" layoutY="127.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="AlleviatingButton" layoutX="412.0" layoutY="230.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="MiscellaneousButton" layoutX="214.0" layoutY="291.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="214.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="PMH">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="95.0" layoutY="75.0" prefHeight="16.0" prefWidth="63.0" text="Allergies" />
+                                          <Label layoutX="95.0" layoutY="171.0" text="Injuries/Operations/Hospitalizations" />
+                                          <Label layoutX="95.0" layoutY="106.0" text="Current Medications" />
+                                          <Label layoutX="95.0" layoutY="139.0" text="Active or Chronic Problem" />
+                                          <Label layoutX="428.0" layoutY="147.0" text="Work History" />
+                                          <Label layoutX="425.0" layoutY="83.0" text="Family History" />
+                                          <Label layoutX="427.0" layoutY="114.0" text="Social History" />
+                                          <Button fx:id="CurrentMedicationsButton" layoutX="64.0" layoutY="104.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="ActiveOrChronicButton" layoutX="64.0" layoutY="137.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="64.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="allergiesButton" layoutX="64.0" layoutY="73.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="injuriesOpertaionsButton" layoutX="64.0" layoutY="168.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="FamilyHistoryButton" layoutX="391.0" layoutY="81.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="SocialHistoryButton" layoutX="391.0" layoutY="113.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="WorkHistoryButton" layoutX="391.0" layoutY="144.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="391.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="223.0" layoutY="242.0" prefHeight="25.0" prefWidth="199.0" text="Other Miscellaneous Partient History" />
+                                          <Button fx:id="MiscellenouusPatientButton" layoutX="201.0" layoutY="244.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="201.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="232.0" layoutY="29.0" prefHeight="25.0" prefWidth="163.0" text="Wizards For Patient History" />
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="ROS">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="113.0" layoutY="74.0" text="Constitutional " />
+                                          <Label layoutX="113.0" layoutY="106.0" text="Eyes" />
+                                          <Label layoutX="113.0" layoutY="139.0" text="Ears,Nose,Mouth And Throat" />
+                                          <Label layoutX="113.0" layoutY="169.0" text="Cardiovascular" />
+                                          <Label layoutX="113.0" layoutY="202.0" text="Respiratory" />
+                                          <Label layoutX="113.0" layoutY="238.0" text="Gastriontestinal" />
+                                          <Label layoutX="113.0" layoutY="268.0" text="Genitourinary" />
+                                          <Label layoutX="394.0" layoutY="74.0" prefHeight="16.0" prefWidth="96.0" text="Musculoskeletal" />
+                                          <Label layoutX="394.0" layoutY="106.0" prefHeight="16.0" prefWidth="164.0" text="Integumentary(Skin/Breasts)" />
+                                          <Label layoutX="394.0" layoutY="134.0" prefHeight="16.0" prefWidth="72.0" text="Neurological" />
+                                          <Label layoutX="394.0" layoutY="165.0" prefHeight="16.0" prefWidth="72.0" text="Psychiatric" />
+                                          <Label layoutX="394.0" layoutY="231.0" prefHeight="16.0" prefWidth="135.0" text="Hematologic/Lymphatic" />
+                                          <Label layoutX="394.0" layoutY="197.0" prefHeight="16.0" prefWidth="72.0" text="Endocrine" />
+                                          <Label layoutX="394.0" layoutY="265.0" prefHeight="16.0" prefWidth="117.0" text="Allergic/Immunology" />
+                                          <Button fx:id="constutionalButton" layoutX="82.0" layoutY="72.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="EyesButton" layoutX="82.0" layoutY="104.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <Button fx:id="EarsNoseMouthButtons" layoutX="82.0" layoutY="137.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <Button fx:id="cardiovascularButton" layoutX="82.0" layoutY="167.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <Button fx:id="RespiratoryButton" layoutX="82.0" layoutY="201.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="GastriontestinalButton" layoutX="82.0" layoutY="237.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="GenitourinaryButton" layoutX="82.0" layoutY="267.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="musculoskeletalButton" layoutX="359.0" layoutY="74.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="IntegumentaryButton" layoutX="359.0" layoutY="105.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="NeurologicalButton" layoutX="359.0" layoutY="134.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="PsychiatricButton" layoutX="359.0" layoutY="164.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="EndocrineButton" layoutX="359.0" layoutY="197.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="HematologicLymphaticButton" layoutX="359.0" layoutY="231.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="AllergicImmunologyButton" layoutX="359.0" layoutY="264.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="359.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="240.0" layoutY="22.0" prefHeight="25.0" prefWidth="213.0" text="Wizards For Review Of Systems" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Examinations">
+               <content>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="695.0">
+
+
+<children>
+                        <TabPane prefHeight="477.0" prefWidth="729.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Organ Systems">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="97.0" layoutY="224.0" text="Respiratory" />
+                                          <Label layoutX="94.0" layoutY="127.0" text="Eyes" />
+                                          <Label layoutX="96.0" layoutY="191.0" text="Neck" />
+                                          <Label layoutX="243.0" layoutY="14.0" prefHeight="25.0" prefWidth="200.0" text="Wizards For History Of Present Illness" />
+                                          <Label layoutX="443.0" layoutY="127.0" prefHeight="20.0" prefWidth="72.0" text="Genitourinary" />
+                                          <Label layoutX="443.0" layoutY="163.0" prefHeight="20.0" prefWidth="85.0" text="Musculoskeletal" />
+                                          <Label layoutX="443.0" layoutY="196.0" prefHeight="20.0" prefWidth="140.0" text="Skin" />
+                                          <Label layoutX="443.0" layoutY="228.0" prefHeight="20.0" prefWidth="133.0" text="Neurologic" />
+                                          <Button fx:id="constitutionalButton" layoutX="66.0" layoutY="91.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="EyesButton" layoutX="66.0" layoutY="125.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="EarNoseMouthThroatButton" layoutX="66.0" layoutY="157.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="neckButton" layoutX="66.0" layoutY="189.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="RespiratoryButton" layoutX="66.0" layoutY="222.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="skinButton" layoutX="412.0" layoutY="196.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="GastriontestinalButton" layoutX="412.0" layoutY="93.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="MusculoskeletalButton" layoutX="412.0" layoutY="163.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="GenitourinaryButton" layoutX="412.0" layoutY="127.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="NeurologicButton" layoutX="412.0" layoutY="230.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="HematologicButton" layoutX="412.0" layoutY="293.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="412.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="95.0" layoutY="94.0" text="Constitutional " />
+                                          <Label layoutX="96.0" layoutY="159.0" text="Ears,Nose,Mouth And Throat" />
+                                          <Label layoutX="445.0" layoutY="95.0" prefHeight="16.0" prefWidth="144.0" text="Gastriontestinal/Abdomen" />
+                                          <Button fx:id="CardiovascularButton" layoutX="66.0" layoutY="253.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <Label layoutX="96.0" layoutY="253.0" prefHeight="20.0" prefWidth="140.0" text="Cardiovascular" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="96.0" layoutY="283.0" prefHeight="20.0" prefWidth="113.0" text="Chest/Breasts" />
+                                          <Button fx:id="ChestButton" layoutX="66.0" layoutY="281.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="443.0" layoutY="263.0" prefHeight="20.0" prefWidth="133.0" text="Psychiatric" />
+                                          <Button fx:id="PsychiatricButton" layoutX="412.0" layoutY="263.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="442.0" layoutY="295.0" prefHeight="16.0" prefWidth="135.0" text="Hematologic/Lymphatic" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Musculoskeletal Body Areas">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="95.0" layoutY="75.0" prefHeight="16.0" prefWidth="63.0" text="Head/Face" />
+                                          <Label layoutX="95.0" layoutY="171.0" text="Back" />
+                                          <Label layoutX="95.0" layoutY="106.0" text="Neck" />
+                                          <Label layoutX="95.0" layoutY="139.0" text="Chest/Ribs" />
+                                          <Label layoutX="428.0" layoutY="147.0" text="Forearm,Wrist or Hand" />
+                                          <Label layoutX="425.0" layoutY="83.0" text="Shoulder" />
+                                          <Label layoutX="427.0" layoutY="114.0" text="Elbow" />
+                                          <Button fx:id="NeckButton" layoutX="64.0" layoutY="104.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="ChestRibsButton" layoutX="64.0" layoutY="137.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="64.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="HeadFaceButton" layoutX="64.0" layoutY="73.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="BackButton" layoutX="64.0" layoutY="168.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="ShoulderButton" layoutX="391.0" layoutY="81.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="ElbowButton" layoutX="391.0" layoutY="113.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="ForearmWristButton" layoutX="391.0" layoutY="144.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="391.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="175.0" layoutY="33.0" prefHeight="25.0" prefWidth="313.0" text="Specific  Musculoskeletal Body Area ExaminationWizards" />
+                                          <Button fx:id="HipPelvisButton" layoutX="64.0" layoutY="197.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label layoutX="95.0" layoutY="199.0" text="Hip/Pelvis/Groin" />
+                                          <Label layoutX="428.0" layoutY="178.0" text="Knee" />
+                                          <Label layoutX="428.0" layoutY="208.0" text="Ankle or Foot" />
+                                          <Button fx:id="kneeButton" layoutX="391.0" layoutY="177.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <Button fx:id="AnkleFootButton" layoutX="391.0" layoutY="206.0" maxHeight="20.0" maxWidth="20.0" minHeight="17.0" minWidth="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="391.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="391.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Functional Cognitive Status">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="113.0" layoutY="74.0" text="Function Status Observations" />
+                                          <Label layoutX="394.0" layoutY="74.0" prefHeight="16.0" prefWidth="177.0" text="Cognitive Status Observation" />
+                                          <Button fx:id="FunctionButton" layoutX="82.0" layoutY="72.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="82.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="189.0" layoutY="22.0" prefHeight="25.0" prefWidth="301.0" text="Functional And Cognitive Status Examination Wizards" />
+                                          <Button fx:id="CognitiveStatusButton" layoutX="360.0" layoutY="72.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                             <graphic>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../image/folderIcon.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                
+</AnchorPane>
+
+               </content>
+          </Tab>
+            <Tab text="Medical Decision Making">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="41.0" layoutY="43.0" prefHeight="81.0" prefWidth="284.0" text="Assessment">
+                           <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="37.0" prefWidth="268.0">
+                                 <children>
+                                    <Label layoutX="42.0" layoutY="17.0" text="Constitutional " />
+                                    <Button fx:id="constitutionalButton" layoutX="14.0" layoutY="14.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children></AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="41.0" layoutY="141.0" prefHeight="81.0" prefWidth="288.0" text="Medications">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="234.0">
+                                 <children>
+                                    <Label layoutX="42.0" layoutY="17.0" text="Medication Orders" />
+                                    <Button fx:id="MedicalOrdersButton" layoutX="14.0" layoutY="14.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="41.0" layoutY="237.0" prefHeight="193.0" prefWidth="214.0" text="Test And Procedures">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="141.0" prefWidth="212.0">
+                                 <children>
+                                    <Label layoutX="42.0" layoutY="17.0" text="Diagnostic Test Orders" />
+                                    <Button fx:id="DiagnosticTestOrderButton" layoutX="14.0" layoutY="14.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="42.0" layoutY="44.0" text="Diagnostic Test Results" />
+                                    <Label layoutX="45.0" layoutY="71.0" prefHeight="16.0" prefWidth="113.0" text="Medical Procedures" />
+                                    <Button fx:id="DiagnosticTestResultButton" layoutX="14.0" layoutY="40.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="MedicalProceduresButton" layoutX="14.0" layoutY="67.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="358.0" layoutY="43.0" prefHeight="398.0" prefWidth="247.0" text="Other MDM Elements">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="266.0">
+                                 <children>
+                                    <Label layoutX="41.0" layoutY="48.0" text="Consult/Referal Orders" />
+                                    <Button fx:id="TherapyTreatmentOrdersButton" layoutX="14.0" layoutY="14.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="41.0" layoutY="16.0" text="Therapy/Treatment Orders" />
+                                    <Label layoutX="42.0" layoutY="79.0" text="Patient Local Measures" />
+                                    <Label layoutX="42.0" layoutY="110.0" text="Work Restrictions" />
+                                    <Label layoutX="44.0" layoutY="142.0" text="Durable Medical Equipment" />
+                                    <Button fx:id="ConsultReferalOrderButton" layoutX="14.0" layoutY="46.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="PatientLocalMeasuresButon" layoutX="14.0" layoutY="77.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="WorkRestrictionsButton" layoutX="14.0" layoutY="107.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="DurableMedicalEquipmentButton" layoutX="14.0" layoutY="140.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="46.0" layoutY="169.0" text="Other Data Sources Review" />
+                                    <Button fx:id="OtherDateSourcesReviewButton" layoutX="14.0" layoutY="166.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="PatientInstructonsButton" layoutX="14.0" layoutY="198.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../image/folderIcon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="46.0" layoutY="200.0" text="Patient Instructions" />
+                                    <Label layoutX="49.0" layoutY="228.0" text="Return for Follow up  Instructions" />
+                                    <Button fx:id="ReturnForFollowUpInstructionButton" layoutX="14.0" layoutY="224.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="13.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../image/folderIcon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Label layoutX="229.0" layoutY="8.0" prefHeight="25.0" prefWidth="218.0" text="Elements For Medical Decision Making" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Work Assessment">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="213.0" layoutY="36.0" prefHeight="25.0" prefWidth="247.0" text="Wizards For Assessment of Work Relatedness" />
+                        <Button fx:id="AssessmentofWorkRelatednessButton" layoutX="193.0" layoutY="150.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" />
+                        <Label layoutX="220.0" layoutY="153.0" text="Assessment of Work Relatedness And Work Status" />
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="193.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/folderIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="ImportEMRWizardButton" layoutX="54.0" layoutY="540.0" mnemonicParsing="false" text="Import EMR Wizard" />
+      <Button fx:id="PrintAllEMRWizardButton" layoutX="201.0" layoutY="539.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForOkButton" prefHeight="28.0" prefWidth="169.0" text="Print ALL EMR Wizards">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="CodeMapButton" layoutX="506.0" layoutY="541.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancleButtons" text="Code Map">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="CloseButton" layoutX="614.0" layoutY="541.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancleButtons" prefHeight="25.0" prefWidth="79.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

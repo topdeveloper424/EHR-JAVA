@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="472.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.elbow.ElbowSpecialTestLeftInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="159.0" prefWidth="465.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="214.0" prefWidth="525.0" stylesheets="@../../../../../../css/style.css">
+               <children>
+                  <Label layoutX="3.0" layoutY="12.0" text="  Elbow : Flexion" />
+                  <Separator layoutX="173.0" layoutY="1.0" orientation="VERTICAL" prefHeight="77.0" prefWidth="1.0" />
+                  <Button fx:id="doneBtn" layoutX="264.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="361.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutY="35.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Separator layoutX="-3.0" layoutY="76.0" prefHeight="3.0" prefWidth="539.0" />
+                  <Label fx:id="FlexionKneeText" layoutX="6.0" layoutY="44.0" text="Tinel's Sign" />
+                  <RadioButton fx:id="elbowNegative" layoutX="201.0" layoutY="12.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="flexion" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="elbowPositive" layoutX="361.0" layoutY="12.0" mnemonicParsing="false" text="positive" toggleGroup="$flexion" />
+                  <RadioButton fx:id="tinelsNegative" layoutX="201.0" layoutY="44.0" mnemonicParsing="false" text="negative">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sign" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="tinelsPositive" layoutX="363.0" layoutY="44.0" mnemonicParsing="false" text="positive" toggleGroup="$sign" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

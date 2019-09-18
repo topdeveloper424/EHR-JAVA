@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.hpi.mechanism.HPIMechanismInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="532.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="488.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="PatientIsUncertainText" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" text="Patient is Uncertain" />
+                                    <CheckBox fx:id="AutoAccidentCheck" layoutX="62.0" layoutY="35.0" mnemonicParsing="false" text="Auto Accident" />
+                                    <CheckBox fx:id="BicycleAccidentCheck" layoutX="62.0" layoutY="57.0" mnemonicParsing="false" text="Bicycle Accident" />
+                                    <CheckBox fx:id="ChemicalBurnCheck" layoutX="62.0" layoutY="78.0" mnemonicParsing="false" text="Chemical Burn" />
+                                    <CheckBox fx:id="ChemicalSpilCheck" layoutX="62.0" layoutY="99.0" mnemonicParsing="false" text="Chemical spil" />
+                                    <CheckBox fx:id="ChemicalSplashCheck" layoutX="62.0" layoutY="120.0" mnemonicParsing="false" text="Chemical splash" />
+                                    <CheckBox fx:id="ElectricalBurnCheck" layoutX="62.0" layoutY="143.0" mnemonicParsing="false" text="Electrical Burn" />
+                                    <CheckBox fx:id="ElectricalShockCheck" layoutX="62.0" layoutY="165.0" mnemonicParsing="false" text="Electrical shock" />
+                                    <CheckBox fx:id="HurtByEquipmentCheck" layoutX="62.0" layoutY="252.0" mnemonicParsing="false" text="Hurt By Equipment" />
+                                    <CheckBox fx:id="FireCheck" layoutX="62.0" layoutY="187.0" mnemonicParsing="false" text="Fire" />
+                                    <CheckBox fx:id="HurtByToolCheck" layoutX="62.0" layoutY="273.0" mnemonicParsing="false" text="Hurt By Tool" />
+                                    <CheckBox fx:id="ForeignBodyinEyeCheck" layoutX="62.0" layoutY="209.0" mnemonicParsing="false" text="Foreign Body in Eye" />
+                                    <CheckBox fx:id="SunBurnCheck" layoutX="62.0" layoutY="229.0" mnemonicParsing="false" text="SunBurn" />
+                                    <CheckBox fx:id="PullingAnObjectCheck" layoutX="320.0" layoutY="14.0" mnemonicParsing="false" text="Pulling an Object" />
+                                    <CheckBox fx:id="StruckByAnObjectCheck" layoutX="320.0" layoutY="120.0" mnemonicParsing="false" text="Struck By an Object" />
+                                    <CheckBox fx:id="BendingCheck" layoutX="320.0" layoutY="35.0" mnemonicParsing="false" text="Bending" />
+                                    <CheckBox fx:id="StruckAnObjectCheck" layoutX="320.0" layoutY="99.0" mnemonicParsing="false" text="Struck an Object" />
+                                    <CheckBox fx:id="TwistingCheck" layoutX="320.0" layoutY="78.0" mnemonicParsing="false" text="Twisting" />
+                                    <CheckBox fx:id="StoopingCheck" layoutX="320.0" layoutY="57.0" mnemonicParsing="false" text="Stooping" />
+                                    <CheckBox fx:id="PushingAnObjectCheck" layoutX="62.0" layoutY="427.0" mnemonicParsing="false" text="Pushing an Object" />
+                                    <CheckBox fx:id="MovingAnObjectCheck" layoutX="62.0" layoutY="403.0" mnemonicParsing="false" text="Moving an Object" />
+                                    <CheckBox fx:id="LiftingAnObjectCheck" layoutX="62.0" layoutY="381.0" mnemonicParsing="false" text="Lifting an Object" />
+                                    <CheckBox fx:id="FellCheck" layoutX="62.0" layoutY="358.0" mnemonicParsing="false" text="Fell" />
+                                    <CheckBox fx:id="TrippedCheck" layoutX="62.0" layoutY="336.0" mnemonicParsing="false" text="Tripped" />
+                                    <CheckBox fx:id="SlippedCheck" layoutX="62.0" layoutY="315.0" mnemonicParsing="false" text="Slipped" />
+                                    <CheckBox fx:id="InhaledFumesCheck" layoutX="62.0" layoutY="294.0" mnemonicParsing="false" text="Inhaled Fumes" />
+                                    <CheckBox fx:id="StructByVehicleCheck" layoutX="320.0" layoutY="165.0" mnemonicParsing="false" text="Struct By Vehicle" />
+                                    <CheckBox fx:id="ThrownFromAvehicleCheck" layoutX="320.0" layoutY="209.0" mnemonicParsing="false" text="Thrown from a vehicle" />
+                                    <CheckBox fx:id="StruckByLightning" layoutX="320.0" layoutY="143.0" mnemonicParsing="false" text="Struck By Lightning" />
+                                    <CheckBox fx:id="ThrownByAnVehicleCheck" layoutX="320.0" layoutY="187.0" mnemonicParsing="false" text="Thrown By an Vehicle" />
+                                    <CheckBox fx:id="ThrownFromHorseCheck" layoutX="320.0" layoutY="231.0" mnemonicParsing="false" text="Thrown from Horse" />
+                                    <CheckBox fx:id="OtherContextCheck" layoutX="320.0" layoutY="253.0" mnemonicParsing="false" text="*Other Context" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="486.0" layoutY="540.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="389.0" layoutY="540.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

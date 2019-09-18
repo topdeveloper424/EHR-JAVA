@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox layoutX="562.0" layoutY="6.0" mnemonicParsing="false" text="CheckBox" />
+      <TableView layoutX="4.0" layoutY="23.0" prefHeight="224.0" prefWidth="643.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Order Type" />
+          <TableColumn prefWidth="156.0" text="Summary" />
+            <TableColumn prefWidth="176.0" text="Order Set" />
+            <TableColumn prefWidth="129.0" text="Status" />
+            <TableColumn prefWidth="105.0" text="Status Date" />
+        </columns>
+      </TableView>
+      <TextArea layoutX="4.0" layoutY="275.0" prefHeight="119.0" prefWidth="558.0" />
+      <Button layoutX="575.0" layoutY="278.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="71.0" text="Print">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="575.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Submit" />
+      <Button layoutX="4.0" layoutY="398.0" mnemonicParsing="false" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="71.0" layoutY="398.0" mnemonicParsing="false" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="159.0" layoutY="398.0" mnemonicParsing="false" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="241.0" layoutY="400.0" mnemonicParsing="false" text="Complete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="342.0" layoutY="399.0" mnemonicParsing="false" text="Exit Care Patient Education  Leaflets">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="578.0" layoutY="401.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="65.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="14.0" layoutY="258.0" text="Order Details" />
+   </children>
+</AnchorPane>

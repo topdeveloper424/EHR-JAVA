@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="740.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.skin.skinSclapHair.SkinSclapHairInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="479.0" prefWidth="728.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="506.0" prefWidth="809.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" text="Palpation of Scalp" />
+                  <Separator layoutX="162.0" layoutY="1.0" orientation="VERTICAL" prefHeight="395.0" prefWidth="1.0" />
+                  <Button fx:id="doneBtn" layoutX="501.0" layoutY="412.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="596.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="palpationNormalCheck" layoutX="170.0" layoutY="3.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="3.0" layoutY="137.0" prefHeight="0.0" prefWidth="974.0" />
+                  <Separator layoutX="3.0" layoutY="225.0" prefHeight="0.0" prefWidth="981.0" />
+                  <Separator layoutY="359.0" prefHeight="0.0" prefWidth="981.0" />
+                  <Label layoutX="11.0" layoutY="98.0" text="Examination of Hair" />
+                  <Label layoutX="12.0" layoutY="235.0" text="Location of Abnormalities" />
+                  <Separator layoutY="85.0" prefHeight="0.0" prefWidth="981.0" />
+                  <CheckBox fx:id="NopalableMassesCheck" layoutX="266.0" layoutY="8.0" mnemonicParsing="false" text="No palable masses" />
+                  <CheckBox fx:id="rightCheck" layoutX="266.0" layoutY="166.0" mnemonicParsing="false" text="right" />
+                  <CheckBox fx:id="bilaterallyCheck" layoutX="266.0" layoutY="141.0" mnemonicParsing="false" text="bilaterally" />
+                  <CheckBox fx:id="leftChck" layoutX="266.0" layoutY="192.0" mnemonicParsing="false" text="left" />
+                  <Label layoutX="11.0" layoutY="144.0" text="Location of Abnormalities" />
+                  <CheckBox fx:id="examinationNormalCheck" layoutX="170.0" layoutY="89.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-4.0" layoutY="308.0" prefHeight="0.0" prefWidth="987.0" />
+                  <Label layoutX="13.0" layoutY="368.0" text="Hair Consistency" />
+                  <Separator layoutX="-12.0" layoutY="395.0" prefHeight="0.0" prefWidth="974.0" />
+                  <RadioButton fx:id="noAbnormalitiesRadio" layoutX="266.0" layoutY="89.0" mnemonicParsing="false" text="no abnormalities" />
+                  <Label layoutX="12.0" layoutY="311.0" text="Hair Distribution" />
+                  <CheckBox fx:id="scalpCheck" layoutX="265.0" layoutY="227.0" mnemonicParsing="false" text="scalp" />
+                  <CheckBox fx:id="faceCheck" layoutX="265.0" layoutY="246.0" mnemonicParsing="false" text="face" />
+                  <CheckBox fx:id="pubicCheck" layoutX="265.0" layoutY="267.0" mnemonicParsing="false" text="pubic area" />
+                  <CheckBox fx:id="eyebrowsCheck" layoutX="530.0" layoutY="230.0" mnemonicParsing="false" text="eyebrows" />
+                  <CheckBox fx:id="hairDistributionNormalCheck" layoutX="175.0" layoutY="311.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="hairConsistencyNormalCheck" layoutX="170.0" layoutY="364.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="sebaseousCheck" layoutX="466.0" layoutY="14.0" mnemonicParsing="false" text="sebaseous  cyst" />
+                  <CheckBox fx:id="indurationCheck" layoutX="266.0" layoutY="34.0" mnemonicParsing="false" text="induration" />
+                  <CheckBox fx:id="fluctuanceCheck" layoutX="466.0" layoutY="41.0" mnemonicParsing="false" text="fluctuance" />
+                  <RadioButton fx:id="generalAlopeciaRadio" layoutX="267.0" layoutY="112.0" mnemonicParsing="false" text="general alopecia" />
+                  <RadioButton fx:id="focalAlpoceaRadio" layoutX="463.0" layoutY="90.0" mnemonicParsing="false" text="focal alpocea" />
+                  <CheckBox fx:id="lowerExtrimityCheck" layoutX="369.0" layoutY="230.0" mnemonicParsing="false" text="lower extrimity area" />
+                  <CheckBox fx:id="handCheck" layoutX="369.0" layoutY="250.0" mnemonicParsing="false" text="hand" />
+                  <CheckBox fx:id="footCheck" layoutX="369.0" layoutY="269.0" mnemonicParsing="false" text="foot" />
+                  <CheckBox fx:id="chestCheck" layoutX="530.0" layoutY="249.0" mnemonicParsing="false" text="chest" />
+                  <CheckBox fx:id="upperExtrimityCheck" layoutX="530.0" layoutY="269.0" mnemonicParsing="false" text="upper extrimity area" />
+                  <CheckBox fx:id="armCheck" layoutX="265.0" layoutY="286.0" mnemonicParsing="false" text="arm" />
+                  <CheckBox fx:id="legCheck" layoutX="370.0" layoutY="286.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="42.0" text="leg" />
+                  <RadioButton fx:id="isNormalRadio" layoutX="267.0" layoutY="314.0" mnemonicParsing="false" text="is normal" />
+                  <RadioButton fx:id="showtotalCheck" layoutX="266.0" layoutY="335.0" mnemonicParsing="false" text="shows total alopecia" />
+                  <RadioButton fx:id="showpatchChck" layoutX="530.0" layoutY="313.0" mnemonicParsing="false" text="shows patchy alopecia" />
+                  <RadioButton fx:id="hairConsistencyIsNormalCheck" layoutX="266.0" layoutY="368.0" mnemonicParsing="false" text="is normal" />
+                  <RadioButton fx:id="hairConsistencyIsAbnormallyCheck" layoutX="532.0" layoutY="368.0" mnemonicParsing="false" text="is abnormally course" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

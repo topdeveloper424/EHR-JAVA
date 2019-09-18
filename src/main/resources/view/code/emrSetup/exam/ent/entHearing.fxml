@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.ent.EntHearingInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="265.0" prefWidth="646.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="158.0" layoutY="1.0" orientation="VERTICAL" prefHeight="192.0" prefWidth="8.0" />
+                  <Label layoutX="27.0" layoutY="109.0" text="Hearing : Rightt Ear" />
+                  <Label layoutX="27.0" layoutY="14.0" text="Hearing : Left Ear" />
+                  <CheckBox fx:id="hearLeftNormalCkeckBox" layoutX="277.0" layoutY="8.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="hearLeftWhisperedCkeckBox" layoutX="430.0" layoutY="14.0" mnemonicParsing="false" text="decreased to whispered voice" />
+                  <CheckBox fx:id="hearLeftMldlyCkeckBox" layoutX="277.0" layoutY="29.0" mnemonicParsing="false" text="mildly decreased" />
+                  <CheckBox fx:id="hearLeftModeratelyCkeckBox" layoutX="430.0" layoutY="39.0" mnemonicParsing="false" text="moderately decreased" />
+                  <CheckBox fx:id="hearLeftSeverallyCkeckBox" layoutX="277.0" layoutY="49.0" mnemonicParsing="false" text="severally decreased" />
+                  <CheckBox fx:id="hearRightNormalCkeckBox" layoutX="277.0" layoutY="102.0" mnemonicParsing="false" text="normal" />
+                  <CheckBox fx:id="hearRighttWhisperedCkeckBox" layoutX="430.0" layoutY="102.0" mnemonicParsing="false" text="decreased to whispered voice" />
+                  <CheckBox fx:id="hearRightMldlyCkeckBox" layoutX="277.0" layoutY="125.0" mnemonicParsing="false" text="mildly decreased" />
+                  <CheckBox fx:id="hearRighttAbsentCkeckBox" layoutX="430.0" layoutY="145.0" mnemonicParsing="false" text="absent" />
+                  <CheckBox fx:id="hearRightSeverallyCkeckBox" layoutX="277.0" layoutY="145.0" mnemonicParsing="false" text="severally decreased" />
+                  <Separator layoutX="-4.0" layoutY="190.0" prefHeight="0.0" prefWidth="653.0" />
+                  <CheckBox fx:id="hearRightAllNormalCkeckBox" layoutX="182.0" layoutY="107.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="hearLeftAbsentCkeckBox" layoutX="430.0" layoutY="55.0" mnemonicParsing="false" text="absent" />
+                  <CheckBox fx:id="hearLeftNotTestedCkeckBox" layoutX="277.0" layoutY="72.0" mnemonicParsing="false" text="not tested" />
+                  <CheckBox fx:id="hearRightNotTestedCkeckBox" layoutX="277.0" layoutY="165.0" mnemonicParsing="false" text="not tested" />
+                  <CheckBox fx:id="hearRightModeratelyCkeckBox" layoutX="430.0" layoutY="125.0" mnemonicParsing="false" text="moderately decreased" />
+                  <Button fx:id="doneBtn" layoutX="408.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="503.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="hearLeftAllNormalCkeckBox" layoutX="182.0" layoutY="8.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-2.0" layoutY="95.0" prefHeight="0.0" prefWidth="650.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

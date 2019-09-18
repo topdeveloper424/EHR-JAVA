@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="643.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox layoutX="23.0" layoutY="22.0" mnemonicParsing="false" text="Review All Clinics" />
+      <TableView layoutX="69.0" layoutY="49.0" prefHeight="218.0" prefWidth="558.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Batch No." />
+          <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="75.0" text="Time" />
+            <TableColumn prefWidth="100.0" text="Control Total" />
+            <TableColumn prefWidth="89.0" text="Batch Total" />
+            <TableColumn prefWidth="135.0" text="Reference" />
+        </columns>
+      </TableView>
+      <Button layoutX="11.0" layoutY="123.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="52.0" text="Button" />
+      <Button layoutX="11.0" layoutY="88.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="11.0" layoutY="156.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="52.0" text="Button" />
+      <Button layoutX="11.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="52.0" text="Button" />
+      <CheckBox layoutX="37.0" layoutY="399.0" mnemonicParsing="false" text="Suppress Detail" />
+      <CheckBox layoutX="152.0" layoutY="399.0" mnemonicParsing="false" text="Print Preview" />
+      <TitledPane animated="false" layoutX="12.0" layoutY="275.0" prefHeight="109.0" prefWidth="618.0" text="Edit List Options">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="596.0">
+               <children>
+                  <TextField layoutX="84.0" layoutY="14.0" prefHeight="25.0" prefWidth="178.0" />
+                  <TextField layoutX="84.0" layoutY="50.0" prefHeight="25.0" prefWidth="52.0" />
+                  <TextField layoutX="211.0" layoutY="50.0" prefHeight="25.0" prefWidth="52.0" />
+                  <Label layoutX="19.0" layoutY="18.0" text="User Code:" />
+                  <Label layoutX="14.0" layoutY="54.0" text="Begin Time:" />
+                  <Label layoutX="153.0" layoutY="54.0" text="End Time:" />
+                  <Button layoutX="276.0" layoutY="14.0" mnemonicParsing="false" text="Button">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button layoutX="270.0" layoutY="402.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="103.0" text="BatchTotals">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="388.0" layoutY="402.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="82.0" text="Edit List">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="483.0" layoutY="402.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="59.0" text="Post">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="558.0" layoutY="402.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="65.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="23.0" layoutY="58.0" text="Mark" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="584.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.medicalCondition.MedicalConditionCodeEditController">
+   <children>
+      <Label layoutX="64.0" layoutY="63.0" text="Code:" />
+      <Label layoutX="483.0" layoutY="25.0" />
+      <Label layoutX="57.0" layoutY="97.0" text="Description:" />
+      <TextField fx:id="idTextField" disable="true" editable="false" layoutX="131.0" layoutY="21.0" />
+      <TextField fx:id="codeTextField" layoutX="131.0" layoutY="59.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="descriptionTextField" layoutX="131.0" layoutY="93.0" prefHeight="25.0" prefWidth="309.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="23.0" layoutY="128.0" prefHeight="102.0" prefWidth="526.0" text="Type">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="illnessRadioButton" layoutX="48.0" layoutY="14.0" mnemonicParsing="false" text="Illiness">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="historyRadioButton" layoutX="262.0" layoutY="14.0" mnemonicParsing="false" text="History" toggleGroup="$group" />
+                  <RadioButton fx:id="allergyRadioButton" layoutX="414.0" layoutY="14.0" mnemonicParsing="false" text="Allergy" toggleGroup="$group" />
+                  <RadioButton fx:id="injuryRadioButton" layoutX="48.0" layoutY="42.0" mnemonicParsing="false" text="Injury" toggleGroup="$group" />
+                  <RadioButton fx:id="exposureRadioButton" layoutX="262.0" layoutY="41.0" mnemonicParsing="false" text="Exposure" toggleGroup="$group" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <CheckBox fx:id="infectiousCheckBox" layoutX="238.0" layoutY="243.0" mnemonicParsing="false" text="Infectious" />
+      <TitledPane animated="false" collapsible="false" layoutX="23.0" layoutY="272.0" prefHeight="166.0" prefWidth="297.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="7.0" text="Vaccine" />
+                  <Label layoutX="14.0" layoutY="38.0" text="2nd Vaccine" />
+                  <Label layoutX="12.0" layoutY="70.0" text="Immune Test" />
+                  <Label layoutX="14.0" layoutY="102.0" text="Diag Test" />
+                  <TextField fx:id="vaccineTextField" layoutX="88.0" layoutY="3.0" prefHeight="25.0" prefWidth="125.0" />
+                  <Button fx:id="vaccineButton" layoutX="215.0" layoutY="2.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/search-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="sevondVaccineTextField" layoutX="89.0" layoutY="34.0" prefHeight="25.0" prefWidth="124.0" />
+                  <Button fx:id="vaccine2Button" layoutX="215.0" layoutY="34.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/search-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="immuneTestTextField" layoutX="89.0" layoutY="66.0" prefHeight="25.0" prefWidth="124.0" />
+                  <Button fx:id="immuneTestButton" layoutX="215.0" layoutY="65.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/search-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="DiagTestTextField" layoutX="89.0" layoutY="98.0" prefHeight="25.0" prefWidth="123.0" />
+                  <Button fx:id="diagTestButton" layoutX="214.0" layoutY="98.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/search-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="348.0" layoutY="273.0" prefHeight="166.0" prefWidth="202.0" text="Security">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="noneRadioButton" layoutX="33.0" layoutY="6.0" mnemonicParsing="false" text="None">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="security" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="hivAccessRadioButton" layoutX="33.0" layoutY="32.0" mnemonicParsing="false" text="HIV Access" toggleGroup="$security" />
+                  <RadioButton fx:id="drugTestRadioButton" layoutX="33.0" layoutY="57.0" mnemonicParsing="false" text="Drug  Test" toggleGroup="$security" />
+                  <RadioButton fx:id="eapAccessRadioButton" layoutX="33.0" layoutY="82.0" mnemonicParsing="false" text="EAP Access" toggleGroup="$security" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <CheckBox fx:id="oshaRecordableCheckBox" layoutX="241.0" layoutY="452.0" mnemonicParsing="false" text="Always OSHA Recordable" />
+      <CheckBox fx:id="inactiveCheckBox" layoutX="39.0" layoutY="488.0" mnemonicParsing="false" text="Inactive?" />
+      <Button fx:id="updateButton" layoutX="330.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Update">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="460.0" layoutY="484.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="65.0" layoutY="25.0" text="ID:" />
+   </children>
+</AnchorPane>

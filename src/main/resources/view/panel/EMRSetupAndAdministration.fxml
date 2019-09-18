@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.EMRSetupAndAdministrationGUIController">
+   <children>
+      <VBox layoutY="3.0" prefHeight="550.0" prefWidth="189.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="EMR Charting Setup">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button fx:id="parameterButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="EMR Parameters">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="chartingWizardsButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="EMR Charting Wizards">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="chartingMerlins" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="EMR Charting Merlins">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="chartingTemplates" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="EMR Charting Templates">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="icd10Button" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="ICD-10 Codes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="medicationCodesButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Medication Codes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="medicationClassButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Medication Classes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="prescriptionTemplatesButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Prescription Templates">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Clinical Guideline Setup">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="clinicalPracticeGuidelineButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Clinical Practice Guidelines ">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="immunizationTrackingProfileButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Immunization Tracking Profile">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="vitalSignNormalRangeButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Vital Sign Normal Ranges">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Entities">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button fx:id="ProviderButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Providers">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="BillingPhysiciansButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Billing Physicians">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="ReferalProviderButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Referal Providers">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="ClinicianButton" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Clinicians">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="PharmacyButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="195.0" text="Pharmacies">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="closeButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="60.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="8.0" right="1.0" top="2.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

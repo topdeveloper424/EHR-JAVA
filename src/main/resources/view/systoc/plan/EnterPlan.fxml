@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="781.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.demo.controller.codes.organization.plan.PlanGUIController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="2.0" layoutY="3.0" prefHeight="278.0" prefWidth="760.0" text="Benifit Plan">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="2.0" layoutY="-1.0" prefHeight="158.0" prefWidth="76.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="35.0" minHeight="6.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="7.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="33.0" prefWidth="76.0" text="Benifit Org ID" underline="true" />
+                        <Label text="Send to ID" GridPane.rowIndex="1" />
+                        <Label text="Plan Name" GridPane.rowIndex="2" />
+                        <Label text="Address" GridPane.rowIndex="3" />
+                        <Label GridPane.rowIndex="5" />
+                        <Label text="Zip , City , St" underline="true" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <TextField layoutX="83.0" layoutY="4.0" prefHeight="25.0" prefWidth="135.0" />
+                  <TextField layoutX="83.0" layoutY="31.0" prefHeight="25.0" prefWidth="135.0" />
+                  <TextField layoutX="83.0" layoutY="58.0" prefHeight="25.0" prefWidth="305.0" />
+                  <CheckBox layoutX="657.0" layoutY="6.0" mnemonicParsing="false" text="Active Plan" />
+                  <Label layoutX="245.0" layoutY="8.0" text="Plan ID" />
+                  <TextField layoutX="289.0" layoutY="4.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Label layoutX="402.0" layoutY="9.0" text="ICD10 Date" />
+                  <TextField layoutX="291.0" layoutY="31.0" prefHeight="25.0" prefWidth="98.0" />
+                  <Label layoutX="411.0" layoutY="32.0" text="Affil. Reg." />
+                  <Label layoutX="586.0" layoutY="34.0" text="Benefit Type" />
+                  <Label layoutX="241.0" layoutY="33.0" text="Payer ID" />
+                  <Label layoutX="434.0" layoutY="60.0" text="FEIN" />
+                  <TextField layoutX="468.0" layoutY="57.0" prefHeight="25.0" prefWidth="108.0" />
+                  <TextField layoutX="83.0" layoutY="84.0" prefHeight="25.0" prefWidth="305.0" />
+                  <TextField layoutX="83.0" layoutY="111.0" prefHeight="25.0" prefWidth="305.0" />
+                  <TextField layoutX="84.0" layoutY="138.0" prefHeight="25.0" prefWidth="139.0" />
+                  <TextField layoutX="229.0" layoutY="140.0" prefHeight="25.0" prefWidth="184.0" />
+                  <TextField layoutX="418.0" layoutY="142.0" prefHeight="25.0" prefWidth="46.0" />
+                  <Label layoutX="522.0" layoutY="138.0" text="Fax" />
+                  <TextField layoutX="544.0" layoutY="136.0" prefHeight="25.0" prefWidth="146.0" />
+                  <Label layoutX="693.0" layoutY="138.0" text="X" />
+                  <TextField layoutX="705.0" layoutY="136.0" prefHeight="25.0" prefWidth="41.0" />
+                  <Label layoutX="433.0" layoutY="86.0" text="Claim Adjuster" />
+                  <TextField layoutX="518.0" layoutY="83.0" prefHeight="25.0" prefWidth="228.0" />
+                  <Label layoutX="504.0" layoutY="113.0" text="Phone" />
+                  <TextField layoutX="542.0" layoutY="109.0" prefHeight="25.0" prefWidth="146.0" />
+                  <Button layoutX="84.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="Special Instructions" />
+                  <DatePicker layoutX="466.0" layoutY="5.0" prefHeight="25.0" prefWidth="111.0" />
+                  <ComboBox layoutX="467.0" layoutY="31.0" prefHeight="25.0" prefWidth="110.0" />
+                  <ComboBox layoutX="658.0" layoutY="31.0" prefHeight="25.0" prefWidth="85.0" />
+                  <Label layoutX="692.0" layoutY="110.0" text="X" />
+                  <TextField layoutX="704.0" layoutY="109.0" prefHeight="25.0" prefWidth="42.0" />
+                  <Label layoutX="512.0" layoutY="166.0" text="Email" />
+                  <TextField layoutX="544.0" layoutY="164.0" prefHeight="25.0" prefWidth="203.0" />
+                  <Separator layoutX="2.0" layoutY="193.0" prefHeight="0.0" prefWidth="760.0" />
+                  <Label layoutX="18.0" layoutY="198.0" text="Discount %" />
+                  <TextField layoutX="83.0" layoutY="196.0" prefHeight="25.0" prefWidth="78.0" />
+                  <Label layoutX="190.0" layoutY="199.0" text="Dise Table" underline="true" />
+                  <TextField layoutX="253.0" layoutY="197.0" prefHeight="25.0" prefWidth="94.0" />
+                  <Label layoutX="362.0" layoutY="199.0" text="Co Insurance %" />
+                  <Label layoutX="546.0" layoutY="201.0" text="\$ Deductable" />
+                  <TextField layoutX="447.0" layoutY="197.0" prefHeight="25.0" prefWidth="81.0" />
+                  <TextField layoutX="620.0" layoutY="197.0" prefHeight="25.0" prefWidth="81.0" />
+                  <Label layoutX="24.0" layoutY="229.0" text="Plan Type" />
+                  <Label layoutX="169.0" layoutY="227.0" text="Insurence Type" />
+                  <Label layoutX="364.0" layoutY="226.0" text="Annul/Lifetime" />
+                  <TextField layoutX="84.0" layoutY="224.0" prefHeight="25.0" prefWidth="78.0" />
+                  <ComboBox layoutX="253.0" layoutY="224.0" prefHeight="25.0" prefWidth="95.0" />
+                  <ComboBox layoutX="448.0" layoutY="224.0" prefHeight="25.0" prefWidth="80.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="286.0" prefHeight="181.0" prefWidth="760.0" text="Billing Address">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="2.0" layoutY="14.0" prefHeight="139.0" prefWidth="77.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="6.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Name" />
+                        <Label text="Address" GridPane.rowIndex="1" />
+                        <Label prefHeight="0.0" prefWidth="66.0" text="Zip , City , St" GridPane.rowIndex="3" />
+                        <Label text="Attention" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <TextField layoutX="82.0" layoutY="14.0" prefHeight="25.0" prefWidth="295.0" />
+                  <TextField layoutX="83.0" layoutY="42.0" prefHeight="25.0" prefWidth="293.0" />
+                  <TextField layoutX="82.0" layoutY="70.0" prefHeight="25.0" prefWidth="294.0" />
+                  <TextField layoutX="82.0" layoutY="98.0" prefHeight="25.0" prefWidth="117.0" />
+                  <TextField layoutX="203.0" layoutY="98.0" prefHeight="25.0" prefWidth="186.0" />
+                  <TextField layoutX="392.0" layoutY="99.0" prefHeight="25.0" prefWidth="41.0" />
+                  <Button layoutX="399.0" layoutY="40.0" mnemonicParsing="false" text="Edit Billing Address" />
+                  <Label layoutX="399.0" layoutY="74.0" text="Phone" />
+                  <TextField layoutX="445.0" layoutY="70.0" prefHeight="25.0" prefWidth="141.0" />
+                  <Label layoutX="601.0" layoutY="74.0" text="X" />
+                  <TextField layoutX="618.0" layoutY="70.0" prefHeight="25.0" prefWidth="86.0" />
+                  <TextField layoutX="83.0" layoutY="126.0" prefHeight="25.0" prefWidth="352.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <GridPane layoutX="597.0" layoutY="473.0" prefHeight="31.0" prefWidth="166.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="cancelBtn" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="okBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="OK">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

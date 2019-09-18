@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="508.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.departmentUnit.DepartmentUnitInputController">
+   <children>
+      <TabPane layoutX="5.0" layoutY="4.0" prefHeight="359.0" prefWidth="496.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="25.0" layoutY="24.0" text="Dept Unit :" />
+                        <Label layoutX="25.0" layoutY="70.0" text="Decription :" />
+                        <Label layoutX="25.0" layoutY="109.0" text="Division :" />
+                        <Label layoutX="25.0" layoutY="158.0" text="Supervisor :" />
+                        <Label layoutX="25.0" layoutY="195.0" text="Telephone :" />
+                        <Label layoutX="25.0" layoutY="231.0" text="Fax :" />
+                        <Label layoutX="25.0" layoutY="274.0" text="Email :'" />
+                        <TextField fx:id="codeTextField" layoutX="101.0" layoutY="20.0" />
+                        <TextField fx:id="descriptionTextField" layoutX="101.0" layoutY="66.0" prefHeight="25.0" prefWidth="268.0" />
+                        <TextField fx:id="divisionTextField" layoutX="101.0" layoutY="105.0" />
+                        <Button fx:id="divisionBtn" layoutX="250.0" layoutY="105.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../image/search-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="supervisorTextField" layoutX="101.0" layoutY="151.0" prefHeight="25.0" prefWidth="268.0" />
+                        <TextField fx:id="telephoneTextField" layoutX="101.0" layoutY="191.0" prefHeight="25.0" prefWidth="167.0" />
+                        <TextField fx:id="extensionTextField" layoutX="362.0" layoutY="191.0" prefHeight="25.0" prefWidth="78.0" />
+                        <TextField fx:id="faxTextField" layoutX="101.0" layoutY="227.0" />
+                        <TextField fx:id="emailTextField" layoutX="101.0" layoutY="270.0" prefHeight="25.0" prefWidth="275.0" />
+                        <Label layoutX="283.0" layoutY="195.0" text="Extension :" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <CheckBox fx:id="inactiveCheckBox" layoutX="35.0" layoutY="378.0" mnemonicParsing="false" text="Inactive" />
+      <Button fx:id="okButton" layoutX="293.0" layoutY="378.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForOkButton" prefHeight="25.0" prefWidth="72.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="410.0" layoutY="376.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCancleButton" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

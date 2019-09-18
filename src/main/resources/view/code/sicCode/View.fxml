@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="685.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.sicCode.SicCodeViewController">
+   <children>
+      <Label layoutX="36.0" layoutY="47.0" text="Search :" />
+      <TextField layoutX="93.0" layoutY="43.0" />
+      <CheckBox layoutX="407.0" layoutY="47.0" mnemonicParsing="false" text="Include Inactive ?" />
+      <Button fx:id="addBtn" layoutX="36.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="changeBtn" layoutX="126.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteBtn" layoutX="222.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="selectButton" layoutX="464.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Select">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="544.0" layoutY="420.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="topButton" layoutX="34.0" layoutY="384.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="66.0" layoutY="384.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/media-controls-rewind-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="upButton" layoutX="98.0" layoutY="384.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/Capturebut4.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="130.0" layoutY="384.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="downButton" layoutX="159.0" layoutY="384.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/but3.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="191.0" layoutY="384.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/Media-Controls-Fast-Forward-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="buttomButton" layoutX="223.0" layoutY="384.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/but2.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="sicTable" layoutX="35.0" layoutY="73.0" prefHeight="311.0" prefWidth="576.0">
+         <columns>
+            <TableColumn fx:id="codeCol" prefWidth="164.0" text="Code" />
+            <TableColumn fx:id="descrpCol" minWidth="0.0" prefWidth="411.0" text="Description" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

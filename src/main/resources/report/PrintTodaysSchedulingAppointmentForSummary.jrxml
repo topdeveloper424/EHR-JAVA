@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReferalProviderReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e3276fc-9d40-4cbe-aad6-425af641ca93">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="adf7103b-dff4-4038-82aa-b2bb1c2bcc57">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="provider1" class="java.lang.String"/>
+	<parameter name="provider2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="provider.firstName" class="java.lang.Object"/>
+	<field name="patient.patientName.firstName" class="java.lang.Object"/>
+	<field name="patient.patientName.lastName" class="java.lang.Object"/>
+	<field name="provider.clinic.name" class="java.lang.Object"/>
+	<field name="provider.lastName" class="java.lang.Object"/>
+	<field name="provider.middleName" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<staticText>
+				<reportElement x="-17" y="0" width="572" height="37" forecolor="#0080C0" uuid="3456404e-d42c-4e88-8d58-abfc048902c0"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="40" width="200" height="30" forecolor="#0000A0" uuid="fbb69cce-43a7-4751-b329-64d24d2593e7"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Practioniner Schedule]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="3" width="220" height="30" forecolor="#0000A0" uuid="402f47f0-142f-4617-ba82-6895d9f47d99"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{provider.clinic.name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="70" width="390" height="30" uuid="73f1a298-481c-4d45-8aaa-af9e443c0e75"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Scheduled Appointments for providers   for   ]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="70" width="80" height="30" uuid="20d93f16-ed27-4927-95fb-410d70789519"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="23" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="40" y="-7" width="510" height="30" forecolor="#C0C0C0" backcolor="#C0C0C0" uuid="0d2302fe-7311-49bf-95c7-10a272fd0a18"/>
+				<textField>
+					<reportElement x="60" y="0" width="120" height="30" uuid="251454d6-0753-42d0-845b-c9f743bbc70a"/>
+					<textElement>
+						<font size="14" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{provider1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="370" y="0" width="110" height="30" uuid="f061b619-1440-41b3-a8b4-a4013f4d892e"/>
+					<textElement>
+						<font size="14" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{provider2}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="0" width="60" height="30" uuid="d13866c9-a4aa-4ff1-a14a-0ea31346a8cc"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{provider.firstName}.concat(" ").concat($F{provider.middleName}).concat(" ").concat($F{provider.lastName}))==$P{provider1}?$F{patient.patientName.firstName}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="70" height="30" uuid="c6e68103-7812-44ea-9227-e998da42446d"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{provider.firstName}.concat(" ").concat( $F{provider.middleName}).concat(" ").concat($F{provider.lastName}))==$P{provider1}?$F{patient.patientName.lastName}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="70" height="30" uuid="761d81d1-2c75-42b9-a972-86da1e351430"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{provider.firstName}.concat(" ").concat($F{provider.middleName}).concat(" ").concat($F{provider.lastName}))==$P{provider2}?$F{patient.patientName.firstName}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="70" height="30" uuid="7b42cd53-fd6a-4cde-bf71-4e1061a19cf3"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{provider.firstName}.concat(" ").concat($F{provider.middleName}).concat(" ").concat($F{provider.lastName}))==$P{provider2}?$F{patient.patientName.firstName}:""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="78" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

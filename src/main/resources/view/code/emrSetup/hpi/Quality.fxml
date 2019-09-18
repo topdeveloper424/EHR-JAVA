@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.hpi.quality.HPIQualityInputController">
+   <children>
+      <TabPane layoutX="4.0" layoutY="1.0" prefHeight="521.0" prefWidth="597.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="468.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="anxietyCheckBox" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" text="Anxiety" />
+                                    <CheckBox fx:id="burningCheckBox" layoutX="62.0" layoutY="44.0" mnemonicParsing="false" text="Burning" />
+                                    <CheckBox fx:id="consultCheckBox" layoutX="62.0" layoutY="78.0" mnemonicParsing="false" text="Constant" />
+                                    <CheckBox fx:id="dullCheckBox" layoutX="62.0" layoutY="112.0" mnemonicParsing="false" text="Dull" />
+                                    <CheckBox fx:id="intermittentCheckBox" layoutX="62.0" layoutY="146.0" mnemonicParsing="false" text="Intermittent" />
+                                    <CheckBox fx:id="moveingArroundCheckBox" layoutX="62.0" layoutY="179.0" mnemonicParsing="false" text="Moving Around" />
+                                    <CheckBox fx:id="pinNeedlesCheckBox" layoutX="62.0" layoutY="212.0" mnemonicParsing="false" text="Pins Needles" />
+                                    <CheckBox fx:id="pressingCheckBox" layoutX="62.0" layoutY="242.0" mnemonicParsing="false" text="Pressing" />
+                                    <CheckBox fx:id="tinglingCheckBox" layoutX="62.0" layoutY="405.0" mnemonicParsing="false" text="Tingling" />
+                                    <CheckBox fx:id="rediatingCheckBox" layoutX="62.0" layoutY="303.0" mnemonicParsing="false" text="Radiating" />
+                                    <CheckBox fx:id="throbbingCheckBox" layoutX="225.0" layoutY="14.0" mnemonicParsing="false" text="Throbbing" />
+                                    <CheckBox fx:id="sharpCheckBox" layoutX="62.0" layoutY="272.0" mnemonicParsing="false" text="Sharp" />
+                                    <CheckBox fx:id="stabbingCheckBox" layoutX="62.0" layoutY="338.0" mnemonicParsing="false" text="Stabbing" />
+                                    <CheckBox fx:id="stationaryCheckBox" layoutX="62.0" layoutY="370.0" mnemonicParsing="false" text="Stationary" />
+                                    <CheckBox fx:id="otherQualityCheckBox" layoutX="225.0" layoutY="104.0" mnemonicParsing="false" text="Other Quality" />
+                                    <CheckBox fx:id="vagueCheckBox" layoutX="225.0" layoutY="76.0" mnemonicParsing="false" text="Vague" />
+                                    <CheckBox fx:id="unEasyCheckBox" layoutX="225.0" layoutY="44.0" mnemonicParsing="false" text="Uneasy Feeling" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="494.0" layoutY="536.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="398.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

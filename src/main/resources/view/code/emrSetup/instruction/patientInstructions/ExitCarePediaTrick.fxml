@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="536.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.instruction.patientInst.ExitCarePediaTrickInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="231.0" prefWidth="527.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="536.0">
+               <children>
+                  <Separator layoutX="163.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="152.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="317.0" layoutY="163.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="421.0" layoutY="163.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="3.0" layoutY="18.0" text="Exitcare Pediatric" />
+                  <Separator layoutY="147.0" prefHeight="2.0" prefWidth="527.0" />
+                  <CheckBox fx:id="exitcareAsthmaPediatric" layoutX="185.0" layoutY="14.0" mnemonicParsing="false" text="asthma-pediatric" />
+                  <CheckBox fx:id="exitcareDiaper" layoutX="185.0" layoutY="34.0" mnemonicParsing="false" text="diaper rash" />
+                  <CheckBox fx:id="exitcareImmunizationSchedule" layoutX="334.0" layoutY="83.0" mnemonicParsing="false" text="immunization schedule-pedia" />
+                  <CheckBox fx:id="exitcareEye" layoutX="185.0" layoutY="74.0" mnemonicParsing="false" text="pink eye" />
+                  <CheckBox fx:id="exitcareUTI" layoutX="185.0" layoutY="92.0" mnemonicParsing="false" text="UTI -pediatric" />
+                  <CheckBox fx:id="exitcareConstiption" layoutX="334.0" layoutY="21.0" mnemonicParsing="false" text="constipation - pediatric" />
+                  <CheckBox fx:id="exitcarefeverpediatric" layoutX="334.0" layoutY="43.0" mnemonicParsing="false" text="fever-pediatric" />
+                  <CheckBox fx:id="exitcareOtitisMedia" layoutX="334.0" layoutY="63.0" mnemonicParsing="false" text="otitis media -child" />
+                  <CheckBox fx:id="exitcareURI" layoutX="186.0" layoutY="55.0" mnemonicParsing="false" text="URI-pediatric" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

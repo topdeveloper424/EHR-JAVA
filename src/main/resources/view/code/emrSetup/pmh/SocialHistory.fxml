@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.pmh.PMHSocialHistoryInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="483.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="431.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="581.0">
+                                 <children>
+                                    <CheckBox fx:id="NoSocialHistoryCheck" layoutX="62.0" layoutY="14.0" mnemonicParsing="false" text="*No Social History" />
+                                    <CheckBox disable="true" layoutX="62.0" layoutY="44.0" mnemonicParsing="false" text="---------------------" />
+                                    <CheckBox fx:id="AlcoholUseCheck" layoutX="62.0" layoutY="78.0" mnemonicParsing="false" text="Alcohol Use" />
+                                    <CheckBox fx:id="SmokingCheck" layoutX="62.0" layoutY="112.0" mnemonicParsing="false" text="Smoking Tobacco Use" />
+                                    <CheckBox fx:id="SocialHistoryCheck" layoutX="62.0" layoutY="146.0" mnemonicParsing="false" text="Social History(Brief)" />
+                                    <CheckBox disable="true" layoutX="62.0" layoutY="179.0" mnemonicParsing="false" text="---------------------" />
+                                    <CheckBox fx:id="DrugUseClaimedCheck" layoutX="62.0" layoutY="212.0" mnemonicParsing="false" text="Drug Use Claimed" />
+                                    <CheckBox fx:id="DrugUseDeniedCheck" layoutX="62.0" layoutY="242.0" mnemonicParsing="false" text="Drug Use Denied" />
+                                    <CheckBox fx:id="SeatBeltRoutinelyCheck" layoutX="237.0" layoutY="47.0" mnemonicParsing="false" text="Seat Belt Routinely-yes" />
+                                    <CheckBox fx:id="LeisureTimeHobbiesCheck" layoutX="62.0" layoutY="303.0" mnemonicParsing="false" text="Leisure Time Hobbies" />
+                                    <CheckBox fx:id="SeatBeltCheck" layoutX="238.0" layoutY="78.0" mnemonicParsing="false" text="Seat Belt-Not Routinely" />
+                                    <CheckBox fx:id="ExerciseCheck" layoutX="62.0" layoutY="272.0" mnemonicParsing="false" text="Exercise" />
+                                    <CheckBox fx:id="LeisureTimeUseCheck" layoutX="62.0" layoutY="338.0" mnemonicParsing="false" text="Leisure Time Use" />
+                                    <CheckBox fx:id="LivingSituationCheck" layoutX="236.0" layoutY="17.0" mnemonicParsing="false" text="Living Situation" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="SkipButton" layoutX="491.0" layoutY="497.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="DoneButton" layoutX="400.0" layoutY="497.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="freeTextButton" layoutX="42.0" layoutY="497.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Free Text" />
+   </children>
+</AnchorPane>

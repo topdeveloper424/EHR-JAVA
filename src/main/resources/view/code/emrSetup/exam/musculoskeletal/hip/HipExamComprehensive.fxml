@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.hip.HipComprehensiveInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="453.0" prefWidth="707.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="151.0" layoutY="1.0" orientation="VERTICAL" prefHeight="360.0" prefWidth="6.0" />
+                  <Button fx:id="doneBtn" layoutX="458.0" layoutY="377.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="570.0" layoutY="377.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-5.0" layoutY="302.0" prefHeight="0.0" prefWidth="834.0" />
+                  <Separator layoutX="5.0" layoutY="126.0" prefHeight="0.0" prefWidth="828.0" />
+                  <Label layoutX="10.0" layoutY="60.0" text="Hip Inspection" />
+                  <CheckBox fx:id="hipInspectionEffusion" layoutX="276.0" layoutY="74.0" mnemonicParsing="false" text="effusion" />
+                  <CheckBox fx:id="hippInspectionSwelling" layoutX="276.0" layoutY="96.0" mnemonicParsing="false" text="swelling" />
+                  <CheckBox fx:id="hippInspectionEcchymosis" layoutX="493.0" layoutY="52.0" mnemonicParsing="false" text="ecchymosis" />
+                  <CheckBox fx:id="hippInspectionErythema" layoutX="493.0" layoutY="74.0" mnemonicParsing="false" text="erythema" />
+                  <CheckBox fx:id="hipInspectionNoAbnormalities" layoutX="276.0" layoutY="52.0" mnemonicParsing="false" text="no abnormalities" />
+                  <Label layoutX="6.0" layoutY="131.0" text="Hip Palpation" />
+                  <Label layoutX="5.0" layoutY="164.0" prefHeight="13.0" prefWidth="65.0" text="Leg Length" />
+                  <CheckBox fx:id="hipInspectionNormal" layoutX="168.0" layoutY="59.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="palpationNormal" layoutX="168.0" layoutY="131.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="-2.0" layoutY="196.0" prefHeight="4.0" prefWidth="707.0" />
+                  <Label layoutX="5.0" layoutY="205.0" prefHeight="15.0" prefWidth="139.0" text="Resting Position" />
+                  <CheckBox fx:id="strengthFlexion" layoutX="277.0" layoutY="259.0" mnemonicParsing="false" text="flexion" />
+                  <Separator layoutX="1.0" layoutY="46.0" prefHeight="0.0" prefWidth="828.0" />
+                  <Label layoutX="10.0" layoutY="16.0" text="Left or Right Hip" />
+                  <RadioButton fx:id="Left" layoutX="277.0" layoutY="17.0" mnemonicParsing="false" text="left">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="hipLeft" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="right" layoutX="491.0" layoutY="18.0" mnemonicParsing="false" text="right" toggleGroup="$hipLeft" />
+                  <CheckBox fx:id="hippInspectionSurgical" layoutX="493.0" layoutY="96.0" mnemonicParsing="false" text="surgical scarring" />
+                  <RadioButton fx:id="palpationNoTenderness" layoutX="277.0" layoutY="131.0" mnemonicParsing="false" text="no tenderness">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="pal" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="legSymmetric" layoutX="277.0" layoutY="155.0" mnemonicParsing="false" text="symmetric">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="leg" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="palpationTenderness" layoutX="495.0" layoutY="129.0" mnemonicParsing="false" text="tenderness" toggleGroup="$pal" />
+                  <RadioButton fx:id="legShorter" layoutX="495.0" layoutY="155.0" mnemonicParsing="false" text="shorter than contralateral length" toggleGroup="$leg" />
+                  <Separator layoutX="2.0" layoutY="151.0" prefHeight="0.0" prefWidth="828.0" />
+                  <CheckBox fx:id="legNormal" layoutX="168.0" layoutY="155.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="legLonger" layoutX="277.0" layoutY="175.0" mnemonicParsing="false" text="Longer than contralateral length" toggleGroup="$leg" />
+                  <Separator layoutX="8.0" layoutY="253.0" prefHeight="4.0" prefWidth="707.0" />
+                  <CheckBox fx:id="restingNormal" layoutX="168.0" layoutY="205.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="restingNeutral" layoutX="277.0" layoutY="201.0" mnemonicParsing="false" text="neutral">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="rest" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="restingExternally" layoutX="495.0" layoutY="201.0" mnemonicParsing="false" text="externally rotated" toggleGroup="$rest" />
+                  <RadioButton fx:id="restingInternally" layoutX="277.0" layoutY="221.0" mnemonicParsing="false" text="internally rotated" toggleGroup="$rest" />
+                  <Label layoutX="8.0" layoutY="260.0" prefHeight="15.0" prefWidth="139.0" text="Strength decreased in" />
+                  <CheckBox fx:id="StrengthNormal" layoutX="168.0" layoutY="260.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="strengthAbduction" layoutX="277.0" layoutY="281.0" mnemonicParsing="false" text="abduction" />
+                  <CheckBox fx:id="strengthExtension" layoutX="495.0" layoutY="259.0" mnemonicParsing="false" text="extension" />
+                  <CheckBox fx:id="strengthAdduction" layoutX="495.0" layoutY="281.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="79.0" text="adduction" />
+                  <Label layoutX="8.0" layoutY="314.0" prefHeight="12.0" prefWidth="63.0" text="Atrophy" />
+                  <CheckBox fx:id="atrophyNormal" layoutX="168.0" layoutY="306.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="atrophyNoAtrophy" layoutX="279.0" layoutY="306.0" mnemonicParsing="false" text="no atrophy present" />
+                  <CheckBox fx:id="atrophyofTheThigh" layoutX="279.0" layoutY="328.0" mnemonicParsing="false" text="atrophy of the thigh" />
+                  <CheckBox fx:id="atrophyofButtocks" layoutX="497.0" layoutY="306.0" mnemonicParsing="false" text="atrophy of the buttocks" />
+                  <Separator layoutX="5.0" layoutY="361.0" prefHeight="0.0" prefWidth="834.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../css/style.css" />
+      <URL value="@../../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

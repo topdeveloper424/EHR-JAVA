@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="604.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.hpi.location.HPiLocationInputController">
+   <children>
+      <TabPane layoutX="-3.0" layoutY="1.0" prefHeight="532.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="EMR Template">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="604.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutX="11.0" layoutY="3.0" prefHeight="488.0" prefWidth="583.0" text="Select Each Item">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="581.0">
+                                 <children>
+                                    <RadioButton fx:id="abdomenRadioBtnL" layoutX="44.0" layoutY="14.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Abdomen" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="AnkleRadioBtnL" layoutX="44.0" layoutY="35.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Ankle" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ArmRadioBtnL" layoutX="44.0" layoutY="56.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Arm" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="BackRadioBtnL" layoutX="44.0" layoutY="77.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Back" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="BladderRadioBtnL" layoutX="44.0" layoutY="100.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Bladder" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="BreastRadioBtnL" layoutX="44.0" layoutY="121.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Breast" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ChestradioBtnL" layoutX="44.0" layoutY="164.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Chest" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="CoccyxRadioBtnL" layoutX="44.0" layoutY="187.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Coccyx" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="EarRadioBtnL" layoutX="44.0" layoutY="209.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Ear" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ElbowRadioBtnL" layoutX="44.0" layoutY="231.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Elbow" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="EyeRadioBtnL" layoutX="44.0" layoutY="255.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Eye" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="FaceRadioBtnL" layoutX="44.0" layoutY="275.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Face" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="FingerRadioBtnL" layoutX="44.0" layoutY="296.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Finger" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="FootRadioBtnL" layoutX="44.0" layoutY="317.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Foot" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ForearmRadioBtnL" layoutX="44.0" layoutY="339.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Forearm" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ForeheadRadioBtnL" layoutX="44.0" layoutY="360.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Forehead" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="GenitalsRadioBtnL" layoutX="44.0" layoutY="381.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Genitals" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="GroinRadioBtnL" layoutX="44.0" layoutY="402.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Groin" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="HandRadioBtnL" layoutX="44.0" layoutY="426.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Hand" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ButtocksRadioBtnL" layoutX="44.0" layoutY="142.0" mnemonicParsing="false" text="L">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Buttocks" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="abdomenRadioBtnR" layoutX="91.0" layoutY="14.0" mnemonicParsing="false" text="R" toggleGroup="$Abdomen" />
+                                    <RadioButton fx:id="AnkleRadioBtnR" layoutX="91.0" layoutY="35.0" mnemonicParsing="false" text="R" toggleGroup="$Ankle" />
+                                    <RadioButton fx:id="ArmRadioBtnR" layoutX="91.0" layoutY="56.0" mnemonicParsing="false" text="R" toggleGroup="$Arm" />
+                                    <RadioButton fx:id="BackRadioBtnR" layoutX="91.0" layoutY="77.0" mnemonicParsing="false" text="R" toggleGroup="$Back" />
+                                    <RadioButton fx:id="BladderRadioBtnR" layoutX="91.0" layoutY="100.0" mnemonicParsing="false" text="R" toggleGroup="$Bladder" />
+                                    <RadioButton fx:id="BreastRadioBtnR" layoutX="91.0" layoutY="121.0" mnemonicParsing="false" text="R" toggleGroup="$Breast" />
+                                    <RadioButton fx:id="ButtocksRadioBtnR" layoutX="91.0" layoutY="142.0" mnemonicParsing="false" text="R" toggleGroup="$Buttocks" />
+                                    <RadioButton fx:id="ChestradioBtnR" layoutX="91.0" layoutY="164.0" mnemonicParsing="false" text="R" toggleGroup="$Chest" />
+                                    <RadioButton fx:id="CoccyxRadioBtnR" layoutX="91.0" layoutY="187.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="29.0" text="R" toggleGroup="$Coccyx" />
+                                    <RadioButton fx:id="EarRadioBtnR" layoutX="91.0" layoutY="209.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="29.0" text="R" toggleGroup="$Ear" />
+                                    <RadioButton fx:id="ElbowRadioBtnR" layoutX="91.0" layoutY="231.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="29.0" text="R" toggleGroup="$Elbow" />
+                                    <RadioButton fx:id="EyeRadioBtnR" layoutX="91.0" layoutY="255.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Eye" />
+                                    <RadioButton fx:id="FaceRadioBtnR" layoutX="91.0" layoutY="275.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Face" />
+                                    <RadioButton fx:id="FingerRadioBtnR" layoutX="91.0" layoutY="296.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Finger" />
+                                    <RadioButton fx:id="FootRadioBtnR" layoutX="91.0" layoutY="317.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Foot" />
+                                    <RadioButton fx:id="ForearmRadioBtnR" layoutX="91.0" layoutY="339.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Forearm" />
+                                    <RadioButton fx:id="ForeheadRadioBtnR" layoutX="91.0" layoutY="360.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Forehead" />
+                                    <RadioButton fx:id="GenitalsRadioBtnR" layoutX="91.0" layoutY="381.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Genitals" />
+                                    <RadioButton fx:id="GroinRadioBtnR" layoutX="91.0" layoutY="402.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Groin" />
+                                    <RadioButton fx:id="HeadRadioBtnR" layoutX="363.0" layoutY="14.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Head" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="HeelradioBtnR" layoutX="363.0" layoutY="35.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Heel" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="HipRadioBtnR" layoutX="363.0" layoutY="56.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Hip" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="KneeRadioBtnR" layoutX="363.0" layoutY="77.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Knee" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="LowerLegRadioBtnR" layoutX="363.0" layoutY="121.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="LowerLeg" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="LungsRadioBtnR" layoutX="363.0" layoutY="142.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Lungs" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="LowerBackRadioBtnR" layoutX="363.0" layoutY="100.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="LowerBack" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="MouthRadioBtnR" layoutX="363.0" layoutY="164.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Mouth" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="NeckRadioBtnR" layoutX="363.0" layoutY="187.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Neck" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="NoseRadioBtnR" layoutX="363.0" layoutY="209.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Nose" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ShoulderRadioBtnR" layoutX="363.0" layoutY="231.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Shoulder" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="SideRadioBtnR" layoutX="363.0" layoutY="255.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Side" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="SkinRadioBtnR" layoutX="363.0" layoutY="275.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Skin" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="tightRadioBtnR" layoutX="363.0" layoutY="296.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Tight" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="throatRadioBtnR" layoutX="363.0" layoutY="317.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Throat" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="thumbRadioBtnR" layoutX="363.0" layoutY="339.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Thumb" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="ToeRadioBtnR" layoutX="363.0" layoutY="360.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Toe" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="VaginaRadioBtnR" layoutX="363.0" layoutY="381.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Vagina" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="WristRadioBtnR" layoutX="363.0" layoutY="402.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Wrist" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="otherLocationRadioBtnR" layoutX="363.0" layoutY="426.0" mnemonicParsing="false" text="R">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="OtherLocation" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="HeadRadioBtnL" layoutX="318.0" layoutY="14.0" mnemonicParsing="false" text="L" toggleGroup="$Head" />
+                                    <RadioButton fx:id="HeelradioBtnL" layoutX="318.0" layoutY="35.0" mnemonicParsing="false" text="L" toggleGroup="$Heel" />
+                                    <RadioButton fx:id="HipRadioBtnL" layoutX="318.0" layoutY="56.0" mnemonicParsing="false" text="L" toggleGroup="$Hip" />
+                                    <RadioButton fx:id="KneeRadioBtnL" layoutX="318.0" layoutY="77.0" mnemonicParsing="false" text="L" toggleGroup="$Knee" />
+                                    <RadioButton fx:id="LowerBackRadioBtnL" layoutX="318.0" layoutY="100.0" mnemonicParsing="false" text="L" toggleGroup="$LowerBack" />
+                                    <RadioButton fx:id="LowerLegRadioBtnL" layoutX="318.0" layoutY="121.0" mnemonicParsing="false" text="L" toggleGroup="$LowerLeg" />
+                                    <RadioButton fx:id="LungsRadioBtnL" layoutX="318.0" layoutY="142.0" mnemonicParsing="false" text="L" toggleGroup="$Lungs" />
+                                    <RadioButton fx:id="MouthRadioBtnL" layoutX="318.0" layoutY="164.0" mnemonicParsing="false" text="L" toggleGroup="$Mouth" />
+                                    <RadioButton fx:id="NeckRadioBtnL" layoutX="318.0" layoutY="187.0" mnemonicParsing="false" text="L" toggleGroup="$Neck" />
+                                    <RadioButton fx:id="NoseRadioBtnL" layoutX="318.0" layoutY="209.0" mnemonicParsing="false" text="L" toggleGroup="$Nose" />
+                                    <RadioButton fx:id="ShoulderRadioBtnL" layoutX="318.0" layoutY="231.0" mnemonicParsing="false" text="L" toggleGroup="$Shoulder" />
+                                    <RadioButton fx:id="SideRadioBtnL" layoutX="318.0" layoutY="255.0" mnemonicParsing="false" text="L" toggleGroup="$Side" />
+                                    <RadioButton fx:id="SkinRadioBtnL" layoutX="318.0" layoutY="275.0" mnemonicParsing="false" text="L" toggleGroup="$Skin" />
+                                    <RadioButton fx:id="tightRadioBtnL" layoutX="318.0" layoutY="296.0" mnemonicParsing="false" text="L" toggleGroup="$Tight" />
+                                    <RadioButton fx:id="throatRadioBtnL" layoutX="318.0" layoutY="317.0" mnemonicParsing="false" text="L" toggleGroup="$Throat" />
+                                    <RadioButton fx:id="thumbRadioBtnL" layoutX="318.0" layoutY="339.0" mnemonicParsing="false" text="L" toggleGroup="$Thumb" />
+                                    <RadioButton fx:id="abdomenRadioBtn" layoutX="144.0" layoutY="14.0" mnemonicParsing="false" text="Abdomen" toggleGroup="$Abdomen" />
+                                    <RadioButton fx:id="AnkleRadioBtn" layoutX="144.0" layoutY="35.0" mnemonicParsing="false" text="Ankle" toggleGroup="$Ankle" />
+                                    <RadioButton fx:id="ArmRadioBtn" layoutX="144.0" layoutY="56.0" mnemonicParsing="false" text="Arm" toggleGroup="$Arm" />
+                                    <RadioButton fx:id="BackRadioBtn" layoutX="144.0" layoutY="77.0" mnemonicParsing="false" text="Back" />
+                                    <RadioButton fx:id="BladderRadioBtn" layoutX="144.0" layoutY="100.0" mnemonicParsing="false" text="Bladder" toggleGroup="$Bladder" />
+                                    <RadioButton fx:id="BreastRadioBtn" layoutX="144.0" layoutY="121.0" mnemonicParsing="false" text="Breast" toggleGroup="$Breast" />
+                                    <RadioButton fx:id="ButtocksRadioBtn" layoutX="144.0" layoutY="142.0" mnemonicParsing="false" text="Buttocks" toggleGroup="$Buttocks" />
+                                    <RadioButton fx:id="ChestradioBtn" layoutX="144.0" layoutY="164.0" mnemonicParsing="false" text="Chest" toggleGroup="$Chest" />
+                                    <RadioButton fx:id="CoccyxRadioBtn" layoutX="144.0" layoutY="187.0" mnemonicParsing="false" text="Coccyx" toggleGroup="$Coccyx" />
+                                    <RadioButton fx:id="EarRadioBtn" layoutX="144.0" layoutY="209.0" mnemonicParsing="false" text="Ear" toggleGroup="$Ear" />
+                                    <RadioButton fx:id="ElbowRadioBtn" layoutX="144.0" layoutY="231.0" mnemonicParsing="false" text="Elbow" />
+                                    <RadioButton fx:id="EyeRadioBtn" layoutX="144.0" layoutY="255.0" mnemonicParsing="false" text="Eye" toggleGroup="$Eye" />
+                                    <RadioButton fx:id="FaceRadioBtn" layoutX="144.0" layoutY="275.0" mnemonicParsing="false" text="Face" />
+                                    <RadioButton fx:id="FingerRadioBtn" layoutX="144.0" layoutY="296.0" mnemonicParsing="false" text="Finger" />
+                                    <RadioButton fx:id="FootRadioBtn" layoutX="144.0" layoutY="317.0" mnemonicParsing="false" text="Foot" />
+                                    <RadioButton fx:id="ForearmRadioBtn" layoutX="144.0" layoutY="339.0" mnemonicParsing="false" text="Forearm" />
+                                    <RadioButton fx:id="ForeheadRadioBtn" layoutX="144.0" layoutY="360.0" mnemonicParsing="false" text="Forehead" toggleGroup="$Forehead" />
+                                    <RadioButton fx:id="GenitalsRadioBtn" layoutX="144.0" layoutY="381.0" mnemonicParsing="false" text="Genitals" toggleGroup="$Genitals" />
+                                    <RadioButton fx:id="GroinRadioBtn" layoutX="144.0" layoutY="402.0" mnemonicParsing="false" text="Groin" toggleGroup="$Groin" />
+                                    <RadioButton fx:id="HandRadioBtn" layoutX="144.0" layoutY="426.0" mnemonicParsing="false" text="Hand" toggleGroup="$Hand" />
+                                    <RadioButton fx:id="HeadRadioBtn" layoutX="415.0" layoutY="14.0" mnemonicParsing="false" text="Head" toggleGroup="$Head" />
+                                    <RadioButton fx:id="HeelradioBtn" layoutX="415.0" layoutY="35.0" mnemonicParsing="false" text="Heel" toggleGroup="$Heel" />
+                                    <RadioButton fx:id="HipRadioBtn" layoutX="415.0" layoutY="56.0" mnemonicParsing="false" text="Hip" toggleGroup="$Hip" />
+                                    <RadioButton fx:id="KneeRadioBtn" layoutX="415.0" layoutY="77.0" mnemonicParsing="false" text="Knee" toggleGroup="$Knee" />
+                                    <RadioButton fx:id="LowerBackRadioBtn" layoutX="415.0" layoutY="100.0" mnemonicParsing="false" text="Lower Back" toggleGroup="$LowerBack" />
+                                    <RadioButton fx:id="LowerLegRadioBtn" layoutX="415.0" layoutY="121.0" mnemonicParsing="false" text="Lower Leg" toggleGroup="$LowerLeg" />
+                                    <RadioButton fx:id="LungsRadioBtn" layoutX="415.0" layoutY="142.0" mnemonicParsing="false" text="Lungs" />
+                                    <RadioButton fx:id="MouthRadioBtn" layoutX="415.0" layoutY="164.0" mnemonicParsing="false" text="Mouth" toggleGroup="$Mouth" />
+                                    <RadioButton fx:id="NeckRadioBtn" layoutX="415.0" layoutY="187.0" mnemonicParsing="false" text="Neck" toggleGroup="$Neck" />
+                                    <RadioButton fx:id="NoseRadioBtn" layoutX="415.0" layoutY="209.0" mnemonicParsing="false" text="Nose" toggleGroup="$Nose" />
+                                    <RadioButton fx:id="ShoulderRadioBtn" layoutX="415.0" layoutY="231.0" mnemonicParsing="false" text="Shoulder" toggleGroup="$Shoulder" />
+                                    <RadioButton fx:id="SideRadioBtn" layoutX="415.0" layoutY="255.0" mnemonicParsing="false" text="Side" toggleGroup="$Side" />
+                                    <RadioButton fx:id="SkinRadioBtn" layoutX="415.0" layoutY="275.0" mnemonicParsing="false" text="Skin" toggleGroup="$Skin" />
+                                    <RadioButton fx:id="tightRadioBtn" layoutX="415.0" layoutY="296.0" mnemonicParsing="false" text="Tight" toggleGroup="$Tight" />
+                                    <RadioButton fx:id="throatRadioBtn" layoutX="415.0" layoutY="317.0" mnemonicParsing="false" text="Throat" toggleGroup="$Throat" />
+                                    <RadioButton fx:id="thumbRadioBtn" layoutX="415.0" layoutY="339.0" mnemonicParsing="false" text="Thumb" toggleGroup="$Thumb" />
+                                    <RadioButton fx:id="ToeRadioBtn" layoutX="415.0" layoutY="360.0" mnemonicParsing="false" text="Toe" toggleGroup="$Toe" />
+                                    <RadioButton fx:id="VaginaRadioBtn" layoutX="415.0" layoutY="381.0" mnemonicParsing="false" text="Vagina" toggleGroup="$Vagina" />
+                                    <RadioButton fx:id="WristRadioBtn" layoutX="415.0" layoutY="402.0" mnemonicParsing="false" text="Wrist" />
+                                    <RadioButton fx:id="otherLocationRadioBtn" layoutX="415.0" layoutY="426.0" mnemonicParsing="false" text="*Other Location" toggleGroup="$OtherLocation" />
+                                    <RadioButton fx:id="ToeRadioBtnL" layoutX="318.0" layoutY="360.0" mnemonicParsing="false" text="L" toggleGroup="$Toe" />
+                                    <RadioButton fx:id="VaginaRadioBtnL" layoutX="318.0" layoutY="381.0" mnemonicParsing="false" text="L" toggleGroup="$Vagina" />
+                                    <RadioButton fx:id="WristRadioBtnL" layoutX="318.0" layoutY="402.0" mnemonicParsing="false" text="L" toggleGroup="$Wrist" />
+                                    <RadioButton fx:id="otherLocationRadioBtnL" layoutX="318.0" layoutY="426.0" mnemonicParsing="false" text="L" toggleGroup="$OtherLocation" />
+                                    <RadioButton fx:id="HandRadioBtnR" layoutX="91.0" layoutY="426.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="29.0" text="R" toggleGroup="$Hand" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="skipBtn" layoutX="493.0" layoutY="543.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Skip">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="doneBtn" layoutX="397.0" layoutY="543.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Done">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

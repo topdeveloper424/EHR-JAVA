@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField accessibleText="First Text field" layoutX="72.0" layoutY="49.0" />
+      <TextField layoutX="72.0" layoutY="14.0" />
+      <Label layoutX="79.0" layoutY="158.0" text="Name" />
+      <Label layoutX="72.0" layoutY="201.0" text="District :" />
+      <TextField layoutX="127.0" layoutY="154.0" />
+      <TextField layoutX="127.0" layoutY="197.0" />
+      <Spinner layoutX="376.0" layoutY="93.0" />
+      <Text fontSmoothingType="LCD" layoutX="365.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EHR" />
+   </children>
+</AnchorPane>

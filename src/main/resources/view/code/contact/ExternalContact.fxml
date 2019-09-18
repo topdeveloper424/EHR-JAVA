@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="644.0" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="5.0" prefHeight="105.0" prefWidth="620.0" text="Contact Organization and/or Name">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="14.0" text="Organization :" />
+                  <Label layoutX="13.0" layoutY="43.0" text="Name-First :" />
+                  <Label layoutX="235.0" layoutY="45.0" text="Middle :" />
+                  <Label layoutX="394.0" layoutY="45.0" text="Last :" />
+                  <TextField layoutX="90.0" layoutY="10.0" />
+                  <TextField layoutX="89.0" layoutY="41.0" prefHeight="25.0" prefWidth="137.0" />
+                  <TextField layoutX="281.0" layoutY="41.0" prefHeight="25.0" prefWidth="106.0" />
+                  <TextField layoutX="425.0" layoutY="42.0" prefHeight="25.0" prefWidth="126.0" />
+                  <TextField layoutX="556.0" layoutY="42.0" prefHeight="25.0" prefWidth="49.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TabPane layoutX="5.0" layoutY="119.0" prefHeight="201.0" prefWidth="620.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="9.0" layoutY="11.0" text="Contact Title :" />
+                        <Label layoutX="8.0" layoutY="44.0" text="Street Address :" />
+                        <Label layoutX="21.0" layoutY="75.0" text="City :" />
+                        <Label layoutX="15.0" layoutY="107.0" text="Telephone :" />
+                        <Label layoutX="268.0" layoutY="107.0" text="Fax :" />
+                        <Label layoutX="266.0" layoutY="44.0" text="2nd :" />
+                        <Label layoutX="263.0" layoutY="75.0" text="State :" />
+                        <Label layoutX="31.0" layoutY="140.0" text="Email" />
+                        <Label layoutX="471.0" layoutY="75.0" text="Zip :" />
+                        <Label layoutX="472.0" layoutY="107.0" text="Ext :" />
+                        <TextField layoutX="94.0" layoutY="8.0" prefHeight="25.0" prefWidth="203.0" />
+                        <TextField layoutX="94.0" layoutY="40.0" />
+                        <TextField layoutX="310.0" layoutY="40.0" />
+                        <TextField layoutX="95.0" layoutY="71.0" />
+                        <TextField layoutX="310.0" layoutY="71.0" />
+                        <TextField layoutX="497.0" layoutY="71.0" prefHeight="25.0" prefWidth="115.0" />
+                        <TextField layoutX="95.0" layoutY="103.0" />
+                        <TextField layoutX="310.0" layoutY="103.0" />
+                        <TextField layoutX="497.0" layoutY="103.0" prefHeight="25.0" prefWidth="114.0" />
+                        <TextField layoutX="95.0" layoutY="136.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Disclosures">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Pending Authorizations">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Internal Notes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="330.0" prefHeight="68.0" prefWidth="620.0" text="Entity Type">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <RadioButton layoutX="7.0" layoutY="10.0" mnemonicParsing="false" text="Unspecified" />
+                  <RadioButton layoutX="99.0" layoutY="10.0" mnemonicParsing="false" text="Provider" />
+                  <RadioButton layoutX="172.0" layoutY="10.0" mnemonicParsing="false" text="Employer" />
+                  <RadioButton layoutX="255.0" layoutY="10.0" mnemonicParsing="false" text="Insurer" />
+                  <RadioButton layoutX="325.0" layoutY="10.0" mnemonicParsing="false" text="Attorney" />
+                  <RadioButton layoutX="400.0" layoutY="10.0" mnemonicParsing="false" text="Government" />
+                  <RadioButton layoutX="506.0" layoutY="10.0" mnemonicParsing="false" text="Other" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <CheckBox layoutX="21.0" layoutY="410.0" mnemonicParsing="false" text="Inactive Contact" />
+      <Button fx:id="selectButton" layoutX="431.0" layoutY="412.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="OK">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="535.0" layoutY="413.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Cancel">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

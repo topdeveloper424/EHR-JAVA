@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.OrganisationGUIController">
+   <children>
+      <VBox layoutX="1.0" layoutY="4.0" prefHeight="403.0" prefWidth="189.0">
+         <children>
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Employer Organization">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect></Button>
+            <Button id="exContainer2" fx:id="divisionBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForDivisionButton" prefHeight="25.0" prefWidth="182.0" text="Divisions">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="deptUnitBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForDepartmentUnitButton" prefHeight="25.0" prefWidth="182.0" text="Department Units">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="jobClassBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForJobClassButton" prefHeight="25.0" prefWidth="181.0" text="Job Classes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="workLocationBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForWorkLocationButton" prefHeight="25.0" prefWidth="183.0" text="Work Locations">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="supervisorBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForSupervisorButton" prefHeight="25.0" prefWidth="180.0" text="Supervisors">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+<!--             <Button fx:id="parentEmpBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Parent Employer Groups">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button> -->
+            <!-- <Button fx:id="jobOrLocationRiskBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Job/Location Risk Aesments">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button> -->
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="181.0" text="Higher Organizations">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="regionBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForRegionButton" prefHeight="25.0" prefWidth="183.0" text="Regions">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="districtBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForDistrictButton" prefHeight="25.0" prefWidth="185.0" text="Districts">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="complexBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForComplexButton" prefHeight="25.0" prefWidth="183.0" text="Complexes">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="companyBtn" alignment="TOP_CENTER" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCompanyButton" prefHeight="25.0" prefWidth="91.0" text="Company">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="37.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="closeBtn" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCloseButton" prefHeight="25.0" prefWidth="91.0" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="37.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="7.0" right="2.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

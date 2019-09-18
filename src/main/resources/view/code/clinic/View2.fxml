@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.clinic.ClinicViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="47.0" text="Search " />
+      <TextField fx:id="searchTextBox" layoutX="61.0" layoutY="29.0" prefHeight="25.0" prefWidth="163.0" />
+      <CheckBox fx:id="includeCheckBox" layoutX="371.0" layoutY="33.0" mnemonicParsing="false" text="Include Inactives" />
+      <Button fx:id="addButton" layoutX="32.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="changeButton" layoutX="110.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="200.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="printButton" layoutX="436.0" layoutY="536.0" mnemonicParsing="false" text="Print">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="506.0" layoutY="534.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="topButton" layoutX="24.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/fast-backward-next-track-button-vector-icon-1200132.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="56.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/media-controls-rewind-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="upButton" layoutX="88.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/Capturebut4.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="120.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/070934-glossy-black-icon-alphanumeric-question-mark1-ps.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="downButton" layoutX="152.0" layoutY="453.0" maxWidth="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/but3.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="184.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/Media-Controls-Fast-Forward-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="buttomButton" layoutX="216.0" layoutY="453.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/but2.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="clinicTable" layoutX="6.0" layoutY="84.0" prefHeight="369.0" prefWidth="569.0">
+         <columns>
+            <TableColumn fx:id="clinicNameCollumn" prefWidth="220.0" text="Clinic or Treatment Site(+)" />
+            <TableColumn fx:id="codeCollumn" prefWidth="164.0" text="Code" />
+            <TableColumn fx:id="districtCollumn" prefWidth="183.0" text="District" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

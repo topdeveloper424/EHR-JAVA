@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="1015.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.shoulder.ShoulderComprehensiveInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="483.0" prefWidth="1001.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0" stylesheets="@../../../../../../css/style.css">
+               <children>
+                  <Separator layoutX="138.0" orientation="VERTICAL" prefHeight="417.0" prefWidth="1.0" />
+                  <Separator layoutX="-1.0" layoutY="225.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Separator layoutY="289.0" prefHeight="1.0" prefWidth="1007.0" />
+                  <Separator layoutY="352.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Label layoutX="3.0" layoutY="206.0" prefHeight="17.0" prefWidth="73.0" text="Crepitus" />
+                  <Label layoutX="9.0" layoutY="237.0" text="Motor Strength" />
+                  <Label layoutX="26.0" layoutY="298.0" text="Light Touch" />
+                  <CheckBox fx:id="ProvocativeYergasonCheck" layoutX="235.0" layoutY="392.0" mnemonicParsing="false" text="Yergason's test" />
+                  <CheckBox fx:id="MotorIntactCheck" layoutX="235.0" layoutY="230.0" mnemonicParsing="false" text="intact in all groups" />
+                  <CheckBox fx:id="MotorFingerCheck" layoutX="419.0" layoutY="230.0" mnemonicParsing="false" text="dimished in finger flexor" />
+                  <CheckBox fx:id="MotoWristExtensiorCheck" layoutX="597.0" layoutY="230.0" mnemonicParsing="false" text="dimished in wrist extensor" />
+                  <CheckBox fx:id="MotorNormalCkeckBox" layoutX="150.0" layoutY="231.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="5.0" layoutY="92.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="AtrophyTrapeziusCheck" layoutX="597.0" layoutY="72.0" mnemonicParsing="false" text="trapezius" />
+                  <CheckBox fx:id="MotoWristFlexorCheck" layoutX="787.0" layoutY="230.0" mnemonicParsing="false" text="dimished in wrist flexor" />
+                  <Button fx:id="doneBtn" layoutX="702.0" layoutY="423.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="802.0" layoutY="425.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="PainSupinationCheck" layoutX="597.0" layoutY="180.0" mnemonicParsing="false" text="supination" />
+                  <CheckBox fx:id="ProvocativeApleyCheck" layoutX="235.0" layoutY="372.0" mnemonicParsing="false" text="Apley scratch test" />
+                  <CheckBox fx:id="ProvocativeNoneCheck" layoutX="235.0" layoutY="353.0" mnemonicParsing="false" text="none" />
+                  <CheckBox fx:id="ProvocativeNeersCheck" layoutX="419.0" layoutY="353.0" mnemonicParsing="false" text="neers" />
+                  <CheckBox fx:id="ProvocativeHawkinsCheck" layoutX="597.0" layoutY="353.0" mnemonicParsing="false" text="Hawkins" />
+                  <CheckBox fx:id="ProvocativeSpurlingCheck" layoutX="787.0" layoutY="353.0" mnemonicParsing="false" text="spurling" />
+                  <Label layoutY="362.0" text="Provocative Maneuvers" />
+                  <Label layoutX="11.0" layoutY="4.0" text="Which Shoulder ?" />
+                  <CheckBox fx:id="ProvocativeDropCheck" layoutX="419.0" layoutY="372.0" mnemonicParsing="false" text="drop arm test" />
+                  <CheckBox fx:id="ProvocativeCrossCheck" layoutX="597.0" layoutY="372.0" mnemonicParsing="false" text="cross arm test" />
+                  <CheckBox fx:id="ProvocativeApprehensionCheck" layoutX="787.0" layoutY="372.0" mnemonicParsing="false" text="apprehension test" />
+                  <CheckBox fx:id="scapulaProminenceCheck" layoutX="597.0" layoutY="30.0" mnemonicParsing="false" text="prominence of the AC joint" />
+                  <Separator layoutX="-4.0" layoutY="414.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Separator layoutX="-2.0" layoutY="24.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <Label layoutX="4.0" layoutY="167.0" text="Pain or Motion" />
+                  <CheckBox fx:id="PainExtensionCheck" layoutX="419.0" layoutY="175.0" mnemonicParsing="false" text="extension" />
+                  <CheckBox fx:id="PainAbductionCheck" layoutX="235.0" layoutY="160.0" mnemonicParsing="false" text="abduction" />
+                  <CheckBox fx:id="PainflexionCheck" layoutX="419.0" layoutY="160.0" mnemonicParsing="false" text="flexion" />
+                  <CheckBox fx:id="PainInternallCheck" layoutX="597.0" layoutY="160.0" mnemonicParsing="false" text="internal rotation" />
+                  <CheckBox fx:id="PainExternalCheck" layoutX="787.0" layoutY="160.0" mnemonicParsing="false" text="external rotation" />
+                  <CheckBox fx:id="PainAllMotionrCheck" layoutX="235.0" layoutY="180.0" mnemonicParsing="false" text="all motion" />
+                  <RadioButton fx:id="CrepitusNotedRadio" layoutX="235.0" layoutY="205.0" mnemonicParsing="false" text="Crepitus is noted">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="crep" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="CrepitusNoNotedRadio" layoutX="419.0" layoutY="206.0" mnemonicParsing="false" text="No crepitus noted" toggleGroup="$crep" />
+                  <CheckBox fx:id="scapulaPartialCheck" layoutX="150.0" layoutY="30.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="MotoBicepsCheck" layoutX="235.0" layoutY="249.0" mnemonicParsing="false" text="dimished in biceps" />
+                  <CheckBox fx:id="MotoTricepsCheck" layoutX="419.0" layoutY="249.0" mnemonicParsing="false" text="dimished in triceps" />
+                  <CheckBox fx:id="MotoIntrinsicsCheck" layoutX="787.0" layoutY="249.0" mnemonicParsing="false" text="dimished in intrinsics" />
+                  <CheckBox fx:id="MotodeltoidsCheck" layoutX="597.0" layoutY="249.0" mnemonicParsing="false" text="dimished in deltoids" />
+                  <CheckBox fx:id="PainNormalCheck" layoutX="150.0" layoutY="163.0" mnemonicParsing="false" text="Normal" />
+                  <Label layoutX="12.0" layoutY="30.0" text="Scapula" />
+                  <CheckBox fx:id="scapulaNoWingingCheck" layoutX="235.0" layoutY="30.0" mnemonicParsing="false" text="no winging of scapula" />
+                  <CheckBox fx:id="scapulaWingingCheck" layoutX="419.0" layoutY="30.0" mnemonicParsing="false" text="scapular winging" />
+                  <Separator layoutX="1.0" layoutY="50.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="AtrophyNoCheck" layoutX="235.0" layoutY="54.0" mnemonicParsing="false" text="no" />
+                  <CheckBox fx:id="AtrophyMildCheck" layoutX="419.0" layoutY="53.0" mnemonicParsing="false" text="mild" />
+                  <CheckBox fx:id="AtrophyModerateCheck" layoutX="597.0" layoutY="53.0" mnemonicParsing="false" text="moderate" />
+                  <CheckBox fx:id="AtrophySevereCheck" layoutX="787.0" layoutY="54.0" mnemonicParsing="false" text="severe" />
+                  <CheckBox fx:id="AtrophySupraspinatusCheck" layoutX="235.0" layoutY="71.0" mnemonicParsing="false" text="supraspinatus" />
+                  <CheckBox fx:id="AtrophyDeltoidCheck" layoutX="419.0" layoutY="72.0" mnemonicParsing="false" text="deltiod" />
+                  <Label layoutX="7.0" layoutY="58.0" text="Atrophy" />
+                  <Label layoutX="11.0" layoutY="95.0" text="Other Abnormalities" />
+                  <CheckBox fx:id="AbnormalitiesEcchymosisCheck" layoutX="235.0" layoutY="94.0" mnemonicParsing="false" text="ecchymosis" />
+                  <CheckBox fx:id="AbnormalitiesErythemalCheck" layoutX="419.0" layoutY="95.0" mnemonicParsing="false" text="erythema" />
+                  <CheckBox fx:id="AbnormalitiesSwellingCheck" layoutX="597.0" layoutY="94.0" mnemonicParsing="false" text="swelling" />
+                  <CheckBox fx:id="AbnormalitiesSurgicalCheck" layoutX="787.0" layoutY="94.0" mnemonicParsing="false" text="surgical scarring" />
+                  <CheckBox fx:id="TendernessACCheck" layoutX="235.0" layoutY="119.0" mnemonicParsing="false" text="the AC joint" />
+                  <Separator layoutX="4.0" layoutY="114.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="TendernessTheHeadCheck" layoutX="419.0" layoutY="118.0" mnemonicParsing="false" text="the head of the biceps" />
+                  <CheckBox fx:id="TendernessDeltoidCheck" layoutX="597.0" layoutY="118.0" mnemonicParsing="false" text="the deltoid" />
+                  <CheckBox fx:id="TendernessSupraspinatusCheck" layoutX="787.0" layoutY="119.0" mnemonicParsing="false" text="the supraspinatus" />
+                  <CheckBox fx:id="TendernessNormalCheck" layoutX="150.0" layoutY="120.0" mnemonicParsing="false" text="Normal" />
+                  <Separator layoutX="11.0" layoutY="158.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Label layoutX="17.0" layoutY="123.0" text="Tenderness" />
+                  <Separator layoutX="1.0" layoutY="202.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="MotorRotationCheck" layoutX="235.0" layoutY="268.0" mnemonicParsing="false" text="dimished in rotation cuff" />
+                  <CheckBox fx:id="MotoTrapeziusCheck" layoutX="419.0" layoutY="268.0" mnemonicParsing="false" text="dimished in trapezius" />
+                  <CheckBox fx:id="LightNormalCheck" layoutX="150.0" layoutY="292.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="PainPronationCheck" layoutX="787.0" layoutY="180.0" mnemonicParsing="false" text="pronation" />
+                  <CheckBox fx:id="AtrophyNormalCheck" layoutX="150.0" layoutY="54.0" mnemonicParsing="false" text="Normal" />
+                  <RadioButton fx:id="leftRadio" layoutX="235.0" layoutY="3.0" mnemonicParsing="false" text="left">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="shoulder" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rightRadio" layoutX="419.0" layoutY="3.0" mnemonicParsing="false" text="right" toggleGroup="$shoulder" />
+                  <CheckBox fx:id="TendernesstrapeziusCheck" layoutX="235.0" layoutY="138.0" mnemonicParsing="false" text="the trapezius" />
+                  <CheckBox fx:id="TendernessPosteriorCheck" layoutX="419.0" layoutY="137.0" mnemonicParsing="false" text="the posterior joint space" />
+                  <CheckBox fx:id="TendernessServicalSpineCheck" layoutX="597.0" layoutY="137.0" mnemonicParsing="false" text="the servical spine" />
+                  <CheckBox fx:id="TendernessServicalParaspinalCheck" layoutX="787.0" layoutY="138.0" mnemonicParsing="false" text="the servical paraspinal muscle" />
+                  <CheckBox fx:id="LightIntactCheck" layoutX="235.0" layoutY="292.0" mnemonicParsing="false" text="intact in all dermatomes" />
+                  <CheckBox fx:id="LightC3Check" layoutX="419.0" layoutY="292.0" mnemonicParsing="false" text="decreased in C3" />
+                  <CheckBox fx:id="LightC4Check" layoutX="597.0" layoutY="292.0" mnemonicParsing="false" text="decreased in C4" />
+                  <CheckBox fx:id="LightC6Check" layoutX="235.0" layoutY="311.0" mnemonicParsing="false" text="decreased in C6" />
+                  <CheckBox fx:id="LightC7Check" layoutX="419.0" layoutY="311.0" mnemonicParsing="false" text="decreased in C7" />
+                  <CheckBox fx:id="LightC8Check" layoutX="597.0" layoutY="311.0" mnemonicParsing="false" text="decreased in C8" />
+                  <CheckBox fx:id="LightT2Check" layoutX="235.0" layoutY="330.0" mnemonicParsing="false" text="decreased in T2" />
+                  <CheckBox fx:id="LightT3Check" layoutX="419.0" layoutY="330.0" mnemonicParsing="false" text="decreased in T3" />
+                  <CheckBox fx:id="AbnormalitiesNormalCheck" layoutX="150.0" layoutY="95.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="LightC5Check" layoutX="787.0" layoutY="293.0" mnemonicParsing="false" text="decreased in C5" />
+                  <CheckBox fx:id="LightT1Check" layoutX="787.0" layoutY="312.0" mnemonicParsing="false" text="decreased in T1" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

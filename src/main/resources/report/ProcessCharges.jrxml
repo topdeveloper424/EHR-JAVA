@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProcessCharges" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="64471024-00fb-43e7-825d-a246f2e155a1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.callouts" value="callouts.1.fg=0,0,0\n callouts.1.bg=255,255,0\n "/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="overrideFee" class="java.lang.String"/>
+	<field name="billingQty" class="java.lang.String"/>
+	<field name="activityDate" class="java.lang.String"/>
+	<field name="medicalActivity.cptCode4Hcpcs.code" class="java.lang.Object"/>
+	<field name="medicalActivity.activityType" class="java.lang.Object"/>
+	<field name="patient.company.name" class="java.lang.Object"/>
+	<field name="patient.clinic.name" class="java.lang.Object"/>
+	<field name="patient.company.billingAccount.name" class="java.lang.Object"/>
+	<field name="patient.company.billingAccount.acType" class="java.lang.Object"/>
+	<field name="patient.patientName.firstName" class="java.lang.Object"/>
+	<variable name="Total" class="java.lang.Integer">
+		<variableExpression><![CDATA[(Integer.parseInt($F{billingQty}))*(Integer.parseInt($F{overrideFee}))]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer(0)]]></initialValueExpression>
+	</variable>
+	<variable name="TotalBill" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[Integer.parseInt($F{billingQty})]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer(0)]]></initialValueExpression>
+	</variable>
+	<variable name="TotalVal" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$V{Total}]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer(0)]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="20" width="502" height="36" forecolor="#8080C0" uuid="d63f47df-8c8e-4ace-a973-f860700365cd"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[        Charge Processing Reconciliation  Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="-10" y="30" width="70" height="30" uuid="6a8c401b-75b8-492e-9eb7-93ddfb3c00e6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="-10" width="170" height="30" uuid="924fe070-2f81-4218-9759-1ff2299c51ef"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.clinic.name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="40" width="70" height="20" uuid="80bd8880-1510-47b3-90a9-9f0ecd549223"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="26" width="70" height="20" uuid="78b9f95d-d569-455d-80e7-9452df29ff57"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Patient Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="46" width="70" height="13" uuid="1f723812-fde9-41b2-87a2-5f9addea4d00"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="40" width="70" height="20" uuid="a3dbbea7-f45a-46b8-b864-323a5f9d8147"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="48" height="18" uuid="e75056f0-deb7-46e5-b547-4edd89e02f2c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clinic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="41" width="61" height="18" uuid="c4d25942-7d76-4459-9535-4cf0ec09d943"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Company]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="82" splitType="Stretch">
+			<textField>
+				<reportElement x="294" y="52" width="70" height="18" uuid="43215378-f5aa-47a4-aa77-31269600e189"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billingQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="55" width="80" height="18" uuid="8086b60d-750d-403f-9e41-967a4d0b384b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{overrideFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="50" width="100" height="28" uuid="41de8da9-5686-4b63-912a-43a91773160e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.activityType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="50" width="90" height="28" uuid="25d6a7e0-5cb0-480f-8a47-f36e3cfbb3cd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicalActivity.cptCode4Hcpcs.code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="52" width="70" height="30" uuid="749654e2-5516-424e-abaf-613ec575fdbd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{activityDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="51" width="70" height="20" uuid="599abd18-4863-4f43-84d9-65cb0e7a1f82"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Total}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="31" width="560" height="21" backcolor="#408080" uuid="fbdf3f74-6537-44d7-a54f-fee20a3aa8eb"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="486" y="31" width="69" height="24" uuid="8ebc4b1e-6cb8-4e3b-93e6-fe6890e37c72"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="30" width="70" height="21" uuid="2ed04b8d-6ff9-43ca-b8a5-d4a19518d41d"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Work Comp Current Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="31" width="100" height="21" uuid="67cd3068-7ce1-4e4e-9251-117b21b877c8"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Billing Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="31" width="100" height="20" uuid="8fddebef-57e8-4ead-90b7-6ace5a439fba"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Medical Activity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="31" width="55" height="21" uuid="e7eb7f7f-1905-4f42-bee2-0c422465f6f2"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CPT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="30" width="73" height="27" uuid="8e3dc210-8ec2-496c-93dd-fabf3c730726"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Service Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="0" width="90" height="20" uuid="337530fb-72f2-4041-acda-25773b81570e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="-1" width="70" height="23" uuid="b2b8f748-c070-4e7f-b865-57c3f5f4ea8e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.clinic.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="70" height="22" uuid="2ee79b2e-d4ab-4e0e-aaf9-21e19a500d69"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.billingAccount.acType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="90" height="16" uuid="7fb8c0e3-c01e-43bb-8d06-e7e7c390d49f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.patientName.firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="16" width="100" height="14" uuid="8dbcfb56-470e-43b8-a0cd-2ae6121ebf6b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.company.billingAccount.name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="53" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="3" width="559" height="21" backcolor="#408080" uuid="29036a5b-a7fa-41e4-bc98-8b3dc71ac979"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="3" width="160" height="20" uuid="1cf36eef-84ce-4f3d-bf1b-44cc3b796873"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Visit Charges SubTotal:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="298" y="4" width="66" height="18" uuid="bd35768b-a411-4dce-9bfb-8cacfc3b2571"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalBill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="5" width="69" height="17" uuid="38b4630a-4fcc-494d-b97d-ba9ec1959c19"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalVal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement x="186" y="0" width="180" height="20" uuid="e9fcb3ac-b7ef-4cfe-9e8c-215468841070"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBTOTAL FOR CLINIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="70" height="20" uuid="47ecc515-53d8-4523-a714-780093a254da"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clinic:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="70" height="20" uuid="5be83815-1945-4734-b08e-763c4096e6ee"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="180" y="30" width="181" height="2" uuid="fea5dd4d-571b-428f-a440-4626b138ba39"/>
+			</line>
+			<textField>
+				<reportElement x="190" y="89" width="100" height="22" uuid="3b61cea4-926e-45ac-ab3d-217960d9c826"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalVal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="62" width="169" height="20" uuid="97afe972-a988-428e-9760-1e019420524b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. of Charges Processed]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="60" width="100" height="30" uuid="db17babf-87ab-4b15-807a-8a4abb8c2ac9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalBill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="32" width="130" height="30" uuid="58579651-6667-48f0-b33b-007d9bac32eb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{patient.clinic.name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

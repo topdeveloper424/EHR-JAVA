@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DivisionReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="894be2d8-8762-4617-b2eb-9957a645dec6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.String"/>
+	<field name="descrip" class="java.lang.String"/>
+	<field name="manager" class="java.lang.String"/>
+	<field name="address.phone" class="java.lang.Object"/>
+	<field name="address.fax" class="java.lang.String"/>
+	<field name="address.email" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="7" width="842" height="30" forecolor="#27D6E3" uuid="a823f8ba-fb57-484f-9ee3-e783815b7bb6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="22" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Division Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="567" y="5" width="37" height="20" uuid="1639bd65-3cc5-4040-9d17-a8b0db2c7ffa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="676" y="5" width="38" height="23" uuid="5cc3b18c-f00c-4b79-8823-17d4b1b301d4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Time:]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="718" y="7" width="28" height="23" uuid="874119fa-4cea-4269-9952-b8d0de8708d7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="610" y="7" width="62" height="18" uuid="01ec64f3-1f58-425e-abe2-e60924008f0f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="80" height="20" uuid="300b2a19-ee99-4627-8e2b-31da55a7dba5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Division Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="10" width="100" height="30" uuid="4059d251-20aa-4217-9a10-e16460d7c034"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="10" width="100" height="30" uuid="bbd41647-938e-42ac-812d-6882d7d78d33"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="10" width="100" height="30" uuid="9002655e-36e4-4921-a59c-864ebfbde5b7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Telephone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="100" height="30" uuid="9609d7b8-4ca2-48e2-a3dd-a43aa4c94699"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Fax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="10" width="100" height="30" uuid="786e9777-75a6-4e1c-ab17-a7dc72cde75e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="30" uuid="9cd0cfec-5d40-4043-ac72-ea7d551b1c80"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="4b032a8f-6c73-4b97-a125-00b42f835c34"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descrip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="2" width="100" height="30" uuid="012e9053-03c5-48c7-8e06-321c7c3299fc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{manager}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="2" width="100" height="30" uuid="fc460164-932a-4bae-9e1b-4426e9669d7e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{address.phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="5f494265-5f1a-4ae8-8280-3085f529164c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{address.fax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="2" width="100" height="30" uuid="849d9e38-dfab-4bdb-b8ec-0f94ffdb1225"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{address.email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

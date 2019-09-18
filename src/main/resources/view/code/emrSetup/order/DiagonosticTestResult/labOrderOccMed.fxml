@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.order.diagonostic.DiagonosticLabOrderOccMedInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="8.0" prefHeight="337.0" prefWidth="561.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="10.0" text="Hematologic Tests" />
+                  <Separator layoutX="141.0" layoutY="1.0" orientation="VERTICAL" prefHeight="258.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="316.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="417.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="-6.0" layoutY="48.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="cbcWithCheck" layoutX="160.0" layoutY="3.0" mnemonicParsing="false" text="CBC with differential" />
+                  <CheckBox fx:id="hemoglobinCheck" layoutX="358.0" layoutY="5.0" mnemonicParsing="false" text="Hemoglobin / Hematocrit" />
+                  <CheckBox fx:id="stoolForCheck" layoutX="160.0" layoutY="24.0" mnemonicParsing="false" text="Stool for Occult Blood" />
+                  <CheckBox fx:id="hematologicLipidPanelCheck" layoutX="358.0" layoutY="25.0" mnemonicParsing="false" text="Lipid Panel" />
+                  <CheckBox fx:id="HepaticPanelCheck" layoutX="159.0" layoutY="54.0" mnemonicParsing="false" text="Hepatic Panel" />
+                  <CheckBox fx:id="bloodLeadCheck" layoutX="356.0" layoutY="73.0" mnemonicParsing="false" text="Blood Lead_ZPP" />
+                  <CheckBox fx:id="tshCheck" layoutX="159.0" layoutY="75.0" mnemonicParsing="false" text="Thyroid (TSH)" />
+                  <CheckBox fx:id="chemistryLipidPanelCheck" layoutX="357.0" layoutY="53.0" mnemonicParsing="false" text="Lipid Panel" />
+                  <Separator layoutX="-2.0" layoutY="97.0" prefHeight="0.0" prefWidth="578.0" />
+                  <CheckBox fx:id="urineDipCheck" layoutX="160.0" layoutY="102.0" mnemonicParsing="false" text="Urine Dip" />
+                  <CheckBox fx:id="urineDrugCheck" layoutX="357.0" layoutY="121.0" mnemonicParsing="false" text="Urine Drug Screening 5 Panel" />
+                  <CheckBox fx:id="urtineHcgCheck" layoutX="160.0" layoutY="122.0" mnemonicParsing="false" text="Urine HCG(Pregnency Tests)" />
+                  <CheckBox fx:id="UrineMicroscopicCheck" layoutX="358.0" layoutY="101.0" mnemonicParsing="false" text="Urine Microscopic" />
+                  <CheckBox fx:id="urine10PanelCheck" layoutX="160.0" layoutY="143.0" mnemonicParsing="false" text="Urine 10 Panel" />
+                  <CheckBox fx:id="ppdCheck" layoutX="159.0" layoutY="171.0" mnemonicParsing="false" text="PPD" />
+                  <CheckBox fx:id="hepCCheck" layoutX="356.0" layoutY="190.0" mnemonicParsing="false" text="Hep C S Ab" />
+                  <CheckBox fx:id="hebBCheck" layoutX="159.0" layoutY="192.0" mnemonicParsing="false" text="Heb B SAb" />
+                  <CheckBox fx:id="hepACheck" layoutX="357.0" layoutY="170.0" mnemonicParsing="false" text="Hep A Ab" />
+                  <CheckBox fx:id="VaricellaCheck" layoutX="159.0" layoutY="213.0" mnemonicParsing="false" text="Varicella" />
+                  <CheckBox fx:id="RubellaCheck" layoutX="356.0" layoutY="232.0" mnemonicParsing="false" text="Rubella" />
+                  <CheckBox fx:id="mumpsCheck" layoutX="159.0" layoutY="234.0" mnemonicParsing="false" text="Mumps" />
+                  <CheckBox fx:id="MeaslesCheck" layoutX="357.0" layoutY="212.0" mnemonicParsing="false" text="Measles" />
+                  <Separator layoutY="165.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Separator layoutX="-2.0" layoutY="255.0" prefHeight="0.0" prefWidth="578.0" />
+                  <Label layoutX="2.0" layoutY="63.0" text="Chemistry Tests" />
+                  <Label layoutX="14.0" layoutY="123.0" text="Urine Tests" />
+                  <Label layoutX="3.0" layoutY="191.0" text="Blood Immunologic Titers" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="677.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.billingAccounts.BillingAccountViewController">
+   <children>
+      <Label layoutX="41.0" layoutY="16.0" text="Search :" />
+      <TextField fx:id="searchTextField" layoutX="93.0" layoutY="12.0" prefHeight="25.0" prefWidth="185.0" />
+      <Button fx:id="addButton" layoutX="41.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Add">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="changeButton" layoutX="128.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Change">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/blk_tri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="221.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Delete">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/del.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="selectButton" layoutX="339.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Select">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/check.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="printButton" layoutX="542.0" layoutY="367.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="73.0" text="Print">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/p.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="closeButton" layoutX="427.0" layoutY="367.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Close">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../image/crossout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="billingAccountTable" layoutX="14.0" layoutY="47.0" onMouseClicked="#doubleClick" prefHeight="311.0" prefWidth="647.0">
+         <columns>
+            <TableColumn fx:id="accountNameCol" prefWidth="266.0" text="Account Name Address" />
+            <TableColumn fx:id="codeCol" prefWidth="118.0" text="Code Type" />
+            <TableColumn prefWidth="109.0" text="Ins Type RC" />
+            <TableColumn fx:id="phoneCol" prefWidth="169.0" text="Phone" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

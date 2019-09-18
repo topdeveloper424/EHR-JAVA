@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="486.0" stylesheets="@../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.patient.SearchPatientController">
+   <children>
+      <CheckBox layoutX="105.0" layoutY="18.0" mnemonicParsing="false" text="All Companies" />
+      <Button layoutX="286.0" layoutY="14.0" mnemonicParsing="false" text="Company" />
+      <Label layoutX="140.0" layoutY="48.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="47.0" layoutY="92.0" prefHeight="117.0" prefWidth="399.0" text="Search Name">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="58.0" layoutY="14.0" prefHeight="60.0" prefWidth="329.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Last Name" />
+                        <Label text="First Name" GridPane.rowIndex="1" />
+                        <TextField fx:id="lastNameText" onKeyTyped="#onKeyTypeLastName" GridPane.columnIndex="1" />
+                        <TextField fx:id="firstNameText" onKeyTyped="#onKeyTypeFirstName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <DatePicker fx:id="dobDateText" layoutX="267.0" layoutY="236.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="44.0" layoutY="273.0" prefHeight="159.0" prefWidth="411.0" text="Select by Identification">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="34.0" prefHeight="85.0" prefWidth="28.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="- or -" />
+                        <Label text="- or -" GridPane.rowIndex="1" />
+                        <Label text="- or -" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="57.0" layoutY="7.0" prefHeight="112.0" prefWidth="338.0">
+                    <columnConstraints>
+                      <ColumnConstraints />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Patient System ID" GridPane.columnIndex="1" />
+                        <Label text="Social Security" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Medical ID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Medical Rec No" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="padSystemId" editable="false" GridPane.columnIndex="2" />
+                        <TextField fx:id="socialSecurityNo" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Label layoutX="99.0" layoutY="237.0" text="Search Birth Date" />
+
+      <Button fx:id="searchBtn" layoutX="63.0" layoutY="444.0" mnemonicParsing="false" onKeyPressed="#enterKeyPressedFoSearchListButton" text="Search List" />
+      <GridPane layoutX="151.0" layoutY="475.0" prefHeight="25.0" prefWidth="174.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="104.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="96.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="okBtn" mnemonicParsing="false" onKeyPressed="#enterKeyPressedFoOkButton" prefHeight="25.0" prefWidth="69.0" text="OK">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onKeyPressed="#enterKeyPressedFoCancelButton" prefHeight="25.0" prefWidth="80.0" text="Cancel" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

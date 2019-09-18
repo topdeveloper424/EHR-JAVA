@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.skin.skinDermGlobal.SkinDermGlobalInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="697.0" prefWidth="1083.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="689.0" prefWidth="999.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="40.0" prefHeight="0.0" prefWidth="1127.0" />
+                  <Label layoutX="9.0" layoutY="4.0" text="Type of Abnormality" />
+                  <Label layoutX="8.0" layoutY="52.0" text="coloration" />
+                  <Separator layoutX="149.0" layoutY="1.0" orientation="VERTICAL" prefHeight="606.0" prefWidth="3.0" />
+                  <Button fx:id="doneBtn" layoutX="850.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="951.0" layoutY="619.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="7.0" layoutY="82.0" prefHeight="8.0" prefWidth="1001.0" />
+                  <Separator layoutX="7.0" layoutY="143.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Separator layoutX="-1.0" layoutY="225.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Separator layoutX="4.0" layoutY="264.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Label layoutX="11.0" layoutY="149.0" prefHeight="12.0" prefWidth="153.0" text="Elevated papular&lt;.5cm" />
+                  <Label layoutX="11.0" layoutY="269.0" text="Pustule" />
+                  <Label layoutX="11.0" layoutY="99.0" prefHeight="16.0" prefWidth="88.0" text="Flat macular" />
+                  <CheckBox fx:id="hypopigmentedCheck" layoutX="230.0" layoutY="43.0" mnemonicParsing="false" text="hypopigmented" />
+                  <CheckBox fx:id="yellowCheck" layoutX="392.0" layoutY="60.0" mnemonicParsing="false" text="yellow" />
+                  <CheckBox fx:id="whiteCheck" layoutX="576.0" layoutY="60.0" mnemonicParsing="false" text="white " />
+                  <CheckBox fx:id="brownCheck" layoutX="230.0" layoutY="60.0" mnemonicParsing="false" text="brown" />
+                  <CheckBox fx:id="violaceousCheck" layoutX="914.0" layoutY="43.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" text="violaceous" />
+                  <CheckBox fx:id="flatHyperpigmentedCheck" layoutX="392.0" layoutY="90.0" mnemonicParsing="false" text="hyperpigmented" />
+                  <CheckBox fx:id="skinCheck" layoutX="392.0" layoutY="124.0" mnemonicParsing="false" text="skin folds" />
+                  <CheckBox fx:id="bluishCheck" layoutX="576.0" layoutY="90.0" mnemonicParsing="false" text="bluish(Mongolian spot)" />
+                  <CheckBox fx:id="regularBordersCheck" layoutX="231.0" layoutY="124.0" mnemonicParsing="false" text="regular borders" />
+                  <CheckBox fx:id="cafeCheck" layoutX="775.0" layoutY="90.0" mnemonicParsing="false" text="cafe au lait spot" />
+                  <CheckBox fx:id="irreguralCheck" layoutX="576.0" layoutY="107.0" mnemonicParsing="false" text="irregural borders" />
+                  <CheckBox fx:id="plaqueCheck" layoutX="392.0" layoutY="148.0" mnemonicParsing="false" text="plaque" />
+                  <CheckBox fx:id="insectBiteCheck" layoutX="576.0" layoutY="148.0" mnemonicParsing="false" text="insect bite" />
+                  <CheckBox fx:id="scalyCheck" layoutX="775.0" layoutY="148.0" mnemonicParsing="false" text="scaly eczematous" />
+                  <CheckBox fx:id="wartyCheck" layoutX="230.0" layoutY="165.0" mnemonicParsing="false" text="warty" />
+                  <CheckBox fx:id="papuleCheck" layoutX="1011.0" layoutY="21.0" mnemonicParsing="false" text="papule" />
+                  <CheckBox fx:id="redCheck" layoutX="392.0" layoutY="43.0" mnemonicParsing="false" text="red" />
+                  <CheckBox fx:id="blackCheck" layoutX="576.0" layoutY="43.0" mnemonicParsing="false" text="black" />
+                  <CheckBox fx:id="irregularBorderCheck" layoutX="392.0" layoutY="165.0" mnemonicParsing="false" text="irregular border" />
+                  <CheckBox fx:id="seborrheicCheck" layoutX="576.0" layoutY="165.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="147.0" text="seborrheic keratosis" />
+                  <Separator layoutX="-2.0" layoutY="183.0" prefHeight="6.0" prefWidth="1007.0" />
+                  <Separator layoutX="-1.0" layoutY="305.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="blueCheck" layoutX="775.0" layoutY="62.0" mnemonicParsing="false" text="blue" />
+                  <CheckBox fx:id="PapularhemangiomaCheck" layoutX="775.0" layoutY="166.0" mnemonicParsing="false" text="hemangioma" />
+                  <CheckBox fx:id="scabiformCheck" layoutX="915.0" layoutY="148.0" mnemonicParsing="false" text="scabiform" />
+                  <Label layoutX="11.0" layoutY="197.0" prefHeight="16.0" prefWidth="161.0" text="Elevated plaquelike&lt;.5cm" />
+                  <CheckBox fx:id="confluenceCheck" layoutX="230.0" layoutY="189.0" mnemonicParsing="false" text="confluence of papules" />
+                  <CheckBox fx:id="psoriaticCheck" layoutX="230.0" layoutY="207.0" mnemonicParsing="false" text="psoriatic" />
+                  <CheckBox fx:id="eczemoidCheck" layoutX="392.0" layoutY="189.0" mnemonicParsing="false" text="eczemoid" />
+                  <CheckBox fx:id="TineaCheck" layoutX="392.0" layoutY="207.0" mnemonicParsing="false" text="Tinea-like(versicolor/corpor)" />
+                  <CheckBox fx:id="seborrheicCheck" layoutX="576.0" layoutY="189.0" mnemonicParsing="false" text="seborrheic" />
+                  <CheckBox fx:id="lichenifiedCheck" layoutX="576.0" layoutY="207.0" mnemonicParsing="false" text="lichenified" />
+                  <Label layoutX="10.0" layoutY="233.0" prefHeight="12.0" prefWidth="153.0" text="Elevated solid&gt;.5cm" />
+                  <CheckBox fx:id="tumorousCheck" layoutX="230.0" layoutY="227.0" mnemonicParsing="false" text="tumorous(large nodule)" />
+                  <CheckBox fx:id="LeftForearmPartExtremity" layoutX="230.0" layoutY="244.0" mnemonicParsing="false" text="lipomatous" />
+                  <CheckBox fx:id="vegetatedCheck" layoutX="392.0" layoutY="230.0" mnemonicParsing="false" text="vegetated borders" />
+                  <CheckBox fx:id="wartyCheck" layoutX="392.0" layoutY="248.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" text="warty" />
+                  <CheckBox fx:id="melanomatousCheck" layoutX="576.0" layoutY="230.0" mnemonicParsing="false" text="melanomatous" />
+                  <CheckBox fx:id="carcinomatousCheck" layoutX="577.0" layoutY="248.0" mnemonicParsing="false" text="carcinomatous" />
+                  <CheckBox fx:id="XanthomatousCheck" layoutX="775.0" layoutY="230.0" mnemonicParsing="false" text="Xanthomatous" />
+                  <CheckBox fx:id="hemangiomaCheck" layoutX="775.0" layoutY="248.0" mnemonicParsing="false" text="hemangioma" />
+                  <CheckBox fx:id="actiniformCheck" layoutX="230.0" layoutY="268.0" mnemonicParsing="false" text="actiniform(acne)" />
+                  <CheckBox fx:id="dyshidroticCheck" layoutX="230.0" layoutY="286.0" mnemonicParsing="false" text="dyshidrotic,scaly" />
+                  <CheckBox fx:id="folliculitisCheck" layoutX="392.0" layoutY="268.0" mnemonicParsing="false" text="folliculitis" />
+                  <CheckBox fx:id="keratoticCheck" layoutX="392.0" layoutY="286.0" mnemonicParsing="false" text="keratotic" />
+                  <CheckBox fx:id="impetiginousCheck" layoutX="576.0" layoutY="268.0" mnemonicParsing="false" text="impetiginous(impetigo)" />
+                  <CheckBox fx:id="infectedCheck" layoutX="576.0" layoutY="286.0" mnemonicParsing="false" text="infected(scabiform)" />
+                  <Separator layoutX="5.0" layoutY="333.0" prefHeight="4.0" prefWidth="1015.0" />
+                  <Label layoutX="12.0" layoutY="312.0" prefHeight="16.0" prefWidth="107.0" text="vesicle or Bulla" />
+                  <CheckBox fx:id="eczemaCheck" layoutX="230.0" layoutY="314.0" mnemonicParsing="false" text="eczema" />
+                  <CheckBox fx:id="vesicularCheck" layoutX="392.0" layoutY="314.0" mnemonicParsing="false" text="vesicular" />
+                  <CheckBox fx:id="herpeticCheck" layoutX="576.0" layoutY="314.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="83.0" text="herpetic" />
+                  <CheckBox fx:id="maculeCheck" layoutX="230.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="62.0" text="macule" />
+                  <CheckBox fx:id="pustuleCheck" layoutX="230.0" layoutY="18.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="63.0" text="pustule" />
+                  <CheckBox fx:id="scaleCheck" layoutX="392.0" layoutY="3.0" mnemonicParsing="false" text="scale or crust" />
+                  <CheckBox fx:id="vesicleCheck" layoutX="1011.0" layoutY="1.0" mnemonicParsing="false" text="vesicle" />
+                  <CheckBox fx:id="erosionCheck" layoutX="392.0" layoutY="20.0" mnemonicParsing="false" text="erosion,ulcer or fissure" />
+                  <CheckBox fx:id="plaqueTypeCheck" layoutX="576.0" layoutY="5.0" mnemonicParsing="false" text="plaque" />
+                  <CheckBox fx:id="bullaCheck" layoutX="576.0" layoutY="22.0" mnemonicParsing="false" text="bulla" />
+                  <CheckBox fx:id="atrophyCheck" layoutX="914.0" layoutY="22.0" mnemonicParsing="false" text="atrophy" />
+                  <CheckBox fx:id="noduleCheck" layoutX="774.0" layoutY="1.0" mnemonicParsing="false" text="nodule" />
+                  <CheckBox fx:id="whealCheck" layoutX="774.0" layoutY="22.0" mnemonicParsing="false" text="wheal(hive)" />
+                  <CheckBox fx:id="scarCheck" layoutX="914.0" layoutY="5.0" mnemonicParsing="false" text="scar" />
+                  <CheckBox fx:id="greenCheck" layoutX="775.0" layoutY="43.0" mnemonicParsing="false" text="green" />
+                  <CheckBox fx:id="scalyCheck" layoutX="232.0" layoutY="107.0" mnemonicParsing="false" text="scaly" />
+                  <CheckBox fx:id="brownHyperpigmentedCheck" layoutX="231.0" layoutY="90.0" mnemonicParsing="false" text="brown hyperpigmented" />
+                  <CheckBox fx:id="blanchesCheck" layoutX="392.0" layoutY="107.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="160.0" text="blanches with pressure" />
+                  <CheckBox fx:id="redExanthemCheck" layoutX="576.0" layoutY="124.0" mnemonicParsing="false" text="red exanthem" />
+                  <CheckBox fx:id="hypopigmentedCheck" layoutX="230.0" layoutY="148.0" mnemonicParsing="false" text="hypopigmented" />
+                  <CheckBox fx:id="pityriricCheck" layoutX="775.0" layoutY="189.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="127.0" text="pityriric(pityriric)" />
+                  <CheckBox fx:id="neurofibromatosisCheck" layoutX="914.0" layoutY="230.0" mnemonicParsing="false" text="neurofibromatosis" />
+                  <CheckBox fx:id="furuncularCheck" layoutX="914.0" layoutY="248.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" text="furuncular" />
+                  <CheckBox fx:id="infectedCheck" layoutX="775.0" layoutY="268.0" mnemonicParsing="false" text="infected vesicular)" />
+                  <CheckBox fx:id="herpeticCheck" layoutX="775.0" layoutY="286.0" mnemonicParsing="false" text="herpetic" />
+                  <CheckBox fx:id="erythematousCheck" layoutX="775.0" layoutY="310.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="erythematous" />
+                  <Label layoutX="8.0" layoutY="339.0" prefHeight="16.0" prefWidth="101.0" text="Plaque or Wheal" />
+                  <CheckBox fx:id="angioedemaCheck" layoutX="230.0" layoutY="339.0" mnemonicParsing="false" text="angioedema" />
+                  <CheckBox fx:id="urticariaCheck" layoutX="392.0" layoutY="339.0" mnemonicParsing="false" text="urticaria" />
+                  <CheckBox fx:id="dematorgraphismCheck" layoutX="576.0" layoutY="339.0" mnemonicParsing="false" text="dematorgraphism" />
+                  <Separator layoutY="364.0" prefHeight="4.0" prefWidth="1015.0" />
+                  <Label layoutX="9.0" layoutY="371.0" prefHeight="16.0" prefWidth="101.0" text="Scales" />
+                  <CheckBox fx:id="psoriaticCheck" layoutX="230.0" layoutY="370.0" mnemonicParsing="false" text="psoriatic" />
+                  <CheckBox fx:id="ichthyosisCheck" layoutX="230.0" layoutY="388.0" mnemonicParsing="false" text="ichthyosis" />
+                  <CheckBox fx:id="desquamationCheck" layoutX="392.0" layoutY="370.0" mnemonicParsing="false" text="desquamation" />
+                  <CheckBox fx:id="pityriasisCheck" layoutX="392.0" layoutY="388.0" mnemonicParsing="false" text="pityriasis rosea" />
+                  <CheckBox fx:id="erythemaCheck" layoutX="576.0" layoutY="370.0" mnemonicParsing="false" text="erythema craquele- thick scale" />
+                  <Separator layoutX="4.0" layoutY="406.0" prefHeight="3.0" prefWidth="1027.0" />
+                  <Label layoutX="9.0" layoutY="413.0" prefHeight="0.0" prefWidth="101.0" text="crust or scab" />
+                  <CheckBox fx:id="atopicCheck" layoutX="230.0" layoutY="410.0" mnemonicParsing="false" text="atopic" />
+                  <CheckBox fx:id="honeyCheck" layoutX="392.0" layoutY="410.0" mnemonicParsing="false" text="honey colored impetiginous" />
+                  <CheckBox fx:id="pemphigusCheck" layoutX="576.0" layoutY="410.0" mnemonicParsing="false" text="pemphigus" />
+                  <CheckBox fx:id="tineaCheck" layoutX="775.0" layoutY="410.0" mnemonicParsing="false" text="tinea capitus" />
+                  <Separator layoutX="4.0" layoutY="436.0" prefHeight="3.0" prefWidth="1027.0" />
+                  <Label layoutX="9.0" layoutY="440.0" prefHeight="0.0" prefWidth="101.0" text="Loss of skin due to" />
+                  <CheckBox fx:id="ulcerationCheck" layoutX="230.0" layoutY="439.0" mnemonicParsing="false" text="ulceration" />
+                  <CheckBox fx:id="LossOfSkinatrophyCheck" layoutX="230.0" layoutY="456.0" mnemonicParsing="false" text="atrophy" />
+                  <CheckBox fx:id="straeCheck" layoutX="956.0" layoutY="443.0" mnemonicParsing="false" text="strae" />
+                  <CheckBox fx:id="erosionCheck" layoutX="392.0" layoutY="439.0" mnemonicParsing="false" text="erosion" />
+                  <CheckBox fx:id="excoriationCheck" layoutX="392.0" layoutY="456.0" mnemonicParsing="false" text="excoriation" />
+                  <CheckBox fx:id="fissureCheck" layoutX="576.0" layoutY="439.0" mnemonicParsing="false" text="fissure" />
+                  <CheckBox fx:id="ischemicCheck" layoutX="576.0" layoutY="456.0" mnemonicParsing="false" text="ischemic" />
+                  <CheckBox fx:id="sclerosisCheck" layoutX="775.0" layoutY="439.0" mnemonicParsing="false" text="sclerosis" />
+                  <CheckBox fx:id="chappingCheck" layoutX="775.0" layoutY="456.0" mnemonicParsing="false" text="chapping" />
+                  <Separator layoutX="-10.0" layoutY="474.0" prefHeight="3.0" prefWidth="1056.0" />
+                  <Label layoutX="9.0" layoutY="478.0" prefHeight="0.0" prefWidth="101.0" text="Unusual lesion" />
+                  <CheckBox fx:id="thickCheck" layoutX="230.0" layoutY="478.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="162.0" text="thick and pink scarring" />
+                  <CheckBox fx:id="purpuricCheck" layoutX="230.0" layoutY="497.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="purpuric" />
+                  <CheckBox fx:id="miliaCheck" layoutX="577.0" layoutY="496.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="milia" />
+                  <CheckBox fx:id="whiteCheck" layoutX="392.0" layoutY="478.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="162.0" text="white atrophic scarring" />
+                  <CheckBox fx:id="lichenificationCheck" layoutX="392.0" layoutY="497.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="162.0" text="lichenification" />
+                  <CheckBox fx:id="comedoneCheck" layoutX="577.0" layoutY="478.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="162.0" text="comedone" />
+                  <CheckBox fx:id="burrowCheck" layoutX="777.0" layoutY="496.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="84.0" text="burrow" />
+                  <CheckBox fx:id="telangiectasicCheck" layoutX="776.0" layoutY="478.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="180.0" text="telangiectasic blood vessel" />
+                  <CheckBox fx:id="petechiaeCheck" layoutX="958.0" layoutY="478.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="87.0" text="petechiae" />
+                  <CheckBox fx:id="cystCheck" layoutX="958.0" layoutY="495.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="87.0" text="cyst" />
+                  <Label layoutX="9.0" layoutY="518.0" prefHeight="16.0" prefWidth="138.0" text="Location of Abnormality" />
+                  <Separator layoutX="-2.0" layoutY="515.0" prefHeight="3.0" prefWidth="1056.0" />
+                  <CheckBox fx:id="faceCheck" layoutX="230.0" layoutY="518.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="face" />
+                  <CheckBox fx:id="extremitiescheck" layoutX="230.0" layoutY="535.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="extremities" />
+                  <CheckBox fx:id="mouthCheck" layoutX="394.0" layoutY="518.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="mouth" />
+                  <CheckBox fx:id="flexorCheck" layoutX="394.0" layoutY="535.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="109.0" text="flexor surface" />
+                  <CheckBox fx:id="mucousCheck" layoutX="578.0" layoutY="518.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="mucous membranes" />
+                  <CheckBox fx:id="extensorCheck" layoutX="578.0" layoutY="535.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="extensor surface" />
+                  <CheckBox fx:id="trunkCheck" layoutX="777.0" layoutY="518.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="trunk" />
+                  <CheckBox fx:id="palmsCheck" layoutX="777.0" layoutY="536.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="palms" />
+                  <CheckBox fx:id="diffuselyCheck" layoutX="959.0" layoutY="519.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="70.0" text="diffusely" />
+                  <CheckBox fx:id="sunCheck" layoutX="959.0" layoutY="537.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="94.0" text="sun exposed" />
+                  <CheckBox fx:id="feetCheck" layoutX="230.0" layoutY="553.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="feet" />
+                  <Separator layoutX="2.0" layoutY="570.0" prefHeight="3.0" prefWidth="1056.0" />
+                  <Label layoutX="9.0" layoutY="582.0" prefHeight="16.0" prefWidth="138.0" text="Lesion size" />
+                  <Separator layoutX="14.0" layoutY="606.0" prefHeight="3.0" prefWidth="1056.0" />
+                  <CheckBox fx:id="lesion1cmCheck" layoutX="228.0" layoutY="577.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="150.0" text="1cm is Largest Lesion" />
+                  <CheckBox fx:id="lesion2cmCheck" layoutX="389.0" layoutY="575.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="167.0" text="2.5 cm is Largest Lesion" />
+                  <CheckBox fx:id="lesion5cmCheck" layoutX="576.0" layoutY="577.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="167.0" text="5 cm Largest Lesion" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

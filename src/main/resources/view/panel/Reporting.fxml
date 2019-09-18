@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reportingPanelAnchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.ReportingGUIController">
+   <children>
+      <Button layoutX="8.0" layoutY="4.0" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="181.0" text="Reporting">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <padding>
+            <Insets left="6.0" right="6.0" />
+         </padding>
+      </Button>
+      <Button fx:id="clinicBtn" layoutX="7.0" layoutY="30.0" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="95.0" text="Clinic">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/forward.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets left="6.0" right="6.0" />
+         </padding></Button>
+      <Button fx:id="companyBtn" layoutX="102.0" layoutY="29.0" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="87.0" text="Company">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/forward.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <VBox layoutX="2.0" layoutY="54.0" prefHeight="491.0" prefWidth="189.0">
+         <children>
+            <Button minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="182.0" text="Clinic Activity">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="205.0" text="Visit Recon">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cashReconBtn" alignment="TOP_LEFT" minHeight="22.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="221.0" text="Cash Recon">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="221.0" text="VisitLog">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="226.0" text="Prescription Log">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="216.0" text="Pending results">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="222.0" text="Scheduling">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="199.0" text="No Shows">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="208.0" text="Letter/Lists">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="238.0" text="Provider Practice">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="218.0" text="Quality &amp; Mgt">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="229.0" text="Clinical Query">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="229.0" text="Report Wizard">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="207.0" text="Bench Marking">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="200.0" text="Meaningful Use">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="229.0" text="Quality Measures">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="214.0" text="Special">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="193.0" text="Quick Protocol">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="205.0" text="Batch Reporting">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="TOP_LEFT" minHeight="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="227.0" text="EPCS Reports">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+         <padding>
+            <Insets left="6.0" right="2.0" top="2.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="homeBtn" layoutX="48.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Home">
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

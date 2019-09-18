@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.NewPTProcedureInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="9.0" prefHeight="614.0" prefWidth="983.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="23.0" prefHeight="4.0" prefWidth="1001.0" />
+                  <Label layoutX="2.0" layoutY="4.0" text="New Patient" />
+                  <Label layoutX="2.0" layoutY="40.0" text="Detail of Eveluation :" />
+                  <Separator layoutX="149.0" layoutY="1.0" orientation="VERTICAL" prefHeight="542.0" prefWidth="0.0" />
+                  <Separator layoutX="7.0" layoutY="69.0" prefHeight="8.0" prefWidth="1001.0" />
+                  <Separator layoutX="-3.0" layoutY="163.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Separator layoutX="-4.0" layoutY="278.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Label layoutX="2.0" layoutY="232.0" text="Procedures Perforned #3" />
+                  <Label layoutX="2.0" layoutY="180.0" text="Procedures Perforned #2" />
+                  <Label layoutX="2.0" layoutY="78.0" text="Functional" />
+                  <CheckBox fx:id="FunvtionalAssesmentPerformCheck" layoutX="237.0" layoutY="77.0" mnemonicParsing="false" text="Funvtional Assesment Perform" />
+                  <CheckBox fx:id="FunctionaCapacityEvaluatiorCheck" layoutX="443.0" layoutY="77.0" mnemonicParsing="false" text="Functional Capacity Evaluatior" />
+                  <CheckBox fx:id="biofeedbackCheck" layoutX="237.0" layoutY="103.0" mnemonicParsing="false" text="Biofeedback (See notes below))" />
+                  <CheckBox fx:id="myofacialCheck" layoutX="443.0" layoutY="103.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="168.0" text="Myofacial Release / STM" />
+                  <CheckBox fx:id="neuromuscularCheck" layoutX="237.0" layoutY="123.0" mnemonicParsing="false" text="Neuromuscular Reeducation" />
+                  <CheckBox fx:id="sprayCheck" layoutX="443.0" layoutY="122.0" mnemonicParsing="false" text="Spray / Stretch" />
+                  <CheckBox fx:id="IceMassageCheck" layoutX="614.0" layoutY="121.0" mnemonicParsing="false" text="Ice Massage" />
+                  <CheckBox fx:id="IontophoresisCheck" layoutX="771.0" layoutY="123.0" mnemonicParsing="false" text="Iontophoresis" />
+                  <CheckBox fx:id="jointMobilizarCheck" layoutX="237.0" layoutY="143.0" mnemonicParsing="false" text="Joint Mobilization" />
+                  <CheckBox fx:id="tapingCheck" layoutX="443.0" layoutY="142.0" mnemonicParsing="false" text="Taping" />
+                  <CheckBox fx:id="IsokineticsCheck" layoutX="443.0" layoutY="166.0" mnemonicParsing="false" text="Isokinetics &gt; 30min" />
+                  <CheckBox fx:id="OrthoticTrainCheck" layoutX="614.0" layoutY="168.0" mnemonicParsing="false" text="Orthotic Train" />
+                  <CheckBox fx:id="ExtremityTestingCheck" layoutX="771.0" layoutY="167.0" mnemonicParsing="false" text="Extremity Testing" />
+                  <Label layoutX="2.0" layoutY="258.0" text="Procedures Perforned #4" />
+                  <CheckBox fx:id="adlInjuryCheck" layoutX="237.0" layoutY="186.0" mnemonicParsing="false" text="ADL - Injury Prevention" />
+                  <CheckBox fx:id="edemaControlCheck" layoutX="443.0" layoutY="186.0" mnemonicParsing="false" text="Edema Control" />
+                  <CheckBox fx:id="PhonophoresisCheck" layoutX="614.0" layoutY="187.0" mnemonicParsing="false" text="Phonophoresis" />
+                  <CheckBox fx:id="GaitTrainingCheck" layoutX="771.0" layoutY="187.0" mnemonicParsing="false" text="Gait Training" />
+                  <Separator layoutX="-4.0" layoutY="225.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="DebridmentCheck" layoutX="443.0" layoutY="283.0" mnemonicParsing="false" text="Debridment" />
+                  <CheckBox fx:id="shoulderIncludeCheck" layoutX="158.0" layoutY="309.0" mnemonicParsing="false" text="Include" />
+                  <CheckBox fx:id="kneeIncludeCheck" layoutX="158.0" layoutY="333.0" mnemonicParsing="false" text="Include" />
+                  <CheckBox fx:id="WoundCareCheck" layoutX="237.0" layoutY="284.0" mnemonicParsing="false" text="Wound Care" />
+                  <CheckBox fx:id="ultrasoundCheck" layoutX="614.0" layoutY="141.0" mnemonicParsing="false" text="Ultrasound" />
+                  <CheckBox fx:id="TractionManualCheck" layoutX="771.0" layoutY="143.0" mnemonicParsing="false" text="Traction Manual" />
+                  <Separator layoutX="3.0" layoutY="353.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <Button fx:id="doneBtn" layoutX="689.0" layoutY="552.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="794.0" layoutY="552.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="AdditionalCheck" layoutX="237.0" layoutY="166.0" mnemonicParsing="false" text="Additional 15 Min" />
+                  <CheckBox fx:id="KineticActivityCheck" layoutX="771.0" layoutY="103.0" mnemonicParsing="false" text="Kinetic Activity" />
+                  <CheckBox fx:id="TherapeuticExercisesCheck" layoutX="614.0" layoutY="102.0" mnemonicParsing="false" text="Therapeutic Exercises" />
+                  <Label layoutX="2.0" layoutY="115.0" text="Procedures Perforned #1" />
+                  <Label layoutX="2.0" layoutY="311.0" text="Biofeedback- Shoulder" />
+                  <CheckBox fx:id="estimManualCheck" layoutX="237.0" layoutY="205.0" mnemonicParsing="false" text="E-Stim Manual" />
+                  <CheckBox fx:id="ContrastbatTherapyCheck" layoutX="443.0" layoutY="230.0" mnemonicParsing="false" text="Contrast bath Therapy" />
+                  <CheckBox fx:id="WorkHardeningCheck" layoutX="237.0" layoutY="257.0" mnemonicParsing="false" text="Work Hardening / simulation" />
+                  <CheckBox fx:id="HandballExercisesCheck" layoutX="443.0" layoutY="255.0" mnemonicParsing="false" text="Handball Exercises" />
+                  <CheckBox fx:id="WoundDebridmentCheck" layoutX="237.0" layoutY="230.0" mnemonicParsing="false" text="Wound Debridment" />
+                  <CheckBox fx:id="cervicalIncludeCheck" layoutX="158.0" layoutY="380.0" mnemonicParsing="false" text="Include" />
+                  <CheckBox fx:id="WhirlpoolFluidotherapyCheck" layoutX="443.0" layoutY="449.0" mnemonicParsing="false" text="Whirlpool/Fluidotherapy" />
+                  <CheckBox fx:id="IceTherapyCheck" layoutX="443.0" layoutY="469.0" mnemonicParsing="false" text="Ice Therapy" />
+                  <CheckBox fx:id="wristIncludeCheck" layoutX="158.0" layoutY="405.0" mnemonicParsing="false" text="Include" />
+                  <CheckBox fx:id="lumberIncludeCheck" layoutX="158.0" layoutY="356.0" mnemonicParsing="false" text="Include" />
+                  <Separator layoutX="5.0" layoutY="425.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="InfraredCheck" layoutX="443.0" layoutY="430.0" mnemonicParsing="false" text="Infrared" />
+                  <CheckBox fx:id="VasopneumaticDeviceCheck" layoutX="237.0" layoutY="447.0" mnemonicParsing="false" text="Vasopneumatic Device" />
+                  <CheckBox fx:id="MechanicalTractionCheck" layoutX="771.0" layoutY="431.0" mnemonicParsing="false" text="Mechanical Traction" />
+                  <CheckBox fx:id="FlexballExerxisesCheck" layoutX="614.0" layoutY="257.0" mnemonicParsing="false" text="Flexball Exerxises" />
+                  <CheckBox fx:id="HotMoistPackCheck" layoutX="237.0" layoutY="466.0" mnemonicParsing="false" text="Hot/Moist Pack" />
+                  <CheckBox fx:id="ElectricStimUnattendedCheck" layoutX="237.0" layoutY="429.0" mnemonicParsing="false" text="Electric Stim Unattended" />
+                  <Separator layoutX="-1.0" layoutY="489.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <RadioButton fx:id="ComprehensiveRadio" layoutX="237.0" layoutY="3.0" mnemonicParsing="false" text="Comprehensive">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="pat" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="ExtendedRadio" layoutX="443.0" layoutY="3.0" mnemonicParsing="false" text="Extended" toggleGroup="$pat" />
+                  <RadioButton fx:id="IntermediateRadio" layoutX="614.0" layoutY="3.0" mnemonicParsing="false" text="Intermediate" toggleGroup="$pat" />
+                  <RadioButton fx:id="DischargeRadio" layoutX="771.0" layoutY="2.0" mnemonicParsing="false" text="Discharge Summary" toggleGroup="$pat" />
+                  <TextArea fx:id="detailTextarea" layoutX="215.0" layoutY="29.0" prefHeight="38.0" prefWidth="478.0" />
+                  <Separator layoutX="17.0" layoutY="95.0" prefHeight="8.0" prefWidth="1001.0" />
+                  <Separator layoutX="6.0" layoutY="252.0" prefHeight="1.0" prefWidth="1001.0" />
+                  <Separator layoutX="6.0" layoutY="305.0" prefHeight="0.0" prefWidth="1007.0" />
+                  <Separator layoutX="13.0" layoutY="329.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <Separator layoutX="13.0" layoutY="376.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <Separator layoutX="-3.0" layoutY="400.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="DiathermyCheck" layoutX="614.0" layoutY="449.0" mnemonicParsing="false" text="Diathermy" />
+                  <CheckBox fx:id="ColdPackCheck" layoutX="614.0" layoutY="469.0" mnemonicParsing="false" text="Cold Pack" />
+                  <CheckBox fx:id="ParaffinBathCheck" layoutX="614.0" layoutY="430.0" mnemonicParsing="false" text="Paraffin Bath" />
+                  <CheckBox fx:id="laserCheck" layoutX="771.0" layoutY="450.0" mnemonicParsing="false" text="Laser" />
+                  <CheckBox fx:id="extendedCheck" layoutX="443.0" layoutY="499.0" mnemonicParsing="false" text="Extended" />
+                  <CheckBox fx:id="MMTReportHandCheck" layoutX="443.0" layoutY="519.0" mnemonicParsing="false" text="MMT  w Report - Hand" />
+                  <CheckBox fx:id="ComprehensiveCheck" layoutX="237.0" layoutY="498.0" mnemonicParsing="false" text="Comprehensive" />
+                  <CheckBox fx:id="RomReportHandCheck" layoutX="237.0" layoutY="517.0" mnemonicParsing="false" text="ROM w Report - Hand" />
+                  <Separator layoutX="5.0" layoutY="543.0" prefHeight="0.0" prefWidth="1001.0" />
+                  <CheckBox fx:id="IntermediateCheck" layoutX="614.0" layoutY="499.0" mnemonicParsing="false" text="Intermediate" />
+                  <CheckBox fx:id="MuscleReportExtremeCheck" layoutX="614.0" layoutY="519.0" mnemonicParsing="false" text="Muscle w Report - Extrem - Trur" />
+                  <CheckBox fx:id="ROMReportExtremeCheck" layoutX="771.0" layoutY="499.0" mnemonicParsing="false" text="ROM w Report - Extrem - Trur" />
+                  <Label layoutX="2.0" layoutY="285.0" text="Additional 15 Minutes:" />
+                  <Label layoutX="2.0" layoutY="334.0" text="Biofeedback- Knee" />
+                  <Label layoutX="2.0" layoutY="357.0" text="Biofeedback- Lumber" />
+                  <Label layoutX="2.0" layoutY="381.0" text="Biofeedback- Cervical" />
+                  <Label layoutX="2.0" layoutY="406.0" text="Biofeedback- Wrist" />
+                  <Label layoutX="2.0" layoutY="432.0" text="Modalities" />
+                  <Label layoutX="2.0" layoutY="508.0" text="Re-Evaluation" />
+                  <Label layoutX="239.0" layoutY="311.0" prefHeight="16.0" prefWidth="712.0" text="BIOFEEDBACK: Biofeedback was performed on the Shoulder to monitor scapular stabilization and activation of the rotators during speci" />
+                  <Label layoutX="239.0" layoutY="334.0" prefHeight="16.0" prefWidth="729.0" text="BIOFEEDBACK: Biofeedback was performed on the Knee to monitor VMO to VL recruitment and active increased constraction of the VM" />
+                  <Label layoutX="239.0" layoutY="357.0" prefHeight="16.0" prefWidth="729.0" text="BIOFEEDBACK: Biofeedback performed on lower abdominal muscles and glutes medius during lamber stabilization progression to improve" />
+                  <Label layoutX="239.0" layoutY="381.0" prefHeight="16.0" prefWidth="482.0" text="BIOFEEDBACK: Biofeedback performed on upper and lower trapezius for postural retraining" />
+                  <Label layoutX="239.0" layoutY="406.0" prefHeight="16.0" prefWidth="665.0" text="BIOFEEDBACK: was performed on the wrist to re-educate wrist extensor muscle groups and increased upper extremity function" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.eye.EyeLrisesPupilsInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="415.0" prefWidth="644.0">
+        <content>
+          <AnchorPane fx:id="stoolSampleFrankBloodCheckBox" minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="167.0" layoutY="1.0" orientation="VERTICAL" prefHeight="325.0" prefWidth="9.0" />
+                  <Button fx:id="doneBtn" layoutX="776.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="876.0" layoutY="545.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="3.0" layoutY="132.0" prefHeight="0.0" prefWidth="638.0" />
+                  <Separator layoutX="3.0" layoutY="225.0" prefHeight="0.0" prefWidth="644.0" />
+                  <Separator layoutX="1.0" layoutY="328.0" prefHeight="0.0" prefWidth="644.0" />
+                  <Label layoutX="5.0" layoutY="226.0" text="Accomodation" />
+                  <Label layoutX="34.0" layoutY="23.0" text="Pupils" />
+                  <CheckBox fx:id="PupilsMidpointCheck" layoutX="265.0" layoutY="14.0" mnemonicParsing="false" text="midpoint bilaterally" />
+                  <CheckBox fx:id="PupilsBilaterallyDilatedCheck" layoutX="437.0" layoutY="14.0" mnemonicParsing="false" text="bilaterally dilated" />
+                  <CheckBox fx:id="PupilsBilaterallyContrictedCheck" layoutX="265.0" layoutY="39.0" mnemonicParsing="false" text="bilaterally constricted" />
+                  <CheckBox fx:id="PupilsLeftMidpointCheck" layoutX="437.0" layoutY="40.0" mnemonicParsing="false" text="left midpoint" />
+                  <CheckBox fx:id="PupilsLeftContrictedCheck" layoutX="266.0" layoutY="62.0" mnemonicParsing="false" text="left constricted" />
+                  <CheckBox fx:id="PupilsLeftDilatedCheck" layoutX="438.0" layoutY="62.0" mnemonicParsing="false" text="left dilated" />
+                  <CheckBox fx:id="ReactivityBilateralNormalCheck" layoutX="265.0" layoutY="137.0" mnemonicParsing="false" text="bilateral normal" />
+                  <CheckBox fx:id="ReactivityLeftNormalCheck" layoutX="438.0" layoutY="137.0" mnemonicParsing="false" text="left normal" />
+                  <CheckBox fx:id="ReactivityleftSluggishCheck" layoutX="265.0" layoutY="160.0" mnemonicParsing="false" text="left sluggish response" />
+                  <CheckBox fx:id="ReactivityLeftUnreactiveNormalCheck" layoutX="438.0" layoutY="159.0" mnemonicParsing="false" text="left unreactive" />
+                  <CheckBox fx:id="ReactivityRightlNormalCheck" layoutX="265.0" layoutY="182.0" mnemonicParsing="false" text="right normal" />
+                  <CheckBox fx:id="ReactivityRightSluggishResCheck" layoutX="437.0" layoutY="181.0" mnemonicParsing="false" text="right sluggish response" />
+                  <CheckBox fx:id="ReactivityRightUnreactiveNormalCheck" layoutX="264.0" layoutY="204.0" mnemonicParsing="false" text="right unreactive" />
+                  <Label layoutX="11.0" layoutY="152.0" text="Reactivity to light" />
+                  <CheckBox fx:id="AccomodationBilateralNormalCheck" layoutX="265.0" layoutY="230.0" mnemonicParsing="false" text="bilateral normal" />
+                  <CheckBox fx:id="AccomodationLeftNormalCheck" layoutX="430.0" layoutY="231.0" mnemonicParsing="false" text="left normal" />
+                  <CheckBox fx:id="AccomodationLeftSlowCheck" layoutX="266.0" layoutY="253.0" mnemonicParsing="false" text="left slow" />
+                  <CheckBox fx:id="AccomodationRightUnResponsiveCheck" layoutX="265.0" layoutY="298.0" mnemonicParsing="false" text="right unresponsive" />
+                  <CheckBox fx:id="AccomodationRightlNormalCheck" layoutX="265.0" layoutY="275.0" mnemonicParsing="false" text="right normal" />
+                  <CheckBox fx:id="pupilsNormalCheck" layoutX="186.0" layoutY="14.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="PupilsRightMidPointCheck" layoutX="266.0" layoutY="84.0" mnemonicParsing="false" text="right midpoint" />
+                  <CheckBox fx:id="PupilsRightConstrictedCheck" layoutX="438.0" layoutY="84.0" mnemonicParsing="false" text="right constricted" />
+                  <CheckBox fx:id="AccomodationRightSlowCheck" layoutX="430.0" layoutY="275.0" mnemonicParsing="false" text="right slow" />
+                  <CheckBox fx:id="AccomodationleftUnResponsiveCheck" layoutX="430.0" layoutY="252.0" mnemonicParsing="false" text="left unresponsive" />
+                  <Button fx:id="doneBtn" layoutX="440.0" layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="541.0" layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="PupilsRightDilatedCheck" layoutX="266.0" layoutY="107.0" mnemonicParsing="false" text="right dilated" />
+                  <CheckBox fx:id="ReactivityNormalCheck" layoutX="186.0" layoutY="144.0" mnemonicParsing="false" text="Normal" />
+                  <CheckBox fx:id="AccomodationNormalCheck" layoutX="176.0" layoutY="234.0" mnemonicParsing="false" text="Normal" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../css/style.css" />
+      <URL value="@../../../../../css/style.css" />
+   </stylesheets>
+</AnchorPane>

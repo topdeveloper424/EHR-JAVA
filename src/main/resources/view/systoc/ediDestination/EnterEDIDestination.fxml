@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="643.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.demo.controller.codes.organization.edidestination.EDIDestinationGUIController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="3.0" prefHeight="249.0" prefWidth="619.0" text="EDI Destination">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="7.0" layoutY="14.0" prefHeight="58.0" prefWidth="208.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="65.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="141.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Send to ID">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField GridPane.columnIndex="1" />
+                        <Label text="Phone" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="232.0" layoutY="49.0" text="X" />
+                  <TextField layoutX="242.0" layoutY="46.0" prefHeight="25.0" prefWidth="46.0" />
+                  <GridPane layoutX="280.0" layoutY="14.0" prefHeight="107.0" prefWidth="66.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Name" />
+                        <Label text="Contact" GridPane.rowIndex="1" />
+                        <Label text="FEIN" GridPane.rowIndex="2" />
+                        <Label text="Submit ID" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <TextField layoutX="356.0" layoutY="14.0" />
+                  <TextField layoutX="356.0" layoutY="41.0" />
+                  <TextField layoutX="356.0" layoutY="69.0" />
+                  <TextField layoutX="356.0" layoutY="96.0" />
+                  <TextField layoutX="496.0" layoutY="147.0" prefHeight="25.0" prefWidth="107.0" />
+                  <TextField layoutX="497.0" layoutY="178.0" prefHeight="25.0" prefWidth="106.0" />
+                  <Label layoutX="38.0" layoutY="159.0" text="ISA" />
+                  <Label layoutX="38.0" layoutY="194.0" text="ISA-2" />
+                  <TextField layoutX="75.0" layoutY="155.0" prefHeight="25.0" prefWidth="101.0" />
+                  <TextField layoutX="76.0" layoutY="190.0" prefHeight="25.0" prefWidth="99.0" />
+                  <Label layoutX="331.0" layoutY="151.0" text="GS" />
+                  <Label layoutX="321.0" layoutY="186.0" text="GS-2" />
+                  <Label layoutX="469.0" layoutY="151.0" text="ST" />
+                  <Label layoutX="463.0" layoutY="182.0" text="ST-2" />
+                  <TextField layoutX="356.0" layoutY="147.0" prefHeight="25.0" prefWidth="95.0" />
+                  <TextField layoutX="357.0" layoutY="187.0" prefHeight="25.0" prefWidth="96.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <GridPane layoutX="451.0" layoutY="253.0" prefHeight="32.0" prefWidth="170.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="okBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="OK">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="cancelBtn" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

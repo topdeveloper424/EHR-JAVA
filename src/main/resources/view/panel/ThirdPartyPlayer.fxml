@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="208.0" prefWidth="197.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.navpanel.ThirdPartyPlayerGUIController">
+   <children>
+      <VBox layoutY="3.0" prefHeight="155.0" prefWidth="189.0">
+         <children>
+            <Button alignment="TOP_CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="182.0" text="Carriers and Other Players">
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="carrierBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCarrierButton" prefHeight="25.0" prefWidth="182.0" text="Carriers">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="mcoTpaBillBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForMCOorTPAButton" prefHeight="25.0" prefWidth="182.0" text="MCO's,TPA's,Bill Preview">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="laboratoryBtn" alignment="TOP_LEFT" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForLaboratoryButton" prefHeight="25.0" prefWidth="181.0" text="Laboratories">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <!-- <Button fx:id="contactTPABtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Contact TPA's">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button>
+            <Button fx:id="parentPlayerBtn" alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="20.0" prefWidth="182.0" text="Parent Player Groups">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/forward.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin></Button> -->
+            <Button fx:id="closeBtn" mnemonicParsing="false" onKeyPressed="#enterKeyPressedForCloseButton" text="Close">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/crossout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="55.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="6.0" right="2.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

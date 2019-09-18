@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="628.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.skin.skinAlopecia.SkinAlopeciaInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="6.0" prefHeight="156.0" prefWidth="616.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="251.0" prefWidth="614.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="15.0" text="Pick All that Apply" />
+                  <Button fx:id="doneBtn" layoutX="366.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="472.0" layoutY="86.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox fx:id="brokenCheck" layoutX="216.0" layoutY="6.0" mnemonicParsing="false" text="broken shafts of hair" />
+                  <CheckBox fx:id="NovisibleCheck" layoutX="216.0" layoutY="25.0" mnemonicParsing="false" text="no visible hair" />
+                  <CheckBox fx:id="illuminatesCheck" layoutX="216.0" layoutY="46.0" mnemonicParsing="false" text="illuminates with a wounds lamp" />
+                  <Separator layoutX="3.0" layoutY="72.0" prefHeight="3.0" prefWidth="615.0" />
+                  <Separator layoutX="112.0" layoutY="-9.0" orientation="VERTICAL" prefHeight="79.0" prefWidth="6.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

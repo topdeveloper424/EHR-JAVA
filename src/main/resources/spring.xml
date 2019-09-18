@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!--<context:component-scan base-package="com" /> -->
+
+	<!--<tx:annotation-driven /> -->
+
+	<!-- <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"> 
+		<property name="basenames"> <list> <value>commonFile/javaFxPath</value> <value>commonFile/javaFxTitle</value> 
+		</list> </property> </bean> -->
+
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<!-- <value>classpath:commonFile/javaFxPath/javaFxPath.properties</value> 
+					<value>classpath:commonFile/javaFxTitle/javaFxTitle.properties</value> -->
+				<value>classpath:commonFile/javaFxPath</value>
+				<value>classpath:commonFile/javaFxTitle</value>
+			</list>
+		</property>
+		<property name="fallbackToSystemLocale" value="false" />
+	</bean>
+
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+
+		<!-- Development Environment -->
+	<!-- 	<property name="url" value="jdbc:mysql://localhost:3306/ehr" /> -->
+
+		<property name="url" value="jdbc:postgresql://localhost:5432/ehrDb" />
+        <!-- <property name="url" value="jdbc:postgresql://192.168.0.136:5432/ehrDb" /> -->
+
+		<property name="username" value="postgres" />
+		<property name="password" value="root"/>
+
+		<!-- Production Environment -->
+		<!-- <property name="url" value="jdbc:postgresql://162.253.125.192:5432/etstecht_ehr" 
+			/> -->
+		<!-- <property name="url" value="jdbc:postgresql://[162.253.125.192]:5432/etstecht_ehr"/> 
+			<property name="username" value="etstecht_user21" /> <property name="password" 
+			value="Pl2WQxC;@gRt" /> -->
+		<!-- Added on 21-09-2016 -->
+		<!-- <property name="hibernate.jdbc.use_get_generated_keys" value="true" 
+			/> -->
+
+	</bean>
+
+
+	<!-- Hibernate 4 SessionFactory Bean definition -->
+	<bean id="hibernate4AnnotatedSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" >
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.ets.model.Note</value>
+				<value>com.ets.model.UserAccount</value>
+				<value>com.ets.model.LoginHistory</value>
+				<value>com.ets.model.UserLogin</value>
+				<value>com.ets.model.JobClass</value>
+				<value>com.ets.model.VisitCategory</value>
+				<value>com.ets.model.Carrier</value>
+				<value>com.ets.model.CarrierRule</value>
+				<value>com.ets.model.Tpa</value>
+				<value>com.ets.model.Provider</value>
+				<value>com.ets.model.ReferalProvider</value>
+				<value>com.ets.model.Laboratory</value>
+				<value>com.ets.model.PatientAddlContactInfo</value>
+				<value>com.ets.model.PatientAuthRep</value>
+				<value>com.ets.model.PatientDrivingLicense</value>
+				<value>com.ets.model.PatientInsuranceCarrier</value>
+				<value>com.ets.model.PatientRiskFactor</value>
+				<value>com.ets.model.PatientSmokingStatus</value>
+				<value>com.ets.model.PatientName</value>
+				<value>com.ets.model.PatientStatistic</value>
+				<value>com.ets.model.Patient</value>
+				<value>com.ets.model.ClinicClosed</value>
+				<value>com.ets.model.ClinicSchedule</value>
+				<value>com.ets.model.OccurRange</value>
+				<value>com.ets.model.ProviderSchedule</value>
+				<value>com.ets.model.RecurEntry</value>
+				<value>com.ets.model.ProviderBlockTime</value>
+				<value>com.ets.model.ProviderSchRecurException</value>
+				<value>com.ets.model.ProviderSchException</value>
+				<value>com.ets.model.RecurPattern</value>
+				<value>com.ets.model.VisionTestParam</value>
+				
+
+				<value>com.ets.model.Access</value> <value>com.ets.model.EntityGroup</value> 
+					<value>com.ets.model.Role</value>
+
+				<value>com.ets.model.LoginSchedule</value>
+				<value>com.ets.model.Address</value>
+				<value>com.ets.model.Company</value>
+				<value>com.ets.model.RespiratorModel</value>
+				<value>com.ets.model.VisitCategoryGroup</value>
+				<value>com.ets.model.ParentEmployerGroup</value>
+				<value>com.ets.model.WorkLocation</value>
+				<value>com.ets.model.SICCode</value>
+				<value>com.ets.model.Pharmacy</value>
+				<value>com.ets.model.DepartmentUnit</value>
+				<value>com.ets.model.NAICSCode</value>
+				<value>com.ets.model.PdfForm</value>
+				<value>com.ets.model.RangeOfOcurence</value>
+				<value>com.ets.model.VitalSignRange</value>
+				<value>com.ets.model.AssesmentQuestion</value>
+				<value>com.ets.model.DeclinationCode</value>
+				<value>com.ets.model.WorkRestriction</value>
+				<value>com.ets.model.CptCode4Hcpcs</value>
+				<value>com.ets.model.MedicationClass</value>
+				<value>com.ets.model.EquipmentModel</value>
+				<value>com.ets.model.Clinic</value>
+				<value>com.ets.model.BodyPart</value>
+				<value>com.ets.model.BodyZone</value>
+				<value>com.ets.model.Icd10Codes</value>
+				<value>com.ets.model.ExposureCode</value>
+				<value>com.ets.model.CaseClosedReason</value>
+				<value>com.ets.model.IllnessCode</value>
+				<value>com.ets.model.FirstResponse</value>
+				<value>com.ets.model.SeverityCode</value>
+				<value>com.ets.model.IncidentOrEvent</value>
+				<value>com.ets.model.ReasonOrCause</value>
+				<value>com.ets.model.RootCause</value>
+				<value>com.ets.model.WorkActivity</value>
+				<value>com.ets.model.ObjectOrSubstance</value>
+				<value>com.ets.model.InjuryCode</value>
+				<value>com.ets.model.StateJobCategory</value>
+				<value>com.ets.model.StateWorkArea</value>
+				<value>com.ets.model.Complex</value>
+				<value>com.ets.model.DeviceType</value>
+				<value>com.ets.model.DeviceManufacturerAndBrand</value>
+				<value>com.ets.model.DeviceModel</value>
+				<value>com.ets.model.MedicalActivity</value>
+				<value>com.ets.model.MedActBilling</value>
+				<value>com.ets.model.MedActResultCode</value>
+				<value>com.ets.model.MedActSurvelRule</value>
+				<value>com.ets.model.Region</value>
+				<value>com.ets.model.District</value>
+				<value>com.ets.model.Division</value>
+				<value>com.ets.model.Supervisor</value>
+				<value>com.ets.model.MedicalCondition</value>
+				<value>com.ets.model.BillingServiceType</value>
+				<value>com.ets.model.Contact</value>
+				<value>com.ets.model.BillingAccount</value>
+				<value>com.ets.model.Clinician</value>
+				<value>com.ets.model.OccurRange</value>
+
+				<value>com.ets.model.ClinicianSchedule</value>
+
+				<value>com.ets.model.ClinicianSchRecurException</value>
+				<value>com.ets.model.ClinicianBlockTime</value>
+				
+				<value>com.ets.model.PatientAppointment</value>
+				<value>com.ets.model.Spirometer</value>
+				<value>com.ets.model.SpirometerTestParamGen</value>
+				<value>com.ets.model.VisitRecord</value>
+				<value>com.ets.model.Audiometer</value>
+
+				<value>com.ets.model.ClinicianSchException</value>
+				<value>com.ets.model.VisionTester</value>
+
+                
+                <value>com.ets.model.ClinicianBlockTime</value>
+              <value>com.ets.model.PatientAppointment</value>
+              <value>com.ets.model.Audiometer</value>
+              <value>com.ets.model.AudiometryTestParamClassify</value>
+              <value>com.ets.model.VitalReader</value>
+              <value>com.ets.model.MedicalActivityCharge</value>
+              
+              
+               <value>com.ets.model.DrugScreenResult</value>
+               <value>com.ets.model.DrugScreenMRO</value>
+               <value>com.ets.model.DrugScreenDrugName</value>
+               <value>com.ets.model.DrugScreenTestResult</value>
+              
+               <value>com.ets.model.PatientVisit</value>
+               <value>com.ets.model.PvVitals</value>
+               <value>com.ets.model.InventoryDescription</value>
+               <value>com.ets.model.InventoryCurrentStock</value>
+               <value>com.ets.model.InventoryOutGo</value>
+               <value>com.ets.model.InventoryPurchase</value> 
+               <value>com.ets.model.AudioMeterTestParamGen</value>
+               <value>com.ets.model.Assesment</value>
+               <value>com.ets.model.EmrHpi</value>
+               <value>com.ets.model.EmrChartingTextAreaSave</value>
+               <value>com.ets.model.WhiteboardSave</value>
+               <value>com.ets.model.Medication</value>
+               <value>com.ets.model.AllergyCategory</value>
+               <value>com.ets.model.FoodAllergy</value>
+               <value>com.ets.model.PatientBillingInvoice</value>
+                <value>com.ets.model.VitalSign</value>
+                 <value>com.ets.model.BuildNote</value>
+                  <value>com.ets.model.CompanyProtocol</value>
+                  <value>com.ets.model.FlowsheetSpecialOrder</value>
+                  <value>com.ets.model.CompanyOptionalProtocolActivity</value>
+                  <value>com.ets.model.CompanyStandardProtocolActivity</value>
+                  <value>com.ets.model.UserDefinedForm</value>
+                  <value>com.ets.model.ClinicBlockSchedule</value>
+                  <value>com.ets.model.ProviderDaysBlockTime</value>
+                  <value>com.ets.model.ProviderBlockDayException</value>
+                  <value>com.ets.model.ClinicianDaysBlockTime</value>
+                  <value>com.ets.model.RepresentRelation</value>
+                  <value>com.ets.model.PatientAnalysis</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+
+				<!-- L2 cache properties -->
+				<prop key="hibernate.format_sql">true</prop>
+				<!-- <prop key="hibernate.cache.use_second_level_cache">true</prop> <prop 
+					key="hibernate.cache.use_query_cache">true</prop> <prop key="hibernate.generate_statistics">true</prop> 
+					<prop key="org.hibernate.cache.ehcache.configurationResourceName">/ehcache.xml</prop> 
+					<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory 
+					</prop> -->
+
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+
+				<prop key="hibernate.jdbc.batch_size">10</prop>
+
+				<!-- <prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop> -->
+				
+
+
+				<!-- <prop key="hibernate.c3p0.min_size">5</prop> <prop key="hibernate.c3p0.max_size">20</prop> 
+					<prop key="hibernate.c3p0.timeout">300</prop> <prop key="hibernate.c3p0.max_statements">50</prop> 
+					<prop key="hibernate.c3p0.idle_test_period">3000</prop> -->
+
+			</props>
+		</property>
+	</bean>
+
+
+
+	<!-- 3-Layer database archetecture configuration -->
+
+
+	<bean id="userLoginDAO" class="com.ets.dao.userlogin.UserLoginDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="userLoginService" class="com.ets.service.userlogin.UserLoginServiceImpl">
+		<property name="userLoginDAO" ref="userLoginDAO"></property>
+	</bean>
+	<bean id="patientAddlContactInfoDAO"
+		class="com.ets.dao.patientAddlContactInfo.PatientAddlContactInfoDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="patientAddlContactInfoService"
+		class="com.ets.service.patientAddlContactInfo.PatientAddlContactInfoServiceImpl">
+		<property name="patientAddlContactInfoDAO" ref="patientAddlContactInfoDAO"></property>
+	</bean>
+	<bean id="patientAuthRepDAO" class="com.ets.dao.patientAuthRep.PatientAuthRepDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="patientAuthRepService"
+		class="com.ets.service.patientAuthRep.PatientAuthRepServiceImpl">
+		<property name="patientAuthRepDAO" ref="patientAuthRepDAO"></property>
+	</bean>
+	<bean id="patientDrivingLicenseDAO"
+		class="com.ets.dao.patientDrivingLicense.PatientDrivingLicenseDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="patientDrivingLicenseService"
+		class="com.ets.service.patientDrivingLicense.PatientDrivingLicenseServiceImpl">
+		<property name="patientDrivingLicenseDAO" ref="patientDrivingLicenseDAO"></property>
+	</bean>
+	<bean id="patientInsuranceCarrierDAO"
+		class="com.ets.dao.patientInsuranceCarrier.PatientInsuranceCarrierDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="patientInsuranceCarrierServie"
+		class="com.ets.service.patientInsuranceCarrier.PatientInsuranceCarrierServieImpl">
+		<property name="patientInsuranceCarrierDAO" ref="patientInsuranceCarrierDAO"></property>
+	</bean>
+	<bean id="patientRiskFactorDAO" class="com.ets.dao.patientRiskFactor.PatientRiskFactorDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="patientRiskFactorService"
+		class="com.ets.service.patientRiskFactor.PatientRiskFactorServiceImpl">
+		<property name="patientRiskFactorDAO" ref="patientRiskFactorDAO"></property>
+	</bean>
+	<bean id="patientSmokingStatusDAO"
+		class="com.ets.dao.patientSmokingStatus.PatientSmokingStatusDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="patientSmokingStatusService"
+		class="com.ets.service.patientSmokingStatus.PatientSmokingStatusServiceImpl">
+		<property name="patientSmokingStatusDAO" ref="patientSmokingStatusDAO"></property>
+	</bean>
+	<bean id="clinicScheduleDAO" class="com.ets.dao.clinicSchedule.ClinicScheduleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="clinicScheduleService"
+		class="com.ets.service.clinicSchedule.ClinicScheduleServiceImpl">
+		<property name="clinicScheduleDAO" ref="clinicScheduleDAO"></property>
+	</bean>
+
+	<bean id="companyDAO" class="com.ets.dao.company.CompanyDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="companyService" class="com.ets.service.company.CompanyServiceImpl">
+		<property name="companyDAO" ref="companyDAO" />
+	</bean>
+	<bean id="jobClassDAO" class="com.ets.dao.jobClass.JobClassDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="jobClassService" class="com.ets.service.jobClass.JobClassServiceImpl">
+		<property name="jobClassDAO" ref="jobClassDAO"></property>
+	</bean>
+	
+	<bean id = "repRelClassDAO" class= "com.ets.dao.representRelation.RepresentRelationDAOImpl" >
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	
+	</bean>
+	<bean id="repRelClassService" class="com.ets.service.representRelation.RepresentRelationServiceImpl">
+		<property name="relationDAO" ref="repRelClassDAO"></property>
+	
+	</bean>
+
+	<bean id="medActBillingDAO" class="com.ets.dao.medActBilling.MedActBillingDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="medActBillingService" class="com.ets.service.medActBilling.MedActBillingServiceImpl">
+		<property name="medActBillingDAO" ref="medActBillingDAO"></property>
+	</bean>
+	<bean id="medActResultCodeDAO" class="com.ets.dao.medActResultCode.MedActResultCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="medActResultCodeService"
+		class="com.ets.service.medActResultCode.MedActResultCodeServiceImpl">
+		<property name="medActResultCodeDAO" ref="medActResultCodeDAO"></property>
+	</bean>
+	<bean id="medActSurvelRuleDAO" class="com.ets.dao.medActSurvelRule.MedActSurvelRuleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="medActSurvelRuleService"
+		class="com.ets.service.medActSurvelRule.MedActSurvelRuleServiceImpl">
+		<property name="medActSurvelRuleDAO" ref="medActSurvelRuleDAO"></property>
+	</bean>
+
+	<bean id="userAccountDAO" class="com.ets.dao.userAccount.UserAccountDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="userAccountService" class="com.ets.service.userAccount.UserAccountServiceImpl">
+		<property name="userAccountDAO" ref="userAccountDAO"></property>
+	</bean>
+
+	<bean id="noteDAO" class="com.ets.dao.note.NoteDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+
+	<bean id="noteService" class="com.ets.service.note.NoteServiceImpl">
+		<property name="noteDAO" ref="noteDAO"></property>
+	</bean>
+
+	<bean id="visitCategoryDAO" class="com.ets.dao.visitCategory.VisitCategoryDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="visitCategoryService" class="com.ets.service.visitCategory.VisitCategoryServiceImpl">
+		<property name="visitCategoryDAO" ref="visitCategoryDAO"></property>
+	</bean>
+	<bean id="carrierDAO" class="com.ets.dao.carrier.CarrierDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="carrierService" class="com.ets.service.carrier.CarrierServiceImpl">
+		<property name="carrierDAO" ref="carrierDAO"></property>
+	</bean>
+	<bean id="carrierRuleDAO" class="com.ets.dao.carrierRule.CarrierRuleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="carrierRuleService" class="com.ets.service.carrierRule.CarrierRuleServiceImpl">
+		<property name="carrierRuleDAO" ref="carrierRuleDAO"></property>
+	</bean>
+	<bean id="tpaDAO" class="com.ets.dao.tpa.TpaDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="tpaService" class="com.ets.service.tpa.TpaServiceImpl">
+		<property name="tpaDAO" ref="tpaDAO"></property>
+	</bean>
+	<bean id="providerDAO" class="com.ets.dao.provider.ProviderDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="providerService" class="com.ets.service.provider.ProviderServiceImpl">
+		<property name="providerDAO" ref="providerDAO"></property>
+	</bean>
+	<bean id="laboratoryDAO" class="com.ets.dao.laboratory.LaboratoryDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="laboratoryService" class="com.ets.service.laboratory.LaboratoryServiceImpl">
+		<property name="laboratoryDAO" ref="laboratoryDAO"></property>
+	</bean>
+	<bean id="referalProviderDAO" class="com.ets.dao.referalProvider.ReferalProviderDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="referalProviderService"
+		class="com.ets.service.referalProvider.ReferalProviderServiceImpl">
+		<property name="referalProviderDAO" ref="referalProviderDAO"></property>
+	</bean>
+	<!-- <bean id="roleDAO" class="com.ets.dao.role.RoleDAOImpl">b <property 
+		name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" /> </bean> 
+		<bean id="roleService" class="com.ets.service.role.RoleServiceImpl"> <property 
+		name="roleDAO" ref="roleDAO"></property> </bean> <bean id="entityGroupDAO" 
+		class="com.ets.dao.entitygroup.EntityGroupDAOImpl"> <property name="sessionFactory" 
+		ref="hibernate4AnnotatedSessionFactory" /> </bean> <bean id="entityGroupService" 
+		class="com.ets.service.entityGroup.EntityGroupServiceImpl"> <property name="entityGroupDAO" 
+		ref="entityGroupDAO"></property> </bean> <bean id="accessDAO" class="com.ets.dao.access.AccessDAOImpl"> 
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" /> 
+		</bean> <bean id="accessService" class="com.ets.service.access.AccessServiceImpl"> 
+		<property name="accessDAO" ref="accessDAO"></property> </bean> -->
+
+	<bean id="loginsDAO" class="com.ets.dao.logins.LoginsDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="loginsService" class="com.ets.service.logins.LoginsServiceImpl">
+		<property name="loginsDAO" ref="loginsDAO"></property>
+	</bean>
+	<bean id="loginScheduleDAO" class="com.ets.dao.loginSchedule.LoginScheduleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="loginScheduleService" class="com.ets.service.loginSchdule.LoginSchduleServiceImpl">
+		<property name="loginScheduleDAO" ref="loginScheduleDAO"></property>
+	</bean>
+
+	<bean id="addressDAO" class="com.ets.dao.address.AddressDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="addressService" class="com.ets.service.address.AddressServiceImpl">
+		<property name="addressDAO" ref="addressDAO"></property>
+	</bean>
+	<bean id="parentEmployerGroupDAO"
+		class="com.ets.dao.parentEmployerGroup.ParentEmployerGroupDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="parentEmployerGroupService"
+		class="com.ets.service.parentEmployerGroup.ParentEmployerGroupServiceImpl">
+		<property name="parentEmployerGroupDAO" ref="parentEmployerGroupDAO"></property>
+	</bean>
+	<bean id="workLocationDAO" class="com.ets.dao.workLocation.WorkLocationDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="workLocationService" class="com.ets.service.workLocation.WorkLocationServiceImpl">
+		<property name="workLocationDAO" ref="workLocationDAO"></property>
+	</bean>
+
+	<bean id="respiratorModelDAO" class="com.ets.dao.respiratorModel.RespiratorModelDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="respiratorModelService"
+		class="com.ets.service.respiratorModel.RespiratorModelServiceImpl">
+		<property name="respiratorModelDAO" ref="respiratorModelDAO"></property>
+	</bean>
+	<bean id="visitCategoryGroupDAO"
+		class="com.ets.dao.visitCategoryGroup.VisitCategoryGroupDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="visitCategoryGroupService"
+		class="com.ets.service.visitCategoryGrup.VisitCategoryGroupServiceImpl">
+		<property name="visitCategoryGroupDAO" ref="visitCategoryGroupDAO"></property>
+	</bean>
+
+	<bean id="naicsCodeDAO" class="com.ets.dao.naicsCode.NaicsCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="naicsCodeService" class="com.ets.service.naicsCode.NaicsCodeServiceImpl">
+		<property name="naicsCodeDAO" ref="naicsCodeDAO"></property>
+	</bean>
+	<bean id="sicCodeDAO" class="com.ets.dao.sicCode.SicCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="sicCodeService" class="com.ets.service.sicCode.SicCodeServiceImpl">
+		<property name="sicCodeDAO" ref="sicCodeDAO"></property>
+	</bean>
+
+	<bean id="pharmacyDAO" class="com.ets.dao.pharmacy.PharmacyDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="pharmacyService" class="com.ets.service.pharmacy.PharmacyServiceImpl">
+		<property name="pharmacyDAO" ref="pharmacyDAO"></property>
+	</bean>
+
+	<bean id="injuryCodeDAO" class="com.ets.dao.injuryCode.InjuryCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="injuryCodeService" class="com.ets.service.injuryCode.InjuryCodeServiceImpl">
+		<property name="injuryCodeDAO" ref="injuryCodeDAO"></property>
+	</bean>
+
+	<bean id="illnessCodeDAO" class="com.ets.dao.illnessCode.IllnessCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="illnessCodeService" class="com.ets.service.illnessCode.IllnessCodeServiceImpl">
+		<property name="illnessCodeDAO" ref="illnessCodeDAO"></property>
+	</bean>
+
+	<bean id="exposureCodeDAO" class="com.ets.dao.exposureCode.ExposureCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="exposureCodeService" class="com.ets.service.exposureCode.ExposureCodeServiceImpl">
+		<property name="exposureCodeDAO" ref="exposureCodeDAO"></property>
+	</bean>
+
+	<bean id="bodyPartDAO" class="com.ets.dao.bodyPart.BodyPartDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="bodyPartService" class="com.ets.service.bodyPart.BodyPartServiceImpl">
+		<property name="bodyPartDAO" ref="bodyPartDAO" />
+	</bean>
+
+	<bean id="bodyZoneDAO" class="com.ets.dao.boyZone.BodyZoneDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+
+	<bean id="bodyZoneService" class="com.ets.service.bodyZone.BodyZoneServiceImpl">
+		<property name="bodyZoneDAO" ref="bodyZoneDAO"></property>
+	</bean>
+
+	<bean id="icd10CodesDAO" class="com.ets.dao.icd10Codes.Icd10CodesDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+
+	<bean id="icd10CodesService" class="com.ets.service.Icd10Codes.Icd10CodesServiceImpl">
+		<property name="icd10CodesDAO" ref="icd10CodesDAO"></property>
+	</bean>
+
+	<bean id="severityDAO" class="com.ets.dao.severityCode.SeverityDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+
+	<bean id="severityService" class="com.ets.service.severityCode.SeverityServiceImpl">
+		<property name="severityDAO" ref="severityDAO"></property>
+	</bean>
+
+	<bean id="incidentOrEventDAO" class="com.ets.dao.incidentOrEvent.IncidentOrEventDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+
+	<bean id="incidentOrEventService"
+		class="com.ets.service.incidentOrEvent.IncidentOrEventServiceImpl">
+		<property name="incidentOrEventDAO" ref="incidentOrEventDAO"></property>
+	</bean>
+
+	<bean id="medicalConditionDAO" class="com.ets.dao.medicalcondition.MedicalConditionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="medicalConditionService"
+		class="com.ets.service.medicalcondition.MedicalConditionServiceImpl">
+		<property name="medicalConditionDAO" ref="medicalConditionDAO" />
+	</bean>
+
+	<bean id="reasonOrCauseDAO" class="com.ets.dao.reasonOrCause.ReasonOrCauseDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="reasonOrCauseService" class="com.ets.service.reasonOrCause.ReasonOrCauseServiceImpl">
+		<property name="reasonOrCauseDAO" ref="reasonOrCauseDAO"></property>
+	</bean>
+
+	<bean id="rootCauseDAO" class="com.ets.dao.rootCause.RootCauseDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="rootCauseService" class="com.ets.service.rootCause.RootCauseServiceImpl">
+		<property name="rootCauseDAO" ref="rootCauseDAO"></property>
+	</bean>
+
+	<bean id="workActivityDAO" class="com.ets.dao.workActivity.WorkActivityDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="workActivityService" class="com.ets.service.workActivity.WorkActivityServiceImpl">
+		<property name="workActivityDAO" ref="workActivityDAO"></property>
+	</bean>
+
+	<bean id="objectOrSubstanceDAO" class="com.ets.dao.objectOrSubstance.ObjectOrSubstanceDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="objectOrSubstanceService"
+		class="com.ets.service.objectOrSubstance.ObjectOrSubstanceServiceImpl">
+		<property name="objectOrSubstanceDAO" ref="objectOrSubstanceDAO"></property>
+	</bean>
+
+	<bean id="sharpDeviceDAO" class="com.ets.dao.deviceType.SharpDeviceDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="sharpDeviceService" class="com.ets.service.deviceType.SharpDeviceServiceImpl">
+		<property name="sharpDeviceDAO" ref="sharpDeviceDAO"></property>
+	</bean>
+	<bean id="andBrandDAO"
+		class="com.ets.dao.deviceManufacturerAndBrand.SharpDeviceManufacturerAndBrandDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="manufacturerAndBrandService"
+		class="com.ets.service.deviceManufacturerAndBrand.SharpDeviceManufacturerAndBrandServiceImpl">
+		<property name="andBrandDAO" ref="andBrandDAO"></property>
+	</bean>
+
+	<bean id="sharpDeviceModelDAO" class="com.ets.dao.deviceModel.SharpDeviceModelDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="sharpDeviceModelService" class="com.ets.service.deviceModel.SharpDeviceModelServiceImpl">
+		<property name="sharpDeviceModelDAO" ref="sharpDeviceModelDAO"></property>
+	</bean>
+
+	<bean id="firstresponseDAO" class="com.ets.dao.firstResponse.FirstResponseDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="firstResponseService" class="com.ets.service.firstResponse.FirstResponseServiceImpl">
+		<property name="firstresponseDAO" ref="firstresponseDAO"></property>
+	</bean>
+
+	<bean id="stateJobCategoryDAO" class="com.ets.dao.stateJobCategory.StateJobCategoryDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="stateJobCategoryService"
+		class="com.ets.service.stateJobCategory.StateJobCategoryServiceImpl">
+		<property name="stateJobCategoryDAO" ref="stateJobCategoryDAO"></property>
+	</bean>
+
+	<bean id="stateWorkAreaDAO" class="com.ets.dao.stateWorkArea.StateWorkAreaDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="stateWorkAreaService" class="com.ets.service.stateWorkArea.StateWorkAreaServiceImpl">
+		<property name="stateWorkAreaDAO" ref="stateWorkAreaDAO" />
+	</bean>
+
+	<bean id="reasonStatusDAO"
+		class="com.ets.dao.caseClosedReason.CaseClosedReasonStatusDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="caseClosedReasonStatusService"
+		class="com.ets.service.caseClosedReason.CaseClosedReasonStatusServiceImpl">
+		<property name="reasonStatusDAO" ref="reasonStatusDAO"></property>
+	</bean>
+	<bean id="billingServiceTypeDAO"
+		class="com.ets.dao.billingservicetype.BillingServiceTypeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="billingTypeServiceIm"
+		class="com.ets.service.billingservicetype.BillingTypeServiceImpl">
+		<property name="billingServiceTypeDAO" ref="billingServiceTypeDAO"></property>
+	</bean>
+	<bean id="departmentUnitDAO" class="com.ets.dao.departmentUnit.DepartmentUnitDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="departmentUnitService"
+		class="com.ets.service.departmentUnit.DepartmentUnitServiceImpl">
+		<property name="departmentUnitDAO" ref="departmentUnitDAO"></property>
+	</bean>
+	<bean id="contactDAO" class="com.ets.dao.contact.ContactDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory">
+		</property>
+	</bean>
+	<bean id="contactService" class="com.ets.service.contact.ContactServiceImpl">
+		<property name="contactDAO" ref="contactDAO"></property>
+	</bean>
+	<bean id="billingAccountDAO" class="com.ets.dao.billingAccount.BillingAccountDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+	</bean>
+	<bean id="billingAccountService"
+		class="com.ets.service.billingAccount.BillingAccountServiceImpl">
+
+		<property name="billingAccountDAO" ref="billingAccountDAO"></property>
+	</bean>
+
+	<bean id="clinicianDAO" class="com.ets.dao.clinician.ClinicainDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+	</bean>
+	<bean id="clinicianService" class="com.ets.service.clinician.ClinicianServiceImpl">
+		<property name="clinicianDAO" ref="clinicianDAO"></property>
+
+	</bean>
+
+
+	<bean id="regionDAO" class="com.ets.dao.region.RegionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="regionService" class="com.ets.service.region.RegionServiceImpl">
+		<property name="regionDAO" ref="regionDAO"></property>
+	</bean>
+
+	<bean id="districtDAO" class="com.ets.dao.district.DistrictDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="districtService" class="com.ets.service.district.DistrictServiceImpl">
+		<property name="districtDAO" ref="districtDAO"></property>
+	</bean>
+
+	<bean id="complexDAO" class="com.ets.dao.complex.ComplexDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="complexService" class="com.ets.service.complex.ComplexServiceImpl">
+		<property name="complexDAO" ref="complexDAO"></property>
+	</bean>
+
+	<bean id="divisionDAO" class="com.ets.dao.division.DivisionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="divisionService" class="com.ets.service.division.DivisionServiceImpl">
+		<property name="divisionDAO" ref="divisionDAO"></property>
+	</bean>
+
+	<bean id="medicalActivityDAO" class="com.ets.dao.medicalactivity.MedicalActivityDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+	<bean id="medicalActivityService"
+		class="com.ets.service.medicalactivity.MedicalActivityServiceImpl">
+		<property name="medicalActivityDAO" ref="medicalActivityDAO"></property>
+	</bean>
+
+	<bean id="supervisorDAO" class="com.ets.dao.supervisor.SupervisorDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="supervisorService" class="com.ets.service.supervisor.SupervisorServiceImpl">
+		<property name="supervisorDAO" ref="supervisorDAO"></property>
+	</bean>
+	<bean id="clinicDAO" class="com.ets.dao.clinic.ClinicDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="clinicService" class="com.ets.service.clinic.ClinicServiceImpl">
+		<property name="clinicDAO" ref="clinicDAO"></property>
+	</bean>
+	<bean id="occurRangeDAO" class="com.ets.dao.occurRange.OccurRangeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="occurRangeService" class="com.ets.service.occurRange.OccurRangeServiceImpl">
+		<property name="occurRangeDAO" ref="occurRangeDAO"></property>
+	</bean>
+
+	<bean id="assesmentQuestionDAO" class="com.ets.dao.assesmentQuestion.AssesmentQuestionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="assesmentQuestionService"
+		class="com.ets.service.assesmentQuestion.AssesmentQuestionServiceImpl">
+		<property name="assesmentQuestionDAO" ref="assesmentQuestionDAO"></property>
+	</bean>
+	<bean id="declinationCodeDAO" class="com.ets.dao.declinationCode.DeclinationCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="declinationCodeService"
+		class="com.ets.service.declinationCode.DeclinationCodeServiceImpl">
+		<property name="declinationCodeDAO" ref="declinationCodeDAO"></property>
+	</bean>
+	<bean id="workRestrictionDAO" class="com.ets.dao.workRestriction.WorkRestrictionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="workRestrictionService"
+		class="com.ets.service.workRestriction.WorkRestrictionServiceImpl">
+		<property name="workRestrictionDAO" ref="workRestrictionDAO"></property>
+	</bean>
+
+	<bean id="cptCodeDAO" class="com.ets.dao.cptCode.CptCodeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="cptCodeService" class="com.ets.service.cptCode.CptCodeServiceImpl">
+		<property name="cptCodeDAO" ref="cptCodeDAO"></property>
+	</bean>
+	<bean id="medicationClassDAO" class="com.ets.dao.medicationClass.MedicationClassDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="medicationClassService"
+		class="com.ets.service.medicationClass.MedicationClassServiceImpl">
+		<property name="medicationClassDAO" ref="medicationClassDAO"></property>
+	</bean>
+	<bean id="pdfFormDAO" class="com.ets.dao.pdfForm.PdfFormDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="pdfFormService" class="com.ets.service.pdfForm.PdfFormServiceImpl">
+		<property name="pdfFormDAO" ref="pdfFormDAO"></property>
+	</bean>
+	<bean id="rangeOfOcurenceDAO" class="com.ets.dao.rangeOfOcurence.RangeOfOcurenceDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="rangeOfOcurenceService"
+		class="com.ets.service.rangeOfOcurence.RangeOfOcurenceServiceImpl">
+		<property name="rangeOfOcurenceDAO" ref="rangeOfOcurenceDAO"></property>
+	</bean>
+	<bean id="denialOrShortPayReasonDAO"
+		class="com.ets.dao.denialOrShortPayReason.DenialOrShortPayReasonDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="denialOrShortPayReasonService"
+		class="com.ets.service.denialOrShortPayReason.DenialOrShortPayReasonServiceImpl">
+		<property name="denialOrShortPayReasonDAO" ref="denialOrShortPayReasonDAO"></property>
+	</bean>
+	<bean id="vitalSignRangeDAO" class="com.ets.dao.vitalSignRange.VitalSignRangeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="vitalSignRangeService"
+		class="com.ets.service.vitalSignRange.VitalSignRangeServiceImpl">
+		<property name="vitalSignRangeDAO" ref="vitalSignRangeDAO"></property>
+	</bean>
+	<bean id="equipmentModelDAO" class="com.ets.dao.equipmentModel.EquipmentModelDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="equipmentModelService"
+		class="com.ets.service.equipmentModel.EquipmentModelServiceImpl">
+		<property name="equipmentModelDAO" ref="equipmentModelDAO"></property>
+	</bean>
+
+	<bean id="recurPatternDAO" class="com.ets.dao.recurPattern.RecurPatternDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="recurPatternService" class="com.ets.service.recurPattern.RecurPatternServiceImpl">
+		<property name="recurPatternDAO" ref="recurPatternDAO"></property>
+	</bean>
+
+	<bean id="recurEntryDAO" class="com.ets.dao.recurEntry.RecurEntryDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="recurEntryService" class="com.ets.service.recurEntry.RecurEntryServiceImpl">
+		<property name="recurEntryDAO" ref="recurEntryDAO"></property>
+	</bean>
+
+
+	<bean id="providerScheduleDAO" class="com.ets.dao.providerSchedule.StaffScheduleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="providerScheduleService"
+		class="com.ets.service.providerSchedule.StaffScheduleServiceImpl">
+		<property name="staffScheduleDAO" ref="providerScheduleDAO"></property>
+	</bean>
+
+	<bean id="providerSchExceptionDAO"
+		class="com.ets.dao.providerSchException.StaffSchExceptionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="providerSchExceptionService"
+		class="com.ets.service.providerSchException.StaffSchExceptionServiceImpl">
+		<property name="staffSchExceptionDAO" ref="providerSchExceptionDAO"></property>
+
+	</bean>
+	<bean id="staffBlockTimeDAO" class="com.ets.dao.providerBlockTime.StaffBlockTimeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="providerBlockTimeService"
+		class="com.ets.service.providerBlockTime.StaffBlockTimeServiceImpl">
+		<property name="staffBlockTimeDAO" ref="staffBlockTimeDAO"></property>
+	</bean>
+	<bean id="providerSchRecurExceptionDAO"
+		class="com.ets.dao.providerSchRecurException.StaffSchRecurExceptionDAOImpl">
+
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="providerSchRecurExceptionService"
+		class="com.ets.service.providerSchRecurException.StaffSchRecurExceptionServiceImpl">
+		<property name="staffSchRecurExceptionDAO" ref="providerSchRecurExceptionDAO"></property>
+	</bean>
+
+	<bean id="clinicClosedDAO" class="com.ets.dao.clinicClosed.ClinicClosedDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="clinicClosedService" class="com.ets.service.clinicClosed.ClinicClosedServiceImpl">
+		<property name="clinicClosedDAO" ref="clinicClosedDAO"></property>
+	</bean>
+	<bean id="patientNameDAO" class="com.ets.dao.patientName.PatientNameDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="patientNameService" class="com.ets.service.patientName.PatientNameServiceImpl">
+		<property name="patientNameDAO" ref="patientNameDAO"></property>
+	</bean>
+	<bean id="patientStatisticDAO" class="com.ets.dao.patientStatistic.PatientStatisticDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="patientStatisticService"
+		class="com.ets.service.patientStatistic.PatientStatisticServiceImpl">
+		<property name="patientStatisticDAO" ref="patientStatisticDAO"></property>
+	</bean>
+
+	<bean id="patientDAO" class="com.ets.dao.patient.PatientDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+
+	<bean id="patientService" class="com.ets.service.patient.PatientServiceImpl">
+
+		<property name="patientDAO" ref="patientDAO"></property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+
+
+	<bean id="clinicianScheduleDAO" class="com.ets.dao.clinicianSchedule.ClinicianScheduleDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="clinicianScheduleService"
+		class="com.ets.service.clinicianSchedule.ClinicianScheduleServiceImpl">
+		<property name="clinicianScheduleDAO" ref="clinicianScheduleDAO"></property>
+	</bean>
+
+	<bean id="clinicianSchExceptionDAO"
+		class="com.ets.dao.clinicianSchException.ClinicianSchExceptionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="clinicianSchExceptionService"
+		class="com.ets.service.clinicianSchException.ClinicianSchExceptionServiceImpl">
+		<property name="clinicianSchExceptionDAO" ref="clinicianSchExceptionDAO"></property>
+	</bean>
+
+
+	<bean id="clinicianSchRecurExceptionDAO"
+		class="com.ets.dao.clinicianSchRecurException.ClinicianSchRecurExceptionDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="clinicianSchRecurExceptionService"
+		class="com.ets.service.clinicianSchRecurException.ClinicianSchRecurExceptionServiceImpl">
+		<property name="clinicianSchRecurExceptionDAO" ref="clinicianSchRecurExceptionDAO"></property>
+	</bean>
+
+
+	<bean id="clinicianBlockTime"
+		class="com.ets.dao.clinicianBlockTime.ClinicianBlockTimeDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="clinicianBlockTimeService"
+		class="com.ets.service.clinicianBlockTime.ClinicianBlockTimeServiceImpl">
+		<property name="clinicianBlockTimeDAO" ref="clinicianBlockTime"></property>
+	</bean>
+
+	<bean id="patientAppointment"
+		class="com.ets.dao.patientAppointment.PatientAppointmentDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="patientAppointmentService"
+		class="com.ets.service.patientAppointment.PatientAppointmentServiceImpl">
+		<property name="patientAppointmentDAO" ref="patientAppointment"></property>
+	</bean>
+
+	<bean id="spirometer" class="com.ets.dao.spirometer.SpirometerDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="spirometerService" class="com.ets.service.spirometer.SpirometerServiceImpl">
+		<property name="spirometerDAO" ref="spirometer"></property>
+	</bean>
+
+
+
+ <bean id="visionTester"  class="com.ets.dao.visionTester.VisionTesterDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="visionTesterService"  class="com.ets.service.visionTester.VisionTesterServiceImpl">
+  <property name="visionTesterDAO"  ref="visionTester"></property>
+  </bean>
+
+	<bean id="spirometerTestParamGen"
+		class="com.ets.dao.spirometerTestParamGen.SpirometerTestParamGenDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="SpirometerTestParamGenService"
+		class="com.ets.service.spirometerTestParamGen.SpirometerTestParamGenServiceImpl">
+		<property name="spirometerTestParamGenDAO" ref="spirometerTestParamGen"></property>
+	</bean>
+
+	<bean id="visitRecordDAO" class="com.ets.dao.visitRecord.VisitRecordDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+	<bean id="visitRecordService" class="com.ets.service.visitRecord.VisitRecordServiceImpl">
+		<property name="visitRecordDAO" ref="visitRecordDAO"></property>
+	</bean>
+
+<!-- <bean id="auduioMeter"  class="com.ets.dao.audioMeter.AudioMeterDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="audioMeterService"  class="com.ets.service.audioMeter.AudioMeterServiceImpl">
+  <property name="audioMeterDAO"  ref="auduioMeter"></property>
+  </bean> -->
+
+<bean id="visionTestParam"  class="com.ets.dao.visionTestParam.VisionTestParamDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="visionTestParamService"  class="com.ets.service.visionTestParam.VisionTestParamServiceImpl">
+  <property name="visionTestParamDAO"  ref="visionTestParam"></property>
+  </bean>
+  
+  <bean id="audiometryTestParamClassify"  class="com.ets.dao.audiometryTestParamClassify.AudiometryTestParamClassifyDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="audiometryTestParamClassifyService"  class="com.ets.service.audiometryTestParamClassify.AudiometryTestParamClassifyServiceImpl">
+  <property name="audiometryTestParamClassifyDAO"  ref="audiometryTestParamClassify"></property>
+  </bean>
+  
+  
+  
+<!--   
+   <bean id="audioMeterTestParamGen"  class="com.ets.dao.audioMeterTestParamGen.AudioMeterTestParamGenDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="audioMeterTestParamGenService"  class="com.ets.service.audioMeterTestParamGen.AudioMeterTestParamGenServiceImpl">
+  <property name="audioMeterTestParamGenDAO"  ref="audioMeterTestParamGen"></property>
+  </bean>
+  
+   -->
+  
+  
+  
+  <bean id="vitalReader"  class="com.ets.dao.vitalReader.VitalReaderDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="vitalReaderService"  class="com.ets.service.vitalReader.VitalReaderServiceImpl">
+  <property name="vitalReaderDAO"  ref="vitalReader"></property>
+  </bean>
+  
+   <bean id="medicalActivityCharge"  class="com.ets.dao.medicalActivityCharge.MedicalActivityChargeDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="medicalActivityChargeService"  class="com.ets.service.medicalActivityCharge.MedicalActivityChargeServiceImpl">
+  <property name="medicalActivityChargeDAO"  ref="medicalActivityCharge"></property>
+  </bean>
+  
+   <bean id="drugScreenResult"  class="com.ets.dao.drugScreenResult.DrugScreenResultDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="drugScreenResultService"  class="com.ets.service.drugScreenResult.DrugScreenResultServiceImpl">
+  <property name="drugScreenResultDAO"  ref="drugScreenResult"></property>
+  </bean>
+  
+  <bean id="patientVisitDAO" class="com.ets.dao.patientVisit.PatientVisitDAOImpl">
+   <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="patientVisitService" class="com.ets.service.patientVisit.PatientVisitServiceImpl">
+  <property name="patientVisitDAO" ref="patientVisitDAO"></property>
+  </bean>
+  
+  <bean id="pvVitalsDAO" class="com.ets.dao.pvVitals.PvVitalsDAOImpl">
+  	<property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="pvVitalsService" class="com.ets.service.pvVitals.PvVitalsServiceImpl">
+  <property name="pvVitalsDAO" ref="pvVitalsDAO"></property>
+  </bean>
+  
+  <bean id="drugScreenDrugNameDAO" class="com.ets.dao.drugScreenDrugName.DrugScreenDrugNameDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="drugScreenDrugNameService" class="com.ets.service.drugScreenDrugName.DrugScreenDrugNameServiceImpl">
+  <property name="drugScreenDrugNameDAO" ref="drugScreenDrugNameDAO"></property>
+  </bean>
+  <bean id="drugScreenTestResultDAO" class="com.ets.dao.drugScreenDrugTestResult.DrugScreenTestResultDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="drugScreenTestResultService" class="com.ets.service.drugScreenTestResult.DrugScreenTestResultServiceImpl">
+  <property name="drugScreenTestResultDAO" ref="drugScreenTestResultDAO"></property>
+  </bean>
+
+
+<bean id="inventoryDAO" class="com.ets.dao.inventory.inventory.InventoryDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="inventoryService" class="com.ets.service.inventory.inventiory.InventoryServiceImpl">
+  <property name="inventoryDAO" ref="inventoryDAO"></property>
+  </bean>
+  
+  <bean id="inventoryCurrentStockDAO" class="com.ets.dao.inventory.inventoryCurrentStock.InventoryCurrentStockDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="inventoryCurrentStockService" class="com.ets.service.inventory.inventoryCurrentStock.InventoryCurrentStockServiceImpl">
+  <property name="inventoryCurrentStockDAO" ref="inventoryCurrentStockDAO"></property>
+  </bean>
+  <bean id="inventoryOutGoDAO" class="com.ets.dao.inventory.inventoryOutGo.InventoryOutGoDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="inventoryOutGoService" class="com.ets.service.inventory.inventoryOutGo.InventoryOutGoServiceImpl">
+  <property name="inventoryOutGoDAO" ref="inventoryOutGoDAO"></property>
+  </bean>
+  
+  <bean id="inventoryPurchaseDAO" class="com.ets.dao.inventory.InventoryPurchase.InventoryPurchaseDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="inventoryPurchaseSevice" class="com.ets.service.inventory.inventoryPurchase.InventoryPurchaseSeviceImpl">
+  <property name="inventoryPurchaseDAO" ref="inventoryPurchaseDAO"></property>
+  </bean>
+  
+
+  <bean id="assessmentDAO" class="com.ets.dao.assessment.AssessmentDAOImpl">
+  	<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+  </bean>
+  <bean id="assesmentService" class="com.ets.service.assesment.AssesmentServiceImpl">
+  <property name="assessmentDAO" ref="assessmentDAO"></property>
+  </bean>
+
+  
+<bean id="emrHpiDAO" class="com.ets.dao.emrHpi.EmrHpiDAOImpl">
+  	<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+  </bean>
+  <bean id="emrHpiService" class="com.ets.service.emrHpi.EmrHpiServiceImpl">
+  <property name="emrHpiDAO" ref="emrHpiDAO"></property>
+  </bean>
+
+<bean id="hpiTextAreaSaveDAO" class="com.ets.dao.hpiTextAreaSave.HpiTextAreaSaveDAOImpl">
+  	<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+  </bean>
+  <bean id="hpiTextAreaService" class="com.ets.service.hpiTextAreaSave.HpiTextAreaServiceImpl">
+  <property name="hpiTextAreaSaveDAO" ref="hpiTextAreaSaveDAO"></property>
+  </bean>
+
+ <bean id="whiteBoardSaveDAO" class="com.ets.dao.whiteBoardSave.WhiteBoardSaveDAOImpl">
+  	<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+  </bean>
+  <bean id="whiteBoardSaveService" class="com.ets.service.whiteBoardSave.WhiteBoardSaveServiceImpl">
+  <property name="whiteBoardSaveDAO" ref="whiteBoardSaveDAO"></property>
+  </bean> 
+  
+  
+   <bean id="medicationDao" class="com.ets.dao.medication.MedicationDaoImpl">
+  	<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+  </bean>
+  <bean id="medicationService" class="com.ets.service.medication.MedicationServiceImpl">
+  <property name="medicationDao" ref="medicationDao"></property>
+  </bean> 
+  
+  
+  
+  
+  
+   <bean id="allergyCategoryDAO" class="com.ets.dao.allergyCategory.AllergyCategoryDAOImpl">
+  	<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+  </bean>
+  <bean id="allergyCategoryService" class="com.ets.service.allergyCategory.AllergyCategorySeviceImpl">
+  <property name="allergyCategoryDAO" ref="allergyCategoryDAO"></property>
+  </bean> 
+  
+   <bean id="foodAllergyDAO" class="com.ets.dao.foodSubstance.FoodAllergyDAOImpl">
+  	<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+
+  </bean>
+  <bean id="foodAllergyService" class="com.ets.service.foodAllergy.FoodAllergyServiceImpl">
+  <property name="foodAllergyDAO" ref="foodAllergyDAO"></property>
+  </bean> 
+  
+  <bean id="patientBillingInvoiceDAO" class="com.ets.dao.patientBillingInvoice.PatientBillingInvoiceDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="patientBillingInvoiceService" class="com.ets.service.patientBillingInvoice.PatientBillingInvoiceServiceImpl">
+  <property name="patientBillingInvoiceDAO" ref="patientBillingInvoiceDAO"></property>
+  </bean>
+  
+  <bean id="vitalSignDAO" class="com.ets.dao.vitalSign.VitalSignDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="vitalSignService" class="com.ets.service.vitalSign.VitalSignServiceImpl">
+  <property name="vitalSignDAO" ref="vitalSignDAO"></property>
+  </bean>
+  
+  <bean id="buildNoteDAO" class="com.ets.dao.buildNote.BuildNoteDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="buildNoteService" class="com.ets.service.buildNote.BuildNoteServiceImpl">
+  <property name="buildNoteDAO" ref="buildNoteDAO"></property>
+  </bean>
+  
+  <bean id="companyProtocolDAO" class="com.ets.dao.companyProtocol.CompanyProtocolDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="companyProtocolService" class="com.ets.service.companyProtocol.CompanyProtocolServiceImpl">
+  <property name="companyProtocolDAO" ref="companyProtocolDAO"></property>
+  </bean>
+  <bean id="flowsheetSpecialOrderDAO" class="com.ets.dao.flowsheet.FlowsheetSpecialOrderDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="flowsheetSpecialOrderService" class="com.ets.service.flowsheet.FlowsheetSpecialOrderServiceImpl">
+  <property name="flowsheetSpecialOrderDAO" ref="flowsheetSpecialOrderDAO"></property>
+  </bean>
+  <bean id="companyOptionalProtocolActivityDAO" class="com.ets.dao.companyOptionalProtocolActivity.CompanyOptionalProtocolActivityDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="companyOptionalProtocolActivityService" class="com.ets.service.companyOptionalProtocolActivity.CompanyOptionalProtocolActivityServiceImpl">
+  <property name="companyOptionalProtocolActivityDAO" ref="companyOptionalProtocolActivityDAO"></property>
+  </bean>
+  <bean id="companyStandardProtocolActivityDAO" class="com.ets.dao.companyStandardProtocolActivity.CompanyStandardProtocolActivityDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="companyStandardProtocolActivityService" class="com.ets.service.companyStandardProtocolActivity.CompanyStandardProtocolActivityServiceImpl">
+ <property name="companyStandardProtocolActivityDAO" ref="companyStandardProtocolActivityDAO"></property>
+  </bean>
+  <bean id="userDefinedFormDao" class="com.ets.dao.userDefinedForm.UserDefinedFormDaoImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  <bean id="userDefinedFormService" class="com.ets.service.userDefinedForm.UserDefinedFormServiceImpl">
+  <property name="userDefinedFormDao" ref="userDefinedFormDao"></property>
+  </bean>
+  
+  <bean id="clinicBlockScheduleDAO" class="com.ets.dao.clinicBlockSchedule.ClinicBlockScheduleDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory">
+  
+  </property>
+  </bean>
+  <bean id="clinicBlockScheduleService" class="com.ets.service.clinicBlockSchedule.ClinicBlockScheduleServiceImpl">
+  <property name="clinicBlockScheduleDAO" ref="clinicBlockScheduleDAO">
+  
+  </property>
+   </bean>
+  <bean id="providerDaysBlockDAO" class="com.ets.dao.providerDaysBlock.ProviderDaysBlockDAOImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+ <bean id="providerDaysBlockService" class="com.ets.service.providerDaysBlock.ProviderDaysBlockServiceImpl">
+ <property name="providerDaysBlockDAO" ref="providerDaysBlockDAO"></property>
+ </bean>
+ 
+  <bean id="providerBlockDayExceptionDAO" class="com.ets.dao.providerDaysBlockException.ProviderBlockDayExceptionDaoImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+ <bean id="providerBlockDayExceptionService" class="com.ets.service.providerBlockDayExcepion.ProviderBlockDayExceptionServiceImpl">
+ <property name="providerBlockDayExceptionDAO" ref="providerBlockDayExceptionDAO"></property>
+ </bean>
+ 
+ 
+  <bean id="clinicianDaysBlockTimeDao" class="com.ets.dao.clinicianDaysBlockTime.ClinicianDaysBlockTimeDaoImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+ <bean id="clinicianDaysBlockTimeService" class="com.ets.service.clinicianDaysBlockTime.ClinicianDaysBlockTimeServiceImpl">
+ <property name="clinicianDaysBlockTimeDao" ref="clinicianDaysBlockTimeDao"></property>
+ </bean>
+ 
+  <bean id="clinicianDaysBlockExceptionDao" class="com.ets.dao.clinicianDaysBlockException.ClinicianDaysBlockExceptionDaoImpl">
+  <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+ <bean id="clinicianDaysBlockExceptionService" class="com.ets.service.clinicianDaysBlockException.ClinicianDaysBlockExceptionServiceImpl">
+ <property name="ClinicianDaysBlockExceptionDao" ref="clinicianDaysBlockExceptionDao"></property>
+ </bean>
+ 
+ 
+ <bean id="patientanaDAO" class="com.ets.dao.patientAnalysis.PatientAnalysisDAOImpl">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"></property>
+	</bean>
+	<bean id="patientAnalysisService" class="com.ets.service.patientAnalysis.PatientAnalysisServiceImpl">
+		<property name="patanDAO" ref="patientanaDAO"></property>
+	</bean>
+ 
+	 
+<!-- 	 <bean id="audioMeterTestParamGen"  class="com.ets.dao.audioMeterTestParamGen.AudioMeterTestParamGenDAOImpl">
+  <property name="sessionFactory"    ref="hibernate4AnnotatedSessionFactory"></property>
+  </bean>
+  
+  <bean id="audioMeterTestParamGenService"  class="com.ets.service.audioMeterTestParamGen.AudioMeterTestParamGenServiceImpl">
+  <property name="audioMeterTestParamGenDAO"  ref="audioMeterTestParamGen"></property>
+  </bean> -->
+ 
+ 
+</beans>
+

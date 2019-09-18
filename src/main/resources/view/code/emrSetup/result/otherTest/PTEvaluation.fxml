@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="558.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.PTEvaluationInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="6.0" layoutY="6.0" prefHeight="438.0" prefWidth="544.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="14.0" text="Hip Flex L1/2/3 Active = " />
+                  <Label layoutX="2.0" layoutY="62.0" text="Hip Flex L1/2/3 Passive = " />
+                  <Label layoutX="2.0" layoutY="121.0" text="Hip Flex L1/2/3 Strength = " />
+                  <Label layoutX="6.0" layoutY="192.0" text="Hip Extension L5/S1 - 2  Active = " />
+                  <Label layoutX="4.0" layoutY="248.0" text="Hip Extension L5/S1 - 2  Passive = " />
+                  <Label layoutX="7.0" layoutY="303.0" text="Hip Extension L5/S1 - 2  Strength = " />
+                  <Separator layoutX="208.0" layoutY="1.0" orientation="VERTICAL" prefHeight="357.0" prefWidth="1.0" />
+                  <RadioButton fx:id="flexActive25Radio" layoutX="240.0" layoutY="6.0" mnemonicParsing="false" text="25">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Leukocytes" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="flexActive50Radio" layoutX="379.0" layoutY="6.0" mnemonicParsing="false" text="50" toggleGroup="$Leukocytes" />
+                  <RadioButton fx:id="flexActive100Radio" layoutX="379.0" layoutY="30.0" mnemonicParsing="false" text="100" toggleGroup="$Leukocytes" />
+                  <RadioButton fx:id="flexActive75Radio" layoutX="240.0" layoutY="30.0" mnemonicParsing="false" text="75" toggleGroup="$Leukocytes" />
+                  <Separator layoutX="4.0" layoutY="52.0" prefHeight="0.0" prefWidth="548.0" />
+                  <RadioButton fx:id="flexPassive25Radio" layoutX="240.0" layoutY="59.0" mnemonicParsing="false" text="25">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Nitrite" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="flexPassive50Radio" layoutX="379.0" layoutY="59.0" mnemonicParsing="false" text="50" toggleGroup="$Nitrite" />
+                  <RadioButton fx:id="flexPassive75Radio" layoutX="240.0" layoutY="82.0" mnemonicParsing="false" text="75" toggleGroup="$Nitrite" />
+                  <RadioButton fx:id="flexPassive100radio" layoutX="379.0" layoutY="82.0" mnemonicParsing="false" text="100" toggleGroup="$Nitrite" />
+                  <RadioButton fx:id="flexStrength15Radio" layoutX="240.0" layoutY="112.0" mnemonicParsing="false" text="1/5">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Protein" />
+                     </toggleGroup></RadioButton>
+                  <Separator layoutY="103.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="flexStrength35Radio" layoutX="240.0" layoutY="136.0" mnemonicParsing="false" text="3/5" toggleGroup="$Protein" />
+                  <RadioButton fx:id="flexStrength45radio" layoutX="379.0" layoutY="136.0" mnemonicParsing="false" text="4/5" toggleGroup="$Protein" />
+                  <RadioButton fx:id="flexStrength25Radio" layoutX="379.0" layoutY="111.0" mnemonicParsing="false" text="2/5" toggleGroup="$Protein" />
+                  <RadioButton fx:id="flexStrength55Radio" layoutX="240.0" layoutY="161.0" mnemonicParsing="false" text="5/5" toggleGroup="$Protein" />
+                  <Separator layoutX="2.0" layoutY="181.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="extensionActive25Radio" layoutX="240.0" layoutY="187.0" mnemonicParsing="false" text="25">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ph" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="extensionActive50Radio" layoutX="379.0" layoutY="187.0" mnemonicParsing="false" text="50" toggleGroup="$ph" />
+                  <RadioButton fx:id="extensionActive75Radio" layoutX="240.0" layoutY="212.0" mnemonicParsing="false" text="75" toggleGroup="$ph" />
+                  <Separator layoutX="3.0" layoutY="232.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="extensionActive100Radio" layoutX="379.0" layoutY="212.0" mnemonicParsing="false" text="100" toggleGroup="$ph" />
+                  <RadioButton fx:id="extensionPasive25Radio" layoutX="240.0" layoutY="240.0" mnemonicParsing="false" text="25">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Blood" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="extensionPasive50Radio" layoutX="379.0" layoutY="240.0" mnemonicParsing="false" text="50" toggleGroup="$Blood" />
+                  <RadioButton fx:id="extensionPasive75radio" layoutX="240.0" layoutY="265.0" mnemonicParsing="false" text="75" toggleGroup="$Blood" />
+                  <Separator layoutY="285.0" prefHeight="3.0" prefWidth="555.0" />
+                  <RadioButton fx:id="extensionPasive100Radio" layoutX="379.0" layoutY="265.0" mnemonicParsing="false" text="100" toggleGroup="$Blood" />
+                  <RadioButton fx:id="extensionStrength15Radio" layoutX="240.0" layoutY="289.0" mnemonicParsing="false" text="1/5">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Gravity" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="extensionStrength25Radio" layoutX="379.0" layoutY="289.0" mnemonicParsing="false" text="2/5" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="extensionStrength35Radio" layoutX="240.0" layoutY="311.0" mnemonicParsing="false" text="3/5" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="extensionStrength45Radio" layoutX="379.0" layoutY="312.0" mnemonicParsing="false" text="4/5" toggleGroup="$Gravity" />
+                  <RadioButton fx:id="extensionStrength55Radio" layoutX="240.0" layoutY="334.0" mnemonicParsing="false" text="5/5" toggleGroup="$Gravity" />
+                  <Separator layoutX="3.0" layoutY="665.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Separator layoutX="-2.0" layoutY="357.0" prefHeight="3.0" prefWidth="555.0" />
+                  <Button fx:id="doneBtn" layoutX="283.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="OK">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="385.0" layoutY="369.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

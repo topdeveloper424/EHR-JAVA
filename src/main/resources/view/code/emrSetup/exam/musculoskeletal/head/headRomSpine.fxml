@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="539.0" stylesheets="@../../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.exam.musculoSkeleton.head.HeadRomSpineInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="310.0" prefWidth="527.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="99.0" prefWidth="569.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="105.0" prefHeight="3.0" prefWidth="525.0" />
+                  <Label layoutX="14.0" layoutY="12.0" text="C Spine : Flexion" />
+                  <Label layoutX="11.0" layoutY="118.0" text="C Spine : Left Rotation" />
+                  <Separator layoutX="173.0" layoutY="1.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="6.0" />
+                  <Button fx:id="doneBtn" layoutX="300.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="skipBtn" layoutX="400.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="flexionText" layoutX="188.0" layoutY="3.0" />
+                  <TextField fx:id="extensionText" layoutX="187.0" layoutY="40.0" />
+                  <TextField fx:id="rightRatationText" layoutX="188.0" layoutY="76.0" />
+                  <TextField fx:id="leftRatationText" layoutX="187.0" layoutY="113.0" />
+                  <Separator layoutY="35.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Separator layoutX="-2.0" layoutY="67.0" prefHeight="6.0" prefWidth="527.0" />
+                  <Separator layoutX="-1.0" layoutY="146.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Label layoutX="15.0" layoutY="44.0" text="C Spine  : Extension" />
+                  <Label layoutX="12.0" layoutY="80.0" text="C Spine :  Right Rotation" />
+                  <Label layoutX="8.0" layoutY="157.0" text="C Spine : Right Lateral Flexion" />
+                  <Label layoutX="7.0" layoutY="201.0" text="C Spine : Left Lateral Flexion" />
+                  <TextField fx:id="rightLateralText" layoutX="188.0" layoutY="152.0" />
+                  <TextField fx:id="LeftLateralText" layoutX="190.0" layoutY="190.0" />
+                  <Separator layoutX="9.0" layoutY="186.0" prefHeight="0.0" prefWidth="527.0" />
+                  <Separator layoutX="-2.0" layoutY="224.0" prefHeight="0.0" prefWidth="527.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="510.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ets.controller.gui.emrCharting.result.otherTest.JAMARGripTestInputController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="6.0" prefHeight="384.0" prefWidth="499.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="525.0">
+               <children>
+                  <Separator layoutX="1.0" layoutY="172.0" prefHeight="2.0" prefWidth="499.0" />
+                  <Label layoutX="4.0" layoutY="114.0" text="Right Extremity :" />
+                  <Separator layoutX="149.0" layoutY="1.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="0.0" />
+                  <Button fx:id="doneBtn" layoutX="281.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Done">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="1.0" layoutY="206.0" prefHeight="0.0" prefWidth="499.0" />
+                  <Button fx:id="skipBtn" layoutX="381.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Skip">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../image/crossout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="4.0" layoutY="182.0" text="Right Extremity :" />
+                  <TextField fx:id="right1stText" layoutX="164.0" layoutY="109.0" prefHeight="25.0" prefWidth="151.0" />
+                  <Separator layoutX="-3.0" layoutY="138.0" prefHeight="0.0" prefWidth="499.0" />
+                  <TextField fx:id="right2ndText" layoutX="164.0" layoutY="143.0" />
+                  <TextField fx:id="right3rdText" layoutX="164.0" layoutY="177.0" />
+                  <Label layoutX="4.0" layoutY="148.0" text="Right Extremity :" />
+                  <Separator layoutX="5.0" layoutY="276.0" prefHeight="0.0" prefWidth="499.0" />
+                  <Label layoutX="4.0" layoutY="218.0" text="Left Extremity :" />
+                  <Separator layoutX="5.0" layoutY="310.0" prefHeight="0.0" prefWidth="499.0" />
+                  <Label layoutX="4.0" layoutY="286.0" text="Left Extremity :" />
+                  <TextField fx:id="left1stText" layoutX="164.0" layoutY="213.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Separator layoutX="1.0" layoutY="242.0" prefHeight="0.0" prefWidth="499.0" />
+                  <TextField fx:id="left2ndText" layoutX="164.0" layoutY="247.0" />
+                  <TextField fx:id="left3rdText" layoutX="164.0" layoutY="281.0" />
+                  <Label layoutX="4.0" layoutY="252.0" text="Left Extremity :" />
+                  <RadioButton fx:id="handRightRadio" layoutX="164.0" layoutY="6.0" mnemonicParsing="false" text="Right">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="hand" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="handLeftRadio" layoutX="327.0" layoutY="7.0" mnemonicParsing="false" text="Left" toggleGroup="$hand" />
+                  <RadioButton fx:id="handAmbidextrousRadio" layoutX="164.0" layoutY="28.0" mnemonicParsing="false" text="Ambidextrous" toggleGroup="$hand" />
+                  <Separator layoutX="-1.0" layoutY="51.0" prefHeight="0.0" prefWidth="499.0" />
+                  <RadioButton fx:id="AffectedRightRadio" layoutX="164.0" layoutY="57.0" mnemonicParsing="false" text="Right">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Affected" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="AffectedLeftRadio" layoutX="327.0" layoutY="58.0" mnemonicParsing="false" text="Left" toggleGroup="$Affected" />
+                  <RadioButton fx:id="AffectedBothRadio" layoutX="164.0" layoutY="79.0" mnemonicParsing="false" text="Both" toggleGroup="$Affected" />
+                  <Separator layoutY="102.0" prefHeight="0.0" prefWidth="499.0" />
+                  <Label layoutX="4.0" layoutY="20.0" text="Dominant Hand :" />
+                  <Label layoutX="4.0" layoutY="66.0" text="Affected Extremity(les):" />
+                  <Label layoutX="333.0" layoutY="114.0" text="psi (1st attempt)" />
+                  <Label layoutX="333.0" layoutY="148.0" text="psi (2nd attempt)" />
+                  <Label layoutX="333.0" layoutY="182.0" text="psi (3rd attempt)" />
+                  <Label layoutX="333.0" layoutY="218.0" text="psi (1st attempt)" />
+                  <Label layoutX="333.0" layoutY="252.0" text="psi (2nd attempt)" />
+                  <Label layoutX="333.0" layoutY="286.0" text="psi (3rd attempt)" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
