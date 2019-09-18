@@ -41,6 +41,7 @@ public class AssessmentDAOImpl implements AssessmentDAO{
 		Transaction tx = session.beginTransaction();
 		Criteria criteria=session.createCriteria(Assesment.class);
 		criteria.add(Restrictions.eq("patient.id",id));
+		criteria.add(Restrictions.isNotNull("icd10.id"));
 		List<Assesment> assesmentsList  = null;
 		try {
 			assesmentsList=criteria.list();
