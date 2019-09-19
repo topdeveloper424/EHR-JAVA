@@ -696,14 +696,11 @@ public class PMHAllergyInputController implements Initializable {
 			LatexCheck.setSelected(false);
 
 		} else if (secondFormCount == formCount) {
-
 			genericEMRChartingController.paint(button);
-
 			formCount = 0;
 			genericEMRChartingController.setPmhTextArea(str);
 			genericEMRChartingController.saveAllTextArea();
 			new FXFormCommonUtilities().closeForm(DoneButton);
-
 		}
 
 	}

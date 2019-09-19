@@ -34,6 +34,7 @@ import com.ets.controller.gui.emrCharting.exam.musculoSkeleton.forearm.ForearmRo
 import com.ets.controller.gui.emrCharting.exam.musculoSkeleton.forearm.ForearmRomWristRightInputController;
 import com.ets.controller.gui.emrCharting.exam.musculoSkeleton.forearm.ForearmSpecialTestLeftInputController;
 import com.ets.controller.gui.emrCharting.exam.musculoSkeleton.forearm.ForearmSpecialTestRightInputController;
+import com.ets.controller.gui.emrCharting.pmh.allergy.AllergyFreeTextController;
 import com.ets.controller.gui.emrCharting.procedure.laceration.ArmInputController;
 import com.ets.controller.gui.emrCharting.procedure.laceration.EarInputController;
 import com.ets.controller.gui.emrCharting.procedure.laceration.ElbowInputController;
@@ -60,143 +61,150 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 
-public class MedicalProcedureInputController implements Initializable{
-	
+public class MedicalProcedureInputController implements Initializable {
+
 	@FXML
-    private CheckBox armCheckBox;
+	private CheckBox armCheckBox;
 
-    @FXML
-    private CheckBox earCheckBox;
+	@FXML
+	private CheckBox earCheckBox;
 
-    @FXML
-    private CheckBox elbowCheckBox;
+	@FXML
+	private CheckBox elbowCheckBox;
 
-    @FXML
-    private CheckBox feetCheckBox;
+	@FXML
+	private CheckBox feetCheckBox;
 
-    @FXML
-    private CheckBox forearmCheckBox;
+	@FXML
+	private CheckBox forearmCheckBox;
 
-    @FXML
-    private CheckBox handCheckBox;
+	@FXML
+	private CheckBox handCheckBox;
 
-    @FXML
-    private CheckBox legCheckBox;
+	@FXML
+	private CheckBox legCheckBox;
 
-    @FXML
-    private CheckBox trunkCheckBox;
+	@FXML
+	private CheckBox trunkCheckBox;
 
-    @FXML
-    private CheckBox noseCheckBox;
+	@FXML
+	private CheckBox noseCheckBox;
 
-    @FXML
-    private CheckBox bodyEyeCheckBox;
+	@FXML
+	private CheckBox bodyEyeCheckBox;
 
-    @FXML
-    private CheckBox neckCheckBox;
+	@FXML
+	private CheckBox neckCheckBox;
 
-    @FXML
-    private CheckBox sclapCheckBox;
+	@FXML
+	private CheckBox sclapCheckBox;
 
-    @FXML
-    private CheckBox toeCheckBox;
+	@FXML
+	private CheckBox toeCheckBox;
 
-    @FXML
-    private CheckBox eyelidCheckBox;
+	@FXML
+	private CheckBox eyelidCheckBox;
 
-    @FXML
-    private CheckBox faceCheckBox;
+	@FXML
+	private CheckBox faceCheckBox;
 
-    @FXML
-    private CheckBox fingerCheckBox;
+	@FXML
+	private CheckBox fingerCheckBox;
 
-    @FXML
-    private CheckBox bodyUCCheckBox;
+	@FXML
+	private CheckBox bodyUCCheckBox;
 
-    @FXML
-    private CheckBox sutureCheckBox;
+	@FXML
+	private CheckBox sutureCheckBox;
 
-    @FXML
-    private CheckBox dislocationCheckBox;
+	@FXML
+	private CheckBox dislocationCheckBox;
 
-    @FXML
-    private CheckBox additionalCheckBox;
+	@FXML
+	private CheckBox additionalCheckBox;
 
-    @FXML
-    private CheckBox patientObservationCheckBox;
+	@FXML
+	private CheckBox patientObservationCheckBox;
 
-    @FXML
-    private CheckBox respiratoryProcedureCheckBox;
+	@FXML
+	private CheckBox respiratoryProcedureCheckBox;
 
-    @FXML
-    private CheckBox oxygenCheckBox;
+	@FXML
+	private CheckBox oxygenCheckBox;
 
-    @FXML
-    private CheckBox nasalCheckBox;
+	@FXML
+	private CheckBox nasalCheckBox;
 
-    @FXML
-    private CheckBox drainageCheckBox;
+	@FXML
+	private CheckBox drainageCheckBox;
 
-    @FXML
-    private CheckBox injectionNoteCheckBox;
+	@FXML
+	private CheckBox injectionNoteCheckBox;
 
-    @FXML
-    private CheckBox wickPlacementCheckBox;
+	@FXML
+	private CheckBox wickPlacementCheckBox;
 
-    @FXML
-    private CheckBox waxRemovalCheckBox;
+	@FXML
+	private CheckBox waxRemovalCheckBox;
 
-    @FXML
-    private CheckBox anoscopyCheckBox;
+	@FXML
+	private CheckBox anoscopyCheckBox;
 
-    @FXML
-    private CheckBox aspirationCheckBox;
+	@FXML
+	private CheckBox aspirationCheckBox;
 
-    @FXML
-    private CheckBox woundCleaningCheckBox;
+	@FXML
+	private CheckBox woundCleaningCheckBox;
 
-    @FXML
-    private CheckBox iducCheckBox;
+	@FXML
+	private CheckBox iducCheckBox;
 
-    @FXML
-    private CheckBox nonsurgicalCheckBox;
+	@FXML
+	private CheckBox nonsurgicalCheckBox;
 
-    @FXML
-    private CheckBox generalCheckBox;
+	@FXML
+	private CheckBox generalCheckBox;
 
-    @FXML
-    private CheckBox generalConditionalCheckBox;
+	@FXML
+	private CheckBox generalConditionalCheckBox;
 
-    @FXML
-    private CheckBox urgentCareCheckBox;
+	@FXML
+	private CheckBox urgentCareCheckBox;
 
-    @FXML
-    private CheckBox coordinationCheckBox;
+	@FXML
+	private CheckBox coordinationCheckBox;
 
-    @FXML
-    private Button skipBtn;
+	@FXML
+	private Button skipBtn;
 
-    @FXML
-      private Button doneBtn;
-	  private GenericEMRChartingController genericEMRChartingController;
-	  private Button button;
-	  
-	  FXMLFormPath formPath = new FXMLFormPath();
-	public void setGenericEMRChartingController(GenericEMRChartingController genericEMRChartingController,Button button) {
+	@FXML
+	private Button freeTextBtn;
+
+	@FXML
+	private Button doneBtn;
+
+	public GenericEMRChartingController genericEMRChartingController;
+	private Button button;
+
+	FXMLFormPath formPath = new FXMLFormPath();
+
+	public void setGenericEMRChartingController(GenericEMRChartingController genericEMRChartingController,
+			Button button) {
 		this.genericEMRChartingController = genericEMRChartingController;
-		this.button=button;
-		
+		this.button = button;
+
 	}
+
 	public static Integer formCount = 0;
 	private Integer secondFormCount = 0;
 
-	public String str="\n\n";
+	public String str = "\n\n";
+	public static String strForFreeText = "";
 
 	void formCountIncrement() {
 		++secondFormCount;
 	}
-	
-	
+
 	public void setMedUI() {
 
 		if (armCheckBox.isSelected()) {
@@ -211,8 +219,7 @@ public class MedicalProcedureInputController implements Initializable{
 			armInputController.setMedicalProcedureInputController(this);
 			armCheckBox.setSelected(false);
 
-		}else if (earCheckBox.isSelected()) {
-
+		} else if (earCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalEar", null, Locale.US);
@@ -224,7 +231,7 @@ public class MedicalProcedureInputController implements Initializable{
 			earInputController.setMedicalProcedureInputController(this);
 			earCheckBox.setSelected(false);
 
-		}else if (elbowCheckBox.isSelected()) {
+		} else if (elbowCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalElbow", null, Locale.US);
@@ -262,7 +269,7 @@ public class MedicalProcedureInputController implements Initializable{
 			faceInputController.setMedicalProcedureInputController(this);
 			faceCheckBox.setSelected(false);
 
-		}else if (feetCheckBox.isSelected()) {
+		} else if (feetCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalFeet", null, Locale.US);
@@ -297,7 +304,7 @@ public class MedicalProcedureInputController implements Initializable{
 			forearmInputController.setMedicalProcedureInputController(this);
 			forearmCheckBox.setSelected(false);
 
-		}else if (handCheckBox.isSelected()) {
+		} else if (handCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalHand", null, Locale.US);
@@ -358,7 +365,7 @@ public class MedicalProcedureInputController implements Initializable{
 			sclapCheckBox.setSelected(false);
 
 		}
-		
+
 		else if (toeCheckBox.isSelected()) {
 
 			formCountIncrement();
@@ -372,7 +379,6 @@ public class MedicalProcedureInputController implements Initializable{
 			toeCheckBox.setSelected(false);
 
 		}
-		
 
 		else if (trunkCheckBox.isSelected()) {
 
@@ -386,8 +392,7 @@ public class MedicalProcedureInputController implements Initializable{
 			trunkInputController.setMedicalProcedureInputController(this);
 			trunkCheckBox.setSelected(false);
 
-		}
-		else if (bodyEyeCheckBox.isSelected()) {
+		} else if (bodyEyeCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalForeignBodyEye", null, Locale.US);
@@ -399,8 +404,7 @@ public class MedicalProcedureInputController implements Initializable{
 			foreignBodyEyeInputController.setMedicalProcedureInputController(this);
 			bodyEyeCheckBox.setSelected(false);
 
-		}
-		else if (bodyUCCheckBox.isSelected()) {
+		} else if (bodyUCCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalForeignBodyUc", null, Locale.US);
@@ -412,7 +416,7 @@ public class MedicalProcedureInputController implements Initializable{
 			foreignBodyUcInputController.setMedicalProcedureInputController(this);
 			bodyUCCheckBox.setSelected(false);
 
-		}else if (sutureCheckBox.isSelected()) {
+		} else if (sutureCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalSutureRemovalUC", null, Locale.US);
@@ -424,7 +428,7 @@ public class MedicalProcedureInputController implements Initializable{
 			sutureRemovalUCInputController.setMedicalProcedureInputController(this);
 			sutureCheckBox.setSelected(false);
 
-		}else if (iducCheckBox.isSelected()) {
+		} else if (iducCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalIdUC", null, Locale.US);
@@ -436,11 +440,13 @@ public class MedicalProcedureInputController implements Initializable{
 			idUCInputController.setMedicalProcedureInputController(this);
 			iducCheckBox.setSelected(false);
 
-		}else if (nonsurgicalCheckBox.isSelected()) {
+		} else if (nonsurgicalCheckBox.isSelected()) {
 
 			formCountIncrement();
-			String formName = formPath.context.getMessage("PROCEDUREMedicalWoundDebridmentNonsurgical", null, Locale.US);
-			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalWoundDebridmentNonsurgical", null, Locale.US);
+			String formName = formPath.context.getMessage("PROCEDUREMedicalWoundDebridmentNonsurgical", null,
+					Locale.US);
+			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalWoundDebridmentNonsurgical", null,
+					Locale.US);
 			formPath.closeApplicationContext();
 
 			WoundDebridmentNonsurgical woundDebridmentNonsurgical = (WoundDebridmentNonsurgical) new FXFormCommonUtilities()
@@ -448,7 +454,7 @@ public class MedicalProcedureInputController implements Initializable{
 			woundDebridmentNonsurgical.setMedicalProcedureInputController(this);
 			nonsurgicalCheckBox.setSelected(false);
 
-		}else if (woundCleaningCheckBox.isSelected()) {
+		} else if (woundCleaningCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalWoundClearingUC", null, Locale.US);
@@ -460,11 +466,12 @@ public class MedicalProcedureInputController implements Initializable{
 			woClearingUCInputController.setMedicalProcedureInputController(this);
 			woundCleaningCheckBox.setSelected(false);
 
-		}else if (aspirationCheckBox.isSelected()) {
+		} else if (aspirationCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalAspirationProcedure", null, Locale.US);
-			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalAspirationProcedure", null, Locale.US);
+			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalAspirationProcedure", null,
+					Locale.US);
 			formPath.closeApplicationContext();
 
 			AspirationProcedureInputController aspirationProcedureInputController = (AspirationProcedureInputController) new FXFormCommonUtilities()
@@ -472,7 +479,7 @@ public class MedicalProcedureInputController implements Initializable{
 			aspirationProcedureInputController.setMedicalProcedureInputController(this);
 			aspirationCheckBox.setSelected(false);
 
-		}else if (anoscopyCheckBox.isSelected()) {
+		} else if (anoscopyCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalDiagnosticAnoscopy", null, Locale.US);
@@ -484,7 +491,7 @@ public class MedicalProcedureInputController implements Initializable{
 			diagnosticAnoscopyInputController.setMedicalProcedureInputController(this);
 			anoscopyCheckBox.setSelected(false);
 
-		}else if (waxRemovalCheckBox.isSelected()) {
+		} else if (waxRemovalCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalEarIrrigation", null, Locale.US);
@@ -496,7 +503,7 @@ public class MedicalProcedureInputController implements Initializable{
 			earIrrigationInputController.setMedicalProcedureInputController(this);
 			waxRemovalCheckBox.setSelected(false);
 
-		}else if (wickPlacementCheckBox.isSelected()) {
+		} else if (wickPlacementCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalEarWrickPlacement", null, Locale.US);
@@ -508,11 +515,12 @@ public class MedicalProcedureInputController implements Initializable{
 			earWrickPlacementInputController.setMedicalProcedureInputController(this);
 			wickPlacementCheckBox.setSelected(false);
 
-		}else if (drainageCheckBox.isSelected()) {
+		} else if (drainageCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalEffusionTapDrainage", null, Locale.US);
-			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalEffusionTapDrainage", null, Locale.US);
+			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalEffusionTapDrainage", null,
+					Locale.US);
 			formPath.closeApplicationContext();
 
 			EffusionTapDrainageInputController effusionTapDrainageInputController = (EffusionTapDrainageInputController) new FXFormCommonUtilities()
@@ -520,7 +528,7 @@ public class MedicalProcedureInputController implements Initializable{
 			effusionTapDrainageInputController.setMedicalProcedureInputController(this);
 			drainageCheckBox.setSelected(false);
 
-		}else if (injectionNoteCheckBox.isSelected()) {
+		} else if (injectionNoteCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalInjectionNoteMaRn", null, Locale.US);
@@ -532,7 +540,7 @@ public class MedicalProcedureInputController implements Initializable{
 			injectionNoteMaRnInputController.setMedicalProcedureInputController(this);
 			injectionNoteCheckBox.setSelected(false);
 
-		}else if (nasalCheckBox.isSelected()) {
+		} else if (nasalCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalNasalTemponade", null, Locale.US);
@@ -544,7 +552,7 @@ public class MedicalProcedureInputController implements Initializable{
 			nasalTemponadeInputController.setMedicalProcedureInputController(this);
 			nasalCheckBox.setSelected(false);
 
-		}else if (oxygenCheckBox.isSelected()) {
+		} else if (oxygenCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalOxygen", null, Locale.US);
@@ -556,11 +564,13 @@ public class MedicalProcedureInputController implements Initializable{
 			oxygenInputController.setMedicalProcedureInputController(this);
 			oxygenCheckBox.setSelected(false);
 
-		}else if (respiratoryProcedureCheckBox.isSelected()) {
+		} else if (respiratoryProcedureCheckBox.isSelected()) {
 
 			formCountIncrement();
-			String formName = formPath.context.getMessage("PROCEDUREMedicalRespiratoryProcedureSupplies", null, Locale.US);
-			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalRespiratoryProcedureSupplies", null, Locale.US);
+			String formName = formPath.context.getMessage("PROCEDUREMedicalRespiratoryProcedureSupplies", null,
+					Locale.US);
+			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalRespiratoryProcedureSupplies", null,
+					Locale.US);
 			formPath.closeApplicationContext();
 
 			RespiratoryProcedureSuppliesInputController respiratoryProcedureSuppliesInputController = (RespiratoryProcedureSuppliesInputController) new FXFormCommonUtilities()
@@ -568,7 +578,7 @@ public class MedicalProcedureInputController implements Initializable{
 			respiratoryProcedureSuppliesInputController.setMedicalProcedureInputController(this);
 			respiratoryProcedureCheckBox.setSelected(false);
 
-		}else if (patientObservationCheckBox.isSelected()) {
+		} else if (patientObservationCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalPatientObservation", null, Locale.US);
@@ -580,11 +590,13 @@ public class MedicalProcedureInputController implements Initializable{
 			patientObservationInputController.setMedicalProcedureInputController(this);
 			patientObservationCheckBox.setSelected(false);
 
-		}else if (additionalCheckBox.isSelected()) {
+		} else if (additionalCheckBox.isSelected()) {
 
 			formCountIncrement();
-			String formName = formPath.context.getMessage("PROCEDUREMedicalPrologedServicesAdditional", null, Locale.US);
-			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalPrologedServicesAdditional", null, Locale.US);
+			String formName = formPath.context.getMessage("PROCEDUREMedicalPrologedServicesAdditional", null,
+					Locale.US);
+			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalPrologedServicesAdditional", null,
+					Locale.US);
 			formPath.closeApplicationContext();
 
 			PrologedServicesAdditionalInputController prologedServicesAdditionalInputController = (PrologedServicesAdditionalInputController) new FXFormCommonUtilities()
@@ -592,19 +604,20 @@ public class MedicalProcedureInputController implements Initializable{
 			prologedServicesAdditionalInputController.setMedicalProcedureInputController(this);
 			additionalCheckBox.setSelected(false);
 
-		}else if (dislocationCheckBox.isSelected()) {
+		} else if (dislocationCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalReductionOfDislocation", null, Locale.US);
-			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalReductionOfDislocation", null, Locale.US);
+			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalReductionOfDislocation", null,
+					Locale.US);
 			formPath.closeApplicationContext();
 
-			ReductionOfDislocationInputController  reductionOfDislocationInputController = (ReductionOfDislocationInputController) new FXFormCommonUtilities()
+			ReductionOfDislocationInputController reductionOfDislocationInputController = (ReductionOfDislocationInputController) new FXFormCommonUtilities()
 					.displayForm(formName, formTitle);
 			reductionOfDislocationInputController.setMedicalProcedureInputController(this);
 			dislocationCheckBox.setSelected(false);
 
-		}else if (generalCheckBox.isSelected()) {
+		} else if (generalCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalSuppliesGeneral", null, Locale.US);
@@ -616,11 +629,12 @@ public class MedicalProcedureInputController implements Initializable{
 			suppliesGeneralInputController.setMedicalProcedureInputController(this);
 			generalCheckBox.setSelected(false);
 
-		}else if (generalConditionalCheckBox.isSelected()) {
+		} else if (generalConditionalCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalSuppliesGeneralContinue", null, Locale.US);
-			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalSuppliesGeneralContinue", null, Locale.US);
+			String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalSuppliesGeneralContinue", null,
+					Locale.US);
 			formPath.closeApplicationContext();
 
 			SuppliesGeneralContinueInputController suppliesGeneralContinueInputController = (SuppliesGeneralContinueInputController) new FXFormCommonUtilities()
@@ -628,7 +642,7 @@ public class MedicalProcedureInputController implements Initializable{
 			suppliesGeneralContinueInputController.setMedicalProcedureInputController(this);
 			generalConditionalCheckBox.setSelected(false);
 
-		}else if (urgentCareCheckBox.isSelected()) {
+		} else if (urgentCareCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalUrgentCareCourse", null, Locale.US);
@@ -640,8 +654,7 @@ public class MedicalProcedureInputController implements Initializable{
 			urgentCareCourseInputController.setMedicalProcedureInputController(this);
 			urgentCareCheckBox.setSelected(false);
 
-		}
-		else if (coordinationCheckBox.isSelected()) {
+		} else if (coordinationCheckBox.isSelected()) {
 
 			formCountIncrement();
 			String formName = formPath.context.getMessage("PROCEDUREMedicalCoordinationofCare", null, Locale.US);
@@ -654,30 +667,305 @@ public class MedicalProcedureInputController implements Initializable{
 			coordinationCheckBox.setSelected(false);
 
 		}
-		
-		else if (secondFormCount == formCount) {
 
+		else if (secondFormCount == formCount) {
 			genericEMRChartingController.paint(button);
-			
-			new FXFormCommonUtilities().closeForm(doneBtn);
 			formCount = 0;
 			genericEMRChartingController.setProcedureTextArea(str);
 			genericEMRChartingController.saveAllTextArea();
-
+			new FXFormCommonUtilities().closeForm(doneBtn);
 		}
 
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
-		
-		
-		doneBtn.setOnAction((event)->
-		{
-			
+
+		doneBtn.setOnAction((event) -> {
+
 			setMedUI();
-		
+
 		});
-				
-}}
+
+		freeTextBtn.setOnAction((event) -> {
+			
+			if(armCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Arm,");
+				strForFreeText = str1.toString();
+				armCheckBox.setSelected(false);
+			}
+
+			if(earCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Ear,");
+				strForFreeText = str1.toString();
+				earCheckBox.setSelected(false);
+			}
+
+			if(elbowCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Elbow,");
+				strForFreeText = str1.toString();
+				elbowCheckBox.setSelected(false);
+			}
+
+			if(feetCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Feet,");
+				strForFreeText = str1.toString();
+				feetCheckBox.setSelected(false);
+			}
+
+			if(forearmCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Forearm,");
+				strForFreeText = str1.toString();
+				forearmCheckBox.setSelected(false);
+			}
+
+			if(handCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Hand,");
+				strForFreeText = str1.toString();
+				handCheckBox.setSelected(false);
+			}
+
+			if(legCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Leg,");
+				strForFreeText = str1.toString();
+				legCheckBox.setSelected(false);
+			}
+
+			if(trunkCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Trunk,");
+				strForFreeText = str1.toString();
+				trunkCheckBox.setSelected(false);
+			}
+
+			if(noseCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Nose,");
+				strForFreeText = str1.toString();
+				noseCheckBox.setSelected(false);
+			}
+
+			if(bodyEyeCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("BodyEye,");
+				strForFreeText = str1.toString();
+				bodyEyeCheckBox.setSelected(false);
+			}
+
+			if(neckCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Neck,");
+				strForFreeText = str1.toString();
+				neckCheckBox.setSelected(false);
+			}
+
+			if(sclapCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Sclap,");
+				strForFreeText = str1.toString();
+				sclapCheckBox.setSelected(false);
+			}
+
+			if(toeCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Toe,");
+				strForFreeText = str1.toString();
+				toeCheckBox.setSelected(false);
+			}
+
+			if(eyelidCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Eyelid,");
+				strForFreeText = str1.toString();
+				eyelidCheckBox.setSelected(false);
+			}
+			
+			if(faceCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Face,");
+				strForFreeText = str1.toString();
+				faceCheckBox.setSelected(false);
+			}
+
+			if(fingerCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Finger,");
+				strForFreeText = str1.toString();
+				fingerCheckBox.setSelected(false);
+			}
+
+			if(bodyUCCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("BodyUC,");
+				strForFreeText = str1.toString();
+				bodyUCCheckBox.setSelected(false);
+			}
+
+			if(sutureCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Suture,");
+				strForFreeText = str1.toString();
+				sutureCheckBox.setSelected(false);
+			}
+
+			if(dislocationCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Disolation,");
+				strForFreeText = str1.toString();
+				dislocationCheckBox.setSelected(false);
+			}
+
+			if(additionalCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Additional,");
+				strForFreeText = str1.toString();
+				additionalCheckBox.setSelected(false);
+			}
+
+			if(patientObservationCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("PatientObservation,");
+				strForFreeText = str1.toString();
+				patientObservationCheckBox.setSelected(false);
+			}
+			
+			if(respiratoryProcedureCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("RepositoryProcedure,");
+				strForFreeText = str1.toString();
+				respiratoryProcedureCheckBox.setSelected(false);
+			}
+			
+			if(oxygenCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Oxygen,");
+				strForFreeText = str1.toString();
+				oxygenCheckBox.setSelected(false);
+			}
+			
+			if(nasalCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Nasal,");
+				strForFreeText = str1.toString();
+				nasalCheckBox.setSelected(false);
+			}
+
+			if(drainageCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Drainage,");
+				strForFreeText = str1.toString();
+				drainageCheckBox.setSelected(false);
+			}
+
+			if(injectionNoteCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("InjectionNote,");
+				strForFreeText = str1.toString();
+				injectionNoteCheckBox.setSelected(false);
+			}
+
+			if(wickPlacementCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("WickPlacement,");
+				strForFreeText = str1.toString();
+				wickPlacementCheckBox.setSelected(false);
+			}
+
+			if(waxRemovalCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("WaxRemoval,");
+				strForFreeText = str1.toString();
+				waxRemovalCheckBox.setSelected(false);
+			}
+
+			if(anoscopyCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Anoscopy,");
+				strForFreeText = str1.toString();
+				anoscopyCheckBox.setSelected(false);
+			}
+
+			if(aspirationCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Aspiration,");
+				strForFreeText = str1.toString();
+				aspirationCheckBox.setSelected(false);
+			}
+
+			if(woundCleaningCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("WoundCleaning,");
+				strForFreeText = str1.toString();
+				woundCleaningCheckBox.setSelected(false);
+			}
+
+			if(iducCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Iduc,");
+				strForFreeText = str1.toString();
+				iducCheckBox.setSelected(false);
+			}
+
+			if(nonsurgicalCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Nonsurgical,");
+				strForFreeText = str1.toString();
+				nonsurgicalCheckBox.setSelected(false);
+			}
+
+			if(generalCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("General,");
+				strForFreeText = str1.toString();
+				generalCheckBox.setSelected(false);
+			}
+
+			if(generalConditionalCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("GeneralConditional,");
+				strForFreeText = str1.toString();
+				generalConditionalCheckBox.setSelected(false);
+			}
+
+			if(urgentCareCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("UrgentCare,");
+				strForFreeText = str1.toString();
+				urgentCareCheckBox.setSelected(false);
+			}
+			
+			if(coordinationCheckBox.isSelected()) {
+				StringBuilder str1 = new StringBuilder(strForFreeText);
+				str1.append("Coordination,");
+				strForFreeText = str1.toString();
+				coordinationCheckBox.setSelected(false);
+			}
+
+			 String formName = formPath.context.getMessage("PROCEDUREMedicalFreeText", null,
+			 Locale.US); 
+			 String formTitle = formPath.context.getMessage("Title.PROCEDUREMedicalFreeText", null, Locale.US);
+			 
+			 MedicalProcedureFreeTextController medicalProcedureFreeTextController =
+			 (MedicalProcedureFreeTextController) new FXFormCommonUtilities().displayForm(formName, formTitle); 
+			 formPath.closeApplicationContext();
+			 medicalProcedureFreeTextController.setMedicalProcedureInputController(this);
+			 
+			 new FXFormCommonUtilities().closeForm(freeTextBtn);
+
+		});
+
+		skipBtn.setOnAction((event) -> {
+
+			new FXFormCommonUtilities().closeForm(skipBtn);
+
+		});
+
+	}
+}
