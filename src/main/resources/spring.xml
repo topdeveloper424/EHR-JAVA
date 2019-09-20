@@ -38,7 +38,7 @@
 		<!-- Development Environment -->
 	<!-- 	<property name="url" value="jdbc:mysql://localhost:3306/ehr" /> -->
 
-		<property name="url" value="jdbc:postgresql://localhost:5432/ehrDb" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/ehr" />
         <!-- <property name="url" value="jdbc:postgresql://192.168.0.136:5432/ehrDb" /> -->
 
 		<property name="username" value="postgres" />

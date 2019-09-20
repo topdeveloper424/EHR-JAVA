@@ -303,7 +303,7 @@ public class EncounterFormInputController implements Initializable {
 			companyProtocol = Global.patientVisitObj.getCompanyProtocol();
 
 		} else {
-			if (Global.patient.getCompany() != null) {
+			if (Global.patient.getCompany() != null && Global.patientVisitObj.getVisitCategory() != null) {
 				companyProtocol = new CompanyProtocolEntityController().viewByCompanyIdAndVisitCategoryId(
 						Global.patientVisitObj.getPatient().getCompany().getId(),
 						Global.patientVisitObj.getVisitCategory().getId());
