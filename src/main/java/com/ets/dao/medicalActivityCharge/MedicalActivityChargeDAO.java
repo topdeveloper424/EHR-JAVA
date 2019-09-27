@@ -24,6 +24,7 @@ public interface MedicalActivityChargeDAO {
 	 public List<MedicalActivityCharge> searchByDatePatientBillingStatus(Date date);
 	 
 	 public List<MedicalActivityCharge> searchByPatientVisit(Integer patientVisitId);
+	 public List<MedicalActivityCharge> searchByPatient(Integer patientId);	 
      public Double getTotalChargeForPatVisit(Integer patVisitId);
    //  public void delete(MedicalActivityCharge medicalActivityCharge);
      public List<MedicalActivityCharge> list();

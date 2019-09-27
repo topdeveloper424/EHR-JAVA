@@ -253,6 +253,26 @@ public class MedicalActivityChargeDAOImpl implements  MedicalActivityChargeDAO{
 	 		return medicalChargesUnique;
 	 		
 	}
+	
+	@Override
+	public List<MedicalActivityCharge> searchByPatient(Integer patientId) {
+		List<MedicalActivityCharge> medicalChargesUnique =null;
+		Session session=sessionFactory.getCurrentSession();
+		Transaction tx=session.beginTransaction();
+		
+		Criteria criteria=session.createCriteria(MedicalActivityCharge.class);
+		
+		 criteria.add(Restrictions.and(Restrictions.eq("patient.id", patientId)));
+	        		 List<MedicalActivityCharge> viewSearchList=null;
+	 		try{
+	 			viewSearchList=criteria.list();
+	 			medicalChargesUnique=viewSearchList.stream().filter(FilterDuplicatesObjectProperty.distinctByKey(p -> p.getId())).collect(Collectors.toList());
+	 			
+	 		}catch(Exception e){
+	 			e.printStackTrace();
+	 		}tx.commit();
+	 		return medicalChargesUnique;
+	}
 
 	@Override
 	public Double getTotalChargeForPatVisit(Integer patVisitId) {

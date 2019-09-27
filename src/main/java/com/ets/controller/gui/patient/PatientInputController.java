@@ -580,7 +580,7 @@ private Provider primaryPhysician;
 		okButton.setOnAction((event) -> {
 			
 			if(FirstNameText.getText().isEmpty() || LastNameText.getText().isEmpty() || SocText.getText().isEmpty() || CityText.getText().isEmpty() 
-					|| Street1Text.getText().isEmpty() || phoneText.getText().isEmpty() || DOBDate.getValue() == null||companyNameText.getText().isEmpty()){
+					|| Street1Text.getText().isEmpty() || phoneText.getText().isEmpty() || DOBDate.getValue() == null){
 			
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Information Dialog");
@@ -823,7 +823,11 @@ private Provider primaryPhysician;
 					if(company!=null){
 						patient.setCompany(company);
 					}else{
-						patient.setCompany(Global.patient.getCompany());
+						if(this.companyNameText.getText().isEmpty()) {
+							
+						}else {
+							patient.setCompany(Global.patient.getCompany());							
+						}
 					}
 					
 									

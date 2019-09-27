@@ -10,7 +10,6 @@ package com.ets.controller.gui.medicalActivityCharge;
 
  */
 
-
 import java.net.URL;
 import java.util.Date;
 import java.util.Iterator;
@@ -27,6 +26,7 @@ import com.ets.controller.entity.drugScreenResult.DrugScreenResultEntityControll
 import com.ets.controller.entity.drugScreenTestResult.DrugScreenTestResultEntityController;
 import com.ets.controller.entity.medicalActivityCharge.MedicalActivityChargeEntityController;
 import com.ets.controller.entity.medicalactivity.MedicalActivityEntityController;
+import com.ets.controller.gui.company.CompanyViewController;
 import com.ets.controller.gui.visitLog.VisitLogInputController;
 import com.ets.controller.navpanel.BillingAndInvoicingGUIController;
 import com.ets.model.Clinic;
@@ -63,370 +63,399 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class MedicalActivityChargeViewController implements Initializable {
-	
-	 	@FXML
-	    private TableView<MedicalActivity> MedicalActivityTableByName;
 
-	    @FXML
-	    private TableColumn<MedicalActivity, String> activityCollumnByName;
+	@FXML
+	private TableView<MedicalActivity> MedicalActivityTableByName;
 
-	    @FXML
-	    private TableColumn<MedicalActivity, String> codeCollumnByName;
+	@FXML
+	private TableColumn<MedicalActivity, String> activityCollumnByName;
 
-	    @FXML
-	    private TableView<MedicalActivity> MedicalActivityTableByCPTCode;
+	@FXML
+	private TableColumn<MedicalActivity, String> codeCollumnByName;
 
-	    @FXML
-	    private TableColumn<MedicalActivity, String> codeCollumnByCPTCode;
+	@FXML
+	private TableView<MedicalActivity> MedicalActivityTableByCPTCode;
 
-	    @FXML
-	    private TableColumn<MedicalActivity, String> nameCollumnByCPTCode;
-	    
-	    @FXML
-	    private TableView<MedicalActivityCharge> medicalActivityChargeTable;
+	@FXML
+	private TableColumn<MedicalActivity, String> codeCollumnByCPTCode;
 
-	    @FXML
-	    private TableColumn<MedicalActivityCharge, String> activityCodeCollumn;
+	@FXML
+	private TableColumn<MedicalActivity, String> nameCollumnByCPTCode;
 
-	    @FXML
-	    private TableColumn<MedicalActivityCharge, String> descriptionCollumn;
+	@FXML
+	private TableView<MedicalActivityCharge> medicalActivityChargeTable;
 
-	    @FXML
-	    private TableColumn<MedicalActivityCharge, String> cpt4Collumn;
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> activityCodeCollumn;
 
-	    @FXML
-	    private TableColumn<MedicalActivityCharge, String> modifyCollumn;
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> descriptionCollumn;
 
-	    @FXML
-	    private TableColumn<MedicalActivityCharge, String> qtyCollumn;
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> cpt4Collumn;
 
-	    @FXML
-	    private TableColumn<MedicalActivityCharge, String> icd10Collumn;
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> modifyCollumn;
 
-	    @FXML
-	    private TableColumn<MedicalActivityCharge, String> statusCollumn;
-	    
-	    @FXML
-	    private Button changeBtn;
-	    
-	    @FXML
-	    private Button addBtn;
-	    
-	    @FXML
-	    private Button deleteButton;
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> qtyCollumn;
 
-	    @FXML
-	    private Button closeBtn;
-	    
-	    @FXML
-	    private TextField searchMedicalChargeText;
-	    
-	    @FXML
-	    private TextField searchMedicalActivityText;
-	    	    
-	    private DrugScreenResult drugScreenResult;
-	    private DrugScreenTestResult drugScreenTestResult ;
-	    
-	    
-	    private ObservableList<MedicalActivity> medicalActivityMasterData = FXCollections.observableArrayList();
-	    
-	    public void viewMedicalActivityDetails(){
-	    	
-	    	medicalActivityMasterData = new MedicalActivityEntityController().viewMedicalActivity();
-	    }
-	    
-	    public void viewMedicalActivityByName() {
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> icd10Collumn;
 
-	    	//medicalActivityMasterData = new DepartmentUnitEntityController().viewDepartmentUnit();
-	    	
-	    	codeCollumnByName.setCellValueFactory(cellData -> cellData.getValue().codeProperty());
-	    	activityCollumnByName.setCellValueFactory(cellData -> cellData.getValue().descripProperty());
-			//divisionCollumn.setCellValueFactory(cellData -> cellData.getValue().getDivision().codeProperty());
-	    	
-	    	FilteredList<MedicalActivity> filteredData = new FilteredList<MedicalActivity>(medicalActivityMasterData,
-					p -> true);
-	    	
-	    	searchMedicalActivityText.textProperty().addListener((observable, oldValue, newValue) -> {
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> statusCollumn;
 
-				filteredData.setPredicate(medicalActivity -> {
+	@FXML
+	private Button changeBtn;
 
-					if (newValue == null || newValue.isEmpty()) {
-						return true;
-					}
+	@FXML
+	private Button addBtn;
 
-					String lowerCaseFilter = newValue.toLowerCase();
+	@FXML
+	private Button deleteButton;
 
-					if (medicalActivity.getCode().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-						return true; // Filter matches first name.
-					}
-					return false; // Does not match.
-				});
-			});
-	    	
-	    	SortedList<MedicalActivity> sortedData = new SortedList<>(filteredData);
+	@FXML
+	private Button closeBtn;
 
-			sortedData.comparatorProperty().bind(MedicalActivityTableByName.comparatorProperty());
-	    	
-	    	//medicalActivityChargeTable.setItems(medicalActivityChargeMasterData);
-			//medicalActivityChargeTable.setItems(sortedData);
-			
-			MedicalActivityTableByName.setItems(sortedData);
+	@FXML
+	private TextField searchMedicalChargeText;
 
+	@FXML
+	private TextField searchMedicalActivityText;
 
-				    }
-	    
-	    
-	    public void viewChargeAfterBilling(Integer id){
-	    	
-	    	
-	    }
-	    
-	    public void viewMedicalActivityByCPTCode(){
-	    		    	
-	    	//codeCollumnByCPTCode.setCellValueFactory(cellData -> cellData.getValue().getCptCode4Hcpcs().codeProperty());
-	    	codeCollumnByCPTCode.setCellValueFactory( data -> 
-		    EasyBind.select(data.getValue().cptCode4HcpcsProperty())
-		        .selectObject(CptCode4Hcpcs::codeProperty));
-	    	//nameCollumnByCPTCode.setCellValueFactory(cellData -> cellData.getValue().getCptCode4Hcpcs().descrpProperty());
-	    	
-	    	nameCollumnByCPTCode.setCellValueFactory( data -> 
-		    EasyBind.select(data.getValue().cptCode4HcpcsProperty())
-		        .selectObject(CptCode4Hcpcs::descrpProperty));
-	    		    	
-	    	FilteredList<MedicalActivity> filteredData = new FilteredList<MedicalActivity>(medicalActivityMasterData,
-					p -> true);
-	    	
-	    	searchMedicalActivityText.textProperty().addListener((observable, oldValue, newValue) -> {
+	private DrugScreenResult drugScreenResult;
+	private DrugScreenTestResult drugScreenTestResult;
 
-				filteredData.setPredicate(medicalActivityCPTCode -> {
+	private ObservableList<MedicalActivity> medicalActivityMasterData = FXCollections.observableArrayList();
 
-					if (newValue == null || newValue.isEmpty()) {
-						return true;
-					}
+	public void viewMedicalActivityDetails() {
 
-					String lowerCaseFilter = newValue.toLowerCase();
+		medicalActivityMasterData = new MedicalActivityEntityController().viewMedicalActivity();
+	}
 
-					if (medicalActivityCPTCode.getCptCode4Hcpcs().getCode().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-						return true; // Filter matches first name.
-					}
-					return false; // Does not match.
-				});
-			});
-	    	
-	    	SortedList<MedicalActivity> sortedData = new SortedList<>(filteredData);
+	public void viewMedicalActivityByName() {
 
-			sortedData.comparatorProperty().bind(MedicalActivityTableByCPTCode.comparatorProperty());
-	    	
-	    	//medicalActivityChargeTable.setItems(medicalActivityChargeMasterData);
-			//medicalActivityChargeTable.setItems(sortedData);
-			
-			MedicalActivityTableByCPTCode.setItems(sortedData);
+		// medicalActivityMasterData = new
+		// DepartmentUnitEntityController().viewDepartmentUnit();
 
-	    	//MedicalActivityTableByCPTCode.setItems(medicalActivityMasterData);
-	    	
-	    }
-	    
-	    private ObservableList<MedicalActivityCharge> medicalActivityChargeMasterData = FXCollections.observableArrayList();
-	    
-	    public void viewMedicalActivityCharge(){
-	    	
-	    	//medicalActivityChargeMasterData= new MedicalActivityChargeEntityController().viewMedicalActivityCharge(Global.patient.getId(),false); changes
-	    	
-	    	medicalActivityChargeMasterData= new MedicalActivityChargeEntityController().searchByPatientVisit(Global.patientVisitObj.getId());
-	    	
-	    	
-	    	System.out.println("$$$$$$$$$$$$$$$$$ "+Global.patientVisitObj.getId());
-	    	System.out.println("Patient Visit Id is ;----" +Global.patientVisitObj.getId());
-	    	
-	    	activityCodeCollumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity()!= null?cellData.getValue().getMedicalActivity().codeProperty():null);
-	    	descriptionCollumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity()!= null?cellData.getValue().getMedicalActivity().descripProperty():null);
-	    	//cpt4Collumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity().getCptCode4Hcpcs().codeProperty());
-	    	cpt4Collumn.setCellValueFactory( data -> data.getValue().getMedicalActivity()!= null?
-		    EasyBind.select(data.getValue().getMedicalActivity().cptCode4HcpcsProperty()).selectObject(CptCode4Hcpcs::codeProperty):null);
-	    	
-	    	//modifyCollumn.setCellValueFactory(cellData -> cellData.getValue().codeProperty());
-	    	qtyCollumn.setCellValueFactory(cellData -> cellData.getValue().billingQtyProperty());
-	    	//icd10Collumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity().geti);
-	    	System.out.println("size before removing charges "+medicalActivityChargeMasterData.size());
-	    	statusCollumn.setCellValueFactory(cellData -> cellData.getValue().billingStatusProperty());
-	    	/*if(medicalActivityChargeMasterData.size()>0){
-	    		Iterator<MedicalActivityCharge> medActivity = medicalActivityChargeMasterData.iterator();
-	    		while(medActivity.hasNext()){
-	    			if(medActivity.next().getCheckBillingStatus()==true){
-	    				
-	    				statusCollumn.setCellValueFactory(cellData -> cellData.getValue().billingStatusProperty());
-						medicalActivityChargeMasterData.remove(medActivity);
-	    			}else{
-	    				statusCollumn.setCellValueFactory(cellData -> cellData.getValue().billingStatusProperty());
-	    				
-	    			}
-	    			
-	    		}System.out.println("size afte removing charges "+medicalActivityChargeMasterData.size());
-	    		
-	    	for (MedicalActivityCharge medicalActivityCharge : medicalActivityChargeMasterData) {
-				if(medicalActivityCharge.getCheckBillingStatus()==true){
-					
-					//statusCollumn.setText("Billed");
-					
-					statusCollumn.setCellValueFactory(cellData -> cellData.getValue().billingStatusProperty());
-					medicalActivityChargeMasterData.remove(medicalActivityCharge);
-				
-				}else{
-					
-					statusCollumn.setCellValueFactory(cellData -> cellData.getValue().billingStatusProperty());
+		codeCollumnByName.setCellValueFactory(cellData -> cellData.getValue().codeProperty());
+		activityCollumnByName.setCellValueFactory(cellData -> cellData.getValue().descripProperty());
+		// divisionCollumn.setCellValueFactory(cellData ->
+		// cellData.getValue().getDivision().codeProperty());
+
+		FilteredList<MedicalActivity> filteredData = new FilteredList<MedicalActivity>(medicalActivityMasterData,
+				p -> true);
+
+		searchMedicalActivityText.textProperty().addListener((observable, oldValue, newValue) -> {
+
+			filteredData.setPredicate(medicalActivity -> {
+
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
 				}
-	    	}
-	    	}*/
-	    	FilteredList<MedicalActivityCharge> filteredData = new FilteredList<MedicalActivityCharge>(medicalActivityChargeMasterData,
-					p -> true);
-	    	
-	    	searchMedicalChargeText.textProperty().addListener((observable, oldValue, newValue) -> {
 
-				filteredData.setPredicate(medicalCharge -> {
+				String lowerCaseFilter = newValue.toLowerCase();
 
-					if (newValue == null || newValue.isEmpty()) {
-						return true;
-					}
-
-					String lowerCaseFilter = newValue.toLowerCase();
-
-					if (medicalCharge.getMedicalActivity().getCode().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-						return true; // Filter matches first name.
-					}
-					return false; // Does not match.
-				});
+				if (medicalActivity.getCode().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+					return true; // Filter matches first name.
+				}
+				return false; // Does not match.
 			});
-	    	
-	    	SortedList<MedicalActivityCharge> sortedData = new SortedList<>(filteredData);
+		});
 
-			sortedData.comparatorProperty().bind(medicalActivityChargeTable.comparatorProperty());
-	    	
-	    	
-	    	//medicalActivityChargeTable.setItems(medicalActivityChargeMasterData);
-			medicalActivityChargeTable.setItems(sortedData);
-	    		    	
-	    }
-	    
-	    @FXML
-	    void doubleClickOnMedicalActivityTable(MouseEvent event) {
-	    	
-	    	if (event.getClickCount() == 2) {
-	    		try {
-	    			
-	    			MedicalActivity medicalActivity = MedicalActivityTableByName.getSelectionModel().getSelectedItem();
-	    			
-	    			MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
-	    			medicalActivityCharge.setMedicalActivity(medicalActivity);
-	    			
-	    			if(Global.patientVisitObj.getVisitType().equals("Worker's Comp")){
-	    				System.out.println("VisitType is :- ------- " +Global.patientVisitObj.getVisitType());
-	    				medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
-	    			}else if(Global.patientVisitObj.getVisitType().equals("Private Practice")){
-	    				System.out.println("VisitType is :- ------- " +Global.patientVisitObj.getVisitType());
-	    				medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
-	    			}else if(visitLogInputController.visitType.equals("Worker's Comp")){
-	    				System.out.println("VisitType is :- ------- " +visitLogInputController.visitType);
-	    				medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
-	    			}else if(visitLogInputController.visitType.equals("Private Practice")){
-	    				System.out.println("VisitType is :- ------- " +visitLogInputController.visitType);
-	    				medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
-	    			}
-	    			medicalActivityCharge.setActivityDate(new Date());
-	    			medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
-	    			medicalActivityCharge.setPatient(Global.patient);
-	    			new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
-	    			viewMedicalActivityCharge();
-	    			
-	    		}catch(Exception e){
-	    			e.printStackTrace();
-	    		}
-	    	}
+		SortedList<MedicalActivity> sortedData = new SortedList<>(filteredData);
 
-	    }
-	    
-	    
-	
-	    
-	    
-	    @FXML
-	    void doubleClickOnCptCodeTable(MouseEvent event) {
-	    	
-	    	if (event.getClickCount() == 2) {
-	    		try {
-	    			
-	    			MedicalActivity medicalActivity = MedicalActivityTableByCPTCode.getSelectionModel().getSelectedItem();
-	    			
-	    			MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
-	    			medicalActivityCharge.setMedicalActivity(medicalActivity);
-	    			
-	    			if(visitLogInputController.visitType.equals("Worker's Comp")){
-	    				System.out.println("VisitType is :- ------- " +visitLogInputController.visitType);
-	    				medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
-	    			}else if(visitLogInputController.visitType.equals("Private Practice")){
-	    				System.out.println("VisitType is :- ------- " +visitLogInputController.visitType);
-	    				medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
-	    			}
-	    			medicalActivityCharge.setActivityDate(new Date());
-	    			medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
-	    			medicalActivityCharge.setPatient(Global.patient);
-	    			new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
-	    			viewMedicalActivityCharge();
-	    			
-	    			
-	    			
-	    			
-	    			
-	    			
-	    			/*MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
-	    			medicalActivityCharge.setMedicalActivity(medicalActivity);
-	    			
-	    			medicalActivityCharge.setActivityDate(new Date());
-	    			
-	    			new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);*/
-	    			//viewMedicalActivityCharge();
-	    			
-	    		}catch(Exception e){
-	    			e.printStackTrace();
-	    		}
-	    	}
+		sortedData.comparatorProperty().bind(MedicalActivityTableByName.comparatorProperty());
 
+		// medicalActivityChargeTable.setItems(medicalActivityChargeMasterData);
+		// medicalActivityChargeTable.setItems(sortedData);
 
-	    }
-	    
-		public static String drugTestProfile = null;
-		
-		
-        public VisitLogInputController visitLogInputController;
-	    
-	    public void setVisitLogInputController(VisitLogInputController visitLogInputController) {
-	   this.visitLogInputController = visitLogInputController;
-}
+		MedicalActivityTableByName.setItems(sortedData);
 
-	    public BillingAndInvoicingGUIController billingAndInvoicingGUIController;
-	    
-			public void setBillingAndInvoicingGUIController(BillingAndInvoicingGUIController billingAndInvoicingGUIController) {
-			this.billingAndInvoicingGUIController = billingAndInvoicingGUIController;
+	}
+
+	public void viewChargeAfterBilling(Integer id) {
+
+	}
+
+	public void viewMedicalActivityByCPTCode() {
+
+		// codeCollumnByCPTCode.setCellValueFactory(cellData ->
+		// cellData.getValue().getCptCode4Hcpcs().codeProperty());
+		codeCollumnByCPTCode.setCellValueFactory(data -> EasyBind.select(data.getValue().cptCode4HcpcsProperty())
+				.selectObject(CptCode4Hcpcs::codeProperty));
+		// nameCollumnByCPTCode.setCellValueFactory(cellData ->
+		// cellData.getValue().getCptCode4Hcpcs().descrpProperty());
+
+		nameCollumnByCPTCode.setCellValueFactory(data -> EasyBind.select(data.getValue().cptCode4HcpcsProperty())
+				.selectObject(CptCode4Hcpcs::descrpProperty));
+
+		FilteredList<MedicalActivity> filteredData = new FilteredList<MedicalActivity>(medicalActivityMasterData,
+				p -> true);
+
+		searchMedicalActivityText.textProperty().addListener((observable, oldValue, newValue) -> {
+
+			filteredData.setPredicate(medicalActivityCPTCode -> {
+
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+
+				String lowerCaseFilter = newValue.toLowerCase();
+
+				if (medicalActivityCPTCode.getCptCode4Hcpcs().getCode().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+					return true; // Filter matches first name.
+				}
+				return false; // Does not match.
+			});
+		});
+
+		SortedList<MedicalActivity> sortedData = new SortedList<>(filteredData);
+
+		sortedData.comparatorProperty().bind(MedicalActivityTableByCPTCode.comparatorProperty());
+
+		// medicalActivityChargeTable.setItems(medicalActivityChargeMasterData);
+		// medicalActivityChargeTable.setItems(sortedData);
+
+		MedicalActivityTableByCPTCode.setItems(sortedData);
+
+		// MedicalActivityTableByCPTCode.setItems(medicalActivityMasterData);
+
+	}
+
+	private ObservableList<MedicalActivityCharge> medicalActivityChargeMasterData = FXCollections.observableArrayList();
+
+	public void viewMedicalActivityCharge() {
+
+		// medicalActivityChargeMasterData= new
+		// MedicalActivityChargeEntityController().viewMedicalActivityCharge(Global.patient.getId(),false);
+		// changes
+
+		if(this.visitLogInputController != null) {
+			medicalActivityChargeMasterData = new MedicalActivityChargeEntityController()
+					.searchByPatientVisit(Global.patientVisitObj.getId());
+
+			System.out.println("$$$$$$$$$$$$$$$$$ " + Global.patientVisitObj.getId());
+			System.out.println("Patient Visit Id is ;----" + Global.patientVisitObj.getId());
+		}else {
+			medicalActivityChargeMasterData = new MedicalActivityChargeEntityController()
+					.searchByPatient(Global.patient.getId());
 		}
 
-		FXMLFormPath formPath = new FXMLFormPath();
+		activityCodeCollumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity() != null
+				? cellData.getValue().getMedicalActivity().codeProperty()
+				: null);
+		descriptionCollumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity() != null
+				? cellData.getValue().getMedicalActivity().descripProperty()
+				: null);
+		// cpt4Collumn.setCellValueFactory(cellData ->
+		// cellData.getValue().getMedicalActivity().getCptCode4Hcpcs().codeProperty());
+		cpt4Collumn.setCellValueFactory(data -> data.getValue().getMedicalActivity() != null
+				? EasyBind.select(data.getValue().getMedicalActivity().cptCode4HcpcsProperty()).selectObject(
+						CptCode4Hcpcs::codeProperty)
+				: null);
+
+		// modifyCollumn.setCellValueFactory(cellData ->
+		// cellData.getValue().codeProperty());
+		qtyCollumn.setCellValueFactory(cellData -> cellData.getValue().billingQtyProperty());
+		// icd10Collumn.setCellValueFactory(cellData ->
+		// cellData.getValue().getMedicalActivity().geti);
+		System.out.println("size before removing charges " + medicalActivityChargeMasterData.size());
+		statusCollumn.setCellValueFactory(cellData -> cellData.getValue().billingStatusProperty());
+		/*
+		 * if(medicalActivityChargeMasterData.size()>0){ Iterator<MedicalActivityCharge>
+		 * medActivity = medicalActivityChargeMasterData.iterator();
+		 * while(medActivity.hasNext()){
+		 * if(medActivity.next().getCheckBillingStatus()==true){
+		 * 
+		 * statusCollumn.setCellValueFactory(cellData ->
+		 * cellData.getValue().billingStatusProperty());
+		 * medicalActivityChargeMasterData.remove(medActivity); }else{
+		 * statusCollumn.setCellValueFactory(cellData ->
+		 * cellData.getValue().billingStatusProperty());
+		 * 
+		 * }
+		 * 
+		 * }System.out.println("size afte removing charges "
+		 * +medicalActivityChargeMasterData.size());
+		 * 
+		 * for (MedicalActivityCharge medicalActivityCharge :
+		 * medicalActivityChargeMasterData) {
+		 * if(medicalActivityCharge.getCheckBillingStatus()==true){
+		 * 
+		 * //statusCollumn.setText("Billed");
+		 * 
+		 * statusCollumn.setCellValueFactory(cellData ->
+		 * cellData.getValue().billingStatusProperty());
+		 * medicalActivityChargeMasterData.remove(medicalActivityCharge);
+		 * 
+		 * }else{
+		 * 
+		 * statusCollumn.setCellValueFactory(cellData ->
+		 * cellData.getValue().billingStatusProperty()); } } }
+		 */
+		FilteredList<MedicalActivityCharge> filteredData = new FilteredList<MedicalActivityCharge>(
+				medicalActivityChargeMasterData, p -> true);
+
+		searchMedicalChargeText.textProperty().addListener((observable, oldValue, newValue) -> {
+
+			filteredData.setPredicate(medicalCharge -> {
+
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+
+				String lowerCaseFilter = newValue.toLowerCase();
+
+				if (medicalCharge.getMedicalActivity().getCode().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+					return true; // Filter matches first name.
+				}
+				return false; // Does not match.
+			});
+		});
+
+		SortedList<MedicalActivityCharge> sortedData = new SortedList<>(filteredData);
+
+		sortedData.comparatorProperty().bind(medicalActivityChargeTable.comparatorProperty());
+
+		// medicalActivityChargeTable.setItems(medicalActivityChargeMasterData);
+		medicalActivityChargeTable.setItems(sortedData);
+
+	}
+
+	@FXML
+	void doubleClickOnMedicalActivityTable(MouseEvent event) {
+
+		if (event.getClickCount() == 2) {
+			try {
+
+				MedicalActivity medicalActivity = MedicalActivityTableByName.getSelectionModel().getSelectedItem();
+
+				MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
+				medicalActivityCharge.setMedicalActivity(medicalActivity);
+				
+				if(this.visitLogInputController != null) {
+					if (Global.patientVisitObj.getVisitType().equals("Worker's Comp")) {
+						System.out.println("VisitType is :- ------- " + Global.patientVisitObj.getVisitType());
+						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
+					} else if (Global.patientVisitObj.getVisitType().equals("Private Practice")) {
+						System.out.println("VisitType is :- ------- " + Global.patientVisitObj.getVisitType());
+						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+					} else if (visitLogInputController.visitType.equals("Worker's Comp")) {
+						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
+					} else if (visitLogInputController.visitType.equals("Private Practice")) {
+						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+					}
+
+					medicalActivityCharge.setActivityDate(new Date());
+					medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
+					medicalActivityCharge.setPatient(Global.patient);
+					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+					viewMedicalActivityCharge();					
+				}else {
+					medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+					medicalActivityCharge.setActivityDate(new Date());
+					medicalActivityCharge.setPatient(Global.patient);
+					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+					viewMedicalActivityCharge();					
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	@FXML
+	void doubleClickOnCptCodeTable(MouseEvent event) {
+
+		if (event.getClickCount() == 2) {
+			try {
+				
+				if(this.visitLogInputController != null) {
+					MedicalActivity medicalActivity = MedicalActivityTableByCPTCode.getSelectionModel().getSelectedItem();
+
+					MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
+					medicalActivityCharge.setMedicalActivity(medicalActivity);
+
+					if (visitLogInputController.visitType.equals("Worker's Comp")) {
+						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
+					} else if (visitLogInputController.visitType.equals("Private Practice")) {
+						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+					}
+					medicalActivityCharge.setActivityDate(new Date());
+					medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
+					medicalActivityCharge.setPatient(Global.patient);
+					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+					viewMedicalActivityCharge();
+
+				}else {
+					MedicalActivity medicalActivity = MedicalActivityTableByCPTCode.getSelectionModel().getSelectedItem();
+
+					MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
+					medicalActivityCharge.setMedicalActivity(medicalActivity);
+					
+					medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+
+					medicalActivityCharge.setActivityDate(new Date());
+					//medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
+					medicalActivityCharge.setPatient(Global.patient);
+					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+					viewMedicalActivityCharge();
+					
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	public static String drugTestProfile = null;
+
+	public VisitLogInputController visitLogInputController;
+	public CompanyViewController companyViewController;
+
+	public void setVisitLogInputController(VisitLogInputController visitLogInputController) {
+		this.visitLogInputController = visitLogInputController;
+	}
+
+	public void setCompanyViewController(CompanyViewController companyViewController) {
+		this.companyViewController = companyViewController;
+	}
+
+	public BillingAndInvoicingGUIController billingAndInvoicingGUIController;
+
+	public void setBillingAndInvoicingGUIController(BillingAndInvoicingGUIController billingAndInvoicingGUIController) {
+		this.billingAndInvoicingGUIController = billingAndInvoicingGUIController;
+	}
+
+	FXMLFormPath formPath = new FXMLFormPath();
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+
 		viewMedicalActivityDetails();
 		viewMedicalActivityByName();
 		viewMedicalActivityByCPTCode();
 		viewMedicalActivityCharge();
-		
+
 		addBtn.setOnAction((event) -> {
-			//System.out.println("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+			// System.out.println("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
 			try {
 
 				String formName = formPath.context.getMessage("EnterMedicalActivityCharge", null, Locale.US);
 				String formTitle1 = formPath.context.getMessage("Title.EnterMedicalActivityCharge", null, Locale.US);
 				String formTitle2 = Global.patient.getPatientName().getFirstName();
-				String formTitle3= Global.patient.getCompany().getName();
-				String formTitle = formTitle1+"/"+formTitle2+"/"+formTitle3;
+				String formTitle3 = Global.patient.getCompany().getName();
+				String formTitle = formTitle1 + "/" + formTitle2 + "/" + formTitle3;
 				MedicalActivityChargeInputController medicalActivityChargeInputController = new MedicalActivityChargeInputController();
 				medicalActivityChargeInputController.setMedicalActivityChargeViewController(this);
 				formPath.closeApplicationContext();
@@ -436,33 +465,31 @@ public class MedicalActivityChargeViewController implements Initializable {
 				ex.printStackTrace();
 			}
 		});
-		
-		/*changeBtn.setOnAction((event) -> {
-			try {
 
-				String formName = formPath.context.getMessage("EnterMedicalActivityCharge", null, Locale.US);
-				String formTitle1 = formPath.context.getMessage("Title.EnterMedicalActivityCharge", null, Locale.US);
-				String formTitle2 = Global.patient.getPatientName().getFirstName();
-				String formTitle3= Global.patient.getCompany().getName();
-				String formTitle = formTitle1+"/"+formTitle2+"/"+formTitle3;
-				formPath.closeApplicationContext();
-				
-				new FXFormCommonUtilities().displayForm(formName, formTitle);
+		/*
+		 * changeBtn.setOnAction((event) -> { try {
+		 * 
+		 * String formName = formPath.context.getMessage("EnterMedicalActivityCharge",
+		 * null, Locale.US); String formTitle1 =
+		 * formPath.context.getMessage("Title.EnterMedicalActivityCharge", null,
+		 * Locale.US); String formTitle2 =
+		 * Global.patient.getPatientName().getFirstName(); String formTitle3=
+		 * Global.patient.getCompany().getName(); String formTitle =
+		 * formTitle1+"/"+formTitle2+"/"+formTitle3; formPath.closeApplicationContext();
+		 * 
+		 * new FXFormCommonUtilities().displayForm(formName, formTitle);
+		 * 
+		 * } catch (Exception ex) { ex.printStackTrace(); } });
+		 */
 
-			} catch (Exception ex) {
-				ex.printStackTrace();
-			}
-		});*/
-		
-	
-		
 		changeBtn.setOnAction((event) -> {
 			try {
-				
+
 				// Load Clinician Details Edit form .
 
-				MedicalActivityCharge medicalActivityCharge = medicalActivityChargeTable.getSelectionModel().getSelectedItem();
-				
+				MedicalActivityCharge medicalActivityCharge = medicalActivityChargeTable.getSelectionModel()
+						.getSelectedItem();
+
 				drugTestProfile = medicalActivityCharge.getMedicalActivity().getDescrip();
 				String formName = formPath.context.getMessage("EditMedicalActivityCharge", null, Locale.US);
 				String formTitle = formPath.context.getMessage("Title.EditMedicalActivityCharge", null, Locale.US);
@@ -493,44 +520,40 @@ public class MedicalActivityChargeViewController implements Initializable {
 					alert.showAndWait();
 				}
 
-			
-				
-			}catch (Exception ex) {
+			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
 		});
-		
-		
-		
-		deleteButton.setOnAction((event)->{
-			MedicalActivityCharge medicalActivityCharge = medicalActivityChargeTable.getSelectionModel().getSelectedItem();
-			System.out.println("sdfsasf"+medicalActivityCharge.getId());
-			if(medicalActivityCharge.getMedicalActivity().getCode().equals("RPD DS10") || medicalActivityCharge.getMedicalActivity().getCode().equals("RPD DS") && ( drugScreenResult!= null && drugScreenResult.getMedActCharge().getId() == medicalActivityCharge.getId())){
-			new DrugScreenResultEntityController().deleteMedActCharge(medicalActivityCharge.getId());
-			new MedicalActivityChargeEntityController().delete(medicalActivityCharge.getId());
-			viewMedicalActivityCharge();
-				
-		} 
-			
+
+		deleteButton.setOnAction((event) -> {
+			MedicalActivityCharge medicalActivityCharge = medicalActivityChargeTable.getSelectionModel()
+					.getSelectedItem();
+			System.out.println("sdfsasf" + medicalActivityCharge.getId());
+			if (medicalActivityCharge.getMedicalActivity().getCode().equals("RPD DS10")
+					|| medicalActivityCharge.getMedicalActivity().getCode().equals("RPD DS")
+							&& (drugScreenResult != null
+									&& drugScreenResult.getMedActCharge().getId() == medicalActivityCharge.getId())) {
+				new DrugScreenResultEntityController().deleteMedActCharge(medicalActivityCharge.getId());
+				new MedicalActivityChargeEntityController().delete(medicalActivityCharge.getId());
+				viewMedicalActivityCharge();
+
+			}
+
 			else {
-			    new MedicalActivityChargeEntityController().delete(medicalActivityCharge.getId());
-			    viewMedicalActivityCharge();
+				new MedicalActivityChargeEntityController().delete(medicalActivityCharge.getId());
+				viewMedicalActivityCharge();
 			}
 		});
-		
-		
-		
+
 		closeBtn.setOnAction((event) -> {
 			try {
-				//cancel centralized form
+				// cancel centralized form
 				new FXFormCommonUtilities().closeForm(closeBtn);
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
 		});
-		
-		
-						
+
 	}
 
 }

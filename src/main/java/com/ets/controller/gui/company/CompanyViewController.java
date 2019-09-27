@@ -44,10 +44,15 @@ import net.sf.jasperreports.view.JasperViewer;
 
 import com.ets.controller.entity.carrier.CarrierEntityController;
 import com.ets.controller.entity.company.CompanyEntityController;
+import com.ets.controller.entity.patient.PatientEntityController;
+import com.ets.controller.entity.patientVisit.PatientVisitEntityController;
 import com.ets.controller.entity.pharmacy.PharmacyEntityController;
+import com.ets.controller.gui.appointment.AppointmentController;
 import com.ets.controller.gui.billingPanel.PatientAnalysisController;
 import com.ets.controller.gui.complex.ComplexEditController;
 import com.ets.controller.gui.drugScreenTestResultReport.EmployerReportGUIController;
+import com.ets.controller.gui.icd10Diagonosis.ICD10DiagonosisInputController;
+import com.ets.controller.gui.medicalActivityCharge.MedicalActivityChargeViewController;
 import com.ets.controller.gui.patient.PatientEditController;
 import com.ets.controller.gui.patient.PatientInputController;
 import com.ets.controller.gui.patientVisitByDate.PatientVisitByDateViewController;
@@ -105,37 +110,38 @@ public class CompanyViewController implements Initializable {
 	@FXML
 	private Button deleteButton;
 
-	
+	@FXML
+	private Button privatePracticeButton;
+
 	@FXML
 	private TableView<Company> companyTableView;
 
-	 @FXML
-	    private TableColumn<Company, String> companyNameCollumn;
-
-	    @FXML
-	    private TableColumn<Company, String> codeCollumn;
-
-	    @FXML
-	    private TableColumn<Company, String> cityCol;
-
-	    @FXML
-	    private TableColumn<Company, String> stateCol;
-
-	    @FXML
-	    private TableColumn<Company, String> telephoneCol;
-
-	    @FXML
-	    private TableColumn<Company, String> faxCol;
-
-	    @FXML
-	    private TableColumn<Company, String> aliasCollumn;
-	
-	  @FXML
-	    private TextField searchText;
+	@FXML
+	private TableColumn<Company, String> companyNameCollumn;
 
 	@FXML
-    private Button SelectButtonCompany;
+	private TableColumn<Company, String> codeCollumn;
 
+	@FXML
+	private TableColumn<Company, String> cityCol;
+
+	@FXML
+	private TableColumn<Company, String> stateCol;
+
+	@FXML
+	private TableColumn<Company, String> telephoneCol;
+
+	@FXML
+	private TableColumn<Company, String> faxCol;
+
+	@FXML
+	private TableColumn<Company, String> aliasCollumn;
+
+	@FXML
+	private TextField searchText;
+
+	@FXML
+	private Button SelectButtonCompany;
 
 	@FXML
 	void doubleClick(MouseEvent event) {
@@ -167,140 +173,132 @@ public class CompanyViewController implements Initializable {
 		}
 
 	}
-	
+
 	private VisitLogInputController visitLogInputController;
-	
+
 	public void setVisitLogInputController(VisitLogInputController visitLogInputController) {
 		this.visitLogInputController = visitLogInputController;
 	}
 
 	private ObservableList<Company> companyMasterData = FXCollections.observableArrayList();
-	 public void refreshCompany() {
 
-		/*idCol.setCellValueFactory(new PropertyValueFactory<Company, String>("id"));
-		addressCol.setCellValueFactory(new PropertyValueFactory<Company, String>("address"));
-		aliasNameCol.setCellValueFactory(new PropertyValueFactory<Company, String>("aliasName"));
-		cityCol.setCellValueFactory(new PropertyValueFactory<Company, String>("city"));
-		countryCol.setCellValueFactory(new PropertyValueFactory<Company, String>("country"));
-		countyCol.setCellValueFactory(new PropertyValueFactory<Company, String>("county"));
-		emailCol.setCellValueFactory(new PropertyValueFactory<Company, String>("email"));
-		faxCol.setCellValueFactory(new PropertyValueFactory<Company, String>("fax"));
-		nameCol.setCellValueFactory(new PropertyValueFactory<Company, String>("name"));
-		stateCol.setCellValueFactory(new PropertyValueFactory<Company, String>("state"));
-		telephoneCol.setCellValueFactory(new PropertyValueFactory<Company, String>("telephone"));
+	public void refreshCompany() {
 
-		zipCol.setCellValueFactory(new PropertyValueFactory<Company, String>("zip"));*/
-		
+		/*
+		 * idCol.setCellValueFactory(new PropertyValueFactory<Company, String>("id"));
+		 * addressCol.setCellValueFactory(new PropertyValueFactory<Company,
+		 * String>("address")); aliasNameCol.setCellValueFactory(new
+		 * PropertyValueFactory<Company, String>("aliasName"));
+		 * cityCol.setCellValueFactory(new PropertyValueFactory<Company,
+		 * String>("city")); countryCol.setCellValueFactory(new
+		 * PropertyValueFactory<Company, String>("country"));
+		 * countyCol.setCellValueFactory(new PropertyValueFactory<Company,
+		 * String>("county")); emailCol.setCellValueFactory(new
+		 * PropertyValueFactory<Company, String>("email"));
+		 * faxCol.setCellValueFactory(new PropertyValueFactory<Company, String>("fax"));
+		 * nameCol.setCellValueFactory(new PropertyValueFactory<Company,
+		 * String>("name")); stateCol.setCellValueFactory(new
+		 * PropertyValueFactory<Company, String>("state"));
+		 * telephoneCol.setCellValueFactory(new PropertyValueFactory<Company,
+		 * String>("telephone"));
+		 * 
+		 * zipCol.setCellValueFactory(new PropertyValueFactory<Company, String>("zip"));
+		 */
+
 		companyMasterData = new CompanyEntityController().getCompanyList();
-		
+
 		companyNameCollumn.setCellValueFactory(new PropertyValueFactory<Company, String>("name"));
 		codeCollumn.setCellValueFactory(new PropertyValueFactory<Company, String>("code"));
-		
+
 		cityCol.setCellValueFactory(cellData -> cellData.getValue().getAddress().cityProperty());
-		
+
 		stateCol.setCellValueFactory(cellData -> cellData.getValue().getAddress().stateProperty());
 		telephoneCol.setCellValueFactory(cellData -> cellData.getValue().getAddress().phoneProperty());
 		faxCol.setCellValueFactory(cellData -> cellData.getValue().getAddress().faxProperty());
 		aliasCollumn.setCellValueFactory(cellData -> cellData.getValue().aliasNameProperty());
-		
-		
+
 		FilteredList<Company> filteredData = new FilteredList<Company>(companyMasterData, p -> true);
 		searchText.textProperty().addListener((observable, oldValue, newValue) -> {
-			
+
 			filteredData.setPredicate(company -> {
-				
+
 				if (newValue == null || newValue.isEmpty()) {
 					return true;
 				}
-								
+
 				String lowerCaseFilter = newValue.toLowerCase();
-				
+
 				if (company.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
 					return true; // Filter matches first name.
-				} 
+				}
 				return false; // Does not match.
 			});
 		});
-		
+
 		SortedList<Company> sortedData = new SortedList<>(filteredData);
-		
+
 		sortedData.comparatorProperty().bind(companyTableView.comparatorProperty());
-				
+
 		companyTableView.setItems(sortedData);
-
-	
-		
-		
-
 
 	}
 
 	public void populateCompanyTable(ObservableList<Company> companyList) {
-		
+
 		FilteredList<Company> filteredData = new FilteredList<Company>(companyList, p -> true);
 		searchText.textProperty().addListener((observable, oldValue, newValue) -> {
-			
+
 			filteredData.setPredicate(company -> {
-				
+
 				if (newValue == null || newValue.isEmpty()) {
 					return true;
 				}
-								
+
 				String lowerCaseFilter = newValue.toLowerCase();
-				
+
 				if (company.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
 					return true; // Filter matches first name.
-				} 
+				}
 				return false; // Does not match.
 			});
 		});
-		
+
 		SortedList<Company> sortedData = new SortedList<>(filteredData);
-		
+
 		sortedData.comparatorProperty().bind(companyTableView.comparatorProperty());
-				
+
 		companyTableView.setItems(sortedData);
-		
-		//companyTableView.setItems(companyList);
+
+		// companyTableView.setItems(companyList);
 	}
-	
-	public void setCompany(Company company){
-		
-		Global.company= company;
+
+	public void setCompany(Company company) {
+
+		Global.company = company;
 	}
-	
-	
-	
 
 	private PatientInputController patientInputController;
-	
-
 
 	public void setPatientInputController(PatientInputController patientInputController) {
 		this.patientInputController = patientInputController;
 	}
-	
+
 	private PatientEditController patientEditController;
-	
+
 	public void setPatientEditController(PatientEditController patientEditController) {
 		this.patientEditController = patientEditController;
 	}
 
-	
-private PatientAnalysisController patientAnalysisController;
-	
-    public void setPatientAnalysisController(PatientAnalysisController patientAnalysisController) {
-	this.patientAnalysisController = patientAnalysisController;
-	
+	private PatientAnalysisController patientAnalysisController;
+
+	public void setPatientAnalysisController(PatientAnalysisController patientAnalysisController) {
+		this.patientAnalysisController = patientAnalysisController;
+
 	}
 
 	FXMLFormPath formPath = new FXMLFormPath();
-	
-	
 
-	//FXMLFormPath formPath = new FXMLFormPath();
-	
-
+	// FXMLFormPath formPath = new FXMLFormPath();
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -379,7 +377,7 @@ private PatientAnalysisController patientAnalysisController;
 
 				Company company = companyTableView.getSelectionModel().getSelectedItem();
 
-				if (company !=null) {
+				if (company != null) {
 
 					Alert alert = new Alert(AlertType.CONFIRMATION);
 					alert.setTitle(conformDialogBoxTitle);
@@ -389,10 +387,11 @@ private PatientAnalysisController patientAnalysisController;
 					Optional<ButtonType> result = alert.showAndWait();
 					if (result.get() == ButtonType.OK) {
 
-						//Company company = new CompanyEntityController().getCompanyList().get(companyIndex);
-                       
+						// Company company = new
+						// CompanyEntityController().getCompanyList().get(companyIndex);
+
 						new CompanyEntityController().removeCompany(company.getId());
-						
+
 						// new
 						// BodyZoneEntityController().removeBodyZone(bodyZone.getId());
 
@@ -418,75 +417,66 @@ private PatientAnalysisController patientAnalysisController;
 			}
 
 		});
-	
-/*
-		printBtn.setOnAction((event) -> {
-			try {
 
-				System.out.println("Generating PDF...");
-
-				String str = "target/classes/report/CompanyReport.jrxml";
-
-				InputStream is = new FileInputStream(new File(str));
-
-				JasperReport jasperReport = JasperCompileManager.compileReport(is);
-
-				List<Company> companyList = new CompanyEntityController().getCompanyList();
-				JRDataSource JRdataSource = new JRBeanCollectionDataSource(companyList);
-				Map<String, Object> map = new HashMap<String, Object>();
-				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, JRdataSource);
-
-				JasperViewer.viewReport(jasperPrint, false);
-
-				System.out.println("Compant Details pdf has been generated!");
-
-			} catch (Exception ex) {
-				ex.printStackTrace();
-			}
-
-		});
-		
-		*/
+		/*
+		 * printBtn.setOnAction((event) -> { try {
+		 * 
+		 * System.out.println("Generating PDF...");
+		 * 
+		 * String str = "target/classes/report/CompanyReport.jrxml";
+		 * 
+		 * InputStream is = new FileInputStream(new File(str));
+		 * 
+		 * JasperReport jasperReport = JasperCompileManager.compileReport(is);
+		 * 
+		 * List<Company> companyList = new CompanyEntityController().getCompanyList();
+		 * JRDataSource JRdataSource = new JRBeanCollectionDataSource(companyList);
+		 * Map<String, Object> map = new HashMap<String, Object>(); JasperPrint
+		 * jasperPrint = JasperFillManager.fillReport(jasperReport, map, JRdataSource);
+		 * 
+		 * JasperViewer.viewReport(jasperPrint, false);
+		 * 
+		 * System.out.println("Compant Details pdf has been generated!");
+		 * 
+		 * } catch (Exception ex) { ex.printStackTrace(); }
+		 * 
+		 * });
+		 * 
+		 */
 		SelectButtonCompany.setOnAction((event) -> {
 			try {
 				Company selectCompany = this.companyTableView.getSelectionModel().getSelectedItem();
-				
-				if(patientInputController != null){
-					
-					//this.userAddController.setdClinicRestrictTextField(selectedClinic.getName());
+
+				if (patientInputController != null) {
+
+					// this.userAddController.setdClinicRestrictTextField(selectedClinic.getName());
 					this.patientInputController.setCompany(selectCompany);
-					
+
 				}
-                if(patientEditController != null){
-					
-					//this.userAddController.setdClinicRestrictTextField(selectedClinic.getName());
+				if (patientEditController != null) {
+
+					// this.userAddController.setdClinicRestrictTextField(selectedClinic.getName());
 					this.patientEditController.setCompany(selectCompany);
-					
+
 				}
-                
-                 if (patientAnalysisController != null) {
-    				System.out.println("ftrfyrftyrfy"+ selectCompany);
-    				this.patientAnalysisController.setCompany(selectCompany);
-    				}
-                
-                
-                
-                if(visitLogInputController!=null){
-                	visitLogInputController.getCompany(selectCompany);
-                	System.out.println("visit log controller in company+++++++++++");
-                	
-                }
+
+				if (patientAnalysisController != null) {
+					System.out.println("ftrfyrftyrfy" + selectCompany);
+					this.patientAnalysisController.setCompany(selectCompany);
+				}
+
+				if (visitLogInputController != null) {
+					visitLogInputController.getCompany(selectCompany);
+					System.out.println("visit log controller in company+++++++++++");
+
+				}
 				setCompany(selectCompany);
-				
-				
-				
-				
+
 				new FXFormCommonUtilities().closeForm(SelectButtonCompany);
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
 		});
-
 
 		// Centralised Form cancel
 		closeBtn.setOnAction((event) -> {
@@ -496,6 +486,17 @@ private PatientAnalysisController patientAnalysisController;
 				ex.printStackTrace();
 			}
 		});
+
+		/*privatePracticeButton.setOnAction((event) -> {
+			String formName = formPath.context.getMessage("ViewMedicalActivityCharge", null, Locale.US);
+			String formTitle1 = formPath.context.getMessage("Title.ViewMedicalActivityCharge", null, Locale.US);
+			// String formTitle2 = Global.patient.getPatientName().getFirstName();
+			String formTitle = formTitle1;
+			MedicalActivityChargeViewController medicalActivityChargeViewController = (MedicalActivityChargeViewController) new FXFormCommonUtilities()
+					.displayForm(formName, formTitle);
+			medicalActivityChargeViewController.setCompanyViewController(this);
+			formPath.closeApplicationContext();
+		});*/
 
 	}
 

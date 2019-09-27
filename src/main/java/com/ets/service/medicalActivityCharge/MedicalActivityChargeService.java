@@ -19,6 +19,7 @@ public interface MedicalActivityChargeService {
 	 public List<MedicalActivityCharge> searchByDatePatientBillingStatus(Date date);
 	 
 	 public List<MedicalActivityCharge> searchByPatientVisit(Integer patientVisitId);
+	 public List<MedicalActivityCharge> searchByPatient(Integer patientId);	 
 	   public Double getTotalChargeForPatVisit(Integer patVisitId);
 	List<MedicalActivityCharge> list();
 

@@ -101,12 +101,15 @@ public class MedicalActivityChargeServiceImpl implements MedicalActivityChargeSe
 	}
 
 	@Override
+	public List<MedicalActivityCharge> searchByPatient(Integer patientId) {
+		// TODO Auto-generated method stub
+		return medicalActivityChargeDAO.searchByPatient(patientId);
+	}
+	
+	@Override
 	public Double getTotalChargeForPatVisit(Integer patVisitId) {
 		// TODO Auto-generated method stub
 		return medicalActivityChargeDAO.getTotalChargeForPatVisit(patVisitId);
-	}
+	}	
 	
-	
-	
-
 }
