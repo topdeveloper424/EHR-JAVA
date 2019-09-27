@@ -508,7 +508,11 @@ public class MedicalActivityChargeViewController implements Initializable {
 					stage.setScene(new Scene(root1));
 					MedicalActivityChargeEditController editController = fxmlLoader.getController();
 					editController.setMedicalActivityCharge(medicalActivityCharge);
-					editController.setMedicalActivityChargeViewController(this);
+					if(this.visitLogInputController != null) {
+						editController.setMedicalActivityChargeViewController(this,true);						
+					}else {
+						editController.setMedicalActivityChargeViewController(this,false);
+					}
 					editController.setActivityCode(medicalActivityCharge.getMedicalActivity());
 					stage.show();
 

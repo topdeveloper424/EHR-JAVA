@@ -97,7 +97,7 @@ public class MedicalActivityChargeEditController implements Initializable{
     @FXML
     private TextField overrideFeeText;
 
-   
+    private Boolean flag = false;
 
     @FXML
     private TextField summaryText;
@@ -395,7 +395,8 @@ public class MedicalActivityChargeEditController implements Initializable{
     private MedicalActivityChargeViewController medicalActivityChargeViewController;
     
 	public void setMedicalActivityChargeViewController(
-			MedicalActivityChargeViewController medicalActivityChargeViewController) {
+			MedicalActivityChargeViewController medicalActivityChargeViewController, Boolean flag) {
+		this.flag = flag;
 		this.medicalActivityChargeViewController = medicalActivityChargeViewController;
 		if((activityCodeText.getText().equals("RPD DS10"))||(activityCodeText.getText().equals("RPD DS"))){
 			testInfoBtn.setVisible(true);
@@ -570,7 +571,9 @@ public class MedicalActivityChargeEditController implements Initializable{
 				}
 				
 				medicalActivityCharge.setPatient(Global.patient);
-				medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
+				if(this.flag) {
+					medicalActivityCharge.setPatientVisit(Global.patientVisitObj);					
+				}
 				medicalActivityCharge.setNoCost(noCostActivityCheckBox.isSelected());
 				medicalActivityCharge.setResultCode(resultCodeChoiceBox.getSelectionModel().getSelectedItem());
 				medicalActivityCharge.setOverridePayer(overridePayerChoiceBox.getSelectionModel().getSelectedItem());
