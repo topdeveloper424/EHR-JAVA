@@ -523,78 +523,80 @@ public class MedicalActivityChargeEditController implements Initializable{
 				
 				MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
 				
-				medicalActivityCharge.setId(medicalActivityChargeOb.getId());
-				medicalActivityCharge.setActivityCost(activityCostText.getText());
-				
-				LocalDate localDate1 = activityDate.getValue();
-				if(localDate1 != null){
+				if(!this.medicalActivityChargeViewController.checkDuplicate(this.activityCodeText.getText())) {
+					medicalActivityCharge.setId(medicalActivityChargeOb.getId());
+					medicalActivityCharge.setActivityCost(activityCostText.getText());
 					
-					Date date1 = Date.from(localDate1.atStartOfDay(ZoneId.systemDefault()).toInstant());
+					LocalDate localDate1 = activityDate.getValue();
+					if(localDate1 != null){
+						
+						Date date1 = Date.from(localDate1.atStartOfDay(ZoneId.systemDefault()).toInstant());
+						
+						medicalActivityCharge.setActivityDate(date1);
+						
+					}
 					
-					medicalActivityCharge.setActivityDate(date1);
+					medicalActivityCharge.setBillingComment(billingCommentTextArea.getText());
+					medicalActivityCharge.setBillingModifier(billingModifierText.getText());
+					medicalActivityCharge.setBillingQty(billingQtyText.getText());
+					medicalActivityCharge.setBillingStatus(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
+									
+					if(clinicianText.getText().isEmpty()){
+						
+					}else{
+						
+						Clinician clinician = new ClinicianEntityController().viewByCode(clinicianText.getText());
+						medicalActivityCharge.setClinician(clinician);
+					}
+					/*medicalActivityCharge.setLabOrderNo();
+					medicalActivityCharge.setLabSampleId(labSampleId);*/
 					
+					if(activityCodeText.getText().isEmpty()){
+						
+					}else{
+						
+						MedicalActivity medicalActivity = new MedicalActivityEntityController().viewByCode(activityCodeText.getText());
+						medicalActivityCharge.setMedicalActivity(medicalActivity);
+						
+					}
+					
+					medicalActivityCharge.setNdcCode(ndcCodeText.getText());
+					
+					LocalDate localDate2 = nextDueDate.getValue();
+					if(localDate2 != null){
+						
+						Date date2 = Date.from(localDate2.atStartOfDay(ZoneId.systemDefault()).toInstant());
+						
+						medicalActivityCharge.setNextDueDate(date2);
+						
+					}
+					
+					medicalActivityCharge.setPatient(Global.patient);
+					if(this.flag) {
+						medicalActivityCharge.setPatientVisit(Global.patientVisitObj);					
+					}
+					medicalActivityCharge.setNoCost(noCostActivityCheckBox.isSelected());
+					medicalActivityCharge.setResultCode(resultCodeChoiceBox.getSelectionModel().getSelectedItem());
+					medicalActivityCharge.setOverridePayer(overridePayerChoiceBox.getSelectionModel().getSelectedItem());
+					medicalActivityCharge.setOverrideFee(overrideFeeText.getText());
+					medicalActivityCharge.setBillingModifier(billingModifierText.getText());
+					medicalActivityCharge.setUom(uomText.getText());
+					medicalActivityCharge.setDrugQuant(drugQtyText.getText());
+					medicalActivityCharge.setLocationGiven(locationChoiceBox.getSelectionModel().getSelectedItem());
+					medicalActivityCharge.setBillingComment(billingCommentTextArea.getText());
+					medicalActivityCharge.setNdcCode(ndcText.getText());
+					medicalActivityCharge.setLocationGiven(locationChoiceBox.getSelectionModel().getSelectedItem());
+					medicalActivityCharge.setResultCode(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
+					medicalActivityCharge.setActivityCost(activityCostText.getText());
+					if(noCostActivityCheckBox.isSelected()){
+						
+						medicalActivityCharge.setNoCost(true);
+						
+					}
+					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+					medicalActivityChargeViewController.viewMedicalActivityCharge();
+					new FXFormCommonUtilities().closeForm(updateBtn);
 				}
-				
-				medicalActivityCharge.setBillingComment(billingCommentTextArea.getText());
-				medicalActivityCharge.setBillingModifier(billingModifierText.getText());
-				medicalActivityCharge.setBillingQty(billingQtyText.getText());
-				medicalActivityCharge.setBillingStatus(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
-								
-				if(clinicianText.getText().isEmpty()){
-					
-				}else{
-					
-					Clinician clinician = new ClinicianEntityController().viewByCode(clinicianText.getText());
-					medicalActivityCharge.setClinician(clinician);
-				}
-				/*medicalActivityCharge.setLabOrderNo();
-				medicalActivityCharge.setLabSampleId(labSampleId);*/
-				
-				if(activityCodeText.getText().isEmpty()){
-					
-				}else{
-					
-					MedicalActivity medicalActivity = new MedicalActivityEntityController().viewByCode(activityCodeText.getText());
-					medicalActivityCharge.setMedicalActivity(medicalActivity);
-					
-				}
-				
-				medicalActivityCharge.setNdcCode(ndcCodeText.getText());
-				
-				LocalDate localDate2 = nextDueDate.getValue();
-				if(localDate2 != null){
-					
-					Date date2 = Date.from(localDate2.atStartOfDay(ZoneId.systemDefault()).toInstant());
-					
-					medicalActivityCharge.setNextDueDate(date2);
-					
-				}
-				
-				medicalActivityCharge.setPatient(Global.patient);
-				if(this.flag) {
-					medicalActivityCharge.setPatientVisit(Global.patientVisitObj);					
-				}
-				medicalActivityCharge.setNoCost(noCostActivityCheckBox.isSelected());
-				medicalActivityCharge.setResultCode(resultCodeChoiceBox.getSelectionModel().getSelectedItem());
-				medicalActivityCharge.setOverridePayer(overridePayerChoiceBox.getSelectionModel().getSelectedItem());
-				medicalActivityCharge.setOverrideFee(overrideFeeText.getText());
-				medicalActivityCharge.setBillingModifier(billingModifierText.getText());
-				medicalActivityCharge.setUom(uomText.getText());
-				medicalActivityCharge.setDrugQuant(drugQtyText.getText());
-				medicalActivityCharge.setLocationGiven(locationChoiceBox.getSelectionModel().getSelectedItem());
-				medicalActivityCharge.setBillingComment(billingCommentTextArea.getText());
-				medicalActivityCharge.setNdcCode(ndcText.getText());
-				medicalActivityCharge.setLocationGiven(locationChoiceBox.getSelectionModel().getSelectedItem());
-				medicalActivityCharge.setResultCode(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
-				medicalActivityCharge.setActivityCost(activityCostText.getText());
-				if(noCostActivityCheckBox.isSelected()){
-					
-					medicalActivityCharge.setNoCost(true);
-					
-				}
-				new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
-				medicalActivityChargeViewController.viewMedicalActivityCharge();
-				new FXFormCommonUtilities().closeForm( updateBtn);
 				
 				
 			} catch (Exception ex) {

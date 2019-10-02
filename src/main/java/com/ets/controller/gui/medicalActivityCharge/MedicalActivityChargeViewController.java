@@ -234,13 +234,19 @@ public class MedicalActivityChargeViewController implements Initializable {
 
 		if(this.visitLogInputController != null) {
 			medicalActivityChargeMasterData = new MedicalActivityChargeEntityController()
-					.searchByPatientVisit(Global.patientVisitObj.getId());
+					.searchByPatient(Global.patient.getId());
 
-			System.out.println("$$$$$$$$$$$$$$$$$ " + Global.patientVisitObj.getId());
-			System.out.println("Patient Visit Id is ;----" + Global.patientVisitObj.getId());
+			//System.out.println("$$$$$$$$$$$$$$$$$ " + Global.patientVisitObj.getId());
+			//System.out.println("Patient Visit Id is ;----" + Global.patientVisitObj.getId());
 		}else {
 			medicalActivityChargeMasterData = new MedicalActivityChargeEntityController()
 					.searchByPatient(Global.patient.getId());
+		}
+
+		for(int i = 0; i < medicalActivityChargeMasterData.size(); i++) {
+			if(medicalActivityChargeMasterData.get(i).getMedicalActivity() == null) {
+				medicalActivityChargeMasterData.remove(i);
+			}
 		}
 
 		activityCodeCollumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity() != null
@@ -316,7 +322,6 @@ public class MedicalActivityChargeViewController implements Initializable {
 		});
 
 		SortedList<MedicalActivityCharge> sortedData = new SortedList<>(filteredData);
-
 		sortedData.comparatorProperty().bind(medicalActivityChargeTable.comparatorProperty());
 
 		// medicalActivityChargeTable.setItems(medicalActivityChargeMasterData);
@@ -332,35 +337,37 @@ public class MedicalActivityChargeViewController implements Initializable {
 
 				MedicalActivity medicalActivity = MedicalActivityTableByName.getSelectionModel().getSelectedItem();
 
-				MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
-				medicalActivityCharge.setMedicalActivity(medicalActivity);
-				
-				if(this.visitLogInputController != null) {
-					if (Global.patientVisitObj.getVisitType().equals("Worker's Comp")) {
-						System.out.println("VisitType is :- ------- " + Global.patientVisitObj.getVisitType());
-						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
-					} else if (Global.patientVisitObj.getVisitType().equals("Private Practice")) {
-						System.out.println("VisitType is :- ------- " + Global.patientVisitObj.getVisitType());
-						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
-					} else if (visitLogInputController.visitType.equals("Worker's Comp")) {
-						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
-						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
-					} else if (visitLogInputController.visitType.equals("Private Practice")) {
-						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
-						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
-					}
+				if(!checkDuplicate(medicalActivity)) {
+					MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
+					medicalActivityCharge.setMedicalActivity(medicalActivity);
+					
+					if(this.visitLogInputController != null) {
+						if (Global.patientVisitObj.getVisitType().equals("Worker's Comp")) {
+							System.out.println("VisitType is :- ------- " + Global.patientVisitObj.getVisitType());
+							medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
+						} else if (Global.patientVisitObj.getVisitType().equals("Private Practice")) {
+							System.out.println("VisitType is :- ------- " + Global.patientVisitObj.getVisitType());
+							medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+						} else if (visitLogInputController.visitType.equals("Worker's Comp")) {
+							System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+							medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
+						} else if (visitLogInputController.visitType.equals("Private Practice")) {
+							System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+							medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+						}
 
-					medicalActivityCharge.setActivityDate(new Date());
-					medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
-					medicalActivityCharge.setPatient(Global.patient);
-					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
-					viewMedicalActivityCharge();					
-				}else {
-					medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
-					medicalActivityCharge.setActivityDate(new Date());
-					medicalActivityCharge.setPatient(Global.patient);
-					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
-					viewMedicalActivityCharge();					
+						medicalActivityCharge.setActivityDate(new Date());
+						medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
+						medicalActivityCharge.setPatient(Global.patient);
+						new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+						viewMedicalActivityCharge();					
+					}else {
+						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+						medicalActivityCharge.setActivityDate(new Date());
+						medicalActivityCharge.setPatient(Global.patient);
+						new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+						viewMedicalActivityCharge();					
+					}
 				}
 
 			} catch (Exception e) {
@@ -369,6 +376,24 @@ public class MedicalActivityChargeViewController implements Initializable {
 		}
 
 	}
+	
+	public boolean checkDuplicate(MedicalActivity activity) {		
+		for(MedicalActivityCharge charge : medicalActivityChargeTable.getItems()) {
+			if(charge.getMedicalActivity().getCode().toLowerCase().equals(activity.getCode().toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean checkDuplicate(String code) {		
+		for(MedicalActivityCharge charge : medicalActivityChargeTable.getItems()) {
+			if(charge.getMedicalActivity().getCode().toLowerCase().equals(code.toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	@FXML
 	void doubleClickOnCptCodeTable(MouseEvent event) {
@@ -376,39 +401,40 @@ public class MedicalActivityChargeViewController implements Initializable {
 		if (event.getClickCount() == 2) {
 			try {
 				
-				if(this.visitLogInputController != null) {
-					MedicalActivity medicalActivity = MedicalActivityTableByCPTCode.getSelectionModel().getSelectedItem();
+				MedicalActivity medicalActivity = MedicalActivityTableByCPTCode.getSelectionModel().getSelectedItem();
+				
+				if(!checkDuplicate(medicalActivity)) {
+					if(this.visitLogInputController != null) {
+						MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
+						medicalActivityCharge.setMedicalActivity(medicalActivity);
 
-					MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
-					medicalActivityCharge.setMedicalActivity(medicalActivity);
+						if (visitLogInputController.visitType.equals("Worker's Comp")) {
+							System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+							medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
+						} else if (visitLogInputController.visitType.equals("Private Practice")) {
+							System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+							medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+						}
+						medicalActivityCharge.setActivityDate(new Date());
+						medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
+						medicalActivityCharge.setPatient(Global.patient);
+						new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+						viewMedicalActivityCharge();
 
-					if (visitLogInputController.visitType.equals("Worker's Comp")) {
-						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
-						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getWrkCompCrgCurrent());
-					} else if (visitLogInputController.visitType.equals("Private Practice")) {
-						System.out.println("VisitType is :- ------- " + visitLogInputController.visitType);
+					}else {
+
+						MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
+						medicalActivityCharge.setMedicalActivity(medicalActivity);
+						
 						medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
+
+						medicalActivityCharge.setActivityDate(new Date());
+						//medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
+						medicalActivityCharge.setPatient(Global.patient);
+						new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
+						viewMedicalActivityCharge();
+						
 					}
-					medicalActivityCharge.setActivityDate(new Date());
-					medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
-					medicalActivityCharge.setPatient(Global.patient);
-					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
-					viewMedicalActivityCharge();
-
-				}else {
-					MedicalActivity medicalActivity = MedicalActivityTableByCPTCode.getSelectionModel().getSelectedItem();
-
-					MedicalActivityCharge medicalActivityCharge = new MedicalActivityCharge();
-					medicalActivityCharge.setMedicalActivity(medicalActivity);
-					
-					medicalActivityCharge.setOverrideFee(medicalActivity.getCptCode4Hcpcs().getPvtPracticeCrgCurrent());
-
-					medicalActivityCharge.setActivityDate(new Date());
-					//medicalActivityCharge.setPatientVisit(Global.patientVisitObj);
-					medicalActivityCharge.setPatient(Global.patient);
-					new MedicalActivityChargeEntityController().saveOrUpdate(medicalActivityCharge);
-					viewMedicalActivityCharge();
-					
 				}
 
 			} catch (Exception e) {
@@ -456,11 +482,21 @@ public class MedicalActivityChargeViewController implements Initializable {
 				String formTitle2 = Global.patient.getPatientName().getFirstName();
 				String formTitle3 = Global.patient.getCompany().getName();
 				String formTitle = formTitle1 + "/" + formTitle2 + "/" + formTitle3;
-				MedicalActivityChargeInputController medicalActivityChargeInputController = new MedicalActivityChargeInputController();
-				medicalActivityChargeInputController.setMedicalActivityChargeViewController(this);
-				formPath.closeApplicationContext();
-				new FXFormCommonUtilities().displayForm(formName, formTitle);
-
+				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(formName));
+				Parent root1 = (Parent) fxmlLoader.load();
+				Stage stage = new Stage();
+				stage.initModality(Modality.APPLICATION_MODAL);
+				stage.setTitle(formTitle);
+				stage.setScene(new Scene(root1));
+				MedicalActivityChargeInputController medicalActivityChargeInputController = fxmlLoader.getController();
+				if(this.visitLogInputController != null) {
+					medicalActivityChargeInputController.setMedicalActivityChargeViewController(this,true);
+				}else {
+					medicalActivityChargeInputController.setMedicalActivityChargeViewController(this,false);
+				}
+//				formPath.closeApplicationContext();
+//				new FXFormCommonUtilities().displayForm(formName, formTitle);
+				stage.show();
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
