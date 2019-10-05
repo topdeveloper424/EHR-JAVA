@@ -323,7 +323,7 @@
 					<subreportParameterExpression><![CDATA[$P{companyProtocol}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{StandardProtocol})]]></dataSourceExpression>
-				<subreportExpression><![CDATA["src/main/resources/report/standardProtocolActivity.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{sbReprtStandardProtocolActivity}]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="24">
@@ -335,7 +335,7 @@
 					<subreportParameterExpression><![CDATA[$P{specialOrder}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{specialOrder})]]></dataSourceExpression>
-				<subreportExpression><![CDATA["src/main/resources/report/SpecialOrderFlow.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{subReportSpecialOrderFlow}]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="34">
@@ -347,7 +347,7 @@
 					<subreportParameterExpression><![CDATA[$P{contact}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{contact})]]></dataSourceExpression>
-				<subreportExpression><![CDATA["src/main/resources/report/ContactFlow.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{subReportContactFlow}]]></subreportExpression>
 			</subreport>
 		</band>
 		<band height="25">
@@ -357,7 +357,7 @@
 					<subreportParameterExpression><![CDATA[$P{optionalProtocol}]]></subreportParameterExpression>
 				</subreportParameter>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{optionalProtocol})]]></dataSourceExpression>
-				<subreportExpression><![CDATA["src/main/resources/report/optionalProtocol.jasper"]]></subreportExpression>
+				<subreportExpression><![CDATA[$P{subReportOptionalProtocol}]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
