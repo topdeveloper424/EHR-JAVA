@@ -1,8 +1,10 @@
 package com.ets.controller.gui.patientInsuranceCarrier;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -173,6 +175,9 @@ public class PatientInsuranceCarrierInputController implements Initializable {
 							patientInsuranceCarrier.setDeductAmt(DeductibleAmntText.getText());
 							patientInsuranceCarrier.setPolicyOrGroup(PolicyText.getText());
 							patientInsuranceCarrier.setDeductMet(DeductMetText.getText());
+							patientInsuranceCarrier.setDateEffective(java.sql.Date.valueOf(EffectiveDate.getValue()));
+							patientInsuranceCarrier.setDateExpiry(java.sql.Date.valueOf(ExpireDate.getValue()));							
+
 							if(EmployeeNameText != null) {
 								patientInsuranceCarrier.setEmployerName(EmployeeNameText.getText());								
 							}
@@ -246,6 +251,9 @@ public class PatientInsuranceCarrierInputController implements Initializable {
 							patientInsuranceCarrier.setDeductAmt(DeductibleAmntText.getText());
 							patientInsuranceCarrier.setPolicyOrGroup(PolicyText.getText());
 							patientInsuranceCarrier.setDeductMet(DeductMetText.getText());
+							patientInsuranceCarrier.setDateEffective(java.sql.Date.valueOf(EffectiveDate.getValue()));
+							patientInsuranceCarrier.setDateExpiry(java.sql.Date.valueOf(ExpireDate.getValue()));							
+
 							if(EmployeeNameText != null) {
 								patientInsuranceCarrier.setEmployerName(EmployeeNameText.getText());								
 							}
@@ -319,6 +327,9 @@ public class PatientInsuranceCarrierInputController implements Initializable {
 						patientInsuranceCarrier.setDeductAmt(DeductibleAmntText.getText());
 						patientInsuranceCarrier.setPolicyOrGroup(PolicyText.getText());
 						patientInsuranceCarrier.setDeductMet(DeductMetText.getText());
+						patientInsuranceCarrier.setDateEffective(java.sql.Date.valueOf(EffectiveDate.getValue()));
+						patientInsuranceCarrier.setDateExpiry(java.sql.Date.valueOf(ExpireDate.getValue()));							
+
 						if(EmployeeNameText != null) {
 							patientInsuranceCarrier.setEmployerName(EmployeeNameText.getText());							
 						}
@@ -378,6 +389,7 @@ public class PatientInsuranceCarrierInputController implements Initializable {
 	
 	public void setPatientEditController(PatientEditController patientEditController, int i,PatientInsuranceCarrier selectPatientInsuranceCarrier ) {
 		this.patientEditController = patientEditController;
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		this.flag = i;
 		this.selectPatientInsuranceCarrier = selectPatientInsuranceCarrier;
 		if(this.flag == 1 && this.selectPatientInsuranceCarrier != null) {
@@ -389,12 +401,24 @@ public class PatientInsuranceCarrierInputController implements Initializable {
 			PolicyText.setText(this.selectPatientInsuranceCarrier.policyOrGroupProperty().get());
 			DeductMetText.setText(this.selectPatientInsuranceCarrier.deductMetProperty().get());
 			EmployeeNameText.setText(this.selectPatientInsuranceCarrier.getEmployerName());
+			if(this.selectPatientInsuranceCarrier.getCarrier() != null) {
+				InsuranceCarrierText.setText(this.selectPatientInsuranceCarrier.getCarrier().getCode());
+			}
+
+			if(this.selectPatientInsuranceCarrier.getDateEffective() != null) {
+				EffectiveDate.setValue(LocalDate.parse(new SimpleDateFormat("dd/MM/yyyy").format(this.selectPatientInsuranceCarrier.getDateEffective()),formatter));				
+			}
+			
+			if(this.selectPatientInsuranceCarrier.getDateExpiry() != null) {
+				ExpireDate.setValue(LocalDate.parse(new SimpleDateFormat("dd/MM/yyyy").format(this.selectPatientInsuranceCarrier.getDateExpiry()),formatter));				
+			}
 		}
 	}
 	
 	private PatientInputController patientInputController;
 	public void setPatientInputController(PatientInputController patientInputController, int i,PatientInsuranceCarrier selectPatientInsuranceCarrier ) {
 		this.patientInputController = patientInputController;
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		this.flag = i;
 		this.selectPatientInsuranceCarrier = selectPatientInsuranceCarrier;
 		if(this.flag == 1 && this.selectPatientInsuranceCarrier != null) {
@@ -406,6 +430,17 @@ public class PatientInsuranceCarrierInputController implements Initializable {
 			PolicyText.setText(this.selectPatientInsuranceCarrier.policyOrGroupProperty().get());
 			DeductMetText.setText(this.selectPatientInsuranceCarrier.deductMetProperty().get());
 			EmployeeNameText.setText(this.selectPatientInsuranceCarrier.getEmployerName());
+			if(this.selectPatientInsuranceCarrier.getCarrier() != null) {
+				InsuranceCarrierText.setText(this.selectPatientInsuranceCarrier.getCarrier().getCode());
+			}
+			
+			if(this.selectPatientInsuranceCarrier.getDateEffective() != null) {
+				EffectiveDate.setValue(LocalDate.parse(new SimpleDateFormat("dd/MM/yyyy").format(this.selectPatientInsuranceCarrier.getDateEffective()),formatter));				
+			}
+			
+			if(this.selectPatientInsuranceCarrier.getDateExpiry() != null) {
+				ExpireDate.setValue(LocalDate.parse(new SimpleDateFormat("dd/MM/yyyy").format(this.selectPatientInsuranceCarrier.getDateExpiry()),formatter));				
+			}
 		}
 	}
 }
