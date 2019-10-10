@@ -10,11 +10,15 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
+
+import org.fxmisc.easybind.EasyBind;
+
 import com.ets.controller.gui.genericVisitProtocal.EnterVitalSignGUIController;
 import com.ets.controller.entity.assesment.AssessmentEntityController;
 import com.ets.controller.entity.clinic.ClinicEntityController;
 import com.ets.controller.entity.clinician.ClinicianEntityController;
 import com.ets.controller.entity.company.CompanyEntityController;
+import com.ets.controller.entity.drugScreenResult.DrugScreenResultEntityController;
 import com.ets.controller.entity.emrHpi.EmrHpiEntityController;
 import com.ets.controller.entity.hpiTextArea.HpiTextAreaEntityController;
 import com.ets.controller.entity.medicalActivityCharge.MedicalActivityChargeEntityController;
@@ -96,13 +100,19 @@ import com.ets.controller.gui.emrCharting.hpi.quality.HPIQualityInputController;
 import com.ets.controller.gui.emrCharting.hpi.severity.HPISeverityInputController;
 
 import com.ets.controller.gui.genericVisitProtocal.GraphVitalsInputController;
+import com.ets.controller.gui.medicalActivityCharge.MedicalActivityChargeEditController;
+import com.ets.controller.gui.medicalActivityCharge.MedicalActivityChargeInputController;
 import com.ets.controller.gui.medicalActivityCharge.MedicalActivityChargeViewController;
 import com.ets.controller.gui.provider.ProviderViewController;
 import com.ets.model.Assesment;
 import com.ets.model.Clinic;
 import com.ets.model.Clinician;
 import com.ets.model.Company;
+import com.ets.model.CptCode4Hcpcs;
+import com.ets.model.DrugScreenResult;
+import com.ets.model.DrugScreenTestResult;
 import com.ets.model.EmrHpi;
+import com.ets.model.MedicalActivity;
 import com.ets.model.EmrChartingTextAreaSave;
 import com.ets.model.MedicalActivityCharge;
 import com.ets.model.VitalSign;
@@ -113,9 +123,14 @@ import com.ets.utils.Global;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -136,6 +151,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class GenericEMRChartingController implements Initializable {
 
@@ -838,6 +855,39 @@ public class GenericEMRChartingController implements Initializable {
 	@FXML
 	private TableView<Assesment> assesmentTable;
 
+	/*
+	 * -----------------------------------------------------------------------------
+	 * -
+	 * 
+	 */
+
+	@FXML
+	private TableView<MedicalActivityCharge> medicalActivityChargeTable;
+
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> activityCodeCollumn;
+
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> descriptionnCollumn;
+
+	@FXML
+	private TableColumn<MedicalActivityCharge, String> cpt4Collumn;
+
+	@FXML
+	private Button changeBtn;
+
+	@FXML
+	private Button addBtn;
+
+	@FXML
+	private Button deleteButton;
+
+	/*
+	 * -----------------------------------------------------------------------------
+	 * -
+	 * 
+	 */
+
 	@FXML
 	private TableView<MedicalActivityCharge> ResultMedicalActivityChargeTable;
 
@@ -1037,11 +1087,9 @@ public class GenericEMRChartingController implements Initializable {
 		CheckRadioOnAction();
 	}
 
-	
 	public static String str = "\n\n";
 	public static Integer formCount = 0;
-	
-	
+
 	public void CheckRadioOnAction() {
 
 		if (tbdNAradioBtn1.isSelected()
@@ -1422,6 +1470,42 @@ public class GenericEMRChartingController implements Initializable {
 
 	}
 
+	private ObservableList<MedicalActivityCharge> medicalActivityChargeMasterData = FXCollections.observableArrayList();
+
+	public void viewMedicalActivityCharge() {
+
+		medicalActivityChargeMasterData = new MedicalActivityChargeEntityController()
+				.searchByPatient(Global.patient.getId());
+
+		for (int i = 0; i < medicalActivityChargeMasterData.size(); i++) {
+			if (medicalActivityChargeMasterData.get(i).getMedicalActivity() == null) {
+				medicalActivityChargeMasterData.remove(i);
+			}
+		}
+
+		activityCodeCollumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity() != null
+				? cellData.getValue().getMedicalActivity().codeProperty()
+				: null);
+		descriptionnCollumn.setCellValueFactory(cellData -> cellData.getValue().getMedicalActivity() != null
+				? cellData.getValue().getMedicalActivity().descripProperty()
+				: null);
+
+		cpt4Collumn.setCellValueFactory(data -> data.getValue().getMedicalActivity() != null
+				? EasyBind.select(data.getValue().getMedicalActivity().cptCode4HcpcsProperty()).selectObject(
+						CptCode4Hcpcs::codeProperty)
+				: null);
+
+		System.out.println("size before removing charges " + medicalActivityChargeMasterData.size());
+
+		FilteredList<MedicalActivityCharge> filteredData = new FilteredList<MedicalActivityCharge>(
+				medicalActivityChargeMasterData, p -> true);
+
+		SortedList<MedicalActivityCharge> sortedData = new SortedList<>(filteredData);
+		sortedData.comparatorProperty().bind(medicalActivityChargeTable.comparatorProperty());
+
+		medicalActivityChargeTable.setItems(sortedData);
+	}
+
 	private ObservableList<EmrChartingTextAreaSave> emrTextAreaSave = FXCollections.observableArrayList();
 
 	public void viewTextArea() {
@@ -1445,10 +1529,9 @@ public class GenericEMRChartingController implements Initializable {
 			patientVisitComplaintTextArea.setText(emrHpi.getPatientVisitComplaint());
 			assesmentTextArea.setText(emrHpi.getAssessmentTextArea());
 			/*
-			 * DateTimeFormatter formatter =
-			 * DateTimeFormatter.ofPattern("dd-MM-yyyy"); LocalDate localDate =
-			 * LocalDate.parse(emrHpi.getDateOfInjury().toString(), formatter);
-			 * dateOfInjury.setValue(localDate);
+			 * DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+			 * LocalDate localDate = LocalDate.parse(emrHpi.getDateOfInjury().toString(),
+			 * formatter); dateOfInjury.setValue(localDate);
 			 */
 			Date dateVisitInjury = emrHpi.getDateOfInjury();
 
@@ -1777,8 +1860,8 @@ public class GenericEMRChartingController implements Initializable {
 	/*
 	 * @FXML void newClickedFunction(ActionEvent event) {
 	 * 
-	 * if ((newText.isSelected() && level3Text.isSelected()) ||
-	 * newText.isSelected() && tbdNAradiobtn2.isSelected()) {
+	 * if ((newText.isSelected() && level3Text.isSelected()) || newText.isSelected()
+	 * && tbdNAradiobtn2.isSelected()) {
 	 * 
 	 * ExtentHistoryDocumentReqLabel.setText("Detailed");
 	 * ExtentExamDocumentReqLabel.setText("Detailed");
@@ -1815,7 +1898,7 @@ public class GenericEMRChartingController implements Initializable {
 	public static String resultStaticStringTextareaBuild = null;
 
 	public static String instructionStaticStringTextAreaBuild = null;
-	public static  String workStatusStaticStringTextAreaBuild = null;
+	public static String workStatusStaticStringTextAreaBuild = null;
 	public static String orderTextAreaStaticStringTextareaBuild = null;
 	public static String assessmentStaticStringTextareaBuild = null;
 
@@ -1853,20 +1936,19 @@ public class GenericEMRChartingController implements Initializable {
 			respLabel.setText(vitalSign2.getBreathPerMinute());
 			ageLabel.setText(vitalSign2.getAge());
 			tempLabel.setText(vitalSign2.getFarenhiet());
-			//tempLabel.setText(vitalSign2.getFarenhiet());
+			// tempLabel.setText(vitalSign2.getFarenhiet());
 		}
 
 	}
 
 	public static String patientVisitComplaintStr = null;
 
-
 	// public String patientChiefComplaint = null;
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 		viewTextArea();
-
+		viewMedicalActivityCharge();
 		setRecordInVisit();
 		visitDateLabel.setText(Global.patientVisitObj.getVisitDate().toString());
 		if (Global.patientVisitObj.getClinician() != null) {
@@ -2289,7 +2371,7 @@ public class GenericEMRChartingController implements Initializable {
 				PMHMedicationInputController pmhMedicationInputController = (PMHMedicationInputController) new FXFormCommonUtilities()
 						.displayForm(fmName, fmTitle);
 				pmhMedicationInputController.setGenericEMRChartingController(this, pmhMedicationBtn);
-				//paint(pmhMedicationBtn);
+				// paint(pmhMedicationBtn);
 			} catch (Exception e) {
 				e.printStackTrace();
 
@@ -2345,9 +2427,7 @@ public class GenericEMRChartingController implements Initializable {
 			pmhNoFamilyHistoryCheckBox.setVisible(false);
 			paint(pmhFamilyHistoryBtn);
 		});
-		
-		
-		
+
 		pmhFamilyHistoryBtn.setOnAction((event) -> {
 
 			try {
@@ -3954,8 +4034,7 @@ public class GenericEMRChartingController implements Initializable {
 		 * 
 		 * if(examOrganGuCheckBox.isSelected()){
 		 * 
-		 * examOrganGuBtn.setDisable(true);
-		 * examOrganGuNormalCheckBox.setDisable(true);
+		 * examOrganGuBtn.setDisable(true); examOrganGuNormalCheckBox.setDisable(true);
 		 * 
 		 * }else{ examOrganGuBtn.setDisable(false);
 		 * examOrganGuNormalCheckBox.setDisable(false);
@@ -3968,13 +4047,12 @@ public class GenericEMRChartingController implements Initializable {
 		 * 
 		 * examOrganGuBtn.setOnAction((event)-> { try{ String
 		 * frmName=formPath.context.getMessage("ExamGu", null,Locale.US); String
-		 * frmTitle = formPath.context.getMessage("Title.ExamGu", null,
-		 * Locale.US); formPath.closeApplicationContext();
+		 * frmTitle = formPath.context.getMessage("Title.ExamGu", null, Locale.US);
+		 * formPath.closeApplicationContext();
 		 * 
 		 * GUInputController guInputController = (GUInputController) new
 		 * FXFormCommonUtilities().displayForm(frmName, frmTitle);
-		 * guInputController.setGenericEMRChartingController(this,
-		 * examOrganGuBtn);
+		 * guInputController.setGenericEMRChartingController(this, examOrganGuBtn);
 		 * 
 		 * }catch(Exception e){ e.printStackTrace(); }
 		 * 
@@ -3985,10 +4063,9 @@ public class GenericEMRChartingController implements Initializable {
 		 * 
 		 * setExamOrganTextArea(
 		 * "\n\nGU Male: Exam shows normal testes, normal penis, prostate not enlarged and without masses."
-		 * ); examOrganGuNormalCheckBox.setVisible(false);
-		 * paint(examOrganGuBtn); if(examOrganGuNormalCheckBox.isSelected()){
-		 * examOrganGuBtn.setDisable(false); } else{
-		 * examOrganGuBtn.setDisable(true); }
+		 * ); examOrganGuNormalCheckBox.setVisible(false); paint(examOrganGuBtn);
+		 * if(examOrganGuNormalCheckBox.isSelected()){ examOrganGuBtn.setDisable(false);
+		 * } else{ examOrganGuBtn.setDisable(true); }
 		 * 
 		 * 
 		 * });
@@ -4087,9 +4164,6 @@ public class GenericEMRChartingController implements Initializable {
 				ex.printStackTrace();
 			}
 		});
-		
-		
-		
 
 		OrderPatientLocalMeasureButton.setOnAction((event) -> {
 			try {
@@ -4154,12 +4228,10 @@ public class GenericEMRChartingController implements Initializable {
 				buildNoteViewController = (BuildNoteViewController) new FXFormCommonUtilities().displayForm(frmName,
 						frmTitle);
 				/*
-				 * BuildNoteViewController buildNoteViewController =
-				 * (BuildNoteViewController) new FXFormCommonUtilities()
-				 * .displayForm(frmName, frmTitle);
+				 * BuildNoteViewController buildNoteViewController = (BuildNoteViewController)
+				 * new FXFormCommonUtilities() .displayForm(frmName, frmTitle);
 				 * 
-				 * buildNoteViewController.setGenericEMRChartingController(this
-				 * ,str );
+				 * buildNoteViewController.setGenericEMRChartingController(this ,str );
 				 */
 
 			} catch (Exception ex) {
@@ -4301,22 +4373,24 @@ public class GenericEMRChartingController implements Initializable {
 				ex.printStackTrace();
 			}
 		});
-		
 
 		chargesBtn.setOnAction((event) -> {
 			try {
-				//visitType=visitTypeChoiceBox.getSelectionModel().getSelectedItem();
-				
+				// visitType=visitTypeChoiceBox.getSelectionModel().getSelectedItem();
+
 				String formName = formPath.context.getMessage("ViewMedicalActivityCharge", null, Locale.US);
 				String formTitle1 = formPath.context.getMessage("Title.ViewMedicalActivityCharge", null, Locale.US);
 				String formTitle2 = Global.patient.getPatientName().getFirstName();
-				String formTitle = formTitle1+"/"+formTitle2;
-				
+				String formTitle = formTitle1 + "/" + formTitle2;
+
 				formPath.closeApplicationContext();
-				/*MedicalActivityChargeViewController  medicalActivityChargeViewController =
-				(MedicalActivityChargeViewController) new FXFormCommonUtilities().displayForm(formName, formTitle);
-				medicalActivityChargeViewController.setVisitLogInputController(this);*/
-				
+				/*
+				 * MedicalActivityChargeViewController medicalActivityChargeViewController =
+				 * (MedicalActivityChargeViewController) new
+				 * FXFormCommonUtilities().displayForm(formName, formTitle);
+				 * medicalActivityChargeViewController.setVisitLogInputController(this);
+				 */
+
 				new FXFormCommonUtilities().displayForm(formName, formTitle);
 
 			} catch (Exception ex) {
@@ -4324,49 +4398,42 @@ public class GenericEMRChartingController implements Initializable {
 			}
 		});
 
-pastNotesbtn.setOnAction((event) -> {
-	try {
-
-		String frmName = formPath.context.getMessage("viewBuildNote", null, Locale.US);
-		String frmTitle = formPath.context.getMessage("Title.viewBuildNote", null, Locale.US);
-		formPath.closeApplicationContext();
-		PastBuildNoteViewController pastBuildNoteViewController = (PastBuildNoteViewController) new FXFormCommonUtilities()
-				.displayForm(frmName, frmTitle);
-		pastBuildNoteViewController.setGenericEMRChartingController(this);
-
-
-	} catch (Exception ex) {
-		ex.printStackTrace();
-	}
-});
-		
-		appoinmentBtn.setOnAction((event) -> {
+		pastNotesbtn.setOnAction((event) -> {
 			try {
-				
-				
-				String formName = formPath.context.getMessage("AppointmentDetails", null, Locale.US);
-				String formTitle1 = formPath.context.getMessage("Title.AppointmentDetails", null, Locale.US);
-				String formTitle2 = Global.patient.getPatientName().getFirstName();
-				String formTitle = formTitle1+"/"+formTitle2;
-				
+
+				String frmName = formPath.context.getMessage("viewBuildNote", null, Locale.US);
+				String frmTitle = formPath.context.getMessage("Title.viewBuildNote", null, Locale.US);
 				formPath.closeApplicationContext();
-				
-				
-				new FXFormCommonUtilities().displayForm(formName, formTitle);
-			}catch (Exception ex) {
+				PastBuildNoteViewController pastBuildNoteViewController = (PastBuildNoteViewController) new FXFormCommonUtilities()
+						.displayForm(frmName, frmTitle);
+				pastBuildNoteViewController.setGenericEMRChartingController(this);
+
+			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
 		});
-		
-		
 
+		appoinmentBtn.setOnAction((event) -> {
+			try {
+
+				String formName = formPath.context.getMessage("AppointmentDetails", null, Locale.US);
+				String formTitle1 = formPath.context.getMessage("Title.AppointmentDetails", null, Locale.US);
+				String formTitle2 = Global.patient.getPatientName().getFirstName();
+				String formTitle = formTitle1 + "/" + formTitle2;
+
+				formPath.closeApplicationContext();
+
+				new FXFormCommonUtilities().displayForm(formName, formTitle);
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		});
 
 		doneBtn.setOnAction((event) -> {
 			try {
 				/*
 				 * for (EmrChartingTextAreaSave emr : emrTextAreaSave) {
-				 * areaSave.setId(emr.getId());
-				 * areaSave.setPatientVisit(Global.patientVisit);
+				 * areaSave.setId(emr.getId()); areaSave.setPatientVisit(Global.patientVisit);
 				 * areaSave.setRosTextArea(rosTextArea.getText());
 				 * areaSave.setTextArea(hpiTextArea.getText());
 				 * 
@@ -4457,11 +4524,9 @@ pastNotesbtn.setOnAction((event) -> {
 				// areaSave1.setWorkStatusAsOf(workstatusAsOfDate.getValue().toString());
 
 				/*
-				 * LocalDate localDate2 = workstatusAsOfDate.getValue();
-				 * if(localDate2 != null){
+				 * LocalDate localDate2 = workstatusAsOfDate.getValue(); if(localDate2 != null){
 				 * 
-				 * Date date2 =
-				 * Date.from(localDate2.atStartOfDay(ZoneId.systemDefault()).
+				 * Date date2 = Date.from(localDate2.atStartOfDay(ZoneId.systemDefault()).
 				 * toInstant());
 				 * 
 				 * areaSave1.setWorkStatusAsOf(date2); }
@@ -4523,6 +4588,117 @@ pastNotesbtn.setOnAction((event) -> {
 			}
 		});
 
+		addBtn.setOnAction((event) -> {
+			// System.out.println("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+			try {
+
+				String formName = formPath.context.getMessage("EnterMedicalActivityCharge", null, Locale.US);
+				String formTitle1 = formPath.context.getMessage("Title.EnterMedicalActivityCharge", null, Locale.US);
+				String formTitle2 = Global.patient.getPatientName().getFirstName();
+				String formTitle3 = Global.patient.getCompany().getName();
+				String formTitle = formTitle1 + "/" + formTitle2 + "/" + formTitle3;
+				FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(formName));
+				Parent root1 = (Parent) fxmlLoader.load();
+				Stage stage = new Stage();
+				stage.initModality(Modality.APPLICATION_MODAL);
+				stage.setTitle(formTitle);
+				stage.setScene(new Scene(root1));
+				MedicalActivityChargeInputController medicalActivityChargeInputController = fxmlLoader.getController();
+				medicalActivityChargeInputController.setGenericEMRChartingController(this,false);
+//				formPath.closeApplicationContext();
+//				new FXFormCommonUtilities().displayForm(formName, formTitle);
+				stage.show();
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		});
+		
+		changeBtn.setOnAction((event) -> {
+			try {
+
+				// Load Clinician Details Edit form .
+
+				MedicalActivityCharge medicalActivityCharge = medicalActivityChargeTable.getSelectionModel()
+						.getSelectedItem();
+
+				drugTestProfile = medicalActivityCharge.getMedicalActivity().getDescrip();
+				String formName = formPath.context.getMessage("EditMedicalActivityCharge", null, Locale.US);
+				String formTitle = formPath.context.getMessage("Title.EditMedicalActivityCharge", null, Locale.US);
+
+				String editInfo = formPath.context.getMessage("EditInfo", null, Locale.US);
+				String infoDialogBoxTitle = formPath.context.getMessage("Title.InfoDialogBox", null, Locale.US);
+				formPath.closeApplicationContext();
+
+				if (medicalActivityCharge != null) {
+
+					FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(formName));
+					Parent root1 = (Parent) fxmlLoader.load();
+					Stage stage = new Stage();
+					stage.initModality(Modality.APPLICATION_MODAL);
+					stage.setTitle(formTitle);
+					stage.setScene(new Scene(root1));
+					MedicalActivityChargeEditController editController = fxmlLoader.getController();
+					editController.setMedicalActivityCharge(medicalActivityCharge);
+					editController.setGenericEMRChartingController(this,false);
+					editController.setActivityCode(medicalActivityCharge.getMedicalActivity());
+					stage.show();
+
+				} else {
+					Alert alert = new Alert(AlertType.INFORMATION);
+					alert.setTitle(infoDialogBoxTitle);
+					alert.setHeaderText(null);
+					alert.setContentText(editInfo);
+					alert.showAndWait();
+				}
+
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		});
+		
+		deleteButton.setOnAction((event) -> {
+			MedicalActivityCharge medicalActivityCharge = medicalActivityChargeTable.getSelectionModel()
+					.getSelectedItem();
+			System.out.println("sdfsasf" + medicalActivityCharge.getId());
+			if (medicalActivityCharge.getMedicalActivity().getCode().equals("RPD DS10")
+					|| medicalActivityCharge.getMedicalActivity().getCode().equals("RPD DS")
+							&& (drugScreenResult != null
+									&& drugScreenResult.getMedActCharge().getId() == medicalActivityCharge.getId())) {
+				new DrugScreenResultEntityController().deleteMedActCharge(medicalActivityCharge.getId());
+				new MedicalActivityChargeEntityController().delete(medicalActivityCharge.getId());
+				viewMedicalActivityCharge();
+
+			}
+
+			else {
+				new MedicalActivityChargeEntityController().delete(medicalActivityCharge.getId());
+				viewMedicalActivityCharge();
+			}
+		});
+
+		
+	}
+	
+	private DrugScreenResult drugScreenResult;
+	
+	public static String drugTestProfile = null;
+	
+	public boolean checkDuplicate(MedicalActivity activity) {		
+		for(MedicalActivityCharge charge : medicalActivityChargeTable.getItems()) {
+			if(charge.getMedicalActivity().getCode().toLowerCase().equals(activity.getCode().toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean checkDuplicate(String code) {		
+		for(MedicalActivityCharge charge : medicalActivityChargeTable.getItems()) {
+			if(charge.getMedicalActivity().getCode().toLowerCase().equals(code.toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 
