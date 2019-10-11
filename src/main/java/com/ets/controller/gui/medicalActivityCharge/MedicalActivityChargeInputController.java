@@ -399,7 +399,7 @@ public class MedicalActivityChargeInputController implements Initializable {
 						medicalActivityCharge.setBillingComment(billingCommentTextArea.getText());
 						medicalActivityCharge.setNdcCode(ndcText.getText());
 						medicalActivityCharge.setLocationGiven(locationChoiceBox.getSelectionModel().getSelectedItem());
-						medicalActivityCharge.setResultCode(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
+						//medicalActivityCharge.setResultCode(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
 						medicalActivityCharge.setActivityCost(activityCostText.getText());
 						if(noCostActivityCheckBox.isSelected()){
 							
@@ -473,7 +473,7 @@ public class MedicalActivityChargeInputController implements Initializable {
 						medicalActivityCharge.setBillingComment(billingCommentTextArea.getText());
 						medicalActivityCharge.setNdcCode(ndcText.getText());
 						medicalActivityCharge.setLocationGiven(locationChoiceBox.getSelectionModel().getSelectedItem());
-						medicalActivityCharge.setResultCode(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
+						//medicalActivityCharge.setResultCode(billingStatusChoiceBox.getSelectionModel().getSelectedItem());
 						medicalActivityCharge.setActivityCost(activityCostText.getText());
 						if(noCostActivityCheckBox.isSelected()){
 							
