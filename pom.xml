@@ -16,7 +16,7 @@
 
 		<!-- Hibernate / JPA -->
 		<!-- <hibernate.version>4.3.5.Final</hibernate.version> -->
-		<hibernate.version>4.3.6.Final</hibernate.version>
+		<hibernate.version>5.3.20.Final</hibernate.version>
 
 		<!-- Postgresql version no -->
 		<postgresql-version>9.1-901.jdbc4</postgresql-version>
